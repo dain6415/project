@@ -1,0 +1,371 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* 공통 css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+.container {
+  background: #d1f1ff url("/img/bg2-png.png") no-repeat;
+  background-size: cover; background-position: center;
+  font-family: "Noto Sans Korean", sans-serif;
+  font-weight: 800;
+  font-style: normal; height: calc(130vh - 100px);
+}
+body{cursor: url(../img/cursor2.png),auto;}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.flex {
+  display: flex;
+}
+.just-c {
+  justify-content: center;
+}
+.wrap {
+  padding: 0px 12px;
+  position: relative;
+  top: 100px;
+}
+hgroup {
+  text-align: center;
+}
+
+h1 {
+  border-bottom: 2px solid #000;
+  padding: 10px;
+  height: auto;
+  background: #fff;
+  text-align: center;
+  display: flex;
+  z-index: 99;
+  align-self: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+em {
+  color: #1a87ec;
+  font-style: normal;
+  font-weight: 900;
+  cursor: url(../img/cursor2.png),auto;
+}
+em:hover{color: #0860b3; background: #f0f0f0;}
+
+article {
+  border-radius: 10px;
+  text-align: center;
+  background: #fff;
+  /* align-items: center; */
+}
+article:not(.art3) {
+  padding: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+article .item {
+  align-items: center;
+  padding: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background: #fff;
+}
+.art3 {
+  background: #d1f1ff00;
+}
+.art3 h3 {
+  font-weight: 500;
+}
+
+/* 버튼 */
+button:not(.up-btn) {
+  background: #ffcf25;
+  color: #000;
+  border-radius: 10px;
+  /* display: block; */
+  width: 90%;
+  padding: 14px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: url(../img/cursor2.png),auto;
+  /* position: po; */
+}
+button:not(.up-btn):hover{background: #f5c61d;}
+.btn li {
+  width: 100%;
+}
+ul.btn {
+  gap: 0px;
+}
+
+figure {
+  margin: auto;
+}
+figure img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+footer {
+  background: #d7f581;
+  border-top: 2px solid rgba(0, 0, 0, 0.5);
+  padding: 20px 12px;
+  font-weight: 100;
+  position: relative;
+  top: 0px;
+}
+footer .menu a {
+  font-size: 12px;
+}
+footer p {
+  padding-top: 15px;
+  font-size: 10px;
+  margin-bottom: 15px;
+}
+footer ul li {
+  padding-top: 0px;
+}
+footer .unit-info {
+  display: flex;
+  padding-bottom: 5px;
+  font-size: 10px;
+}
+
+.up-btn {
+  padding-top: 20px;
+  background: none;
+  border: none;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  cursor: pointer;
+  opacity: 0.7;
+}
+.up-btn:hover{opacity: 1;}
+
+dd {
+  margin-right: 5px;
+}
+
+/* 모바일----------------------------------------- */
+@media screen and (max-width: 576px) {
+  /* body{padding: .75rem;} */
+  h1 {
+    font-size: 3vw;
+  }
+  h2 {
+    font-size: 6vw;
+    margin-bottom: 40px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  h3 {
+    margin-bottom: 10px;
+  }
+  em {
+    display: block;
+  }
+
+  article {
+    margin-bottom: 4px;
+  }
+  .art1 {
+    width: 100%;
+  }
+  .art2 {
+    width: 100%;
+  }
+  .art3 {
+    display: flex;
+  }
+  .art3 .item {
+    width: 50%;
+  }
+  .art3 .item:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  figure {
+    width: 160px;
+  }
+  .art3 figure {
+    width: 50%;
+    height: 50%;
+  }
+
+  footer {
+    height: 280px;
+  }
+  footer ul {
+    flex-wrap: wrap;
+    gap: 0px 20px;
+  }
+}
+
+/* 테블릿----------------------------------------- */
+@media screen and (min-width: 577px) {
+  .container{height: 130vh;}
+  .wrap {
+    /* width: 760px;margin: auto;  */
+    padding: 0px 12px;
+    position: relative;
+    top: 140px;
+  }
+  h1 {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 8vw;
+    margin-bottom: 60px;
+  }
+  p {
+    font-size: 3vw;
+    margin-bottom: 10px;
+  }
+  h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  em {
+    padding-left: 10px;
+  }
+  .item h3 {
+    width: 40%;
+    margin: 0;
+    text-align: left;
+    padding-left: 15px;
+  }
+
+  .art1 {
+    width: 49%;
+  }
+  .art2 {
+    width: 49%;
+  }
+  .art3 {
+    width: 100%;
+  }
+  .art3 .item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .art3 .item:not(:last-child) {
+    margin-bottom: 14px;
+  }
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  /* gap을 주면 아티클이 내려감!!!쌤 도움 필요 */
+  .item figure {
+    width: 10%;
+    margin: 0;
+  }
+  .art3 img {
+    margin: 0;
+  }
+
+  footer {
+    height: 200px;
+    /* top: 0px; */
+
+  }
+  footer .list-info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* pc----------------------------------------- */
+@media screen and (min-width: 980px) {
+  .container{
+    height: 86vh;
+  }
+  .wrap {
+    padding: 0px 12px 120px;
+    width: 1200px;
+    margin: auto;
+    position: relative;
+    top: 200px;
+  }
+  h1 {
+    height: 60px;
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 50px;
+    margin-bottom: 60px;
+  }
+  p {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  .art3 h3 {
+    margin: 0;
+  }
+  em {
+    display: block;
+    padding: 0;
+  }
+
+  section {
+    display: flex;
+    justify-content: space-between;
+    height: 340px;
+  }
+
+  .art1 {
+    width: 30%;
+  }
+  .art2 {
+    width: 37%;
+  }
+  .art3 {
+    width: 30%;
+  }
+  .art3 .item {
+    display: flex;
+    height: 48%;
+    align-self: center;
+    justify-content: center;
+  }
+  .art3 .item:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  figure {
+    width: 200px;
+  }
+  .art3 img {
+    margin: 0;
+  }
+  .art3 figure {
+    width: 30%;
+  }
+  .art3 h3 {
+    width: 60%;
+    padding-left: 15px;
+    text-align: left;
+  }
+
+  footer {
+    height: 200px;
+    /* top: 0; */
+  }
+}

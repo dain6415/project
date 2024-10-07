@@ -1,0 +1,540 @@
+@charset "UTF-8";
+@import url(/font/font.css);
+@import url(./reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant+Upright:wght@300;400;500;600;700&display=swap");
+body {
+  font-family: "Pretendard";
+  min-width: 1800px;
+  height: 100vh;
+  overflow-y: hidden;
+  color: #333;
+}
+
+.video {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.video video {
+  width: 120%;
+  min-height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section.container {
+  transition: 0.35s ease-out;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+section.container article {
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+section.container article:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+section.container article .summary {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(172, 172, 172, 0.541);
+}
+section.container article .summary .country {
+  font-size: 12px;
+  font-family: NotoSansCJKkr-Regular;
+}
+section.container article .summary h2 {
+  font-family: NotoSans-Bold;
+  font-size: 20px;
+  padding-bottom: 20px;
+  transition: 0.35s;
+}
+section.container article .summary .box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+}
+section.container article .summary .box .txt {
+  width: 100%;
+  position: absolute;
+  bottom: -110%;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.8em;
+}
+section.container article:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+section.container article:hover .summary .country {
+  color: rgba(248, 248, 248, 0.5490196078);
+}
+section.container article:hover .summary h2 {
+  font-size: 32px;
+  font-family: NotoSans-Bold;
+  color: rgb(47, 160, 255);
+}
+section.container article:hover .summary .box .txt {
+  color: #fff;
+  transform: translateY(-85%);
+  opacity: 1;
+}
+section.container.on {
+  opacity: 1;
+}
+
+section.frame {
+  width: 100%;
+  min-width: 1900px;
+  margin: auto;
+  position: absolute;
+  transition: 0.5s linear;
+  left: 0;
+  top: 100%;
+  z-index: 99;
+}
+section.frame article {
+  width: 100%;
+  background-color: #f1f1f1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+section.frame article .summary {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  padding-top: 200px;
+}
+section.frame article .summary > img {
+  width: 45%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease-out;
+}
+section.frame article .summary > img.on {
+  opacity: 1; /* 투명도 1로 변화 */
+  transform: translateY(0); /* 제자리로 올라옴 */
+}
+section.frame article .summary h3 {
+  font-size: 220px;
+  text-align: center;
+  letter-spacing: -0.03em;
+}
+section.frame article .summary h3 img.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+}
+section.frame article .summary h3 img.fade-up.on {
+  opacity: 1; /* 투명도 1로 변화 */
+  transform: translateY(0); /* 제자리로 올라옴 */
+}
+section.frame article .summary .box {
+  width: 89.6%;
+  color: #000000;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+  position: absolute;
+  left: 50%;
+  bottom: 22%;
+  transform: translateX(-50%);
+}
+section.frame article .summary .box.box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  z-index: -1;
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  box-shadow: 0px 2px 5px 1px rgba(77, 71, 71, 0.1);
+}
+section.frame article .summary .box .title {
+  width: 70%;
+  font-size: 32px;
+  font-weight: 400;
+  font-family: "AnticDidone-Regular";
+  padding-left: 20px;
+}
+section.frame article .summary .box .price {
+  font-weight: 900;
+  font-size: 20px;
+  width: 10%;
+}
+section.frame article .summary .box .color {
+  display: none;
+}
+section.frame article .summary .box .color .colors {
+  padding-bottom: 15px;
+}
+section.frame article .summary .box .color .c-box {
+  display: flex;
+}
+section.frame article .summary .box .color .c-box .boo1 {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 99px;
+  overflow: hidden;
+  transform: rotate(45deg);
+  margin-right: 10px;
+}
+section.frame article .summary .box .color .c-box .boo1 .left {
+  width: 50%;
+  background: #dfd6d3;
+}
+section.frame article .summary .box .color .c-box .boo1 .right {
+  width: 50%;
+  background: #bd9a87;
+}
+section.frame article .summary .box .color .c-box .boo2 {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 99px;
+  overflow: hidden;
+  transform: rotate(45deg);
+}
+section.frame article .summary .box .color .c-box .boo2 .left {
+  width: 50%;
+  background: #9b8980;
+}
+section.frame article .summary .box .color .c-box .boo2 .right {
+  width: 50%;
+  background: #3f3631;
+}
+section.frame article .summary .box .right {
+  width: 15%;
+  height: 60px;
+}
+section.frame article .summary .box .right a {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+section.frame article .summary .box .right a span {
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section.frame article .summary .box .right a:hover {
+  background: #202020;
+}
+section.frame article .summary .txt {
+  text-align: center;
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  bottom: 40%;
+  transform: translateX(-50%);
+  line-height: 1.3em;
+  color: #c5c5c5;
+}
+section.frame article .summary .txt .up {
+  padding-bottom: 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+}
+section.frame article .summary .txt .up.on {
+  opacity: 1; /* 투명도 1로 변화 */
+  transform: translateY(0); /* 제자리로 올라옴 */
+}
+section.frame article .summary a.h-btn {
+  font-size: 24px;
+  position: absolute;
+  padding: 20px;
+  right: 9%;
+  top: 15%;
+  color: #cccccc;
+  background: rgba(255, 255, 255, 0.431372549);
+  border-radius: 99px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+section.frame article .summary a.h-btn:hover {
+  background: #000000;
+  color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1) inset;
+}
+section.frame article .product {
+  height: 100vh;
+  margin-top: -200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 0 80px 40px;
+  gap: 10px;
+  position: relative;
+  z-index: 999;
+}
+section.frame article .product .item {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+section.frame article .product .item img {
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section.frame article .product .item .summary {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section.frame article .product .item .summary p {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+section.frame article .product .item .summary p.bold {
+  font-size: 24px;
+  font-weight: 600;
+}
+section.frame article .product .item .summary:hover {
+  z-index: 999;
+  opacity: 1;
+}
+section.frame article .product .item:hover::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5254901961);
+}
+section.frame article.art1 .summary h3 {
+  width: 100%;
+  height: 250px;
+}
+section.frame article.art1 .summary h3 img {
+  mix-blend-mode: multiply;
+  width: 70%;
+  height: 100%;
+}
+section.frame article.art1 .summary > img {
+  width: 35%;
+  top: 15%;
+}
+section.frame article.art1 .product .item1 {
+  background-image: url(./img/cooee/ED-03-01-OK-Woody-Bird-Oak-Large-2.jpg);
+  background-size: 80%;
+}
+section.frame article.art1 .product .item2 {
+  background-image: url(./img/cooee/AG-10-02-PB-Lee-Vase-28cm-Pale-Blue-scaled-1-1358x1920.jpg);
+  background-size: 50%;
+}
+section.frame article.art1 .product .item3 {
+  background-image: url(./img/cooee/napkin_tulipa-blush.jpeg);
+  background-size: 50%;
+}
+section.frame article.art1 .product .item4 {
+  background-image: url(./img/cooee/HI-060-01-WH-Easter-Wreath-White.png);
+}
+section.frame article.art1 .product .item5 {
+  background-image: url(./img/cooee/HC-04-01-WH-Heavy-Tealight-Carrara-4.jpg);
+  background-size: 80%;
+}
+section.frame article.art1 .product .item6 {
+  background-image: url(./img/cooee/TH-05-01-SM-Gry-Vase-30cm-Smoke-scaled.jpg);
+  background-size: 50%;
+}
+section.frame article.art1 .product .item7 {
+  background-image: url(./img/cooee/ED-05-02-OK-Woody-Hook-Three-Oak-4-scaled.jpg);
+  background-size: 50%;
+}
+section.frame article.art1 .product .item8 {
+  background-image: url(./img/cooee/HI-028-03-OV-Ball-Vase-20cm-Olive.jpg);
+  background-size: 80%;
+}
+section.frame article.art2 .summary h3 {
+  width: 100%;
+  height: 300px;
+}
+section.frame article.art2 .summary h3 img {
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+}
+section.frame article.art2 .summary > img {
+  top: -7%;
+}
+section.frame article.art2 .product .item1 {
+  background-image: url(./img/newworks/NewWorks_Blaehr_Vase_Large_Amber_400x.jpg);
+  background-size: 80%;
+}
+section.frame article.art2 .product .item2 {
+  background-image: url(./img/newworks/New-Works_Packshot_22310_Lantern-Portable-Pendant-Lamp_Light-Off_400x.jpg);
+  background-size: 90%;
+}
+section.frame article.art2 .product .item3 {
+  background-image: url(./img/newworks/New-Works_Packshots_43010_Tenon-Lounge-Chair_Natural-Oak_Zinc-Drake-Mocha_730x645x700mm_Front_400x.jpg);
+  background-size: 100%;
+}
+section.frame article.art2 .product .item4 {
+  background-image: url(./img/newworks/1635256942-new-worksmargin-pendant-lamp-o70-perspective-grey-background.png);
+  background-size: 80%;
+}
+section.frame article.art2 .product .item5 {
+  background-image: url(./img/newworks/New_Works_Packshots_TANA_V1_Tana_Wall_Mounted_Desk_Black_Ash_PERSPECTIVE_400x.jpg);
+  background-size: 75%;
+}
+section.frame article.art2 .product .item6 {
+  background-image: url(./img/newworks/6.jpg);
+  background-size: 80%;
+}
+section.frame article.art2 .product .item7 {
+  background-image: url(./img/newworks/KizuTableLampGrisduMaraisSmallWhiteBackgroundWhiteBackground_400x.jpg);
+  background-size: 80%;
+}
+section.frame article.art2 .product .item8 {
+  background-image: url(./img/newworks/8.jpg);
+  background-size: 70%;
+}
+section.frame article.art3 .summary h3 {
+  width: 100%;
+  height: 300px;
+}
+section.frame article.art3 .summary h3 img {
+  mix-blend-mode: multiply;
+  width: 60%;
+  height: 100%;
+}
+section.frame article.art3 .summary > img {
+  transform-origin: 50% 50%;
+  transform: rotate(35deg);
+  top: 27%;
+}
+section.frame article.art3 .product .item1 {
+  background-image: url(./img/njrd/503255-01_1_ProductImageMain-3433ba8b19.jpg);
+}
+section.frame article.art3 .product .item2 {
+  background-image: url(./img/njrd/503114-01_1_ProductImageMain-6e1e2abb25.jpg);
+  background-size: 50%;
+}
+section.frame article.art3 .product .item3 {
+  background-image: url(./img/njrd/46176-02_1_ProductImageMain_1-fbaa78ff04.jpg);
+}
+section.frame article.art3 .product .item4 {
+  background-image: url(./img/njrd/46375-01-01_01-8b48fc16e7.jpg);
+  background-size: 70%;
+}
+section.frame article.art3 .product .item5 {
+  background-image: url(./img/njrd/504257-01_1_ProductImageMain-4097ad57b0.jpg);
+}
+section.frame article.art3 .product .item6 {
+  background-image: url(./img/njrd/46373-02-01_01-3ba63a78eb.jpg);
+  background-size: 70%;
+}
+section.frame article.art3 .product .item7 {
+  background-image: url(./img/njrd/504768-01_1_ProductImageMain-c148b33fb8.jpg);
+}
+section.frame article.art3 .product .item8 {
+  background-image: url(./img/njrd/46174-02_1_ProductImageMain_1-3b75a0129d.jpg);
+  background-size: 70%;
+}
+section.frame article.art4 .summary h3 {
+  width: 100%;
+  height: 300px;
+}
+section.frame article.art4 .summary h3 img {
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 350%;
+  margin-top: -370px;
+}
+section.frame article.art4 .summary > img {
+  transform-origin: 50% 50%;
+  top: 20%;
+}
+section.frame article.art4 .product .item1 {
+  background-image: url(./img/blomus/Candle_set_in_concrete.jpg);
+}
+section.frame article.art4 .product .item2 {
+  background-image: url(./img/blomus/Mobile_Rechargeable_LED_Lamp.jpg);
+  background-size: 100%;
+}
+section.frame article.art4 .product .item3 {
+  background-image: url(./img/blomus/Oval_Tray.jpeg);
+}
+section.frame article.art4 .product .item4 {
+  background-image: url(./img/blomus/Vase_Ceramic_5x10.jpg);
+}
+section.frame article.art4 .product .item5 {
+  background-image: url(./img/blomus/RIGUA_Watering_Can.jpg);
+  background-size: 70%;
+}
+section.frame article.art4 .product .item6 {
+  background-image: url(./img/blomus/Soap_Dispenser.jpeg);
+}
+section.frame article.art4 .product .item7 {
+  background-image: url(./img/blomus/MIYABI_Ceramic_Vase.jpg);
+}
+section.frame article.art4 .product .item8 {
+  background-image: url(./img/blomus/ASHI_Firewood_Basket.jpg);
+  background-size: 70%;
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+  background: #bd9a87;
+  border: 1px solid #000;
+}/*# sourceMappingURL=index.css.map */

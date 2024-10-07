@@ -98,7 +98,7 @@ img{vertical-align: top;}
 h3{font-size: 30px; font-weight: 700;}
 p{font-size: 16px; line-height: 1.5em; letter-spacing: -.04em; word-wrap: break-word;}
 a{text-decoration: none;}
-li{list-style: none;}
+li{list-style: none; line-height: 2em;}
 
 .flex {
     display: flex;

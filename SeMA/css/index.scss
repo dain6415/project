@@ -115,12 +115,10 @@
       p {
         font-size: 20px;
         width: 100%;
-        line-height: 30px;
         transform: translateX(-100%);
         transition: 0.5s ease;
         // opacity: 0;
         color: var(--gray2);
-        line-height: 1.5em;
         &.artist {
           width: 21%;
           white-space: nowrap;
@@ -373,7 +371,6 @@
             width: 100%;
             font-size: 50px;
             font-weight: 100;
-            line-height: 80px;
             display: flex;
             flex-direction: column; /* 수직 방향으로 배치 */
             align-items: flex-start; /* 각 아이템을 왼쪽 정렬 */
@@ -420,11 +417,11 @@
               cursor: pointer;
               &:hover {
                 background: #000;
-                a{
+                a {
                   color: #fff;
                 }
               }
-              a{
+              a {
                 color: var(--gray2);
                 font-weight: 500;
               }
@@ -507,9 +504,8 @@
             margin-bottom: 15px;
           }
           li {
-            line-height: 24px;
             font-weight: 500;
-            a{
+            a {
               font-weight: 800;
             }
           }
@@ -521,7 +517,6 @@
           border-top: 1px solid var(--gray3);
           padding: 20px 0;
           li {
-            line-height: 34px;
             font-weight: 900;
             font-size: 16px;
             color: var(--gray3);
@@ -597,15 +592,15 @@
       }
       nav {
         width: 50%;
-        >ul {
+        > ul {
           li.main-menu {
             flex: 1;
             text-align: center;
             position: relative;
-            &:hover >a{
+            &:hover > a {
               background: #d6a9a9;
             }
-            >a {
+            > a {
               color: #fff;
               display: block;
               width: 100%;
@@ -614,22 +609,22 @@
           }
         }
         // 음 메인메뉴 안에 넣으면 안되는지 이해가 잘....
-        ul.sub-menu{
+        ul.sub-menu {
           width: 100%;
           position: absolute;
           left: 0;
           top: 65px;
           display: none;
-          li{
-            >a{
+          li {
+            > a {
               display: block;
               color: #fff;
               padding: 6px;
               font-size: 16px;
               border: 1px solid #828080;
-              &:hover{
+              &:hover {
                 color: #000;
-                &::before{
+                &::before {
                   position: absolute;
                   left: 0;
                   top: 0;
@@ -641,7 +636,6 @@
               }
             }
           }
-          
         }
       }
       .right-menu {
@@ -666,7 +660,7 @@
     border-bottom: 1px solid #e4e4e4;
   }
   /* ul li a가 한번더 있어서 정확하게 경로설정해야 함 */
-  header.scrolled nav >ul li.main-menu a {
+  header.scrolled nav > ul li.main-menu a {
     color: black; /* 스크롤 후 변경된 nav 링크 색상 */
   }
   header.scrolled .right-menu ul li a {
@@ -712,12 +706,10 @@
       p {
         font-size: 20px;
         width: 30%;
-        line-height: 30px;
         transform: translateX(-100%);
         transition: 0.5s ease;
         // opacity: 0;
         color: var(--gray2);
-        line-height: 2em;
         &.artist {
           width: 21%;
           white-space: nowrap;
@@ -986,22 +978,22 @@
           ul.summary-list {
             width: 100%;
             font-size: 60px;
-            /* font-weight: 100; */
-            line-height: 80px;
             display: flex;
             flex-direction: column; /* 수직 방향으로 배치 */
             align-items: flex-start; /* 각 아이템을 왼쪽 정렬 */
             padding: 0;
             margin: 0;
             font-weight: 800;
+            li {
+              line-height: 90px;
+              a {
+                color: transparent;
+                -webkit-text-stroke: 0.8px black;
 
-            a {
-              color: transparent;
-              -webkit-text-stroke: 0.8px black;
-
-              &:hover {
-                color: #333;
-                -webkit-text-stroke: 0px;
+                &:hover {
+                  color: #333;
+                  -webkit-text-stroke: 0px;
+                }
               }
             }
           }
@@ -1034,11 +1026,11 @@
               cursor: pointer;
               &:hover {
                 background: #000;
-                a{
+                a {
                   color: #fff;
                 }
               }
-              a{
+              a {
                 color: var(--gray2);
                 font-weight: 500;
               }
@@ -1082,7 +1074,6 @@
               p {
                 font-size: 12px;
                 word-break: keep-all;
-                line-height: 20px;
                 letter-spacing: none;
                 text-align: left;
                 color: var(--gray3);
@@ -1126,7 +1117,6 @@
           }
           ul {
             li {
-              line-height: 24px;
               font-weight: 500;
               font-size: 16px;
               color: var(--gray3);
@@ -1140,7 +1130,7 @@
         ul.f-menu,
         ul.f-information {
           li {
-            line-height: 34px;
+            line-height: 40px;
             font-weight: 800;
             font-size: 16px;
           }
@@ -1280,7 +1270,6 @@
               p {
                 font-size: 16px;
                 word-break: keep-all;
-                line-height: 1.5em;
                 letter-spacing: none;
                 text-align: left;
                 color: var(--gray3);
@@ -1321,9 +1310,6 @@
           img {
             width: 50%;
             margin-bottom: 30px;
-          }
-          li {
-            line-height: 24px;
           }
         }
 

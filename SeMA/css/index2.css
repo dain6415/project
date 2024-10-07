@@ -12,7 +12,7 @@
     background: #fff;
   }
   header .inner {
-    width: 90%;
+    max-width: 1200px;
     height: 100%;
     margin: auto;
     display: flex;
@@ -92,25 +92,154 @@
   .wrap .container {
     width: 100%;
     max-width: 1200px;
-    background: #fff;
     margin: -40px auto 0;
     position: relative;
-    border: 1px solid #000;
+  }
+  .wrap .container h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
   }
   .wrap .container .menu-filter ul.filter {
     display: flex;
     gap: 60px;
-    border: 1px solid #bd2828;
+    padding-bottom: 60px;
   }
   .wrap .container .menu-filter ul.filter > li {
     flex: 1;
+    position: relative;
   }
   .wrap .container .menu-filter ul.filter > li > a {
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
     width: 100%;
     display: block;
-    border: 1px solid #3bb822;
+    font-size: 24px;
+    padding: 20px;
+    font-weight: 600;
+  }
+  .wrap .container .menu-filter ul.filter > li ul.filter-sub {
+    border: 1px solid #aeaeae;
+    background: #fff;
+    padding: 5px 20px;
+    position: absolute;
+    left: 0;
+    top: 73px;
+    width: 100%;
+    display: none;
+  }
+  .wrap .container .menu-filter ul.filter > li ul.filter-sub li {
+    line-height: 2.5em;
+    font-weight: 600;
+    display: block;
+    cursor: pointer;
+  }
+  .wrap .container .menu-filter ul.filter > li ul.filter-sub li:hover {
+    background: #3bb822;
+  }
+  .wrap .container ul.contents {
+    padding: 60px 0px;
+    gap: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid var(--gray2);
+  }
+  .wrap .container ul.contents li {
+    width: 30%;
+  }
+  .wrap .container ul.contents li .item {
+    position: relative;
+  }
+  .wrap .container ul.contents li .item .art-img {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrap .container ul.contents li .item .art-img img {
+    width: 101%;
+    transition: 0.3s ease;
+  }
+  .wrap .container ul.contents li .item .art-inner {
+    height: 180px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--gray);
+  }
+  .wrap .container ul.contents li .item .art-inner .group {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+    background: rgb(0, 0, 0);
+    border-radius: 99px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+  }
+  .wrap .container ul.contents li .item .art-inner .group p {
+    color: #fff;
+  }
+  .wrap .container ul.contents li .item .art-inner .condensation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 500;
+  }
+  .wrap .container ul.contents li .item .art-inner p {
+    color: #999;
+  }
+  .wrap .container ul.contents li .item .art-inner p.i-title {
+    color: #333;
     font-size: 20px;
-    padding: 10px;
-    font-family: "YoonGothicPro785";
+    font-weight: 800;
+    width: 100%;
+    letter-spacing: -0.02em;
+    padding-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .wrap .container ul.contents li .item .art-inner p.date {
+    padding-top: 5px;
+  }
+  .wrap .container ul.contents li .item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray);
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: -1;
+  }
+  .wrap .container ul.contents li .item:hover img {
+    width: 110%;
+  }
+  .wrap .container ul.contents li .item:hover p {
+    color: #000;
+  }
+  .wrap .container ul.contents li .item:hover p.i-title {
+    color: #000;
+  }
+  .wrap .container ul.contents li .item:hover .group {
+    background: #000;
+  }
+  .wrap .container ul.contents li .item:hover .group p {
+    color: #fff;
+    font-weight: 500;
+  }
+  .wrap .container ul.contents li .item:hover::after {
+    width: 105%;
+    height: 105%;
+    opacity: 1;
   }
 }/*# sourceMappingURL=index2.css.map */

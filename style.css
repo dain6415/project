@@ -57,9 +57,9 @@ ul li a.on{color: #000000; font-weight: 900;}
   align-items: center;
   visibility: hidden;
   transform: opacity .3s ease, visibility .3s ease;
-  
 
 }
+
 .grid-item:hover .summary{
   opacity: 1;
   visibility: visible;

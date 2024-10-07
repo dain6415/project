@@ -89,11 +89,9 @@
   .wrap .bg-img p {
     font-size: 20px;
     width: 100%;
-    line-height: 30px;
     transform: translateX(-100%);
     transition: 0.5s ease;
     color: var(--gray2);
-    line-height: 1.5em;
   }
   .wrap .bg-img p.artist {
     width: 21%;
@@ -335,7 +333,6 @@
     width: 100%;
     font-size: 50px;
     font-weight: 100;
-    line-height: 80px;
     display: flex;
     flex-direction: column; /* 수직 방향으로 배치 */
     align-items: flex-start; /* 각 아이템을 왼쪽 정렬 */
@@ -452,7 +449,6 @@
     margin-bottom: 15px;
   }
   .container footer .f-top .f-logo li {
-    line-height: 24px;
     font-weight: 500;
   }
   .container footer .f-top .f-logo li a {
@@ -466,7 +462,6 @@
     padding: 20px 0;
   }
   .container footer .f-top ul li {
-    line-height: 34px;
     font-weight: 900;
     font-size: 16px;
     color: var(--gray3);
@@ -635,11 +630,9 @@
   .wrap .bg-img p {
     font-size: 20px;
     width: 30%;
-    line-height: 30px;
     transform: translateX(-100%);
     transition: 0.5s ease;
     color: var(--gray2);
-    line-height: 2em;
   }
   .wrap .bg-img p.artist {
     width: 21%;
@@ -897,8 +890,6 @@
   .container article.art2 .summary ul.summary-list {
     width: 100%;
     font-size: 60px;
-    /* font-weight: 100; */
-    line-height: 80px;
     display: flex;
     flex-direction: column; /* 수직 방향으로 배치 */
     align-items: flex-start; /* 각 아이템을 왼쪽 정렬 */
@@ -906,11 +897,14 @@
     margin: 0;
     font-weight: 800;
   }
-  .container article.art2 .summary ul.summary-list a {
+  .container article.art2 .summary ul.summary-list li {
+    line-height: 90px;
+  }
+  .container article.art2 .summary ul.summary-list li a {
     color: transparent;
     -webkit-text-stroke: 0.8px black;
   }
-  .container article.art2 .summary ul.summary-list a:hover {
+  .container article.art2 .summary ul.summary-list li a:hover {
     color: #333;
     -webkit-text-stroke: 0px;
   }
@@ -991,7 +985,6 @@
   .container article.art4 .inner a.item .item-summary p {
     font-size: 12px;
     word-break: keep-all;
-    line-height: 20px;
     letter-spacing: none;
     text-align: left;
     color: var(--gray3);
@@ -1021,7 +1014,6 @@
     margin-bottom: 30px;
   }
   .container footer .f-top .f-logo ul li {
-    line-height: 24px;
     font-weight: 500;
     font-size: 16px;
     color: var(--gray3);
@@ -1032,7 +1024,7 @@
   }
   .container footer .f-top ul.f-menu li,
   .container footer .f-top ul.f-information li {
-    line-height: 34px;
+    line-height: 40px;
     font-weight: 800;
     font-size: 16px;
   }
@@ -1159,7 +1151,6 @@
   .container article.art4 .inner a.item .item-summary p {
     font-size: 16px;
     word-break: keep-all;
-    line-height: 1.5em;
     letter-spacing: none;
     text-align: left;
     color: var(--gray3);
@@ -1187,9 +1178,6 @@
   .container footer .f-top .f-logo img {
     width: 50%;
     margin-bottom: 30px;
-  }
-  .container footer .f-top .f-logo li {
-    line-height: 24px;
   }
   .container footer .f-top .family {
     width: 20%;

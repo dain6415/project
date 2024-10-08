@@ -83,7 +83,7 @@
     color: #fff;
   }
   body {
-    background: #000;
+    background: #fff;
   }
   .wrap {
     width: 100%;
@@ -222,7 +222,7 @@
     z-index: -1;
   }
   .wrap .container ul.contents li .item:hover img {
-    width: 110%;
+    width: 105%;
   }
   .wrap .container ul.contents li .item:hover p {
     color: #000;

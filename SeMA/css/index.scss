@@ -839,6 +839,7 @@
 
               img {
                 width: 101%;
+                transition: .3s ease;
               }
             }
             .art-inner {
@@ -922,6 +923,9 @@
               z-index: -1;
             }
             &:hover {
+              img{
+                width: 105%;
+              }
               p {
                 color: #000;
                 &.i-title {

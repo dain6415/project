@@ -5,11 +5,14 @@
   }
 }
 @media only screen and (min-width: 1200px) {
+  body {
+    background: #fff;
+  }
   header {
-    border: 1px solid #000;
     padding: 20px 100px;
     transition: 0.5s;
     background: #fff;
+    border-bottom: 1px solid #e4e4e4;
   }
   header .inner {
     max-width: 1700px;
@@ -82,21 +85,16 @@
   header .inner .right-menu ul li a i {
     color: #fff;
   }
-  body {
-    background: #fff;
-  }
   .wrap {
     width: 90%;
-    margin-top: 200px;
-    border: 1px solid #000;
     margin: -40px auto 0;
   }
   .wrap .container {
     width: 100%;
     max-width: 1700px;
-    border: 1px solid #000;
-    padding: 40px;
+    padding: 0 40px;
     margin: auto;
+    margin-top: 200px;
     position: relative;
   }
   .wrap .container h2 {
@@ -266,13 +264,16 @@
   .wrap .container ul.contents li a:hover .art-inner .group p {
     color: #000;
   }
-  .wrap .container ul.contents li a:hover .art-inner .group.yellow { /* 전시 */
+  .wrap .container ul.contents li a:hover .art-inner .group.yellow {
+    /* 전시 */
     background-color: rgb(246, 189, 32);
   }
-  .wrap .container ul.contents li a:hover .art-inner .group.blue { /* 행사 */
+  .wrap .container ul.contents li a:hover .art-inner .group.blue {
+    /* 행사 */
     background-color: rgb(103, 187, 243);
   }
-  .wrap .container ul.contents li a:hover .art-inner .group.green { /* 교육 */
+  .wrap .container ul.contents li a:hover .art-inner .group.green {
+    /* 교육 */
     background-color: rgb(42, 161, 58);
   }
   .wrap .container ul.contents li a:hover .art-inner .group p {
@@ -282,5 +283,19 @@
     width: 105%;
     height: 105%;
     opacity: 1;
+  }
+  .wrap .pager-container nav.pager-nav ul.pager {
+    width: 15%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .wrap .pager-container nav.pager-nav ul.pager li {
+    flex: 1;
+    text-align: center;
+    border: 1px solid #b51919;
+  }
+  .wrap .pager-container nav.pager-nav ul.pager li a {
+    font-size: 24px;
   }
 }/*# sourceMappingURL=index2.css.map */

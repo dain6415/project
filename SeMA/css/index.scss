@@ -159,7 +159,6 @@
 
   .container {
     width: 100%;
-    max-width: 1200px;
     border-radius: 26px 26px 0 0;
     // padding: 40px;
     background: #fff;
@@ -172,9 +171,9 @@
         padding: 20px 40px 40px;
 
         .line {
-          width: 15%;
+          width: 25%;
           margin: auto;
-          height: 10px;
+          height: 8px;
           background: #999;
           border-radius: 99px;
           margin: 0 auto 120px;
@@ -575,10 +574,12 @@
 
 @media only screen and (min-width: 601px) {
   header {
-    padding: 20px 40px;
+    padding: 20px 0px;
     transition: 0.5s;
     .inner {
-      width: 90%;
+      width: 100%;
+      max-width: 1200px;
+      padding: 0px 40px;
       height: 100%;
       margin: auto;
       @include flex-sb;
@@ -688,7 +689,9 @@
 
       .title {
         z-index: 9;
-        width: 90%;
+        width: 100%;
+        padding: 0 40px;
+        max-width: 1200px;
         position: absolute;
         left: 50%;
         bottom: 100px;
@@ -746,438 +749,438 @@
         }
       }
     }
-  }
 
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    border-radius: 26px 26px 0 0;
-    // padding: 40px;
-    background: #fff;
-    margin: -40px auto 0;
-    position: relative;
-    z-index: 99;
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      border-radius: 26px 26px 0 0;
+      // padding: 40px;
+      background: #fff;
+      margin: -40px auto 0;
+      position: relative;
+      z-index: 99;
 
-    article {
-      &.art1 {
-        padding: 20px 40px 40px;
+      article {
+        &.art1 {
+          padding: 20px 40px 40px;
 
-        .line {
-          width: 15%;
-          margin: auto;
-          height: 10px;
-          background: #999;
-          border-radius: 99px;
-          margin: 0 auto 120px;
-        }
+          .line {
+            width: 15%;
+            margin: auto;
+            height: 10px;
+            background: #999;
+            border-radius: 99px;
+            margin: 0 auto 120px;
+          }
 
-        .more {
-          @include flex-sb;
-          padding-bottom: 40px;
+          .more {
+            @include flex-sb;
+            padding-bottom: 40px;
 
-          .btn {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
+            .btn {
+              display: flex;
+              align-items: center;
+              text-decoration: none;
 
-            // 아래 호버시 선이 나오도록 햇는데 안나오네요...
-            p {
-              color: var(--gray3);
-              position: relative;
-              margin: 0;
-              display: inline-block;
-              padding-bottom: 2px;
-              &::after {
-                position: absolute;
-                left: 0;
-                bottom: -2;
-                width: 1%;
-                height: 6px;
-                transition: 0.5s ease;
-                background: #000;
-                z-index: -1;
+              // 아래 호버시 선이 나오도록 햇는데 안나오네요...
+              p {
+                color: var(--gray3);
+                position: relative;
+                margin: 0;
+                display: inline-block;
+                padding-bottom: 2px;
+                &::after {
+                  position: absolute;
+                  left: 0;
+                  bottom: -2;
+                  width: 1%;
+                  height: 6px;
+                  transition: 0.5s ease;
+                  background: #000;
+                  z-index: -1;
+                }
+                &:hover::after {
+                  width: 100%;
+                }
               }
-              &:hover::after {
-                width: 100%;
+              .right {
+                width: 20px;
+                height: 20px;
+                border-radius: 99px;
+                // background: #000;
+                border: 1px solid #000;
+                @include flex-c;
+                margin-left: 10px;
+                p {
+                  color: #333;
+                  font-size: 12px;
+                  font-weight: 800;
+                }
               }
             }
-            .right {
-              width: 20px;
-              height: 20px;
-              border-radius: 99px;
-              // background: #000;
-              border: 1px solid #000;
-              @include flex-c;
-              margin-left: 10px;
-              p {
-                color: #333;
-                font-size: 12px;
-                font-weight: 800;
+          }
+
+          .grid {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            gap: 60px 40px;
+            margin-bottom: 40px;
+
+            .item {
+              position: relative;
+              &.item4 {
+                display: none;
+              }
+              .art-img {
+                margin-bottom: 10px;
+                height: 200px;
+                overflow: hidden;
+                @include flex-c;
+
+                img {
+                  width: 101%;
+                  transition: 0.3s ease;
+                }
+              }
+              .art-inner {
+                height: 200px;
+                padding: 0 2px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .group {
+                  width: 60px;
+                  height: 60px;
+                  border: 1px solid #000;
+                  // background: rgba(246, 189, 32, 1);
+                  border-radius: 99px;
+                  font-weight: 500;
+                  @include flex-c;
+                  margin-right: 15px;
+                  p {
+                    color: #333;
+                  }
+                }
+                .condensation {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  font-weight: 500;
+                }
+                p {
+                  color: #999;
+                  &.i-title {
+                    color: #333;
+                    font-size: 20px;
+                    font-weight: 800;
+                    width: 100%;
+                    letter-spacing: -0.02em;
+                    padding-bottom: 5px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    // white-space: nowrap;
+                  }
+                  &.date {
+                    padding-top: 5px;
+                  }
+                }
+              }
+
+              &.yellow::after {
+                content: "";
+                display: block;
+                position: absolute;
+                @include po-center;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(246, 189, 32, 1);
+                opacity: 0;
+                transition: 0.5s ease;
+                z-index: -1;
+              }
+              &.blue::after {
+                content: "";
+                display: block;
+                position: absolute;
+                @include po-center;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(103, 187, 243);
+                opacity: 0;
+                transition: 0.5s ease;
+                z-index: -1;
+              }
+              &.green::after {
+                content: "";
+                display: block;
+                position: absolute;
+                @include po-center;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(42, 161, 58);
+                opacity: 0;
+                transition: 0.5s ease;
+                z-index: -1;
+              }
+              &:hover {
+                img {
+                  width: 105%;
+                }
+                p {
+                  color: #000;
+                  &.i-title {
+                    color: #000;
+                  }
+                }
+                .group {
+                  background: #000;
+                  p {
+                    color: #fff;
+                    font-weight: 500;
+                  }
+                }
+                &::after {
+                  width: 105%;
+                  height: 105%;
+                  opacity: 1;
+                }
               }
             }
           }
         }
 
-        .grid {
-          display: grid;
+        &.art2 {
+          position: relative;
           width: 100%;
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(1, 1fr);
-          gap: 60px 40px;
-          margin-bottom: 40px;
-
-          .item {
-            position: relative;
-            &.item4 {
-              display: none;
+          height: 900px;
+          overflow: hidden;
+          z-index: 99;
+          /* border: 1px solid #000; */
+          padding: 80px;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0b79ac url(../imgs/sect3/getImage.jpg);
+            background-position: 10%;
+            background-size: cover;
+            filter: grayscale(100%);
+            z-index: -1;
+          }
+          .summary {
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            padding-top: 20px;
+            max-width: 1000px;
+            h3 {
+              margin-bottom: 20px;
             }
-            .art-img {
-              margin-bottom: 10px;
-              height: 200px;
-              overflow: hidden;
-              @include flex-c;
-
-              img {
-                width: 101%;
-                transition: .3s ease;
-              }
-            }
-            .art-inner {
-              height: 200px;
-              padding: 0 2px;
+            ul.summary-list {
+              width: 100%;
+              font-size: 60px;
               display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-              .group {
-                width: 60px;
-                height: 60px;
-                border: 1px solid #000;
-                // background: rgba(246, 189, 32, 1);
-                border-radius: 99px;
-                font-weight: 500;
-                @include flex-c;
-                margin-right: 15px;
-                p {
-                  color: #333;
-                }
-              }
-              .condensation {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                font-weight: 500;
-              }
-              p {
-                color: #999;
-                &.i-title {
-                  color: #333;
-                  font-size: 20px;
-                  font-weight: 800;
-                  width: 100%;
-                  letter-spacing: -0.02em;
-                  padding-bottom: 5px;
-                  overflow: hidden;
-                  text-overflow: ellipsis;
-                  // white-space: nowrap;
-                }
-                &.date {
-                  padding-top: 5px;
-                }
-              }
-            }
+              flex-direction: column; /* 수직 방향으로 배치 */
+              align-items: flex-start; /* 각 아이템을 왼쪽 정렬 */
+              padding: 0;
+              margin: 0;
+              font-weight: 800;
+              li {
+                line-height: 90px;
+                a {
+                  color: transparent;
+                  -webkit-text-stroke: 0.8px black;
 
-            &.yellow::after {
-              content: "";
-              display: block;
-              position: absolute;
-              @include po-center;
-              width: 100%;
-              height: 100%;
-              background-color: rgba(246, 189, 32, 1);
-              opacity: 0;
-              transition: 0.5s ease;
-              z-index: -1;
-            }
-            &.blue::after {
-              content: "";
-              display: block;
-              position: absolute;
-              @include po-center;
-              width: 100%;
-              height: 100%;
-              background-color: rgb(103, 187, 243);
-              opacity: 0;
-              transition: 0.5s ease;
-              z-index: -1;
-            }
-            &.green::after {
-              content: "";
-              display: block;
-              position: absolute;
-              @include po-center;
-              width: 100%;
-              height: 100%;
-              background-color: rgb(42, 161, 58);
-              opacity: 0;
-              transition: 0.5s ease;
-              z-index: -1;
-            }
-            &:hover {
-              img{
-                width: 105%;
-              }
-              p {
-                color: #000;
-                &.i-title {
-                  color: #000;
+                  &:hover {
+                    color: #333;
+                    -webkit-text-stroke: 0px;
+                  }
                 }
               }
-              .group {
+            }
+          }
+        }
+
+        &.art3 {
+          padding: 40px;
+          text-align: center;
+
+          .timeline {
+            height: 300px;
+            background: var(--gray);
+            padding: 50px 40px;
+            @include flex-c;
+            flex-direction: column;
+            // height: 300px;
+            h3 {
+              padding-bottom: 15px;
+              text-transform: uppercase;
+            }
+            p {
+              color: var(--gray3);
+              &.Check {
+                margin-top: 40px;
+                padding: 10px 40px;
+                border: 1px solid #000;
                 background: #000;
-                p {
-                  color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+                &:hover {
+                  background: #000;
+                  a {
+                    color: #fff;
+                  }
+                }
+                a {
+                  color: var(--gray2);
                   font-weight: 500;
                 }
               }
-              &::after {
-                width: 105%;
-                height: 105%;
-                opacity: 1;
-              }
             }
           }
         }
-      }
 
-      &.art2 {
-        position: relative;
-        width: 100%;
-        height: 900px;
-        overflow: hidden;
-        z-index: 99;
-        /* border: 1px solid #000; */
-        padding: 80px;
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: #0b79ac url(../imgs/sect3/getImage.jpg);
-          background-position: 10%;
-          background-size: cover;
-          filter: grayscale(100%);
-          z-index: -1;
-        }
-        .summary {
-          width: 100%;
-          height: 100%;
-          margin: auto;
-          padding-top: 20px;
-          max-width: 1000px;
-          h3 {
-            margin-bottom: 20px;
-          }
-          ul.summary-list {
-            width: 100%;
-            font-size: 60px;
-            display: flex;
-            flex-direction: column; /* 수직 방향으로 배치 */
-            align-items: flex-start; /* 각 아이템을 왼쪽 정렬 */
-            padding: 0;
-            margin: 0;
-            font-weight: 800;
-            li {
-              line-height: 90px;
-              a {
-                color: transparent;
-                -webkit-text-stroke: 0.8px black;
-
-                &:hover {
-                  color: #333;
-                  -webkit-text-stroke: 0px;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      &.art3 {
-        padding: 40px;
-        text-align: center;
-
-        .timeline {
-          height: 300px;
-          background: var(--gray);
-          padding: 50px 40px;
-          @include flex-c;
-          flex-direction: column;
-          // height: 300px;
-          h3 {
-            padding-bottom: 15px;
-            text-transform: uppercase;
-          }
-          p {
-            color: var(--gray3);
-            &.Check {
-              margin-top: 40px;
-              padding: 10px 40px;
-              border: 1px solid #000;
-              background: #000;
-              border-radius: 5px;
-              cursor: pointer;
-              &:hover {
-                background: #000;
-                a {
-                  color: #fff;
-                }
-              }
-              a {
-                color: var(--gray2);
-                font-weight: 500;
-              }
-            }
-          }
-        }
-      }
-
-      &.art4 {
-        padding: 40px;
-        .inner {
-          //   border: 1px solid #000;
-          display: grid;
-          height: 200px;
-          grid-template-columns: repeat(5, 1fr);
-          column-gap: 10px;
-
-          a.item {
-            outline: 1px solid var(--gray2);
-            padding: 30px;
+        &.art4 {
+          padding: 40px;
+          .inner {
+            //   border: 1px solid #000;
+            display: grid;
             height: 200px;
-            background: #ffffff;
-            border-radius: 10px;
-            .item-summary {
-              .sub {
-                @include flex-sb;
-                margin-bottom: 12px;
-                h3 {
-                  font-size: 20px;
-                  padding: 0;
+            grid-template-columns: repeat(5, 1fr);
+            column-gap: 10px;
+
+            a.item {
+              outline: 1px solid var(--gray2);
+              padding: 30px;
+              height: 200px;
+              background: #ffffff;
+              border-radius: 10px;
+              .item-summary {
+                .sub {
+                  @include flex-sb;
+                  margin-bottom: 12px;
+                  h3 {
+                    font-size: 20px;
+                    padding: 0;
+                  }
+                  i {
+                    height: 100%;
+                    font-size: 20px;
+                    transform: rotateZ(45deg);
+                    transform-origin: center;
+                    transition: 0.5s;
+                    color: var(--gray3);
+                  }
                 }
-                i {
-                  height: 100%;
-                  font-size: 20px;
-                  transform: rotateZ(45deg);
-                  transform-origin: center;
-                  transition: 0.5s;
+                p {
+                  font-size: 12px;
+                  word-break: keep-all;
+                  letter-spacing: none;
+                  text-align: left;
                   color: var(--gray3);
                 }
               }
-              p {
-                font-size: 12px;
-                word-break: keep-all;
-                letter-spacing: none;
-                text-align: left;
-                color: var(--gray3);
-              }
-            }
 
-            &:hover {
-              border-radius: 10px;
-              outline: #000000 solid 1.5px;
-              p {
-                color: #000;
-              }
-              .sub i {
-                //.sub를 붙여줘야 이게 적용됨. 제대로 타고 내려와야 함
-                transform: rotateZ(0deg);
-                color: #000;
-                //   color: var(--sub-color)
+              &:hover {
+                border-radius: 10px;
+                outline: #000000 solid 1.5px;
+                p {
+                  color: #000;
+                }
+                .sub i {
+                  //.sub를 붙여줘야 이게 적용됨. 제대로 타고 내려와야 함
+                  transform: rotateZ(0deg);
+                  color: #000;
+                  //   color: var(--sub-color)
+                }
               }
             }
           }
+
+          margin-bottom: 80px;
         }
-
-        margin-bottom: 80px;
       }
-    }
 
-    // ----------------------------------------------
-    // footer
-    footer {
-      .f-top {
-        justify-content: space-between;
-        margin-bottom: 60px;
-        display: flex;
+      // ----------------------------------------------
+      // footer
+      footer {
+        .f-top {
+          justify-content: space-between;
+          margin-bottom: 60px;
+          display: flex;
 
-        padding: 0 40px;
-        .f-logo {
-          width: 50%;
-          img {
+          padding: 0 40px;
+          .f-logo {
             width: 50%;
-            margin-bottom: 30px;
-          }
-          ul {
-            li {
-              font-weight: 500;
-              font-size: 16px;
-              color: var(--gray3);
-              a {
-                font-weight: 800;
-                padding-left: 5px;
+            img {
+              width: 50%;
+              margin-bottom: 30px;
+            }
+            ul {
+              li {
+                font-weight: 500;
+                font-size: 16px;
+                color: var(--gray3);
+                a {
+                  font-weight: 800;
+                  padding-left: 5px;
+                }
               }
             }
           }
-        }
-        ul.f-menu,
-        ul.f-information {
-          li {
-            line-height: 40px;
-            font-weight: 800;
-            font-size: 16px;
-          }
-        }
-
-        .family {
-          width: 20%;
-          p {
-            margin-bottom: 10px;
-            font-weight: 800;
-          }
-          select {
-            width: 100%;
-            height: 40px;
-            padding: 10px;
-          }
-        }
-      }
-      .line {
-        border-top: 1px solid #bcbcbc;
-        padding-bottom: 20px;
-      }
-      .f-btn {
-        // padding-top: 20px;
-        display: flex;
-
-        padding: 0 40px 60px;
-        /* 혹시나 모바일의 영향이 있을까하는.... */
-        justify-content: space-between;
-        align-self: center;
-
-        p {
-          color: var(--gray2);
-        }
-        .sns {
-          width: 25%;
-          ul {
-            width: 100%;
-            gap: 20px;
+          ul.f-menu,
+          ul.f-information {
             li {
-              flex: 1;
-              img {
-                width: 100%;
+              line-height: 40px;
+              font-weight: 800;
+              font-size: 16px;
+            }
+          }
+
+          .family {
+            width: 20%;
+            p {
+              margin-bottom: 10px;
+              font-weight: 800;
+            }
+            select {
+              width: 100%;
+              height: 40px;
+              padding: 10px;
+            }
+          }
+        }
+        .line {
+          border-top: 1px solid #bcbcbc;
+          padding-bottom: 20px;
+        }
+        .f-btn {
+          // padding-top: 20px;
+          display: flex;
+
+          padding: 0 40px 60px;
+          /* 혹시나 모바일의 영향이 있을까하는.... */
+          justify-content: space-between;
+          align-self: center;
+
+          p {
+            color: var(--gray2);
+          }
+          .sns {
+            width: 25%;
+            ul {
+              width: 100%;
+              gap: 20px;
+              li {
+                flex: 1;
+                img {
+                  width: 100%;
+                }
               }
             }
           }
@@ -1188,172 +1191,188 @@
 }
 
 @media only screen and (min-width: 1600px) {
-  .container {
-    width: 90%;
-    max-width: 1700px;
+  header {
+    padding: 20px 103px;
+    .inner {
+      width: 100%;
+      max-width: 1700px;
+      padding: 0;
+      border: 1px solid #e23b3b;
+    }
+  }
+  .wrap {
+    .bg-img {
+      .title {
+        max-width: 1700px;
+        padding: 0 60px;
+      }
+    }
+    .container {
+      max-width: 1700px;
+      article {
+        &.art1 {
+          padding: 20px 60px 40px;
 
-    article {
-      &.art1 {
-        padding: 20px 60px 40px;
+          .more {
+            @include flex-sb;
+            padding-bottom: 40px;
 
-        .more {
-          @include flex-sb;
-          padding-bottom: 40px;
+            .btn {
+              display: flex;
+              align-items: center;
+              .right {
+                width: 20px;
+                height: 20px;
+                border-radius: 99px;
+                // background: #000;
+                border: 1px solid #000;
+                @include flex-c;
+                margin-left: 10px;
+                p {
+                  color: var(--gray3);
+                  font-size: 12px;
+                  font-weight: 800;
+                }
+              }
+            }
+          }
 
-          .btn {
-            display: flex;
-            align-items: center;
-            .right {
-              width: 20px;
-              height: 20px;
-              border-radius: 99px;
-              // background: #000;
-              border: 1px solid #000;
-              @include flex-c;
-              margin-left: 10px;
-              p {
-                color: var(--gray3);
-                font-size: 12px;
-                font-weight: 800;
+          .grid {
+            grid-template-columns: repeat(4, 1fr);
+            .item {
+              &.item4 {
+                display: block;
               }
             }
           }
         }
 
-        .grid {
-          grid-template-columns: repeat(4, 1fr);
-          .item {
-            &.item4 {
-              display: block;
-            }
+        &.art2 {
+          padding: 60px;
+          .summary {
+            padding: 0;
+            max-width: 1700px;
           }
         }
-      }
 
-      &.art2 {
-        padding: 60px;
-        .summary {
-          padding: 0;
-          max-width: 1700px;
+        &.art3 {
+          padding: 60px;
+          text-align: center;
+
+          .timeline {
+            background: var(--gray);
+            padding: 50px 40px;
+          }
         }
-      }
 
-      &.art3 {
-        padding: 60px;
-        text-align: center;
+        &.art4 {
+          padding: 60px;
+          .inner {
+            column-gap: 20px;
 
-        .timeline {
-          background: var(--gray);
-          padding: 50px 40px;
-        }
-      }
-
-      &.art4 {
-        padding: 60px;
-        .inner {
-          column-gap: 20px;
-
-          a.item {
-            height: 240px;
-            .item-summary {
-              .sub {
-                margin-bottom: 20px;
-                h3 {
-                  font-size: 30px;
-                  padding: 0;
+            a.item {
+              height: 240px;
+              .item-summary {
+                .sub {
+                  margin-bottom: 20px;
+                  h3 {
+                    font-size: 30px;
+                    padding: 0;
+                  }
+                  i {
+                    height: 100%;
+                    font-size: 30px;
+                    transform: rotateZ(45deg);
+                    transform-origin: center;
+                    transition: 0.5s;
+                    color: var(--gray3);
+                  }
                 }
-                i {
-                  height: 100%;
-                  font-size: 30px;
-                  transform: rotateZ(45deg);
-                  transform-origin: center;
-                  transition: 0.5s;
+                p {
+                  font-size: 16px;
+                  word-break: keep-all;
+                  letter-spacing: none;
+                  text-align: left;
                   color: var(--gray3);
                 }
               }
-              p {
-                font-size: 16px;
-                word-break: keep-all;
-                letter-spacing: none;
-                text-align: left;
-                color: var(--gray3);
-              }
-            }
 
-            &:hover {
-              border-radius: 10px;
-              outline: #000000 solid 1.5px;
-              p {
-                color: #000;
-              }
-              .sub i {
-                //.sub를 붙여줘야 이게 적용됨. 제대로 타고 내려와야 함
-                transform: rotateZ(0deg);
-                color: #000;
-                //   color: var(--sub-color)
+              &:hover {
+                border-radius: 10px;
+                outline: #000000 solid 1.5px;
+                p {
+                  color: #000;
+                }
+                .sub i {
+                  //.sub를 붙여줘야 이게 적용됨. 제대로 타고 내려와야 함
+                  transform: rotateZ(0deg);
+                  color: #000;
+                  //   color: var(--sub-color)
+                }
               }
             }
           }
+
+          margin-bottom: 80px;
         }
-
-        margin-bottom: 80px;
       }
-    }
 
-    // ----------------------------------------------
-    // footer
-    footer {
-      .f-top {
-        justify-content: space-between;
-        margin-bottom: 60px;
-        display: flex;
+      // ----------------------------------------------
+      // footer
+      footer {
+        .f-top {
+          justify-content: space-between;
+          margin-bottom: 60px;
+          display: flex;
 
-        padding: 0 60px;
-        .f-logo {
-          width: 50%;
-          img {
+          padding: 0 60px;
+          .f-logo {
             width: 50%;
-            margin-bottom: 30px;
+            img {
+              width: 50%;
+              margin-bottom: 30px;
+            }
+          }
+
+          .family {
+            width: 20%;
+            p {
+              margin-bottom: 10px;
+            }
+            select {
+              width: 100%;
+              height: 40px;
+              padding: 10px;
+            }
           }
         }
+        .line {
+          border-top: 1px solid #bcbcbc;
+          padding-bottom: 20px;
+        }
+        .f-btn {
+          // padding-top: 20px;
+          display: flex;
 
-        .family {
-          width: 20%;
+          padding: 0 60px 60px;
+          /* 혹시나 모바일의 영향이 있을까하는.... */
+          justify-content: space-between;
+          align-self: center;
+
           p {
-            margin-bottom: 10px;
+            color: var(--gray3);
           }
-          select {
-            width: 100%;
-            height: 40px;
-            padding: 10px;
-          }
-        }
-      }
-      .line {
-        border-top: 1px solid #bcbcbc;
-        padding-bottom: 20px;
-      }
-      .f-btn {
-        // padding-top: 20px;
-        display: flex;
+          .sns {
+            width: 25%;
+            ul {
+              width: 100%;
+              gap: 20px;
+              li {
+                flex: 1;
 
-        padding: 0 60px 60px;
-        /* 혹시나 모바일의 영향이 있을까하는.... */
-        justify-content: space-between;
-        align-self: center;
-
-        p {
-          color: var(--gray3);
-        }
-        .sns {
-          width: 25%;
-          ul {
-            width: 100%;
-            gap: 20px;
-            li {
-              flex: 1;
-              img {
-                width: 100%;
+                img {
+                  width: 100%;
+                }
               }
             }
           }

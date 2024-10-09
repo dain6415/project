@@ -1,37 +1,31 @@
-@mixin flex-c {
+@mixin flex-c($justify: center) {
   display: flex;
-  justify-content: center;
+  justify-content: $justify;
   align-items: center;
 }
-@mixin flex-sb {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-@mixin po-center {
+@mixin po-c {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-@import url(/font/font.css);
 @media only screen and (max-width: 600px) {
   .wrap {
     padding: 30px;
   }
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 1200px) {
   header {
     border: 1px solid #000;
-    padding: 20px 40px;
+    padding: 20px 100px;
     transition: 0.5s;
     background: #fff;
     .inner {
       // width: 90%;
-      max-width: 1200px;
+      max-width: 1700px;
       height: 100%;
       margin: auto;
-      @include flex-sb;
+      @include flex-c(space-between);
 
       h1 {
         width: 20%;
@@ -109,26 +103,30 @@
     background: #fff;
   }
   .wrap {
-    width: 100%;
+    width: 90%;
     margin-top: 200px;
+    border: 1px solid #000;
+    margin: -40px auto 0;
 
     .container {
       width: 100%;
-      max-width: 1200px;
-      // padding: 40px;
-      margin: -40px auto 0;
+      max-width: 1700px;
+      border: 1px solid #000;
+      padding: 40px;
+      margin: auto;
       position: relative;
-      h2{
+      h2 {
         font-size: 40px;
         margin-bottom: 40px;
       }
       .menu-filter {
         ul.filter {
           display: flex;
-          gap: 60px;
+          margin-left: -40px;
           padding-bottom: 60px;
-          > li {
-            flex: 1;
+          li {
+            width: 33.3333%;
+            margin-left: 40px;
             position: relative;
             > a {
               border: 1px solid #000;
@@ -137,24 +135,27 @@
               width: 100%;
               display: block;
               font-size: 24px;
-              padding: 20px;
+              padding: 15px 20px;
               font-weight: 600;
             }
             ul.filter-sub {
               border: 1px solid #aeaeae;
               background: #fff;
-              padding: 5px 20px;
+              padding: 10px 15px;
               position: absolute;
               left: 0;
-              top: 73px;
+              top: 63px;
+              z-index: 99;
               width: 100%;
               display: none;
               li {
                 line-height: 2.5em;
                 font-weight: 600;
                 display: block;
+                width: 100%;
+                margin-left: 0px;
                 cursor: pointer;
-                &:hover{
+                &:hover {
                   background: #3bb822;
                 }
               }
@@ -162,67 +163,79 @@
           }
         }
       }
+      .line {
+        border-bottom: 1px solid var(--gray2);
+      }
+      ul.contents {
+        margin-left: -40px;
 
-      ul.contents{
-        padding: 60px 0px;
-        gap: 60px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        border-top: 1px solid var(--gray2);
-        li{
-          width: 30%;
-          .item {
+        // 폰트사이즈 없애지마, li 사이가 벌어진단 말이야*****
+        font-size: 0;
+        li {
+          display: inline-block;
+          width: 33.3333%;
+          padding-top: 60px;
+          padding-left: 40px;
+          a {
             position: relative;
             .art-img {
-              // margin-bottom: 10px;
-              height: 200px;
-              overflow: hidden;
               @include flex-c;
-
+              overflow: hidden;
               img {
-                width: 101%;
-                transition: .3s ease;
+                width: 100%;
+                height: auto;
+                max-width: 103%;
+                transition: 0.3s ease;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
               }
             }
             .art-inner {
-              height: 180px;
+              height: 300px;
               padding: 20px;
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-              background: var(--gray);
-              .group {
-                width: 60px;
-                height: 60px;
-                border: 1px solid #000;
-                background: rgb(0, 0, 0);
-                border-radius: 99px;
-                font-weight: 500;
-                @include flex-c;
-                margin-right: 15px;
-                p {
-                  color: #fff;
+              background: #f8f8f8;
+              .more {
+                margin-top: 10px;
+                .group {
+                  width: 60px;
+                  height: 60px;
+                  background: rgb(0, 0, 0);
+                  border-radius: 99px;
+                  font-weight: 500;
+                  @include flex-c;
+                  margin-right: 15px;
+                  p {
+                    color: #fff;
+                  }
+                }
+                .condensation {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  font-weight: 500;
+                  .location{
+                    white-space: normal;
+                    overflow-wrap: break-word;/* 자동 줄바꿈 */
+                    word-break: keep-all; /* 단어가 끊기지 않도록 */
+                  }
                 }
               }
-              .condensation {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                font-weight: 500;
-              }
               p {
-                color: #999;
+                color: var(--gray3);
                 &.i-title {
                   color: #333;
-                  font-size: 20px;
-                  font-weight: 800;
+                  font-size: 24px;
+                  font-weight: 600;
                   width: 100%;
                   letter-spacing: -0.02em;
                   padding-bottom: 5px;
-                  overflow: hidden;
-                  text-overflow: ellipsis;
-                  // white-space: nowrap;
+                  white-space: normal;
+                  overflow-wrap: break-word;/* 자동 줄바꿈 */
+                  word-break: keep-all; /* 단어가 끊기지 않도록 */
                 }
                 &.date {
                   padding-top: 5px;
@@ -234,19 +247,19 @@
               content: "";
               display: block;
               position: absolute;
-              @include po-center;
+              @include po-c;
               width: 100%;
               height: 100%;
               background-color: var(--gray);
               opacity: 0;
-              transition: .3s ease;
+              transition: 0.3s ease;
               z-index: -1;
             }
             // &.yellow::after {
             //   content: "";
             //   display: block;
             //   position: absolute;
-            //   @include po-center;
+            //   @include po-c;
             //   width: 100%;
             //   height: 100%;
             //   background-color: rgba(246, 189, 32, 1);
@@ -254,45 +267,42 @@
             //   transition: 0.5s ease;
             //   z-index: -1;
             // }
-            // &.blue::after {
-            //   content: "";
-            //   display: block;
-            //   position: absolute;
-            //   @include po-center;
-            //   width: 100%;
-            //   height: 100%;
-            //   background-color: rgb(103, 187, 243);
-            //   opacity: 0;
-            //   transition: 0.5s ease;
-            //   z-index: -1;
-            // }
-            // &.green::after {
-            //   content: "";
-            //   display: block;
-            //   position: absolute;
-            //   @include po-center;
-            //   width: 100%;
-            //   height: 100%;
-            //   background-color: rgb(42, 161, 58);
-            //   opacity: 0;
-            //   transition: 0.5s ease;
-            //   z-index: -1;
-            // }
             &:hover {
-              img{
+              img {
                 width: 105%;
+                filter: brightness(0.9);
               }
-              p {
-                color: #000;
-                &.i-title {
-                  color: #000;
-                }
-              }
-              .group {
-                background: #000;
+              .art-inner {
+                background: var(--gray);
+                border-bottom: none;
                 p {
-                  color: #fff;
-                  font-weight: 500;
+                  color: #000;
+                  &.i-title {
+                    color: #000;
+                  }
+                  &.ex {
+                    color: var(--gray3);
+                  }
+                }
+                .group {
+                  p {
+                    color: #000;
+                  }
+                  &.yellow { /* 전시 */
+                    background-color: rgba(246, 189, 32, 1);
+                  }
+                  &.blue { /* 행사 */
+                    background-color: rgb(103, 187, 243);
+                  }
+                  &.green { /* 교육 */
+                    background-color: rgb(42, 161, 58);
+                  }
+                  background: #e13b3b;
+                  p {
+                    // color: #fff;
+                    // color: #000;
+                    font-weight: 500;
+                  }
                 }
               }
               &::after {
@@ -303,17 +313,9 @@
             }
           }
         }
+        // >div{
+        // }
       }
     }
   }
 }
-
-// @media only screen and (min-width: 1600px) {
-//   .wrap {
-//     padding: 80px;
-//     .container {
-//       // width: 90%;
-//       max-width: 1700px;
-//     }
-//   }
-// }

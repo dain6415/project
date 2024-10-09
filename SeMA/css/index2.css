@@ -1,18 +1,18 @@
-@import url(/font/font.css);
+@charset "UTF-8";
 @media only screen and (max-width: 600px) {
   .wrap {
     padding: 30px;
   }
 }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 1200px) {
   header {
     border: 1px solid #000;
-    padding: 20px 40px;
+    padding: 20px 100px;
     transition: 0.5s;
     background: #fff;
   }
   header .inner {
-    max-width: 1200px;
+    max-width: 1700px;
     height: 100%;
     margin: auto;
     display: flex;
@@ -86,13 +86,17 @@
     background: #fff;
   }
   .wrap {
-    width: 100%;
+    width: 90%;
     margin-top: 200px;
+    border: 1px solid #000;
+    margin: -40px auto 0;
   }
   .wrap .container {
     width: 100%;
-    max-width: 1200px;
-    margin: -40px auto 0;
+    max-width: 1700px;
+    border: 1px solid #000;
+    padding: 40px;
+    margin: auto;
     position: relative;
   }
   .wrap .container h2 {
@@ -101,79 +105,91 @@
   }
   .wrap .container .menu-filter ul.filter {
     display: flex;
-    gap: 60px;
+    margin-left: -40px;
     padding-bottom: 60px;
   }
-  .wrap .container .menu-filter ul.filter > li {
-    flex: 1;
+  .wrap .container .menu-filter ul.filter li {
+    width: 33.3333%;
+    margin-left: 40px;
     position: relative;
   }
-  .wrap .container .menu-filter ul.filter > li > a {
+  .wrap .container .menu-filter ul.filter li > a {
     border: 1px solid #000;
     background: #fff;
     color: #000;
     width: 100%;
     display: block;
     font-size: 24px;
-    padding: 20px;
+    padding: 15px 20px;
     font-weight: 600;
   }
-  .wrap .container .menu-filter ul.filter > li ul.filter-sub {
+  .wrap .container .menu-filter ul.filter li ul.filter-sub {
     border: 1px solid #aeaeae;
     background: #fff;
-    padding: 5px 20px;
+    padding: 10px 15px;
     position: absolute;
     left: 0;
-    top: 73px;
+    top: 63px;
+    z-index: 99;
     width: 100%;
     display: none;
   }
-  .wrap .container .menu-filter ul.filter > li ul.filter-sub li {
+  .wrap .container .menu-filter ul.filter li ul.filter-sub li {
     line-height: 2.5em;
     font-weight: 600;
     display: block;
+    width: 100%;
+    margin-left: 0px;
     cursor: pointer;
   }
-  .wrap .container .menu-filter ul.filter > li ul.filter-sub li:hover {
+  .wrap .container .menu-filter ul.filter li ul.filter-sub li:hover {
     background: #3bb822;
   }
+  .wrap .container .line {
+    border-bottom: 1px solid var(--gray2);
+  }
   .wrap .container ul.contents {
-    padding: 60px 0px;
-    gap: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-top: 1px solid var(--gray2);
+    margin-left: -40px;
+    font-size: 0;
   }
   .wrap .container ul.contents li {
-    width: 30%;
+    display: inline-block;
+    width: 33.3333%;
+    padding-top: 60px;
+    padding-left: 40px;
   }
-  .wrap .container ul.contents li .item {
+  .wrap .container ul.contents li a {
     position: relative;
   }
-  .wrap .container ul.contents li .item .art-img {
-    height: 200px;
-    overflow: hidden;
+  .wrap .container ul.contents li a .art-img {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
-  .wrap .container ul.contents li .item .art-img img {
-    width: 101%;
+  .wrap .container ul.contents li a .art-img img {
+    width: 100%;
+    height: auto;
+    max-width: 103%;
     transition: 0.3s ease;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-  .wrap .container ul.contents li .item .art-inner {
-    height: 180px;
+  .wrap .container ul.contents li a .art-inner {
+    height: 300px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: var(--gray);
+    background: #f8f8f8;
   }
-  .wrap .container ul.contents li .item .art-inner .group {
+  .wrap .container ul.contents li a .art-inner .more {
+    margin-top: 10px;
+  }
+  .wrap .container ul.contents li a .art-inner .more .group {
     width: 60px;
     height: 60px;
-    border: 1px solid #000;
     background: rgb(0, 0, 0);
     border-radius: 99px;
     font-weight: 500;
@@ -182,32 +198,38 @@
     align-items: center;
     margin-right: 15px;
   }
-  .wrap .container ul.contents li .item .art-inner .group p {
+  .wrap .container ul.contents li a .art-inner .more .group p {
     color: #fff;
   }
-  .wrap .container ul.contents li .item .art-inner .condensation {
+  .wrap .container ul.contents li a .art-inner .more .condensation {
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-weight: 500;
   }
-  .wrap .container ul.contents li .item .art-inner p {
-    color: #999;
+  .wrap .container ul.contents li a .art-inner .more .condensation .location {
+    white-space: normal;
+    overflow-wrap: break-word; /* 자동 줄바꿈 */
+    word-break: keep-all; /* 단어가 끊기지 않도록 */
   }
-  .wrap .container ul.contents li .item .art-inner p.i-title {
+  .wrap .container ul.contents li a .art-inner p {
+    color: var(--gray3);
+  }
+  .wrap .container ul.contents li a .art-inner p.i-title {
     color: #333;
-    font-size: 20px;
-    font-weight: 800;
+    font-size: 24px;
+    font-weight: 600;
     width: 100%;
     letter-spacing: -0.02em;
     padding-bottom: 5px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    overflow-wrap: break-word; /* 자동 줄바꿈 */
+    word-break: keep-all; /* 단어가 끊기지 않도록 */
   }
-  .wrap .container ul.contents li .item .art-inner p.date {
+  .wrap .container ul.contents li a .art-inner p.date {
     padding-top: 5px;
   }
-  .wrap .container ul.contents li .item::after {
+  .wrap .container ul.contents li a::after {
     content: "";
     display: block;
     position: absolute;
@@ -221,23 +243,42 @@
     transition: 0.3s ease;
     z-index: -1;
   }
-  .wrap .container ul.contents li .item:hover img {
+  .wrap .container ul.contents li a:hover img {
     width: 105%;
+    filter: brightness(0.9);
   }
-  .wrap .container ul.contents li .item:hover p {
+  .wrap .container ul.contents li a:hover .art-inner {
+    background: var(--gray);
+    border-bottom: none;
+  }
+  .wrap .container ul.contents li a:hover .art-inner p {
     color: #000;
   }
-  .wrap .container ul.contents li .item:hover p.i-title {
+  .wrap .container ul.contents li a:hover .art-inner p.i-title {
     color: #000;
   }
-  .wrap .container ul.contents li .item:hover .group {
-    background: #000;
+  .wrap .container ul.contents li a:hover .art-inner p.ex {
+    color: var(--gray3);
   }
-  .wrap .container ul.contents li .item:hover .group p {
-    color: #fff;
+  .wrap .container ul.contents li a:hover .art-inner .group {
+    background: #e13b3b;
+  }
+  .wrap .container ul.contents li a:hover .art-inner .group p {
+    color: #000;
+  }
+  .wrap .container ul.contents li a:hover .art-inner .group.yellow { /* 전시 */
+    background-color: rgb(246, 189, 32);
+  }
+  .wrap .container ul.contents li a:hover .art-inner .group.blue { /* 행사 */
+    background-color: rgb(103, 187, 243);
+  }
+  .wrap .container ul.contents li a:hover .art-inner .group.green { /* 교육 */
+    background-color: rgb(42, 161, 58);
+  }
+  .wrap .container ul.contents li a:hover .art-inner .group p {
     font-weight: 500;
   }
-  .wrap .container ul.contents li .item:hover::after {
+  .wrap .container ul.contents li a:hover::after {
     width: 105%;
     height: 105%;
     opacity: 1;

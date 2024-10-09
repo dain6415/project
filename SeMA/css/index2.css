@@ -284,18 +284,104 @@
     height: 105%;
     opacity: 1;
   }
-  .wrap .pager-container nav.pager-nav ul.pager {
-    width: 15%;
+  .wrap .container .pager-container {
+    padding-top: 80px;
+    margin-bottom: 60px;
+  }
+  .wrap .container .pager-container nav.pager-nav {
+    width: 100%;
+  }
+  .wrap .container .pager-container nav.pager-nav ul.pager {
+    width: 20%;
     margin: auto;
     display: flex;
     justify-content: center;
+    gap: 5px;
   }
-  .wrap .pager-container nav.pager-nav ul.pager li {
+  .wrap .container .pager-container nav.pager-nav ul.pager li {
     flex: 1;
     text-align: center;
     border: 1px solid #b51919;
   }
-  .wrap .pager-container nav.pager-nav ul.pager li a {
+  .wrap .container .pager-container nav.pager-nav ul.pager li a {
     font-size: 24px;
+    display: block;
+    padding: 5px;
+  }
+  footer {
+    background: var(--gray);
+  }
+  footer .f-inner {
+    width: 90%;
+    max-width: 1700px;
+    margin: auto;
+    padding-top: 60px;
+  }
+  footer .f-inner .f-top {
+    justify-content: space-between;
+    margin-bottom: 60px;
+    display: flex;
+    padding: 0 40px;
+  }
+  footer .f-inner .f-top .f-logo {
+    width: 50%;
+  }
+  footer .f-inner .f-top .f-logo img {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  footer .f-inner .f-top .f-logo ul li {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--gray3);
+  }
+  footer .f-inner .f-top .f-logo ul li a {
+    font-weight: 800;
+    padding-left: 5px;
+  }
+  footer .f-inner .f-top ul.f-menu li,
+  footer .f-inner .f-top ul.f-information li {
+    line-height: 40px;
+    font-weight: 800;
+    font-size: 16px;
+  }
+  footer .f-inner .f-top .family {
+    width: 20%;
+  }
+  footer .f-inner .f-top .family p {
+    margin-bottom: 10px;
+    font-weight: 800;
+  }
+  footer .f-inner .f-top .family select {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+  }
+  footer .f-inner .line {
+    border-top: 1px solid #bcbcbc;
+    padding-bottom: 20px;
+  }
+  footer .f-inner .f-btn {
+    display: flex;
+    padding: 0 40px 60px;
+    /* 혹시나 모바일의 영향이 있을까하는.... */
+    justify-content: space-between;
+    align-self: center;
+  }
+  footer .f-inner .f-btn p {
+    color: var(--gray2);
+  }
+  footer .f-inner .f-btn .sns {
+    width: 25%;
+  }
+  footer .f-inner .f-btn .sns ul {
+    width: 100%;
+    gap: 20px;
+  }
+  footer .f-inner .f-btn .sns ul li {
+    flex: 1;
+  }
+  footer .f-inner .f-btn .sns ul li img {
+    width: 100%;
   }
 }/*# sourceMappingURL=index2.css.map */

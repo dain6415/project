@@ -107,9 +107,7 @@
   }
 
   /* btn */
-  .art1 .item5 .playbtn {
-    /* border: 1px solid #74d25a; */
-  }
+
   .art1 .item5 .playbtn ul {
     gap: 6px;
   }
@@ -283,9 +281,7 @@
     color: var(--text-color-gray2);
   }
 
-  .art2 ul.title-wrap li {
-    /* display: none; */
-  }
+
   .art2 ul.title-wrap li.on {
     display: block;
   }
@@ -350,7 +346,7 @@
     background: #9e9191;
     position: relative;
     height: 100%;
-    background: url(../img/굿즈착용/art3-1-1.jpg) no-repeat center;
+    background: url(../img/goods-chack/art3-1-1.jpg) no-repeat center;
     background-size: cover;
     padding-top: 150px;
     position: relative;
@@ -393,28 +389,28 @@
     grid-column: 4 / span 1;
     grid-row: 1 / span 1;
     background: #6e4141;
-    background: url(../img/굿즈/art3-4.1.jpg) no-repeat center;
+    background: url(../img/goods/art3-4.1.jpg) no-repeat center;
     background-size: cover;
   }
   .art3 .item3 {
     grid-column: 5 / span 1;
     grid-row: 1 / span 1;
     background: #bd953e;
-    background: url(../img/굿즈/art3-5.1.jpg) no-repeat center;
+    background: url(../img/goods/art3-5.1.jpg) no-repeat center;
     background-size: cover;
   }
   .art3 .item4 {
     grid-column: 4 / span 1;
     grid-row: 2 / span 1;
     background: #000;
-    background: url(../img/굿즈/art3-2.4.jpg) no-repeat center;
+    background: url(../img/goods/art3-2.4.jpg) no-repeat center;
     background-size: cover;
   }
   .art3 .item5 {
     grid-column: 5 / span 1;
     grid-row: 2 / span 2;
     background: #e071ce;
-    background: url(../img/굿즈착용/art3-2-5.jpg) no-repeat;
+    background: url(../img/goods-chack/art3-2-5.jpg) no-repeat;
     background-size: cover;
     background-position: center;
   }
@@ -423,21 +419,21 @@
     grid-column: 1 / span 1;
     grid-row: 3 / span 1;
     background: #701260;
-    background: url(../img/굿즈/art3-3.1.jpg) no-repeat center;
+    background: url(../img/goods/art3-3.1.jpg) no-repeat center;
     background-size: cover;
   }
   .art3 .item7 {
     grid-column: 2 / span 1;
     grid-row: 3 / span 1;
     background: #232a52;
-    background: url(../img/굿즈/art3-3.2.jpg) no-repeat center;
+    background: url(../img/goods/art3-3.2.jpg) no-repeat center;
     background-size: cover;
   }
   .art3 .item8 {
     grid-column: 3 / span 2;
     grid-row: 3 / span 1;
     background: #8c91a8;
-    background: url(../img/굿즈/art3-3.jpg) no-repeat center;
+    background: url(../img/goods/art3-3.jpg) no-repeat center;
     background-size: cover;
   }
 

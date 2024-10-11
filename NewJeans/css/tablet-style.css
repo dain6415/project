@@ -192,7 +192,7 @@
     left: 3px;
     width: 110%;
     height: 110%;
-    background-image: url(../img/앨범-커버/shadow.png);
+    background-image: url(../img/album-cover/shadow.png);
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
@@ -214,7 +214,7 @@
   .art1 .item6 .sticker-inner {
     width: 100%;
     height: 100%;
-    background-image: url(../img/앨범-커버/sticker-w.png);
+    background-image: url(../img/album-cover/sticker-w.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -439,11 +439,12 @@
     grid-row: 1 / span 2;
     background: var(--goods-bg);
     position: relative;
+    width: 100%;
     height: 100%;
-    background-image: url(../img/굿즈착용/art3-1-1.jpg);
+    background-image: url(../img/goods-chack/art3-1-1.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100vh;
+    background-size: cover;
   }
 
   /* 본격 호버할 때 배경이 어두어지고 텍스트가 나타나는!!!! */
@@ -524,51 +525,51 @@
   .art3 .item2 {
     grid-column: 1 / span 1;
     grid-row: 5 / span 1;
-    background: var(--goods-bg) url(../img/굿즈/art3-4.1.jpg) no-repeat center;
+    background: var(--goods-bg) url(../img/goods/art3-4.1.jpg) no-repeat center;
     background-size: contain;
   }
 
   .art3 .item3 {
     grid-column: 2 / span 1;
     grid-row: 5 / span 1;
-    background: var(--goods-bg) url(../img/굿즈/art3-5.1.jpg) no-repeat center;
+    background: var(--goods-bg) url(../img/goods/art3-5.1.jpg) no-repeat center;
     background-size: contain;
   }
   .art3 .item4 {
     grid-column: 1 / span 1;
     grid-row: 7 / span 1;
-    background: var(--goods-bg) url(../img/굿즈/art3-2.4.jpg) no-repeat center;
+    background: var(--goods-bg) url(../img/goods/art3-2.4.jpg) no-repeat center;
     background-size: contain;
   }
   .art3 .item5 {
     grid-column: 1 / span 1;
     grid-row: 3 / span 2;
-    background: var(--goods-bg) url(../img/굿즈착용/art3-2-5.jpg) no-repeat;
+    background: var(--goods-bg) url(../img/goods-chack/art3-2-5.jpg) no-repeat;
     background-size: cover;
     background-position: center;
   }
   .art3 .item6 {
     grid-column: 2 / span 1;
     grid-row: 3 / span 1;
-    background: var(--goods-bg) url(../img/굿즈/art3-3.1.jpg) no-repeat center;
+    background: var(--goods-bg) url(../img/goods/art3-3.1.jpg) no-repeat center;
     background-size: contain;
   }
   .art3 .item7 {
     grid-column: 2 / span 1;
     grid-row: 4 / span 1;
-    background: var(--goods-bg) url(../img/굿즈/art3-3.2.jpg) no-repeat center;
+    background: var(--goods-bg) url(../img/goods/art3-3.2.jpg) no-repeat center;
     background-size: contain;
   }
   .art3 .item8 {
     grid-column: 1 / span 2;
     grid-row: 6 / span 1;
-    background: var(--goods-bg) url(../img/굿즈/art3-3.jpg) no-repeat center;
+    background: var(--goods-bg) url(../img/goods/art3-3.jpg) no-repeat center;
     background-size: cover;
   }
   .art3 .item9 {
     grid-column: 2 / span 1;
     grid-row: 7 / span 1;
-    background: var(--goods-bg) url(../img/로고/art3-logo-2.jpg) no-repeat
+    background: var(--goods-bg) url(../img/logo/art3-logo-2.jpg) no-repeat
       center;
     background-size: contain;
   }

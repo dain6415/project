@@ -1,17 +1,45 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>전시 상세정보</title>
+  <title>SVG Alarm Toggle</title>
+  <style>
+    .icon .inner {
+      fill: lightblue; /* 배경색 */
+    }
+  </style>
 </head>
 <body>
-  <header></header>
 
-  <div class="wrap">
-    <div class="container">
-      
-    </div>
-  </div>
+  <!-- <svg class="icon on" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 22a2 2 0 002-2H10a2 2 0 002 2zm6-6v-5a6 6 0 10-12 0v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6a4 4 0 118 0v6z"/>
+  </svg> -->
+
+  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <circle class="border" cx="50" cy="50" r="45" stroke="black" stroke-width="5" fill="none"/>
+    <circle class="inner" cx="50" cy="50" r="40" fill="none"/>
+  </svg>
+  
+  <style>
+    .icon .inner {
+      fill: lightblue; /* 배경색 */
+    }
+  </style>
+
+
+  <!-- <script>
+    const alarmIcon = document.querySelector('.icon');
+
+    alarmIcon.addEventListener('click', function() {
+      if (alarmIcon.classList.contains('on')) {
+        alarmIcon.innerHTML = '<path d="M6 18L18 6M6 6l12 12"/>'; // 엑스 표시로 변경
+      } else {
+        alarmIcon.innerHTML = '<path d="M12 22a2 2 0 002-2H10a2 2 0 002 2zm6-6v-5a6 6 0 10-12 0v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6a4 4 0 118 0v6z"/>'; // 알람 아이콘으로 변경
+      }
+      alarmIcon.classList.toggle('on');
+      alarmIcon.classList.toggle('off');
+    });
+  </script> -->
 </body>
 </html>

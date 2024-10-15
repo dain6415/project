@@ -175,7 +175,6 @@
   }
   .wrap .container ul.contents li a:hover .art-inner {
     background: var(--gray);
-    border-bottom: none;
   }
   .wrap .container ul.contents li a:hover .art-inner p.i-title {
     color: #333;
@@ -204,7 +203,7 @@
   }
   .wrap .container ul.contents li a:hover::after {
     width: 105%;
-    height: 105%;
+    height: 104%;
     opacity: 1;
   }
   .wrap .container .pager-container {
@@ -415,13 +414,13 @@
     margin-left: -40px;
     padding-bottom: 40px;
   }
-  .wrap .container .menu-filter ul.filter li {
+  .wrap .container .menu-filter ul.filter > li {
     margin-left: 40px;
     position: relative;
     padding-bottom: 20px;
     cursor: pointer;
   }
-  .wrap .container .menu-filter ul.filter li .btn {
+  .wrap .container .menu-filter ul.filter > li .btn {
     box-shadow: 0 0 0 2px #000 inset;
     background: #fff;
     display: flex;
@@ -429,11 +428,11 @@
     font-size: 24px;
     font-weight: 600;
   }
-  .wrap .container .menu-filter ul.filter li .btn a {
+  .wrap .container .menu-filter ul.filter > li .btn a {
     padding: 15px 20px;
     width: 100%;
   }
-  .wrap .container .menu-filter ul.filter li .btn .toggle {
+  .wrap .container .menu-filter ul.filter > li .btn .toggle {
     width: 60px;
     height: 60px;
     background: #000;
@@ -441,19 +440,23 @@
     justify-content: center;
     align-items: center;
   }
-  .wrap .container .menu-filter ul.filter li .btn .toggle i {
+  .wrap .container .menu-filter ul.filter > li .btn .toggle i {
     color: #fff;
     transform: rotate(-90deg);
-    transition: 0.5s;
+    transition: 0.35s ease;
   }
-  .wrap .container .menu-filter ul.filter li.on .toggle i {
-    transform: rotate(90deg);
-  }
-  .wrap .container .menu-filter ul.filter li:hover .btn a {
+  .wrap .container .menu-filter ul.filter > li.on a {
     background: #000;
     color: #fff;
   }
-  .wrap .container .menu-filter ul.filter li ul.filter-sub {
+  .wrap .container .menu-filter ul.filter > li.on .toggle i {
+    transform: rotate(90deg);
+  }
+  .wrap .container .menu-filter ul.filter > li:hover .btn a {
+    background: #000;
+    color: #fff;
+  }
+  .wrap .container .menu-filter ul.filter > li ul.filter-sub {
     border: 1px solid #aeaeae;
     background: #fff;
     padding: 10px 15px;
@@ -464,7 +467,10 @@
     width: 100%;
     display: none;
   }
-  .wrap .container .menu-filter ul.filter li ul.filter-sub li {
+  .wrap .container .menu-filter ul.filter > li ul.filter-sub.on {
+    display: block;
+  }
+  .wrap .container .menu-filter ul.filter > li ul.filter-sub li {
     line-height: 2.5em;
     font-weight: 600;
     font-size: 20px;
@@ -472,9 +478,10 @@
     width: 100%;
     margin-left: 0px;
     cursor: pointer;
+    color: var(--gray3);
   }
-  .wrap .container .menu-filter ul.filter li ul.filter-sub li:hover {
-    background: #3bb822;
+  .wrap .container .menu-filter ul.filter > li ul.filter-sub li:hover {
+    color: #000;
   }
   .wrap .container .line {
     border-bottom: 1px solid var(--gray2);
@@ -509,6 +516,8 @@
   }
   .wrap .container ul.contents li a .art-inner {
     height: 300px;
+    max-height: 300px;
+    overflow: hidden;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -580,7 +589,6 @@
   }
   .wrap .container ul.contents li a:hover .art-inner {
     background: var(--gray);
-    border-bottom: none;
   }
   .wrap .container ul.contents li a:hover .art-inner p.i-title {
     color: #333;
@@ -609,7 +617,7 @@
   }
   .wrap .container ul.contents li a:hover::after {
     width: 105%;
-    height: 105%;
+    height: 104%;
     opacity: 1;
   }
   .wrap .container .pager-container {

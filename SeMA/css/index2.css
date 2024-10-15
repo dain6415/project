@@ -482,6 +482,7 @@
   }
   .wrap .container .menu-filter ul.filter > li ul.filter-sub li:hover {
     color: #000;
+    border: 1px solid #000;
   }
   .wrap .container .line {
     border-bottom: 1px solid var(--gray2);

@@ -1,0 +1,15 @@
+@mixin flex-c($justify:center){
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+
+@media screen and (max-width:640px) {
+  
+}
+@media screen and (min-width:641px) {
+  
+}
+@media screen and (max-width:640px) {
+  
+}

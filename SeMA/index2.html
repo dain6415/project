@@ -11,6 +11,7 @@
       src="https://kit.fontawesome.com/2e471157d2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <header>
@@ -519,64 +520,59 @@
         </div>
       </div>
     </footer>
-    <!-- 
+
     <script>
-      const filterItems = document.querySelectorAll(".filter li");
+      const filtering = document.querySelectorAll(".filter li");
 
-      filterItems.forEach((item) => {
-        item.addEventListener("click", function () {
-          // 클릭된 li 내부의 .filter-sub ul 요소 선택
-          const subMenu = this.querySelector(".filter-sub");
+      function closeAllSubMenus() { /* closeAllSubMenus 원래 있는 명령어, 서브메뉴를 닫는 용도 */
+        filtering.forEach((li) => { /* forEach라 알아서 li를 지칭하는 것이긴 한데 li,item,element라고 해도 됨. 굳이 변수 설정 안해도 상관없음 */
+          li.classList.remove("on");
+          const subMenu = li.querySelector(".filter-sub");
 
-          // .filter-sub 요소가 있다면 display 속성 토글
-          if (subMenu) {
-            // display가 'none'이면 'block'으로 변경, 아니면 'none'으로 변경
-            if (
-              // filterItems.style.
-              subMenu.style.display === "none" ||
-              subMenu.style.display === ""
-            ) {
-              subMenu.style.display = "block";
-            } else {
-              subMenu.style.display = "none";
+          if (subMenu) { /* 만약에 subMenu가~ */
+            if (window.innerWidth <= 1200) { /* Width인 이유는 반응형이기 때문에, 1201까지는 이렇게 되어라~ */
+              $(subMenu).slideUp();
+            } else { /* 1201가 아닐 땐 */
+              subMenu.style.display = 'none';
             }
           }
         });
-      });
-    </script> -->
-    <script>
-      const filterItems = document.querySelectorAll(".filter li");
-
-      // 서브메뉴와 .on 클래스를 모두 닫는 함수
-      function closeAllSubMenus() {
-        filterItems.forEach((item) => {
-          item.classList.remove("on");
-          const subMenu = item.querySelector(".filter-sub");
-          if (subMenu) {
-            subMenu.style.display = "none";
-          }
-        });
       }
+      // '클릭 이벤트'가 아님 기초 뼈대를 만드는 거임
 
-      filterItems.forEach((item) => {
-        item.addEventListener("click", function (e) {
-          e.stopPropagation();
 
-          // 모든 서브메뉴를 닫고, 클릭된 li만 토글
-          if (this.classList.contains("on")) {
-            this.classList.remove("on");
-            const subMenu = this.querySelector(".filter-sub");
-            if (subMenu) subMenu.style.display = "none";
-          } else {
-            closeAllSubMenus();
+      filtering.forEach((li) => { /* filtering li의 정보를 찾아라 */
+        li.addEventListener("click", function (e) { /* li에게 클릭 이벤트 설정할 건데~ */
+          e.preventDefault();
+          e.stopPropagation(); /* 이벤트 전파를 막는 메서드? **중요 */
+          /* stopPropagation이 없으면 바로 다음 동작을 수행하여 li를 클릭했을 때,
+          slideDown를 해서 서브메뉴들이 보인 다음 바로 slideUp해서 닫힘 */ 
+
+          const isTablet = window.innerWidth <= 1200;
+          const subMenu = this.querySelector(".filter-sub");
+          const isOpen = this.classList.contains("on");
+
+          closeAllSubMenus(); 
+
+          if (!isOpen) {
             this.classList.add("on");
-            const subMenu = this.querySelector(".filter-sub");
-            if (subMenu) subMenu.style.display = "block";
+            if (isTablet) {
+              $(subMenu).slideDown();
+            } else {
+              subMenu.style.display = 'block';
+            }
           }
+          // if (subMenu) {
+          //   this.classList.add("on");
+          //   if (isTablet) {
+          //     $(subMenu).slideDown();
+          //   } else {
+          //     subMenu.style.display = 'block';
+          //   }
+          // }
         });
       });
 
-      // 필터 외의 다른 곳을 클릭했을 때 모든 서브메뉴 닫기
       document.addEventListener("click", function () {
         closeAllSubMenus();
       });

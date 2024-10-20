@@ -1,4 +1,4 @@
-@import url(./font.css);
+// @import url(../../font/font.css);
 @mixin flex-c($justify: center) {
   display: flex;
   justify-content: $justify;
@@ -9,9 +9,69 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+// -----------------------------------------------------------------
 @media only screen and (max-width: 600px) {
   header {
-    display: none;
+    border: 1px solid #96db15;
+    padding: 20px 40px;
+    transition: 0.5s;
+    .inner {
+      width: 90%;
+      height: 100%;
+      margin: auto;
+      @include flex-sb;
+
+      h1 {
+        display: none;
+        width: 20%;
+        height: 100%;
+        img {
+          height: 100%;
+        }
+      }
+      nav {
+        width: 50%;
+        display: none;
+        ul {
+          li {
+            flex: 1;
+            text-align: center;
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+      .right-menu {
+        width: 20%;
+        ul {
+          gap: 20px;
+          justify-content: flex-end;
+          li {
+            a {
+              color: #fff;
+              i {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  header.scrolled {
+    background-color: rgba(255, 255, 255); /* 스크롤 후 변경된 배경색 */
+    border-bottom: 1px solid #e4e4e4;
+  }
+  header.scrolled nav ul li a {
+    color: black; /* 스크롤 후 변경된 nav 링크 색상 */
+  }
+  header.scrolled .right-menu ul li a {
+    color: black; /* 스크롤 후 변경된 nav 링크 색상 */
+  }
+  header.scrolled .right-menu ul li a i {
+    color: black; /* 스크롤 후 변경된 nav 링크 색상 */
   }
 
   .wrap {
@@ -74,12 +134,9 @@
               border: 1px solid #aeaeae;
               background: #fff;
               padding: 10px 15px;
-              // position: absolute;
-              // left: 0;
-              // top: 60px;
-              // z-index: 99;
+              position: relative;
               width: 100%;
-              // display: none;
+              display: none;
               li {
                 line-height: 2.5em;
                 font-weight: 600;
@@ -87,9 +144,10 @@
                 display: block;
                 width: 100%;
                 margin-left: 0px;
+                color: var(--gray3);
                 cursor: pointer;
                 &:hover {
-                  background: #3bb822;
+                  color: #000;
                 }
               }
             }
@@ -357,6 +415,7 @@
   }
 }
 
+// -----------------------------------------------------------------
 @media only screen and (min-width: 601px) {
   body {
     background: #fff;
@@ -464,7 +523,7 @@
         ul.filter {
           margin-left: -40px;
           padding-bottom: 40px;
-          >li {
+          > li {
             margin-left: 40px;
             position: relative;
             padding-bottom: 20px;
@@ -513,13 +572,9 @@
             }
 
             ul.filter-sub {
-              border: 1px solid #aeaeae;
+              border: 1px solid #000;
               background: #fff;
               padding: 10px 15px;
-              position: absolute;
-              left: 0;
-              top: 60px;
-              z-index: 99;
               width: 100%;
               display: none;
 
@@ -538,7 +593,6 @@
                 color: var(--gray3);
                 &:hover {
                   color: #000;
-                  border: 1px solid #000;
                 }
               }
             }
@@ -826,7 +880,7 @@
 }
 
 // -----------------------------------------------------------------
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1201px) {
   body {
     background: #fff;
   }
@@ -926,6 +980,28 @@
           display: flex;
           li {
             width: 33.3333%;
+            position: relative;
+            ul.filter-sub {
+              position: absolute;
+              z-index: 999;
+              &.on {
+                display: block;
+              }
+
+              li {
+                line-height: 2.5em;
+                font-weight: 600;
+                font-size: 20px;
+                display: block;
+                width: 100%;
+                margin-left: 0px;
+                cursor: pointer;
+                color: var(--gray3);
+                &:hover {
+                  color: #000;
+                }
+              }
+            }
           }
         }
       }

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swipers {
+        height: 70vh;
+        overflow: hidden;
+        position: relative;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .mySwiper {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <header>
+      <div class="inner">
+        <div class="left-m_box">
+          <div class="menu"><div class="line"></div></div>
+          <h1><img src="./img/pf-logoN-w.png" alt="" /></h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">콘서트</a></li>
+            <li><a href="#">뮤지털</a></li>
+            <li><a href="#">연극</a></li>
+            <li><a href="#">클래식</a></li>
+            <li><a href="#">전시</a></li>
+            <li><a href="#">아동</a></li>
+          </ul>
+        </nav>
+
+        <div class="right-m">
+          <ul>
+            <li><a href="#">MD#</a></li>
+            <li><a href="#">지역</a></li>
+            <li><a href="#">랭킹</a></li>
+            <li><a href="#">이벤트</a></li>
+          </ul>
+          <div class="serch">
+            <input type="text" />
+            <a href="#"><img src="./img/pf-srch.png" alt="" /></a>
+          </div>
+          <a href="#"><img src="./img/pf-ticket-w.png" alt="" /></a>
+          <a href="#"><img src="./img/pf-global-w.png" alt="" /></a>
+        </div>
+      </div>
+    </header>
+    <div class="swipers">
+      <div
+        style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+        class="swiper mySwiper"
+      >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/slide(1).png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/slide(2).jfif" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/slide(3).jfif" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/slide(4).jfif" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/slide(5).jfif" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/slide(6).png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/slide(7).png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/slide(8).jfif" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/slide(9).jfif" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/slide(10).png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/slide(11).jfif" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/slide(12).jfif" alt="" />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      <!-- nav -->
+      <div class="slide-menu">
+        <div class="line">
+          <span></span>
+        </div>
+
+        <ul>
+          <li class="on">
+            <a href="#"><img src="./img/slide_(1).jfif" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/slide_(2).jfif" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/slide_(3).jfif" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/slide_(4).jfif" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/slide_(5).jfif" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/slide_(6).jfif" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/slide_(7).jfif" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/slide_(8).jfif" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/slide_(9).jfif" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/slide_(10).jfif" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/slide_(11).jfif" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/sldie_(12).jfif" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="sect1">
+      <div class="inner">
+        <h2><img src="./img/sect1/tit1.png" alt="" /></h2>
+        <div class="grid">
+          <div class="item item1">
+            <div class="img-box-f">
+              <img src="./img/sect1/다운로드.jfif" alt="" />
+            </div>
+            <div class="summary-b">
+              <h3 class="title">뮤지컬 쿠로이 제택엔 누가 살고 있을까?</h3>
+              <p>
+                2024. 10. 29~2025. 01. 19 플러스씨어터 /
+                <span>프리뷰 할인 35%</span>
+              </p>
+            </div>
+            <div class="circle-f"><span>35%</span></div>
+          </div>
+          <div class="item item2">
+            <div class="img-box">
+              <img src="./img/sect1/다운로드 (3).jfif" alt="" />
+            </div>
+            <div class="summary">
+              <h3 class="title">뮤지컬 랭보</h3>
+              <p class="date">2024. 09. 17~2024. 12. 08 <br>예스24스테이지 1관</p>
+              <p class="event">청소년 할인 30%</p>
+            </div>
+            <div class="circle"><span>30%</span></div>
+          </div>
+          <div class="item item3">
+            <div class="img-box">
+              <img src="./img/sect1/다운로드 (2).jfif" alt="" />
+            </div>
+            <div class="summary">
+              <h3 class="title">뮤지컬 쓰릴 미</h3>
+              <p class="date">2024. 09. 10.~2024. 12. 01. <br />예스24스테이지 2관</p>
+              <p class="event">재관람 할인 20%</p>
+            </div>
+            <div class="circle"><span>20%</span></div>
+          </div>
+          <div class="item item4">
+            <div class="img-box">
+              <img src="./img/sect1/다운로드 (4).jfif" alt="" />
+            </div>
+            <div class="summary">
+              <h3 class="title">연극 '고도를 기다리며'를<br> 기다리며</h3>
+              <p class="date">2024. 09. 07.~2024. 12. 01. <br />예스24스테이지 3관</p>
+              <p class="event">고도 할인 25%</p>
+            </div>
+            <div class="circle"><span>25%</span></div>
+          </div>
+          <div class="item item5">
+            <div class="img-box">
+              <img src="./img/sect1/다운로드 (5).jfif" alt="" />
+            </div>
+            <div class="summary">
+              <h3 class="title">HYPE UP FESTIVAL</h3>
+              <p class="date">2024. 11. 10. <br />YES24 LIVE HALL</p>
+              <p class="event">단독판매</p>
+            </div>
+            <div class="circle"><span>단독</span></div>
+          </div>
+          <div class="item item6">
+            <div class="img-box">
+              <img src="./img/sect1/다운로드 (1).jfif" alt="" />
+            </div>
+            <div class="summary">
+              <h3 class="title">연극 킬롤로지</h3>
+              <p class="date">2024. 09. 27.~2024. 12. 01. <br />대학로 TOM 2관</p>
+              <p class="event">커뮤니티 할인 35%</p>
+            </div>
+            <div class="circle"><span>35%</span></div>
+          </div>
+          <div class="item item7">
+            <div class="img-box">
+              <img src="./img/sect1/다운로드 (6).jfif" alt="" />
+            </div>
+            <div class="summary">
+              <h3 class="title">뮤지컬 드라이 플라워</h3>
+              <p class="date">2024. 09. 24.~2024. 12. 06. <br />예스24아트원 2관</p>
+              <p class="event">프리뷰 할인 50%</p>
+            </div>
+            <div class="circle"><span>50%</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sect2">
+      <div class="inner">
+        <div class="item item1">
+          <a href="#">
+            <figure><img src="./img/sect2/다운로드.jfif" alt=""></figure>
+            <div class="summary">
+              <p class="date">2024.10.23(수) 11:00</p>
+              <p class="title">뮤지컬 [드라이 플라워] 마지막 티켓오픈 안내</p>
+            </div>
+          </a>
+        </div>
+        <div class="item item2">
+          <a href="#">
+            <figure><img src="./img/sect2/다운로드 (1).jfif" alt=""></figure>
+            <div class="summary">
+              <p class="date">2024.10.21(월) 13:00</p>
+              <p class="title">서도밴드(sEODo BAND) 단독 콘서트 [UNCERTAINTY] 티켓 오픈 안내</p>
+            </div>
+          </a>
+        </div>
+        <div class="item item3">
+          <a href="#">
+            <figure><img src="./img/sect2/다운로드 (2).jfif" alt=""></figure>
+            <div class="summary">
+              <p class="date">2024.10.22(화) 14:00</p>
+              <p class="title">뮤지컬 〈쓰릴 미〉 4차 티켓오픈 안내</p>
+            </div>
+          </a>
+        </div>
+        <div class="item item4">
+          <a href="#">
+            <figure><img src="./img/sect2/다운로드 (3).jfif" alt=""></figure>
+            <div class="summary">
+              <p class="date">2024.10.22(화) 14:00</p>
+              <p class="title">뮤지컬 &lt;블러디 러브&gt; 1차 티켓오픈 안내</p>
+            </div>
+          </a>
+        </div>
+        <div class="item item5">
+          <a href="#">
+            <figure><img src="./img/sect2/다운로드 (4).jfif" alt=""></figure>
+            <div class="summary">
+              <p class="date">2024.10.21(월) 14:00</p>
+              <p class="title">뮤지컬 &lt;이터니티&gt; 4차 티켓오픈 안내</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="sect3"></section>
+    <section class="sect4"></section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "fade",
+        speed: 300,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+
+      const liElems = document.querySelectorAll(".slide-menu ul li");
+      // console.log(liElems)
+      //모든 li를 대상으로~  각각 li요소
+      liElems.forEach(function (liElem, idx) {
+        // console.log(liElems, idx);
+        //각각 li
+        liElem.addEventListener("click", function (e) {
+          e.preventDefault();
+          // 모든 li
+          liElems.forEach(function (item) {
+            item.classList.remove("on");
+          });
+          // 각각 활성화
+          liElem.classList.add("on");
+          swiper.slideTo(idx, 100);
+        });
+      });
+
+      swiper.on("slideChange", function () {
+        let activeIdx = swiper.activeIdx;
+
+        liElems.forEach(function (item) {
+          item.classList.remove("on");
+        });
+        liElems[activeIdx].classList.add("on");
+      });
+    </script>
+  </body>
+</html>

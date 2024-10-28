@@ -1,0 +1,15 @@
+@import url(../reset.css);
+// @import url(../reset.css);
+
+@mixin flex($justify:center){
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+@mixin po-ab($left: 50%, $top: 50%, $translateX: -50%, $translateY: -50%) {
+  position: absolute;
+  left: $left;
+  top: $top;
+  transform: translate($translateX, $translateY);
+}
+

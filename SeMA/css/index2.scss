@@ -4,6 +4,11 @@
   justify-content: $justify;
   align-items: center;
 }
+@mixin flex-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 @mixin po-c {
   left: 50%;
   top: 50%;
@@ -13,17 +18,19 @@
 // -----------------------------------------------------------------
 @media only screen and (max-width: 600px) {
   header {
-    border: 1px solid #96db15;
     padding: 20px 40px;
     transition: 0.5s;
+    background: #ffffff;
+    // border-bottom: 1px solid var(--gray2);
+    box-shadow: 0 1px 10px var(--shadow-b);
     .inner {
-      width: 90%;
+      width: 100%;
       height: 100%;
       margin: auto;
       @include flex-sb;
 
       h1 {
-        display: none;
+        // display: none;
         width: 20%;
         height: 100%;
         img {
@@ -59,19 +66,6 @@
         }
       }
     }
-  }
-  header.scrolled {
-    background-color: rgba(255, 255, 255); /* 스크롤 후 변경된 배경색 */
-    border-bottom: 1px solid #e4e4e4;
-  }
-  header.scrolled nav ul li a {
-    color: black; /* 스크롤 후 변경된 nav 링크 색상 */
-  }
-  header.scrolled .right-menu ul li a {
-    color: black; /* 스크롤 후 변경된 nav 링크 색상 */
-  }
-  header.scrolled .right-menu ul li a i {
-    color: black; /* 스크롤 후 변경된 nav 링크 색상 */
   }
 
   .wrap {
@@ -131,7 +125,7 @@
             }
 
             ul.filter-sub {
-              border: 1px solid #aeaeae;
+              border: 1px solid #000;
               background: #fff;
               padding: 10px 15px;
               position: relative;
@@ -183,7 +177,8 @@
               }
             }
             .art-inner {
-              height: 300px;
+              min-height: 100px;
+              max-height: 300px;
               padding: 20px;
               display: flex;
               flex-direction: column;
@@ -228,6 +223,9 @@
                   overflow-wrap: break-word; /* 자동 줄바꿈 */
                   word-break: keep-all; /* 단어가 끊기지 않도록 */
                 }
+                // &.ex{
+                //   display: none;
+                // }
                 &.date {
                   padding-top: 5px;
                 }
@@ -421,13 +419,14 @@
     background: #fff;
   }
   header {
-    padding: 20px 100px;
+    padding: 20px 40px;
     transition: 0.5s;
     background: #fff;
-    border-bottom: 1px solid #e4e4e4;
+    // border-bottom: 1px solid #e4e4e4;
+    box-shadow: 0 1px 10px var(--shadow-b);
     .inner {
-      // width: 90%;
-      max-width: 1700px;
+      width: 95%;
+      // max-width: 1700px;
       height: 100%;
       margin: auto;
       @include flex-c(space-between);
@@ -620,27 +619,29 @@
               img {
                 width: 100%;
                 height: auto;
-                max-width: 103%;
-                transition: 0.3s ease;
+                // max-width: 103%;
+                transition: 0.3s ease-in;
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
               }
             }
             .art-inner {
-              height: 300px;
-              max-height: 300px;
+              // height: 240px;
+              // min-height: 199px;
+              max-height: 190px;
+              // height: 200px;
               overflow: hidden;
               padding: 20px;
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-              background: #f8f8f8;
+              background: var(--gray);
               .more {
                 margin-top: 10px;
                 .group {
-                  width: 60px;
-                  height: 60px;
+                  min-width: 60px;
+                  min-height: 60px;
                   background: rgb(0, 0, 0);
                   border-radius: 99px;
                   font-weight: 500;
@@ -655,9 +656,12 @@
                   flex-direction: column;
                   justify-content: center;
                   font-weight: 500;
+                  width: 80%;
                   .location {
-                    white-space: normal;
-                    overflow-wrap: break-word; /* 자동 줄바꿈 */
+                    width: 90%;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
                     word-break: keep-all; /* 단어가 끊기지 않도록 */
                   }
                 }
@@ -666,14 +670,22 @@
                 color: var(--gray3);
                 &.i-title {
                   color: #333;
-                  font-size: 24px;
+                  font-size: 20px;
                   font-weight: 600;
                   width: 100%;
+                  height: 60px;
                   letter-spacing: -0.02em;
                   padding-bottom: 5px;
                   white-space: normal;
-                  overflow-wrap: break-word; /* 자동 줄바꿈 */
                   word-break: keep-all; /* 단어가 끊기지 않도록 */
+                  text-overflow: ellipsis;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2; /* 표시할 줄 수 설정 */
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                }
+                &.ex {
+                  display: none;
                 }
                 &.date {
                   padding-top: 5px;
@@ -694,9 +706,11 @@
               z-index: -1;
             }
             &:hover {
-              img {
-                width: 105%;
-                filter: brightness(0.9);
+              .art-img {
+                img {
+                  transform: scale(1.05);
+                  filter: brightness(0.8);
+                }
               }
               .art-inner {
                 background: var(--gray);
@@ -730,8 +744,8 @@
                 }
               }
               &::after {
-                width: 105%;
-                height: 104%;
+                width: 107%;
+                height: 106%;
                 opacity: 1;
               }
             }
@@ -756,9 +770,9 @@
             li {
               flex: 1;
               text-align: center;
-              border: 1px solid #b51919;
+              // border: 1px solid #b51919;
               a {
-                font-size: 24px;
+                font-size: 20px;
                 display: block;
                 padding: 5px;
                 color: var(--gray3);
@@ -789,8 +803,8 @@
         .f-logo {
           width: 34%;
           img {
-            width: 50%;
-            margin-bottom: 30px;
+            width: 60%;
+            margin-bottom: 20px;
           }
           ul {
             li {
@@ -1023,7 +1037,7 @@
         .f-logo {
           width: 50%;
           img {
-            width: 40%;
+            width: 30%;
           }
         }
         ul.f-menu,

@@ -1,0 +1,31 @@
+// @import url(../../font/font.css);
+@mixin flex-c($justify: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+@mixin flex-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin po-c {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+// body {
+// //   background-color: rgba(246, 189, 32, 1);
+// //   background-color: rgb(103, 187, 243);
+// //   background-color: rgb(42, 161, 58);
+// }
+header{display: none;}
+
+@media only screen and (max-width: 600px) {
+}
+// -----------------------------------------------------------------
+@media only screen and (min-width: 601px) {
+}
+// -----------------------------------------------------------------
+@media only screen and (min-width: 1201px) {
+}

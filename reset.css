@@ -1,21 +1,29 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 body {
   color: #333;
 }
+
 li {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
-img{
+
+img {
   vertical-align: top;
 }
+
+/* ------------------------- *//*# sourceMappingURL=reset.css.map */

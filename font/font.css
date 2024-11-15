@@ -207,3 +207,15 @@
       url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.ttf') format("truetype");
   font-display: swap;
 }
+
+@font-face {
+	font-family: 'SUIT Variable';
+	font-weight: 100 200 300 400 500 900;
+	src: url('./SUIT-Variable.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}

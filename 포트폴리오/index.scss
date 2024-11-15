@@ -1,0 +1,697 @@
+@import url(../reset.css);
+@import url(../font/font.css);
+
+@mixin flex-c($justify: center) {
+  display: flex;
+  justify-content: $justify;
+  align-itrems: center;
+}
+
+@mixin po-c {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+// @import url(); //폰트 적용할 파일
+
+$font-size-h2: 50px;
+$font-size-h3: 40px;
+$font-style: normal;
+$font-famaily-h2: "";
+//wehight??두께임 -light, -bold같은 거
+$font-famaily-h3: "";
+
+$main-400: #ff671a;
+$main-500: #ffa87c;
+$main-600: #ffcdb4;
+
+$sub-color-400: #a785c7;
+$sub-color-500: #8a2be2;
+$sub-color-600: #5d3a8d;
+
+$gray-200: #eee;
+$gray-300-bg: #f5f5f5;
+$gray-400: #d9d9d9;
+$gray-500: #b5b5b5;
+$gray-600: #757575;
+$gray-700: #666666;
+$gray-800: #333333;
+$gray-900: #111111;
+
+$bg-w: #fff;
+$bg-b: #000;
+
+$height-50vh: 50vh;
+$height-100vh: 100vh;
+// --------------------------------------------------------
+@mixin font-styles($size, $family) {
+  font-size: $size;
+  font-family: $family;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Pretendard';
+  letter-spacing: -0.05rem;
+  font-size: 10px;
+  line-height: 10px;
+}
+h2 {
+  @include font-styles($font-size-h2, $font-famaily-h2);
+  // color:$main-color-600
+  font-size: 1.2rem;
+  color: $main-400;
+}
+h3 {
+  @include font-styles($font-size-h3, $font-famaily-h3);
+  // color: $main-300;
+}
+p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+span {
+  font-weight: 700;
+}
+@media only screen and (max-width: 600px){
+  .inner {
+    width: 1200px;
+    margin: auto;
+  }
+  // ---------------------------------------------
+  section {
+    height: $height-100vh;
+    h2 {
+      padding-bottom: 20px;
+    }
+    &.intro {
+      background: #ff671a;
+      display: flex;
+      color: #fff;
+      .imgbox {
+        width: 300px;
+        height: 300px;
+        border-radius: 60px;
+        background: $bg-w;
+        @include flex-c;
+        @include po-c;
+  
+        img {
+          width: 60%;
+        }
+  
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100vh;
+          display: block;
+          position: absolute;
+          border-right: 1px dashed #ffffff;
+          border-left: 1px dashed #ffffff;
+        }
+        &::before {
+          content: "";
+          width: 100vw;
+          height: 100%;
+          display: block;
+          position: absolute;
+          border-top: 1px dashed #ffffff;
+          border-bottom: 1px dashed #ffffff;
+        }
+      }
+      .txt {
+        display: flex;
+        gap: 100px;
+      }
+    }
+    // &.sect1{}
+    &.sect2 {
+      .t-box {
+        display: flex;
+        justify-content: space-between;
+        .summary {
+          border: 1px solid #000;
+          width: 30%;
+          font-size: 2rem;
+          line-height: 3.5rem;
+        }
+        .txt {
+          width: 65%;
+        }
+      }
+    }
+    &.sect3 {
+      height: 150vh;
+      background: linear-gradient(0deg, rgba(20, 20, 20, 1), rgba(20, 20, 20, .3)), url(./img/selmin/needs.jpg);
+  
+      background-size: cover;
+      background-repeat: no-repeat;
+      article {
+        &.qbox {
+          border: 1px solid #000;
+          // background: #000;
+          @include flex-c(space-between);
+          > div {
+            margin-top: -250px;
+            width: 32%;
+            border-radius: 20px;
+            padding: 40px 30px;
+            background: $bg-w;
+            .q{
+              letter-spacing: 0.2rem;
+              font-size: 1.5rem;
+              font-weight: 600;
+              color: $main-400;
+            }
+            .question{
+              font-size: 1.5rem;
+              letter-spacing: -.1rem;
+              padding-bottom: 40px;
+            }
+            ul.list{
+              li{
+                font-size: 1rem;
+                .list-gf{
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  padding-top: 10px;
+                  .rod{
+                    height: 20px;
+                    background: $main-400;
+                    border-radius: 5px;
+                  }
+                  .list-nubmer{
+                    padding-left: 20px;
+                    font-size: 1rem;
+                    text-align: right;
+                    &::after{
+                      content: "%";
+                      padding-left: 5px;
+                    }
+                  }
+                }
+                &:not(:last-child){
+                  padding-bottom: 20px;
+                }
+                &:nth-child(1){color: $main-400; font-weight: 600;}
+                &:nth-child(1){
+                  .rod1{width: 48.1%;}
+                  .rod2{width: 30.2%;}
+                  .rod3{width: 21.6%;}
+                }
+                &:nth-child(2){
+                  .rod1{width: 65.3%;}
+                  .rod2{width: 31.6%;}
+                  .rod3{width: 13.1%;}
+                }
+                &:nth-child(3){
+                  .rod1{width: 41.9%;}
+                  .rod2{width: 34.9%;}
+                  .rod3{width: 23.2%;}
+                }
+              }
+            }
+          }
+        }
+        &.result{
+          text-align: center;
+          color: $bg-w;
+          padding-bottom: 200px;
+          span{color:$main-400}
+        }
+        &.review{
+          padding-bottom: 100px;
+          ul{
+            text-align: center;
+            li{
+              line-height: 2rem;
+              font-size: 1.5rem;
+              display: inline-block;
+              padding: 15px 25px;
+              border-radius: 10px;
+              background: $gray-900;
+              color: $bg-w;
+              margin-bottom: 20px;
+              span{color:$main-400}
+              &:nth-child(odd){
+                margin-right: 20px;
+              }
+            }
+          }
+        }
+        &.needs{
+          text-align: center;
+          color:$bg-w;
+          span{
+            width: 2px;
+            height: 2px;
+            background: firebrick;
+          }
+          i{
+            font-size: 2.5rem;
+            padding-bottom: 80px;
+            padding-bottom: 80px;
+            position: relative;
+            color: $main-400;
+            // &::after{
+            //   content: '';
+            //   width: 10px;
+            //   height: 100px;
+            //   border: 5px dotted #ffffff;
+            //   @include po-c();
+            // }
+          }
+          p{
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 3.5rem;
+          }
+        }
+      }
+      cite{
+        display: block;
+        font-size: .8rem;
+        font-weight: 600;
+        padding-top: 10px;
+        color:$main-500;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 601px){
+  .inner {
+    width: 800px;
+    margin: auto;
+  }
+  // ---------------------------------------------
+  section {
+    height: $height-100vh;
+    h2 {
+      padding-bottom: 20px;
+    }
+    &.intro {
+      background: #ff671a;
+      display: flex;
+      color: #fff;
+      .imgbox {
+        width: 300px;
+        height: 300px;
+        border-radius: 60px;
+        background: $bg-w;
+        @include flex-c;
+        @include po-c;
+  
+        img {
+          width: 60%;
+        }
+  
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100vh;
+          display: block;
+          position: absolute;
+          border-right: 1px dashed #ffffff;
+          border-left: 1px dashed #ffffff;
+        }
+        &::before {
+          content: "";
+          width: 100vw;
+          height: 100%;
+          display: block;
+          position: absolute;
+          border-top: 1px dashed #ffffff;
+          border-bottom: 1px dashed #ffffff;
+        }
+      }
+      .txt {
+        display: flex;
+        gap: 100px;
+      }
+    }
+    &.sect1{
+      text-align: center;
+    }
+    &.sect2 {
+      .t-box {
+        display: flex;
+        justify-content: space-between;
+        .summary {
+          width: 35%;
+          font-size: 1.5rem;
+          line-height: 3rem;
+        }
+        .txt {
+          width: 60%;
+        }
+      }
+    }
+    &.sect3 {
+      height: 150vh;
+      background: linear-gradient(0deg, rgba(20, 20, 20, 1), rgba(20, 20, 20, .3)), url(./img/selmin/needs.jpg);
+  
+      background-size: cover;
+      background-repeat: no-repeat;
+      article {
+        &.qbox {
+          padding: 10px;
+          @include flex-c(space-between);
+          > div {
+            margin-top: -200px;
+            width: 32%;
+            border-radius: 20px;
+            padding: 20px 20px;
+            background: $bg-w;
+            .q{
+              letter-spacing: 0.2rem;
+              font-size: 1.2rem;
+              font-weight: 600;
+              color: $main-400;
+            }
+            .question{
+              font-size: 1.2rem;
+              letter-spacing: -.1rem;
+              line-height: 1.5rem;
+              padding-bottom: 40px;
+              white-space: wrap;
+            }
+            ul.list{
+              li{
+                font-size: 1rem;
+                .list-gf{
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  padding-top: 10px;
+                  .rod{
+                    height: 10px;
+                    background: $main-400;
+                    border-radius: 5px;
+                  }
+                  .list-nubmer{
+                    padding-left: 20px;
+                    font-size: 1rem;
+                    text-align: right;
+                    &::after{
+                      content: "%";
+                      padding-left: 5px;
+                    }
+                  }
+                }
+                &:not(:last-child){
+                  padding-bottom: 20px;
+                }
+                &:nth-child(1){color: $main-400; font-weight: 600;}
+                &:nth-child(1){
+                  .rod1{width: 48.1%;}
+                  .rod2{width: 30.2%;}
+                  .rod3{width: 21.6%;}
+                }
+                &:nth-child(2){
+                  .rod1{width: 65.3%;}
+                  .rod2{width: 31.6%;}
+                  .rod3{width: 13.1%;}
+                }
+                &:nth-child(3){
+                  .rod1{width: 41.9%;}
+                  .rod2{width: 34.9%;}
+                  .rod3{width: 23.2%;}
+                }
+              }
+            }
+          }
+        }
+        &.result{
+          text-align: center;
+          color: $bg-w;
+          padding-bottom: 150px;
+          span{color:$main-400}
+        }
+        &.review{
+          padding-bottom: 150px;
+          ul{
+            text-align: center;
+            li{
+              line-height: 2rem;
+              font-size: 1.2rem;
+              display: inline-block;
+              padding: 15px 25px;
+              border-radius: 10px;
+              background: $gray-900;
+              color: $bg-w;
+              margin-bottom: 10px;
+              span{color:$main-400}
+              &:nth-child(odd){
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+        &.needs{
+          text-align: center;
+          color:$bg-w;
+          span{
+            width: 2px;
+            height: 2px;
+            background: firebrick;
+          }
+          i{
+            font-size: 2.5rem;
+            padding-bottom: 80px;
+            padding-bottom: 80px;
+            position: relative;
+            color: $main-400;
+            // &::after{
+            //   content: '';
+            //   width: 10px;
+            //   height: 100px;
+            //   border: 5px dotted #ffffff;
+            //   @include po-c();
+            // }
+          }
+          p{
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 3.5rem;
+          }
+        }
+      }
+      cite{
+        display: block;
+        font-size: .8rem;
+        font-weight: 600;
+        padding-top: 10px;
+        color:$main-500;
+        padding-bottom: 100px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1200px){
+  .inner {
+    width: 1200px;
+    margin: auto;
+  }
+  // ---------------------------------------------
+  section {
+    height: $height-100vh;
+    h2 {
+      padding-bottom: 20px;
+    }
+    &.intro {
+      background: #ff671a;
+      display: flex;
+      color: #fff;
+      .imgbox {
+        width: 300px;
+        height: 300px;
+        border-radius: 60px;
+        background: $bg-w;
+        @include flex-c;
+        @include po-c;
+  
+        img {
+          width: 60%;
+        }
+  
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100vh;
+          display: block;
+          position: absolute;
+          border-right: 1px dashed #ffffff;
+          border-left: 1px dashed #ffffff;
+        }
+        &::before {
+          content: "";
+          width: 100vw;
+          height: 100%;
+          display: block;
+          position: absolute;
+          border-top: 1px dashed #ffffff;
+          border-bottom: 1px dashed #ffffff;
+        }
+      }
+      .txt {
+        display: flex;
+        gap: 100px;
+      }
+    }
+    // &.sect1{}
+    &.sect2 {
+      .t-box {
+        display: flex;
+        justify-content: space-between;
+        .summary {
+          width: 30%;
+          font-size: 2rem;
+          line-height: 3.5rem;
+        }
+        .txt {
+          width: 65%;
+        }
+      }
+    }
+    &.sect3 {
+      height: 150vh;
+      background: linear-gradient(0deg, rgba(20, 20, 20, 1), rgba(20, 20, 20, .3)), url(./img/selmin/needs.jpg);
+  
+      background-size: cover;
+      background-repeat: no-repeat;
+      article {
+        &.qbox {
+          border: 1px solid #000;
+          // background: #000;
+          @include flex-c(space-between);
+          > div {
+            margin-top: -250px;
+            width: 32%;
+            border-radius: 20px;
+            padding: 40px 30px;
+            background: $bg-w;
+            .q{
+              letter-spacing: 0.2rem;
+              font-size: 1.5rem;
+              font-weight: 600;
+              color: $main-400;
+            }
+            .question{
+              font-size: 1.5rem;
+              letter-spacing: -.1rem;
+              line-height:2rem;
+              padding-bottom: 40px;
+            }
+            ul.list{
+              li{
+                font-size: 1rem;
+                .list-gf{
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  padding-top: 10px;
+                  .rod{
+                    height: 20px;
+                    background: $main-400;
+                    border-radius: 5px;
+                  }
+                  .list-nubmer{
+                    padding-left: 20px;
+                    font-size: 1rem;
+                    text-align: right;
+                    &::after{
+                      content: "%";
+                      padding-left: 5px;
+                    }
+                  }
+                }
+                &:not(:last-child){
+                  padding-bottom: 20px;
+                }
+                &:nth-child(1){color: $main-400; font-weight: 600;}
+                &:nth-child(1){
+                  .rod1{width: 48.1%;}
+                  .rod2{width: 30.2%;}
+                  .rod3{width: 21.6%;}
+                }
+                &:nth-child(2){
+                  .rod1{width: 65.3%;}
+                  .rod2{width: 31.6%;}
+                  .rod3{width: 13.1%;}
+                }
+                &:nth-child(3){
+                  .rod1{width: 41.9%;}
+                  .rod2{width: 34.9%;}
+                  .rod3{width: 23.2%;}
+                }
+              }
+            }
+          }
+        }
+        &.result{
+          text-align: center;
+          color: $bg-w;
+          padding-bottom: 200px;
+          span{color:$main-400}
+        }
+        &.review{
+          padding-bottom: 100px;
+          ul{
+            text-align: center;
+            li{
+              line-height: 2rem;
+              font-size: 1.5rem;
+              display: inline-block;
+              padding: 15px 25px;
+              border-radius: 10px;
+              background: $gray-900;
+              color: $bg-w;
+              margin-bottom: 20px;
+              span{color:$main-400}
+              &:nth-child(odd){
+                margin-right: 20px;
+              }
+            }
+          }
+        }
+        &.needs{
+          text-align: center;
+          color:$bg-w;
+          span{
+            width: 2px;
+            height: 2px;
+            background: firebrick;
+          }
+          i{
+            font-size: 2.5rem;
+            padding-bottom: 80px;
+            padding-bottom: 80px;
+            position: relative;
+            color: $main-400;
+            // &::after{
+            //   content: '';
+            //   width: 10px;
+            //   height: 100px;
+            //   border: 5px dotted #ffffff;
+            //   @include po-c();
+            // }
+          }
+          p{
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 3.5rem;
+          }
+        }
+      }
+      cite{
+        display: block;
+        font-size: .8rem;
+        font-weight: 600;
+        padding-top: 10px;
+        color:$main-500;
+      }
+    }
+  }
+}

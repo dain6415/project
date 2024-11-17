@@ -1,10 +1,10 @@
 @import url(../reset.css);
 @import url(../font/font.css);
 
-@mixin flex-c($justify: center) {
+@mixin flex-c($justify: center, $align:center) {
   display: flex;
   justify-content: $justify;
-  align-itrems: center;
+  align-items: $align;
 }
 
 @mixin po-c {
@@ -36,9 +36,11 @@ $gray-400: #d9d9d9;
 $gray-500: #b5b5b5;
 $gray-600: #757575;
 $gray-700: #666666;
-$gray-800: #333333;
+$gray-800-txt: #333333;
 $gray-900: #111111;
 
+
+$bg-gray: #F5F5F5;
 $bg-w: #fff;
 $bg-b: #000;
 
@@ -73,16 +75,31 @@ p {
 }
 span {
   font-weight: 700;
+  color: $main-400;
 }
-@media only screen and (max-width: 600px){
+section{
+  &.sect2{
+    background: $bg-gray;
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (max-width: 500px){
+  p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
   .inner {
-    width: 1200px;
+    width: 80%;
     margin: auto;
   }
   // ---------------------------------------------
   section {
+    // text-align: center;
     height: $height-100vh;
+    padding: 80px 0;
     h2 {
+      line-height: 2rem;
       padding-bottom: 20px;
     }
     &.intro {
@@ -125,91 +142,122 @@ span {
         gap: 100px;
       }
     }
-    // &.sect1{}
+    &.sect1{
+      text-align: center;
+      height: 40vh;
+      border: 1px solid #000;
+      p{
+        &.speech{
+          font-size: 1.5rem;
+          padding-bottom: 20px;
+          font-weight: 500;
+        }
+      }
+    }
     &.sect2 {
       .t-box {
-        display: flex;
-        justify-content: space-between;
         .summary {
-          border: 1px solid #000;
-          width: 30%;
-          font-size: 2rem;
-          line-height: 3.5rem;
+          width: 95%;
+          font-size: 1.5rem;
+          line-height: 2.5rem;
+          padding-bottom: 20px;
+          br{
+            &.dis-n{display: none;}
+          }
         }
-        .txt {
-          width: 65%;
+        .txt{
+          span{
+            color:$gray-800-txt;
+          }
         }
       }
     }
     &.sect3 {
       height: 150vh;
-      background: linear-gradient(0deg, rgba(20, 20, 20, 1), rgba(20, 20, 20, .3)), url(./img/selmin/needs.jpg);
-  
+      background: linear-gradient(0deg, rgba(50, 50, 50, 1) 10%, rgba(20, 20, 20, 0) 20%), url(./img/selmin/needs.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       article {
-        &.qbox {
-          border: 1px solid #000;
-          // background: #000;
-          @include flex-c(space-between);
-          > div {
-            margin-top: -250px;
-            width: 32%;
-            border-radius: 20px;
-            padding: 40px 30px;
-            background: $bg-w;
-            .q{
-              letter-spacing: 0.2rem;
-              font-size: 1.5rem;
-              font-weight: 600;
-              color: $main-400;
-            }
-            .question{
-              font-size: 1.5rem;
-              letter-spacing: -.1rem;
-              padding-bottom: 40px;
-            }
-            ul.list{
-              li{
-                font-size: 1rem;
-                .list-gf{
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
-                  padding-top: 10px;
-                  .rod{
-                    height: 20px;
-                    background: $main-400;
-                    border-radius: 5px;
-                  }
-                  .list-nubmer{
-                    padding-left: 20px;
-                    font-size: 1rem;
-                    text-align: right;
-                    &::after{
-                      content: "%";
-                      padding-left: 5px;
+        &.qbox {      
+          width: 100%;
+          border: 1px solid #db2424;    
+          margin-top: -200px;
+          // overflow: hidden;
+          margin-bottom: 10px;
+          .wrap{
+            display: flex;
+            width: 300%;
+            border: 1px solid #000;
+            position: relative;
+            > div {
+              width:100%;
+              height: 360px;
+              border: 1px solid #000;
+              border-radius: 20px;
+              padding: 40px 30px;
+              background: $bg-w;
+              margin-right: 20px;
+              .q{
+                letter-spacing: 0.2rem;
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: $main-400;
+                padding-bottom: 10px;
+              }
+              .question{
+                font-size: 1.25rem;
+                letter-spacing: -.1rem;
+                padding-bottom: 40px;
+                line-height: 1.5em;
+                br.none{display: none;}
+              }
+              ul.list{
+                li{
+                  font-size: 1rem;
+                  .list-gf{
+                    @include flex-c(space-between, );
+                    padding-top: 10px;
+                    .rod{
+                      height: 10px;
+                      border-radius: 5px;
+                      background: $gray-500;
+                      &.rod1{
+                        background: $main-400;
+                      }
+                    }
+                    .list-nubmer{
+                      padding-left: 20px;
+                      font-size: 1rem;
+                      text-align: right;
+                      color: $gray-500;
+                      &.color{
+                        color: $main-400;
+                      }
+                      &::after{
+                        content: "%";
+                        padding-left: 5px;
+                      }
                     }
                   }
-                }
-                &:not(:last-child){
-                  padding-bottom: 20px;
-                }
-                &:nth-child(1){color: $main-400; font-weight: 600;}
-                &:nth-child(1){
-                  .rod1{width: 48.1%;}
-                  .rod2{width: 30.2%;}
-                  .rod3{width: 21.6%;}
-                }
-                &:nth-child(2){
-                  .rod1{width: 65.3%;}
-                  .rod2{width: 31.6%;}
-                  .rod3{width: 13.1%;}
-                }
-                &:nth-child(3){
-                  .rod1{width: 41.9%;}
-                  .rod2{width: 34.9%;}
-                  .rod3{width: 23.2%;}
+                  &:not(:last-child){
+                    padding-bottom: 10px;
+                  }
+                  &:nth-child(1){color: $main-400; font-weight: 600;}
+                  &:nth-child(1){
+                    .rod1{width: 48.1%;}
+                    .rod2{width: 30.2%; border: 1px solid #000;}
+                    .rod3{width: 21.6%;}
+                  }
+                  &:nth-child(2){
+                    .rod1{width: 65.3%;}
+                    .rod2{width: 31.6%;}
+                    .rod3{width: 13.1%;}
+                  }
+                  &:nth-child(3){
+                    .rod1{width: 41.9%;}
+                    .rod2{width: 34.9%;}
+                    .rod3{width: 23.2%;}
+                  }
                 }
               }
             }
@@ -219,25 +267,23 @@ span {
           text-align: center;
           color: $bg-w;
           padding-bottom: 200px;
-          span{color:$main-400}
+          white-space: nowrap;
         }
+
         &.review{
           padding-bottom: 100px;
           ul{
             text-align: center;
             li{
+              width: 100%;
               line-height: 2rem;
-              font-size: 1.5rem;
-              display: inline-block;
+              font-size: 1.25rem;
+              display: block;
               padding: 15px 25px;
               border-radius: 10px;
-              background: $gray-900;
+              background: $bg-b;
               color: $bg-w;
-              margin-bottom: 20px;
-              span{color:$main-400}
-              &:nth-child(odd){
-                margin-right: 20px;
-              }
+              margin-bottom: 10px;
             }
           }
         }
@@ -273,21 +319,30 @@ span {
       cite{
         display: block;
         font-size: .8rem;
-        font-weight: 600;
-        padding-top: 10px;
-        color:$main-500;
+        font-weight: 400;
+        padding-bottom: 100px;
+        color:rgba($color: $bg-w, $alpha: .5);
       }
     }
   }
 }
-@media only screen and (min-width: 601px){
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 501px){
+  body{
+    font-size: 4vw;
+  }
+  p{
+    font-size:1rem;
+    line-height: 1.5rem;
+  }
   .inner {
-    width: 800px;
+    width: 80%;
     margin: auto;
   }
   // ---------------------------------------------
   section {
     height: $height-100vh;
+    padding: 40px 0;
     h2 {
       padding-bottom: 20px;
     }
@@ -333,6 +388,234 @@ span {
     }
     &.sect1{
       text-align: center;
+      height: 30vh;
+      border: 1px solid #000;
+      p{
+        white-space: nowrap;
+        &.speech{
+          font-size: 1.5rem;
+          padding-bottom: 20px;
+          font-weight: 500;
+        }
+      }
+    }
+    &.sect2 {
+      .t-box {
+        .summary {
+          width: 95%;
+          font-size: 1.5rem;
+          line-height: 2.5rem;
+          padding-bottom: 20px;
+        }
+      }
+    }
+    &.sect3 {
+      height: 150vh;
+      background: linear-gradient(0deg, rgba(50, 50, 50, 1) 10%, rgba(20, 20, 20, 0) 20%), url(./img/selmin/needs.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      article {
+        &.qbox {      
+          width: 100%;
+          border: 1px solid #db2424;    
+          margin-top: -200px;
+          // overflow: hidden;
+          margin-bottom: 10px;
+          .wrap{
+            display: flex;
+            width: 300%;
+            border: 1px solid #000;
+            position: relative;
+            > div {
+              width:100%;
+              height: 360px;
+              border: 1px solid #000;
+              border-radius: 20px;
+              padding: 40px 30px;
+              background: $bg-w;
+              margin-right: 20px;
+              .q{
+                letter-spacing: 0.2rem;
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: $main-400;
+                padding-bottom: 10px;
+              }
+              .question{
+                font-size: 1.25rem;
+                letter-spacing: -.1rem;
+                padding-bottom: 40px;
+                line-height: 1.5em;
+                br.none{display: none;}
+              }
+              ul.list{
+                li{
+                  font-size: 1rem;
+                  .list-gf{
+                    @include flex-c(space-between, );
+                    padding-top: 10px;
+                    .rod{
+                      height: 10px;
+                      border-radius: 5px;
+                      background: $gray-500;
+                      &.rod1{
+                        background: $main-400;
+                      }
+                    }
+                    .list-nubmer{
+                      padding-left: 20px;
+                      font-size: 1rem;
+                      text-align: right;
+                      color: $gray-500;
+                      &.color{
+                        color: $main-400;
+                      }
+                      &::after{
+                        content: "%";
+                        padding-left: 5px;
+                      }
+                    }
+                  }
+                  &:not(:last-child){
+                    padding-bottom: 10px;
+                  }
+                  &:nth-child(1){color: $main-400; font-weight: 600;}
+                  &:nth-child(1){
+                    .rod1{width: 48.1%;}
+                    .rod2{width: 30.2%; border: 1px solid #000;}
+                    .rod3{width: 21.6%;}
+                  }
+                  &:nth-child(2){
+                    .rod1{width: 65.3%;}
+                    .rod2{width: 31.6%;}
+                    .rod3{width: 13.1%;}
+                  }
+                  &:nth-child(3){
+                    .rod1{width: 41.9%;}
+                    .rod2{width: 34.9%;}
+                    .rod3{width: 23.2%;}
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.result{
+          text-align: center;
+          color: $bg-w;
+          padding-bottom: 200px;
+          font-size: 1.5rem;
+        }
+        &.review{
+          padding-bottom: 100px;
+          ul{
+            text-align: center;
+            li{
+              line-height: 2rem;
+              font-size: 1.25rem;
+              display: block;
+              padding: 15px 25px;
+              border-radius: 10px;
+              background: $bg-b;
+              color: $bg-w;
+              margin-bottom: 20px;
+              &:nth-child(odd){
+                margin-right: 20px;
+              }
+            }
+          }
+        }
+        &.needs{
+          text-align: center;
+          color:$bg-w;
+          span{
+            width: 2px;
+            height: 2px;
+            background: firebrick;
+          }
+          i{
+            font-size: 2.5rem;
+            padding-bottom: 80px;
+            padding-bottom: 80px;
+            position: relative;
+            color: $main-400;
+          }
+          p{
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 3.5rem;
+          }
+        }
+      }
+      cite{
+        display: block;
+        font-size: .8rem;
+        font-weight: 600;
+        padding-top: 10px;
+        color:$main-500;
+        padding-bottom: 100px;
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 801px){
+  .inner {
+    width: 90%;
+    margin: auto;
+  }
+  // ---------------------------------------------
+  section {
+    height: $height-100vh;
+    padding: 80px 0;
+    h2 {
+      padding-bottom: 20px;
+    }
+    &.intro {
+      background: #ff671a;
+      display: flex;
+      color: #fff;
+      .imgbox {
+        width: 300px;
+        height: 300px;
+        border-radius: 60px;
+        background: $bg-w;
+        @include flex-c;
+        @include po-c;
+  
+        img {
+          width: 60%;
+        }
+  
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100vh;
+          display: block;
+          position: absolute;
+          border-right: 1px dashed #ffffff;
+          border-left: 1px dashed #ffffff;
+        }
+        &::before {
+          content: "";
+          width: 100vw;
+          height: 100%;
+          display: block;
+          position: absolute;
+          border-top: 1px dashed #ffffff;
+          border-bottom: 1px dashed #ffffff;
+        }
+      }
+      .txt {
+        display: flex;
+        gap: 100px;
+      }
+    }
+    &.sect1{
+      text-align: center;
+      height: 40vh;
+      border: 1px solid #000;
     }
     &.sect2 {
       .t-box {
@@ -356,19 +639,19 @@ span {
       background-repeat: no-repeat;
       article {
         &.qbox {
-          padding: 10px;
+          margin-bottom: 10px;
           @include flex-c(space-between);
+          margin-top: -250px;
           > div {
-            margin-top: -200px;
             width: 32%;
             border-radius: 20px;
-            padding: 20px 20px;
+            padding: 20px;
             background: $bg-w;
             .q{
               letter-spacing: 0.2rem;
               font-size: 1.2rem;
               font-weight: 600;
-              color: $main-400;
+              color: $main-600;
             }
             .question{
               font-size: 1.2rem;
@@ -381,9 +664,7 @@ span {
               li{
                 font-size: 1rem;
                 .list-gf{
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
+                  @include flex-c(space-between);
                   padding-top: 10px;
                   .rod{
                     height: 10px;
@@ -401,7 +682,7 @@ span {
                   }
                 }
                 &:not(:last-child){
-                  padding-bottom: 20px;
+                  padding-bottom: 10px;
                 }
                 &:nth-child(1){color: $main-400; font-weight: 600;}
                 &:nth-child(1){
@@ -424,10 +705,13 @@ span {
           }
         }
         &.result{
+          width: 83%;
+          margin: auto;
+          white-space: wrap;
+          border: 1px solid #20d84b;
           text-align: center;
           color: $bg-w;
           padding-bottom: 150px;
-          span{color:$main-400}
         }
         &.review{
           padding-bottom: 150px;
@@ -439,10 +723,9 @@ span {
               display: inline-block;
               padding: 15px 25px;
               border-radius: 10px;
-              background: $gray-900;
               color: $bg-w;
               margin-bottom: 10px;
-              span{color:$main-400}
+              br{display: none;}
               &:nth-child(odd){
                 margin-right: 10px;
               }
@@ -482,13 +765,14 @@ span {
         display: block;
         font-size: .8rem;
         font-weight: 600;
-        padding-top: 10px;
         color:$main-500;
         padding-bottom: 100px;
       }
     }
   }
 }
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 @media only screen and (min-width: 1200px){
   .inner {
     width: 1200px;
@@ -558,83 +842,45 @@ span {
     &.sect3 {
       height: 150vh;
       background: linear-gradient(0deg, rgba(20, 20, 20, 1), rgba(20, 20, 20, .3)), url(./img/selmin/needs.jpg);
-  
       background-size: cover;
       background-repeat: no-repeat;
       article {
         &.qbox {
-          border: 1px solid #000;
-          // background: #000;
-          @include flex-c(space-between);
+          margin-top: -300px;
+          margin-bottom: 20px;
           > div {
-            margin-top: -250px;
             width: 32%;
-            border-radius: 20px;
             padding: 40px 30px;
-            background: $bg-w;
             .q{
-              letter-spacing: 0.2rem;
               font-size: 1.5rem;
-              font-weight: 600;
-              color: $main-400;
             }
             .question{
               font-size: 1.5rem;
-              letter-spacing: -.1rem;
               line-height:2rem;
-              padding-bottom: 40px;
             }
             ul.list{
               li{
-                font-size: 1rem;
                 .list-gf{
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
                   padding-top: 10px;
                   .rod{
-                    height: 20px;
-                    background: $main-400;
-                    border-radius: 5px;
+                    height: 12px;
                   }
                   .list-nubmer{
                     padding-left: 20px;
-                    font-size: 1rem;
-                    text-align: right;
-                    &::after{
-                      content: "%";
-                      padding-left: 5px;
-                    }
                   }
                 }
                 &:not(:last-child){
                   padding-bottom: 20px;
-                }
-                &:nth-child(1){color: $main-400; font-weight: 600;}
-                &:nth-child(1){
-                  .rod1{width: 48.1%;}
-                  .rod2{width: 30.2%;}
-                  .rod3{width: 21.6%;}
-                }
-                &:nth-child(2){
-                  .rod1{width: 65.3%;}
-                  .rod2{width: 31.6%;}
-                  .rod3{width: 13.1%;}
-                }
-                &:nth-child(3){
-                  .rod1{width: 41.9%;}
-                  .rod2{width: 34.9%;}
-                  .rod3{width: 23.2%;}
-                }
+                } 
               }
             }
           }
         }
         &.result{
+          width: 84%;
           text-align: center;
           color: $bg-w;
           padding-bottom: 200px;
-          span{color:$main-400}
         }
         &.review{
           padding-bottom: 100px;
@@ -649,7 +895,6 @@ span {
               background: $gray-900;
               color: $bg-w;
               margin-bottom: 20px;
-              span{color:$main-400}
               &:nth-child(odd){
                 margin-right: 20px;
               }
@@ -689,7 +934,6 @@ span {
         display: block;
         font-size: .8rem;
         font-weight: 600;
-        padding-top: 10px;
         color:$main-500;
       }
     }

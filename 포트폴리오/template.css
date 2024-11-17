@@ -187,94 +187,63 @@ section.sect1 article.qbox .q-box {
   margin-top: -30vh;
   padding-bottom: 80px;
 }
-section.sect1 article.qbox .q-box > ul {
+section.sect1 article.qbox .q-box .tablist ul {
   display: flex;
-  justify-content: space-between;
-  align-itrems: center;
+  font-size: 20px;
+  gap: 20px;
 }
-section.sect1 article.qbox .q-box > ul > li {
+section.sect1 article.qbox .q-box .tablist ul li {
   border: 1px solid #000;
+  padding: 10px;
+}
+section.sect1 article.qbox .q-box .tablist ul li.on {
+  color: #FF671A;
+  font-weight: 900;
+}
+section.sect1 article.qbox .q-box .tabs {
+  border: 1px solid #be2626;
+  position: relative;
+}
+section.sect1 article.qbox .q-box .tabs .tab {
   background: #fff;
-  width: 25%;
+  border: 1px solid #000;
+  width: 90%;
+  margin: auto;
   border-radius: 20px;
   padding: 40px 30px;
 }
-section.sect1 article.qbox .q-box > ul > li .q {
+section.sect1 article.qbox .q-box .tabs .tab .q {
   color: #FF671A;
   font-weight: 900;
   font-size: 1.6rem;
 }
-section.sect1 article.qbox .q-box > ul > li .question {
+section.sect1 article.qbox .q-box .tabs .tab .question {
   font-size: 1.2rem;
 }
-section.sect1 article.qbox .q-box > ul > li .list ul {
+section.sect1 article.qbox .q-box .tabs .tab .question br {
+  display: none;
+}
+section.sect1 article.qbox .q-box .tabs .tab .list ul {
   padding-top: 40px;
 }
-section.sect1 article.qbox .q-box > ul > li .list ul li {
+section.sect1 article.qbox .q-box .tabs .tab .list ul li {
   font-size: 1.1rem;
   font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-itrems: center;
 }
-section.sect1 article.qbox .q-box > ul > li .list ul li .list_gf {
+section.sect1 article.qbox .q-box .tabs .tab .list ul li .list_gf {
+  width: 50%;
+  border: 1px solid #000;
+  white-space: nowrap;
   display: flex;
   justify-content: center;
   align-itrems: center;
 }
-section.sect1 article.qbox .q-box > ul > li .list ul li .list_gf .small-gf {
-  height: 15px;
-}
-section.sect1 article.qbox .q-box > ul > li .list ul li .list_gf .number {
-  width: 10%;
-  text-align: right;
-  font-size: 1rem;
-}
-section.sect1 article.qbox .q-box > ul > li .list ul li:not(:last-child) {
-  padding-bottom: 20px;
-}
-section.sect1 article.qbox .q-box > ul > li .list ul li:first-child {
-  color: #FF671A;
-}
-section.sect1 article.qbox .q-box > ul > li .list ul li:first-child .list_gf {
-  display: flex;
-  justify-content: space-between;
-}
-section.sect1 article.qbox .q-box > ul > li .list ul li:first-child .list_gf .small-gf {
-  background: #FF671A;
-  border-radius: 5px;
-}
-section.sect1 article.qbox .q-box > ul > li .list ul li:not(:first-child) .list_gf {
-  display: flex;
-  justify-content: space-between;
-}
-section.sect1 article.qbox .q-box > ul > li .list ul li:not(:first-child) .list_gf .small-gf {
-  background: #757575;
-  border-radius: 5px;
-}
-section.sect1 article.qbox .q-box > ul > li:nth-child(1) .list ul li:nth-child(1) .small-gf {
-  width: 50%;
-}
-section.sect1 article.qbox .q-box > ul > li:nth-child(1) .list ul li:nth-child(2) .small-gf {
-  width: 30.2%;
-}
-section.sect1 article.qbox .q-box > ul > li:nth-child(1) .list ul li:nth-child(3) .small-gf {
-  width: 21.6%;
-}
-section.sect1 article.qbox .q-box > ul > li:nth-child(2) .list ul li:nth-child(1) .small-gf {
-  width: 65.3%;
-}
-section.sect1 article.qbox .q-box > ul > li:nth-child(2) .list ul li:nth-child(2) .small-gf {
-  width: 31.6%;
-}
-section.sect1 article.qbox .q-box > ul > li:nth-child(2) .list ul li:nth-child(3) .small-gf {
-  width: 13.1%;
-}
-section.sect1 article.qbox .q-box > ul > li:nth-child(3) .list ul li:nth-child(1) .small-gf {
-  width: 41.9%;
-}
-section.sect1 article.qbox .q-box > ul > li:nth-child(3) .list ul li:nth-child(2) .small-gf {
-  width: 34.9%;
-}
-section.sect1 article.qbox .q-box > ul > li:nth-child(3) .list ul li:nth-child(3) .small-gf {
-  width: 23.2%;
+section.sect1 article.qbox .q-box .tabs .tab .list ul li .list_gf .small-gf {
+  width: 100%;
+  padding: 5px;
 }
 section.sect1 article.qbox .q-box cite {
   display: block;

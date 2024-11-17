@@ -235,14 +235,31 @@ section {
         .q-box{
           margin-top: -30vh;
           padding-bottom: 80px;
-          > ul{
-            @include flex-c(space-between);
-            > li{
-              border: 1px solid #000;
+          .tablist{
+            ul{
+              display: flex;
+              font-size: 20px;
+              gap: 20px;
+              li{
+                border: 1px solid #000;
+                padding: 10px;
+                &.on{
+                  color: $main-400;
+                  font-weight: 900;
+                }
+              }
+            }
+          }
+          .tabs{
+            border: 1px solid #be2626;
+            position: relative;
+            .tab{
               background: $bg-w;
-              width: 25%;
-              // height: 400px;
+              border: 1px solid #000;
+              width: 90%;
+              margin: auto;
               border-radius: 20px;
+              // height: 400px;
               padding: 40px 30px;
               .q{
                 color: $main-400;
@@ -251,6 +268,7 @@ section {
               }
               .question{
                 font-size: 1.2rem;
+                br{display: none;}
               }
               .list{
                 ul{
@@ -258,108 +276,122 @@ section {
                   li{
                     font-size: 1.1rem;
                     font-weight: 600;
+                    @include flex-c(space-between);
                     .list_gf{
+                      width: 50%;
+                      border: 1px solid #000;
+                      white-space: nowrap;
                       @include flex-c();
                       .small-gf{
-                        height: 15px;
-                      }
-                      .number{
-                        width: 10%;
-                        text-align: right;
-                        font-size: 1rem;
+                        width: 100%;
+                        padding: 5px;
                       }
                     }
-                    &:not(:last-child){
-                      padding-bottom: 20px;
-                    }
-                    &:first-child{
-                      color: $main-400;
-                      .list_gf{
-                        display: flex;
-                        justify-content:space-between;
-                        .small-gf{
-                          background: $main-400;
-                          border-radius: 5px;
-                        }
-                      }
-                    }
-                    &:not(:first-child){
-                      .list_gf{
-                        display: flex;
-                        justify-content: 
-                        space-between;
-                        .small-gf{
-                          background: $gray-600;
-                          border-radius: 5px;
-                        }
-                      }
-                    }
+                    // .list_gf{
+                    //   .small-gf{
+                    //     // height: 15px;
+                    //     color: #fff;
+                    //     padding: 5px;
+                    //     display: block;
+                    //   }
+                    //   .number{
+                    //     width: 10%;
+                    //     text-align: right;
+                    //     font-size: 1rem;
+                    //   }
+                    // }
+                    // &:not(:last-child){
+                    //   padding-bottom: 20px;
+                    // }
+                    // &:first-child{
+                    //   color: $main-400;
+                    //   .list_gf{
+                    //     @include flex-c(space-between);
+                    //     .small-gf{
+                    //       background: $main-400;
+                    //       border-radius: 5px;
+                    //     }
+                    //   }
+                    // }
+                    // &:not(:first-child){
+                    //   .list_gf{
+                    //     display: flex;
+                    //     justify-content: 
+                    //     space-between;
+                    //     .small-gf{
+                    //       background: $gray-600;
+                    //       border-radius: 5px;
+                    //     }
+                    //   }
+                    // }
                   }
                 }
               }
-              &:nth-child(1){
-                .list{
-                  ul{
-                    li:nth-child(1){
-                      .small-gf{
-                        width: 50%;
-                      }
-                    }
-                    li:nth-child(2){
-                      .small-gf{
-                        width: 30.2%;
-                      }
-                    }
-                    li:nth-child(3){
-                      .small-gf{
-                        width: 21.6%;
-                      }
-                    }
-                  }
-                }
-              }
-              &:nth-child(2){
-                .list{
-                  ul{
-                    li:nth-child(1){
-                      .small-gf{
-                        width: 65.3%;
-                      }
-                    }
-                    li:nth-child(2){
-                      .small-gf{
-                        width: 31.6%;
-                      }
-                    }
-                    li:nth-child(3){
-                      .small-gf{
-                        width:13.1%;
-                      }
-                    }
-                  }
-                }
-              }
-              &:nth-child(3){
-                .list{
-                  ul{
-                    li:nth-child(1){
-                      .small-gf{
-                        width: 41.9%;
-                      }
-                    }
-                    li:nth-child(2){
-                      .small-gf{
-                        width: 34.9%;
-                      }
-                    }
-                    li:nth-child(3){
-                      .small-gf{
-                        width:23.2%;
-                      }
-                    }
-                  }
-                }
-              }
+              // &:nth-child(1){
+              //   .list{
+              //     ul{
+              //       li:nth-child(1){
+              //         .small-gf{
+              //           width: 50%;
+              //         }
+              //       }
+              //       li:nth-child(2){
+              //         .small-gf{
+              //           width: 30.2%;
+              //         }
+              //       }
+              //       li:nth-child(3){
+              //         .small-gf{
+              //           width: 21.6%;
+              //         }
+              //       }
+              //     }
+              //   }
+              // }
+              // &:nth-child(2){
+              //   .list{
+              //     ul{
+              //       li:nth-child(1){
+              //         .small-gf{
+              //           width: 65.3%;
+              //         }
+              //       }
+              //       li:nth-child(2){
+              //         .small-gf{
+              //           width: 31.6%;
+              //         }
+              //       }
+              //       li:nth-child(3){
+              //         .small-gf{
+              //           width:13.1%;
+              //         }
+              //       }
+              //     }
+              //   }
+              // }
+              // &:nth-child(3){
+              //   .list{
+              //     ul{
+              //       li:nth-child(1){
+              //         .small-gf{
+              //           width: 41.9%;
+              //         }
+              //       }
+              //       li:nth-child(2){
+              //         .small-gf{
+              //           width: 34.9%;
+              //         }
+              //       }
+              //       li:nth-child(3){
+              //         .small-gf{
+              //           width:23.2%;
+              //         }
+              //       }
+              //     }
+              //   }
+              // }
+
+              // &.on{display: block;}
             }
           }
 

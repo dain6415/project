@@ -32,7 +32,7 @@ span {
 }
 
 section.sect2 {
-  background: #F5F5F5;
+  background: #f5f5f5;
 }
 
 @media only screen and (max-width: 500px) {
@@ -266,7 +266,7 @@ section.sect2 {
   }
   section.sect3 article.needs p {
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 3.5rem;
   }
   section.sect3 cite {
@@ -472,6 +472,9 @@ section.sect2 {
     padding-bottom: 200px;
     font-size: 1.5rem;
   }
+  section.sect3 article.result .on {
+    display: none;
+  }
   section.sect3 article.review {
     padding-bottom: 100px;
   }
@@ -510,7 +513,7 @@ section.sect2 {
   section.sect3 article.needs p {
     font-weight: 600;
     font-size: 2rem;
-    line-height: 3.5rem;
+    line-height: 3rem;
   }
   section.sect3 cite {
     display: block;
@@ -523,8 +526,16 @@ section.sect2 {
 }
 @media only screen and (min-width: 801px) {
   .inner {
-    width: 90%;
+    width: 80%;
     margin: auto;
+    border: 1px solid #000;
+  }
+  .summary {
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+  .txt {
+    text-align: justify;
   }
   section {
     height: 100vh;
@@ -586,18 +597,13 @@ section.sect2 {
     justify-content: space-between;
   }
   section.sect2 .t-box .summary {
-    width: 35%;
-    font-size: 1.5rem;
-    line-height: 3rem;
+    width: 45%;
   }
   section.sect2 .t-box .txt {
-    width: 60%;
+    width: 55%;
   }
   section.sect3 {
-    height: 150vh;
-    background: linear-gradient(0deg, rgb(20, 20, 20), rgba(20, 20, 20, 0.3)), url(./img/selmin/needs.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 130vh;
   }
   section.sect3 article.qbox {
     margin-bottom: 10px;
@@ -610,7 +616,6 @@ section.sect2 {
     width: 32%;
     border-radius: 20px;
     padding: 20px;
-    background: #fff;
   }
   section.sect3 article.qbox > div .q {
     letter-spacing: 0.2rem;
@@ -683,13 +688,19 @@ section.sect2 {
     width: 23.2%;
   }
   section.sect3 article.result {
-    width: 83%;
     margin: auto;
     white-space: wrap;
     border: 1px solid #20d84b;
     text-align: center;
     color: #fff;
     padding-bottom: 150px;
+    white-space: nowrap;
+  }
+  section.sect3 article.result br {
+    display: none;
+  }
+  section.sect3 article.result br.on {
+    display: block;
   }
   section.sect3 article.review {
     padding-bottom: 150px;
@@ -806,12 +817,6 @@ section.sect2 {
   }
   section.sect2 .t-box .txt {
     width: 65%;
-  }
-  section.sect3 {
-    height: 150vh;
-    background: linear-gradient(0deg, rgb(20, 20, 20), rgba(20, 20, 20, 0.3)), url(./img/selmin/needs.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
   }
   section.sect3 article.qbox {
     margin-top: -300px;

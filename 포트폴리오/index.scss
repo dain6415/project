@@ -1,7 +1,7 @@
 @import url(../reset.css);
 @import url(../font/font.css);
 
-@mixin flex-c($justify: center, $align:center) {
+@mixin flex-c($justify: center, $align: center) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
@@ -39,8 +39,7 @@ $gray-700: #666666;
 $gray-800-txt: #333333;
 $gray-900: #111111;
 
-
-$bg-gray: #F5F5F5;
+$bg-gray: #f5f5f5;
 $bg-w: #fff;
 $bg-b: #000;
 
@@ -54,7 +53,7 @@ $height-100vh: 100vh;
 }
 
 body {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   letter-spacing: -0.05rem;
   font-size: 10px;
   line-height: 10px;
@@ -77,15 +76,15 @@ span {
   font-weight: 700;
   color: $main-400;
 }
-section{
-  &.sect2{
+section {
+  &.sect2 {
     background: $bg-gray;
   }
 }
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@media only screen and (max-width: 500px){
-  p{
+@media only screen and (max-width: 500px) {
+  p {
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -113,11 +112,11 @@ section{
         background: $bg-w;
         @include flex-c;
         @include po-c;
-  
+
         img {
           width: 60%;
         }
-  
+
         &::after {
           content: "";
           width: 100%;
@@ -142,12 +141,12 @@ section{
         gap: 100px;
       }
     }
-    &.sect1{
+    &.sect1 {
       text-align: center;
       height: 40vh;
       border: 1px solid #000;
-      p{
-        &.speech{
+      p {
+        &.speech {
           font-size: 1.5rem;
           padding-bottom: 20px;
           font-weight: 500;
@@ -161,120 +160,151 @@ section{
           font-size: 1.5rem;
           line-height: 2.5rem;
           padding-bottom: 20px;
-          br{
-            &.dis-n{display: none;}
+          br {
+            &.dis-n {
+              display: none;
+            }
           }
         }
-        .txt{
-          span{
-            color:$gray-800-txt;
+        .txt {
+          span {
+            color: $gray-800-txt;
           }
         }
       }
     }
     &.sect3 {
       height: 150vh;
-      background: linear-gradient(0deg, rgba(50, 50, 50, 1) 10%, rgba(20, 20, 20, 0) 20%), url(./img/selmin/needs.jpg);
+      background: linear-gradient(
+          0deg,
+          rgba(50, 50, 50, 1) 10%,
+          rgba(20, 20, 20, 0) 20%
+        ),
+        url(./img/selmin/needs.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       article {
-        &.qbox {      
+        &.qbox {
           width: 100%;
-          border: 1px solid #db2424;    
+          border: 1px solid #db2424;
           margin-top: -200px;
           // overflow: hidden;
           margin-bottom: 10px;
-          .wrap{
+          .wrap {
             display: flex;
             width: 300%;
             border: 1px solid #000;
             position: relative;
             > div {
-              width:100%;
+              width: 100%;
               height: 360px;
               border: 1px solid #000;
               border-radius: 20px;
               padding: 40px 30px;
               background: $bg-w;
               margin-right: 20px;
-              .q{
+              .q {
                 letter-spacing: 0.2rem;
                 font-size: 1.5rem;
                 font-weight: 500;
                 color: $main-400;
                 padding-bottom: 10px;
               }
-              .question{
+              .question {
                 font-size: 1.25rem;
-                letter-spacing: -.1rem;
+                letter-spacing: -0.1rem;
                 padding-bottom: 40px;
                 line-height: 1.5em;
-                br.none{display: none;}
+                br.none {
+                  display: none;
+                }
               }
-              ul.list{
-                li{
+              ul.list {
+                li {
                   font-size: 1rem;
-                  .list-gf{
-                    @include flex-c(space-between, );
+                  .list-gf {
+                    @include flex-c(space-between);
                     padding-top: 10px;
-                    .rod{
+                    .rod {
                       height: 10px;
                       border-radius: 5px;
                       background: $gray-500;
-                      &.rod1{
+                      &.rod1 {
                         background: $main-400;
                       }
                     }
-                    .list-nubmer{
+                    .list-nubmer {
                       padding-left: 20px;
                       font-size: 1rem;
                       text-align: right;
                       color: $gray-500;
-                      &.color{
+                      &.color {
                         color: $main-400;
                       }
-                      &::after{
+                      &::after {
                         content: "%";
                         padding-left: 5px;
                       }
                     }
                   }
-                  &:not(:last-child){
+                  &:not(:last-child) {
                     padding-bottom: 10px;
                   }
-                  &:nth-child(1){color: $main-400; font-weight: 600;}
-                  &:nth-child(1){
-                    .rod1{width: 48.1%;}
-                    .rod2{width: 30.2%; border: 1px solid #000;}
-                    .rod3{width: 21.6%;}
+                  &:nth-child(1) {
+                    color: $main-400;
+                    font-weight: 600;
                   }
-                  &:nth-child(2){
-                    .rod1{width: 65.3%;}
-                    .rod2{width: 31.6%;}
-                    .rod3{width: 13.1%;}
+                  &:nth-child(1) {
+                    .rod1 {
+                      width: 48.1%;
+                    }
+                    .rod2 {
+                      width: 30.2%;
+                      border: 1px solid #000;
+                    }
+                    .rod3 {
+                      width: 21.6%;
+                    }
                   }
-                  &:nth-child(3){
-                    .rod1{width: 41.9%;}
-                    .rod2{width: 34.9%;}
-                    .rod3{width: 23.2%;}
+                  &:nth-child(2) {
+                    .rod1 {
+                      width: 65.3%;
+                    }
+                    .rod2 {
+                      width: 31.6%;
+                    }
+                    .rod3 {
+                      width: 13.1%;
+                    }
+                  }
+                  &:nth-child(3) {
+                    .rod1 {
+                      width: 41.9%;
+                    }
+                    .rod2 {
+                      width: 34.9%;
+                    }
+                    .rod3 {
+                      width: 23.2%;
+                    }
                   }
                 }
               }
             }
           }
         }
-        &.result{
+        &.result {
           text-align: center;
           color: $bg-w;
           padding-bottom: 200px;
           white-space: nowrap;
         }
 
-        &.review{
+        &.review {
           padding-bottom: 100px;
-          ul{
+          ul {
             text-align: center;
-            li{
+            li {
               width: 100%;
               line-height: 2rem;
               font-size: 1.25rem;
@@ -287,15 +317,15 @@ section{
             }
           }
         }
-        &.needs{
+        &.needs {
           text-align: center;
-          color:$bg-w;
-          span{
+          color: $bg-w;
+          span {
             width: 2px;
             height: 2px;
             background: firebrick;
           }
-          i{
+          i {
             font-size: 2.5rem;
             padding-bottom: 80px;
             padding-bottom: 80px;
@@ -309,30 +339,30 @@ section{
             //   @include po-c();
             // }
           }
-          p{
+          p {
             font-weight: 600;
-            font-size: 2rem;
+            font-size: 1.5rem;
             line-height: 3.5rem;
           }
         }
       }
-      cite{
+      cite {
         display: block;
-        font-size: .8rem;
+        font-size: 0.8rem;
         font-weight: 400;
         padding-bottom: 100px;
-        color:rgba($color: $bg-w, $alpha: .5);
+        color: rgba($color: $bg-w, $alpha: 0.5);
       }
     }
   }
 }
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@media only screen and (min-width: 501px){
-  body{
+@media only screen and (min-width: 501px) {
+  body {
     font-size: 4vw;
   }
-  p{
-    font-size:1rem;
+  p {
+    font-size: 1rem;
     line-height: 1.5rem;
   }
   .inner {
@@ -357,11 +387,11 @@ section{
         background: $bg-w;
         @include flex-c;
         @include po-c;
-  
+
         img {
           width: 60%;
         }
-  
+
         &::after {
           content: "";
           width: 100%;
@@ -386,13 +416,13 @@ section{
         gap: 100px;
       }
     }
-    &.sect1{
+    &.sect1 {
       text-align: center;
       height: 30vh;
       border: 1px solid #000;
-      p{
+      p {
         white-space: nowrap;
-        &.speech{
+        &.speech {
           font-size: 1.5rem;
           padding-bottom: 20px;
           font-weight: 500;
@@ -411,106 +441,136 @@ section{
     }
     &.sect3 {
       height: 150vh;
-      background: linear-gradient(0deg, rgba(50, 50, 50, 1) 10%, rgba(20, 20, 20, 0) 20%), url(./img/selmin/needs.jpg);
+      background: linear-gradient(
+          0deg,
+          rgba(50, 50, 50, 1) 10%,
+          rgba(20, 20, 20, 0) 20%
+        ),
+        url(./img/selmin/needs.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       article {
-        &.qbox {      
+        &.qbox {
           width: 100%;
-          border: 1px solid #db2424;    
+          border: 1px solid #db2424;
           margin-top: -200px;
           // overflow: hidden;
           margin-bottom: 10px;
-          .wrap{
+          .wrap {
             display: flex;
             width: 300%;
             border: 1px solid #000;
             position: relative;
             > div {
-              width:100%;
+              width: 100%;
               height: 360px;
               border: 1px solid #000;
               border-radius: 20px;
               padding: 40px 30px;
               background: $bg-w;
               margin-right: 20px;
-              .q{
+              .q {
                 letter-spacing: 0.2rem;
                 font-size: 1.5rem;
                 font-weight: 500;
                 color: $main-400;
                 padding-bottom: 10px;
               }
-              .question{
+              .question {
                 font-size: 1.25rem;
-                letter-spacing: -.1rem;
+                letter-spacing: -0.1rem;
                 padding-bottom: 40px;
                 line-height: 1.5em;
-                br.none{display: none;}
+                br.none {
+                  display: none;
+                }
               }
-              ul.list{
-                li{
+              ul.list {
+                li {
                   font-size: 1rem;
-                  .list-gf{
-                    @include flex-c(space-between, );
+                  .list-gf {
+                    @include flex-c(space-between);
                     padding-top: 10px;
-                    .rod{
+                    .rod {
                       height: 10px;
                       border-radius: 5px;
                       background: $gray-500;
-                      &.rod1{
+                      &.rod1 {
                         background: $main-400;
                       }
                     }
-                    .list-nubmer{
+                    .list-nubmer {
                       padding-left: 20px;
                       font-size: 1rem;
                       text-align: right;
                       color: $gray-500;
-                      &.color{
+                      &.color {
                         color: $main-400;
                       }
-                      &::after{
+                      &::after {
                         content: "%";
                         padding-left: 5px;
                       }
                     }
                   }
-                  &:not(:last-child){
+                  &:not(:last-child) {
                     padding-bottom: 10px;
                   }
-                  &:nth-child(1){color: $main-400; font-weight: 600;}
-                  &:nth-child(1){
-                    .rod1{width: 48.1%;}
-                    .rod2{width: 30.2%; border: 1px solid #000;}
-                    .rod3{width: 21.6%;}
+                  &:nth-child(1) {
+                    color: $main-400;
+                    font-weight: 600;
                   }
-                  &:nth-child(2){
-                    .rod1{width: 65.3%;}
-                    .rod2{width: 31.6%;}
-                    .rod3{width: 13.1%;}
+                  &:nth-child(1) {
+                    .rod1 {
+                      width: 48.1%;
+                    }
+                    .rod2 {
+                      width: 30.2%;
+                      border: 1px solid #000;
+                    }
+                    .rod3 {
+                      width: 21.6%;
+                    }
                   }
-                  &:nth-child(3){
-                    .rod1{width: 41.9%;}
-                    .rod2{width: 34.9%;}
-                    .rod3{width: 23.2%;}
+                  &:nth-child(2) {
+                    .rod1 {
+                      width: 65.3%;
+                    }
+                    .rod2 {
+                      width: 31.6%;
+                    }
+                    .rod3 {
+                      width: 13.1%;
+                    }
+                  }
+                  &:nth-child(3) {
+                    .rod1 {
+                      width: 41.9%;
+                    }
+                    .rod2 {
+                      width: 34.9%;
+                    }
+                    .rod3 {
+                      width: 23.2%;
+                    }
                   }
                 }
               }
             }
           }
         }
-        &.result{
+        &.result {
           text-align: center;
           color: $bg-w;
           padding-bottom: 200px;
           font-size: 1.5rem;
+          .on{display: none;}
         }
-        &.review{
+        &.review {
           padding-bottom: 100px;
-          ul{
+          ul {
             text-align: center;
-            li{
+            li {
               line-height: 2rem;
               font-size: 1.25rem;
               display: block;
@@ -519,40 +579,40 @@ section{
               background: $bg-b;
               color: $bg-w;
               margin-bottom: 20px;
-              &:nth-child(odd){
+              &:nth-child(odd) {
                 margin-right: 20px;
               }
             }
           }
         }
-        &.needs{
+        &.needs {
           text-align: center;
-          color:$bg-w;
-          span{
+          color: $bg-w;
+          span {
             width: 2px;
             height: 2px;
             background: firebrick;
           }
-          i{
+          i {
             font-size: 2.5rem;
             padding-bottom: 80px;
             padding-bottom: 80px;
             position: relative;
             color: $main-400;
           }
-          p{
+          p {
             font-weight: 600;
             font-size: 2rem;
-            line-height: 3.5rem;
+            line-height: 3rem;
           }
         }
       }
-      cite{
+      cite {
         display: block;
-        font-size: .8rem;
+        font-size: 0.8rem;
         font-weight: 600;
         padding-top: 10px;
-        color:$main-500;
+        color: $main-500;
         padding-bottom: 100px;
       }
     }
@@ -560,10 +620,18 @@ section{
 }
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@media only screen and (min-width: 801px){
+@media only screen and (min-width: 801px) {
   .inner {
-    width: 90%;
+    width: 80%;
     margin: auto;
+    border: 1px solid #000;
+  }
+  .summary {
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+  .txt {
+    text-align: justify;
   }
   // ---------------------------------------------
   section {
@@ -583,11 +651,11 @@ section{
         background: $bg-w;
         @include flex-c;
         @include po-c;
-  
+
         img {
           width: 60%;
         }
-  
+
         &::after {
           content: "";
           width: 100%;
@@ -612,7 +680,7 @@ section{
         gap: 100px;
       }
     }
-    &.sect1{
+    &.sect1 {
       text-align: center;
       height: 40vh;
       border: 1px solid #000;
@@ -621,22 +689,16 @@ section{
       .t-box {
         display: flex;
         justify-content: space-between;
-        .summary {
-          width: 35%;
-          font-size: 1.5rem;
-          line-height: 3rem;
+        .summary{
+          width: 45%;
         }
         .txt {
-          width: 60%;
+          width: 55%;
         }
       }
     }
     &.sect3 {
-      height: 150vh;
-      background: linear-gradient(0deg, rgba(20, 20, 20, 1), rgba(20, 20, 20, .3)), url(./img/selmin/needs.jpg);
-  
-      background-size: cover;
-      background-repeat: no-repeat;
+      height: 130vh;
       article {
         &.qbox {
           margin-bottom: 10px;
@@ -646,78 +708,103 @@ section{
             width: 32%;
             border-radius: 20px;
             padding: 20px;
-            background: $bg-w;
-            .q{
+            // background: $bg-w;
+            .q {
               letter-spacing: 0.2rem;
               font-size: 1.2rem;
               font-weight: 600;
               color: $main-600;
             }
-            .question{
+            .question {
               font-size: 1.2rem;
-              letter-spacing: -.1rem;
+              letter-spacing: -0.1rem;
               line-height: 1.5rem;
               padding-bottom: 40px;
               white-space: wrap;
             }
-            ul.list{
-              li{
+            ul.list {
+              li {
                 font-size: 1rem;
-                .list-gf{
+                .list-gf {
                   @include flex-c(space-between);
                   padding-top: 10px;
-                  .rod{
+                  .rod {
                     height: 10px;
                     background: $main-400;
                     border-radius: 5px;
                   }
-                  .list-nubmer{
+                  .list-nubmer {
                     padding-left: 20px;
                     font-size: 1rem;
                     text-align: right;
-                    &::after{
+                    &::after {
                       content: "%";
                       padding-left: 5px;
                     }
                   }
                 }
-                &:not(:last-child){
+                &:not(:last-child) {
                   padding-bottom: 10px;
                 }
-                &:nth-child(1){color: $main-400; font-weight: 600;}
-                &:nth-child(1){
-                  .rod1{width: 48.1%;}
-                  .rod2{width: 30.2%;}
-                  .rod3{width: 21.6%;}
+                &:nth-child(1) {
+                  color: $main-400;
+                  font-weight: 600;
                 }
-                &:nth-child(2){
-                  .rod1{width: 65.3%;}
-                  .rod2{width: 31.6%;}
-                  .rod3{width: 13.1%;}
+                &:nth-child(1) {
+                  .rod1 {
+                    width: 48.1%;
+                  }
+                  .rod2 {
+                    width: 30.2%;
+                  }
+                  .rod3 {
+                    width: 21.6%;
+                  }
                 }
-                &:nth-child(3){
-                  .rod1{width: 41.9%;}
-                  .rod2{width: 34.9%;}
-                  .rod3{width: 23.2%;}
+                &:nth-child(2) {
+                  .rod1 {
+                    width: 65.3%;
+                  }
+                  .rod2 {
+                    width: 31.6%;
+                  }
+                  .rod3 {
+                    width: 13.1%;
+                  }
+                }
+                &:nth-child(3) {
+                  .rod1 {
+                    width: 41.9%;
+                  }
+                  .rod2 {
+                    width: 34.9%;
+                  }
+                  .rod3 {
+                    width: 23.2%;
+                  }
                 }
               }
             }
           }
         }
-        &.result{
-          width: 83%;
+        &.result {
           margin: auto;
           white-space: wrap;
           border: 1px solid #20d84b;
           text-align: center;
           color: $bg-w;
           padding-bottom: 150px;
+          white-space: nowrap;
+          br {
+            display: none;
+            &.on{display: block;}
+          }
         }
-        &.review{
+        &.review {
           padding-bottom: 150px;
-          ul{
+          ul {
             text-align: center;
-            li{
+            li {
               line-height: 2rem;
               font-size: 1.2rem;
               display: inline-block;
@@ -725,22 +812,24 @@ section{
               border-radius: 10px;
               color: $bg-w;
               margin-bottom: 10px;
-              br{display: none;}
-              &:nth-child(odd){
+              br {
+                display: none;
+              }
+              &:nth-child(odd) {
                 margin-right: 10px;
               }
             }
           }
         }
-        &.needs{
+        &.needs {
           text-align: center;
-          color:$bg-w;
-          span{
+          color: $bg-w;
+          span {
             width: 2px;
             height: 2px;
             background: firebrick;
           }
-          i{
+          i {
             font-size: 2.5rem;
             padding-bottom: 80px;
             padding-bottom: 80px;
@@ -754,18 +843,18 @@ section{
             //   @include po-c();
             // }
           }
-          p{
+          p {
             font-weight: 600;
             font-size: 2rem;
             line-height: 3.5rem;
           }
         }
       }
-      cite{
+      cite {
         display: block;
-        font-size: .8rem;
+        font-size: 0.8rem;
         font-weight: 600;
-        color:$main-500;
+        color: $main-500;
         padding-bottom: 100px;
       }
     }
@@ -773,7 +862,7 @@ section{
 }
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 1200px) {
   .inner {
     width: 1200px;
     margin: auto;
@@ -795,11 +884,11 @@ section{
         background: $bg-w;
         @include flex-c;
         @include po-c;
-  
+
         img {
           width: 60%;
         }
-  
+
         &::after {
           content: "";
           width: 100%;
@@ -840,10 +929,6 @@ section{
       }
     }
     &.sect3 {
-      height: 150vh;
-      background: linear-gradient(0deg, rgba(20, 20, 20, 1), rgba(20, 20, 20, .3)), url(./img/selmin/needs.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
       article {
         &.qbox {
           margin-top: -300px;
@@ -851,42 +936,42 @@ section{
           > div {
             width: 32%;
             padding: 40px 30px;
-            .q{
+            .q {
               font-size: 1.5rem;
             }
-            .question{
+            .question {
               font-size: 1.5rem;
-              line-height:2rem;
+              line-height: 2rem;
             }
-            ul.list{
-              li{
-                .list-gf{
+            ul.list {
+              li {
+                .list-gf {
                   padding-top: 10px;
-                  .rod{
+                  .rod {
                     height: 12px;
                   }
-                  .list-nubmer{
+                  .list-nubmer {
                     padding-left: 20px;
                   }
                 }
-                &:not(:last-child){
+                &:not(:last-child) {
                   padding-bottom: 20px;
-                } 
+                }
               }
             }
           }
         }
-        &.result{
+        &.result {
           width: 84%;
           text-align: center;
           color: $bg-w;
           padding-bottom: 200px;
         }
-        &.review{
+        &.review {
           padding-bottom: 100px;
-          ul{
+          ul {
             text-align: center;
-            li{
+            li {
               line-height: 2rem;
               font-size: 1.5rem;
               display: inline-block;
@@ -895,21 +980,21 @@ section{
               background: $gray-900;
               color: $bg-w;
               margin-bottom: 20px;
-              &:nth-child(odd){
+              &:nth-child(odd) {
                 margin-right: 20px;
               }
             }
           }
         }
-        &.needs{
+        &.needs {
           text-align: center;
-          color:$bg-w;
-          span{
+          color: $bg-w;
+          span {
             width: 2px;
             height: 2px;
             background: firebrick;
           }
-          i{
+          i {
             font-size: 2.5rem;
             padding-bottom: 80px;
             padding-bottom: 80px;
@@ -923,18 +1008,18 @@ section{
             //   @include po-c();
             // }
           }
-          p{
+          p {
             font-weight: 600;
             font-size: 2rem;
             line-height: 3.5rem;
           }
         }
       }
-      cite{
+      cite {
         display: block;
-        font-size: .8rem;
+        font-size: 0.8rem;
         font-weight: 600;
-        color:$main-500;
+        color: $main-500;
       }
     }
   }

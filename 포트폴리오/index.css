@@ -98,14 +98,12 @@ section.sect3 ul.list li:nth-child(3) .rod3 {
   width: 23.2%;
 }
 section.sect4 {
-  background: #323232;
+  background: #252525;
   text-align: center;
   color: #fff;
 }
 section.sect4 .gird-p {
   width: 100%;
-  background: url(./img/selmin/sect4-bg.svg);
-  padding: 20px;
 }
 section.sect4 .gird-p .grid {
   width: 100%;
@@ -116,6 +114,7 @@ section.sect4 .gird-p .grid {
 }
 section.sect4 .gird-p .grid.main-g {
   border-bottom: 1px solid #fff;
+  font-weight: bold;
 }
 section.sect4 .gird-p .grid .item {
   display: flex;
@@ -125,13 +124,35 @@ section.sect4 .gird-p .grid .item {
 section.sect4 .gird-p .sub-grid ul:not(:last-child) {
   border-bottom: 1px solid #757575;
 }
-section.sect4 .gird-p .sub-grid ul li.triangle img {
-  width: 50%;
-  height: 50%;
+section.sect4 .gird-p .sub-grid ul li {
+  font-weight: 400;
+  color: #d9d9d9;
+}
+section.sect4 .gird-p .sub-grid ul li.i-bg {
+  background: rgba(255, 205, 180, 0.2);
+  border-radius: 5px;
+}
+section.sect4 .gird-p .sub-grid ul li img {
+  filter: brightness(80%);
+}
+section.sect4 .gird-p .sub-grid ul li i.fa-o {
+  color: #ff671a;
+}
+section.sect4 .calender {
+  color: #757575;
+}
+section.sect4 .benchmarking {
+  background: #fff;
+  border-radius: 20px;
+  color: #333333;
+  text-align: left;
+}
+section.sect4 .benchmarking li {
+  list-style: disc;
 }
 
 @media only screen and (max-width: 500px) {
-  p {
+  p, li {
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -214,7 +235,7 @@ section.sect4 .gird-p .sub-grid ul li.triangle img {
   }
   section.sect3 {
     height: 255vh;
-    background: linear-gradient(0deg, rgb(50, 50, 50) 10%, rgba(20, 20, 20, 0) 20%), url(./img/selmin/needs.jpg);
+    background: linear-gradient(0deg, #252525 10%, rgba(37, 37, 37, 0) 20%), url(./img/selmin/needs.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -379,20 +400,47 @@ section.sect4 .gird-p .sub-grid ul li.triangle img {
     width: 80%;
     margin: auto;
   }
-  section.sect4 .inner .grid {
+  section.sect4 .inner .gird-p {
+    background: linear-gradient(0deg, rgba(37, 37, 37, 0) 10%, rgba(255, 255, 255, 0.1) 50%);
+    border-top: 2px solid #757575;
+    padding: 20px 0;
+    margin-top: 50px;
+  }
+  section.sect4 .inner .gird-p .grid {
     height: 50px;
     padding: 5px;
   }
-  section.sect4 .inner .grid li {
+  section.sect4 .inner .gird-p .grid li {
     font-size: 0.8rem;
     line-height: 1rem;
+  }
+  section.sect4 .inner .gird-p .grid li.triangle img {
+    width: 45%;
+    height: 45%;
+  }
+  section.sect4 .inner p.calender {
+    font-size: 0.65rem;
+    margin-top: -10px;
+    padding-bottom: 40px;
+  }
+  section.sect4 .inner .benchmarking {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    font-size: 1rem;
+  }
+  section.sect4 .inner .benchmarking ul {
+    padding-left: 20px;
+  }
+  section.sect4 .inner .benchmarking ul li {
+    padding-bottom: 10px;
   }
 }
 @media only screen and (min-width: 501px) {
   body {
     font-size: 4vw;
   }
-  p {
+  p, li {
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -470,8 +518,8 @@ section.sect4 .gird-p .sub-grid ul li.triangle img {
     padding-bottom: 20px;
   }
   section.sect3 {
-    height: 200vh;
-    background: linear-gradient(0deg, rgb(50, 50, 50) 10%, rgba(20, 20, 20, 0) 20%), url(./img/selmin/needs.jpg);
+    height: 220vh;
+    background: linear-gradient(0deg, #252525 10%, rgba(37, 37, 37, 0) 20%), url(./img/selmin/needs.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -628,6 +676,56 @@ section.sect4 .gird-p .sub-grid ul li.triangle img {
   }
   section.sect4 {
     height: 120vh;
+    text-align: center;
+    color: #fff;
+  }
+  section.sect4 .inner .summary {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  section.sect4 .inner p {
+    width: 80%;
+    margin: auto;
+  }
+  section.sect4 .inner .gird-p {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("./img/selmin/sect4-bg.svg");
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin-top: 60px;
+  }
+  section.sect4 .inner .gird-p .grid {
+    height: 50px;
+    padding: 5px;
+  }
+  section.sect4 .inner .gird-p .grid li {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+  section.sect4 .inner .gird-p .grid li.triangle img {
+    width: 45%;
+    height: 45%;
+  }
+  section.sect4 .inner p.calender {
+    font-size: 0.65rem;
+    margin-top: -10px;
+    padding-bottom: 40px;
+  }
+  section.sect4 .inner .benchmarking {
+    margin: auto;
+    padding: 20px;
+    font-size: 1rem;
+  }
+  section.sect4 .inner .benchmarking ul {
+    padding-left: 20px;
+  }
+  section.sect4 .inner .benchmarking ul li {
+    padding-bottom: 10px;
+  }
+  section.sect4 .inner .benchmarking ul li br.none {
+    display: none;
   }
 }
 @media only screen and (min-width: 801px) {
@@ -704,6 +802,7 @@ section.sect4 .gird-p .sub-grid ul li.triangle img {
   }
   section.sect2 .t-box .summary {
     width: 45%;
+    line-height: 3rem;
   }
   section.sect2 .t-box .txt {
     width: 55%;
@@ -818,8 +917,44 @@ section.sect4 .gird-p .sub-grid ul li.triangle img {
     color: #ffa87c;
     padding-bottom: 100px;
   }
+  section.sect4 .inner .summary {
+    font-size: 2rem;
+    line-height: 3rem;
+    padding-bottom: 20px;
+  }
+  section.sect4 .inner .summary br {
+    display: block;
+  }
+  section.sect4 .inner .gird-p {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("./img/selmin/sect4-bg.svg");
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 20px 40px;
+  }
+  section.sect4 .inner .gird-p .grid {
+    padding: 5px 0;
+    height: 60px;
+  }
+  section.sect4 .inner .gird-p .grid .item i {
+    font-size: 1.1rem;
+  }
+  section.sect4 .inner .gird-p .grid .item.triangle img {
+    width: 45%;
+    height: 45%;
+  }
+  section.sect4 .inner br {
+    display: none;
+  }
 }
 @media only screen and (min-width: 1200px) {
+  body {
+    font-size: 4vw;
+  }
+  p, li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
   .inner {
     width: 1200px;
     margin: auto;
@@ -880,7 +1015,7 @@ section.sect4 .gird-p .sub-grid ul li.triangle img {
   section.sect2 .t-box .summary {
     width: 30%;
     font-size: 2rem;
-    line-height: 3.5rem;
+    line-height: 3rem;
   }
   section.sect2 .t-box .txt {
     width: 65%;
@@ -972,7 +1107,36 @@ section.sect4 .gird-p .sub-grid ul li.triangle img {
     color: #ffa87c;
   }
   section.sect4 {
-    background: #323232;
+    background: #252525;
     display: grid;
+  }
+  section.sect4 .inner .gird-p {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("./img/selmin/sect4-bg.svg");
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 20px 40px;
+  }
+  section.sect4 .inner .gird-p .grid {
+    padding: 5px 0;
+    height: 70px;
+  }
+  section.sect4 .inner .gird-p .grid .item {
+    font-size: 1rem;
+  }
+  section.sect4 .inner .gird-p .grid .item i {
+    font-size: 1.1rem;
+  }
+  section.sect4 .inner .gird-p .grid .item.triangle img {
+    width: 40%;
+    height: 40%;
+  }
+  section.sect4 .inner p.calender {
+    font-size: 1rem;
+    padding-bottom: 80px;
+  }
+  section.sect4 .inner .benchmarking {
+    display: flex;
+    border: 1px solid #cf2424;
   }
 }/*# sourceMappingURL=index.css.map */

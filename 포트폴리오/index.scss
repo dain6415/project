@@ -22,9 +22,9 @@ $font-famaily-h2: "";
 //wehight??두께임 -light, -bold같은 거
 $font-famaily-h3: "";
 
-$main-400: #ff671a;
-$main-500: #ffa87c;
-$main-600: #ffcdb4;
+$main-basic: #ff671a;
+$main-bright1: #ffa87c;
+$main-bright2: #ffcdb4;
 
 $sub-color-400: #a785c7;
 $sub-color-500: #8a2be2;
@@ -42,6 +42,7 @@ $gray-900: #111111;
 $bg-gray: #f5f5f5;
 $bg-w: #fff;
 $bg-b: #000;
+$bg-sect4:#323232;
 
 $height-50vh: 50vh;
 $height-100vh: 100vh;
@@ -62,7 +63,7 @@ h2 {
   @include font-styles($font-size-h2, $font-famaily-h2);
   // color:$main-color-600
   font-size: 1.2rem;
-  color: $main-400;
+  color: $main-basic;
 }
 h3 {
   @include font-styles($font-size-h3, $font-famaily-h3);
@@ -74,11 +75,99 @@ p {
 }
 span {
   font-weight: 700;
-  color: $main-400;
+  color: $main-basic;
 }
 section {
   &.sect2 {
     background: $bg-gray;
+  }
+  &.sect3 {
+    .q {
+      color: $main-basic;
+      font-weight: 500;
+    }
+    ul.list {
+      li {
+        font-size: 1rem;
+        .list-gf {
+          @include flex-c(space-between);
+          padding-top: 10px;
+          .rod {
+            height: 10px;
+            border-radius: 5px;
+            background: $gray-500;
+            &.rod1 {
+              background: $main-basic;
+            }
+          }
+          .list-nubmer {
+            &.color {
+              color: $main-basic;
+            }
+            &::after {
+              content: "%";
+              padding-left: 5px;
+            }
+          }
+        }
+        &:not(:last-child) {
+          padding-bottom: 10px;
+        }
+        &:nth-child(1) {
+          color: $main-basic;
+          font-weight: 600;
+        }
+        &:nth-child(1) {
+          .rod1 {
+            width: 48.1%;
+          }
+          .rod2 {
+            width: 30.2%;
+            border: 1px solid #000;
+          }
+          .rod3 {
+            width: 21.6%;
+          }
+        }
+        &:nth-child(2) {
+          .rod1 {
+            width: 65.3%;
+          }
+          .rod2 {
+            width: 31.6%;
+          }
+          .rod3 {
+            width: 13.1%;
+          }
+        }
+        &:nth-child(3) {
+          .rod1 {
+            width: 41.9%;
+          }
+          .rod2 {
+            width: 34.9%;
+          }
+          .rod3 {
+            width: 23.2%;
+          }
+        }
+      }
+    }
+  }
+  &.sect4{
+    background: $bg-sect4;
+    text-align: center;
+    color: $bg-w;
+    .grid{
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      gap: 5px;
+      li{
+        border: 1px solid #cf3d3d;
+      }
+    }
   }
 }
 
@@ -174,7 +263,7 @@ section {
       }
     }
     &.sect3 {
-      height: 150vh;
+      height: 230vh;
       background: linear-gradient(
           0deg,
           rgba(50, 50, 50, 1) 10%,
@@ -186,107 +275,100 @@ section {
       article {
         &.qbox {
           width: 100%;
-          border: 1px solid #db2424;
-          margin-top: -200px;
-          // overflow: hidden;
+          margin-top: -250px;
           margin-bottom: 10px;
-          .wrap {
-            display: flex;
-            width: 300%;
-            border: 1px solid #000;
-            position: relative;
-            > div {
-              width: 100%;
-              height: 360px;
-              border: 1px solid #000;
-              border-radius: 20px;
-              padding: 40px 30px;
-              background: $bg-w;
-              margin-right: 20px;
-              .q {
-                letter-spacing: 0.2rem;
-                font-size: 1.5rem;
-                font-weight: 500;
-                color: $main-400;
-                padding-bottom: 10px;
+          > div {
+            width: 100%;
+            border-radius: 20px;
+            padding: 40px 30px;
+            background: $bg-w;
+            margin-right: 20px;
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+            .q {
+              letter-spacing: 0.2rem;
+              font-size: 1.5rem;
+              font-weight: 500;
+              color: $main-basic;
+              padding-bottom: 10px;
+            }
+            .question {
+              font-size: 1.25rem;
+              letter-spacing: -0.1rem;
+              padding-bottom: 40px;
+              line-height: 1.5em;
+              br.none {
+                display: none;
               }
-              .question {
-                font-size: 1.25rem;
-                letter-spacing: -0.1rem;
-                padding-bottom: 40px;
-                line-height: 1.5em;
-                br.none {
-                  display: none;
+            }
+            ul.list {
+              li {
+                font-size: 1rem;
+                .list-gf {
+                  @include flex-c(space-between);
+                  padding-top: 10px;
+                  .rod {
+                    height: 10px;
+                    border-radius: 5px;
+                    background: $gray-500;
+                    &.rod1 {
+                      background: $main-basic;
+                    }
+                  }
+                  .list-nubmer {
+                    padding-left: 20px;
+                    font-size: 1rem;
+                    text-align: right;
+                    color: $gray-500;
+                    &.color {
+                      color: $main-basic;
+                    }
+                    &::after {
+                      content: "%";
+                      padding-left: 5px;
+                    }
+                  }
                 }
-              }
-              ul.list {
-                li {
-                  font-size: 1rem;
-                  .list-gf {
-                    @include flex-c(space-between);
-                    padding-top: 10px;
-                    .rod {
-                      height: 10px;
-                      border-radius: 5px;
-                      background: $gray-500;
-                      &.rod1 {
-                        background: $main-400;
-                      }
-                    }
-                    .list-nubmer {
-                      padding-left: 20px;
-                      font-size: 1rem;
-                      text-align: right;
-                      color: $gray-500;
-                      &.color {
-                        color: $main-400;
-                      }
-                      &::after {
-                        content: "%";
-                        padding-left: 5px;
-                      }
-                    }
+                &:not(:last-child) {
+                  padding-bottom: 10px;
+                }
+                &:nth-child(1) {
+                  color: $main-basic;
+                  font-weight: 600;
+                }
+                &:nth-child(1) {
+                  .rod1 {
+                    width: 48.1%;
                   }
-                  &:not(:last-child) {
-                    padding-bottom: 10px;
+                  .rod2 {
+                    width: 30.2%;
+                    border: 1px solid #000;
                   }
-                  &:nth-child(1) {
-                    color: $main-400;
-                    font-weight: 600;
+                  .rod3 {
+                    width: 21.6%;
                   }
-                  &:nth-child(1) {
-                    .rod1 {
-                      width: 48.1%;
-                    }
-                    .rod2 {
-                      width: 30.2%;
-                      border: 1px solid #000;
-                    }
-                    .rod3 {
-                      width: 21.6%;
-                    }
+                }
+                &:nth-child(2) {
+                  .rod1 {
+                    width: 65.3%;
                   }
-                  &:nth-child(2) {
-                    .rod1 {
-                      width: 65.3%;
-                    }
-                    .rod2 {
-                      width: 31.6%;
-                    }
-                    .rod3 {
-                      width: 13.1%;
-                    }
+                  .rod2 {
+                    width: 31.6%;
                   }
-                  &:nth-child(3) {
-                    .rod1 {
-                      width: 41.9%;
-                    }
-                    .rod2 {
-                      width: 34.9%;
-                    }
-                    .rod3 {
-                      width: 23.2%;
-                    }
+                  .rod3 {
+                    width: 13.1%;
+                  }
+                }
+                &:nth-child(3) {
+                  .rod1 {
+                    width: 41.9%;
+                  }
+                  .rod2 {
+                    width: 34.9%;
+                  }
+                  .rod3 {
+                    width: 23.2%;
                   }
                 }
               }
@@ -330,7 +412,7 @@ section {
             padding-bottom: 80px;
             padding-bottom: 80px;
             position: relative;
-            color: $main-400;
+            color: $main-basic;
             // &::after{
             //   content: '';
             //   width: 10px;
@@ -352,6 +434,18 @@ section {
         font-weight: 400;
         padding-bottom: 100px;
         color: rgba($color: $bg-w, $alpha: 0.5);
+      }
+    }
+    &.sect4{
+      .inner{
+        width: 100%;
+      }
+      .grid{
+        height: 50px;
+        padding: 5px;
+        li{
+
+        }
       }
     }
   }
@@ -452,107 +546,98 @@ section {
       article {
         &.qbox {
           width: 100%;
-          border: 1px solid #db2424;
           margin-top: -200px;
-          // overflow: hidden;
           margin-bottom: 10px;
-          .wrap {
-            display: flex;
-            width: 300%;
-            border: 1px solid #000;
-            position: relative;
-            > div {
-              width: 100%;
-              height: 360px;
-              border: 1px solid #000;
-              border-radius: 20px;
-              padding: 40px 30px;
-              background: $bg-w;
-              margin-right: 20px;
-              .q {
-                letter-spacing: 0.2rem;
-                font-size: 1.5rem;
-                font-weight: 500;
-                color: $main-400;
-                padding-bottom: 10px;
+          > div {
+            width: 100%;
+            height: 330px;
+            border-radius: 20px;
+            padding: 40px 30px;
+            background: $bg-w;
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+            .q {
+              letter-spacing: 0.2rem;
+              font-size: 1.5rem;
+              padding-bottom: 10px;
+            }
+            .question {
+              font-size: 1.25rem;
+              letter-spacing: -0.1rem;
+              padding-bottom: 40px;
+              line-height: 1.5em;
+              br {
+                display: none;
               }
-              .question {
-                font-size: 1.25rem;
-                letter-spacing: -0.1rem;
-                padding-bottom: 40px;
-                line-height: 1.5em;
-                br.none {
-                  display: none;
+            }
+            ul.list {
+              li {
+                font-size: 1rem;
+                .list-gf {
+                  @include flex-c(space-between);
+                  padding-top: 10px;
+                  .rod {
+                    height: 10px;
+                    border-radius: 5px;
+                    background: $gray-500;
+                    &.rod1 {
+                      background: $main-basic;
+                    }
+                  }
+                  .list-nubmer {
+                    padding-left: 20px;
+                    font-size: 1rem;
+                    text-align: right;
+                    color: $gray-500;
+                    &.color {
+                      color: $main-basic;
+                    }
+                    &::after {
+                      content: "%";
+                      padding-left: 5px;
+                    }
+                  }
                 }
-              }
-              ul.list {
-                li {
-                  font-size: 1rem;
-                  .list-gf {
-                    @include flex-c(space-between);
-                    padding-top: 10px;
-                    .rod {
-                      height: 10px;
-                      border-radius: 5px;
-                      background: $gray-500;
-                      &.rod1 {
-                        background: $main-400;
-                      }
-                    }
-                    .list-nubmer {
-                      padding-left: 20px;
-                      font-size: 1rem;
-                      text-align: right;
-                      color: $gray-500;
-                      &.color {
-                        color: $main-400;
-                      }
-                      &::after {
-                        content: "%";
-                        padding-left: 5px;
-                      }
-                    }
+                &:not(:last-child) {
+                  padding-bottom: 10px;
+                }
+                &:nth-child(1) {
+                  color: $main-basic;
+                  font-weight: 600;
+                }
+                &:nth-child(1) {
+                  .rod1 {
+                    width: 48.1%;
                   }
-                  &:not(:last-child) {
-                    padding-bottom: 10px;
+                  .rod2 {
+                    width: 30.2%;
+                    border: 1px solid #000;
                   }
-                  &:nth-child(1) {
-                    color: $main-400;
-                    font-weight: 600;
+                  .rod3 {
+                    width: 21.6%;
                   }
-                  &:nth-child(1) {
-                    .rod1 {
-                      width: 48.1%;
-                    }
-                    .rod2 {
-                      width: 30.2%;
-                      border: 1px solid #000;
-                    }
-                    .rod3 {
-                      width: 21.6%;
-                    }
+                }
+                &:nth-child(2) {
+                  .rod1 {
+                    width: 65.3%;
                   }
-                  &:nth-child(2) {
-                    .rod1 {
-                      width: 65.3%;
-                    }
-                    .rod2 {
-                      width: 31.6%;
-                    }
-                    .rod3 {
-                      width: 13.1%;
-                    }
+                  .rod2 {
+                    width: 31.6%;
                   }
-                  &:nth-child(3) {
-                    .rod1 {
-                      width: 41.9%;
-                    }
-                    .rod2 {
-                      width: 34.9%;
-                    }
-                    .rod3 {
-                      width: 23.2%;
-                    }
+                  .rod3 {
+                    width: 13.1%;
+                  }
+                }
+                &:nth-child(3) {
+                  .rod1 {
+                    width: 41.9%;
+                  }
+                  .rod2 {
+                    width: 34.9%;
+                  }
+                  .rod3 {
+                    width: 23.2%;
                   }
                 }
               }
@@ -564,7 +649,9 @@ section {
           color: $bg-w;
           padding-bottom: 200px;
           font-size: 1.5rem;
-          .on{display: none;}
+          .on {
+            display: none;
+          }
         }
         &.review {
           padding-bottom: 100px;
@@ -598,7 +685,7 @@ section {
             padding-bottom: 80px;
             padding-bottom: 80px;
             position: relative;
-            color: $main-400;
+            color: $main-basic;
           }
           p {
             font-weight: 600;
@@ -612,7 +699,7 @@ section {
         font-size: 0.8rem;
         font-weight: 600;
         padding-top: 10px;
-        color: $main-500;
+        color: $main-bright1;
         padding-bottom: 100px;
       }
     }
@@ -622,7 +709,7 @@ section {
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 @media only screen and (min-width: 801px) {
   .inner {
-    width: 80%;
+    width: 85%;
     margin: auto;
     border: 1px solid #000;
   }
@@ -689,7 +776,7 @@ section {
       .t-box {
         display: flex;
         justify-content: space-between;
-        .summary{
+        .summary {
           width: 45%;
         }
         .txt {
@@ -701,19 +788,14 @@ section {
       height: 130vh;
       article {
         &.qbox {
-          margin-bottom: 10px;
-          @include flex-c(space-between);
-          margin-top: -250px;
+          @include flex-c(space-between, center);
           > div {
             width: 32%;
             border-radius: 20px;
             padding: 20px;
-            // background: $bg-w;
             .q {
               letter-spacing: 0.2rem;
               font-size: 1.2rem;
-              font-weight: 600;
-              color: $main-600;
             }
             .question {
               font-size: 1.2rem;
@@ -730,7 +812,6 @@ section {
                   padding-top: 10px;
                   .rod {
                     height: 10px;
-                    background: $main-400;
                     border-radius: 5px;
                   }
                   .list-nubmer {
@@ -741,46 +822,6 @@ section {
                       content: "%";
                       padding-left: 5px;
                     }
-                  }
-                }
-                &:not(:last-child) {
-                  padding-bottom: 10px;
-                }
-                &:nth-child(1) {
-                  color: $main-400;
-                  font-weight: 600;
-                }
-                &:nth-child(1) {
-                  .rod1 {
-                    width: 48.1%;
-                  }
-                  .rod2 {
-                    width: 30.2%;
-                  }
-                  .rod3 {
-                    width: 21.6%;
-                  }
-                }
-                &:nth-child(2) {
-                  .rod1 {
-                    width: 65.3%;
-                  }
-                  .rod2 {
-                    width: 31.6%;
-                  }
-                  .rod3 {
-                    width: 13.1%;
-                  }
-                }
-                &:nth-child(3) {
-                  .rod1 {
-                    width: 41.9%;
-                  }
-                  .rod2 {
-                    width: 34.9%;
-                  }
-                  .rod3 {
-                    width: 23.2%;
                   }
                 }
               }
@@ -797,7 +838,9 @@ section {
           white-space: nowrap;
           br {
             display: none;
-            &.on{display: block;}
+            &.on {
+              display: block;
+            }
           }
         }
         &.review {
@@ -834,7 +877,7 @@ section {
             padding-bottom: 80px;
             padding-bottom: 80px;
             position: relative;
-            color: $main-400;
+            color: $main-basic;
             // &::after{
             //   content: '';
             //   width: 10px;
@@ -854,7 +897,7 @@ section {
         display: block;
         font-size: 0.8rem;
         font-weight: 600;
-        color: $main-500;
+        color: $main-bright1;
         padding-bottom: 100px;
       }
     }
@@ -935,13 +978,20 @@ section {
           margin-bottom: 20px;
           > div {
             width: 32%;
+            height: 384px;
             padding: 40px 30px;
+            &:not(:last-child) {
+              margin-bottom: 0;
+            }
             .q {
               font-size: 1.5rem;
             }
             .question {
               font-size: 1.5rem;
               line-height: 2rem;
+              br{
+                display: block;
+              }
             }
             ul.list {
               li {
@@ -999,7 +1049,7 @@ section {
             padding-bottom: 80px;
             padding-bottom: 80px;
             position: relative;
-            color: $main-400;
+            color: $main-basic;
             // &::after{
             //   content: '';
             //   width: 10px;
@@ -1019,8 +1069,12 @@ section {
         display: block;
         font-size: 0.8rem;
         font-weight: 600;
-        color: $main-500;
+        color: $main-bright1;
       }
+    }
+    &.sect4{
+      background: $bg-sect4;
+      display: grid;
     }
   }
 }

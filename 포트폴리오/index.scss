@@ -42,7 +42,7 @@ $gray-900: #111111;
 $bg-gray: #f5f5f5;
 $bg-w: #fff;
 $bg-b: #000;
-$bg-sect4:#323232;
+$bg-sect4: #323232;
 
 $height-50vh: 50vh;
 $height-100vh: 100vh;
@@ -154,18 +154,44 @@ section {
       }
     }
   }
-  &.sect4{
+  &.sect4 {
     background: $bg-sect4;
     text-align: center;
     color: $bg-w;
-    .grid{
+    
+    .gird-p{
       width: 100%;
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(1, 1fr);
-      gap: 5px;
-      li{
-        border: 1px solid #cf3d3d;
+      background: url(./img/selmin/sect4-bg.svg);
+      padding: 20px;
+
+      .grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 5px;
+        &.main-g{
+          border-bottom: 1px solid $bg-w;
+        }
+        .item {
+          // border: 1px solid #cf3d3d;
+          @include flex-c();
+        }
+      }
+      .sub-grid {
+        ul {
+          &:not(:last-child) {
+            border-bottom: 1px solid $gray-600;
+          }
+          li{
+            &.triangle {
+              img{
+                width: 50%;
+                height: 50%;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -263,7 +289,7 @@ section {
       }
     }
     &.sect3 {
-      height: 230vh;
+      height: 255vh;
       background: linear-gradient(
           0deg,
           rgba(50, 50, 50, 1) 10%,
@@ -413,18 +439,11 @@ section {
             padding-bottom: 80px;
             position: relative;
             color: $main-basic;
-            // &::after{
-            //   content: '';
-            //   width: 10px;
-            //   height: 100px;
-            //   border: 5px dotted #ffffff;
-            //   @include po-c();
-            // }
           }
           p {
             font-weight: 600;
             font-size: 1.5rem;
-            line-height: 3.5rem;
+            line-height: 2.5rem;
           }
         }
       }
@@ -436,15 +455,22 @@ section {
         color: rgba($color: $bg-w, $alpha: 0.5);
       }
     }
-    &.sect4{
-      .inner{
+    &.sect4 {
+      height: 100vh;
+      .inner {
         width: 100%;
-      }
-      .grid{
-        height: 50px;
-        padding: 5px;
-        li{
-
+        .summary{
+          font-size: 1.5rem;
+          line-height: 2.5rem;
+        }
+        p{width: 80%; margin: auto;}
+        .grid {
+          height: 50px;
+          padding: 5px;
+          li {
+            font-size: 0.8rem;
+            line-height: 1rem;
+          }
         }
       }
     }
@@ -534,7 +560,7 @@ section {
       }
     }
     &.sect3 {
-      height: 150vh;
+      height: 200vh;
       background: linear-gradient(
           0deg,
           rgba(50, 50, 50, 1) 10%,
@@ -702,6 +728,9 @@ section {
         color: $main-bright1;
         padding-bottom: 100px;
       }
+    }
+    &.sect4{
+      height: 120vh;
     }
   }
 }
@@ -989,7 +1018,7 @@ section {
             .question {
               font-size: 1.5rem;
               line-height: 2rem;
-              br{
+              br {
                 display: block;
               }
             }
@@ -1072,7 +1101,7 @@ section {
         color: $main-bright1;
       }
     }
-    &.sect4{
+    &.sect4 {
       background: $bg-sect4;
       display: grid;
     }

@@ -102,15 +102,32 @@ section.sect4 {
   text-align: center;
   color: #fff;
 }
-section.sect4 .grid {
+section.sect4 .gird-p {
+  width: 100%;
+  background: url(./img/selmin/sect4-bg.svg);
+  padding: 20px;
+}
+section.sect4 .gird-p .grid {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(1, 1fr);
   gap: 5px;
 }
-section.sect4 .grid li {
-  border: 1px solid #cf3d3d;
+section.sect4 .gird-p .grid.main-g {
+  border-bottom: 1px solid #fff;
+}
+section.sect4 .gird-p .grid .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.sect4 .gird-p .sub-grid ul:not(:last-child) {
+  border-bottom: 1px solid #757575;
+}
+section.sect4 .gird-p .sub-grid ul li.triangle img {
+  width: 50%;
+  height: 50%;
 }
 
 @media only screen and (max-width: 500px) {
@@ -196,7 +213,7 @@ section.sect4 .grid li {
     color: #333333;
   }
   section.sect3 {
-    height: 230vh;
+    height: 255vh;
     background: linear-gradient(0deg, rgb(50, 50, 50) 10%, rgba(20, 20, 20, 0) 20%), url(./img/selmin/needs.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -339,7 +356,7 @@ section.sect4 .grid li {
   section.sect3 article.needs p {
     font-weight: 600;
     font-size: 1.5rem;
-    line-height: 3.5rem;
+    line-height: 2.5rem;
   }
   section.sect3 cite {
     display: block;
@@ -348,12 +365,27 @@ section.sect4 .grid li {
     padding-bottom: 100px;
     color: rgba(255, 255, 255, 0.5);
   }
+  section.sect4 {
+    height: 100vh;
+  }
   section.sect4 .inner {
     width: 100%;
   }
-  section.sect4 .grid {
+  section.sect4 .inner .summary {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  section.sect4 .inner p {
+    width: 80%;
+    margin: auto;
+  }
+  section.sect4 .inner .grid {
     height: 50px;
     padding: 5px;
+  }
+  section.sect4 .inner .grid li {
+    font-size: 0.8rem;
+    line-height: 1rem;
   }
 }
 @media only screen and (min-width: 501px) {
@@ -438,7 +470,7 @@ section.sect4 .grid li {
     padding-bottom: 20px;
   }
   section.sect3 {
-    height: 150vh;
+    height: 200vh;
     background: linear-gradient(0deg, rgb(50, 50, 50) 10%, rgba(20, 20, 20, 0) 20%), url(./img/selmin/needs.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -593,6 +625,9 @@ section.sect4 .grid li {
     padding-top: 10px;
     color: #ffa87c;
     padding-bottom: 100px;
+  }
+  section.sect4 {
+    height: 120vh;
   }
 }
 @media only screen and (min-width: 801px) {

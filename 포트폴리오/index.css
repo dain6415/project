@@ -142,13 +142,22 @@ section.sect4 .calender {
   color: #757575;
 }
 section.sect4 .benchmarking {
+  display: flex;
+}
+section.sect4 .benchmarking .txt {
   background: #fff;
   border-radius: 20px;
+  padding-left: 15px;
+  padding: 20px;
   color: #333333;
   text-align: left;
 }
-section.sect4 .benchmarking li {
+section.sect4 .benchmarking .txt li {
   list-style: disc;
+}
+section.sect5 {
+  text-align: center;
+  color: #fff;
 }
 
 @media only screen and (max-width: 500px) {
@@ -424,10 +433,13 @@ section.sect4 .benchmarking li {
     padding-bottom: 40px;
   }
   section.sect4 .inner .benchmarking {
+    justify-content: center;
     width: 90%;
     margin: auto;
-    padding: 20px;
     font-size: 1rem;
+  }
+  section.sect4 .inner .benchmarking .app {
+    display: none;
   }
   section.sect4 .inner .benchmarking ul {
     padding-left: 20px;
@@ -526,11 +538,9 @@ section.sect4 .benchmarking li {
   section.sect3 article.qbox {
     width: 100%;
     margin-top: -200px;
-    margin-bottom: 10px;
   }
   section.sect3 article.qbox > div {
     width: 100%;
-    height: 330px;
     border-radius: 20px;
     padding: 40px 30px;
     background: #fff;
@@ -689,7 +699,7 @@ section.sect4 .benchmarking li {
   }
   section.sect4 .inner .gird-p {
     width: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("./img/selmin/sect4-bg.svg");
+    background: url("./img/selmin/sect4-bg.svg"), linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
     background-position: center top;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -715,16 +725,21 @@ section.sect4 .benchmarking li {
   }
   section.sect4 .inner .benchmarking {
     margin: auto;
-    padding: 20px;
     font-size: 1rem;
   }
-  section.sect4 .inner .benchmarking ul {
+  section.sect4 .inner .benchmarking .app {
+    display: none;
+  }
+  section.sect4 .inner .benchmarking .txt {
+    width: 100%;
+  }
+  section.sect4 .inner .benchmarking .txt ul {
     padding-left: 20px;
   }
-  section.sect4 .inner .benchmarking ul li {
+  section.sect4 .inner .benchmarking .txt ul li:not(:last-child) {
     padding-bottom: 10px;
   }
-  section.sect4 .inner .benchmarking ul li br.none {
+  section.sect4 .inner .benchmarking .txt ul li br {
     display: none;
   }
 }
@@ -732,7 +747,6 @@ section.sect4 .benchmarking li {
   .inner {
     width: 85%;
     margin: auto;
-    border: 1px solid #000;
   }
   .summary {
     font-size: 1.5rem;
@@ -818,13 +832,14 @@ section.sect4 .benchmarking li {
   section.sect3 article.qbox > div {
     width: 32%;
     border-radius: 20px;
-    padding: 20px;
+    padding: 30px 20px;
   }
   section.sect3 article.qbox > div .q {
     letter-spacing: 0.2rem;
     font-size: 1.2rem;
   }
   section.sect3 article.qbox > div .question {
+    height: 85px;
     font-size: 1.2rem;
     letter-spacing: -0.1rem;
     line-height: 1.5rem;
@@ -926,7 +941,7 @@ section.sect4 .benchmarking li {
     display: block;
   }
   section.sect4 .inner .gird-p {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("./img/selmin/sect4-bg.svg");
+    background: linear-gradient(to bottom, rgba(37, 37, 37, 0), #252525 100%), url("./img/selmin/sect4-bg.svg");
     background-position: center top;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -1021,12 +1036,11 @@ section.sect4 .benchmarking li {
     width: 65%;
   }
   section.sect3 article.qbox {
-    margin-top: -300px;
+    margin-top: -250px;
     margin-bottom: 20px;
   }
   section.sect3 article.qbox > div {
     width: 32%;
-    height: 384px;
     padding: 40px 30px;
   }
   section.sect3 article.qbox > div:not(:last-child) {
@@ -1043,7 +1057,7 @@ section.sect4 .benchmarking li {
     display: block;
   }
   section.sect3 article.qbox > div ul.list li .list-gf {
-    padding-top: 10px;
+    padding-top: 0;
   }
   section.sect3 article.qbox > div ul.list li .list-gf .rod {
     height: 12px;
@@ -1052,7 +1066,7 @@ section.sect4 .benchmarking li {
     padding-left: 20px;
   }
   section.sect3 article.qbox > div ul.list li:not(:last-child) {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
   section.sect3 article.result {
     width: 84%;
@@ -1111,10 +1125,6 @@ section.sect4 .benchmarking li {
     display: grid;
   }
   section.sect4 .inner .gird-p {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("./img/selmin/sect4-bg.svg");
-    background-position: center top;
-    background-size: 100%;
-    background-repeat: no-repeat;
     padding: 20px 40px;
   }
   section.sect4 .inner .gird-p .grid {
@@ -1136,7 +1146,42 @@ section.sect4 .benchmarking li {
     padding-bottom: 80px;
   }
   section.sect4 .inner .benchmarking {
+    justify-content: space-between;
+  }
+  section.sect4 .inner .benchmarking .app {
     display: flex;
-    border: 1px solid #cf2424;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 15%;
+    padding: 15px;
+    text-align: center;
+  }
+  section.sect4 .inner .benchmarking .app .box {
+    border-radius: 20px;
+    background: #fff;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section.sect4 .inner .benchmarking .app .box p {
+    color: #d9d9d9;
+  }
+  section.sect4 .inner .benchmarking .app p {
+    margin: 0;
+    width: 100%;
+  }
+  section.sect4 .inner .benchmarking .txt {
+    width: 80%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  }
+  section.sect5 {
+    background: radial-gradient(circle, rgba(37, 37, 37, 0.3), #252525 50%), url(./img/selmin/sect5-bg3.svg);
+    background-size: cover;
+    background-position: center;
   }
 }/*# sourceMappingURL=index.css.map */

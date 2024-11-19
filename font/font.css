@@ -1,101 +1,101 @@
 /* Binggrae 빙그레 */
 @font-face{
   font-family: Binggrae;
-  src : url(./Binggrae.woff);
+  src : url(./font_file/Binggrae.woff);
 }
 @font-face{
   font-family: Binggrae-Bold;
-  src : url(./Binggrae-Bold.woff);
+  src : url(./font_file/Binggrae-Bold.woff);
 }
 @font-face{
   font-family: jt-font;
-  src : url(./jt-font.woff);
+  src : url(./font_file/jt-font.woff);
 }
 
 /* Montserrat */
 @font-face{
   font-family: Montserrat-Bold;
-  src : url(./Montserrat-Bold.woff);
+  src : url(./font_file/Montserrat-Bold.woff);
 }
 @font-face{
   font-family: Montserrat-ExtraLight;
-  src : url(./Montserrat-ExtraLight.woff);
+  src : url(./font_file/Montserrat-ExtraLight.woff);
 }
 @font-face{
   font-family: Montserrat-Light;
-  src : url(./Montserrat-Light.woff);
+  src : url(./font_file/Montserrat-Light.woff);
 }
 @font-face{
   font-family: Montserrat-Medium;
-  src : url(./Montserrat-Medium.woff);
+  src : url(./font_file/Montserrat-Medium.woff);
 }
 @font-face{
   font-family: Montserrat-Regular;
-  src : url(./Montserrat-Regular.woff);
+  src : url(./font_file/Montserrat-Regular.woff);
 }
 @font-face{
   font-family: Montserrat-SemiBold;
-  src : url(./Montserrat-SemiBold.woff);
+  src : url(./font_file/Montserrat-SemiBold.woff);
 }
 
 @font-face{
   font-family: mugo-font;
-  src : url(./mugo-font.woff);
+  src : url(./font_file/mugo-font.woff);
 }
 
 /* NotoSans 노토산스 */
 @font-face{
   font-family: NotoSans-Black;
-  src : url(./NotoSans-Black.woff);
+  src : url(./font_file/NotoSans-Black.woff);
 }
 @font-face{
   font-family: NotoSans-Bold;
-  src : url(./NotoSans-Bold.woff);
+  src : url(./font_file/NotoSans-Bold.woff);
 }
 @font-face{
   font-family: NotoSans-Light;
-  src : url(./NotoSans-Light.woff);
+  src : url(./font_file/NotoSans-Light.woff);
 }
 @font-face{
   font-family: NotoSans-Medium;
-  src : url(./NotoSans-Medium.woff);
+  src : url(./font_file/NotoSans-Medium.woff);
 }
 @font-face{
   font-family: NotoSans-Regular;
-  src : url(./NotoSans-Regular.woff);
+  src : url(./font_file/NotoSans-Regular.woff);
 }
 @font-face{
   font-family: NotoSans-Thin;
-  src : url(./NotoSans-Thin.woff);
+  src : url(./font_file/NotoSans-Thin.woff);
 }
 @font-face{
   font-family: NotoSansCJKkr-Light;
-  src : url(./NotoSansCJKkr-Light.woff);
+  src : url(./font_file/NotoSansCJKkr-Light.woff);
 }
 @font-face{
   font-family: NotoSansCJKkr-Medium;
-  src : url(./NotoSansCJKkr-Medium.woff);
+  src : url(./font_file/NotoSansCJKkr-Medium.woff);
 }
 @font-face{
   font-family: NotoSansCJKkr-Regular;
-  src : url(./NotoSansCJKkr-Regular.woff);
+  src : url(./font_file/NotoSansCJKkr-Regular.woff);
 }
 @font-face{
   font-family: noto-Light;
-  src : url(./NotoSansCJKkr-Light.woff);
+  src : url(.font_file//NotoSansCJKkr-Light.woff);
 }
 @font-face{
   font-family: noto-Medium;
-  src : url(./NotoSansCJKkr-Medium.woff);
+  src : url(./font_file/NotoSansCJKkr-Medium.woff);
 }
 @font-face{
   font-family: noto-Regular;
-  src : url(./NotoSansCJKkr-Regular.woff);
+  src : url(./font_file/NotoSansCJKkr-Regular.woff);
 }
 
 @font-face{
   font-family: AnticDidone-Regular;
-  src : url(./AnticDidone-Regular.ttf);
+  src : url(./font_file/AnticDidone-Regular.ttf);
 }
 /* @font-face{
   font-family: ;
@@ -218,4 +218,21 @@
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+}
+
+/* ------------------------------------------- */
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* https://unblast.com/fonts/ 폰트 사이트 */
+
+@font-face{
+  font-family: Pixer;
+  src : url(./font_file/Pixer-Regular.woff);
+}
+@font-face{
+  font-family: Pixer;
+  src : url(./font_file/Pixer-Regular.woff2);
 }

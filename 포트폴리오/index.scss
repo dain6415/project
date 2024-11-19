@@ -205,14 +205,23 @@ section {
       color: $gray-600;
     }
     .benchmarking {
-      background: $bg-w;
-      border-radius: 20px;
-      color: $gray-800-txt;
-      text-align: left;
-      li {
-        list-style: disc;
+      display: flex;
+      .txt{
+        background: $bg-w;
+        border-radius: 20px;
+        padding-left: 15px;
+        padding: 20px;
+        color: $gray-800-txt;
+        text-align: left;
+        li {
+          list-style: disc;
+        }
       }
     }
+  }
+  &.sect5{
+    text-align: center;
+    color: $bg-w;
   }
 }
 
@@ -516,9 +525,12 @@ section {
           padding-bottom: 40px;
         }
         .benchmarking {
+          justify-content: center;
+          .app{
+            display: none;
+          }
           width: 90%;
           margin: auto;
-          padding: 20px;
           font-size: 1rem;
           ul{
             padding-left: 20px;
@@ -628,10 +640,8 @@ section {
         &.qbox {
           width: 100%;
           margin-top: -200px;
-          margin-bottom: 10px;
           > div {
             width: 100%;
-            height: 330px;
             border-radius: 20px;
             padding: 40px 30px;
             background: $bg-w;
@@ -799,8 +809,7 @@ section {
         }
         .gird-p {
           width: 100%;
-          background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)) 
-          , url('./img/selmin/sect4-bg.svg');
+          background: url('./img/selmin/sect4-bg.svg'), linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
           background-position: center top;
           background-size: 100%;
           background-repeat: no-repeat;
@@ -829,14 +838,19 @@ section {
         }
         .benchmarking {
           margin: auto;
-          padding: 20px;
           font-size: 1rem;
-          ul{
-            padding-left: 20px;
-            li{
-              padding-bottom: 10px;
-              br.none{
-                display: none;
+          .app{
+            display: none;
+          }
+          .txt{
+            width: 100%;
+            ul{
+              padding-left: 20px;
+              li{
+                &:not(:last-child){padding-bottom: 10px;}
+                br{
+                  display: none;
+                }
               }
             }
           }
@@ -851,7 +865,6 @@ section {
   .inner {
     width: 85%;
     margin: auto;
-    border: 1px solid #000;
   }
   .summary {
     font-size: 1.5rem;
@@ -933,12 +946,13 @@ section {
           > div {
             width: 32%;
             border-radius: 20px;
-            padding: 20px;
+            padding: 30px 20px;
             .q {
               letter-spacing: 0.2rem;
               font-size: 1.2rem;
             }
             .question {
+              height: 85px;
               font-size: 1.2rem;
               letter-spacing: -0.1rem;
               line-height: 1.5rem;
@@ -1051,8 +1065,7 @@ section {
           br{display: block;}
         }
         .gird-p {
-          background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)) 
-          , url('./img/selmin/sect4-bg.svg');
+          background: linear-gradient(to bottom, rgba($bg-sect4, 0), rgba($bg-sect4, 1) 100%),url('./img/selmin/sect4-bg.svg'),;
           background-position: center top;
           background-size: 100%;
           background-repeat: no-repeat;
@@ -1156,11 +1169,11 @@ section {
     &.sect3 {
       article {
         &.qbox {
-          margin-top: -300px;
+          margin-top: -250px;
           margin-bottom: 20px;
           > div {
             width: 32%;
-            height: 384px;
+            // height: 384px;
             padding: 40px 30px;
             &:not(:last-child) {
               margin-bottom: 0;
@@ -1178,7 +1191,7 @@ section {
             ul.list {
               li {
                 .list-gf {
-                  padding-top: 10px;
+                  padding-top: 0;
                   .rod {
                     height: 12px;
                   }
@@ -1187,7 +1200,7 @@ section {
                   }
                 }
                 &:not(:last-child) {
-                  padding-bottom: 20px;
+                  padding-bottom: 10px;
                 }
               }
             }
@@ -1259,11 +1272,6 @@ section {
       display: grid;
       .inner{
         .gird-p {
-          background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)) 
-          , url('./img/selmin/sect4-bg.svg');
-          background-position: center top;
-          background-size: 100%;
-          background-repeat: no-repeat;
           padding: 20px 40px;
           .grid{
             padding: 5px 0;
@@ -1287,10 +1295,44 @@ section {
           padding-bottom: 80px;
         }
         .benchmarking{
-          display: flex;
-          border: 1px solid #cf2424;
+          justify-content: space-between;
+          .app{
+            @include flex-c(space-between);
+            flex-direction: column;
+            width: 15%;
+            padding: 15px ;
+            text-align: center;
+            .box{
+              border-radius: 20px;
+              background: $bg-w;
+              width: 100px;
+              height: 100px;
+              border: 1px solid #000;
+              box-shadow: 0 5px 10px rgba($bg-b, 0.5);
+
+              @include flex-c();
+              p{
+              color: $gray-400;  
+              }
+            }
+            p{
+              margin: 0;
+              width: 100%;
+            }
+          }
+          .txt{
+            width: 80%;
+            box-shadow: 0 5px 20px rgba($bg-b, 0.5);
+          }
         }
       }
+    }
+    &.sect5{
+      background: 
+    radial-gradient(circle, rgba($bg-sect4, 0.3), rgba($bg-sect4, 1) 50%),
+    url(./img/selmin/sect5-bg3.svg);
+  background-size: cover; 
+  background-position: center;
     }
   }
 }

@@ -158,10 +158,155 @@ section.sect4 .benchmarking .txt li {
 section.sect5 {
   text-align: center;
   color: #fff;
+  background: radial-gradient(circle, rgba(37, 37, 37, 0.3), #252525 50%), url(./img/selmin/sect5-bg3.svg);
+  background-size: cover;
+  background-position: center;
+}
+section.sect5 .map {
+  width: 100%;
+  position: relative;
+  border: 1px solid #d30808;
+}
+section.sect5 .map .diagonal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section.sect5 .map .diagonal .diagonal1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  width: 2px;
+  background: #fff;
+}
+section.sect5 .map .diagonal .diagonal1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10px;
+  width: 10px;
+  background: #fff;
+  border-radius: 99px;
+}
+section.sect5 .map .diagonal .diagonal1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 99px;
+}
+section.sect5 .map .diagonal .diagonal2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 2px;
+  background: #fff;
+}
+section.sect5 .map .diagonal .diagonal2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 10px;
+  width: 10px;
+  background: #fff;
+  border-radius: 99px;
+}
+section.sect5 .map .diagonal .diagonal2::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 99px;
+}
+section.sect5 .map .circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section.sect5 .map .circle .circle1 {
+  background: rgba(255, 255, 255, 0.03);
+  width: 400px;
+  height: 400px;
+  border-radius: 999px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section.sect5 .map .circle .circle2 {
+  background: rgba(255, 255, 255, 0.06);
+  width: 280px;
+  height: 280px;
+  border-radius: 999px;
+  border: 1px dotted #666666;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section.sect5 .map .circle .circle3 {
+  background: rgba(255, 255, 255, 0.1);
+  width: 160px;
+  height: 160px;
+  border-radius: 999px;
+  border: 2px dotted #757575;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section.sect5 .map .beeline {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section.sect5 .map .beeline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  height: 500px;
+  border-left: 2px dotted #666666;
+  border-radius: 99px;
+}
+section.sect5 .map .beeline::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  height: 500px;
+  border-left: 2px dotted #666666;
+  border-radius: 99px;
 }
 
 @media only screen and (max-width: 500px) {
-  p, li {
+  p,
+  li {
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -447,12 +592,25 @@ section.sect5 {
   section.sect4 .inner .benchmarking ul li {
     padding-bottom: 10px;
   }
+  section.sect5 .summary {
+    padding-bottom: 40px;
+  }
+  section.sect5 .map {
+    height: 500px;
+  }
+  section.sect5 .map .diagonal .diagonal1 {
+    height: 430px;
+  }
+  section.sect5 .map .diagonal .diagonal2 {
+    width: 430px;
+  }
 }
 @media only screen and (min-width: 501px) {
   body {
     font-size: 4vw;
   }
-  p, li {
+  p,
+  li {
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -871,7 +1029,6 @@ section.sect5 {
   section.sect3 article.result {
     margin: auto;
     white-space: wrap;
-    border: 1px solid #20d84b;
     text-align: center;
     color: #fff;
     padding-bottom: 150px;
@@ -966,7 +1123,8 @@ section.sect5 {
   body {
     font-size: 4vw;
   }
-  p, li {
+  p,
+  li {
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -1129,7 +1287,7 @@ section.sect5 {
   }
   section.sect4 .inner .gird-p .grid {
     padding: 5px 0;
-    height: 70px;
+    height: 60px;
   }
   section.sect4 .inner .gird-p .grid .item {
     font-size: 1rem;
@@ -1138,12 +1296,12 @@ section.sect5 {
     font-size: 1.1rem;
   }
   section.sect4 .inner .gird-p .grid .item.triangle img {
-    width: 40%;
-    height: 40%;
+    width: 35%;
+    height: 35%;
   }
   section.sect4 .inner p.calender {
     font-size: 1rem;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
   }
   section.sect4 .inner .benchmarking {
     justify-content: space-between;
@@ -1179,9 +1337,11 @@ section.sect5 {
     width: 80%;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   }
-  section.sect5 {
-    background: radial-gradient(circle, rgba(37, 37, 37, 0.3), #252525 50%), url(./img/selmin/sect5-bg3.svg);
-    background-size: cover;
-    background-position: center;
+  section.sect5 .summary {
+    padding-bottom: 40px;
+  }
+  section.sect5 .map {
+    height: 500px;
+    padding: 50px;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -1,37 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./index.css">
-</head>
-<body>
-  <div class="stage">
-    <div class="contents">
-      <p>Hellow,</p>
-      <h2>DESIGN</h2>
-      <div class="design">
-        <h2>P</h2>
-        <div class="item"></div>
-        <h2>RTFOLI</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="///public.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header id="header" role="banner">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="#">portfolio<em>ux/ui / pulisher</em></a>
+        </div>
+        <nav class="header__nav" role="navigation" aria-label="메인메뉴">
+          <ul>
+            <li><a href="#intro">intro</a></li>
+            <li><a href="#project">project</a></li>
+            <li><a href="#work">work</a></li>
+            <li><a href="#uxui">uxui</a></li>
+            <li><a href="#about">about</a></li>
+          </ul>
+        </nav>
+        <div
+          class="header__nav_mobile"
+          id="headerToggle"
+          aria-controls="primary-menu"
+          aria-expanded="flase"
+          role="button"
+        >
+          <span></span>
+        </div>
       </div>
-    </div>
-    
-    <div class="sticker">
-      <div class="web">
-        <p>WEB</p>
-      </div>
-      <div class="graphic">
-        <p>GRAPHIC</p>
-      </div>
-      <div class="name">
-        <p>HONGDAIN</p>
-      </div>
-      <div class="star">
-        <figure><img src="" alt=""></figure>
-      </div>
-    </div>
-  </div>
-</body>
+    </header>
+    <main id="main" role="main">
+      <!-- intro -->
+      <section id="intro">
+        <p class="title">PORTFOLIO</p>
+      </section>
+      <!-- work -->
+      <section id="work">
+        <div class="gird__box">
+          <div class="item item1">
+            <p class="item__title">WORK.</p>
+          </div>
+          <div class="item item2">어쩌고 저쩌고</div>
+          <div class="item item3"></div>
+          <div class="item item4">아이콘이나 뭐 기타 등등</div>
+          <div class="item item5">어쩌고 저쩌고</div>
+        </div>
+
+        <div class="list__box">
+          <ul>
+            <li><a href="">aaaaaa</a></li>
+            <li><a href="">aaaaaa</a></li>
+            <li><a href="">aaaaaa</a></li>
+            <li><a href="">aaaaaa</a></li>
+            <li><a href="">aaaaaa</a></li>
+            <li><a href="">aaaaaa</a></li>
+            <li><a href="">aaaaaa</a></li>
+            <li><a href="">aaaaaa</a></li>
+          </ul>
+        </div>
+      </section>
+      <!-- project -->
+      <section id="project">
+        <div class="item item1">
+          <p class="item__title">project.</p>
+        </div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+        <div class="item item4"></div>
+        <div class="item item5"></div>
+        <div class="item item6"></div>
+      </section>
+      <!-- ux/ui -->
+      <section id="ux/ui"></section>
+
+      <!-- about -->
+      <section id="about"></section>
+    </main>
+    <footer id="footer" role="contentinfo"></footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>

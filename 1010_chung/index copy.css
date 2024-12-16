@@ -9,7 +9,7 @@
   font-style: normal;
 }
 body {
-  font-family: "PretendardVariable";
+  font-family: "Pretendard";
 }
 
 header {
@@ -870,8 +870,7 @@ footer {
   section#sect5 > .inner-box .contents-box .contents-wrap .content .mySwiper2 > .swiper-wrapper .swiper-slide a .img-box img {
     width: 100%;
     height: 250px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1005,8 +1004,7 @@ footer {
   section#sect5 > .inner-box .contents-box .contents-wrap .content .mySwiper3 > ul.swiper-wrapper li.swiper-slide a img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2403,8 +2401,7 @@ footer {
   section#sect5 > .inner-box .contents-box .contents-wrap .content.review .swiper .swiper-wrapper .swiper-slide a .img-box img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2496,8 +2493,7 @@ footer {
   section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .swiper .swiper-slide a img, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .swiper .swiper-slide a img {
     height: 100%;
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     transition: 0.35s;
     position: absolute;
     top: 50%;
@@ -2551,8 +2547,7 @@ footer {
   section#sect5 > .inner-box .contents-box .contents-wrap .content.news .swiper .swiper-slide a img {
     height: 100%;
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     transition: 0.35s;
     position: absolute;
     top: 50%;

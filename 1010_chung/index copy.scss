@@ -1,10 +1,6 @@
+@charset "UFT-8";
 @import url(../reset.css);
 @import url(../font/font.css);
-// @mixin flex-c($justify: center) {
-//   display: flex;
-//   align-items: center;
-//   justify-content: $justify;
-// }
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 @font-face {
   font-family: "Chosunilbo_myungjo";
@@ -25,7 +21,7 @@ align-items: center;
 justify-content: $justify;
 }
 body {
-  font-family: "PretendardVariable";
+  font-family: 'Pretendard';
 }
 header {
   width: 100%;

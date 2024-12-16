@@ -92,6 +92,13 @@
   font-family: noto-Regular;
   src : url(./font_file/NotoSansCJKkr-Regular.woff);
 }
+@font-face{
+  font-family: NotoSerifKR-Medium;
+  src : url(./font_file/NotoSerifKR-Medium.woff2);
+}
+
+
+
 
 @font-face{
   font-family: AnticDidone-Regular;

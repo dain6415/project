@@ -961,8 +961,7 @@
     display: grid;
     height: 200px;
     grid-template-columns: repeat(5, 1fr);
-    -moz-column-gap: 10px;
-         column-gap: 10px;
+    column-gap: 10px;
   }
   .wrap .container article.art4 .inner a.item {
     outline: 1px solid var(--gray2);
@@ -1146,8 +1145,7 @@
     margin-bottom: 80px;
   }
   .wrap .container article.art4 .inner {
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
   }
   .wrap .container article.art4 .inner a.item {
     height: 240px;

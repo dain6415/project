@@ -19,9 +19,86 @@ body header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.3s;
+}
+body header:hover {
+  background: #fff;
+}
+body header:hover nav > ul li.main-menu a {
+  color: #000;
+}
+body header:hover .gnb li a {
+  color: #000;
+  transition: 0.3s;
+}
+body header:hover .gnb li.btn span {
+  background: #000;
+}
+body header:hover .gnb li.btn span ::before {
+  background: #000;
+}
+body header:hover .gnb li.btn span ::after {
+  background: #000;
 }
 body header h1 img.logo-b {
   display: none;
+}
+body header .gnb {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+body header .gnb li > a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+}
+body header .gnb li.btn {
+  padding: 3px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+body header .gnb li.btn span {
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 3px;
+  background: #ffffff;
+  transition: 0.3s;
+}
+body header .gnb li.btn span ::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -8px;
+  background: #ffffff;
+  width: 100%;
+  height: 3px;
+  transition: 0.3s;
+}
+body header .gnb li.btn span ::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  background: #ffffff;
+  width: 100%;
+  height: 3px;
+  transition: 0.3s;
+}
+body header .gnb li.btn:hover span ::before {
+  width: 30%;
+}
+body header .gnb li.btn:hover span ::after {
+  width: 60%;
+}
+body header .gnb li.btn a {
+  display: inline-block;
+  text-indent: -9999px;
 }
 body section {
   background-repeat: no-repeat;
@@ -93,24 +170,7 @@ body footer address {
     padding: 20px;
     height: 70px;
     border-bottom: 1px solid #ffffff;
-  }
-  header:hover {
-    background: #fff;
-  }
-  header:hover nav > ul li.main-menu a {
-    color: #000;
-  }
-  header:hover .gnb li a {
-    color: #000;
-  }
-  header:hover .gnb li.btn {
-    background: #000;
-  }
-  header:hover .gnb li.btn ::before {
-    background: #000;
-  }
-  header:hover .gnb li.btn ::after {
-    background: #000;
+    transition: 0.3s;
   }
   header h1 a {
     width: 250px;
@@ -145,42 +205,6 @@ body footer address {
   }
   header ul.gnb li > a {
     color: #fff;
-  }
-  header ul.gnb li.btn {
-    position: relative;
-    width: 25px;
-    height: 2px;
-    background: #ffffff;
-  }
-  header ul.gnb li.btn ::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -10px;
-    background: #ffffff;
-    width: 25px;
-    height: 2px;
-    transition: 0.3s;
-  }
-  header ul.gnb li.btn ::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 10px;
-    background: #ffffff;
-    width: 25px;
-    height: 2px;
-    transition: 0.3s;
-  }
-  header ul.gnb li.btn:hover ::before {
-    width: 15px;
-  }
-  header ul.gnb li.btn:hover ::after {
-    width: 20px;
-  }
-  header ul.gnb li.btn span a {
-    display: inline-block;
-    text-indent: -9999px;
   }
   header .sitemap-box {
     position: absolute;
@@ -1222,18 +1246,6 @@ body footer address {
   header:hover nav > ul li.main-menu a {
     color: #000;
   }
-  header:hover .gnb li a {
-    color: #000;
-  }
-  header:hover .gnb li.btn {
-    background: #000;
-  }
-  header:hover .gnb li.btn ::before {
-    background: #000;
-  }
-  header:hover .gnb li.btn ::after {
-    background: #000;
-  }
   header h1 a {
     width: 250px;
     display: flex;
@@ -1244,11 +1256,7 @@ body footer address {
   }
   header nav {
     display: none;
-    position: absolute;
-    right: 0;
-    top: 0;
     width: 100%;
-    height: 100vh;
   }
   header nav > ul {
     display: flex;
@@ -1259,51 +1267,6 @@ body footer address {
   header nav > ul li.main-menu ul.sub-menu {
     position: absolute;
     display: none;
-  }
-  header ul.gnb {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  header ul.gnb li > a {
-    color: #fff;
-  }
-  header ul.gnb li.btn {
-    position: relative;
-    width: 25px;
-    height: 2px;
-    background: #ffffff;
-  }
-  header ul.gnb li.btn ::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -10px;
-    background: #ffffff;
-    width: 25px;
-    height: 2px;
-    transition: 0.3s;
-  }
-  header ul.gnb li.btn ::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 10px;
-    background: #ffffff;
-    width: 25px;
-    height: 2px;
-    transition: 0.3s;
-  }
-  header ul.gnb li.btn:hover ::before {
-    width: 15px;
-  }
-  header ul.gnb li.btn:hover ::after {
-    width: 20px;
-  }
-  header ul.gnb li.btn span a {
-    width: 50px;
-    display: inline-block;
-    text-indent: -9999px;
   }
   header .sitemap-box {
     position: absolute;
@@ -2342,26 +2305,19 @@ body footer address {
   header:hover nav > ul li.main-menu a {
     color: #000;
   }
-  header:hover .gnb li a {
-    color: #000;
-  }
-  header:hover .gnb li.btn {
-    background: #000;
-  }
-  header:hover .gnb li.btn ::before {
-    background: #000;
-  }
-  header:hover .gnb li.btn ::after {
-    background: #000;
-  }
   header h1 {
-    width: 15%;
+    width: 30%;
   }
   header h1 img {
     width: 100%;
   }
+  header nav {
+    display: block;
+  }
   header nav > ul {
     display: flex;
+    justify-content: flex-end;
+    width: 95%;
     gap: 30px;
   }
   header nav > ul li.main-menu {
@@ -2369,6 +2325,7 @@ body footer address {
     flex-shrink: 0;
   }
   header nav > ul li.main-menu a {
+    font-size: 20px;
     font-weight: 600;
     color: #fff;
   }
@@ -2390,51 +2347,7 @@ body footer address {
     display: block;
     padding: 5px 20px;
     color: #fff;
-  }
-  header ul.gnb {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  header ul.gnb li > a {
-    color: #fff;
-  }
-  header ul.gnb li.btn {
-    position: relative;
-    width: 25px;
-    height: 2px;
-    background: #ffffff;
-  }
-  header ul.gnb li.btn ::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -10px;
-    background: #ffffff;
-    width: 25px;
-    height: 2px;
-    transition: 0.3s;
-  }
-  header ul.gnb li.btn ::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 10px;
-    background: #ffffff;
-    width: 25px;
-    height: 2px;
-    transition: 0.3s;
-  }
-  header ul.gnb li.btn a {
-    width: 50px;
-    display: inline-block;
-    text-indent: -9999px;
-  }
-  header ul.gnb li.btn:hover ::before {
-    width: 15px;
-  }
-  header ul.gnb li.btn:hover ::after {
-    width: 20px;
+    font-size: 16px;
   }
   header .sitemap-box {
     display: none;
@@ -2448,7 +2361,6 @@ body footer address {
     height: 100%;
   }
   section#sect1 .split-box .word {
-    border: 1px solid #000;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -2754,7 +2666,6 @@ body footer address {
     line-height: 1.6rem;
   }
   section#sect3 .inner-box .swiper .btn-box {
-    border: 1px solid #000;
     width: 70px;
     height: 30px;
     position: absolute;

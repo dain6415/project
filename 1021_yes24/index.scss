@@ -216,11 +216,12 @@ header {
   height: 100vh;
   width: 220px;
   top: 0;
-  left: 0;
+  left: -100%;
   z-index: 9999;
   background: rgba(0, 0, 0, 0.8);
   border-right: 1px solid #999;
-  .menu {
+  transition: 1s;
+  .snb_menu {
     width: 100%;
     height: 80px;
     padding: 20px 30px;
@@ -472,22 +473,6 @@ header {
                 height: 15px;
                 position: absolute;
                 top: 38%;
-                left: -15px;
-                cursor: pointer;
-                &::after {
-                  content: "";
-                  width: 100%;
-                  height: 100%;
-                  @include ab-c();
-                  background: url(./img/gnbslide-prev.png) no-repeat;
-                  z-index: 1;
-                }
-              }
-              .prev {
-                width: 7px;
-                height: 15px;
-                position: absolute;
-                top: 38%;
                 right: -15px;
                 cursor: pointer;
                 &::after {
@@ -496,6 +481,22 @@ header {
                   height: 100%;
                   @include ab-c();
                   background: url(./img/gnbslide-next.png) no-repeat;
+                  z-index: 1;
+                }
+              }
+              .prev {
+                width: 7px;
+                height: 15px;
+                position: absolute;
+                top: 38%;
+                left: -15px;
+                cursor: pointer;
+                &::after {
+                  content: "";
+                  width: 100%;
+                  height: 100%;
+                  @include ab-c();
+                  background: url(./img/gnbslide-prev.png) no-repeat;
                   z-index: 1;
                 }
               }
@@ -537,6 +538,7 @@ header {
       }
     }
   }
+
 }
 
 .slide-menu {
@@ -1066,8 +1068,10 @@ section {
             margin-bottom: 40px;
             li {
               color: #333;
-              &.on {
-                color: #ec7d2c;
+              a{
+                &.on {
+                  color: #ec7d2c;
+                }
               }
             }
           }

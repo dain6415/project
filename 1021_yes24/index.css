@@ -181,12 +181,13 @@ header .inner .right-m .serch a {
   height: 100vh;
   width: 220px;
   top: 0;
-  left: 0;
+  left: -100%;
   z-index: 9999;
   background: rgba(0, 0, 0, 0.8);
   border-right: 1px solid #999;
+  transition: 1s;
 }
-.snb .menu {
+.snb .snb_menu {
   width: 100%;
   height: 80px;
   padding: 20px 30px;
@@ -201,14 +202,14 @@ header .inner .right-m .serch a {
   left: 0;
   z-index: 1;
 }
-.snb .menu .line {
+.snb .snb_menu .line {
   width: 20px;
   height: 2px;
   background: currentColor;
   position: relative;
   transition: 0.35s;
 }
-.snb .menu .line::before {
+.snb .snb_menu .line::before {
   content: "";
   width: 15px;
   height: 2px;
@@ -218,7 +219,7 @@ header .inner .right-m .serch a {
   top: -6px;
   transition: width 0.35s;
 }
-.snb .menu .line::after {
+.snb .snb_menu .line::after {
   content: "";
   width: 15px;
   height: 2px;
@@ -228,13 +229,13 @@ header .inner .right-m .serch a {
   top: 6px;
   transition: width 0.35s;
 }
-.snb .menu:hover .line {
+.snb .snb_menu:hover .line {
   width: 15px;
 }
-.snb .menu:hover .line::before, .snb .menu:hover .line::after {
+.snb .snb_menu:hover .line::before, .snb .snb_menu:hover .line::after {
   width: 20px;
 }
-.snb .menu .close {
+.snb .snb_menu .close {
   position: absolute;
   right: -15px;
   top: 50%;
@@ -246,7 +247,7 @@ header .inner .right-m .serch a {
   overflow: hidden;
   background: #000;
 }
-.snb .menu .close a {
+.snb .snb_menu .close a {
   width: 100%;
   height: 100%;
   display: block;
@@ -423,7 +424,7 @@ header .inner .right-m .serch a {
   height: 15px;
   position: absolute;
   top: 38%;
-  left: -15px;
+  right: -15px;
   cursor: pointer;
 }
 .snb .scrollbar .menus .snb-menu4 .s-m4-botton .swiper-container .swiper .next::after {
@@ -434,7 +435,7 @@ header .inner .right-m .serch a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: url(./img/gnbslide-prev.png) no-repeat;
+  background: url(./img/gnbslide-next.png) no-repeat;
   z-index: 1;
 }
 .snb .scrollbar .menus .snb-menu4 .s-m4-botton .swiper-container .swiper .prev {
@@ -442,7 +443,7 @@ header .inner .right-m .serch a {
   height: 15px;
   position: absolute;
   top: 38%;
-  right: -15px;
+  left: -15px;
   cursor: pointer;
 }
 .snb .scrollbar .menus .snb-menu4 .s-m4-botton .swiper-container .swiper .prev::after {
@@ -453,7 +454,7 @@ header .inner .right-m .serch a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: url(./img/gnbslide-next.png) no-repeat;
+  background: url(./img/gnbslide-prev.png) no-repeat;
   z-index: 1;
 }
 .snb .scrollbar .menus .snb-menu4 .s-m4-botton .swiper-container .swiper-pagination {
@@ -988,7 +989,7 @@ section.sect4 .inner .tab-container .s4-menu ul {
 section.sect4 .inner .tab-container .s4-menu ul li {
   color: #333;
 }
-section.sect4 .inner .tab-container .s4-menu ul li.on {
+section.sect4 .inner .tab-container .s4-menu ul li a.on {
   color: #ec7d2c;
 }
 section.sect4 .inner .tab-container .contents {

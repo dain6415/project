@@ -70,7 +70,10 @@ $('ul.snb-menu1 li.main-menu').mouseleave(function () {
 
 // swiper
 var swiper2 = new Swiper(".mySwiper2", {
-  spaceBetween:50, /* gap주기!!! */
+  // loop: true,
+  spaceBetween:50,
+   /* gap주기!!! */
+   loopAdditionalSlides: 5,
   pagination: {
     el: ".swiper-pagination",
     type: "fraction",
@@ -86,13 +89,17 @@ $(".scrollbar").mCustomScrollbar();
 // $('.close').click(function(){
 //   $('.snb').fadeOut()
 // })
+
+// 메뉴 클릭 시 서브 메뉴 나타나기
 $('.menu').click(function () {
-  $('.snb').animate({ left: '0' }, 800); // 왼쪽으로 슬라이드되어 나타남
+  $('.snb').css({ left: '0' }, 600); // 왼쪽으로 슬라이드되어 나타남
 });
 
+// 닫기 클릭 시 서브 메뉴 숨기기
 $('.close').click(function () {
-  $('.snb').animate({ left: '-100%' }, 1000); // 다시 왼쪽으로 슬라이드되어 사라짐
+  $('.snb').css({ left: '-100%' }, 600); // 왼쪽으로 슬라이드되어 사라짐
 });
+
 // -------------------------------------------------------------------------------------------
 
 
@@ -144,7 +151,7 @@ swiper.on("slideChange", function () {
 
 // <!-- sect4 tab -->
 //"ul.product li a의 링크를 찾아서 aElems에 변수 저장
-const aElems = document.querySelectorAll(".s4-menu ul li");
+const aElems = document.querySelectorAll(".s4-menu ul li a");
 // console.log(aElems);
 aElems.forEach(function (anchor) {
   //링크가 클릭되면 그때 실행할 함수를 지정
@@ -154,15 +161,16 @@ aElems.forEach(function (anchor) {
       a.classList.remove("on");
     });
     this.classList.add("on");
-    let href = this.getAttribute("href");
+    // let href = this.getAttribute("href");
     // alert(href)
 
     //모든 article 태그를 찾아서, 각각에 대해 작업할 준비
-    document.querySelectorAll("article").forEach(function (art) {
-      art.classList.remove("on");
+    document.querySelectorAll(".content").forEach(function (tab) {
+      tab.classList.remove("on");
     });
 
     //href 값에 해당하는 특정 article 태그를 찾아서, 그곳에 on 클래스를 추가
+    const href = this.getAttribute("href");
     document.querySelector(href).classList.add("on");
     //뭐가 있을 것 같은데....
   });

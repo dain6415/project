@@ -334,6 +334,7 @@ section.frame article .product .item .summary {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: 0.2s;
 }
 section.frame article .product .item .summary p {
   font-family: "Pretendard";

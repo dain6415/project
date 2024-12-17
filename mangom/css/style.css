@@ -37,7 +37,7 @@ hgroup {
   text-align: center;
 }
 
-h1 {
+header{
   border-bottom: 2px solid #000;
   padding: 10px;
   height: auto;
@@ -51,8 +51,19 @@ h1 {
   left: 0;
   top: 0;
   width: 100%;
+  height: 80px;
 }
-
+h1{
+ display: flex;
+ justify-content: center;
+ justify-content: center;
+}
+h1 img{
+  width: 50%;
+}
+hgroup{
+  font-family: 'LeeSeoyun';
+}
 em {
   color: #1a87ec;
   font-style: normal;
@@ -161,8 +172,14 @@ dd {
 /* 모바일----------------------------------------- */
 @media screen and (max-width: 576px) {
   /* body{padding: .75rem;} */
-  h1 {
-    font-size: 3vw;
+  header {
+    height: 60px;
+  }
+  h1{
+    width: 15%;
+  }
+  h1 img{
+    width: 100%;
   }
   h2 {
     font-size: 6vw;
@@ -223,8 +240,9 @@ dd {
     position: relative;
     top: 140px;
   }
+  
   h1 {
-    font-size: 16px;
+    width: 20%;
   }
   h2 {
     font-size: 8vw;
@@ -304,8 +322,7 @@ dd {
     top: 200px;
   }
   h1 {
-    height: 60px;
-    font-size: 20px;
+    width: 200px;
   }
   h2 {
     font-size: 50px;

@@ -4,15 +4,15 @@ sect5Tabs.forEach((tabMenu) => {
     e.preventDefault();
   });
 });
+
 //  photo, video
 const mySwiper3 = new Swiper(".mySwiper3", {
-  loop: true,
   navigation: {
-    nextEl: ".btn_3 .next",
-    prevEl: ".btn_3 .prev",
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   slidesPerView: 1,
-  spaceBetween: 30,
+  // spaceBetween: 30,
   breakpoints: {
     641: {
       slidesPerView: 4,
@@ -22,7 +22,7 @@ const mySwiper3 = new Swiper(".mySwiper3", {
       },
     },
     1000: {
-      slidesPerView: 8,
+      slidesPerView: 4,
       spaceBetween: 30,
       grid: {
         rows: 2,
@@ -30,19 +30,20 @@ const mySwiper3 = new Swiper(".mySwiper3", {
     },
   }
 });
+
 // review, news
 const mySwiper2 = new Swiper(".mySwiper2", {
-  loop: true,
+  // loop: true,
   navigation: {
-    nextEl: ".next",
-    prevEl: ".prev",
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
     640: {
       slidesPerView: 1,
       spaceBetween: 30,
     },
-    641: {
+    768: {
       slidesPerView: 2,
       spaceBetween: 30,
     },

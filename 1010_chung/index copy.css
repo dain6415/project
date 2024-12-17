@@ -971,14 +971,14 @@ body footer address {
     display: flex;
     justify-content: space-between;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn .prev {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn .swiper-button-prev {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     cursor: pointer;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn .prev::after {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn .swiper-button-prev::after {
     width: 15px;
     height: 15px;
     content: "";
@@ -991,14 +991,14 @@ body footer address {
     left: 50%;
     transform: translate(-50%, -50%) rotate(135deg);
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn .next {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn .swiper-button-next {
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
     cursor: pointer;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn .next::after {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn .swiper-button-next::after {
     width: 15px;
     height: 15px;
     content: "";
@@ -1067,14 +1067,14 @@ body footer address {
     display: flex;
     justify-content: space-between;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .r_btn .prev, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .r_btn .prev {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .r_btn .swiper-button-prev, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .r_btn .swiper-button-prev {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     cursor: pointer;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .r_btn .prev::after, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .r_btn .prev::after {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .r_btn .swiper-button-prev::after, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .r_btn .swiper-button-prev::after {
     width: 15px;
     height: 15px;
     content: "";
@@ -1087,14 +1087,14 @@ body footer address {
     left: 50%;
     transform: translate(-50%, -50%) rotate(135deg);
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .r_btn .next, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .r_btn .next {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .r_btn .swiper-button-next, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .r_btn .swiper-button-next {
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
     cursor: pointer;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .r_btn .next::after, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .r_btn .next::after {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .r_btn .swiper-button-next::after, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .r_btn .swiper-button-next::after {
     width: 15px;
     height: 15px;
     content: "";
@@ -1161,14 +1161,14 @@ body footer address {
     display: flex;
     justify-content: space-between;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn .prev {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn .swiper-button-prev {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     cursor: pointer;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn .prev::after {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn .swiper-button-prev::after {
     width: 15px;
     height: 15px;
     content: "";
@@ -1181,14 +1181,14 @@ body footer address {
     left: 50%;
     transform: translate(-50%, -50%) rotate(135deg);
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn .next {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn .swiper-button-next {
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
     cursor: pointer;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn .next::after {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn .swiper-button-next::after {
     width: 15px;
     height: 15px;
     content: "";
@@ -2020,14 +2020,14 @@ body footer address {
     display: flex;
     justify-content: space-between;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn .prev {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn .swiper-button-prev {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     cursor: pointer;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn .prev::after {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn .swiper-button-prev::after {
     width: 15px;
     height: 15px;
     content: "";
@@ -2040,14 +2040,14 @@ body footer address {
     left: 50%;
     transform: translate(-50%, -50%) rotate(135deg);
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn .next {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn .swiper-button-next {
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
     cursor: pointer;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn .next::after {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn .swiper-button-next::after {
     width: 15px;
     height: 15px;
     content: "";
@@ -2118,14 +2118,14 @@ body footer address {
     display: flex;
     justify-content: space-between;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .r_btn .prev, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .r_btn .prev {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .r_btn .swiper-button-prev, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .r_btn .swiper-button-prev {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     cursor: pointer;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .r_btn .prev::after, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .r_btn .prev::after {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .r_btn .swiper-button-prev::after, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .r_btn .swiper-button-prev::after {
     width: 15px;
     height: 15px;
     content: "";
@@ -2138,14 +2138,14 @@ body footer address {
     left: 50%;
     transform: translate(-50%, -50%) rotate(135deg);
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .r_btn .next, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .r_btn .next {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .r_btn .swiper-button-next, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .r_btn .swiper-button-next {
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
     cursor: pointer;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .r_btn .next::after, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .r_btn .next::after {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .r_btn .swiper-button-next::after, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .r_btn .swiper-button-next::after {
     width: 15px;
     height: 15px;
     content: "";
@@ -2218,14 +2218,14 @@ body footer address {
     display: flex;
     justify-content: space-between;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn .prev {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn .swiper-button-prev {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     cursor: pointer;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn .prev::after {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn .swiper-button-prev::after {
     width: 15px;
     height: 15px;
     content: "";
@@ -2238,14 +2238,14 @@ body footer address {
     left: 50%;
     transform: translate(-50%, -50%) rotate(135deg);
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn .next {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn .swiper-button-next {
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
     cursor: pointer;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn .next::after {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn .swiper-button-next::after {
     width: 15px;
     height: 15px;
     content: "";

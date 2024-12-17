@@ -446,12 +446,12 @@ section.frame {
           align-items: center;
           justify-content: center;
 
+          transition: .2s;
           p {
             font-family: "Pretendard";
             font-weight: 200;
             font-size: 20px;
             line-height: 1.5em;
-
             &.bold {
               font-size: 24px;
               font-weight: 600;

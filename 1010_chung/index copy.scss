@@ -26,7 +26,7 @@ body {
   header {
     width: 100%;
     position: fixed;
-    z-index: 9999;
+    z-index: 99;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -199,6 +199,7 @@ body {
       font-style: normal;
     }
   }
+
 }
 
 /*################################## mobile start */
@@ -2227,7 +2228,6 @@ body {
                 position: relative;
                 width: 100%;
                 .mySwiper3 {
-                  height: 420px;
                   .swiper-wrapper {
                     display: flex;
                     // gap: 20px;
@@ -2235,7 +2235,7 @@ body {
                       transition: 0.35s;
                       a {
                         border: 1px solid #fd1f1f;
-                        height: 420px;
+                        height: 195px;
                         width: 100%;
                         position: relative;
                         display: block;
@@ -2346,8 +2346,8 @@ body {
                       display: block;
                       position: relative;
                       height: 350px;
+                      overflow: hidden;
                       a {
-                        overflow: hidden;
                         width: 100%;
                         img {
                           width: 100%;
@@ -2479,6 +2479,7 @@ body {
       }
     }
   }
+
 }
 
 /*################################## desktop start */
@@ -2517,8 +2518,8 @@ body {
         li.main-menu {
           position: relative;
           flex-shrink: 0;
-          a {
-            font-size: 20px;
+          >a {
+            font-size: 1.25rem;
             font-weight: 600;
             color: #fff;
           }
@@ -2533,7 +2534,7 @@ body {
             background: #c2243e;
             li {
               text-align: center;
-              a {
+              >a {
                 white-space: nowrap;
                 display: block;
                 padding: 5px 20px;
@@ -2847,7 +2848,7 @@ body {
               .slide-box {
                 background: rgba(0, 0, 0, 0.3);
                 width: 420px;
-                height: 420px;
+                height: 450px;
                 padding: 30px;
                 position: relative;
                 left: -40px;
@@ -3110,6 +3111,7 @@ body {
                     }
                   }
                 }
+                .r_btn{display: none;}
               }
               &.photo {
                 display: none;
@@ -3119,7 +3121,7 @@ body {
               }
               &.photo,
               &.video {
-                .swiper {
+                .mySwiper3  {
                   width: 100%;
                   height: 400px;
                   margin-left: auto;
@@ -3253,6 +3255,7 @@ body {
                     }
                   }
                 }
+                .r_btn{display: none;}
               }
 
               &.on {
@@ -3263,6 +3266,7 @@ body {
         }
       }
     }
+  
   }
   footer {
     font-size: 16px;

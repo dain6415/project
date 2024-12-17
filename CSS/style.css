@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+:root{
+  --main-color:#3594E1;
+  --main-color2:#13afe5;
+  --sub-color:#8D8D8D;
+  --text-color-w:#fff;
+  --text-color-b:#000;
+  --text-color-gray:#cbcbcb;
+
+}
+
+/* 공통css */
+body{color: #333; font-family: 'GmarketSansMedium'; width: 100%; height: 100%;}
+.wrap{}
+img{vertical-align: top;}
+li{list-style: none;}
+a{text-decoration: none;}
+.flex{display: flex;}
+.just-c{justify-content: center;}
+.just-sb{justify-content: space-between;}
+.align-c{align-items: center;}
+.align-b{align-items: baseline;}
+.text-c{text-align: center;}
+.none { display: none;}
+
+/* .container{border: 1px solid #cc5e5e;} */
+
+section{width: 100%; height: 100vh;
+  /* position: fixed; */
+   transform: right center; transition: .35s;
+  }
+body.bg0{background: #000;}
+body.bg1{background: #000;}
+body.bg2{background: #000;}body
+section.on{transform: rotateY(-5deg);}
+
+/* h5{font-size: 28px; margin-bottom: 15px; color: #333;} */
+
+::-webkit-scrollbar{display: none;}
+
+article{overflow: hidden;}
+.item{
+  /* border: 1px solid hsl(323, 100%, 60%); */
+}
+/* .container{border: 5px solid #13afe5;} */
+
+/* menu-icon */
+.menu-icon{display: inline-block; cursor: pointer; position: fixed; left: 10px; top: 10px; background: #000; z-index: 999; padding: 10px;}
+.bar1, .bar2, .bar3{width: 35px; height: 5px; background: #701260; margin: 6px 0; transition: 0.4s;}
+
+.bar1.on{transform: translate(0, 11px) rotate(-45deg); }
+.bar2.on{opacity: 0%;}
+.bar3.on{transform: translate(0, -11px) rotate(45deg); }
+
+
+/* header-------------------- */
+header{background: #5AB5FF; color: #fff; position: fixed; width: 200px; height: 100%; text-align: center;
+  transform-origin: left center; transform: rotateY(100deg); transition: .35s; z-index: 99; opacity: 0;
+display: none;
+}
+header.on{transform: rotateY(15deg); opacity: 1;}
+
+h1{padding: 30px;} h1 img{width: 8cqw;}
+p.imtro{font-size: 20px; padding: 20px; line-height: 2;}
+
+header ul.menu{position: absolute; width: 90%; left: 50%; top: 40%; transform: translateX(-50%);
+  margin: 10px;}
+header ul.menu li{margin: 10px;}
+header ul.menu li a{display: block; border: 1px solid #000; padding: 10px;font-size: 20px;}
+
+/* menu 활성화 */
+header ul.main li.on a{background: #ff7e1c; color: #000; font-weight: bold;}
+
+
+

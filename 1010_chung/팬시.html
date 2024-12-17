@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fancybox 예시</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+</head>
+<body>
+
+<!-- 이미지 목록 -->
+<div class="swiper-slide">
+  <a href="./img/review1.jpg" data-fancybox="review">
+    <img src="./img/review1.jpg" alt="review 1" />
+  </a>
+</div>
+
+<div class="swiper-slide">
+  <a href="./img/review2.jpg" data-fancybox="review">
+    <img src="./img/review2.jpg" alt="review 2" />
+  </a>
+</div>
+
+<div class="swiper-slide">
+  <a href="./img/review3.jpg" data-fancybox="review">
+    <img src="./img/review3.jpg" alt="review 3" />
+  </a>
+</div>
+
+<div class="swiper-slide">
+  <a href="./img/review4.jpg" data-fancybox="review">
+    <img src="./img/review4.jpg" alt="review 4" />
+  </a>
+</div>
+
+<!-- Fancybox JS 파일 (최신 버전 사용) -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+<script>
+  // Fancybox 초기화
+  Fancybox.bind("[data-fancybox='review']", {
+    Toolbar: true, // 툴바 표시
+    Thumbs: {
+      autoStart: true, // 썸네일 자동 표시
+    },
+    animated: true, // 애니메이션 활성화
+    Infinite: true, // 무한 순환
+  });
+</script>
+
+</body>
+</html>

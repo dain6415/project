@@ -15,7 +15,7 @@ body {
 body header {
   width: 100%;
   position: fixed;
-  z-index: 9999;
+  z-index: 99;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2065,9 +2065,6 @@ body footer address {
     position: relative;
     width: 100%;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .mySwiper3, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .mySwiper3 {
-    height: 420px;
-  }
   section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .mySwiper3 .swiper-wrapper, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .mySwiper3 .swiper-wrapper {
     display: flex;
   }
@@ -2076,7 +2073,7 @@ body footer address {
   }
   section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .mySwiper3 .swiper-wrapper .swiper-slide a, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .mySwiper3 .swiper-wrapper .swiper-slide a {
     border: 1px solid #fd1f1f;
-    height: 420px;
+    height: 195px;
     width: 100%;
     position: relative;
     display: block;
@@ -2175,9 +2172,9 @@ body footer address {
     display: block;
     position: relative;
     height: 350px;
+    overflow: hidden;
   }
   section#sect5 > .inner-box .contents-box .contents-wrap .content.news .mySwiper2 .swiper-wrapper .swiper-slide a {
-    overflow: hidden;
     width: 100%;
   }
   section#sect5 > .inner-box .contents-box .contents-wrap .content.news .mySwiper2 .swiper-wrapper .swiper-slide a img {
@@ -2324,8 +2321,8 @@ body footer address {
     position: relative;
     flex-shrink: 0;
   }
-  header nav > ul li.main-menu a {
-    font-size: 20px;
+  header nav > ul li.main-menu > a {
+    font-size: 1.25rem;
     font-weight: 600;
     color: #fff;
   }
@@ -2342,7 +2339,7 @@ body footer address {
   header nav > ul li.main-menu > ul.sub-menu li {
     text-align: center;
   }
-  header nav > ul li.main-menu > ul.sub-menu li a {
+  header nav > ul li.main-menu > ul.sub-menu li > a {
     white-space: nowrap;
     display: block;
     padding: 5px 20px;
@@ -2644,7 +2641,7 @@ body footer address {
   section#sect3 .inner-box .swiper .swiper-wrapper .swiper-slide .slide-box {
     background: rgba(0, 0, 0, 0.3);
     width: 420px;
-    height: 420px;
+    height: 450px;
     padding: 30px;
     position: relative;
     left: -40px;
@@ -2885,19 +2882,22 @@ body footer address {
   section#sect5 > .inner-box .contents-box .contents-wrap .content.review .swiper .swiper-wrapper .swiper-slide:hover a img {
     transform: translate(-50%, -50%) scale(1.2);
   }
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.review .r_btn {
+    display: none;
+  }
   section#sect5 > .inner-box .contents-box .contents-wrap .content.photo {
     display: none;
   }
   section#sect5 > .inner-box .contents-box .contents-wrap .content.video {
     display: none;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .swiper, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .swiper {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .mySwiper3, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .mySwiper3 {
     width: 100%;
     height: 400px;
     margin-left: auto;
     margin-right: auto;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .swiper .swiper-wrapper .swiper-slide, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .swiper .swiper-wrapper .swiper-slide {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .mySwiper3 .swiper-wrapper .swiper-slide, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .mySwiper3 .swiper-wrapper .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #ffa4a4;
@@ -2908,13 +2908,13 @@ body footer address {
     align-items: center;
     overflow: hidden;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .swiper .swiper-wrapper .swiper-slide a, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .swiper .swiper-wrapper .swiper-slide a {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .mySwiper3 .swiper-wrapper .swiper-slide a, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .mySwiper3 .swiper-wrapper .swiper-slide a {
     width: 100%;
     height: 100%;
     position: relative;
     display: block;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .swiper .swiper-wrapper .swiper-slide a img, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .swiper .swiper-wrapper .swiper-slide a img {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .mySwiper3 .swiper-wrapper .swiper-slide a img, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .mySwiper3 .swiper-wrapper .swiper-slide a img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -2924,7 +2924,7 @@ body footer address {
     left: 50%;
     transform: translate(-50%, -50%) scale(1.8);
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .swiper .swiper-wrapper .swiper-slide a p, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .swiper .swiper-wrapper .swiper-slide a p {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .mySwiper3 .swiper-wrapper .swiper-slide a p, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .mySwiper3 .swiper-wrapper .swiper-slide a p {
     width: 100%;
     padding: 15px 20px;
     background: rgba(0, 0, 0, 0.7);
@@ -2939,10 +2939,10 @@ body footer address {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .swiper .swiper-wrapper .swiper-slide:hover a img, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .swiper .swiper-wrapper .swiper-slide:hover a img {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .mySwiper3 .swiper-wrapper .swiper-slide:hover a img, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .mySwiper3 .swiper-wrapper .swiper-slide:hover a img {
     transform: translate(-50%, -50%) scale(2);
   }
-  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .swiper .swiper-wrapper .swiper-slide:hover a p, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .swiper .swiper-wrapper .swiper-slide:hover a p {
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .mySwiper3 .swiper-wrapper .swiper-slide:hover a p, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .mySwiper3 .swiper-wrapper .swiper-slide:hover a p {
     opacity: 1;
   }
   section#sect5 > .inner-box .contents-box .contents-wrap .content.news {
@@ -3005,6 +3005,9 @@ body footer address {
   }
   section#sect5 > .inner-box .contents-box .contents-wrap .content.news .swiper .swiper-wrapper .swiper-slide:hover a p {
     opacity: 1;
+  }
+  section#sect5 > .inner-box .contents-box .contents-wrap .content.news .r_btn {
+    display: none;
   }
   section#sect5 > .inner-box .contents-box .contents-wrap .content.on {
     display: block;

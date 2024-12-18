@@ -1,6 +1,4 @@
-@charset "utf-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
+@charset "UTF-8";
 /* 공통 css */
 * {
   margin: 0;
@@ -9,11 +7,13 @@
   color: #333;
 }
 .container {
-  background: #d1f1ff url("/img/bg2-png.png") no-repeat;
+  height: 100vh;
+  background: rgba(165, 215, 255, 0.87);
+  /* background: #d1f1ff url("../img/bg2-png.png") no-repeat; */
   background-size: cover; background-position: center;
   font-family: "Noto Sans Korean", sans-serif;
   font-weight: 800;
-  font-style: normal; height: calc(130vh - 100px);
+  font-style: normal;
 }
 body{cursor: url(../img/cursor2.png),auto;}
 li {
@@ -128,7 +128,8 @@ figure img {
 }
 
 footer {
-  background: #d7f581;
+  background: #616161;
+  /* background: #d7f581; */
   border-top: 2px solid rgba(0, 0, 0, 0.5);
   padding: 20px 12px;
   font-weight: 100;
@@ -233,7 +234,6 @@ dd {
 
 /* 테블릿----------------------------------------- */
 @media screen and (min-width: 577px) {
-  .container{height: 130vh;}
   .wrap {
     /* width: 760px;margin: auto;  */
     padding: 0px 12px;
@@ -245,7 +245,7 @@ dd {
     width: 20%;
   }
   h2 {
-    font-size: 8vw;
+    font-size: 5rem;
     margin-bottom: 60px;
   }
   p {
@@ -288,6 +288,10 @@ dd {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 14px;
+    border: 1px solid #000;
+  }
+  .cha ul{
+    display: flex;
   }
   /* gap을 주면 아티클이 내려감!!!쌤 도움 필요 */
   .item figure {
@@ -297,9 +301,22 @@ dd {
   .art3 img {
     margin: 0;
   }
+.sns{
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border: 1px solid #000;
+}
+.sns li{
+  width: 40px;
+  height: 40px;
+}
 
   footer {
     height: 200px;
+    color: #fff;
     /* top: 0px; */
 
   }
@@ -311,9 +328,6 @@ dd {
 
 /* pc----------------------------------------- */
 @media screen and (min-width: 980px) {
-  .container{
-    height: 86vh;
-  }
   .wrap {
     padding: 0px 12px 120px;
     width: 1200px;
@@ -323,10 +337,6 @@ dd {
   }
   h1 {
     width: 200px;
-  }
-  h2 {
-    font-size: 50px;
-    margin-bottom: 60px;
   }
   p {
     margin-bottom: 10px;

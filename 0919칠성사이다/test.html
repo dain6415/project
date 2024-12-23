@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .tabContent {
+  opacity: 0; /* 처음에는 보이지 않음 */
+  transition: opacity 0.35s ease; /* 부드러운 전환 효과 */
+  pointer-events: none; /* 클릭 이벤트를 차단 */
+}
+
+#toggle:checked + label + .tabContent {
+  opacity: 1; /* 체크박스가 체크되면 보임 */
+  pointer-events: auto; /* 클릭 이벤트 허용 */
+}
+#wrap{
+            width: 800px;
+            margin: 30px auto;
+        }
+
+        article{
+            width: 200px;
+            height: 200px;
+            margin: 0 0 80px 200px;
+            border: 5px solid orange;
+        }
+
+        article>p{
+            width: 200px;
+            height: 200px;
+            opacity: 0.5;
+        }
+
+        p.one{
+      	    background-color: #0f0;
+            transform: scale(1.2,1.2) skew(10deg);  //1.2(120%) 확대, skew(마름모꼴) 변형 
+        }
+
+        p.two{
+            background-color: pink;
+            transform-origin: right top;  //오른쪽 위를 기준으로 설정
+            transform:scale(1.2) rotate(45deg);  //1.2배 확대, 45도 시계방향회전
+        }
+
+        p.three{
+            background-color: gold;
+            transform: translate(70px,50px);  //원래 위치에서 가로70, 세로50 이동
+        }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="toggle" style="display: none;" />
+<label for="toggle">Show/Hide</label>
+
+<article class="tabContent" id="cider">
+  <div class="box_bg">
+    <div class="summary">
+      <p class="tit">맑고 깨끗한</p>
+      <p class="name">칠성사이다</p>
+      <p class="txt">
+        칠성사이다는 반세기 이상의 역사를 지닌<br />대한민국 No.1
+        오리지널 탄산음료입니다.
+      </p>
+    </div>
+    <div class="btnA">
+      <a href="../brand/chilsungcider/contentsid/613/index.do">브랜드 소개</a>
+      <a href="https://mall.lottechilsung.co.kr/search/showSearch.lecs?query=%EC%B9%A0%EC%84%B1%EC%82%AC%EC%9D%B4%EB%8B%A4" target="_blank">제품 구매하기</a>
+    </div>
+    <p class="img img1">
+      <img src="./img/mainCon_two_tab1_img1.png" alt="" />
+    </p>
+    <p class="img img2">
+      <img src="./img/mainCon_two_tab1_img2.png" alt="" />
+    </p>
+  </div>
+</article>
+
+
+<div id="wrap">
+  <article>
+      <p class="one"></p>
+  </article>
+  <article>
+      <p class="two"></p>
+  </article>  
+  <article>
+      <p class="three"></p>
+  </article>  
+</div>
+</body>
+</html>

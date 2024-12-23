@@ -1,0 +1,531 @@
+@import url(/font/font.css);
+@import url(/reset.css);
+$container: 1024px;
+@mixin flex-align($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
+// ----------------------------------------------------------------------
+body {
+  line-height: 1;
+}
+header {
+  @include flex-align(center);
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  border: 1px solid #efefef;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  transition: 0.35s;
+
+  //안하면 딱딱 들어가고 나오고..하면 슬라이드로 들어갔다 나오기
+  &.on {
+    top: -100px;
+  }
+
+  h1 {
+    position: absolute;
+    left: 40px;
+  }
+  nav {
+    width: 786px;
+    left: 40px;
+    border: 1px solid #ca2424;
+    ul {
+      @include flex-align(space-between);
+      height: 100px;
+    }
+  }
+  ul.gnb {
+    width: 237px;
+    height: 40px;
+    right: 40px;
+    position: absolute;
+    @include flex-align(space-between);
+    li {
+      &.search {
+        background: url(./img/header_sch.png);
+        width: 18px;
+        height: 18px;
+        color: transparent;
+      }
+      &.mall {
+        background: url(./img/logo_chill_mall.png);
+        width: 46px;
+        height: 30px;
+        color: transparent;
+      }
+    }
+  }
+}
+
+section {
+  .sticky {
+    transition: 0.35s;
+  }
+  &#sect1 {
+    height: 100vh;
+    .swiper {
+      .swiper-slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        &.slide1 {
+          background: url(./img/s1.png);
+        }
+        &.slide2 {
+          background: url(./img/s2.png);
+        }
+        &.slide3 {
+          background: url(./img/s3.png);
+        }
+        &.slide4 {
+          background: url(./img/s4.png);
+        }
+        &.slide5 {
+          background: url(./img/s5.jpg);
+        }
+        &.slide6 {
+          background: url(./img/s6.jpg);
+        }
+        &.slide7 {
+          background: url(./img/s7.jpg);
+        }
+        p {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 60px;
+          line-height: 84px;
+          color: #fff;
+          font-family: "NotoSans-Bold";
+        }
+      }
+    }
+    .slide-menu {
+      @include flex-align(center);
+      position: absolute;
+      left: 50%;
+      top: 60%;
+      transform: translateX(-50%);
+      z-index: 99;
+
+      .paging-menu {
+        @include flex-align(center);
+        gap: 16px;
+        li {
+          width: 30px;
+          height: 30px;
+          color: transparent; //글자 말고 이미지가 보이고 싶을 때
+          cursor: pointer;
+          background-image: url(./img/mainRoll_indi.png);
+          &.on {
+            background-image: url(./img/mainRoll_indi_on.png);
+            color: transparent;
+          }
+        }
+      }
+      a.pause {
+        width: 9px;
+        height: 11px;
+        display: inline-block;
+        margin-left: 20px;
+        background-image: url(./img/btn_pause.png);
+        color: transparent;
+        background-repeat: no-repeat;
+        &.active {
+          background: url(./img/btn_play.png);
+          // html에는 없지만 오로지 css와 ja를 위한 것
+        }
+      }
+    }
+    a.arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 99;
+    }
+    a.prev {
+      left: 40px;
+    }
+    a.next {
+      right: 40px;
+    }
+  }
+
+  &#sect2 {
+    width: 100%;
+    padding: 150px;
+    background: #fff;
+    // border: 5px solid #d81f1f;
+    .container {
+      position: relative;
+      margin: auto;
+
+      .summary {
+        // height: 100%;
+        position: sticky;
+        left: 0;
+        top: 0;
+        h2 {
+          font-size: 240px;
+          color: #919191;
+          font-family: "Montserrat-Bold";
+          text-align: center;
+        }
+        p.text {
+          font-size: 24px;
+          color: #919191;
+          padding-top: 30px;
+          font-family: "NotoSans-Light";
+          text-align: center;
+        }
+      }
+      .box {
+        width: $container;
+        margin: auto;
+        border: 1px solid #4921ff;
+        display: flex;
+        justify-content: space-between;
+        ul.itembox_bg {
+          z-index: 999;
+          li.item {
+            position: relative;
+            &.item {
+              margin-top: 40px;
+            }
+            // .item2{margin-top: 150px;}
+            .txt {
+              position: absolute;
+              left: 60px;
+              top: 30px;
+              line-height: 80px;
+              font-size: 20px;
+              letter-spacing: -1px;
+              p.type {
+                font-family: "Montserrat-Light";
+                color: #fff;
+              }
+              p.con {
+                color: #fff;
+                text-align: left;
+                font-family: "NotoSansCJKkr-Medium";
+                span {
+                  font-size: 120px;
+                  font-family: "Montserrat-Bold";
+                }
+              }
+            }
+          }
+        }
+        .bg2 {
+          margin-top: 80px;
+        }
+      }
+    }
+  }
+
+  // 트렌지션 연습하자~~~~****************
+  &#sect3 {
+    border: 2px solid #e61414;
+    width: 100%;
+    padding: 150px 0 50px 0;
+    position: relative;
+    .video_bg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: rgba(39, 145, 115, 0.9);
+    }
+    .sticky {
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      position: sticky;
+      top: 100px;
+      z-index: 1;
+      p.title {
+        height: 170px;
+        letter-spacing: -5px;
+        font-size: 240px;
+        font-family: "Montserrat-Bold";
+      }
+      p.text {
+        font-size: 24px;
+        font-family: "NotoSans-Light";
+        margin-top: 90px;
+      }
+    }
+    .contents {
+      padding-top: 100px;
+      overflow-y: hidden;
+      .tabConDiv {
+        width: $container;
+        height: 470px;
+        margin: auto;
+        padding-top: 80px;
+        position: relative;
+        article {
+          border: 1px solid #000;
+          opacity: 0;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          &.on {
+            display: block;
+            opacity: 1;
+            transition: 0.35s;
+            z-index: 10;
+          }
+          &.on .box_bg .summary .tit {
+            opacity: 1;
+            transform: translateY(0px);
+            transition: 0.35s;
+          }
+          &.on .box_bg .summary .name {
+            opacity: 1;
+            transform: translateY(0px);
+            transition: 0.35s;
+          }
+          &.on .box_bg .summary .txt {
+            opacity: 1;
+            transform: translateY(0px);
+            transition: 0.75s;
+          }
+          &.on .box_bg .btnA {
+            opacity: 1;
+            transform: translateY(0px);
+            transition: 1s;
+          }
+          &.on .box_bg .img1 {
+            opacity: 1;
+            transform: translateY(0px);
+            transition: 2s ease;
+          }
+          &.on .box_bg .img2 {
+            opacity: 1;
+            transform: translateY(0px);
+            transition: 2.5s ease;
+          }
+
+          .box_bg {
+            width: $container;
+            height: 470px;
+            margin: auto;
+            padding: 60px;
+            background: #fff;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .summary {
+              .tit {
+                font-size: 50px;
+                font-family: "Montserrat-ExtraLight", "NotoSans-Thin";
+                letter-spacing: -5px;
+                opacity: 0;
+                transform: translateY(40px);
+              }
+              .name {
+                font-size: 80px;
+                font-family: "NotoSans-Thin";
+                margin-top: 20px;
+                letter-spacing: -5px;
+                opacity: 0;
+                transform: translateY(40px);
+              }
+              .txt {
+                font-size: 18px;
+                font-family: "NotoSansCJKkr-Light";
+                margin-top: 35px;
+                line-height: 28px;
+                opacity: 0;
+                transform: translateY(40px);
+              }
+            }
+            .btnA {
+              opacity: 0;
+              transform: translateY(40px);
+              a {
+                background: #149f5c;
+                font-size: 20px;
+                font-family: "NotoSansCJKkr-Regular";
+                color: #fff;
+                padding: 20px 45px;
+                border-radius: 99px;
+                margin-right: 10px;
+                display: inline-block;
+              }
+            }
+            .img {
+              position: absolute;
+              right: -130px;
+              bottom: 0;
+              transform: translateY(50px);
+              transition: 0.5s;
+            }
+            .img1 {
+              opacity: 0;
+              transform: translateY(40px);
+            }
+            .img2 {
+              opacity: 0;
+              transform: translateY(40px);
+            }
+          }
+        }
+      }
+    }
+    .tab {
+      width: 100%;
+      margin: auto;
+      position: relative;
+      z-index: 999;
+      margin-top: 30px;
+      .tab-line {
+        border-top: 1px solid rgba(255, 255, 255, 0.7);
+        position: relative;
+        span.dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 99px;
+          background: #ffffff;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      ul {
+        display: flex;
+        color: rgba(255, 255, 255, 0.7);
+        padding: 36px 0 20px;
+        justify-content: space-between;
+        font-family: "NotoSansCJKkr-Light";
+        width: $container;
+        margin: auto;
+        li {
+          a {
+            font-size: 20px;
+            &.on {
+              font-family: "NotoSansCJKkr-Medium";
+              color: #fff;
+            }
+          }
+        }
+      }
+      .btnB {
+        text-align: center;
+        a {
+          display: inline-block;
+          padding: 13px 20px;
+          background: #fff;
+          border-radius: 99px;
+          font-size: 16px;
+          font-family: "NotoSansCJKkr-Regular";
+          letter-spacing: -1px;
+        }
+      }
+    }
+  }
+
+  &#sect4 {
+    background: #fff;
+    width: 100%;
+    padding-top: 150px;
+    .container {
+      position: relative;
+      margin: auto;
+      .summary {
+        text-align: center;
+        position: sticky;
+        left: 0;
+        top: 0;
+        h2 {
+          color: #2c997b;
+          height: 170px;
+          letter-spacing: -5px;
+          font-size: 240px;
+          font-family: "Montserrat-Bold";
+        }
+        p.text {
+          font-size: 24px;
+          font-family: "NotoSans-Light";
+          margin-top: 90px;
+        }
+      }
+      .contents {
+        .swiper {
+          .swiper-wrapper {
+            .swiper-slide {
+              display: flex;
+              background: #f0f0f0;
+              .text {
+                text-align: left;
+                p {
+                  letter-spacing: -1px;
+                  &.type {
+                    font-size: 16px;
+                    font-family: 'NotoSans-Bold';
+                  }
+                  &.tit {
+                    font-size: 40px;
+                    margin-top: 25px;
+                    font-family: 'NotoSans-Bold';
+                  }
+                  &.txt {
+                    font-size: 22px;
+                    margin-top: 20px;
+                    font-family: 'NotoSans-Light';
+                  }
+                  &.info {
+                    font-size: 18px;
+                    margin-top: 25px;
+                    font-family: 'NotoSans-Light';
+                    span{
+                      font-family: 'NotoSans-Bold';
+                    }
+                  }
+                }
+                a{
+                  padding: 10px 15px;
+                  background: #333;
+                  color: #fff;
+                  border-radius: 99px;
+                  margin-top: 25px;
+                  font-size: 16px;
+                  font-family: 'NotoSans-Regular';
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

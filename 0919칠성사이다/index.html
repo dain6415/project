@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>칠성사이다</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    linke
+
+    <style>
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <a href="#"><img src="./img/logo.png" alt="" /></a>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="#">기업소개</a></li>
+          <li><a href="#">홍보센터</a></li>
+          <li><a href="#">IR</a></li>
+          <li><a href="#">ESG</a></li>
+          <li><a href="#">인재채용</a></li>
+          <li><a href="#">오픈이노베이션</a></li>
+        </ul>
+      </nav>
+      <ul class="gnb">
+        <li class="search">검색</li>
+        <li>ENG</li>
+        <li>고객지원</li>
+        <li class="mall">칠성물 바로가기</li>
+      </ul>
+    </header>
+
+    <section id="sect1">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide1"></div>
+          <div class="swiper-slide slide2"></div>
+          <div class="swiper-slide slide3"></div>
+          <div class="swiper-slide slide4"></div>
+          <div class="swiper-slide slide5">
+            <p class="summary">
+              언제 어디서나,모든 순간<br />고객의 곁에서 함께합니다.
+            </p>
+          </div>
+          <div class="swiper-slide slide6">
+            <p class="summary">
+              맑고 깨끗한 제품으로,<br />건강한 생태계 환경을 만듭니다.
+            </p>
+          </div>
+          <div class="swiper-slide slide7">
+            <p class="summary">
+              끊임없는 혁신과 변화를 통해,<br />더 큰 미래를 향해 나아갑니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="slide-menu">
+          <ul class="paging-menu">
+            <li class="on">slide1</li>
+            <li>slide2</li>
+            <li>slide3</li>
+            <li>slide4</li>
+            <li>slide5</li>
+            <li>slide6</li>
+            <li>slide7</li>
+          </ul>
+          <a href="#" class="pause">pause </a>
+        </div>
+        <a href="#" class="prev arrow"
+          ><img src="./img/white_rollBtn_prev.png" alt=""
+        /></a>
+        <a href="#" class="next arrow"
+          ><img src="./img/white_rollBtn_next.png" alt=""
+        /></a>
+      </div>
+    </section>
+
+    <section id="sect2">
+      <div class="container">
+        <div class="summary sticky on">
+          <h2>Company</h2>
+          <p class="text">대한민국 대표 음료 기업,롯데칠성음료를 소개합니다.</p>
+        </div>
+
+        <div class="box">
+          <ul class="itembox_bg bg1">
+            <li class="item item1">
+              <img src="./img/mainCon_one_list_bg1.jpg" alt="" />
+              <div class="txt">
+                <p class="type">매출액 (2023.12 기준)</p>
+                <p class="con"><span>3.22</span>조원</p>
+              </div>
+            </li>
+            <li class="item item3">
+              <img src="./img/mainCon_one_list_bg3.jpg" alt="" />
+              <div class="txt">
+                <p class="type">국가고객만족지수 1위 (음료 부문)</p>
+                <p class="con"><span>11</span>년 연속</p>
+              </div>
+            </li>
+          </ul>
+          <ul class="itembox_bg bg2">
+            <li class="item item2">
+              <img src="./img/mainCon_one_list_bg2.jpg" alt="" />
+              <div class="txt">
+                <p class="type">국내 음료 업계(닐슨인덱스 기준)</p>
+                <p class="con"><span>1</span>위</p>
+              </div>
+            </li>
+            <li class="item item4">
+              <img src="./img/mainCon_one_list_bg4.jpg" alt="" />
+              <div class="txt">
+                <p class="type">해외수출</p>
+                <p class="con"><span>70</span>여개 나라</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="sect3">
+      <div class="video_bg">
+        <video src="./img/mainCon_two_bg.mp4" autoplay loop></video>
+      </div>
+      <div class="sticky">
+        <p class="title">Brand</p>
+        <p class="text">
+          반세기 동안 축적해온 노하우를 바탕으로 우수한 품질의 제품을 만듭니다.
+        </p>
+      </div>
+      <div class="contents">
+        <div class="tabConDiv">
+          <article class="tabContent on" id="cider">
+            <div class="box_bg">
+              <div class="summary">
+                <p class="tit on">맑고 깨끗한</p>
+                <p class="name on">칠성사이다</p>
+                <p class="txt">
+                  칠성사이다는 반세기 이상의 역사를 지닌<br />대한민국 No.1
+                  오리지널 탄산음료입니다.
+                </p>
+              </div>
+              <div class="btnA">
+                <a href="../brand/chilsungcider/contentsid/613/index.do"
+                  >브랜드 소개</a
+                >
+                <a
+                  href="https://mall.lottechilsung.co.kr/search/showSearch.lecs?query=%EC%B9%A0%EC%84%B1%EC%82%AC%EC%9D%B4%EB%8B%A4"
+                  target="_blank"
+                  >제품 구매하기</a
+                >
+              </div>
+              <p class="img img1">
+                <img src="./img/mainCon_two_tab1_img1.png" alt="" />
+              </p>
+              <p class="img img2">
+                <img src="./img/mainCon_two_tab1_img2.png" alt="" />
+              </p>
+            </div>
+          </article>
+          <article class="tabContent" id="pepsi">
+            <div class="box_bg">
+              <div class="summary">
+                <p class="tit">짜릿하고 통쾌한 콜라</p>
+                <p class="name">펩시콜라</p>
+                <p class="txt">
+                  펩시는 세계에서 가장 아이코닉하고 전세계적으로 인정 받는
+                  <br />브랜드 중 하나입니다.
+                </p>
+              </div>
+              <div class="btnA">
+                <a href="../brand/pepsicola/contentsid/615/index.do"
+                  >브랜드 소개</a
+                >
+                <a
+                  href="https://mall.lottechilsung.co.kr/search/showSearch.lecs?query=%ED%8E%A9%EC%8B%9C%EC%BD%9C%EB%9D%BC"
+                  target="_blank"
+                  >제품 구매하기</a
+                >
+              </div>
+              <p class="img img1"><img src="./img/coca (1).png" alt="" /></p>
+              <p class="img img2"><img src="./img/coca (2).png" alt="" /></p>
+            </div>
+          </article>
+          <article class="tabContent" id="Del">
+            <div class="box_bg">
+              <div class="summary">
+                <p class="tit">대한민국 대표 주스 브랜드</p>
+                <p class="name">델몬트</p>
+                <p class="txt">
+                  델몬트는과즙 100%주스부터 저렴한 가격에 누구나 즐길 수 있는
+                  <br />저과즙 드링크팩 제품까지 전 세대를 아우르는 다양한
+                  제품군을 <br />보유하고 있습니다.
+                </p>
+              </div>
+              <div class="btnA">
+                <a href="../brand/delmonte/contentsid/622/index.do"
+                  >브랜드 소개</a
+                >
+                <a
+                  href="https://mall.lottechilsung.co.kr/search/showSearch.lecs?query=%EB%8D%B8%EB%AA%AC%ED%8A%B8"
+                  target="_blank"
+                  >제품 구매하기</a
+                >
+              </div>
+              <p class="img img1"><img src="./img/del (1).png" alt="" /></p>
+              <p class="img img2"><img src="./img/del (2).png" alt="" /></p>
+            </div>
+          </article>
+          <article class="tabContent" id="Milkis">
+            <div class="box_bg">
+              <div class="summary">
+                <p class="tit">새로운 느낌, 우유와 탄산의 만남</p>
+                <p class="name">밀키스</p>
+                <p class="txt">
+                  밀키스는 우유의 부드러움과 탄산의 상쾌함 그리고 달콤함이
+                  자연스럽게 <br />어우러지는 맛의 대표적인 탄산음료 입니다.
+                </p>
+              </div>
+              <div class="btnA">
+                <a href="../brand/milkis/contentsid/623/index.do"
+                  >브랜드 소개</a
+                >
+                <a
+                  href="https://mall.lottechilsung.co.kr/search/showSearch.lecs?query=%EB%B0%80%ED%82%A4%EC%8A%A4"
+                  target="_blank"
+                  >제품 구매하기</a
+                >
+              </div>
+              <p class="img img1"><img src="./img/milkiss (1).png" alt="" /></p>
+              <p class="img img2"><img src="./img/milkiss (2).png" alt="" /></p>
+            </div>
+          </article>
+          <article class="tabContent" id="cantata">
+            <div class="box_bg">
+              <div class="summary">
+                <p class="tit">원두커피에서 찾은 최적의 밸런스</p>
+                <p class="name">칸타타</p>
+                <p class="txt">
+                  칸타타는 언제 어디서나 즐길 수 있는 국내 최초 프리미엄 원두
+                  캔커피입니다.
+                </p>
+              </div>
+              <div class="btnA">
+                <a href="../brand/cantata/contentsid/624/index.do"
+                  >브랜드 소개</a
+                >
+                <a
+                  href="https://mall.lottechilsung.co.kr/search/showSearch.lecs?query=%EC%B9%B8%ED%83%80%ED%83%80"
+                  target="_blank"
+                  >제품 구매하기</a
+                >
+              </div>
+              <p class="img img1"><img src="./img/kantata (1).png" alt="" /></p>
+              <p class="img img2"><img src="./img/kantata (2).png" alt="" /></p>
+            </div>
+          </article>
+          <article class="tabContent" id="hot">
+            <div class="box_bg">
+              <div class="summary">
+                <p class="tit">대한민국 No.1 에너지드링크</p>
+                <p class="name">핫식스</p>
+                <p class="txt">
+                  핫식스는 청춘과 열정, 젊음을 대표하는 국내 최초의 에너지
+                  음료입니다.
+                </p>
+              </div>
+              <div class="btnA">
+                <a href="../brand/hot6/contentsid/625/index.do">브랜드 소개</a>
+                <a
+                  href="https://mall.lottechilsung.co.kr/search/showSearch.lecs?query=%ED%95%AB%EC%8B%9D%EC%8A%A4"
+                  target="_blank"
+                  >제품 구매하기</a
+                >
+              </div>
+              <p class="img img1"><img src="./img/hot (1).png" alt="" /></p>
+              <p class="img img2"><img src="./img/hot (2).png" alt="" /></p>
+            </div>
+          </article>
+          <article class="tabContent" id="isis">
+            <div class="box_bg">
+              <div class="summary">
+                <p class="tit">
+                  핑크빛 생기에너지가 가득, <br />천연 약 알칼리수
+                </p>
+                <p class="name">아이시스 8.0</p>
+                <p class="txt">
+                  아이시스8.0은 평균 pH8.0의 천연 약 알칼리수 먹는샘물
+                  브랜드입니다.
+                </p>
+              </div>
+              <div class="btnA">
+                <a href="../brand/icis/contentsid/627/index.do">브랜드 소개</a>
+                <a
+                  href="https://mall.lottechilsung.co.kr/search/showSearch.lecs?query=%EC%95%84%EC%9D%B4%EC%8B%9C%EC%8A%A48.0"
+                  target="_blank"
+                  >제품 구매하기</a
+                >
+              </div>
+              <!-- 20220809 -->
+              <p class="img img1"><img src="./img/isis (2).png" alt="" /></p>
+              <p class="img img2"><img src="./img/isis (1).png" alt="" /></p>
+              <!-- // 20220809 -->
+            </div>
+          </article>
+          <article class="tabContent" id="Let">
+            <div class="box_bg">
+              <div class="summary">
+                <p class="tit">대한민국 NO.1 캔커피</p>
+                <p class="name">레쓰비</p>
+                <p class="txt">
+                  Let’s be together에서 시작된 브랜드명처럼 레쓰비(Let’sBe)는
+                  달콤한 <br />커피가 필요한 순간, 언제 어디서든 소비자들의 곁을
+                  늘 변함없이 지켜왔습니다.
+                </p>
+              </div>
+              <div class="btnA">
+                <a href="../brand/letsbe/contentsid/628/index.do"
+                  >브랜드 소개</a
+                >
+                <a
+                  href="https://mall.lottechilsung.co.kr/search/showSearch.lecs?query=%EB%A0%88%EC%93%B0%EB%B9%84"
+                  target="_blank"
+                  >제품 구매하기</a
+                >
+              </div>
+              <p class="img img1"><img src="./img/resb (1).png" alt="" /></p>
+              <p class="img img2"><img src="./img/resb (2).png" alt="" /></p>
+            </div>
+          </article>
+          <article class="tabContent" id="first">
+            <div class="box_bg">
+              <div class="summary">
+                <p class="tit">부드러운 소주의 대명사</p>
+                <p class="name">처음처럼</p>
+                <p class="txt">
+                  '처음처럼'은 국내 소주시장의 저도주 트렌드를<br />이끌어
+                  나가는 선두주자 역할을 하고 있습니다.
+                </p>
+              </div>
+              <div class="btnA">
+                <a href="../brand/soju/contentsid/639/index.do">브랜드 소개</a>
+                <!-- <a href="https://mall.lottechilsung.co.kr/search/showSearch.lecs?query=%EB%A0%88%EC%93%B0%EB%B9%84" target="_blank">제품 구매하기</a> -->
+              </div>
+              <p class="img img1"><img src="./img/first (1).png" alt="" /></p>
+              <p class="img img2"><img src="./img/first (2).png" alt="" /></p>
+            </div>
+          </article>
+          <article class="tabContent" id="kloud">
+            <div class="box_bg">
+              <div class="summary">
+                <p class="tit">
+                  물 타지 않았다!<br />한국을 대표하는 100% 리얼맥주
+                </p>
+                <p class="name">클라우드</p>
+                <p class="txt">
+                  클라우드가 담고자 한 맥주의 본질은 100% 순수한 맥주, 그
+                  자체입니다.
+                </p>
+              </div>
+              <div class="btnA">
+                <a href="../brand/kloud/contentsid/640/index.do">브랜드 소개</a>
+                <!-- <a href="https://mall.lottechilsung.co.kr/search/showSearch.lecs?query=%EB%A0%88%EC%93%B0%EB%B9%84" target="_blank">제품 구매하기</a> -->
+              </div>
+              <p class="img img1"><img src="./img/kloud (1).png" alt="" /></p>
+              <p class="img img2"><img src="./img/kloud (2).png" alt="" /></p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="tab">
+        <div class="tab-line">
+          <span class="dot"></span>
+        </div>
+        <ul class="product_menu">
+          <li><a href="#cider" class="on">칠성사이다</a></li>
+          <li><a href="#pepsi">펩시콜라</a></li>
+          <li><a href="#Del">델몬트</a></li>
+          <li><a href="#Milkis">밀키스</a></li>
+          <li><a href="#cantata">칸타타</a></li>
+          <li><a href="#hot">핫식스</a></li>
+          <li><a href="#isis">아이스스8.0</a></li>
+          <li><a href="#Let">레쓰비</a></li>
+          <li><a href="#first">처음처럼</a></li>
+          <li><a href="#kloud">클라우드</a></li>
+        </ul>
+
+        <div class="btnB">
+          <a>대표 브랜드 보기</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sect4">
+      <div class="container">
+        <div class="summary sticky on">
+          <h2>Recruit</h2>
+          <p class="text">
+            사랑, 자유, 그리고 풍요로운 삶을 함께 만들어갈 인재를 기다립니다.
+          </p>
+        </div>
+        <div class="contents">
+          <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="text">
+                  <p class="type">선배들의 이야기</p>
+                  <p class="tit">글로벌 기업 롯데칠성의 역군</p>
+                  <p class="txt">2022년 입사</p>
+                  <p class="info">
+                    전략기획부문 해외사업팀 <span>조원호</span>
+                  </p>
+                  <a href="#">자세히보기</a>
+                </div>
+                <div class="img">
+                  <img src="./img/202311290500392410.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="text">
+                  <p class="type">선배들의 이야기</p>
+                  <p class="tit">롯데칠성과 함께 성장하는 '나'</p>
+                  <p class="txt">2022년 입사</p>
+                  <p class="info">
+                    CM2팀&nbsp;&nbsp;주스생수담당&nbsp;&nbsp;<span>김도현</span>
+                  </p>
+                  <a href="#">자세히보기</a>
+                  <div class="img">
+                    <img src="./img/202311280344311640.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="text">
+                  <p class="type">선배들의 이야기</p>
+                  <p class="tit">칠성사이다처럼 변함없는 사람</p>
+                  <p class="txt">2021년 입사</p>
+                  <p class="info">
+                    재경&nbsp;&nbsp;법인회계팀&nbsp;&nbsp;<span>조소현</span>
+                  </p>
+                  <a href="#">자세히보기</a>
+                </div>
+              </div>
+              <div class="img">
+                <img src="./img/202312051130340500.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- header + section 투명도 -->
+    <script>
+      // Y축의 위치값을 구하라
+      let prevScrollTop = 0;
+      let header = document.querySelector("header");
+
+      const sectionElems = document.querySelectorAll("section");
+
+      window.addEventListener("scroll", function () {
+        let currentScrollTop = window.pageYOffset;
+
+        //현재보다 아래로 내려가면 header가 안 보이고
+        if (currentScrollTop > prevScrollTop) {
+          //스크롤을 아래로 내릴 때
+          header.style.top = "-100px";
+        } else {
+          header.style.top = 0;
+        }
+
+        //위로 올리면 header 보이기
+        //현재 스크롤 위치를 이전 스크롤값에 저장한다
+        prevScrollTop = currentScrollTop;
+
+        // ---------------------------------------------------
+        sectionElems.forEach(function (section) {
+          const sticky = section.querySelector(".sticky");
+          const sectionTop = section.offsetTop; //각 섹션의 시작위치 구하기
+          // console.log(sectionTop)
+          const threshold = sectionTop + 300; //각 섹션에서 얼마나 떨어지면(아래로 내려가면-)
+
+          //sticky가 존재하면 실행해줘
+          if (sticky) {
+            if (currentScrollTop > threshold) {
+              sticky.style.opacity = "0";
+            } else {
+              sticky.style.opacity = "1";
+            }
+          } else {
+          }
+        });
+      });
+    </script>
+
+    <!-- sect1 -->
+    <script>
+      //slide
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+
+      //우담라이팅이 베이슨데 이름이나 상황이 달라서 바꿔주기----------------------------------------
+      var swiper1 = new Swiper(".mySwiper", {
+        speed: 1000, //변환속도 지정
+        loop: true, //루프로 돌아가지만 깨져서 1번 돌면 이상해짐
+        autoplay: {
+          //반복
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+
+      const liElems = document.querySelectorAll("ul.paging-menu li");
+
+      // 슬라이드를 autoplay 상황에서 몇번째를 보이고 있는 건지 확인
+      swiper1.on("slideChange", function () {
+        //해당 번째 인덱스값을 get
+        let activeIdx = swiper1.realIndex;
+
+        liElems.forEach(function (item) {
+          item.classList.remove("on");
+        });
+        liElems[activeIdx].classList.add("on");
+      });
+
+      // console.log(liElems)
+      //모든 li를 대상으로~  각각 li요소
+      liElems.forEach(function (liElem, idx) {
+        // console.log(liElems, idx);
+
+        //클릭했을 때 - 각각 li
+        liElem.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          // 모든 li -
+          liElems.forEach(function (item) {
+            item.classList.remove("on");
+          });
+          // 각각 활성화
+          liElem.classList.add("on");
+          //그래서 slideToLoop가 나옴 그럼 깨지던 루프가 정상적으로 됨
+          swiper1.slideToLoop(idx, 500);
+        });
+      });
+
+      // play 버튼 스탑 = '토글'로----------------------------
+      let sw = 0;
+      document.querySelector("a.pause").addEventListener("click", function (e) {
+        e.preventDefault();
+        this.classList.toggle("active");
+        sw = this.classList.contains("active"); //active 클래스가 존재
+        if (sw) {
+          swiper1.autoplay.stop();
+        } else {
+          swiper1.autoplay.start();
+        }
+      });
+
+      // 다음으로 갔다 전으로 갔다 하하하하-------------------------------------------------
+      document.querySelector("a.prev").addEventListener("click", function (e) {
+        e.preventDefault();
+        swiper1.slidePrev();
+      });
+      document.querySelector("a.next").addEventListener("click", function (e) {
+        e.preventDefault();
+        swiper1.slideNext();
+      });
+    </script>
+
+    <!-- sect3 tab -->
+    <script>
+      $(".product_menu li a").click(function (e) {
+        e.preventDefault();
+        let href = $(this).attr("href");
+
+        $(".product_menu li a").removeClass("on");
+        $(this).addClass("on");
+
+        $("article").removeClass("on");
+        $(href).addClass("on");
+
+        //--------------------------------------------------------
+        dotAni($(this));
+      });
+
+      //.dot가 사이다 위에서 시작하게
+      dotAni($(".product_menu li a").first());
+
+      //
+      $(window).resize(function () {
+        dotAni($(".product_menu li a").first());
+      });
+
+      //.dot 움직이기
+      function dotAni(active) {
+        let left = $(active).offset().left;
+        let wid = $(active).width() / 2;
+        $(".dot")
+          .stop()
+          .animate({ left: left + wid - 5 });
+      }
+    </script>
+  </body>
+</html>

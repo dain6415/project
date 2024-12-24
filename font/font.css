@@ -62,27 +62,27 @@
   src: url(./font_file/NotoSans-Black.woff);
 }
 @font-face {
-  font-family: NotoSans-Bold;
+  font-family: 'NotoSans-Bold';
   src: url(./font_file/NotoSans-Bold.woff);
 }
 @font-face {
-  font-family: NotoSans-Light;
+  font-family: 'NotoSans-Light';
   src: url(./font_file/NotoSans-Light.woff);
 }
 @font-face {
-  font-family: NotoSans-Medium;
+  font-family: 'NotoSans-Medium';
   src: url(./font_file/NotoSans-Medium.woff);
 }
 @font-face {
-  font-family: NotoSans-Regular;
+  font-family: 'NotoSans-Regular';
   src: url(./font_file/NotoSans-Regular.woff);
 }
 @font-face {
-  font-family: NotoSans-Thin;
+  font-family: 'NotoSans-Thin';
   src: url(./font_file/NotoSans-Thin.woff);
 }
 @font-face {
-  font-family: NotoSansCJKkr-Light;
+  font-family:' NotoSansCJKkr-Light';
   src: url(./font_file/NotoSansCJKkr-Light.woff);
 }
 @font-face {

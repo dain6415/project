@@ -1,69 +1,46 @@
-* { box-sizing: border-box; }
-
-/* force scrollbar */
-html { overflow-y: scroll; }
-
-body {
-  font-family: sans-serif;
+@font-face {
+  font-family: "LeeSeoyun";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-
-/* ---- isotope ---- */
-
-.grid {
+section {
   width: 100%;
-  background: #DDD;
+  height: 100vh;
+  background: #c4e9ff;
 }
-
-/* clear fix */
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-/* ---- .grid-item ---- */
-
-.grid-item {
-  width:calc(33.333% - 12px) ;
-  margin-bottom: 20px;
-  float: left;
-}
-/* .grid-item{
-  width: 46.3333;
-} */
-
-.grid-item img {
-  width: 100%;
-  display: block;
-}
-a{text-decoration: none; color:rgb(145, 145, 145)}
-ul{display: flex; gap: 10px; width: 100%; justify-content: center; 
-  padding: 0;}
-li{list-style: none;}
-ul li a.on{color: #000000; font-weight: 900;}
-.grid-item{overflow: hidden;}
-.grid-item .summary{
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: #0000009c;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  color: azure;
+section .center {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  visibility: hidden;
-  transform: opacity .3s ease, visibility .3s ease;
-
 }
-
-.grid-item:hover .summary{
-  opacity: 1;
-  visibility: visible;
+section .center .img__box {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  border-radius: 35%;
+  overflow: hidden;
 }
-h1{width: 100%; text-align: center;}
-h4{font-size: 30px;}
-
+section .center .img__box img {
+  width: 100%;
+}
+section h2 {
+  padding-top: 20px;
+  font-family: "LeeSeoyun";
+  font-size: 2rem;
+  text-align: center;
+}
+section .sns {
+  margin-top: 20px;
+}
+section .sns ul {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border: 1px solid #000;
+}
+section .sns ul li {
+  width: 40px;
+  height: 40px;
+}/*# sourceMappingURL=style.css.map */

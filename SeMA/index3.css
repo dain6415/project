@@ -1,0 +1,178 @@
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 20px 40px;
+    transition: 0.5s;
+    background: #ffffff;
+    box-shadow: 0 1px 10px var(--shadow-b);
+  }
+  header .inner {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .inner h1 {
+    width: 20%;
+    height: 100%;
+  }
+  header .inner h1 img {
+    height: 100%;
+  }
+  header .inner nav {
+    width: 50%;
+    display: none;
+  }
+  header .inner nav ul li {
+    flex: 1;
+    text-align: center;
+  }
+  header .inner nav ul li a {
+    color: #fff;
+  }
+  header .inner .right-menu {
+    width: 20%;
+  }
+  header .inner .right-menu ul {
+    gap: 20px;
+    justify-content: flex-end;
+  }
+  header .inner .right-menu ul li a {
+    color: #fff;
+  }
+  header .inner .right-menu ul li a i {
+    color: #fff;
+  }
+}
+@media only screen and (min-width: 601px) {
+  header {
+    padding: 20px 40px;
+    transition: 0.5s;
+    background: #fff;
+  }
+  header .inner {
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .inner h1 {
+    width: 20%;
+    height: 100%;
+  }
+  header .inner h1 img {
+    height: 100%;
+  }
+  header .inner nav {
+    width: 50%;
+    display: none;
+  }
+  header .inner nav > ul li.main-menu {
+    flex: 1;
+    text-align: center;
+    position: relative;
+  }
+  header .inner nav > ul li.main-menu:hover > a {
+    background: #d6a9a9;
+  }
+  header .inner nav > ul li.main-menu > a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+  header .inner nav ul.sub-menu {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 65px;
+    display: none;
+  }
+  header .inner nav ul.sub-menu li > a {
+    display: block;
+    color: #fff;
+    padding: 6px;
+    font-size: 16px;
+    border: 1px solid #828080;
+  }
+  header .inner nav ul.sub-menu li > a:hover {
+    color: #333;
+  }
+  header .inner nav ul.sub-menu li > a:hover::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 200px;
+    background: #fff;
+    z-index: -1;
+  }
+  header .inner .right-menu {
+    width: 20%;
+  }
+  header .inner .right-menu ul {
+    gap: 20px;
+    justify-content: flex-end;
+  }
+  header .inner .right-menu ul li a {
+    color: #fff;
+  }
+  header .inner .right-menu ul li a i {
+    color: #fff;
+  }
+  .wrap {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .wrap .container {
+    width: 100%;
+    max-width: 1700px;
+    margin-top: 100px;
+  }
+  .wrap .container .summary {
+    font-size: 20px;
+  }
+  .wrap .container .flex {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  .wrap .container .flex .item1 {
+    width: 30%;
+    border: 1px solid #000;
+  }
+  .wrap .container .flex .item2 {
+    width: 70%;
+  }
+  .wrap .container .flex .item2 h2 {
+    width: 70%;
+    margin: 20px 0;
+    font-size: 40px;
+    font-weight: 500;
+    padding-bottom: 10px;
+  }
+  .wrap .container .flex .item2 p {
+    padding-bottom: 10px;
+  }
+  .wrap .container .flex p {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: justify;
+  }
+  .wrap .container .flex p.pn {
+    color: var(--gray2);
+  }
+  .wrap .container .flex p.pnn {
+    color: #333;
+    padding-bottom: 20px;
+  }
+  .wrap .art-bg {
+    width: 100%;
+    height: 50vh;
+    background: url(../imgs/sect1/sect1_1.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 20px;
+  }
+}/*# sourceMappingURL=index3.css.map */

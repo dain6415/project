@@ -16,10 +16,12 @@ p {
 }
 
 body {
+  min-width: 1600px;
   font-size: 10px;
   font-family: "SF Pro Display", sans-serif;
   overflow-x: hidden;
   position: relative;
+  background: #000;
 }
 body #loding_screen {
   display: none;
@@ -593,4 +595,168 @@ body main section.sect5 .explanation .info .flex ul li span {
   background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
+}
+body main section.sect_menu {
+  background: #151515;
+  padding: 160px 0;
+}
+body main section.sect_menu h2 {
+  width: 1200px;
+  margin: auto;
+  margin-bottom: 70px;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+body main section.sect_menu .menus {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+}
+body main section.sect_menu .menus p {
+  font-size: 0.75rem;
+  color: #666;
+}
+body main section.sect_menu .menus ul {
+  margin-top: 20px;
+}
+body main section.sect_menu .menus ul li {
+  color: #fdfdfd;
+  font-weight: 500;
+  font-size: 0.75rem;
+  margin-bottom: 13px;
+}
+body main section.sect_menu .menus .ipad {
+  padding-right: 88px;
+}
+body main section.sect_menu .menus .ipad li {
+  margin-bottom: 11px;
+  font-size: 1.5rem;
+}
+body main section.sect_menu .menus .ipad li.last {
+  margin-bottom: 20px;
+}
+body main section.sect_menu .menus .ipad li.small {
+  font-size: 0.75rem;
+}
+body main section.sect_menu .menus .shopping {
+  padding-right: 44px;
+}
+body footer {
+  background: #222;
+}
+body footer .footer__inner {
+  width: 1200px;
+  margin: auto;
+}
+body footer .footer__inner .sosumi {
+  padding-top: 20px;
+  padding-bottom: 7px;
+  font-size: 0.6rem;
+  color: #888;
+}
+body footer .footer__inner .sosumi li {
+  padding-bottom: 10px;
+  line-height: 1.2;
+}
+body footer .footer__inner .sosumi ol {
+  padding-left: 16px;
+}
+body footer .footer__inner .sosumi ol li {
+  position: relative;
+  list-style: decimal;
+}
+body footer .footer__inner .site__map {
+  border-top: 1px solid #666;
+}
+body footer .footer__inner .site__map .map_order {
+  padding: 17px 0;
+}
+body footer .footer__inner .site__map .map_order ul {
+  display: flex;
+  align-items: center;
+}
+body footer .footer__inner .site__map .map_order ul li {
+  color: #aaa;
+  font-size: 0.6rem;
+}
+body footer .footer__inner .site__map .map_order ul li:nth-child(1) a {
+  display: flex;
+  align-items: center;
+}
+body footer .footer__inner .site__map .map_order ul li:nth-child(1) .logoImg {
+  width: 14px;
+}
+body footer .footer__inner .site__map .map_order ul li:nth-child(1) .logoImg img {
+  width: 100%;
+  filter: invert(0.7);
+}
+body footer .footer__inner .site__map .map_order ul li i {
+  padding: 0 5px;
+  font-size: 10px;
+  color: #777;
+}
+body footer .footer__inner .site__map nav.map > ul {
+  display: flex;
+}
+body footer .footer__inner .site__map nav.map > ul .category {
+  flex: 1;
+}
+body footer .footer__inner .site__map nav.map > ul .category h5 {
+  font-size: 0.6rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+body footer .footer__inner .site__map nav.map > ul .category ul {
+  margin-bottom: 20px;
+}
+body footer .footer__inner .site__map nav.map > ul .category ul li {
+  color: #aaa;
+  margin-bottom: 10px;
+  font-size: 0.6rem;
+}
+body footer .footer__inner .site__map nav.map > ul .category ul li:hover a {
+  text-decoration: underline;
+}
+body footer .footer__inner .shop {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+body footer .footer__inner .shop p {
+  font-size: 0.6rem;
+  color: #666;
+}
+body footer .footer__inner .shop p a {
+  color: rgb(0, 113, 227);
+  text-decoration: underline;
+}
+body footer .footer__inner .legal {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #666;
+  color: #666;
+}
+body footer .footer__inner .legal .copy {
+  font-size: 0.6rem;
+  margin-right: 20px;
+}
+body footer .footer__inner .legal ul {
+  color: #aaa;
+  display: flex;
+}
+body footer .footer__inner .legal ul li:not(:last-child) {
+  padding-right: 10px;
+  margin-right: 10px;
+  color: #aaa;
+  border-right: 1px solid #666;
+}
+body footer .footer__inner .legal ul a {
+  font-size: 0.6rem;
+}
+body footer .footer__inner .legal .country {
+  float: right;
+  color: #aaa;
+  font-size: 0.6rem;
 }/*# sourceMappingURL=index.css.map */

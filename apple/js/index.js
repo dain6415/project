@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.style.overflow = 'hidden';
 
   setTimeout(() => {
+    console.log("로딩 화면 종료 시작"); 
     loding.style.opacity = "1"; 
     loding.style.transition = "opacity 0.3s"; 
 
@@ -18,17 +19,20 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.style.overflow = "auto";
       mainContents.style.display = "block";
       
+      console.log("로딩 화면 종료 완료, 영상 준비 중");
+
       title.style.opacity = "0";
       title.style.top = "25%";
       buy.style.opacity = "0";
       buy.style.bottom = "25%";
 
-      video.play();
-      video.playbackRate = 1.5;
-
+      video.addEventListener("loadeddata", () => {
+        video.play();
+        // video.playbackRate = 1.5; 
+      });
       setTimeout(() => {
-        title.style.transition = ".5s ease";
-        buy.style.transition = ".5s ease";
+        title.style.transition = ".75s ease";
+        buy.style.transition = ".75s ease";
     
         title.style.opacity = "1";
         title.style.top = "22%";
@@ -36,8 +40,18 @@ document.addEventListener("DOMContentLoaded", () => {
         buy.style.bottom = "28%";
       }, 3000);
 
-    }, 300); 
+    }, 3000); 
   }, 3000);
+
+  function startAnimation() {
+    title.style.transition = ".75s ease";
+    buy.style.transition = ".75s ease";
+
+    title.style.opacity = "1";
+    title.style.top = "22%";
+    buy.style.opacity = "1";
+    buy.style.bottom = "28%";
+  }
   
   // 스크롤을 내렸다가 올라와도 다시 실행(반복)
   // window.addEventListener("scroll", () => {

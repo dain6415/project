@@ -28,7 +28,7 @@ header ul {
   width: 40%;
   display: flex;
 }
-header ul li.h-menu {
+header ul > li.h-menu {
   flex: 1;
   display: block;
   width: 100%;
@@ -36,28 +36,30 @@ header ul li.h-menu {
   text-align: center;
   font-size: 17px;
   font-weight: 600;
+  line-height: 100px;
 }
-header ul li.h-menu ul.gnb_on {
+header ul > li.h-menu ul.gnb_on {
   width: 100%;
   flex-direction: column;
   position: absolute;
   left: 0;
-  top: 60px;
+  top: 100%;
   background: #fff;
   border-top: 5px solid #f47a20;
   padding: 0 10px;
   text-align: left;
 }
-header ul li.h-menu ul.gnb_on li {
+header ul > li.h-menu ul.gnb_on li {
   display: block;
   padding: 10px;
   font-size: 11px;
   color: #535353;
+  line-height: 25px;
 }
-header ul li.h-menu ul.gnb_on li:not(:last-child) {
+header ul > li.h-menu ul.gnb_on li:not(:last-child) {
   border-bottom: 1px solid #e2e2e2;
 }
-header ul li.h-menu ul.gnb_on li:hover {
+header ul > li.h-menu ul.gnb_on li:hover {
   color: #f47a20;
 }
 

@@ -25,8 +25,7 @@ header {
   ul {
     width: 40%;
     display: flex;
-
-    li.h-menu {
+    >li.h-menu {
       flex: 1;
       display: block;
       width: 100%;
@@ -34,12 +33,13 @@ header {
       text-align: center;
       font-size: 17px;
       font-weight: 600;
+      line-height: 100px;
       ul.gnb_on {
         width: 100%;
         flex-direction: column;
         position: absolute;
         left: 0;
-        top: 60px;
+        top: 100%;
         background: #fff;
         border-top: 5px solid #f47a20;
         padding: 0 10px;
@@ -50,6 +50,7 @@ header {
           padding: 10px;
           font-size: 11px;
           color: #535353;
+          line-height: 25px;
         }
         li:not(:last-child) {
           border-bottom: 1px solid #e2e2e2;

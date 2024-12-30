@@ -1,5 +1,5 @@
 @import url(/font/font.css);
-@import url(/reset.css);
+@import url(../reset.css);
 @mixin flex-align($justify) {
   display: flex;
   justify-content: $justify;

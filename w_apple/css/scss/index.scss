@@ -1,4 +1,15 @@
 @import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+@mixin flex-c($justify: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+@mixin po-c($top: 50%, $left: 50%, $x: -50%, $y: -50%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate($x, $y);
+}
 $blue_color: rgb(0, 113, 227);
 $blue_color_hover: rgb(0, 95, 190);
 $gray1_color: #151515;
@@ -13,17 +24,6 @@ $gray9_color: #fdfdfd;
 $white: #fff;
 $black: #000;
 $footer_bg: #222;
-@mixin flex-c($justify: center) {
-  display: flex;
-  justify-content: $justify;
-  align-items: center;
-}
-@mixin po-c($top: 50%, $left: 50%, $x: -50%, $y: -50%) {
-  position: absolute;
-  top: $top;
-  left: $left;
-  transform: translate($x, $y);
-}
 * {
   margin: 0;
   padding: 0;

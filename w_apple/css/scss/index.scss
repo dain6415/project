@@ -45,21 +45,21 @@ body {
   overflow-x: hidden;
   position: relative;
   background: $black;
-  #loding_screen {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: $black;
-    @include flex-c();
-    z-index: 999;
-    img {
-      filter: invert(1);
-      width: 150px;
-    }
-  }
+  // #loding_screen {
+  //   display: none;
+  //   width: 100vw;
+  //   height: 100vh;
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   background: $black;
+  //   @include flex-c();
+  //   z-index: 999;
+  //   img {
+  //     filter: invert(1);
+  //     width: 150px;
+  //   }
+  // }
   main {
     // display: none;
     width: 100%;

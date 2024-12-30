@@ -23,23 +23,6 @@ body {
   position: relative;
   background: #000;
 }
-body #loding_screen {
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-body #loding_screen img {
-  filter: invert(1);
-  width: 150px;
-}
 body main {
   width: 100%;
 }

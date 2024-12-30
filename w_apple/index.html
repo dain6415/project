@@ -13,12 +13,9 @@
     <link rel="stylesheet" href="/reset.css" />
   </head>
   <body>
-    <header>
-      <h1>iPad</h1>
-    </header>
-    <div id="loding_screen">
+    <!-- <div id="loding_screen">
       <img src="./img/logo.png" alt="" />
-    </div>
+    </div> -->
     <main>
       <section class="sect1">
         <div class="sect__inner">
@@ -27,7 +24,9 @@
             <p class="typography">불가능이란 얇다.</p>
           </div>
           <div class="video_box">
-            <video src="./img/large_2x(4).mp4" autoplay muted></video>
+            <video autoplay muted preload="auto">
+              <source src="./img/large_2x(4).mp4">
+            </video>
           </div>
           <div class="buy">
             <a href="https://www.apple.com/kr/shop/buy-ipad/ipad-pro"

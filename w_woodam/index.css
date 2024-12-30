@@ -9,17 +9,8 @@ a {
   color: inherit;
 }
 
-body {
-  color: #333;
-}
-
 li {
   list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 img {
@@ -144,8 +135,6 @@ body section.sect1 .visual .visual_title dd.strong {
 body section.sect1 .visual .visual_title dd em {
   color: #f47a20;
   font-style: normal;
-}
-body section.sect1 .visual .visual_title dd em u {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 16px;

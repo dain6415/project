@@ -307,7 +307,6 @@ section#sect3::after {
   background: rgba(39, 145, 115, 0.9);
 }
 section#sect3 .sticky {
-  border: 1px solid #000;
   width: 100%;
   text-align: center;
   color: #fff;

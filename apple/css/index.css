@@ -280,8 +280,8 @@ body main section.sect3 .content .color_tab ul.color_tab_menu {
   align-items: center;
   background: rgba(51, 51, 51, 0.6);
   -webkit-backdrop-filter: blur(5px);
-  box-shadow: 2px 2px 5px rgba(21, 21, 21, 0.8);
   backdrop-filter: blur(5px);
+  box-shadow: 2px 2px 5px rgba(21, 21, 21, 0.8);
   padding: 10px 14px;
   border-radius: 99px;
   gap: 8px;

@@ -1,6 +1,5 @@
 @import url(/font/font.css);
-@import url(./reset.css);
-
+@import url(/reset.css);
 @mixin flex-align($justify) {
   display: flex;
   justify-content: $justify;
@@ -11,7 +10,7 @@
 
 body {
   font-family: "Pretendard";
-  min-width: 1800px;
+  min-width: 1600px;
   height: 100vh;
   overflow-y: hidden;
   color: #333;
@@ -147,7 +146,7 @@ section.container {
 
 section.frame {
   width: 100%;
-  min-width: 1900px;
+  min-width: 1600px;
   margin: auto;
   position: absolute;
   transition: 0.5s linear;
@@ -498,41 +497,41 @@ section.frame {
 
       .product {
         .item1 {
-          background-image: url(./img/cooee/ED-03-01-OK-Woody-Bird-Oak-Large-2.jpg);
+          background-image: url(../img/cooee/ED-03-01-OK-Woody-Bird-Oak-Large-2.jpg);
           background-size: 80%;
         }
 
         .item2 {
-          background-image: url(./img/cooee/AG-10-02-PB-Lee-Vase-28cm-Pale-Blue-scaled-1-1358x1920.jpg);
+          background-image: url(../img/cooee/AG-10-02-PB-Lee-Vase-28cm-Pale-Blue-scaled-1-1358x1920.jpg);
           background-size: 50%;
         }
 
         .item3 {
-          background-image: url(./img/cooee/napkin_tulipa-blush.jpeg);
+          background-image: url(../img/cooee/napkin_tulipa-blush.jpeg);
           background-size: 50%;
         }
 
         .item4 {
-          background-image: url(./img/cooee/HI-060-01-WH-Easter-Wreath-White.png);
+          background-image: url(../img/cooee/HI-060-01-WH-Easter-Wreath-White.png);
         }
 
         .item5 {
-          background-image: url(./img/cooee/HC-04-01-WH-Heavy-Tealight-Carrara-4.jpg);
+          background-image: url(../img/cooee/HC-04-01-WH-Heavy-Tealight-Carrara-4.jpg);
           background-size: 80%;
         }
 
         .item6 {
-          background-image: url(./img/cooee/TH-05-01-SM-Gry-Vase-30cm-Smoke-scaled.jpg);
+          background-image: url(../img/cooee/TH-05-01-SM-Gry-Vase-30cm-Smoke-scaled.jpg);
           background-size: 50%;
         }
 
         .item7 {
-          background-image: url(./img/cooee/ED-05-02-OK-Woody-Hook-Three-Oak-4-scaled.jpg);
+          background-image: url(../img/cooee/ED-05-02-OK-Woody-Hook-Three-Oak-4-scaled.jpg);
           background-size: 50%;
         }
 
         .item8 {
-          background-image: url(./img/cooee/HI-028-03-OV-Ball-Vase-20cm-Olive.jpg);
+          background-image: url(../img/cooee/HI-028-03-OV-Ball-Vase-20cm-Olive.jpg);
           background-size: 80%;
         }
       }
@@ -556,42 +555,42 @@ section.frame {
 
       .product {
         .item1 {
-          background-image: url(./img/newworks/NewWorks_Blaehr_Vase_Large_Amber_400x.jpg);
+          background-image: url(../img/newworks/NewWorks_Blaehr_Vase_Large_Amber_400x.jpg);
           background-size: 80%;
         }
 
         .item2 {
-          background-image: url(./img/newworks/New-Works_Packshot_22310_Lantern-Portable-Pendant-Lamp_Light-Off_400x.jpg);
+          background-image: url(../img/newworks/New-Works_Packshot_22310_Lantern-Portable-Pendant-Lamp_Light-Off_400x.jpg);
           background-size: 90%;
         }
 
         .item3 {
-          background-image: url(./img/newworks/New-Works_Packshots_43010_Tenon-Lounge-Chair_Natural-Oak_Zinc-Drake-Mocha_730x645x700mm_Front_400x.jpg);
+          background-image: url(../img/newworks/New-Works_Packshots_43010_Tenon-Lounge-Chair_Natural-Oak_Zinc-Drake-Mocha_730x645x700mm_Front_400x.jpg);
           background-size: 100%;
         }
 
         .item4 {
-          background-image: url(./img/newworks/1635256942-new-worksmargin-pendant-lamp-o70-perspective-grey-background.png);
+          background-image: url(../img/newworks/1635256942-new-worksmargin-pendant-lamp-o70-perspective-grey-background.png);
           background-size: 80%;
         }
 
         .item5 {
-          background-image: url(./img/newworks/New_Works_Packshots_TANA_V1_Tana_Wall_Mounted_Desk_Black_Ash_PERSPECTIVE_400x.jpg);
+          background-image: url(../img/newworks/New_Works_Packshots_TANA_V1_Tana_Wall_Mounted_Desk_Black_Ash_PERSPECTIVE_400x.jpg);
           background-size: 75%;
         }
 
         .item6 {
-          background-image: url(./img/newworks/6.jpg);
+          background-image: url(../img/newworks/6.jpg);
           background-size: 80%;
         }
 
         .item7 {
-          background-image: url(./img/newworks/KizuTableLampGrisduMaraisSmallWhiteBackgroundWhiteBackground_400x.jpg);
+          background-image: url(../img/newworks/KizuTableLampGrisduMaraisSmallWhiteBackgroundWhiteBackground_400x.jpg);
           background-size: 80%;
         }
 
         .item8 {
-          background-image: url(./img/newworks/8.jpg);
+          background-image: url(../img/newworks/8.jpg);
           background-size: 70%;
         }
       }
@@ -617,38 +616,38 @@ section.frame {
 
       .product {
         .item1 {
-          background-image: url(./img/njrd/503255-01_1_ProductImageMain-3433ba8b19.jpg);
+          background-image: url(../img/njrd/503255-01_1_ProductImageMain-3433ba8b19.jpg);
         }
 
         .item2 {
-          background-image: url(./img/njrd/503114-01_1_ProductImageMain-6e1e2abb25.jpg);
+          background-image: url(../img/njrd/503114-01_1_ProductImageMain-6e1e2abb25.jpg);
           background-size: 50%;
         }
 
         .item3 {
-          background-image: url(./img/njrd/46176-02_1_ProductImageMain_1-fbaa78ff04.jpg);
+          background-image: url(../img/njrd/46176-02_1_ProductImageMain_1-fbaa78ff04.jpg);
         }
 
         .item4 {
-          background-image: url(./img/njrd/46375-01-01_01-8b48fc16e7.jpg);
+          background-image: url(../img/njrd/46375-01-01_01-8b48fc16e7.jpg);
           background-size: 70%;
         }
 
         .item5 {
-          background-image: url(./img/njrd/504257-01_1_ProductImageMain-4097ad57b0.jpg);
+          background-image: url(../img/njrd/504257-01_1_ProductImageMain-4097ad57b0.jpg);
         }
 
         .item6 {
-          background-image: url(./img/njrd/46373-02-01_01-3ba63a78eb.jpg);
+          background-image: url(../img/njrd/46373-02-01_01-3ba63a78eb.jpg);
           background-size: 70%;
         }
 
         .item7 {
-          background-image: url(./img/njrd/504768-01_1_ProductImageMain-c148b33fb8.jpg);
+          background-image: url(../img/njrd/504768-01_1_ProductImageMain-c148b33fb8.jpg);
         }
 
         .item8 {
-          background-image: url(./img/njrd/46174-02_1_ProductImageMain_1-3b75a0129d.jpg);
+          background-image: url(../img/njrd/46174-02_1_ProductImageMain_1-3b75a0129d.jpg);
           background-size: 70%;
         }
       }
@@ -674,37 +673,37 @@ section.frame {
       .product {
         
         .item1 {
-          background-image: url(./img/blomus/Candle_set_in_concrete.jpg);
+          background-image: url(../img/blomus/Candle_set_in_concrete.jpg);
         }
 
         .item2 {
-          background-image: url(./img/blomus/Mobile_Rechargeable_LED_Lamp.jpg);
+          background-image: url(../img/blomus/Mobile_Rechargeable_LED_Lamp.jpg);
           background-size: 100%;
         }
 
         .item3 {
-          background-image: url(./img/blomus/Oval_Tray.jpeg);
+          background-image: url(../img/blomus/Oval_Tray.jpeg);
         }
 
         .item4 {
-          background-image: url(./img/blomus/Vase_Ceramic_5x10.jpg);
+          background-image: url(../img/blomus/Vase_Ceramic_5x10.jpg);
         }
 
         .item5 {
-          background-image: url(./img/blomus/RIGUA_Watering_Can.jpg);
+          background-image: url(../img/blomus/RIGUA_Watering_Can.jpg);
           background-size: 70%;
         }
 
         .item6 {
-          background-image: url(./img/blomus/Soap_Dispenser.jpeg);
+          background-image: url(../img/blomus/Soap_Dispenser.jpeg);
         }
 
         .item7 {
-          background-image: url(./img/blomus/MIYABI_Ceramic_Vase.jpg);
+          background-image: url(../img/blomus/MIYABI_Ceramic_Vase.jpg);
         }
 
         .item8 {
-          background-image: url(./img/blomus/ASHI_Firewood_Basket.jpg);
+          background-image: url(../img/blomus/ASHI_Firewood_Basket.jpg);
           background-size: 70%;
         }
       }

@@ -24,6 +24,11 @@ $footer_bg: #222;
   left: $left;
   transform: translate($x, $y);
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 h2 {
   font-size: 3rem;
   color: $gray3_color;
@@ -36,11 +41,6 @@ h3 {
 }
 p {
   font-size: 1rem;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 a {
   text-decoration: none;

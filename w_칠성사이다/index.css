@@ -64,6 +64,7 @@ header nav > ul li.main ul.sub li a {
   display: inline-block;
   padding: 14px 10px;
   color: #888;
+  font-size: 16px;
   font-family: "NotoSans-Light";
 }
 header nav > ul li.main ul.sub li:hover a {

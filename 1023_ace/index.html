@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ace</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>
+          <a href="#"
+            ><img src="./img/header/header-logo.png" alt="ACE BED"
+          /></a>
+        </h1>
+
+        <button class="prod-menu">
+          <img src="./img/header/m-prod-menu-btn.png" alt="" />
+        </button>
+        <ul class="h-top">
+          <li><a href="#;">로그인</a></li>
+          <li><a href="#;">회원가입</a></li>
+          <li class="bluegreen">
+            <a href="#;"
+              ><img src="./img/header/wedding-icon.png" alt="" />웨딩멤버스</a
+            >
+          </li>
+          <li class="gray"><a href="#;">에이스 침대몰</a></li>
+        </ul>
+
+        <nav>
+          <ul class="left">
+            <li class="main-menu">
+              <a href="#">
+                <span class="one">bed</span>
+                <span>침대</span>
+              </a>
+              <ul class="sub-menu">
+                <li><a href="#">프레임</a></li>
+                <li><a href="#">매트리스</a></li>
+                <li><a href="#">신제품</a></li>
+                <li><a href="#">제품 매뉴얼</a></li>
+              </ul>
+            </li>
+            <li class="main-menu">
+              <a href="#"
+                ><span class="one">furniture</span> <span>가구</span></a
+              >
+              <ul class="sub-menu" style="padding-right: 0px">
+                <li><a href="#">룸 세트</a></li>
+                <li><a href="#">리빙가구</a></li>
+              </ul>
+            </li>
+            <li class="main-menu">
+              <a href="#"
+                ><span class="one">stressless</span>
+                <span>스트레스리스</span></a
+              >
+              <ul class="sub-menu">
+                <li><a href="#">1인용 리클라이너</a></li>
+                <li><a href="#">오피스체어</a></li>
+                <li><a href="#">소파</a></li>
+                <li><a href="#">테이블&악세서리</a></li>
+              </ul>
+            </li>
+            <li class="main-menu">
+              <a href="#"
+                ><span class="one">sleep care</span> <span>슬립케어</span></a
+              >
+              <ul class="sub-menu">
+                <li><a href="#">마이크로케어</a></li>
+                <li><a href="#">스마트슬리브</a></li>
+                <li><a href="#">마이크로케어 쿨링패드</a></li>
+                <li><a href="#">쿨링 바디필로우</a></li>
+                <li><a href="#">마이크로가드에코플러스</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="right">
+            <ul class="right-menu">
+              <li class="main-menu">
+                <a href="#">침대과학</a>
+                <ul class="sub-menu">
+                  <li><a href="#">스프링</a></li>
+                  <li><a href="#">기술력</a></li>
+                  <li><a href="#">특허 및 수상내역</a></li>
+                  <li><a href="#">침대공학연구소</a></li>
+                </ul>
+              </li>
+              <li class="main-menu">
+                <a href="#">에이스 스토리</a>
+                <ul class="sub-menu">
+                  <li><a href="#">NOW SNS</a></li>
+                  <li><a href="#">고객후기</a></li>
+                  <li><a href="#">뉴스룸</a></li>
+                </ul>
+              </li>
+              <li class="main-menu">
+                <a href="#">고객체험</a>
+                <ul class="sub-menu">
+                  <li><a href="#">매트리스 체험존</a></li>
+                  <li><a href="#">이동수면공학 연구소</a></li>
+                  <li><a href="#">공학 견학 신청</a></li>
+                </ul>
+              </li>
+              <li class="main-menu">
+                <a href="#">이벤트</a>
+                <ul class="sub-menu">
+                  <li><a href="#">이벤트</a></li>
+                  <li><a href="#">당첨자 안내</a></li>
+                </ul>
+              </li>
+              <li class="main-menu">
+                <a href="#">매장안내</a>
+                <ul class="sub-menu">
+                  <li><a href="#">매장찾기</a></li>
+                  <li><a href="#">에이스 스퀘어</a></li>
+                  <li><a href="#">에이스 에비뉴</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="serch-menu">
+              <a href="#;" class="serch"
+                ><img src="./img/header/gnb-search-btn.png" alt=""
+              /></a>
+              <a href="#;" class="allmenu"
+                ><img src="./img/header/all-menu-btn.png" alt=""
+              /></a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="all-nav">
+          <ul class="left">
+            <li class="main-menu">
+              <a href="#">
+                <span class="one">bed</span>
+                <span>침대</span>
+              </a>
+              <ul class="sub-menu">
+                <li><a href="#">프레임</a></li>
+                <li><a href="#">매트리스</a></li>
+                <li><a href="#">신제품</a></li>
+                <li><a href="#">제품 매뉴얼</a></li>
+              </ul>
+            </li>
+            <li class="main-menu">
+              <a href="#"
+                ><span class="one">furniture</span> <span>가구</span></a
+              >
+              <ul class="sub-menu" style="padding-right: 0px">
+                <li><a href="#">룸 세트</a></li>
+                <li><a href="#">리빙가구</a></li>
+              </ul>
+            </li>
+            <li class="main-menu">
+              <a href="#"
+                ><span class="one">stressless</span>
+                <span>스트레스리스</span></a
+              >
+              <ul class="sub-menu">
+                <li><a href="#">1인용 리클라이너</a></li>
+                <li><a href="#">오피스체어</a></li>
+                <li><a href="#">소파</a></li>
+                <li><a href="#">테이블&악세서리</a></li>
+              </ul>
+            </li>
+            <li class="main-menu">
+              <a href="#"
+                ><span class="one">sleep care</span> <span>슬립케어</span></a
+              >
+              <ul class="sub-menu">
+                <li><a href="#">마이크로케어</a></li>
+                <li><a href="#">스마트슬리브</a></li>
+                <li><a href="#">마이크로케어 쿨링패드</a></li>
+                <li><a href="#">쿨링 바디필로우</a></li>
+                <li><a href="#">마이크로가드에코플러스</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="right">
+            <li class="main-menu">
+              <a href="#">침대과학</a>
+              <ul class="sub-menu">
+                <li><a href="#">스프링</a></li>
+                <li><a href="#">기술력</a></li>
+                <li><a href="#">특허 및 수상내역</a></li>
+                <li><a href="#">침대공학연구소</a></li>
+              </ul>
+            </li>
+            <li class="main-menu">
+              <a href="#">에이스 스토리</a>
+              <ul class="sub-menu">
+                <li><a href="#">NOW SNS</a></li>
+                <li><a href="#">고객후기</a></li>
+                <li><a href="#">뉴스룸</a></li>
+              </ul>
+            </li>
+            <li class="main-menu">
+              <a href="#">고객체험</a>
+              <ul class="sub-menu">
+                <li><a href="#">매트리스 체험존</a></li>
+                <li><a href="#">이동수면공학 연구소</a></li>
+                <li><a href="#">공학 견학 신청</a></li>
+              </ul>
+            </li>
+            <li class="main-menu">
+              <a href="#">이벤트</a>
+              <ul class="sub-menu">
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">당첨자 안내</a></li>
+              </ul>
+            </li>
+            <li class="main-menu">
+              <a href="#">매장안내</a>
+              <ul class="sub-menu">
+                <li><a href="#">매장찾기</a></li>
+                <li><a href="#">에이스 스퀘어</a></li>
+                <li><a href="#">에이스 에비뉴</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <main>
+        <section class="sect1">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide1"><img src="./img/sect1/24093003265625035288.jpg" alt=""></div>
+              <div class="swiper-slide slide2">
+                <video
+                src="./img/sect1/24082311484083648876.mp4"
+                autoplay
+                loop
+                muted
+                ></video>
+              </div>
+              <div class="swiper-slide slide3"><img src="./img/sect1/24010208561742755197.jpg" alt=""></div>
+              <div class="swiper-slide slide4"><img src="./img/sect1/22012601581515480227.jpg" alt=""></div>
+              <div class="swiper-slide slide5"><img src="./img/sect1/24100203525963385250.jpg" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <a href="#" class="arrow prev">
+            <svg>
+              <path class="btn_prev" d="M 40 10 Q 40 65 40 140"></path>
+            </svg>
+          </a>
+          <a href="#" class="arrow next">
+            <svg>
+              <path class="btn_next" d="M 10 10 Q 10 65 10 140"></path>
+            </svg>
+          </a>
+        </section>
+
+        <section class="sect2">
+          <h2>ACE SCIENCE</h2>
+          <div class="inner">
+            <div class="swiper_pc">
+              <div class="swiper pcSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slide1">
+                    <video loop autoplay muted>
+                      <source src="./img/sect2/1440_bg01.mp4" />
+                    </video>
+                  </div>
+                  <div class="swiper-slide slide2">
+                    <video loop autoplay muted>
+                      <source src="./img/sect2/1440_bg02.mp4" />
+                    </video>
+                  </div>
+                  <div class="swiper-slide slide3">
+                    <video loop autoplay muted>
+                      <source src="./img/sect2/1440_bg03.mp4" />
+                    </video>
+                  </div>
+                  <div class="swiper-slide slide4">
+                    <video loop autoplay muted>
+                      <source src="./img/sect2/1440_bg04.mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <ul class="swiper-pagination tab">
+                <li class="on">HYBRID Z SPRING</li>
+                <li>5 FREE SYSTEM</li>
+                <li>NEW MATERIAL</li>
+                <li>ECO & HEALTH</li>
+              </ul>
+              <div class="txt">
+                <div class="summary txt1 on">
+                  <h3>
+                    오늘밤 어떤 스프링으로<br />
+                    만든 침대에서<br />
+                    주무시겠습니까?
+                  </h3>
+                  <p>
+                    에이스만의 첨단 공학이 적용된 스프링은<br />
+                    인체 곡선과 하중 분포에 따라 위에서 한 번<br />
+                    부드럽게 맞춰주고 밑에서 또 한 번<br />
+                    단단하게 받쳐줍니다.
+                  </p>
+                </div>
+                <div class="summary txt2">
+                  <h3>
+                    휴식을 방해하는 <br />
+                    모든 것이 사라지는 순간, <br />
+                    완벽한 편안함이 <br />
+                    시작됩니다
+                  </h3>
+                  <p>
+                    꺼짐, 빈틈, 쏠림, 소음, 흔들림으로부터<br />
+                    자유롭게! 어떤 몸 상태에도 적용되는 5 FREE<br />
+                    SYSTEM으로 최상의 숙면 조건을 만듭니다.
+                  </p>
+                </div>
+                <div class="summary txt3">
+                  <h3>
+                    시원하게, 위생적으로 <br />
+                    최고의 잠을 위한 <br />
+                    새로운 기술
+                  </h3>
+                  <p>
+                    최고 품질을 위해 중요한 소재 하나하나까지<br />
+                    직접 개발, 생산한 신소재만을 사용합니다
+                  </p>
+                </div>
+                <div class="summary txt4">
+                  <h3>
+                    피부에 가까운 만큼 <br />
+                    더욱 안전하게 <br />
+                    당신의 하루가<br />
+                    건강해집니다
+                  </h3>
+                  <p>
+                    최고 품질을 위해 중요한 소재 하나하나까지<br />
+                    직접 개발, 생산한 신소재만을 사용합니다
+                  </p>
+                </div>
+              </div>
+              <div class="arrow_btn">
+                <a href="#;" class="arrow prev2">
+                  <svg>
+                    <path class="btn_prev" d="M 40 10 Q 40 65 40 140"></path>
+                  </svg>
+                </a>
+                <a href="#;" class="arrow next2">
+                  <svg>
+                    <path class="btn_next" d="M 10 10 Q 10 65 10 140"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="swiper_p_t">
+              <div class="swiper smallSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slide1">
+                    <video loop autoplay muted>
+                      <source src="./img/sect2/1440_bg01.mp4" />
+                    </video>
+                    <div class="txt2">
+                      <p class="subH">HYBRID Z SPRING</p>
+                      <div class="summary2">
+                        <h3>
+                          오늘밤 어떤 스프링으로<br />
+                          만든 침대에서<br />
+                          주무시겠습니까?
+                        </h3>
+                        <p>
+                          에이스만의 첨단 공학이 적용된 스프링은<br />
+                          인체 곡선과 하중 분포에 따라 위에서 한 번<br />
+                          부드럽게 맞춰주고 밑에서 또 한 번<br />
+                          단단하게 받쳐줍니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide slide2">
+                    <video loop autoplay muted>
+                      <source src="./img/sect2/1440_bg02.mp4" />
+                    </video>
+                    <div class="txt2">
+                      <p class="subH">5 FREE SYSTEM</p>
+                      <div class="summary2">
+                        <h3>
+                          휴식을 방해하는 <br />
+                          모든 것이 사라지는 순간, <br />
+                          완벽한 편안함이 <br />
+                          시작됩니다
+                        </h3>
+                        <p>
+                          꺼짐, 빈틈, 쏠림, 소음, 흔들림으로부터<br />
+                          자유롭게! 어떤 몸 상태에도 적용되는 5 FREE<br />
+                          SYSTEM으로 최상의 숙면 조건을 만듭니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide slide3">
+                    <video loop autoplay muted>
+                      <source src="./img/sect2/1440_bg03.mp4" />
+                    </video>
+                    <div class="txt2">
+                      <p class="subH">NEW MATERIAL</p>
+                      <div class="summary2">
+                        <h3>
+                          시원하게, 위생적으로 <br />
+                          최고의 잠을 위한 <br />
+                          새로운 기술
+                        </h3>
+                        <p>
+                          최고 품질을 위해 중요한 소재 하나하나까지<br />
+                          직접 개발, 생산한 신소재만을 사용합니다
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide slide4">
+                    <video loop autoplay muted>
+                      <source src="./img/sect2/1440_bg04.mp4" />
+                    </video>
+                    <div class="txt2">
+                      <p class="subH">ECO & HEALTH</p>
+                      <div class="summary2">
+                        <h3>
+                          피부에 가까운 만큼 <br />
+                          더욱 안전하게 <br />
+                          당신의 하루가<br />
+                          건강해집니다
+                        </h3>
+                        <p>
+                          최고 품질을 위해 중요한 소재 하나하나까지<br />
+                          직접 개발, 생산한 신소재만을 사용합니다
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination not_pc"></div>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="sect3">
+          <article class="art1">
+            <h2>ACE COLLECTION</h2>
+            <div class="tab-list">
+              <a href="tab">신제품</a>
+              <a href="tab">추천제품</a>
+            </div>
+            <div class="tab-contents"></div>
+          </article>
+          <article class="art2">
+            <h2>ACE NEWS</h2>
+          </article>
+        </section>
+        <section class="sect4"></section>
+      </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./script/sect1_swiper.js"></script>
+    <script src="./script/sect2.js"></script>
+  </body>
+</html>

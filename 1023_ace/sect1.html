@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="./css/sect1.css">
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <section class="sect1">
+    <div class="swiper intro">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide1">
+          <a href="#">
+            <img
+              class="img web"
+              src="./img/sect1/slide1.jpg"
+              alt="인트로 배너 이미지1"
+            />
+            <img
+              class="img mob"
+              src="./img/sect1/phon1.jpg"
+              alt="인트로 배너 이미지1"
+            />
+          </a>
+        </div>
+        <div class="swiper-slide slide2">
+          <video
+            src="./img/sect1/24082311484083648876.mp4"
+            autoplay
+            loop
+            muted
+          ></video>
+        </div>
+        <div class="swiper-slide slide3">
+          <a href="#">
+            <img
+              class="img web"
+              src="./img/sect1/slide3.jpg"
+              alt="인트로 배너 이미지3"
+            />
+            <img
+              class="img mob"
+              src="./img/sect1/phon3.jpg"
+              alt="인트로 배너 이미지3"
+            />
+          </a>
+        </div>
+        <div class="swiper-slide slide4">
+          <a href="#">
+            <img
+              class="img web"
+              src="./img/sect1/slide4.jpg"
+              alt="인트로 배너 이미지4"
+            />
+            <img
+              class="img mob"
+              src="./img/sect1/phon4.jpg"
+              alt="인트로 배너 이미지4"
+            />
+          </a>
+        </div>
+        <div class="swiper-slide slide5">
+          <a href="#">
+            <img
+              class="img web"
+              src="./img/sect1/slide5.jpg"
+              alt="인트로 배너 이미지5"
+            />
+            <img
+              class="img mob"
+              src="./img/sect1/phon5.jpg"
+              alt="인트로 배너 이미지5"
+            />
+          </a>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <a href="#" class="arrow prev1">
+      <svg>
+        <path class="btn_prev" d="M 40 10 Q 40 65 40 140"></path>
+      </svg>
+    </a>
+    <a href="#" class="arrow next1">
+      <svg>
+        <path class="btn_next" d="M 10 10 Q 10 65 10 140"></path>
+      </svg>
+    </a>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".intro", {
+      navigation: {
+        nextEl: ".next1",
+        prevEl: ".prev1",
+      },
+    });
+    const prevS1 = document.querySelector(".prev1");
+      const nextS1 = document.querySelector(".next1");
+
+      prevS1.addEventListener("mouseenter", function () {
+        this.querySelector("path").setAttribute("d", "M 40 10 Q 10 65 40 140");
+      });
+      prevS1.addEventListener("mouseleave", function () {
+        this.querySelector("path").setAttribute("d", "M 40 10 Q 40 65 40 140");
+      });
+
+      nextS1.addEventListener("mouseenter", function () {
+        this.querySelector("path").setAttribute("d", "M 10 10 Q 40 65 10 140");
+      });
+      nextS1.addEventListener("mouseleave", function () {
+        this.querySelector("path").setAttribute("d", "M 10 10 Q 10 65 10 140");
+      });
+    
+  </script>
+</body>
+
+</html>

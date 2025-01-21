@@ -1,5 +1,5 @@
-var swiper = new Swiper(".pcSwiper", {
-  // slidesPerView: 3,
+var swiper3 = new Swiper(".pcSwiper", {
+  // slidesPerView: 1,
   // centeredSlides: true,
   spaceBetween: 0,
   navigation: {

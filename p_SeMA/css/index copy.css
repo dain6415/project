@@ -373,20 +373,36 @@ body footer {
   header.scrolled .right-menu ul li a i {
     color: black; /* 스크롤 후 변경된 nav 링크 색상 */
   }
+  .wrap .bg_img {
+    background: url(../imgs/서울시립미술관.jpg) top 50% center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+  }
+  .wrap .bg_img::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background-image: linear-gradient(to top, #11110f 0%, rgba(17, 16, 17, 0) 80%);
+    z-index: 0;
+    pointer-events: none;
+  }
   .wrap .bg_img .introduce {
-    padding: 0 50px;
+    border: 1px solid #f00;
     padding-top: 150px;
     gap: 3rem;
     text-align: center;
   }
   .wrap .bg_img .introduce h2 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     line-height: 1.4;
-    white-space: nowrap;
   }
   .wrap .bg_img .introduce .txt p {
     color: #ddd;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     white-space: nowrap;
   }
   .wrap .animate .title h2 {

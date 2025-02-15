@@ -80,11 +80,15 @@ body {
         left: 0;
         width: 100%;
         height: 80%;
-        background-image: linear-gradient(to top, #11110F 0%, rgba(17, 16, 17, 0) 80%);
+        background-image: linear-gradient(
+          to top,
+          #11110f 0%,
+          rgba(17, 16, 17, 0) 80%
+        );
         z-index: 0;
         pointer-events: none;
       }
-      .introduce{
+      .introduce {
         margin: auto;
         height: 86%;
         display: flex;
@@ -118,14 +122,14 @@ body {
         }
       }
     }
-    .sect1{
+    .sect1 {
       width: 95%;
-      border-radius: 26px 26px 0 0;
       background: #fff;
       position: relative;
       z-index: 99;
       margin: -40px auto 0;
-      .art1{
+      border-radius: 20px;
+      .art1 {
         border: 1px solid #f00;
         .more {
           padding-bottom: 40px;
@@ -295,6 +299,8 @@ body {
       }
     }
     .sect2 {
+      width: 95%;
+      margin: auto;
       .top {
         border-radius: 20px;
         background: #222;
@@ -407,13 +413,13 @@ body {
         gap: 3rem;
         text-align: center;
         h2 {
-          font-size: 4rem;
+          font-size: 3rem;
           line-height: 1.4;
         }
         .txt {
           p {
             color: #ddd;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             white-space: nowrap;
           }
         }
@@ -445,11 +451,11 @@ body {
         }
       }
     }
-    h3{
+    h3 {
       font-size: 2.4rem;
       padding-bottom: 20px;
     }
-    .sect1 {  
+    .sect1 {
       padding: 80px 20px 60px;
       article {
         &.art1 {
@@ -484,14 +490,11 @@ body {
                 .txt {
                   padding: 0 5px;
                   .title {
-                    font-size: 2.4rem;
-                    font-weight: 400;
-                    line-height: 1.3;
-                    margin-top: 10px;
+                    font-size: 2rem;
                   }
                   .sub_txt {
                     p {
-                      font-size: 20px;
+                      font-size: 2rem;
                     }
                   }
                 }
@@ -541,23 +544,28 @@ body {
         }
         &.art2 {
           .collections {
-            padding-bottom: 100px;
+            padding-bottom: 40px;
             .left,
             .right {
               a {
                 p {
                   left: 20px;
-                  bottom:  50%;
-                  transform: translateY(50%);
-                  font-size: 2.4rem;
+                  bottom: 15px;
+                  font-size: 2rem;
                 }
               }
             }
             .left {
-              border-radius: 20px;
-              overflow: hidden;
-              height: 80px;
+              height: 200px;
               a {
+                &::after {
+                  height: 100%;
+                  background-image: linear-gradient(
+                    to top,
+                    #1111119e 0%,
+                    #11111100 90%
+                  );
+                }
                 .img_box {
                   height: 100%;
                   @include flex();
@@ -565,9 +573,17 @@ body {
               }
             }
             .grid {
-              grid-template-columns: repeat(1, 1fr);
+              grid-template-columns: repeat(2, 1fr);
               a {
-                height: 80px;
+                height: 150px;
+                &::after {
+                  height: 90%;
+                  background-image: linear-gradient(
+                    to top,
+                    #1111119e 0%,
+                    #11111100 80%
+                  );
+                }
                 .img_box {
                   img {
                     width: 100%;
@@ -577,27 +593,20 @@ body {
             }
           }
           ul {
-            flex-direction: column;
+            flex-wrap: wrap;
+            // flex-direction: column;
             gap: 8px;
             li {
-              width: 100%;
+              width: 40%;
               a {
                 .link {
                   font-size: 2rem;
                   padding-bottom: 20px;
                   padding-top: 20px;
                   display: block;
-                  position: relative;
                   white-space: nowrap;
                   &::after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
                     width: 100%;
-                    height: 2px;
-                    background: #eee;
-                    transition: 0.3s;
                   }
                 }
                 .txt {
@@ -608,7 +617,7 @@ body {
           }
         }
       }
-  
+
       // ----------------------------------------------
       // footer
       footer {
@@ -621,7 +630,7 @@ body {
           .f-logo {
             width: 100%;
             // padding-bottom: 24px;
-  
+
             img {
               width: 60%;
               margin-bottom: 15px;
@@ -666,7 +675,7 @@ body {
         .f-btn {
           display: flex;
           flex-direction: column-reverse;
-  
+
           p {
             color: var(--gray2);
             width: 100%;
@@ -678,7 +687,7 @@ body {
             width: 100%;
             padding-bottom: 24px;
             border-bottom: 1px solid var(--gray3);
-  
+
             ul {
               margin: auto;
               width: 80%;
@@ -694,8 +703,86 @@ body {
         }
       }
     }
+    .sect2 {
+      padding-top: 10px;
+      padding-bottom: 60px;
+      .top {
+        margin-bottom: 60px;
+        padding: 60px 0;
+        .app {
+          h3 {
+            padding-bottom: 20px;
+            font-size: 2.4rem;
+            br {
+              display: block;
+            }
+          }
+          p {
+            font-size: 1.2rem;
+            padding-bottom: 40px;
+          }
+          a {
+            font-size: 1.6rem;
+            padding: 15px 40px;
+          }
+        }
+        .q {
+          display: none;
+          p {
+            color: #fff;
+            font-weight: 600;
+            font-size: 4rem;
+            padding-bottom: 20px;
+          }
+          ul.q_list {
+            li {
+              border-bottom: 1px solid #666;
+              a {
+                display: inline-block;
+                padding: 20px 0;
+                color: #fff;
+                font-size: 2rem;
+                line-height: 1.4;
+                // letter-spacing: -1.2;
+              }
+              &:nth-child(1) {
+                border-top: 1px solid #666;
+              }
+            }
+          }
+        }
+      }
+      .bottom {
+        a.item {
+          border-right: 1px solid #999;
+          display: block;
+          padding-right: 10px;
+          padding-left: 10px;
+          text-align: center;
+          &:nth-child(5) {
+            border-right: none;
+          }
+          .item_txt {
+            .title {
+              p,
+              i {
+                color: #fff;
+                font-size: 2rem;
+                letter-spacing: 1;
+                width: 100%;
+              }
+              i {
+                display: none;
+              }
+            }
+            .sub_txt {
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
-
 }
 // --------------------------------------------------------------------
 @media only screen and (min-width: 601px) {
@@ -842,13 +929,8 @@ body {
       }
     }
     .sect1 {
-      width: 95%;
       margin: -80px auto 0;
       padding: 120px 20px;
-      border-radius: 20px;
-      background: #fff;
-      position: relative;
-      z-index: 1;
       article {
         &.art1 {
           .more {
@@ -1274,11 +1356,11 @@ body {
 // --------------------------------------------------------------------
 @media only screen and (min-width: 900px) {
   .wrap {
-    .bg_img{
-      .introduce{
-        .txt{
-          p{
-            br.welBr{
+    .bg_img {
+      .introduce {
+        .txt {
+          p {
+            br.welBr {
               display: none;
             }
           }

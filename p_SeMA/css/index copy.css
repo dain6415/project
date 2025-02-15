@@ -69,7 +69,7 @@ body .wrap .bg_img::after {
   left: 0;
   width: 100%;
   height: 80%;
-  background-image: linear-gradient(to top, #11110F 0%, rgba(17, 16, 17, 0) 80%);
+  background-image: linear-gradient(to top, #11110f 0%, rgba(17, 16, 17, 0) 80%);
   z-index: 0;
   pointer-events: none;
 }
@@ -112,11 +112,11 @@ body .wrap .bg_img .introduce .txt .visit:hover {
 html .wrap .sect1,
 body .wrap .sect1 {
   width: 95%;
-  border-radius: 26px 26px 0 0;
   background: #fff;
   position: relative;
   z-index: 99;
   margin: -40px auto 0;
+  border-radius: 20px;
 }
 html .wrap .sect1 .art1,
 body .wrap .sect1 .art1 {
@@ -292,6 +292,11 @@ html .wrap .sect1 .art2 ul li a .txt,
 body .wrap .sect1 .art2 ul li a .txt {
   display: none;
 }
+html .wrap .sect2,
+body .wrap .sect2 {
+  width: 95%;
+  margin: auto;
+}
 html .wrap .sect2 .top,
 body .wrap .sect2 .top {
   border-radius: 20px;
@@ -399,12 +404,12 @@ body footer {
     text-align: center;
   }
   .wrap .bg_img .introduce h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 1.4;
   }
   .wrap .bg_img .introduce .txt p {
     color: #ddd;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     white-space: nowrap;
   }
   .wrap .animate .title h2 {
@@ -465,13 +470,10 @@ body footer {
     padding: 0 5px;
   }
   .wrap .sect1 article.art1 .swiper .swiper-wrapper .swiper-slide .txt .title {
-    font-size: 2.4rem;
-    font-weight: 400;
-    line-height: 1.3;
-    margin-top: 10px;
+    font-size: 2rem;
   }
   .wrap .sect1 article.art1 .swiper .swiper-wrapper .swiper-slide .txt .sub_txt p {
-    font-size: 20px;
+    font-size: 2rem;
   }
   .wrap .sect1 article.art1 .swiper .swiper-scrollbar {
     width: 24%;
@@ -510,19 +512,20 @@ body footer {
     display: block;
   }
   .wrap .sect1 article.art2 .collections {
-    padding-bottom: 100px;
+    padding-bottom: 40px;
   }
   .wrap .sect1 article.art2 .collections .left a p,
   .wrap .sect1 article.art2 .collections .right a p {
     left: 20px;
-    bottom: 50%;
-    transform: translateY(50%);
-    font-size: 2.4rem;
+    bottom: 15px;
+    font-size: 2rem;
   }
   .wrap .sect1 article.art2 .collections .left {
-    border-radius: 20px;
-    overflow: hidden;
-    height: 80px;
+    height: 200px;
+  }
+  .wrap .sect1 article.art2 .collections .left a::after {
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(17, 17, 17, 0.6196078431) 0%, rgba(17, 17, 17, 0) 90%);
   }
   .wrap .sect1 article.art2 .collections .left a .img_box {
     height: 100%;
@@ -531,38 +534,34 @@ body footer {
     align-items: center;
   }
   .wrap .sect1 article.art2 .collections .grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .wrap .sect1 article.art2 .collections .grid a {
-    height: 80px;
+    height: 150px;
+  }
+  .wrap .sect1 article.art2 .collections .grid a::after {
+    height: 90%;
+    background-image: linear-gradient(to top, rgba(17, 17, 17, 0.6196078431) 0%, rgba(17, 17, 17, 0) 80%);
   }
   .wrap .sect1 article.art2 .collections .grid a .img_box img {
     width: 100%;
   }
   .wrap .sect1 article.art2 ul {
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 8px;
   }
   .wrap .sect1 article.art2 ul li {
-    width: 100%;
+    width: 40%;
   }
   .wrap .sect1 article.art2 ul li a .link {
     font-size: 2rem;
     padding-bottom: 20px;
     padding-top: 20px;
     display: block;
-    position: relative;
     white-space: nowrap;
   }
   .wrap .sect1 article.art2 ul li a .link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    height: 2px;
-    background: #eee;
-    transition: 0.3s;
   }
   .wrap .sect1 article.art2 ul li a .txt {
     display: none;
@@ -643,6 +642,74 @@ body footer {
   }
   .wrap .sect1 footer .f-btn .sns ul li img {
     width: 100%;
+  }
+  .wrap .sect2 {
+    padding-top: 10px;
+    padding-bottom: 60px;
+  }
+  .wrap .sect2 .top {
+    margin-bottom: 60px;
+    padding: 60px 0;
+  }
+  .wrap .sect2 .top .app h3 {
+    padding-bottom: 20px;
+    font-size: 2.4rem;
+  }
+  .wrap .sect2 .top .app h3 br {
+    display: block;
+  }
+  .wrap .sect2 .top .app p {
+    font-size: 1.2rem;
+    padding-bottom: 40px;
+  }
+  .wrap .sect2 .top .app a {
+    font-size: 1.6rem;
+    padding: 15px 40px;
+  }
+  .wrap .sect2 .top .q {
+    display: none;
+  }
+  .wrap .sect2 .top .q p {
+    color: #fff;
+    font-weight: 600;
+    font-size: 4rem;
+    padding-bottom: 20px;
+  }
+  .wrap .sect2 .top .q ul.q_list li {
+    border-bottom: 1px solid #666;
+  }
+  .wrap .sect2 .top .q ul.q_list li a {
+    display: inline-block;
+    padding: 20px 0;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+  .wrap .sect2 .top .q ul.q_list li:nth-child(1) {
+    border-top: 1px solid #666;
+  }
+  .wrap .sect2 .bottom a.item {
+    border-right: 1px solid #999;
+    display: block;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+  }
+  .wrap .sect2 .bottom a.item:nth-child(5) {
+    border-right: none;
+  }
+  .wrap .sect2 .bottom a.item .item_txt .title p,
+  .wrap .sect2 .bottom a.item .item_txt .title i {
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 1;
+    width: 100%;
+  }
+  .wrap .sect2 .bottom a.item .item_txt .title i {
+    display: none;
+  }
+  .wrap .sect2 .bottom a.item .item_txt .sub_txt {
+    display: none;
   }
 }
 @media only screen and (min-width: 601px) {
@@ -779,13 +846,8 @@ body footer {
     font-size: 2rem;
   }
   .wrap .sect1 {
-    width: 95%;
     margin: -80px auto 0;
     padding: 120px 20px;
-    border-radius: 20px;
-    background: #fff;
-    position: relative;
-    z-index: 1;
   }
   .wrap .sect1 article.art1 .more {
     display: flex;

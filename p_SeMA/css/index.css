@@ -593,16 +593,13 @@
   }
   /* ul li a가 한번더 있어서 정확하게 경로설정해야 함 */
   header.scrolled nav > ul li.main-menu a {
-    color: black; /* 스크롤 후 변경된 nav 링크 색상 */
+    color: black;
   }
   header.scrolled .right-menu ul li a {
-    color: black; /* 스크롤 후 변경된 nav 링크 색상 */
+    color: black;
   }
   header.scrolled .right-menu ul li a i {
-    color: black; /* 스크롤 후 변경된 nav 링크 색상 */
-  }
-  .wrap {
-    background: #000;
+    color: black;
   }
   .wrap .bg-img {
     height: 100vh;
@@ -665,16 +662,16 @@
     transition-delay: 0.25s;
   }
   .wrap .container {
+    border-radius: 20px;
     width: 100%;
     max-width: 1200px;
-    border-radius: 26px 26px 0 0;
     background: #fff;
-    margin: -40px auto 0;
+    margin: auto;
     position: relative;
     z-index: 99;
   }
   .wrap .container article.art1 {
-    padding: 20px 40px 40px;
+    padding: 4rem 40px 40px;
   }
   .wrap .container article.art1 .line {
     width: 15%;
@@ -1090,9 +1087,6 @@
   }
   .wrap .container {
     max-width: 1700px;
-  }
-  .wrap .container article.art1 {
-    padding: 20px 60px 40px;
   }
   .wrap .container article.art1 .more {
     display: flex;

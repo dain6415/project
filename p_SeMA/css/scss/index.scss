@@ -662,17 +662,17 @@
   }
   /* ul li a가 한번더 있어서 정확하게 경로설정해야 함 */
   header.scrolled nav > ul li.main-menu a {
-    color: black; /* 스크롤 후 변경된 nav 링크 색상 */
+    color: black;
   }
   header.scrolled .right-menu ul li a {
-    color: black; /* 스크롤 후 변경된 nav 링크 색상 */
+    color: black; 
   }
   header.scrolled .right-menu ul li a i {
-    color: black; /* 스크롤 후 변경된 nav 링크 색상 */
+    color: black;
   }
 
   .wrap {
-    background: #000;
+    // background: #000;
     .bg-img {
       height: 100vh;
       background: linear-gradient(
@@ -751,18 +751,19 @@
     }
 
     .container {
+      border-radius: 20px;
+      // clip-path: polygon(2% 0%, 98% 0%, 100% 1%, 100% 100%, 0% 100%, 0% 1%);
       width: 100%;
       max-width: 1200px;
-      border-radius: 26px 26px 0 0;
-      // padding: 40px;
       background: #fff;
-      margin: -40px auto 0;
+      margin: auto;
+      // padding: 20px;
       position: relative;
       z-index: 99;
 
       article {
         &.art1 {
-          padding: 20px 40px 40px;
+          padding: 4rem 40px 40px;
 
           .line {
             width: 15%;
@@ -1211,7 +1212,7 @@
       max-width: 1700px;
       article {
         &.art1 {
-          padding: 20px 60px 40px;
+          // padding: 20px 60px 40px;
 
           .more {
             @include flex-sb;

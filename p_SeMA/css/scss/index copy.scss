@@ -575,12 +575,13 @@ body {
                 p {
                   left: 15px;
                   bottom: 10px;
-                  font-size: 2rem;
+                  font-size: 4vw;
+                  // font-size: clamp(2rem, 4vw, 2.2rem);
                 }
               }
             }
             .left {
-              height: 150px;
+              height: 200px;
               a {
                 &::after {
                   content: "";
@@ -643,7 +644,7 @@ body {
               width: 40%;
               a {
                 .link {
-                  font-size: 2rem;
+                  font-size: 4vw;
                   padding-bottom: 20px;
                   padding-top: 20px;
                   display: block;
@@ -751,18 +752,20 @@ body {
       padding-bottom: 60px;
       .top {
         margin-bottom: 60px;
-        padding: 60px 0;
+        padding: 40px 10px;
         .app {
           h3 {
             padding-bottom: 20px;
-            font-size: 2.4rem;
+            font-size: 5vw;
             br {
               display: block;
             }
           }
           p {
-            font-size: 1.2rem;
+            font-size: 3vw;
             padding-bottom: 40px;
+            word-break: keep-all;
+            br{display: none;}
           }
           a {
             font-size: 1.6rem;

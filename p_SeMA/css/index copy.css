@@ -510,10 +510,10 @@ body footer {
   .wrap .sect1 article.art2 .collections .right a p {
     left: 15px;
     bottom: 10px;
-    font-size: 2rem;
+    font-size: 4vw;
   }
   .wrap .sect1 article.art2 .collections .left {
-    height: 150px;
+    height: 200px;
   }
   .wrap .sect1 article.art2 .collections .left a::after {
     content: "";
@@ -565,7 +565,7 @@ body footer {
     width: 40%;
   }
   .wrap .sect1 article.art2 ul li a .link {
-    font-size: 2rem;
+    font-size: 4vw;
     padding-bottom: 20px;
     padding-top: 20px;
     display: block;
@@ -660,18 +660,22 @@ body footer {
   }
   .wrap .sect2 .top {
     margin-bottom: 60px;
-    padding: 60px 0;
+    padding: 40px 10px;
   }
   .wrap .sect2 .top .app h3 {
     padding-bottom: 20px;
-    font-size: 2.4rem;
+    font-size: 5vw;
   }
   .wrap .sect2 .top .app h3 br {
     display: block;
   }
   .wrap .sect2 .top .app p {
-    font-size: 1.2rem;
+    font-size: 3vw;
     padding-bottom: 40px;
+    word-break: keep-all;
+  }
+  .wrap .sect2 .top .app p br {
+    display: none;
   }
   .wrap .sect2 .top .app a {
     font-size: 1.6rem;

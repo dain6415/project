@@ -510,7 +510,7 @@ body footer {
   .wrap .sect1 article.art2 .collections .right a p {
     left: 15px;
     bottom: 10px;
-    font-size: 4vw;
+    font-size: 5vw;
   }
   .wrap .sect1 article.art2 .collections .left {
     height: 200px;
@@ -565,7 +565,7 @@ body footer {
     width: 40%;
   }
   .wrap .sect1 article.art2 ul li a .link {
-    font-size: 4vw;
+    font-size: 5vw;
     padding-bottom: 20px;
     padding-top: 20px;
     display: block;
@@ -664,13 +664,14 @@ body footer {
   }
   .wrap .sect2 .top .app h3 {
     padding-bottom: 20px;
-    font-size: 5vw;
+    font-size: 6vw;
+    line-height: 1.4;
   }
   .wrap .sect2 .top .app h3 br {
     display: block;
   }
   .wrap .sect2 .top .app p {
-    font-size: 3vw;
+    font-size: 4vw;
     padding-bottom: 40px;
     word-break: keep-all;
   }

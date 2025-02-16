@@ -575,7 +575,7 @@ body {
                 p {
                   left: 15px;
                   bottom: 10px;
-                  font-size: 4vw;
+                  font-size: 5vw;
                   // font-size: clamp(2rem, 4vw, 2.2rem);
                 }
               }
@@ -644,7 +644,7 @@ body {
               width: 40%;
               a {
                 .link {
-                  font-size: 4vw;
+                  font-size: 5vw;
                   padding-bottom: 20px;
                   padding-top: 20px;
                   display: block;
@@ -756,13 +756,14 @@ body {
         .app {
           h3 {
             padding-bottom: 20px;
-            font-size: 5vw;
+            font-size: 6vw;
+            line-height: 1.4;
             br {
               display: block;
             }
           }
           p {
-            font-size: 3vw;
+            font-size: 4vw;
             padding-bottom: 40px;
             word-break: keep-all;
             br{display: none;}

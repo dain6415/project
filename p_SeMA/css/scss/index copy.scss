@@ -277,11 +277,17 @@ body {
           color: #ddd;
         }
         a {
-          background: #333;
-          color: #ccc;
+          background: #444;
+          color: #eee;
           display: inline-block;
           font-weight: 600;
           border-radius: 50px;
+          transition: .2s;
+          &:hover{
+            background: #ddd;
+            color: #333;
+            transition: .5s;
+          }
         }
       }
       .bottom {

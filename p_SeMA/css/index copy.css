@@ -280,11 +280,18 @@ body .wrap .sect2 .top p {
 }
 html .wrap .sect2 .top a,
 body .wrap .sect2 .top a {
-  background: #333;
-  color: #ccc;
+  background: #444;
+  color: #eee;
   display: inline-block;
   font-weight: 600;
   border-radius: 50px;
+  transition: 0.2s;
+}
+html .wrap .sect2 .top a:hover,
+body .wrap .sect2 .top a:hover {
+  background: #ddd;
+  color: #333;
+  transition: 0.5s;
 }
 html .wrap .sect2 .bottom .item_txt,
 body .wrap .sect2 .bottom .item_txt {

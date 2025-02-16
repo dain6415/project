@@ -56,7 +56,7 @@ body .wrap {
 }
 html .wrap .bg_img,
 body .wrap .bg_img {
-  background: url(../imgs/서울시립미술관.jpg) top 50% center no-repeat;
+  background: url(/imgs/서울시립미술관.jpg) top 50% center no-repeat;
   background-size: cover;
   height: 100vh;
   position: relative;
@@ -386,18 +386,22 @@ body footer {
   }
   .wrap .bg_img .introduce {
     border: 1px solid #f00;
-    padding-top: 150px;
+    width: 95%;
+    padding: 150px 20px 0;
     gap: 3rem;
     text-align: center;
   }
   .wrap .bg_img .introduce h2 {
-    font-size: clamp(2rem, 2vw, 2.8rem);
+    font-size: clamp(2rem, 6vw, 2.8rem);
     line-height: 1.4;
   }
   .wrap .bg_img .introduce .txt p {
     color: #ddd;
     font-size: clamp(1.4rem, 1vw, 1.6rem);
-    white-space: nowrap;
+    word-break: keep-all;
+  }
+  .wrap .bg_img .introduce .txt p br {
+    display: none;
   }
   .wrap .bg_img .introduce .txt .visit {
     padding: 20px 25px;

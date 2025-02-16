@@ -126,12 +126,10 @@ body {
       margin: -40px auto 0;
       border-radius: 20px;
       .art1 {
-        border: 1px solid #f00;
         .more {
           padding-bottom: 40px;
           display: flex;
           justify-content: space-between;
-          // flex-direction: column;
           align-items: flex-start;
           .btn {
             display: flex;
@@ -182,20 +180,10 @@ body {
             a {
               .img_box {
                 height: 100%;
-                @include flex();
-                position: relative;
                 img {
+                  width: 100%;
                   transform: scale(1);
-                  transition: 0.3s ease;
                   min-height: 600px;
-                }
-              }
-              &:hover {
-                .img_box::after {
-                  opacity: 1;
-                }
-                img {
-                  transform: scale(1.05);
                 }
               }
             }
@@ -207,12 +195,10 @@ body {
             margin-top: 4px;
             a {
               .img_box {
-                @include flex();
                 width: 100%;
                 height: 100%;
                 img {
-                  transform: scale(1);
-                  transition: 0.3s ease;
+                  width: 100%;
                 }
               }
               &:nth-child(3) {
@@ -424,7 +410,6 @@ body {
         pointer-events: none;
       }
       .introduce {
-        border: 1px solid #f00;
         width: 95%;
         padding: 150px 20px 0;
         gap: 3rem;

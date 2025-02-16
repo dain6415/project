@@ -306,36 +306,36 @@ body {
 }
 
 // --------------------------------------------------------------------
-@media only screen and (max-width: 400px){
-  .introduce {
-    h2 {
-      font-size: 2.6rem;
-      line-height: 1.4;
-    }
-    p {
-      color: #ddd;
-      font-size: 1.2rem;
-      white-space: nowrap;
-    }
-    .visit {
-      padding: 20px 25px;
-      font-size: 1.6rem;
-    }
-  }
-  .sect2{
-    .app{
-      h3{
-        font-style: 2rem;
-      }
-      p{
-        br{
-          display: none;
-        }
-      }
-    }
+// @media only screen and (max-width: 400px){
+//   .introduce {
+//     h2 {
+//       font-size: 2.6rem;
+//       line-height: 1.4;
+//     }
+//     p {
+//       color: #ddd;
+//       font-size: 1.2rem;
+//       white-space: nowrap;
+//     }
+//     .visit {
+//       padding: 20px 25px;
+//       font-size: 1.6rem;
+//     }
+//   }
+//   .sect2{
+//     .app{
+//       h3{
+//         font-style: 2rem;
+//       }
+//       p{
+//         br{
+//           display: none;
+//         }
+//       }
+//     }
 
-  }
-}
+//   }
+// }
 // --------------------------------------------------------------------
 @media only screen and (max-width: 600px) {
   header {
@@ -428,13 +428,14 @@ body {
         gap: 3rem;
         text-align: center;
         h2 {
-          font-size: 4rem;
+          // font-size: 4rem;
+          font-size: clamp(2rem, 2vw, 2.8rem);
           line-height: 1.4;
         }
         .txt {
           p {
             color: #ddd;
-            font-size: 1.6rem;
+            font-size: clamp(1.4rem, 1vw, 1.6rem);
             white-space: nowrap;
           }
           .visit {

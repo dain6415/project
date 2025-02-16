@@ -661,7 +661,7 @@ body footer {
   .wrap .sect2 .bottom a.item .item_txt .title p,
   .wrap .sect2 .bottom a.item .item_txt .title i {
     color: #fff;
-    font-size: 2rem;
+    font-size: 4vw;
     letter-spacing: 1;
     width: 100%;
   }

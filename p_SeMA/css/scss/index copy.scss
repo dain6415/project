@@ -573,14 +573,14 @@ body {
             .right {
               a {
                 p {
-                  left: 20px;
-                  bottom: 15px;
+                  left: 15px;
+                  bottom: 10px;
                   font-size: 2rem;
                 }
               }
             }
             .left {
-              height: 200px;
+              height: 150px;
               a {
                 &::after {
                   content: "";

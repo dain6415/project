@@ -508,12 +508,12 @@ body footer {
   }
   .wrap .sect1 article.art2 .collections .left a p,
   .wrap .sect1 article.art2 .collections .right a p {
-    left: 20px;
-    bottom: 15px;
+    left: 15px;
+    bottom: 10px;
     font-size: 2rem;
   }
   .wrap .sect1 article.art2 .collections .left {
-    height: 200px;
+    height: 150px;
   }
   .wrap .sect1 article.art2 .collections .left a::after {
     content: "";

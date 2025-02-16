@@ -533,6 +533,8 @@ body footer {
   }
   .wrap .sect1 article.art2 .collections .left a .img_box img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .wrap .sect1 article.art2 .collections .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -552,6 +554,8 @@ body footer {
   }
   .wrap .sect1 article.art2 .collections .grid a .img_box img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .wrap .sect1 article.art2 ul {
     flex-wrap: wrap;

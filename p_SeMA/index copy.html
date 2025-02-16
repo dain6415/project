@@ -75,12 +75,14 @@
         <div class="introduce">
           <div class="top">
             <h2 class="welcome">서울시립미술관에 오신 걸<br />환영합니다.</h2>
-            <p style="color: blue;">오늘의 영업</p>
+            <p style="color: blue">오늘의 영업</p>
           </div>
           <div class="txt">
             <p>
-              사용자, 매개자, 생산자 모두가 함께하는 공동의 기억을 짓고,<br class="welBr"> 뜻깊은
-              사회문화적 가치를 일구는 미래를 상상합니다. <br />
+              사용자, 매개자, 생산자 모두가 함께하는 공동의 기억을 짓고,<br
+                class="welBr"
+              />
+              뜻깊은 사회문화적 가치를 일구는 미래를 상상합니다. <br />
               서울 전역에 펼쳐진 각 분관들이 시대와 미술의 변화에 조응해 <br />
               교차하고, 서로를 채우고, 매일 성장하는 ‘서울형 네트워크
               미술관’입니다. 
@@ -299,9 +301,12 @@
               <a href="#">
                 <p class="link">모두의 연구실 ‘코랄’</p>
                 <p class="txt">
-                  웹을 기반으로 지식 생산자와 사용자가 만나며<br class="coral">
-                  다양한 형태의 미술 지식을 탐구하여<br class="coral">
-                  미술 지식의 확장 가능성을 실험하는 공간입니다.
+                  현대미술에 관한 연구를 작성하고 수집하며,<br class="coral"> 작품 창작 과정을 접하는 온라인 플랫폼을 만들어갑니다.
+                  <!-- 웹을 기반으로 지식 생산자와 사용자가 만나며<br
+                    class="coral"
+                  />
+                  다양한 형태의 미술 지식을 탐구하여<br class="coral" />
+                  미술 지식의 확장 가능성을 실험하는 공간입니다. -->
                 </p>
               </a>
             </li>
@@ -326,7 +331,8 @@
               전시 도슨팅 앱을 다운로드하시면 서울시립미술관 본관 및 분관의<br />
               기획전시, 상설전시, 야외조각전시 및 소장품에 대한 도슨트 서비스를
               이용하실 수 있습니다.<br />
-              미술관 관람객의 전시에 대한 이해를 돕기 위해 전시 및 작품에 대한<br class="appBr">
+              미술관 관람객의 전시에 대한 이해를 돕기 위해 전시 및 작품에
+              대한<br class="appBr" />
               설명을 음성(국문, 영문)으로 서비스하고 있습니다.
             </p>
             <a href="#" class="download_btn">도슨팅앱 다운로드</a>
@@ -480,30 +486,33 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 4,
-        scrollbar: {
-          el: ".swiper-scrollbar",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          600: {
-            slidesPerView: 2,
-          },
-          900: {
-            slidesPerView: 3,
-          },
-          1300: {
-            slidesPerView: 4,
-          },
-        },
-        loop: true,
-      });
+          var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 4,
+            scrollbar: {
+              el: ".swiper-scrollbar",
+              draggable: true,
+              // clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+              600: {
+                slidesPerView: 2,
+              },
+              900: {
+                slidesPerView: 3,
+              },
+              1300: {
+                slidesPerView: 4,
+              },
+            },
+      //       loop: true,
+      //       oopedSlides: 3, // 루프 시 복사되는 슬라이드 개수 지정
+      // centeredSlides: true, 
+          });
     </script>
     <!-- header -->
     <!-- <script>

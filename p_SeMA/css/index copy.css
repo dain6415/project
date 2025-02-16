@@ -174,12 +174,25 @@ body .wrap .sect1 .art2 .collections .left {
 html .wrap .sect1 .art2 .collections .left a .img_box,
 body .wrap .sect1 .art2 .collections .left a .img_box {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 html .wrap .sect1 .art2 .collections .left a .img_box img,
 body .wrap .sect1 .art2 .collections .left a .img_box img {
   width: 100%;
   transform: scale(1);
+  transition: 0.3s ease;
   min-height: 600px;
+}
+html .wrap .sect1 .art2 .collections .left a:hover .img_box::after,
+body .wrap .sect1 .art2 .collections .left a:hover .img_box::after {
+  opacity: 1;
+}
+html .wrap .sect1 .art2 .collections .left a:hover img,
+body .wrap .sect1 .art2 .collections .left a:hover img {
+  transform: scale(1.05);
 }
 html .wrap .sect1 .art2 .collections .grid,
 body .wrap .sect1 .art2 .collections .grid {
@@ -190,12 +203,16 @@ body .wrap .sect1 .art2 .collections .grid {
 }
 html .wrap .sect1 .art2 .collections .grid a .img_box,
 body .wrap .sect1 .art2 .collections .grid a .img_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
 }
 html .wrap .sect1 .art2 .collections .grid a .img_box img,
 body .wrap .sect1 .art2 .collections .grid a .img_box img {
-  width: 100%;
+  transform: scale(1);
+  transition: 0.3s ease;
 }
 html .wrap .sect1 .art2 .collections .grid a:nth-child(3) .img_box,
 body .wrap .sect1 .art2 .collections .grid a:nth-child(3) .img_box {
@@ -513,6 +530,9 @@ body footer {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .wrap .sect1 article.art2 .collections .left a .img_box img {
+    width: 100%;
   }
   .wrap .sect1 article.art2 .collections .grid {
     grid-template-columns: repeat(2, 1fr);

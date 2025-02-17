@@ -11,49 +11,6 @@ body a {
   color: inherit;
   cursor: pointer;
 }
-html .swiper,
-body .swiper {
-  width: 100%;
-  height: 100%;
-}
-html .swiper .swiper-slide,
-body .swiper .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-html .swiper .swiper-slide a,
-body .swiper .swiper-slide a {
-  width: 100%;
-}
-html .swiper .swiper-slide a .img_box,
-body .swiper .swiper-slide a .img_box {
-  overflow: hidden;
-  border-radius: 20px;
-  position: relative;
-}
-html .swiper .swiper-slide a .img_box::after,
-body .swiper .swiper-slide a .img_box::after {
-  display: none;
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
-  pointer-events: none;
-}
-html .swiper .swiper-slide a .img_box img,
-body .swiper .swiper-slide a .img_box img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-}
-html .swiper .swiper-slide a .txt .title,
-body .swiper .swiper-slide a .txt .title {
-  font-weight: 600;
-}
 html .wrap,
 body .wrap {
   background: #111;
@@ -91,34 +48,57 @@ html .wrap .bg_img .introduce h2,
 body .wrap .bg_img .introduce h2 {
   line-height: 1.4;
 }
-html .wrap .bg_img .introduce .txt p,
-body .wrap .bg_img .introduce .txt p {
+html .wrap .bg_img .introduce .txt > p,
+body .wrap .bg_img .introduce .txt > p {
   color: #ddd;
   line-height: 1.6;
   font-weight: 400;
+  margin-bottom: 40px;
 }
-html .wrap .bg_img .introduce .txt .visit,
-body .wrap .bg_img .introduce .txt .visit {
+html .wrap .bg_img .introduce .txt .bottom,
+body .wrap .bg_img .introduce .txt .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html .wrap .bg_img .introduce .txt .bottom .visit,
+body .wrap .bg_img .introduce .txt .bottom .visit {
   color: #fff;
   font-weight: 600;
   display: inline-block;
   padding: 20px 25px;
-  margin-top: 40px;
   border: 1px solid #fff;
   border-radius: 50px;
 }
-html .wrap .bg_img .introduce .txt .visit:hover,
-body .wrap .bg_img .introduce .txt .visit:hover {
+html .wrap .bg_img .introduce .txt .bottom .visit:hover,
+body .wrap .bg_img .introduce .txt .bottom .visit:hover {
   background: #fff;
   color: #333;
+}
+html .wrap .bg_img .introduce .txt .bottom .status,
+body .wrap .bg_img .introduce .txt .bottom .status {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+}
+html .wrap .bg_img .introduce .txt .bottom .status i,
+body .wrap .bg_img .introduce .txt .bottom .status i {
+  padding-right: 6px;
+  color: #fff;
+}
+html .wrap .bg_img .introduce .txt .bottom .status span,
+body .wrap .bg_img .introduce .txt .bottom .status span {
+  font-weight: 600;
+  color: #fff;
 }
 html .wrap .sect1,
 body .wrap .sect1 {
   width: 95%;
+  margin: -80px auto 0;
   background: #fff;
   position: relative;
   z-index: 99;
-  margin: -40px auto 0;
   border-radius: 20px;
 }
 html .wrap .sect1 .art1 .more,
@@ -152,6 +132,71 @@ body .wrap .sect1 .art1 .more .btn .right p {
   color: #333;
   font-size: 12px;
   font-weight: 800;
+}
+html .wrap .sect1 .art1 .swiper,
+body .wrap .sect1 .art1 .swiper {
+  width: 100%;
+  height: 100%;
+}
+html .wrap .sect1 .art1 .swiper .swiper-slide,
+body .wrap .sect1 .art1 .swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html .wrap .sect1 .art1 .swiper .swiper-slide a,
+body .wrap .sect1 .art1 .swiper .swiper-slide a {
+  width: 100%;
+}
+html .wrap .sect1 .art1 .swiper .swiper-slide a .img_box,
+body .wrap .sect1 .art1 .swiper .swiper-slide a .img_box {
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+html .wrap .sect1 .art1 .swiper .swiper-slide a .img_box::after,
+body .wrap .sect1 .art1 .swiper .swiper-slide a .img_box::after {
+  display: none;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  pointer-events: none;
+}
+html .wrap .sect1 .art1 .swiper .swiper-slide a .img_box img,
+body .wrap .sect1 .art1 .swiper .swiper-slide a .img_box img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+html .wrap .sect1 .art1 .swiper .swiper-slide a .txt .title,
+body .wrap .sect1 .art1 .swiper .swiper-slide a .txt .title {
+  font-weight: 500;
+}
+html .wrap .sect1 .art1 .swiper .pagination_area,
+body .wrap .sect1 .art1 .swiper .pagination_area {
+  position: relative;
+  padding: 40px;
+  display: flex;
+  border: 1px solid #000;
+}
+html .wrap .sect1 .art1 .swiper .pagination_area .swiper-pagination,
+body .wrap .sect1 .art1 .swiper .pagination_area .swiper-pagination {
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  left: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+html .wrap .sect1 .art1 .swiper .pagination_area .swiper-pagination span,
+body .wrap .sect1 .art1 .swiper .pagination_area .swiper-pagination span {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #111;
 }
 html .wrap .sect1 .art2 .collections .left a,
 html .wrap .sect1 .art2 .collections .right a,
@@ -409,13 +454,22 @@ body footer {
   .wrap .bg_img .introduce .txt p {
     font-size: clamp(1.4rem, 1vw, 1.6rem);
     word-break: keep-all;
+    margin-bottom: 20px;
   }
   .wrap .bg_img .introduce .txt p br {
     display: none;
   }
-  .wrap .bg_img .introduce .txt .visit {
+  .wrap .bg_img .introduce .txt .bottom {
+    flex-direction: column;
+    background: transparent;
+  }
+  .wrap .bg_img .introduce .txt .bottom .visit {
     padding: 20px 25px;
     font-size: 1.6rem;
+  }
+  .wrap .bg_img .introduce .txt .bottom .status {
+    padding-top: 50px;
+    font-size: 4vw;
   }
   .wrap .animate .title h2 {
     transform: translateX(0);
@@ -661,7 +715,6 @@ body footer {
   .wrap .sect2 .bottom a.item .item_txt .title p,
   .wrap .sect2 .bottom a.item .item_txt .title i {
     color: #fff;
-    font-size: 4vw;
     letter-spacing: 1;
     width: 100%;
   }
@@ -874,6 +927,8 @@ body footer {
     padding-bottom: 40px;
   }
   .wrap .bg_img .introduce {
+    width: 95%;
+    padding: 200px 0 25px;
     gap: 300px;
   }
   .wrap .bg_img .introduce h2 {
@@ -882,8 +937,17 @@ body footer {
   .wrap .bg_img .introduce .txt p {
     font-size: 2rem;
   }
-  .wrap .bg_img .introduce .txt .visit {
+  .wrap .bg_img .introduce .txt .bottom {
+    gap: 20px;
+    border-radius: 50px;
+    background: #111;
+  }
+  .wrap .bg_img .introduce .txt .bottom .visit {
     font-size: 2rem;
+  }
+  .wrap .bg_img .introduce .txt .bottom .status {
+    padding: 20px 30px;
+    font-size: 2.4rem;
   }
   .wrap .sect1 {
     margin: -80px auto 0;
@@ -931,13 +995,8 @@ body footer {
   .wrap .sect1 article.art1 .swiper .swiper-wrapper .swiper-slide .txt .sub_txt p {
     font-size: 2rem;
   }
-  .wrap .sect1 article.art1 .swiper .swiper-scrollbar {
-    width: 24%;
-    margin: 0;
-    left: 0;
-    position: relative;
-    margin-top: 60px;
-    margin-bottom: 40px;
+  .wrap .sect1 article.art1 .swiper .pagination_area .swiper-pagination {
+    width: 49%;
   }
   .wrap .sect1 article.art1 .swiper .btn_box {
     width: 130px;
@@ -1266,6 +1325,9 @@ body footer {
   .wrap .bg_img .introduce .txt p br.welBr {
     display: none;
   }
+  .wrap .sect1 article.art1 .swiper .pagination_area .swiper-pagination {
+    width: 33.3333%;
+  }
   .wrap .sect1 article.art2 {
     margin-top: 160px;
   }
@@ -1525,16 +1587,8 @@ body footer {
   }
   .wrap .bg_img .introduce {
     width: 1700px;
-    padding: 0 50px;
-    padding-top: 200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    padding: 200px 50px 0;
     gap: 300px;
-    border: 1px solid #f00;
-    position: relative;
-    z-index: 1;
   }
   .wrap .bg_img .introduce h2 {
     font-size: 5rem;
@@ -1546,13 +1600,12 @@ body footer {
     font-weight: 400;
     line-height: 1.6;
   }
-  .wrap .bg_img .introduce .txt .visit {
+  .wrap .bg_img .introduce .txt .bottom .visit {
     color: #fff;
     font-size: 20px;
     font-weight: 600;
     display: inline-block;
     padding: 20px 25px;
-    margin-top: 40px;
     border: 1px solid #fff;
     border-radius: 50px;
   }
@@ -1567,6 +1620,9 @@ body footer {
   }
   .wrap .sect1 article.art1 .swiper .swiper-scrollbar {
     width: 24%;
+  }
+  .wrap .sect1 article.art1 .swiper .pagination_area .swiper-pagination {
+    width: 25%;
   }
   .wrap .sect1 article.art1 .swiper .item {
     display: none;

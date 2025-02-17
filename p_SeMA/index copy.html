@@ -73,10 +73,7 @@
     <div class="wrap mCustomScrollbar" data-mcs-theme="minimal">
       <div class="bg_img">
         <div class="introduce">
-          <div class="top">
-            <h2 class="welcome">서울시립미술관에 오신 걸<br />환영합니다.</h2>
-            <p style="color: blue">오늘의 영업</p>
-          </div>
+          <h2 class="welcome">서울시립미술관에 오신 걸<br />환영합니다.</h2>
           <div class="txt">
             <p>
               사용자, 매개자, 생산자 모두가 함께하는 공동의 기억을 짓고,<br
@@ -87,7 +84,15 @@
               교차하고, 서로를 채우고, 매일 성장하는 ‘서울형 네트워크
               미술관’입니다. 
             </p>
-            <a href="#" class="visit">미술관 방문하기</a>
+            <div class="bottom">
+              <a href="#" class="visit">미술관 방문하기</a>
+              <p class="status" >
+                <i class="fa-regular fa-clock"></i>
+                오늘의 영업 :
+                <span id="museum_status">운영 시간</span
+                >
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -216,10 +221,12 @@
                 </a>
               </div>
             </div>
-            <div class="swiper-scrollbar"></div>
-            <div class="btn_box">
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
+            <div class="pagination_area">
+              <div class="swiper-pagination"></div>
+              <div class="btn_box">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
             </div>
           </div>
           <!-- 이렇게 버튼을 아래에 할 건지 / 전시프로그램 옆에 할건지 -->
@@ -301,7 +308,8 @@
               <a href="#">
                 <p class="link">모두의 연구실 ‘코랄’</p>
                 <p class="txt">
-                  현대미술에 관한 연구를 작성하고 수집하며,<br class="coral"> 작품 창작 과정을 접하는 온라인 플랫폼을 만들어갑니다.
+                  현대미술에 관한 연구를 작성하고 수집하며,<br class="coral" />
+                  작품 창작 과정을 접하는 온라인 플랫폼을 만들어갑니다.
                   <!-- 웹을 기반으로 지식 생산자와 사용자가 만나며<br
                     class="coral"
                   />
@@ -323,7 +331,7 @@
         </article>
       </section>
 
-      <section class="sect2" data-bg="#ff0000">
+      <section class="sect2">
         <div class="top">
           <div class="app">
             <h3>스마트폰에서 <br />작품 오디오 가이드를 만나보세요.</h3>
@@ -486,33 +494,48 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-          var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 4,
-            scrollbar: {
-              el: ".swiper-scrollbar",
-              draggable: true,
-              // clickable: true,
-            },
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-              600: {
-                slidesPerView: 2,
-              },
-              900: {
-                slidesPerView: 3,
-              },
-              1300: {
-                slidesPerView: 4,
-              },
-            },
-      //       loop: true,
-      //       oopedSlides: 3, // 루프 시 복사되는 슬라이드 개수 지정
-      // centeredSlides: true, 
-          });
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 4,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar",
+          // clickable: true,
+          draggable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          600: {
+            slidesPerView: 2,
+          },
+          900: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 4,
+          },
+        },
+        loop: true,
+        //       oopedSlides: 3, // 루프 시 복사되는 슬라이드 개수 지정
+        // centeredSlides: true,
+      });
+      
+      // ----------------------------------------------------
+      const today = new Date().getDay();
+      const schedule = { // 요일별 영업시간
+        1: "휴무 (매주 월요일)", 
+        2: "10:00 - 18:00 (평일 운영)",
+        3: "10:00 - 18:00 (평일 운영)",
+        4: "10:00 - 21:00 (금요일 연장 운영)",
+        5: "10:00 - 21:00 (금요일 연장 운영)",
+        6: "10:00 - 19:00 (주말/공휴일 운영)",
+        0: "10:00 - 19:00 (주말/공휴일 운영)",
+      };
+
+      document.getElementById("museum_status").textContent = schedule[today];
     </script>
     <!-- header -->
     <!-- <script>

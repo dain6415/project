@@ -14,13 +14,14 @@
       src="https://kit.fontawesome.com/2e471157d2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   </head>
 
   <body>
     <header>
       <div class="inner flex">
         <h1>
-          <a href="#"><img src="./imgs/logo-w.png" alt="" /></a>
+          <a href="#"><img src="./imgs/logo-b.png" alt="" /></a>
         </h1>
         <nav>
           <ul>
@@ -86,18 +87,17 @@
             </p>
             <div class="bottom">
               <a href="#" class="visit">미술관 방문하기</a>
-              <p class="status" >
+              <p class="status">
                 <i class="fa-regular fa-clock"></i>
                 오늘의 영업 :
-                <span id="museum_status">운영 시간</span
-                >
+                <span id="museum_status">운영 시간</span>
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <section class="sect1" data-bg="#ffffff">
+      <section class="sect1">
         <article class="art1">
           <div class="more">
             <h3>전시회 및 프로그램</h3>
@@ -430,11 +430,11 @@
         </div>
       </section>
 
-      <footer class="warp">
+      <footer>
         <div class="f-inner">
           <div class="f-top">
             <div class="f-logo">
-              <img src="imgs/logo-b.png" alt="" />
+              <img src="imgs/logo-w.png" alt="" />
               <ul>
                 <li>서울 중구 덕수궁길 61</li>
                 <li>&#40;대표번호&#41; 02-2124-8800, 02-120</li>
@@ -494,6 +494,62 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
+      // lenis------------------------------------
+      const lenis = new Lenis({
+        smooth: true,
+      });
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+
+      // 헤더------------------------------------
+      // window.addEventListener("scroll", function () {
+      //   const header = document.querySelector("header");
+      //   const logo = document.querySelector("header h1 img");
+      //   const nav = document.querySelector("nav ul li a");
+
+      //   if (window.scrollY > 600) {
+      //     // 스크롤 600이상으로 내려가면 header에 scrolled라는 클래스 추가
+      //     header.classList.add("scrolled");
+      //     logo.src = "./imgs/logo-b.png";
+      //   } else {
+      //     // 600이하가 아니면 scrolled 클래스를 제거 = 원래대로 돌아와라
+      //     header.classList.remove("scrolled");
+      //     logo.src = "./imgs/logo-w.png";
+      //   }
+      // });
+
+      let lastScrollY = 0; // 마지막 스크롤 위치
+      const header = document.querySelector("header");
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > lastScrollY) {
+          header.style.top = "-100%"; // 헤더 숨기기 (top 값으로 위로 밀기)
+        } else {
+          header.style.top = "0"; // 헤더 다시 보이기
+        }
+
+        lastScrollY = window.scrollY; // 마지막 스크롤 위치 업데이트
+      });
+
+      // ----------------------------------------------------
+      const today = new Date().getDay();
+      const schedule = {
+        // 요일별 영업시간
+        1: "휴무 (매주 월요일)",
+        2: "10:00 - 18:00 (평일 운영)",
+        3: "10:00 - 18:00 (평일 운영)",
+        4: "10:00 - 21:00 (금요일 연장 운영)",
+        5: "10:00 - 21:00 (금요일 연장 운영)",
+        6: "10:00 - 19:00 (주말/공휴일 운영)",
+        0: "10:00 - 19:00 (주말/공휴일 운영)",
+      };
+
+      document.getElementById("museum_status").textContent = schedule[today];
+    </script>
+    <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 4,
@@ -522,39 +578,7 @@
         //       oopedSlides: 3, // 루프 시 복사되는 슬라이드 개수 지정
         // centeredSlides: true,
       });
-      
-      // ----------------------------------------------------
-      const today = new Date().getDay();
-      const schedule = { // 요일별 영업시간
-        1: "휴무 (매주 월요일)", 
-        2: "10:00 - 18:00 (평일 운영)",
-        3: "10:00 - 18:00 (평일 운영)",
-        4: "10:00 - 21:00 (금요일 연장 운영)",
-        5: "10:00 - 21:00 (금요일 연장 운영)",
-        6: "10:00 - 19:00 (주말/공휴일 운영)",
-        0: "10:00 - 19:00 (주말/공휴일 운영)",
-      };
-
-      document.getElementById("museum_status").textContent = schedule[today];
     </script>
-    <!-- header -->
-    <!-- <script>
-      window.addEventListener("scroll", function () {
-        const header = document.querySelector("header");
-        const logo = document.querySelector("header h1 img");
-        const nav = document.querySelector("nav ul li a");
-
-        if (window.scrollY > 600) {
-          // 스크롤 600이상으로 내려가면 header에 scrolled라는 클래스 추가
-          header.classList.add("scrolled");
-          logo.src = "./imgs/logo-b.png";
-        } else {
-          // 600이하가 아니면 scrolled 클래스를 제거 = 원래대로 돌아와라
-          header.classList.remove("scrolled");
-          logo.src = "./imgs/logo-w.png";
-        }
-      });
-    </script> -->
 
     <!-- bg -->
     <!-- <script>

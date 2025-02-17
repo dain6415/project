@@ -95,7 +95,6 @@ body .wrap .bg_img .introduce .txt .bottom .status span {
 html .wrap .sect1,
 body .wrap .sect1 {
   width: 95%;
-  margin: -80px auto 0;
   background: #fff;
   position: relative;
   z-index: 99;
@@ -360,10 +359,6 @@ html .wrap .sect2 .bottom .item_txt .title,
 body .wrap .sect2 .bottom .item_txt .title {
   font-weight: 600;
 }
-html footer,
-body footer {
-  display: none;
-}
 
 @media only screen and (max-width: 600px) {
   header {
@@ -496,6 +491,7 @@ body footer {
   }
   .wrap .sect1 {
     padding: 80px 10px 60px;
+    margin: -40px auto 0;
   }
   .wrap .sect1 article.art1 {
     margin-bottom: 60px;
@@ -725,7 +721,10 @@ body footer {
     display: none;
   }
   footer {
-    padding: 0 40px;
+    width: 95%;
+    margin: auto;
+    margin-top: 40px;
+    padding: 0 10px;
   }
   footer .f-top {
     display: flex;
@@ -807,7 +806,7 @@ body footer {
     height: 120px;
     transition: 0.5s;
     background: #fff;
-    padding: 0 20px;
+    padding: 40px 20px;
   }
   header .inner {
     width: 95%;
@@ -819,8 +818,13 @@ body footer {
   }
   header .inner h1 {
     width: 15%;
+    height: 40px;
+    position: relative;
   }
-  header .inner h1 img {
+  header .inner h1 a {
+    width: 100%;
+  }
+  header .inner h1 a img {
     width: 100%;
   }
   header .inner nav {
@@ -937,17 +941,14 @@ body footer {
   .wrap .bg_img .introduce .txt p {
     font-size: 2rem;
   }
-  .wrap .bg_img .introduce .txt .bottom {
-    gap: 20px;
-    border-radius: 50px;
-    background: #111;
-  }
   .wrap .bg_img .introduce .txt .bottom .visit {
     font-size: 2rem;
   }
   .wrap .bg_img .introduce .txt .bottom .status {
+    background: #111;
     padding: 20px 30px;
     font-size: 2.4rem;
+    border-radius: 50px;
   }
   .wrap .sect1 {
     margin: -80px auto 0;
@@ -1234,10 +1235,14 @@ body footer {
   .wrap .sect2 .bottom a.item .item_txt .sub_txt {
     display: none;
   }
+  .wrap footer {
+    margin-top: 100px;
+  }
   .wrap footer .f-top {
+    width: 95%;
+    display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
-    display: flex;
     padding: 0 40px;
   }
   .wrap footer .f-top .f-logo {
@@ -1322,7 +1327,7 @@ body footer {
   }
 }
 @media only screen and (min-width: 900px) {
-  .wrap .bg_img .introduce .txt p br.welBr {
+  .wrap .bg_img .introduce .txt > p br.welBr {
     display: none;
   }
   .wrap .sect1 article.art1 .swiper .pagination_area .swiper-pagination {
@@ -1586,7 +1591,7 @@ body footer {
     background-size: 100%;
   }
   .wrap .bg_img .introduce {
-    width: 1700px;
+    max-width: 1700px;
     padding: 200px 50px 0;
     gap: 300px;
   }
@@ -1744,9 +1749,7 @@ body footer {
     display: none;
   }
   footer .f-top {
-    justify-content: space-between;
     margin-bottom: 60px;
-    display: flex;
     padding: 0 60px;
   }
   footer .f-top .f-logo {

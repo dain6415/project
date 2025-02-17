@@ -103,7 +103,6 @@ body {
     }
     .sect1 {
       width: 95%;
-      margin: -80px auto 0;
       background: #fff;
       position: relative;
       z-index: 99;
@@ -349,9 +348,9 @@ body {
       }
     }
   }
-  footer {
-    display: none;
-  }
+  // footer {
+  //   display: none;
+  // }
 }
 
 // --------------------------------------------------------------------
@@ -537,6 +536,7 @@ body {
     }
     .sect1 {
       padding: 80px 10px 60px;
+      margin: -40px auto 0;
       article {
         &.art1 {
           margin-bottom: 60px;
@@ -809,7 +809,10 @@ body {
   // ----------------------------------------------
   // footer
   footer {
-    padding: 0 40px;
+    width: 95%;
+    margin: auto;
+    margin-top: 40px;
+    padding: 0 10px;
     .f-top {
       display: flex;
       flex-direction: column;
@@ -897,7 +900,8 @@ body {
     height: 120px;
     transition: 0.5s;
     background: #fff;
-    padding: 0 20px;
+    padding: 40px 20px;
+    // border: 1px solid #000;
     .inner {
       width: 95%;
       height: 100%;
@@ -905,9 +909,15 @@ body {
       @include flex(space-between);
       h1 {
         width: 15%;
+        height: 40px;
         // border: 1px solid #f00;
-        img {
+        position: relative;
+        a{
+          // position: absolute;
           width: 100%;
+          img {
+            width: 100%;
+          }
         }
       }
       nav {
@@ -1035,15 +1045,14 @@ body {
             font-size: 2rem;
           }
           .bottom {
-            gap: 20px;
-            border-radius: 50px;
-            background: #111;
             .visit {
               font-size: 2rem;
             }
             .status {
+              background: #111;
               padding: 20px 30px;
               font-size: 2.4rem;
+              border-radius: 50px;
             }
           }
         }
@@ -1377,11 +1386,12 @@ body {
       }
     }
     footer {
+      margin-top: 100px;
       .f-top {
+        width: 95%;
+        display: flex;
         justify-content: space-between;
         margin-bottom: 60px;
-        display: flex;
-
         padding: 0 40px;
         .f-logo {
           width: 50%;
@@ -1489,7 +1499,7 @@ body {
     .bg_img {
       .introduce {
         .txt {
-          p {
+          >p {
             br.welBr {
               display: none;
             }
@@ -1820,7 +1830,7 @@ body {
     .bg_img {
       background-size: 100%;
       .introduce {
-        width: 1700px;
+        max-width: 1700px;
         padding: 200px 50px 0;
         gap: 300px;
         h2 {
@@ -2020,10 +2030,7 @@ body {
   }
   footer {
     .f-top {
-      justify-content: space-between;
       margin-bottom: 60px;
-      display: flex;
-
       padding: 0 60px;
       .f-logo {
         width: 50%;

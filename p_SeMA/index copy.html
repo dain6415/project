@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>서시미2</title>
+    <title>서울시립미술관</title>
+    <link rel="stylesheet" href="" />
     <link rel="stylesheet" href="./css/basc_style.css" />
     <link rel="stylesheet" href="./css/index copy.css" />
     <link
@@ -24,7 +25,8 @@
           <a href="#"><img src="./imgs/logo-b.png" alt="" /></a>
         </h1>
         <nav>
-          <ul>
+          <!-- pc -->
+          <ul class="pc_menu" role="navigation" aria-level="pc 메뉴바">
             <li class="main-menu"><a href="#">방문하기</a></li>
             <li class="main-menu">
               <a href="#">전시와 프로그램</a>
@@ -36,17 +38,14 @@
             <li class="main-menu">
               <a href="#">소장품과 미술연구</a>
               <ul class="sub-menu">
-                <li><a href="#">소장품</a></li>
+                <li><a href="#">SeMA 소장품</a></li>
                 <li><a href="#">미술연구</a></li>
                 <li><a href="#">모두의 연구실</a></li>
+                <li><a href="#">SeMA 도서와 자료</a></li>
               </ul>
             </li>
             <li class="main-menu">
               <a href="#">일정</a>
-              <ul class="sub-menu">
-                <li><a href="#">fffff</a></li>
-                <li><a href="#">fffff</a></li>
-              </ul>
             </li>
             <li class="main-menu">
               <a href="#">
@@ -55,6 +54,49 @@
             </li>
           </ul>
         </nav>
+        <!-- mobile -->
+        <div class="mobile_menu">
+          <a href="#" class="mobile_box"><span>모바일 메뉴바</span></a>
+          <ul class="mobile_nav" role="navigation" aria-level="모바일 메뉴바">
+            <li class="main-menu"><a href="#">방문하기</a></li>
+            <li class="main-menu">
+              <a href="#">전시와 프로그램</a>
+              <ul class="sub-menu">
+                <li><a href="#">현재</a></li>
+                <li><a href="#">과거</a></li>
+              </ul>
+            </li>
+            <li class="main-menu">
+              <a href="#">소장품과 미술연구</a>
+              <ul class="sub-menu">
+                <li><a href="#">SeMA 소장품</a></li>
+                <li><a href="#">미술연구</a></li>
+                <li><a href="#">모두의 연구실</a></li>
+                <li><a href="#">SeMA 도서와 자료</a></li>
+              </ul>
+            </li>
+            <li class="main-menu">
+              <a href="#">일정</a>
+            </li>
+            <!-- <a href="#" class="search"><i class="fa-solid fa-magnifying-glass"></i><span>검색하기</span></a> -->
+            <a href="#" class="search">
+              <input
+                type="text"
+                name="검색창"
+                id=""
+                placeholder="무엇을검색하시겠습니까?"
+              />
+              <div class="search_icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </a>
+            <div class="login">
+              <a href="#"><span>EN</span></a>
+              <a href="#"><span>로그인</span></a>
+            </div>
+          </ul>
+        </div>
+
         <div class="right-menu">
           <ul>
             <li>
@@ -432,38 +474,74 @@
 
       <footer>
         <div class="f-inner">
-          <div class="f-top">
-            <div class="f-logo">
-              <img src="imgs/logo-w.png" alt="" />
+          <div class="f_top">
+            <div class="f_logo">
+              <div class="img_box">
+                <img src="imgs/logo-w.png" alt="" />
+              </div>
               <ul>
                 <li>서울 중구 덕수궁길 61</li>
                 <li>&#40;대표번호&#41; 02-2124-8800, 02-120</li>
                 <li>&#40;직원찾기&#41;<a href="#">직원 및 연락처</a></li>
               </ul>
             </div>
-            <ul class="f-menu">
-              <li><a href="#">응답소</a></li>
-              <li><a href="#">SeMA 뉴스레터</a></li>
-              <li><a href="#">도슨팅앱</a></li>
-            </ul>
-            <ul class="f-information">
-              <li><a href="#">개인정보처리방침</a></li>
-              <li><a href="#">접근성 안내</a></li>
-              <li><a href="#">이메일무단수집거부</a></li>
-              <li><a href="#">함께한 사람들</a></li>
-            </ul>
-            <div class="family">
+            <!-- <div class="family">
               <p>관련 사이트</p>
               <select name="family" id="">
                 <option value="family1">family1</option>
                 <option value="family2">family2</option>
                 <option value="family3">family3</option>
               </select>
+            </div> -->
+            <div class="site_map">
+              <div class="f_menu">
+                <ul>
+                  <li><a href="#">응답소</a></li>
+                  <li><a href="#">SeMA 뉴스레터</a></li>
+                  <li><a href="#">자주 묻는 질문</a></li>
+                </ul>
+              </div>
+              <div class="exhibition">
+                <a href="#">전시와 프로그램</a>
+                <ul>
+                  <li><a href="#">현재</a></li>
+                  <li><a href="#">예정</a></li>
+                  <li><a href="#">과거</a></li>
+                </ul>
+              </div>
+              <div class="collection">
+                <a href="#">소장품과 미술연구</a>
+                <ul>
+                  <li><a href="#">SeMA 소장품</a></li>
+                  <li><a href="#">미술연구</a></li>
+                  <li><a href="#">모두의 연구실 '코랄'</a></li>
+                  <li><a href="#">SeMA 도서와 자료</a></li>
+                </ul>
+              </div>
+              <div class="visit">
+                <a href="#">방문하기</a>
+                <ul>
+                  <li><a href="#">서울시립미술관 서소문본관</a></li>
+                  <li><a href="#">서울시립 북서울미술관</a></li>
+                  <li><a href="#">서울시립 남서울미술관</a></li>
+                  <li><a href="#">서울시립 미술아카이브</a></li>
+                  <li><a href="#">서울시립 난지미술창작스튜디오</a></li>
+                  <li><a href="#">SeMA 백남준기념관</a></li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="line"></div>
-          <div class="f-btn">
-            <p>&copy; Seoul Museum of Art, All Rights Reserved</p>
+          <div class="f_bottom">
+            <div class="left">
+              <div class="f_information">
+                <a href="#">개인정보처리방침</a>
+                <a href="#">접근성 안내</a>
+                <a href="#">이메일무단수집거부</a>
+                <a href="#">함께한 사람들</a>
+              </div>
+              <p>&copy; Seoul Museum of Art, All Rights Reserved</p>
+            </div>
             <div class="sns">
               <ul class="flex">
                 <li>
@@ -539,16 +617,18 @@
       const schedule = {
         // 요일별 영업시간
         1: "휴무 (매주 월요일)",
-        2: "10:00 - 18:00 (평일 운영)",
-        3: "10:00 - 18:00 (평일 운영)",
-        4: "10:00 - 21:00 (금요일 연장 운영)",
-        5: "10:00 - 21:00 (금요일 연장 운영)",
+        // 2: "10:00 - 20:00까지",
+        2: "10:00 - 21:00 (서울문화의 밤 1시간 연장 운영)",
+        3: "10:00 - 20:00까지",
+        4: "10:00 - 20:00까지",
+        5: "10:00 - 20:00 (금요일 서울문화의 밤 1시간 연장 운영)",
         6: "10:00 - 19:00 (주말/공휴일 운영)",
         0: "10:00 - 19:00 (주말/공휴일 운영)",
       };
 
       document.getElementById("museum_status").textContent = schedule[today];
     </script>
+    <!-- swiper -->
     <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,

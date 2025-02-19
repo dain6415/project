@@ -668,6 +668,7 @@ body .wrap footer .f_bottom .sns ul li img {
     justify-content: flex-end;
   }
   header .inner .right-menu ul li a {
+    white-space: nowrap;
     color: #fff;
   }
   header .inner .right-menu ul li a i {
@@ -687,12 +688,13 @@ body .wrap footer .f_bottom .sns ul li img {
     color: black; /* 스크롤 후 변경된 nav 링크 색상 */
   }
   .wrap .bg_img {
-    background-image: url(../imgs/서울시립미술관.jpg);
+    background-image: url(../imgs/bg.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     position: relative;
+    background-color: #ff0;
   }
   .wrap .bg_img::after {
     content: "";
@@ -1257,7 +1259,7 @@ body .wrap footer .f_bottom .sns ul li img {
     padding-bottom: 40px;
   }
   .wrap .bg_img {
-    background: url("../imgs/서울시립미술관.jpg") top 50% center no-repeat;
+    background: url("../imgs/bg.jpg") top 50% center no-repeat;
   }
   .wrap .bg_img .introduce {
     width: 95%;

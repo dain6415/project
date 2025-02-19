@@ -702,14 +702,13 @@ body .wrap footer .f_bottom .sns ul li img {
   }
   .wrap .bg_img .introduce {
     width: 95%;
-    padding: 150px 10px 0;
+    padding: 14vh 10px 0;
     gap: 3rem;
     text-align: center;
   }
   .wrap .bg_img .introduce h2 {
     font-size: 7vw;
     line-height: 1.4;
-    margin-bottom: 5vw;
   }
   .wrap .bg_img .introduce .txt p {
     font-size: clamp(1.4rem, 1vw, 1.6rem);

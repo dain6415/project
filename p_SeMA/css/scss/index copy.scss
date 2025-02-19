@@ -21,8 +21,6 @@ body {
   .wrap {
     background: #111;
     .bg_img {
-      background: url("../imgs/서울시립미술관.jpg") top 50% center
-        no-repeat;
       background-size: cover;
       height: 100vh;
       position: relative;
@@ -114,7 +112,7 @@ body {
               border-radius: 99px;
               // background: #000;
               border: 1px solid #000;
-              @include flex-c;
+              @include flex();
               margin-left: 10px;
               p {
                 color: #333;
@@ -181,6 +179,18 @@ body {
                 border-radius: 20px;
                 overflow: hidden;
                 background: #111;
+              }
+            }
+            .btn_box {
+              position: absolute;
+              top: 50%;
+              right: 0;
+              transform: translateY(-50%);
+              > div {
+                // position: absolute;
+                // top: 50%;
+                // transform: translateY(-50%);
+                background: #000;
               }
             }
           }
@@ -659,6 +669,7 @@ body {
       background-size: cover;
       height: 100vh;
       position: relative;
+      background: #0f0;
       &::after {
         content: "";
         position: absolute;
@@ -702,7 +713,7 @@ body {
             }
             .status {
               padding-top: 50px;
-              font-size: 4vw;
+              font-size: 5vw;
             }
           }
         }
@@ -757,7 +768,7 @@ body {
                 width: 20px;
                 height: 20px;
                 border-radius: 99px;
-                @include flex-c;
+                @include flex();
                 margin-left: 10px;
                 p {
                   color: var(--gray3);
@@ -785,44 +796,77 @@ body {
                 }
               }
             }
-            .swiper-scrollbar {
-              width: 24%;
-              margin: 0;
-              left: 0;
-              position: relative;
-              margin-top: 40px;
-              margin-bottom: 40px;
-            }
-            .btn_box {
-              border: 1px solid #000;
-              width: 100px;
-              height: 50px;
-              position: absolute;
-              bottom: 24px;
-              // left: 50%;
-              right: 0;
-              z-index: 100;
-              > div {
-                // border: 1px solid #000;
-                cursor: pointer;
-                width: 30px;
-                height: 30px;
-                padding: 10px;
-                color: #333;
+            .pagination_area {
+              .swiper-pagination {
+                width: 70%;
               }
-            }
-
-            .item {
-              display: none;
-              .art_img {
+              .btn_box {
                 border: 1px solid #000;
-
-                border-radius: 20px;
-                overflow: hidden;
-                width: 100%;
-              }
-              &.item4 {
-                display: block;
+                width: 100px;
+                height: 50px;
+                > div {
+                  border: 1px solid #000;
+                  cursor: pointer;
+                  width: 40px;
+                  height: 40px;
+                  padding: 4px;
+                  color: #333;
+                  span {
+                    width: 100%;
+                    height: 2px;
+                    background: #111;
+                    border-radius: 10px;
+                    position: relative;
+                    &.next {
+                      &::before,
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        right: 1px;
+                        width: 50%;
+                        height: 2px;
+                        border-radius: 10px;
+                        background: #111;
+                        transform-origin: right;
+                      }
+                      &::before {
+                        top: 0;
+                        transform: rotate(45deg);
+                      }
+                      &::after {
+                        bottom: 0;
+                        transform: rotate(-45deg);
+                      }
+                    }
+                    &.prev {
+                      &::before,
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        left: 1px;
+                        width: 50%;
+                        height: 2px;
+                        border-radius: 10px;
+                        background: #111;
+                        transform-origin: left;
+                      }
+                      &::before {
+                        top: 0;
+                        transform: rotate(45deg);
+                      }
+                      &::after {
+                        bottom: 0;
+                        transform: rotate(-45deg);
+                      }
+                    }
+                  }
+                  i {
+                    font-size: 6vw;
+                  }
+                  &::after {
+                    display: none;
+                  }
+                }
               }
             }
           }
@@ -1268,6 +1312,8 @@ body {
       padding-bottom: 40px;
     }
     .bg_img {
+      background: url("../imgs/서울시립미술관.jpg") top 50% center
+        no-repeat;
       .introduce {
         width: 95%;
         padding: 200px 0 25px;
@@ -1311,7 +1357,7 @@ body {
                 width: 20px;
                 height: 20px;
                 border-radius: 99px;
-                @include flex-c;
+                @include flex();
                 margin-left: 10px;
                 p {
                   color: var(--gray3);

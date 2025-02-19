@@ -48,7 +48,6 @@ body {
             color: #ddd;
             line-height: 1.6;
             font-weight: 400;
-            margin-bottom: 40px;
           }
           .bottom {
             @include flex(space-between);
@@ -679,7 +678,7 @@ body {
       }
       .introduce {
         width: 95%;
-        padding: 150px 20px 0;
+        padding: 150px 10px 0;
         gap: 3rem;
         text-align: center;
         h2 {
@@ -691,7 +690,7 @@ body {
           p {
             font-size: clamp(1.4rem, 1vw, 1.6rem);
             word-break: keep-all;
-            margin-bottom: 20px;
+            padding-bottom: 3vh;
             box-shadow: 0 1px 2px #00000041;
             br {
               display: none;
@@ -705,7 +704,8 @@ body {
               font-size: 1.6rem;
             }
             .status {
-              padding-top: 50px;
+              padding-top: 5vh;
+              padding-bottom: 2vh;
               font-size: 5vw;
             }
           }
@@ -1315,31 +1315,32 @@ body {
             #11110f 0%,
             rgba(17, 16, 17, 0) 80%
           );
-      .introduce {
-        width: 95%;
-        padding: 200px 0 25px;
-        gap: 300px;
-      }
-        h2 {
-          font-size: 5rem;
         }
-        .txt {
-          p {
-            font-size: 2rem;
+        .introduce {
+          width: 95%;
+          padding: 200px 0 25px;
+          gap: 300px;
+          h2 {
+            font-size: 5rem;
           }
-          .bottom {
-            .visit {
+          .txt {
+            > p {
               font-size: 2rem;
+              margin-bottom: 40px;
             }
-            .status {
-              background: #111;
-              padding: 20px 30px;
-              font-size: 2.4rem;
-              border-radius: 50px;
+            .bottom {
+              .visit {
+                font-size: 2rem;
+              }
+              .status {
+                background: #111;
+                padding: 20px 30px;
+                font-size: 2.4rem;
+                border-radius: 50px;
+              }
             }
           }
         }
-      }
     }
     .sect1 {
       margin: -80px auto 0;

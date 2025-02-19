@@ -49,7 +49,6 @@ body .wrap .bg_img .introduce .txt > p {
   color: #ddd;
   line-height: 1.6;
   font-weight: 400;
-  margin-bottom: 40px;
 }
 html .wrap .bg_img .introduce .txt .bottom,
 body .wrap .bg_img .introduce .txt .bottom {
@@ -703,7 +702,7 @@ body .wrap footer .f_bottom .sns ul li img {
   }
   .wrap .bg_img .introduce {
     width: 95%;
-    padding: 150px 20px 0;
+    padding: 150px 10px 0;
     gap: 3rem;
     text-align: center;
   }
@@ -714,7 +713,7 @@ body .wrap footer .f_bottom .sns ul li img {
   .wrap .bg_img .introduce .txt p {
     font-size: clamp(1.4rem, 1vw, 1.6rem);
     word-break: keep-all;
-    margin-bottom: 20px;
+    padding-bottom: 3vh;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2549019608);
   }
   .wrap .bg_img .introduce .txt p br {
@@ -729,7 +728,8 @@ body .wrap footer .f_bottom .sns ul li img {
     font-size: 1.6rem;
   }
   .wrap .bg_img .introduce .txt .bottom .status {
-    padding-top: 50px;
+    padding-top: 5vh;
+    padding-bottom: 2vh;
     font-size: 5vw;
   }
   .wrap .animate .title h2 {
@@ -1261,21 +1261,22 @@ body .wrap footer .f_bottom .sns ul li img {
     height: 80%;
     background-image: linear-gradient(to top, #11110f 0%, rgba(17, 16, 17, 0) 80%);
   }
-  .wrap .bg_img::after .introduce {
+  .wrap .bg_img .introduce {
     width: 95%;
     padding: 200px 0 25px;
     gap: 300px;
   }
-  .wrap .bg_img::after h2 {
+  .wrap .bg_img .introduce h2 {
     font-size: 5rem;
   }
-  .wrap .bg_img::after .txt p {
+  .wrap .bg_img .introduce .txt > p {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  .wrap .bg_img .introduce .txt .bottom .visit {
     font-size: 2rem;
   }
-  .wrap .bg_img::after .txt .bottom .visit {
-    font-size: 2rem;
-  }
-  .wrap .bg_img::after .txt .bottom .status {
+  .wrap .bg_img .introduce .txt .bottom .status {
     background: #111;
     padding: 20px 30px;
     font-size: 2.4rem;

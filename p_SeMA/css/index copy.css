@@ -459,12 +459,13 @@ body .wrap footer .f_bottom .sns ul li img {
     overflow: hidden;
   }
   header {
-    border: 1px solid #96db15;
-    padding: 20px 0px;
+    padding: 12px 0px;
     transition: 0.5s;
     background: #fff;
-    position: relative;
+    position: fixed;
     z-index: 999;
+    width: 100%;
+    height: 60px;
   }
   header .inner {
     width: 95%;
@@ -475,11 +476,14 @@ body .wrap footer .f_bottom .sns ul li img {
     align-items: center;
   }
   header .inner h1 {
-    width: 15%;
+    width: 30%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   header .inner h1 img {
-    height: 100%;
+    width: 100%;
   }
   header .inner nav {
     width: 50%;
@@ -496,7 +500,6 @@ body .wrap footer .f_bottom .sns ul li img {
     height: 40px;
     width: 40px;
     padding: 4px;
-    border: 1px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;

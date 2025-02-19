@@ -56,7 +56,7 @@
         </nav>
         <!-- mobile -->
         <div class="mobile_menu">
-          <a href="#" class="mobile_box"><span>모바일 메뉴바</span></a>
+          <a href="#" class="mobile_box"><span></span></a>
           <ul class="mobile_nav" role="navigation" aria-level="모바일 메뉴바">
             <li class="main-menu"><a href="#">방문하기</a></li>
             <li class="main-menu">
@@ -581,6 +581,14 @@
         requestAnimationFrame(raf);
       }
       requestAnimationFrame(raf);
+
+      const menuButton = document.querySelector(".mobile_box");
+      const mobileMenu = document.querySelector(".mobile_nav");
+      menuButton.addEventListener("click", function () {
+        menuButton.classList.toggle("on");
+        mobileMenu.classList.toggle("on");
+      });
+
 
       // 헤더------------------------------------
       // window.addEventListener("scroll", function () {

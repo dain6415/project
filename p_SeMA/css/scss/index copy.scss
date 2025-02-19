@@ -1013,12 +1013,13 @@ body {
       }
       .bottom {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 5vw;
         a.item {
-          border-right: 1px solid #999;
+          // border-right: 1px solid #999;
           display: block;
-          padding-right: 10px;
-          padding-left: 10px;
+          padding-right: 6px;
+          padding-left: 6px;
           text-align: center;
           &:nth-child(5) {
             border-right: none;
@@ -1028,8 +1029,7 @@ body {
               p,
               i {
                 color: #fff;
-                // font-size: 4vw;
-                letter-spacing: 1;
+                font-size: 3vw;
                 width: 100%;
               }
               i {
@@ -1090,6 +1090,9 @@ body {
           li {
             font-weight: 900;
             margin-bottom: 10px;
+            a{
+              font-size: 5vw;
+            }
           }
         }
         .visit {

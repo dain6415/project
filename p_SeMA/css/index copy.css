@@ -992,13 +992,13 @@ body .wrap footer .f_bottom .sns ul li img {
   }
   .wrap .sect2 .bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 5vw;
   }
   .wrap .sect2 .bottom a.item {
-    border-right: 1px solid #999;
     display: block;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 6px;
+    padding-left: 6px;
     text-align: center;
   }
   .wrap .sect2 .bottom a.item:nth-child(5) {
@@ -1007,7 +1007,7 @@ body .wrap footer .f_bottom .sns ul li img {
   .wrap .sect2 .bottom a.item .item_txt .title p,
   .wrap .sect2 .bottom a.item .item_txt .title i {
     color: #fff;
-    letter-spacing: 1;
+    font-size: 3vw;
     width: 100%;
   }
   .wrap .sect2 .bottom a.item .item_txt .title i {
@@ -1059,6 +1059,9 @@ body .wrap footer .f_bottom .sns ul li img {
   footer .f_top .site_map ul li {
     font-weight: 900;
     margin-bottom: 10px;
+  }
+  footer .f_top .site_map ul li a {
+    font-size: 5vw;
   }
   footer .f_top .site_map .visit ul {
     margin-bottom: 0;

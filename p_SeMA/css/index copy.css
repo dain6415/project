@@ -687,11 +687,12 @@ body .wrap footer .f_bottom .sns ul li img {
     color: black; /* 스크롤 후 변경된 nav 링크 색상 */
   }
   .wrap .bg_img {
-    background: url(../imgs/서울시립미술관.jpg) top center no-repeat;
+    background-image: url(../imgs/서울시립미술관.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     position: relative;
-    background: #0f0;
   }
   .wrap .bg_img::after {
     content: "";

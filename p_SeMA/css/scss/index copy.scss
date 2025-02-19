@@ -664,12 +664,12 @@ body {
 
   .wrap {
     .bg_img {
-      background: url(../imgs/서울시립미술관.jpg) top center
-        no-repeat;
+      background-image: url(../imgs/서울시립미술관.jpg);
+      background-position: top center;
+      background-repeat: no-repeat;
       background-size: cover;
       height: 100vh;
       position: relative;
-      background: #0f0;
       &::after {
         content: "";
         position: absolute;

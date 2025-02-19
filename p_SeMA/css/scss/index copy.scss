@@ -179,10 +179,9 @@ body {
               right: 0;
               transform: translateY(-50%);
               > div {
-                // position: absolute;
-                // top: 50%;
-                // transform: translateY(-50%);
-                background: #000;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
               }
             }
           }
@@ -437,7 +436,6 @@ body {
     }
   }
   header {
-    // border: 1px solid #96db15;
     padding: 12px 0px;
     transition: 0.5s;
     background: #fff;
@@ -475,7 +473,7 @@ body {
       .mobile_menu {
         height: 40px;
         width: 40px;
-        padding: 4px;
+        padding: 10px 6px;
         @include flex();
         .mobile_box {
           @include flex();
@@ -486,7 +484,7 @@ body {
           span {
             display: block;
             width: 100%;
-            height: 3px;
+            height: 2px;
             background: #111;
             position: absolute;
             top: 50%;
@@ -499,7 +497,7 @@ body {
               position: absolute;
               left: 0;
               width: 100%;
-              height: 3px;
+              height: 2px;
               background: #111;
               transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
               pointer-events: none;
@@ -807,7 +805,6 @@ body {
                   span {
                     width: 100%;
                     height: 2px;
-                    background: #111;
                     border-radius: 10px;
                     position: relative;
                     &.next {
@@ -1083,7 +1080,7 @@ body {
       }
       .site_map {
         a {
-          font-size: 4vw;
+          font-size: 6vw;
         }
         ul {
           padding-top: 10px;
@@ -1129,7 +1126,6 @@ body {
         color: var(--gray2);
         width: 100%;
         text-align: center;
-        // border-top: 1px solid #000;
         padding: 24px 0 60px;
       }
       .sns {

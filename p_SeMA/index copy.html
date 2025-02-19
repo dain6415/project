@@ -582,14 +582,6 @@
       }
       requestAnimationFrame(raf);
 
-      const mobBtn = document.querySelector(".mobile_box");
-      const mobileNav = document.querySelector(".mobile_nav");
-      mobBtn.addEventListener("click", function () {
-        mobBtn.classList.toggle("on");
-        mobileNav.classList.toggle("on");
-      });
-
-
       // 헤더------------------------------------
       // window.addEventListener("scroll", function () {
       //   const header = document.querySelector("header");
@@ -607,17 +599,30 @@
       //   }
       // });
 
-      let lastScrollY = 0; // 마지막 스크롤 위치
+      let lastScrollY = 0;
       const header = document.querySelector("header");
+      const mobBtn = document.querySelector(".mobile_box");
+      const mobileNav = document.querySelector(".mobile_nav");
 
       window.addEventListener("scroll", function () {
-        if (window.scrollY > lastScrollY) {
-          header.style.top = "-100%"; // 헤더 숨기기 (top 값으로 위로 밀기)
-        } else {
-          header.style.top = "0"; // 헤더 다시 보이기
+        if (!mobileNav.classList.contains("on")) {
+          // 모바일 메뉴가 열려있지 않을 때만 실행
+          if (window.scrollY > lastScrollY) {
+            header.style.top = "-100%";
+          } else {
+            header.style.top = "0";
+          }
         }
+        lastScrollY = window.scrollY;
+      });
 
-        lastScrollY = window.scrollY; // 마지막 스크롤 위치 업데이트
+      mobBtn.addEventListener("click", function () {
+        mobBtn.classList.toggle("on");
+        mobileNav.classList.toggle("on");
+
+        if (mobileNav.classList.contains("on")) {
+          header.style.top = "0"; // 모바일 메뉴가 열려 있으면 헤더 고정
+        }
       });
 
       // ----------------------------------------------------

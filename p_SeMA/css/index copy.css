@@ -201,7 +201,9 @@ body .wrap .sect1 .art1 .swiper .pagination_area .btn_box {
 }
 html .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div,
 body .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div {
-  background: #000;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 html .wrap .sect1 .art2 .collections .left a,
 html .wrap .sect1 .art2 .collections .right a,
@@ -505,7 +507,7 @@ body .wrap footer .f_bottom .sns ul li img {
   header .inner .mobile_menu {
     height: 40px;
     width: 40px;
-    padding: 4px;
+    padding: 10px 6px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -522,7 +524,7 @@ body .wrap footer .f_bottom .sns ul li img {
   header .inner .mobile_menu .mobile_box span {
     display: block;
     width: 100%;
-    height: 3px;
+    height: 2px;
     background: #111;
     position: absolute;
     top: 50%;
@@ -535,7 +537,7 @@ body .wrap footer .f_bottom .sns ul li img {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 3px;
+    height: 2px;
     background: #111;
     transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
     pointer-events: none;
@@ -816,7 +818,6 @@ body .wrap footer .f_bottom .sns ul li img {
   .wrap .sect1 article.art1 .swiper .pagination_area .btn_box > div span {
     width: 100%;
     height: 2px;
-    background: #111;
     border-radius: 10px;
     position: relative;
   }
@@ -1047,7 +1048,7 @@ body .wrap footer .f_bottom .sns ul li img {
     margin-left: 5px;
   }
   footer .f_top .site_map a {
-    font-size: 4vw;
+    font-size: 6vw;
   }
   footer .f_top .site_map ul {
     padding-top: 10px;

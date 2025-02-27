@@ -33,11 +33,12 @@
 }
 
 /* 공통css */
-body{color: #333; font-family: 'GmarketSansMedium'; width: 100%; height: 100%;font-family: 'Gmarket Sans'; font-style: normal; font-weight: 500; background: #000;}
+body{color: #333; font-family: 'GmarketSansMedium'; width: 100%; height: 100%;font-family: 'Gmarket Sans'; font-style: normal; font-weight: 500; background: #000; }
 
 img{vertical-align: top;}
 li{list-style: none;}
-a{text-decoration: none;}
+p{font-size: 10px;}
+a{text-decoration: none;font-size: 10px;}
 figcaption{color: #333;}
 .flex{display: flex;}
 .just-c{justify-content: center;}
@@ -49,23 +50,19 @@ figcaption{color: #333;}
 
 /* .container{border: 1px solid #cc5e5e;} */
 
-section{width: 100%; height: 100vh;
-  /* position: fixed; */
-    transform: right center; transition: .35s;
-  }
 body.bg0{background: #000;}
 body.bg1{background: #000;}
-body.bg2{background: #000;}body
-section.on{transform: rotateY(-5deg);}
+body.bg2{background: #000;}
+body section.on{transform: rotateY(-5deg);}
 
 /* h5{font-size: 28px; margin-bottom: 15px; color: #333;} */
 
 ::-webkit-scrollbar{display: none;}
 
-article{overflow: hidden;}
-.item{
-  /* border: 1px solid hsl(323, 100%, 60%); */
-}
+section{overflow: hidden;}
+/* .item{
+  border: 1px solid hsl(323, 100%, 60%);
+} */
 /* .container{border: 5px solid #13afe5;} */
 
 /* menu-icon */

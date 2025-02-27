@@ -296,3 +296,11 @@
   font-family: 'Metropolis-Regular';
   src : url(./font_file/Metropolis-Regular.woff);
 }
+
+/* times new roman / ace ----------------------------- */
+@font-face{
+  /* outline */
+  font-family: 'times_new_roman';
+  src : url(./font_file/times_new_roman.woff) format("woff");
+  src : url(./font_file/times_new_roman.woff2) format("woff2");
+}

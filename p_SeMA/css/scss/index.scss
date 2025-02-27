@@ -1632,11 +1632,12 @@ body {
     }
     footer {
       margin-top: 100px;
+      padding-bottom: 20px;
       .f_top {
         width: 95%;
         margin: auto;
         margin-bottom: 60px;
-        // border: 1px solid #0f0;
+        padding-top: 60px;
         .f_logo {
           width: 100%;
           display: grid;

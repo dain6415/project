@@ -1536,11 +1536,13 @@ body .wrap footer .f_bottom .sns ul li img {
   }
   .wrap footer {
     margin-top: 100px;
+    padding-bottom: 20px;
   }
   .wrap footer .f_top {
     width: 95%;
     margin: auto;
     margin-bottom: 60px;
+    padding-top: 60px;
   }
   .wrap footer .f_top .f_logo {
     width: 100%;

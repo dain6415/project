@@ -304,7 +304,7 @@ html {
     height: 100%;
     object-fit: cover;
   }
-  .top_banner{
+  .top_banner {
     font-size: 3vw;
   }
   header {
@@ -345,7 +345,7 @@ html {
             height: 2px;
             background: #fff;
             transform-origin: left;
-            transition: .3s;
+            transition: 0.3s;
           }
           &::before {
             top: -8px;
@@ -392,12 +392,12 @@ html {
       padding-top: 60px;
       z-index: -1;
       display: none;
-      &.on{
+      &.on {
         display: block;
       }
-      ul{
-        .main_menu{
-          >a{
+      ul {
+        .main_menu {
+          > a {
             display: block;
             padding: 15px 10px;
             font-size: 5vw;
@@ -405,18 +405,18 @@ html {
             border-bottom: 1px solid #eee;
             color: #333;
           }
-          ul.sub_menu{
+          ul.sub_menu {
             display: none;
-            &.on{
+            &.on {
               display: block;
             }
-            li{
-              a{
+            li {
+              a {
                 display: block;
                 padding: 10px;
                 font-size: 4vw;
                 color: #999;
-                &:hover{
+                &:hover {
                   color: #333;
                 }
               }
@@ -424,7 +424,6 @@ html {
           }
         }
       }
-
     }
     .member {
       width: 33.3333%;
@@ -460,43 +459,43 @@ html {
           }
         }
       }
+      h2 {
+        font-size: 4vw;
+        font-weight: 100;
+        padding-bottom: 10px;
+        text-align: center;
+      }
       &.lipbalm {
         padding: 4rem 5px 6rem;
-        h2 {
-          font-size: 4vw;
-          font-weight: 100;
-          padding-bottom: 10px;
-          text-align: center;
-        }
         .collection {
           display: flex;
           flex-direction: column;
           gap: 5px;
           a {
             width: 100%;
-            height: 400px;
             text-align: center;
-            .white,
-            .prod_info {
-              left: 50%;
-              transform: translateX(-50%);
-              bottom: 20px;
+            // border: 1px solid #000;
+          }
+          .white,
+          .prod_info {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+            width: 100%;
+          }
+          .white {
+            font-size: 4vw;
+            .new {
+              font-size: 3vw;
+            }
+          }
+          .prod_info {
+            p {
               width: 100%;
             }
-            .white {
-              font-size: 4vw;
-              .new {
-                font-size: 3vw;
-              }
-            }
-            .prod_info {
-              p {
-                width: 100%;
-              }
-              font-size: 4vw;
-              .prod_name {
-                padding-bottom: 4px;
-              }
+            font-size: 4vw;
+            .prod_name {
+              padding-bottom: 4px;
             }
           }
         }
@@ -520,13 +519,6 @@ html {
       }
       &.best {
         padding: 4rem 0 6rem;
-        // padding: 5px;
-        h2 {
-          font-size: 4vw;
-          font-weight: 100;
-          padding-bottom: 10px;
-          text-align: center;
-        }
         ul {
           li {
             .wish_btn {
@@ -591,7 +583,7 @@ html {
 
 //  ==========================================================================================
 @media only screen and (min-width: 721px) {
-  .top_banner{
+  .top_banner {
     font-size: 14px;
   }
   header {
@@ -636,7 +628,7 @@ html {
           width: 24px;
           height: 24px;
         }
-        .lang{
+        .lang {
           display: none;
         }
       }
@@ -812,7 +804,7 @@ html {
           width: 24px;
           height: 24px;
         }
-        .lang{
+        .lang {
           display: block;
         }
       }

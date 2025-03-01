@@ -51,7 +51,6 @@ html body .top_banner {
   background: #000;
   color: #fff;
   text-align: center;
-  font-size: 14px;
   font-weight: 200;
   display: flex;
   justify-content: center;
@@ -262,6 +261,9 @@ html body main section.best ul li .thumbnail_info .price {
     height: 100%;
     object-fit: cover;
   }
+  .top_banner {
+    font-size: 3vw;
+  }
   header {
     height: 60px;
     padding: 10px;
@@ -273,17 +275,10 @@ html body main section.best ul li .thumbnail_info .price {
     width: 33.3333%;
     cursor: pointer;
   }
-  header .mobiledisplay.on .hamburger span::before {
-    transform: rotate(45deg);
-  }
-  header .mobiledisplay.on .hamburger span::after {
-    transform: rotate(-45deg);
-  }
   header .mobiledisplay .hamburger {
     width: 35px;
     height: 30px;
     padding: 5px;
-    border: 1px solid #f00;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -352,10 +347,10 @@ html body main section.best ul li .thumbnail_info .price {
   header .mobile_menu ul .main_menu > a {
     display: block;
     padding: 15px 10px;
-    font-size: 4vw;
+    font-size: 5vw;
     font-family: "Bodoni Moda", serif;
     border-bottom: 1px solid #eee;
-    color: #666;
+    color: #333;
   }
   header .mobile_menu ul .main_menu ul.sub_menu {
     display: none;
@@ -366,7 +361,7 @@ html body main section.best ul li .thumbnail_info .price {
   header .mobile_menu ul .main_menu ul.sub_menu li a {
     display: block;
     padding: 10px;
-    font-size: 3vw;
+    font-size: 4vw;
     color: #999;
   }
   header .mobile_menu ul .main_menu ul.sub_menu li a:hover {
@@ -522,6 +517,9 @@ html body main section.best ul li .thumbnail_info .price {
   }
 }
 @media only screen and (min-width: 721px) {
+  .top_banner {
+    font-size: 14px;
+  }
   header {
     height: 80px;
     padding: 10px 15px;

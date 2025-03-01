@@ -57,7 +57,6 @@ html {
       background: #000;
       color: #fff;
       text-align: center;
-      font-size: 14px;
       font-weight: 200;
       @include flex();
     }
@@ -305,6 +304,9 @@ html {
     height: 100%;
     object-fit: cover;
   }
+  .top_banner{
+    font-size: 3vw;
+  }
   header {
     height: 60px;
     padding: 10px;
@@ -312,25 +314,22 @@ html {
     .mobiledisplay {
       width: 33.3333%;
       cursor: pointer;
-      &.on{
-        .hamburger{
-          span{
-            // background: #0f0;
-            // background: transparent;
-            &::before{
-              transform: rotate(45deg);
-            }
-            &::after{
-              transform: rotate(-45deg);
-            }
-          }
-        }
-      }
+      // &.on{
+      //   .hamburger{
+      //     span{
+      //       &::before{
+      //         transform: rotate(45deg);
+      //       }
+      //       &::after{
+      //         transform: rotate(-45deg);
+      //       }
+      //     }
+      //   }
+      // }
       .hamburger {
         width: 35px;
         height: 30px;
         padding: 5px;
-        border: 1px solid #f00;
         @include flex();
         span {
           display: block;
@@ -401,10 +400,10 @@ html {
           >a{
             display: block;
             padding: 15px 10px;
-            font-size: 4vw;
+            font-size: 5vw;
             font-family: "Bodoni Moda", serif;
             border-bottom: 1px solid #eee;
-            color: #666;
+            color: #333;
           }
           ul.sub_menu{
             display: none;
@@ -415,7 +414,7 @@ html {
               a{
                 display: block;
                 padding: 10px;
-                font-size: 3vw;
+                font-size: 4vw;
                 color: #999;
                 &:hover{
                   color: #333;
@@ -592,6 +591,9 @@ html {
 
 //  ==========================================================================================
 @media only screen and (min-width: 721px) {
+  .top_banner{
+    font-size: 14px;
+  }
   header {
     height: 80px;
     padding: 10px 15px;

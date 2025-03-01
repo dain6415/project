@@ -1,3 +1,14 @@
+@charset "UTF-8";
+@import url(/font/font.css);
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Noto+Sans+KR:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@font-face {
+  /* outline */
+  font-family: "times_new_roman";
+  src: url(/font_file/times_new_roman.woff) format("woff");
+  src: url(/font_file/times_new_roman.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -32,14 +43,42 @@ html {
 html body {
   color: #333;
   font-family: "Pretendard", Arial, Helvetica, sans-serif;
+  position: relative;
 }
 html body .top_banner {
   width: 100%;
   height: 30px;
   background: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 html body header {
-  display: none;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+html body header:hover {
+  background: #fff;
+}
+html body header nav a {
+  color: #fff;
+  font-family: "Bodoni Moda", serif;
+}
+html body header .member ul li a {
+  width: 100%;
+  height: 100%;
+}
+html body header .member ul li a svg {
+  stroke: #fff;
 }
 html body main section.intro {
   height: 100vh;
@@ -62,20 +101,21 @@ html body main section.intro .txt {
 }
 html body main section.intro .txt .title {
   color: #fff;
-  font-family: "times_new_roman";
+  font-weight: 100;
+  font-family: "Bodoni Moda", serif;
 }
 html body main section.intro .txt .ko {
   color: #aaa;
 }
-html body main section.lipbalm a {
+html body main section.lipbalm .collection a {
   display: inline-block;
   overflow: hidden;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
-html body main section.lipbalm a:nth-child(1)::after {
+html body main section.lipbalm .collection a:nth-child(1)::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -84,26 +124,32 @@ html body main section.lipbalm a:nth-child(1)::after {
   left: 0;
   background: linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.5) 90%);
 }
-html body main section.lipbalm a img {
-  object-fit: cover;
-  aspect-ratio: 16/9;
+html body main section.lipbalm .collection a figure {
+  width: 100%;
+  height: auto;
 }
-html body main section.lipbalm a .white,
-html body main section.lipbalm a .prod_info {
+html body main section.lipbalm .collection a figure img {
+  width: 100%;
+  height: auto; /* 기본적으로 비율 유지 */
+  object-fit: cover;
+  max-width: 100%;
+}
+html body main section.lipbalm .collection a .white,
+html body main section.lipbalm .collection a .prod_info {
   position: absolute;
   z-index: 1;
 }
-html body main section.lipbalm a .white {
+html body main section.lipbalm .collection a .white {
   color: #eee;
 }
-html body main section.lipbalm a .white .new {
+html body main section.lipbalm .collection a .white .new {
   display: block;
   font-weight: 600;
 }
-html body main section.lipbalm a .prod_info p {
+html body main section.lipbalm .collection a .prod_info p {
   display: block;
 }
-html body main section.lipbalm a .prod_info p.prod_link {
+html body main section.lipbalm .collection a .prod_info p.prod_link {
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
@@ -153,23 +199,18 @@ html body main section.gift_love .txt a:hover {
   background: #fff;
   color: #333;
 }
-html body main section.best {
-  padding: 10px;
-}
-html body main section.best ul {
-  display: flex;
-  gap: 10px;
-}
 html body main section.best ul li .thumbnail_img {
   width: 100%;
   overflow: hidden;
   position: relative;
 }
+html body main section.best ul li .thumbnail_img:hover .thumbnail .img_box .thum_img {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
 html body main section.best ul li .thumbnail_img:hover .thumbnail .img_box .hover_img {
   opacity: 1;
-}
-html body main section.best ul li .thumbnail_img:hover .addcart {
-  display: block;
+  transition: opacity 0.5s;
 }
 html body main section.best ul li .thumbnail_img .thumbnail {
   display: block;
@@ -185,32 +226,14 @@ html body main section.best ul li .thumbnail_img .thumbnail .img_box .hover_img 
   top: 0;
   left: 0;
   opacity: 0;
-  transition: 0.3s;
 }
 html body main section.best ul li .thumbnail_img .wish_btn {
   position: absolute;
   right: 20px;
   top: 20px;
 }
-html body main section.best ul li .thumbnail_img .addcart {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  width: 90%;
-  display: none;
-}
-html body main section.best ul li .thumbnail_img .addcart a {
-  display: block;
-  border: 1px solid #fff;
-  color: #fff;
-  text-align: center;
-  font-weight: 300;
-}
-html body main section.best ul li .thumbnail_img .addcart a:hover {
-  background: #fff;
-  color: #666;
+html body main section.best ul li .thumbnail_img .wish_btn img {
+  filter: invert(0.4);
 }
 html body main section.best ul li .thumbnail_info .prod_note {
   font-weight: 200;
@@ -221,6 +244,153 @@ html body main section.best ul li .thumbnail_info .price {
 }
 
 @media only screen and (max-width: 720px) {
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  header {
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .mobiledisplay {
+    width: 33.3333%;
+    cursor: pointer;
+  }
+  header .mobiledisplay.on .hamburger span::before {
+    transform: rotate(45deg);
+  }
+  header .mobiledisplay.on .hamburger span::after {
+    transform: rotate(-45deg);
+  }
+  header .mobiledisplay .hamburger {
+    width: 35px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #f00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .mobiledisplay .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    position: relative;
+  }
+  header .mobiledisplay .hamburger span::before, header .mobiledisplay .hamburger span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform-origin: left;
+    transition: 0.3s;
+  }
+  header .mobiledisplay .hamburger span::before {
+    top: -8px;
+  }
+  header .mobiledisplay .hamburger span::after {
+    bottom: -8px;
+  }
+  header .mobiledisplay .hamburger.hover span {
+    background: #333;
+  }
+  header .mobiledisplay .hamburger.hover span::before, header .mobiledisplay .hamburger.hover span::after {
+    background: #333;
+  }
+  header h1 {
+    width: 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header h1 a {
+    display: inline-block;
+    width: 60px;
+  }
+  header h1 a img {
+    display: none;
+  }
+  header h1 a .mob_logo {
+    fill: #fff;
+  }
+  header nav {
+    display: none;
+  }
+  header .mobile_menu {
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding-top: 60px;
+    z-index: -1;
+    display: none;
+  }
+  header .mobile_menu.on {
+    display: block;
+  }
+  header .mobile_menu ul .main_menu > a {
+    display: block;
+    padding: 15px 10px;
+    font-size: 4vw;
+    font-family: "Bodoni Moda", serif;
+    border-bottom: 1px solid #eee;
+    color: #666;
+  }
+  header .mobile_menu ul .main_menu ul.sub_menu {
+    display: none;
+  }
+  header .mobile_menu ul .main_menu ul.sub_menu.on {
+    display: block;
+  }
+  header .mobile_menu ul .main_menu ul.sub_menu li a {
+    display: block;
+    padding: 10px;
+    font-size: 3vw;
+    color: #999;
+  }
+  header .mobile_menu ul .main_menu ul.sub_menu li a:hover {
+    color: #333;
+  }
+  header .member {
+    width: 33.3333%;
+  }
+  header .member ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+  }
+  header .member ul li {
+    width: 28px;
+    height: 28px;
+  }
+  header .member ul li.lang {
+    display: none;
+  }
+  header .member ul li.my svg {
+    margin-top: 2px;
+  }
   main section.intro .txt {
     white-space: nowrap;
   }
@@ -232,13 +402,18 @@ html body main section.best ul li .thumbnail_info .price {
     font-size: 2.8vw;
   }
   main section.lipbalm {
-    padding: 4rem 15px 6rem;
+    padding: 4rem 5px 6rem;
   }
   main section.lipbalm h2 {
     font-size: 4vw;
     font-weight: 100;
     padding-bottom: 10px;
     text-align: center;
+  }
+  main section.lipbalm .collection {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
   main section.lipbalm .collection a {
     width: 100%;
@@ -268,7 +443,7 @@ html body main section.best ul li .thumbnail_info .price {
     padding-bottom: 4px;
   }
   main section.gift_love {
-    height: 20vh;
+    min-height: 180px;
   }
   main section.gift_love p {
     font-size: 4vw;
@@ -284,30 +459,28 @@ html body main section.best ul li .thumbnail_info .price {
     padding: 10px 40px;
     margin-top: 20px;
   }
-  main section.best ul {
-    flex-wrap: wrap;
+  main section.best {
+    padding: 4rem 0 6rem;
   }
-  main section.best ul li {
-    flex: 0 0 calc(50% - 5px);
+  main section.best h2 {
+    font-size: 4vw;
+    font-weight: 100;
+    padding-bottom: 10px;
+    text-align: center;
   }
-  main section.best ul li .thumbnail_img .thumbnail {
-    display: block;
-  }
-  main section.best ul li .thumbnail_img .wish_btn {
+  main section.best ul li .wish_btn {
     position: absolute;
     right: 20px;
     top: 20px;
-    border: 1px solid #000;
   }
-  main section.best ul li .thumbnail_img .addcart {
-    bottom: 20px;
+  main section.best ul li .addcart {
+    display: none;
   }
-  main section.best ul li .thumbnail_img .addcart a {
+  main section.best ul li .addcart a {
     font-size: 1.6rem;
     padding: 10px;
   }
   main section.best ul li .thumbnail_info {
-    padding-top: 10px;
     padding-bottom: 15px;
   }
   main section.best ul li .thumbnail_info .prod_name {
@@ -325,30 +498,50 @@ html body main section.best ul li .thumbnail_info .price {
     padding-top: 4px;
     font-size: 1.4rem;
   }
+  main section.best .swiper-button-next,
+  main section.best .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+  }
+  main section.best .swiper-button-next::after,
+  main section.best .swiper-button-prev::after {
+    color: #bbb;
+    font-size: 20px;
+    transform: translateX(-50%);
+  }
+  main section.best .swiper-button-next:hover::after,
+  main section.best .swiper-button-prev:hover::after {
+    color: #1c272d;
+  }
+  main section.best .swiper-button-prev {
+    left: 10px;
+  }
+  main section.best .swiper-button-next {
+    right: 10px;
+  }
 }
 @media only screen and (min-width: 721px) {
   header {
-    border: 1px solid #000;
-    width: 100%;
     height: 80px;
     padding: 10px 15px;
-    position: fixed;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  }
+  header .mobiledisplay {
+    display: none;
   }
   header h1 {
     width: 15%;
   }
   header h1 a {
-    border: 1px solid #000;
     width: 60px;
     height: 60px;
     display: block;
   }
   header h1 a img {
     width: 100%;
+  }
+  header h1 a .mob_logo {
+    display: none;
   }
   header nav {
     width: 70%;
@@ -357,10 +550,10 @@ html body main section.best ul li .thumbnail_info .price {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
   }
   header nav ul li a {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   header .member {
     width: 15%;
@@ -372,20 +565,27 @@ html body main section.best ul li .thumbnail_info .price {
     gap: 15px;
   }
   header .member ul li {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
+  }
+  header .member ul .lang {
+    display: none;
+  }
+  header .mobile_menu {
+    display: none;
   }
   main section.intro .txt .title {
     width: 100%;
     font-size: 2.4rem;
   }
-  main section.lipbalm {
-    padding: 4rem 10px 10rem;
-  }
-  main section.lipbalm h2 {
+  main section h2 {
     font-size: 3rem;
     font-weight: 100;
     padding-bottom: 20px;
+    color: #999;
+  }
+  main section.lipbalm {
+    padding: 4rem 10px 10rem;
   }
   main section.lipbalm .collection {
     display: flex;
@@ -393,7 +593,6 @@ html body main section.best ul li .thumbnail_info .price {
   }
   main section.lipbalm .collection a {
     width: 50%;
-    height: 600px;
   }
   main section.lipbalm .collection a .white,
   main section.lipbalm .collection a .prod_info {
@@ -422,27 +621,46 @@ html body main section.best ul li .thumbnail_info .price {
     padding: 10px 40px;
     margin-top: 20px;
   }
+  main section.best {
+    padding: 4rem 10px 6rem;
+  }
   main section.best ul {
+    display: flex;
     flex-wrap: wrap;
+    gap: 10px;
   }
   main section.best ul li {
     flex: 0 0 calc(50% - 5px);
-  }
-  main section.best ul li .thumbnail_img .thumbnail {
-    display: block;
   }
   main section.best ul li .thumbnail_img .wish_btn {
     position: absolute;
     right: 20px;
     top: 20px;
-    border: 1px solid #000;
   }
   main section.best ul li .thumbnail_img .addcart {
+    position: absolute;
     bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 90%;
+    display: none;
   }
   main section.best ul li .thumbnail_img .addcart a {
+    display: block;
+    border: 1px solid #ddd;
+    color: #bbb;
+    text-align: center;
+    font-weight: 300;
     font-size: 1.6rem;
     padding: 10px;
+  }
+  main section.best ul li .thumbnail_img .addcart a:hover {
+    background: #ddd;
+    color: #666;
+  }
+  main section.best ul li .thumbnail_img:hover .addcart {
+    display: block;
   }
   main section.best ul li .thumbnail_info {
     padding-top: 10px;
@@ -463,30 +681,27 @@ html body main section.best ul li .thumbnail_info .price {
     padding-top: 4px;
     font-size: 1.4rem;
   }
+  main section.best .swiper-button-next,
+  main section.best .swiper-button-prev {
+    display: none;
+  }
 }
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 900px) {
+  main section.best ul li {
+    flex: 0 0 calc(33.3333% - 6.7px);
+  }
+}
+@media only screen and (min-width: 1200px) {
   header {
-    border: 1px solid #000;
-    width: 100%;
     height: 80px;
     padding: 10px 15px;
-    position: fixed;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   header h1 {
     width: 15%;
   }
   header h1 a {
-    border: 1px solid #000;
     width: 60px;
     height: 60px;
-    display: block;
-  }
-  header h1 a img {
-    width: 100%;
   }
   header nav {
     width: 70%;
@@ -496,9 +711,6 @@ html body main section.best ul li .thumbnail_info .price {
     justify-content: center;
     align-items: center;
     gap: 30px;
-  }
-  header nav ul li a {
-    font-size: 2rem;
   }
   header .member {
     width: 15%;
@@ -510,11 +722,11 @@ html body main section.best ul li .thumbnail_info .price {
     gap: 15px;
   }
   header .member ul li {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
-  main section.intro .txt .title {
-    font-size: 3rem;
+  header .member ul .lang {
+    display: block;
   }
   main section.intro .txt .ko {
     font-size: 1.6rem;
@@ -522,14 +734,8 @@ html body main section.best ul li .thumbnail_info .price {
   main section.lipbalm {
     padding: 6rem 10px 10rem;
   }
-  main section.lipbalm h2 {
-    font-size: 3rem;
-    font-weight: 100;
-    padding-bottom: 20px;
-  }
   main section.lipbalm .collection a {
     width: 50%;
-    height: 800px;
   }
   main section.lipbalm .collection a .white {
     font-size: 2.4rem;

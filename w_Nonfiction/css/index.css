@@ -397,10 +397,11 @@ html body main section.best ul li .thumbnail_info .price {
     font-size: 2.8vw;
   }
   main section h2 {
-    font-size: 4vw;
+    font-size: 6vw;
     font-weight: 100;
     padding-bottom: 10px;
     text-align: center;
+    color: #999;
   }
   main section.lipbalm {
     padding: 4rem 5px 6rem;

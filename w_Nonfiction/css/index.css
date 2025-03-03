@@ -226,13 +226,27 @@ html body main section.best ul li .thumbnail_img .thumbnail .img_box .hover_img 
   left: 0;
   opacity: 0;
 }
-html body main section.best ul li .thumbnail_img .wish_btn {
+html body main section.best ul li .thumbnail_img .btn {
   position: absolute;
   right: 20px;
   top: 20px;
+  display: flex;
 }
-html body main section.best ul li .thumbnail_img .wish_btn img {
-  filter: invert(0.4);
+html body main section.best ul li .thumbnail_img .btn a {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 40px;
+  background: rgba(0, 0, 0, 0);
+}
+html body main section.best ul li .thumbnail_img .btn a svg {
+  width: 20px !important;
+  height: 20px !important;
+  stroke: #999;
+}
+html body main section.best ul li .thumbnail_img .btn a:hover {
+  background: rgba(0, 0, 0, 0.1);
 }
 html body main section.best ul li .thumbnail_info .prod_note {
   font-weight: 200;
@@ -456,17 +470,10 @@ html body main section.best ul li .thumbnail_info .price {
   main section.best {
     padding: 4rem 0 6rem;
   }
-  main section.best ul li .wish_btn {
+  main section.best ul li .btn {
     position: absolute;
     right: 20px;
     top: 20px;
-  }
-  main section.best ul li .addcart {
-    display: none;
-  }
-  main section.best ul li .addcart a {
-    font-size: 1.6rem;
-    padding: 10px;
   }
   main section.best ul li .thumbnail_info {
     padding-bottom: 15px;
@@ -623,32 +630,10 @@ html body main section.best ul li .thumbnail_info .price {
   main section.best ul li {
     flex: 0 0 calc(50% - 5px);
   }
-  main section.best ul li .thumbnail_img .wish_btn {
+  main section.best ul li .thumbnail_img .btn {
     position: absolute;
     right: 20px;
     top: 20px;
-  }
-  main section.best ul li .thumbnail_img .addcart {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    width: 90%;
-    display: none;
-  }
-  main section.best ul li .thumbnail_img .addcart a {
-    display: block;
-    border: 1px solid #ddd;
-    color: #bbb;
-    text-align: center;
-    font-weight: 300;
-    font-size: 1.6rem;
-    padding: 10px;
-  }
-  main section.best ul li .thumbnail_img .addcart a:hover {
-    background: #ddd;
-    color: #666;
   }
   main section.best ul li .thumbnail_img:hover .addcart {
     display: block;

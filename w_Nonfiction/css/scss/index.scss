@@ -256,12 +256,27 @@ html {
                     }
                   }
                 }
-                .wish_btn {
+                .btn {
                   position: absolute;
                   right: 20px;
                   top: 20px;
-                  img {
-                    filter: invert(0.4);
+                  display: flex;
+                  // gap: 6px;
+                  a{
+                    position: relative;
+                    width: 30px;
+                    height: 30px;
+                    padding: 5px;
+                    border-radius: 40px;
+                    background: rgba(0, 0, 0, 0);
+                    svg{
+                      width: 20px !important;
+                      height: 20px !important;
+                      stroke:#999;
+                    }
+                    &:hover{
+                      background: rgba(0, 0, 0, 0.1);
+                    }
                   }
                 }
               }
@@ -521,18 +536,18 @@ html {
         padding: 4rem 0 6rem;
         ul {
           li {
-            .wish_btn {
+            .btn {
               position: absolute;
               right: 20px;
               top: 20px;
             }
-            .addcart {
-              display: none;
-              a {
-                font-size: 1.6rem;
-                padding: 10px;
-              }
-            }
+            // .addcart {
+            //   display: none;
+            //   a {
+            //     font-size: 1.6rem;
+            //     padding: 10px;
+            //   }
+            // }
             .thumbnail_info {
               // padding-top: 10px;
               padding-bottom: 15px;
@@ -700,33 +715,33 @@ html {
           li {
             flex: 0 0 calc(50% - 5px);
             .thumbnail_img {
-              .wish_btn {
+              .btn {
                 position: absolute;
                 right: 20px;
                 top: 20px;
               }
-              .addcart {
-                position: absolute;
-                bottom: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 1;
-                width: 90%;
-                display: none;
-                a {
-                  display: block;
-                  border: 1px solid #ddd;
-                  color: #bbb;
-                  text-align: center;
-                  font-weight: 300;
-                  font-size: 1.6rem;
-                  padding: 10px;
-                  &:hover {
-                    background: #ddd;
-                    color: #666;
-                  }
-                }
-              }
+              // .addcart {
+              //   position: absolute;
+              //   bottom: 20px;
+              //   left: 50%;
+              //   transform: translateX(-50%);
+              //   z-index: 1;
+              //   width: 90%;
+              //   display: none;
+              //   a {
+              //     display: block;
+              //     border: 1px solid #ddd;
+              //     color: #bbb;
+              //     text-align: center;
+              //     font-weight: 300;
+              //     font-size: 1.6rem;
+              //     padding: 10px;
+              //     &:hover {
+              //       background: #ddd;
+              //       color: #666;
+              //     }
+              //   }
+              // }
               &:hover {
                 .addcart {
                   display: block;

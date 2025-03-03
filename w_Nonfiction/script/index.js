@@ -27,7 +27,7 @@ window.addEventListener("scroll", function () {
       i.style.stroke = "#333";
     });
     mobLogo.style.fill = "#333";
-    hamburger.classList.add('hover');
+    hamburger.classList.add("hover");
   } else {
     header.style.background = "transparent";
     logoImg.setAttribute("src", "./img/logo-w.png");
@@ -38,7 +38,7 @@ window.addEventListener("scroll", function () {
       item.style.stroke = "#fff";
     });
     mobLogo.style.fill = "#fff";
-    hamburger.classList.remove('hover');
+    hamburger.classList.remove("hover");
   }
 
   lastScrollY = window.scrollY;
@@ -54,7 +54,7 @@ header.addEventListener("mouseenter", () => {
     item.style.stroke = "#333";
   });
   mobLogo.style.fill = "#333";
-  hamburger.classList.add('hover');
+  hamburger.classList.add("hover");
 });
 
 // 헤더에서 마우스를 뗐을 때 스타일 원래대로
@@ -69,10 +69,9 @@ header.addEventListener("mouseleave", () => {
       item.style.stroke = "#fff";
     });
     mobLogo.style.fill = "#fff";
-    hamburger.classList.remove('hover');
+    hamburger.classList.remove("hover");
   }
 });
-
 
 // mobile menu-------------------------------------
 $(".mobiledisplay").click(function () {
@@ -86,26 +85,25 @@ $(".mobiledisplay").click(function () {
     $(".member ul li svg").css("stroke", "#333");
     $("svg.mob_logo").css("fill", "#333");
     $(".hamburger").addClass("hover");
-    $("body").css("overflow","hidden");
-  }else{
-    $("body").css("overflow","auto");
+    $("body").css("overflow", "hidden");
+  } else {
+    $("body").css("overflow", "auto");
   }
 });
 
-
-$(".main_menu > a").click(function(e){
+$(".main_menu > a").click(function (e) {
   e.preventDefault();
-  if (window.innerWidth <= 1000){
+  if (window.innerWidth <= 1000) {
     let $this = $(this).parent();
     let $smenu = $this.find(".sub_menu");
-  
+
     if ($this.hasClass("on")) {
       $this.removeClass("on");
       $smenu.slideUp();
     } else {
       $(".main_menu").removeClass("on");
       $(".sub_menu").slideUp();
-  
+
       $this.addClass("on");
       $smenu.slideDown();
     }
@@ -113,9 +111,7 @@ $(".main_menu > a").click(function(e){
   $(".sub_menu a").click(function (e) {
     e.stopPropagation();
   });
-})
-
-
+});
 
 // swiper-------------------------------------
 let swiperInstance;
@@ -141,3 +137,31 @@ function initSwiper() {
 
 initSwiper();
 window.addEventListener("resize", initSwiper);
+
+// sect best (wish,add)btn-------------------------------------
+const wishBtn = document.querySelectorAll(".wish");
+
+wishBtn.forEach((wishBtn) => {
+  wishBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const wishSvg = wishBtn.querySelector("svg");
+    const path = wishSvg.querySelector("path"); //????
+
+    const currentFill = window.getComputedStyle(path).fill;
+    const currentStorke = window.getComputedStyle(path).stroke;
+
+    if (currentFill === "rgb(255, 51, 51)") {
+      path.style.fill = "";
+    } else {
+      path.style.fill = "#f33";
+    }
+
+    if (currentStorke === "rgb(255, 51, 51)") {
+      path.style.stroke = "#999";
+    } else {
+      path.style.stroke = "#f33";
+    }
+  });
+});
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla JavaScript Filter Example</title>
+    <style>
+      .on{
+        background: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li><a href="#" data-filter="*">All</a></li>
+        <li><a href="#" data-filter=".category1">Category 1</a></li>
+        <li><a href="#" data-filter=".category2">Category 2</a></li>
+        <li><a href="#" data-filter=".category3">Category 3</a></li>
+        <li><a href="#" data-filter=".category4">Category 4</a></li>
+        <li><a href="#" data-filter=".category5">Category 5</a></li>
+      </ul>
+    </div>
+
+    <div class="grid">
+      <div class="grid-item category1">Item 1 (Category 1)</div>
+      <div class="grid-item category2">Item 2 (Category 2)</div>
+      <div class="grid-item category1 category4">Item 3 (Category 1, 4)</div>
+    </div>
+
+    <script>
+      // 순수 자바스크립트 필터링 코드
+      document.querySelectorAll(".menu li a").forEach(function (button) {
+        button.addEventListener("click", function (e) {
+          e.preventDefault(); // 기본 동작 방지
+          document.querySelectorAll(".menu li a").forEach(function (link) {
+            link.classList.remove("on");
+          });
+          this.classList.add("on");
+          
+          var filterValue = this.getAttribute("data-filter");
+          filterItems(filterValue);
+        });
+      });
+
+      function filterItems(filterValue) {
+        var items = document.querySelectorAll(".grid-item");
+        items.forEach(function (item) {
+          if (filterValue === "*" || item.matches(filterValue)) {
+            item.style.display = "block"; // 필터에 맞는 아이템 보이기
+          } else {
+            item.style.display = "none"; // 필터에 맞지 않으면 숨기기
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

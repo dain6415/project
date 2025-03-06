@@ -1945,6 +1945,7 @@ footer dl dd {
   header nav ul.pc_only_menu_right {
     display: flex;
     justify-content: center;
+    align-self: start;
     margin-right: 80px;
   }
   header nav ul.pc_only_menu_right li.main-menu {

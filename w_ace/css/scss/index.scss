@@ -2151,6 +2151,7 @@ footer {
       ul.pc_only_menu_right {
         display: flex;
         justify-content: center;
+        align-self: start;
         margin-right: 80px;
         li.main-menu {
           font-weight: 500;

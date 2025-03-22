@@ -706,7 +706,7 @@ html {
             
             p, .mob-only {
               color: #666;
-              // color: #df0753;
+              font-size: clamp(12px, 14px, 14px);
             }
             .mob-only {
               width: 20px;
@@ -722,6 +722,9 @@ html {
             overflow: hidden;
             opacity: 0;
             transition: height 0.3s ease, opacity 0.3s ease;
+            li{
+              font-size: clamp(12px, 14px, 14px);
+            }
             &.on {
               // margin-top: 20px;
               display: block;

@@ -619,6 +619,7 @@ html body main footer .company .info_wrap dl:nth-child(2) {
   }
   main footer .article-container article .art-btn p, main footer .article-container article .art-btn .mob-only {
     color: #666;
+    font-size: 14px;
   }
   main footer .article-container article .art-btn .mob-only {
     width: 20px;
@@ -634,6 +635,9 @@ html body main footer .company .info_wrap dl:nth-child(2) {
     overflow: hidden;
     opacity: 0;
     transition: height 0.3s ease, opacity 0.3s ease;
+  }
+  main footer .article-container article ul li {
+    font-size: 14px;
   }
   main footer .article-container article ul.on {
     display: block;

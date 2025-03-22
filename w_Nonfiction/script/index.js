@@ -151,17 +151,37 @@ wishBtn.forEach((wishBtn) => {
     const currentFill = window.getComputedStyle(path).fill;
     const currentStorke = window.getComputedStyle(path).stroke;
 
-    if (currentFill === "rgb(255, 51, 51)") {
+    if (currentFill === "rgb(223, 7, 83)") {
       path.style.fill = "";
     } else {
-      path.style.fill = "#f33";
+      path.style.fill = "#df0753";
     }
 
-    if (currentStorke === "rgb(255, 51, 51)") {
+    if (currentStorke === "rgb(223, 7, 83)") {
       path.style.stroke = "#999";
     } else {
-      path.style.stroke = "#f33";
+      path.style.stroke = "#df0753";
     }
   });
 });
 
+
+// footer-------------------------------------
+document.querySelectorAll("article .art-btn").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    const ul = btn.closest("article").querySelector("ul");
+    const open = ul.classList.contains("on"); 
+
+    document.querySelectorAll("article .art-btn").forEach((btnOn) => {
+      btnOn.classList.remove("on");
+    });
+    document.querySelectorAll("article ul").forEach((openUl) => {
+      openUl.classList.remove("on");
+    });
+
+    if (!open) { // 만약 클릭한 버튼이 열려있던 상태였다면 (토글)
+      btn.classList.add("on");
+      ul.classList.add("on");
+    }
+  });
+});

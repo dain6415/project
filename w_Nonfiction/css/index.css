@@ -108,7 +108,9 @@ html body main section.intro .txt .title {
   font-family: "Bodoni Moda", serif;
 }
 html body main section.intro .txt .ko {
-  color: #aaa;
+  color: #888;
+  font-weight: 300;
+  margin-top: 6px;
 }
 html body main section.lipbalm .collection a {
   display: inline-block;
@@ -294,6 +296,9 @@ html body main footer {
 }
 html body main footer .article-container article ul li a {
   display: inline-block;
+  padding: 4px 0;
+}
+html body main footer .article-container article.first ul li {
   padding: 4px 0;
 }
 html body main footer .company {
@@ -644,9 +649,6 @@ html body main footer .company .info_wrap dl:nth-child(2) {
     opacity: 1;
     padding-bottom: 20px;
   }
-  main footer .article-container article.first ul li {
-    padding: 4px 0;
-  }
   main footer .article-container article.first ul li br {
     display: none;
   }
@@ -693,7 +695,7 @@ html body main footer .company .info_wrap dl:nth-child(2) {
     gap: 20px;
   }
   header nav ul li a {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
   header .member {
     width: 15%;
@@ -717,6 +719,9 @@ html body main footer .company .info_wrap dl:nth-child(2) {
   main section.intro .txt .title {
     width: 100%;
     font-size: 2.4rem;
+  }
+  main section.intro .txt .ko {
+    font-size: 1.4rem;
   }
   main section h2 {
     font-size: 2.4rem;
@@ -812,8 +817,15 @@ html body main footer .company .info_wrap dl:nth-child(2) {
   main footer .article-container article p {
     color: #999;
   }
+  main footer .article-container article .mob-only {
+    display: none;
+  }
   main footer .article-container article ul {
     margin-top: 10px;
+  }
+  main footer .article-container article span {
+    display: block;
+    margin-top: 2px;
   }
   main footer .company {
     display: flex;
@@ -827,6 +839,9 @@ html body main footer .company .info_wrap dl:nth-child(2) {
   }
 }
 @media only screen and (min-width: 900px) {
+  header nav ul li a {
+    font-size: 1.6rem;
+  }
   main section.best ul li {
     flex: 0 0 calc(33.3333% - 6.7px);
   }
@@ -867,9 +882,6 @@ html body main footer .company .info_wrap dl:nth-child(2) {
   }
   header .member ul .lang {
     display: block;
-  }
-  main section.intro .txt .ko {
-    font-size: 1.6rem;
   }
   main section.lipbalm {
     padding: 6rem 10px 10rem;

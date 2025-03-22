@@ -124,7 +124,9 @@ html {
               // font-family: "times_new_roman";
             }
             .ko {
-              color: #aaa;
+              color: #888;
+              font-weight: 300;
+              margin-top:6px;
             }
           }
         }
@@ -343,6 +345,13 @@ html {
               li {
                 a {
                   display: inline-block;
+                  padding: 4px 0;
+                }
+              }
+            }
+            &.first{
+              ul{
+                li{
                   padding: 4px 0;
                 }
               }
@@ -735,7 +744,6 @@ html {
           &.first{
             ul{
               li{
-                padding: 4px 0;
                 br{
                   display: none;
                 }
@@ -791,7 +799,7 @@ html {
         gap: 20px;
         li {
           a {
-            font-size: 1.6rem;
+            font-size: 1.2rem;
             // font-weight: 100;
           }
         }
@@ -822,6 +830,9 @@ html {
           .title {
             width: 100%;
             font-size: 2.4rem;
+          }
+          .ko{
+            font-size: 1.4rem;
           }
         }
       }
@@ -922,8 +933,15 @@ html {
           p {
             color: #999;
           }
+          .mob-only{
+            display: none;
+          }
           ul {
             margin-top: 10px;
+          }
+          span{
+            display: block;
+            margin-top: 2px;
           }
         }
       }
@@ -943,6 +961,17 @@ html {
 }
 //  ==========================================================================================
 @media only screen and (min-width: 900px) {
+  header{
+    nav{
+      ul{
+        li{
+          a{
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
   main {
     section {
       &.best {
@@ -991,13 +1020,6 @@ html {
   }
   main {
     section {
-      &.intro {
-        .txt {
-          .ko {
-            font-size: 1.6rem;
-          }
-        }
-      }
       &.lipbalm {
         padding: 6rem 10px 10rem;
         .collection {

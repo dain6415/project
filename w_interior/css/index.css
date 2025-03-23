@@ -31,17 +31,16 @@ body {
   top: 30px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 90px;
+  font-size: 98px;
   font-weight: 900;
   letter-spacing: -4px;
   white-space: nowrap; 
-  border: 2px solid #f00; 
 }
 .sub, .sub2{
-  top: 140px;
+  top: 150px;
   font-size: 18px;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: -1.4px;
 }
 .sub{

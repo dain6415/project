@@ -35,6 +35,7 @@ body {
   font-weight: 900;
   letter-spacing: -4px;
   white-space: nowrap; 
+  z-index: 100;
 }
 .sub, .sub2{
   top: 150px;
@@ -82,7 +83,7 @@ section.container article .summary {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: rgba(172, 172, 172, 0.541);
+  color: #666;
 }
 section.container article .summary .country {
   font-size: 12px;

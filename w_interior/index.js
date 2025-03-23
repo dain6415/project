@@ -12,10 +12,10 @@ articles.forEach((article, idx) => {
     this.classList.add("on");
     // const video = document.querySelector("video");
     const intro = document.querySelector(".intro img");
-    const introText = document.querySelector(".intro p");
-    
+    const introText = document.querySelector(".intro .txt");
+
     intro.style.display = "none";
-    introText.style.display = "none";
+    // introText.style.display = "none";
 
     const bg = article.dataset.bg;
     this.classList.add("on");

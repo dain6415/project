@@ -25,14 +25,30 @@ body {
 }
 .intro p{
   position: absolute;
+  color: #111;
+}
+.intro .title{
   top: 30px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 90px;
   font-weight: 900;
   letter-spacing: -4px;
-  white-space: nowrap;
-  color: #111;
+  white-space: nowrap;  
+}
+.sub, .sub2{
+  top: 140px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: -1.4px;
+}
+.sub{
+  left: 50px;
+}
+.intro .sub2{
+  right: 50px;
+  text-align: right;
 }
 
 .intro video {

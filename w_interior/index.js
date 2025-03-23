@@ -10,8 +10,13 @@ articles.forEach((article, idx) => {
 
   article.addEventListener("mouseenter", function () {
     this.classList.add("on");
-    const video = document.querySelector("video");
-    video.style.display = "none";
+    // const video = document.querySelector("video");
+    const intro = document.querySelector(".intro img");
+    const introText = document.querySelector(".intro p");
+    
+    intro.style.display = "none";
+    introText.style.display = "none";
+
     const bg = article.dataset.bg;
     this.classList.add("on");
 

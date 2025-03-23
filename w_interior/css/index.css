@@ -16,13 +16,27 @@ body {
   color: #333;
 }
 
-.video {
+.intro {
   position: fixed;
   width: 100%;
   height: 100%;
 }
+.intro img {
+  width: 100%;
+}
+.intro p{
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 90px;
+  font-weight: 900;
+  letter-spacing: -4px;
+  white-space: nowrap;
+  color: #111;
+}
 
-.video video {
+.intro video {
   width: 120%;
   min-height: 100%;
   position: absolute;
@@ -543,4 +557,4 @@ footer {
   height: 200px;
   background: #bd9a87;
   border: 1px solid #000;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */

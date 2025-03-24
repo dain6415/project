@@ -731,7 +731,7 @@ html body main footer .company .info_wrap dl:nth-child(2) {
     transform: scaleY(0.9);
   }
   main section.lipbalm {
-    padding: 4rem 10px 10rem;
+    padding: 6rem 10px 10rem;
   }
   main section.lipbalm .collection {
     display: flex;
@@ -768,7 +768,7 @@ html body main footer .company .info_wrap dl:nth-child(2) {
     margin-top: 20px;
   }
   main section.best {
-    padding: 12rem 10px 16rem;
+    padding: 10rem 10px 12rem;
   }
   main section.best ul {
     display: flex;
@@ -884,7 +884,7 @@ html body main footer .company .info_wrap dl:nth-child(2) {
     display: block;
   }
   main section.lipbalm {
-    padding: 6rem 10px 10rem;
+    padding: 12rem 10px 16rem;
   }
   main section.lipbalm .collection a {
     width: 50%;
@@ -920,7 +920,7 @@ html body main footer .company .info_wrap dl:nth-child(2) {
     margin-top: 20px;
   }
   main section.best {
-    padding: 12rem 10px 20rem;
+    padding: 16rem 10px 20rem;
   }
   main section.best ul li {
     flex: 0 0 calc(25% - 7.5px);

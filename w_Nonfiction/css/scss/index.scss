@@ -844,7 +844,7 @@ html {
         transform: scaleY(0.9);
       }
       &.lipbalm {
-        padding: 4rem 10px 10rem;
+        padding: 6rem 10px 10rem;
         .collection {
           display: flex;
           gap: 10px;
@@ -882,7 +882,7 @@ html {
         }
       }
       &.best {
-        padding: 12rem 10px 16rem;
+        padding: 10rem 10px 12rem;
         ul {
           display: flex;
           flex-wrap: wrap;
@@ -1021,7 +1021,7 @@ html {
   main {
     section {
       &.lipbalm {
-        padding: 6rem 10px 10rem;
+        padding: 12rem 10px 16rem;
         .collection {
           a {
             width: 50%;
@@ -1060,7 +1060,7 @@ html {
         }
       }
       &.best {
-        padding: 12rem 10px 20rem;
+        padding: 16rem 10px 20rem;
         ul {
           li {
             flex: 0 0 calc(25% - 7.5px);

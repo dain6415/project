@@ -467,6 +467,10 @@ body .wrap footer .f_top .site_map .visit ul li a:hover::before {
   opacity: 1;
   transition: opacity 0.3s ease;
 }
+html .wrap footer .line,
+body .wrap footer .line {
+  border-top: 1px solid #666;
+}
 html .wrap footer .f_bottom,
 body .wrap footer .f_bottom {
   margin: auto;
@@ -1542,7 +1546,7 @@ body .wrap footer .f_bottom .sns ul li img {
     width: 95%;
     margin: auto;
     margin-bottom: 60px;
-    padding-top: 60px;
+    padding-top: 100px;
   }
   .wrap footer .f_top .f_logo {
     width: 100%;
@@ -1591,7 +1595,6 @@ body .wrap footer .f_bottom .sns ul li img {
     margin-bottom: 20px;
   }
   .wrap footer .line {
-    border-top: 1px solid #bcbcbc;
     padding-bottom: 20px;
   }
   .wrap footer .f_bottom {
@@ -1752,7 +1755,6 @@ body .wrap footer .f_bottom .sns ul li img {
     padding: 10px;
   }
   .wrap .sect1 footer .line {
-    border-top: 1px solid #bcbcbc;
     padding-bottom: 20px;
   }
   .wrap .sect1 footer .f_bottom {
@@ -2091,7 +2093,6 @@ body .wrap footer .f_bottom .sns ul li img {
     font-size: 2rem;
   }
   footer .line {
-    border-top: 1px solid #bcbcbc;
     padding-bottom: 20px;
   }
   footer .f_bottom .f_information {

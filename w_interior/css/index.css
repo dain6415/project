@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(/font/font.css);
+@import url(../reset.css);
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant+Upright:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
@@ -14,45 +16,13 @@ body {
   color: #333;
 }
 
-.intro {
+.video {
   position: fixed;
   width: 100%;
   height: 100%;
 }
-.intro img {
-  width: 100%;
-  pointer-events: none;
-}
-.intro p{
-  position: absolute;
-  color: #111;
-}
-.intro .title{
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 98px;
-  font-weight: 900;
-  letter-spacing: -4px;
-  white-space: nowrap; 
-  z-index: 100;
-}
-.sub, .sub2{
-  top: 150px;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.6;
-  letter-spacing: -1.4px;
-}
-.sub{
-  left: 50px;
-}
-.intro .sub2{
-  right: 50px;
-  text-align: right;
-}
 
-.intro video {
+.video video {
   width: 120%;
   min-height: 100%;
   position: absolute;
@@ -83,7 +53,7 @@ section.container article .summary {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #666;
+  color: rgba(172, 172, 172, 0.541);
 }
 section.container article .summary .country {
   font-size: 12px;
@@ -573,4 +543,4 @@ footer {
   height: 200px;
   background: #bd9a87;
   border: 1px solid #000;
-} /*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

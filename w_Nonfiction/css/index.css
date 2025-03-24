@@ -122,7 +122,6 @@ html body main section.lipbalm .collection a {
 }
 html body main section.lipbalm .collection a:hover img {
   transform: scale(1.05);
-  filter: brightness(100%);
 }
 html body main section.lipbalm .collection a:nth-child(1)::after {
   content: "";
@@ -144,7 +143,6 @@ html body main section.lipbalm .collection a figure img {
   object-fit: cover;
   max-width: 100%;
   transition: 0.3s;
-  filter: brightness(80%);
 }
 html body main section.lipbalm .collection a figure::after {
   content: "";
@@ -743,7 +741,7 @@ html body main footer .company .info_wrap dl:nth-child(2) {
   main section.lipbalm .collection a .white,
   main section.lipbalm .collection a .prod_info {
     left: 20px;
-    bottom: 20px;
+    top: 20px;
   }
   main section.lipbalm .collection a .white {
     font-size: 2rem;

@@ -140,7 +140,7 @@ html {
               &:hover {
                 img {
                   transform: scale(1.05);
-                  filter: brightness(100%);
+                  // filter: brightness(100%);
                 }
               }
               &:nth-child(1)::after {
@@ -166,7 +166,7 @@ html {
                   object-fit: cover;
                   max-width: 100%;
                   transition: 0.3s;
-                  filter: brightness(80%);
+                  // filter: brightness(80%);
                 }
                 &::after {
                   content: "";

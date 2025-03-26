@@ -741,7 +741,7 @@ html body main footer .company .info_wrap dl:nth-child(2) {
   main section.lipbalm .collection a .white,
   main section.lipbalm .collection a .prod_info {
     left: 20px;
-    top: 20px;
+    bottom: 20px;
   }
   main section.lipbalm .collection a .white {
     font-size: 2rem;

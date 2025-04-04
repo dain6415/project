@@ -22,10 +22,11 @@ body {
 .intro {
   position: fixed;
   width: 100%;
+  min-width: 1600px;
   height: 100%;
   img{
     width: 100%;
-    // height: 100vh;
+    height: 100vh;
   }
   .txt{
     width: 100%;

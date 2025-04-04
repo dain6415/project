@@ -19,10 +19,12 @@ body {
 .intro {
   position: fixed;
   width: 100%;
+  min-width: 1600px;
   height: 100%;
 }
 .intro img {
   width: 100%;
+  height: 100vh;
 }
 .intro .txt {
   width: 100%;

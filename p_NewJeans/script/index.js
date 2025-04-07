@@ -57,6 +57,7 @@ $(document).ready(function () {
 
 // art2 -----------------------------------------------------------------------------------
 //뮤비 재생
+//
 $(".title-menu li").click(function (e) {
   e.preventDefault();
   // bg 넣고 빼고 = Class 뗐다 붙였다
@@ -107,27 +108,8 @@ $(".right_now .next li").click(function () {
   /*************/
 });
 
-//
-$(".choreo .next li").click(function () {
-  // e.preventDefault();
-
-  let idx = $(this).index(); // 클릭한 li 자릿수 저장
-  $(".choreo .next li").removeClass("none"); // li 모두 block 처리
-  $(this).addClass("none"); // 클릭한 li 만 none
-  $(".choreo ul.title-wrap > li").css({ display: "none" }); // title 모두 none
-  $(".choreo ul.title-wrap > li").eq(idx).css({ display: "block" }); // 클릭한 li 와 같은 자릿수의 title 만 block 처리
-
-  let videoSrc = $(this).find("a").attr("href"); // 클릭한 li 내부의 a 태그에서 href 속성 값 가져오기
-  $("iframe[name='scene2']").attr("src", videoSrc); // iframe의 src 변경
-  // = 클릭한 li 안의 a 태그에서 href 값을 찾아 비디오 링크를 가져오고,
-  // 그 링크를 iframe의 src 속성에 넣어서 화면에 비디오가 변경되도록 한다.
-  // videoSrc = 비디오 주소
-  // attr = 속성 값
-  /*************/
-});
-
 // 현재 누른 li의 a를 찾아라. +
 
-$(".art3 a").click(function (e) {
-  e.preventDefault();
-});
+// $(".art3 a").click(function (e) {
+//   e.preventDefault();
+// });

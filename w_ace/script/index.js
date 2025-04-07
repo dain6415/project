@@ -112,8 +112,12 @@ const txts = document.querySelectorAll(".txt .summary");
 
 tabs.forEach((tab, index) => {
   tab.addEventListener("click", function () {
-    tabs.forEach((t) => t.classList.remove("on"));
-    txts.forEach((txt) => txt.classList.remove("on"));
+    tabs.forEach((t) => {
+      t.classList.remove("on");
+    });
+    txts.forEach((txt) => {
+      txt.classList.remove("on");
+    });
 
     tab.classList.add("on");
     txts[index].classList.add("on");

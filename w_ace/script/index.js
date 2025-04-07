@@ -170,12 +170,15 @@ const product = document.querySelectorAll(".prod");
 
 colTab.forEach((tab, index) => {
   tab.addEventListener("click", function () {
-    colTab.forEach((t) => t.classList.remove("on"));
-    product.forEach((product) => product.classList.remove("on"));
+    colTab.forEach((t) => {
+      t.classList.remove("on");
+    });
+    product.forEach((product) => {
+      product.classList.remove("on");
+    });
 
     tab.classList.add("on");
     product[index].classList.add("on");
-    // product[index].classList.remove('off');
   });
 });
 
@@ -202,7 +205,9 @@ const newsTabs = document.querySelectorAll(".news .swiper_tab p");
 // 탭 클릭
 newsTabs.forEach((tab, index) => {
   tab.addEventListener("click", () => {
-    newsTabs.forEach((t) => t.classList.remove("on"));
+    newsTabs.forEach((t) => {
+      t.classList.remove("on");
+    });
 
     tab.classList.add("on");
     swiper.slideTo(index);
@@ -211,8 +216,9 @@ newsTabs.forEach((tab, index) => {
 
 // 탭 업데이트 함수 정의
 function updateTabs(activeIndex) {
-  newsTabs.forEach((t) => t.classList.remove("on"));
-
+  newsTabs.forEach((t) => {
+    t.classList.remove("on");
+  });
   newsTabs[activeIndex].classList.add("on");
 }
 // ----------------------------------------------------------------------------------------

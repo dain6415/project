@@ -1056,7 +1056,7 @@ footer dl dd {
     font-weight: 900;
     font-size: 1.6em;
     position: relative;
-    display: inline-block;
+    display: block;
   }
   header nav ul.left li.main-menu:not(:last-child) {
     padding-right: 20px;
@@ -1082,7 +1082,6 @@ footer dl dd {
   header nav ul.left li.main-menu ul.sub-menu {
     display: none;
     z-index: 99;
-    padding-top: 10px;
   }
   header nav ul.left li.main-menu ul.sub-menu li a {
     display: inline-block;

@@ -1155,7 +1155,7 @@ footer {
           font-weight: 900;
           font-size: 1.6em;
           position: relative;
-          display: inline-block;
+          display: block;
           &:not(:last-child) {
             padding-right: 20px;
           }
@@ -1182,7 +1182,6 @@ footer {
           ul.sub-menu {
             display:none;
             z-index: 99;
-            padding-top: 10px;
             li {
               a {
                 display: inline-block;
@@ -2314,10 +2313,6 @@ footer {
                     flex-shrink: 0;
                     -webkit-flex-shrink: 0;
                     position: relative;
-                    // video {
-                    //   width: 100%;
-                    //   @include trans-c();
-                    // }
                   }
                 }
               }

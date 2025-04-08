@@ -71,11 +71,3 @@ window.addEventListener("scroll", function () {
     frame.style.top = "100%";
   }
 });
-
-function resetText(el) {
-  const spans = el.querySelectorAll("span");
-  spans.forEach((span, i) => {
-    span.style.transform = "translateY(0)";
-    span.style.opacity = "0";
-  });
-}

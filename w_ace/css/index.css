@@ -1845,6 +1845,9 @@ footer dl dd {
     transition: 0.3s;
     background: #919191;
   }
+  .quick_area {
+    border: 1px solid #000;
+  }
   .quick_area .quick_con {
     position: relative;
     height: 500px;

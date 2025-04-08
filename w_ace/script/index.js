@@ -296,3 +296,56 @@ closeQuick.addEventListener("click", function (e) {
   quickArea.classList.remove("on");
   quickBg.classList.remove("on");
 });
+
+let swiper = new Swiper("#id", {
+  slidesPerView: 8,
+  spaceBetween: 10,
+  slidesPerGroup: 4,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+    loop: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    // 페이저 버튼 사용자 설정
+    el: ".pagination", // 페이저 버튼을 담을 태그 설정
+    type: "bullets", // 버튼 모양 결정 "bullets", "fraction"
+    renderBullet: function (index, className) {
+      // className이 기본값이 들어가게 필수 설정
+      return '<a href="#" class="' + className + '">' + (index + 1) + "</a>";
+    },
+    renderFraction: function (currentClass, totalClass) {
+      // type이 fraction일 때 사용
+      return (
+        '<span class="' +
+        currentClass +
+        '"></span>' +
+        '<span class="' +
+        totalClass +
+        '"></span>'
+      );
+    },
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: "스크롤바 이동으로 스와이프가 가능하게 할지",
+    dragSize: "스크롤바 크기",
+  },
+  a11y: {
+    enabled: true,
+    prevSlideMessage: "이전 슬라이드",
+    nextSlideMessage: "다음 슬라이드",
+    slideLabelMessage:
+      "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
+  },
+  breakpoints: {
+    280: {},
+    768: {},
+    1024: {},
+  },
+});

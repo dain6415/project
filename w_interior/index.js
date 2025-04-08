@@ -38,7 +38,7 @@ articles.forEach((article) => {
         // 정보를 가져오고 난 후에 아래를 실행해라
         const h3Element = document.querySelector(".fade-up");
         const prtImg = document.querySelector(".prt");
-        const pup = document.querySelector(".up");
+        const pTxt = document.querySelector(".up");
         // console.log(h3Element);
 
         if (h3Element) {
@@ -53,10 +53,10 @@ articles.forEach((article) => {
             prtImg.classList.add("on");
           }, 400);
         }
-        if (pup) {
+        if (pTxt) {
           // 딜레이 0.6초에 글자를 불러와
           setTimeout(() => {
-            pup.classList.add("on");
+            pTxt.classList.add("on");
           }, 600);
         }
 

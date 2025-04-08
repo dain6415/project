@@ -2046,6 +2046,7 @@ footer {
     }
   }
   .quick_area {
+    border: 1px solid #000;
     .quick_con {
       position: relative;
       height: 500px;
@@ -2714,7 +2715,6 @@ footer {
               font-weight: 300;
             }
             .swiper {
-              // border: 1px solid #000;
               .swiper-wrapper {
                 padding-bottom: 0;
                 .swiper-slide {

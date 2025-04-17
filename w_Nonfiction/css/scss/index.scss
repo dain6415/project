@@ -37,11 +37,6 @@ li {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 img {
   vertical-align: top;
 }
@@ -51,7 +46,8 @@ html {
   body {
     color: #333;
     background: #eee;
-    font-family: "Pretendard", Arial, Helvetica, sans-serif;
+    font-family: 'Neue Haas Unica';
+    // font-family: "Pretendard", Arial, Helvetica, sans-serif;
     position: relative;
     .top_banner {
       width: 100%;
@@ -97,36 +93,61 @@ html {
           color: #666;
         }
         &.intro {
-          height: 100vh;
+          height: calc(100vh - 30px);
           position: relative;
-          background: url(../img/intro_Bg2.jpg) no-repeat center;
+          background: url(../img/intro-bg.jpg) no-repeat center;
           background-size: cover;
+          .logo{
+            position: absolute;
+            @include po-c();
+            width: 30%;
+            border: 1px solid #0f0;
+            img{
+              width: 100%;
+            }
+          }
           .filter {
             width: 100%;
             height: 100%;
-            backdrop-filter: grayscale(1);
-            background: linear-gradient(
-              to bottom,
-              rgba(0, 0, 0, 0) 30%,
-              rgb(0, 0, 0, 0.4)
-            );
+            // background: linear-gradient(
+            //   to bottom,
+            //   rgba(0, 0, 0, 0) 30%,
+            //   rgb(0, 0, 0, 0.4)
+            // );
           }
           .txt {
             text-align: center;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            bottom: 10%;
+            bottom: 5%;
+            color: #fff;
             .title {
-              color: #fff;
-              font-weight: 100;
-              font-family: "Bodoni Moda", serif;
-              // font-family: "times_new_roman";
+              font-weight: bold;
+              margin-bottom:8px;
             }
             .ko {
-              color: #888;
+              // color: #ddd;
               font-weight: 300;
-              margin-top:6px;
+              margin-bottom: 20px;
+            }
+            a{
+              font-size: 1.6rem;
+              position: relative;
+              font-weight: 300;
+              margin-top: 12px;
+              &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height:.51px;
+                background: #fff;
+              }
+              &:hover{
+                font-weight: 400;
+              }
             }
           }
         }
@@ -832,7 +853,7 @@ html {
             font-size: 2.4rem;
           }
           .ko{
-            font-size: 1.4rem;
+            font-size: 1.6rem;
           }
         }
       }

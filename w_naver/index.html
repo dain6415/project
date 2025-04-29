@@ -1,14 +1,2326 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./css/index.css">
-</head>
-<body>
-  <header></header>
-  <main></main>
-  <footer></footer>
-</body>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAVER</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header id="header" role="banner">
+        <div class="header__inner">
+          <div id="special-logo" class="search_special_bg"></div>
+          <div id="search_area" class="search_area">
+            <div class="search_group">
+              <div id="search" class="search_group__inner">
+                <h1 id="special-input-logo" class="special-logo">
+                  <a href="#" class="link_naver type_motion_n is_fadein">
+                    <span class="ico_n_logo_svg">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"
+                        ></path>
+                      </svg>
+                    </span>
+                    <span class="blind">NAVER</span>
+                  </a>
+                </h1>
+                <form
+                  id="sform"
+                  name="search"
+                  role="search"
+                  action="https://search.naver.com/search.naver"
+                  method="get"
+                >
+                  <fieldset>
+                    <legend class="blind">검색</legend>
+                    <input type="hidden" id="" name="" value="" />
+                    <input type="hidden" id="" name="" value="" />
+                    <input type="hidden" id="" name="" value="" />
+                    <input type="hidden" id="" name="" value="" />
+                    <input type="hidden" id="" name="" value="" />
+                    <div class="search_input_box">
+                      <input
+                        type="search"
+                        id="query"
+                        name="query"
+                        class="search_input"
+                        title="검색어를 입력해 주세요."
+                        placeholder="검색어를 입력해 주세요."
+                        maxlength="255"
+                        autocomplete="off"
+                      />
+                      <button type="submit" class="btn_search">
+                        <span class="ico_btn_search_svg">
+                          <svg
+                            id="search-btn"
+                            viewBox="0 0 50 50"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="fill: #03c75a"
+                          >
+                            <path
+                              d="M22.13.5c11.378 0 20.632 9.256 20.632 20.63 0 4.699-1.566 9.155-4.439 12.782l10.164 10.165a2.41 2.41 0 0 1-1.706 4.115 2.412 2.412 0 0 1-1.706-.705L33.31 35.719a2.41 2.41 0 0 1 0-3.41 15.71 15.71 0 0 0 4.628-11.178c0-8.718-7.09-15.808-15.807-15.808-8.718 0-15.808 7.09-15.808 15.808 0 7.15 4.817 13.43 11.714 15.273a2.41 2.41 0 0 1 1.705 2.954 2.41 2.41 0 0 1-2.95 1.705C7.788 38.658 1.5 30.46 1.5 21.131 1.5 9.756 10.756.5 22.13.5zm4.716 34.746a3.483 3.483 0 1 1 0 6.966 3.483 3.483 0 0 1 0-6.966z"
+                            ></path>
+                          </svg>
+                        </span>
+                        <span class="blind">검색</span>
+                      </button>
+                    </div>
+                  </fieldset>
+                  <input type="hidden" name="ackey" value="8ceh1iv7" />
+                </form>
+                <div class="search_box">
+                  <button
+                    id="ke_kbd_btn"
+                    class="btn_keyboard"
+                    type="button"
+                    aria-pressed="false"
+                  >
+                    <span class="keyboard_text">
+                      <span class="blind">입력 도구</span>
+                    </span>
+                  </button>
+                  <div id="_nx_kbd"></div>
+                  <button
+                    id="nautocomplete"
+                    class="btn_arrow"
+                    type="button"
+                    data-atcmp-element
+                  >
+                    <span class="blind">자동완성/최근검색어퍌치기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="shortcutArea"
+            class="shortcut_area"
+            role="navigation"
+            area-label="주요 서비스"
+          >
+            <ul class="shortcut_list">
+              <li class="shortcut_item">
+                <a href="#" class="link_service" target="_blank">
+                  <span class="service_icon type_mail"></span>
+                  <span class="service_name">메일</span>
+                </a>
+              </li>
+              <li class="shortcut_item">
+                <a href="#" class="link_service" target="_blank">
+                  <span class="service_icon type_cafe"></span>
+                  <span class="service_name">카페</span>
+                </a>
+              </li>
+              <li class="shortcut_item">
+                <a href="#" class="link_service" target="_blank">
+                  <span class="service_icon type_blog"></span>
+                  <span class="service_name">블로그</span>
+                </a>
+              </li>
+              <li class="shortcut_item">
+                <a href="#" class="link_service" target="_blank">
+                  <span class="service_icon type_store"></span>
+                  <span class="service_name">스토어</span>
+                </a>
+              </li>
+              <li class="shortcut_item">
+                <a href="#" class="link_service" target="_blank">
+                  <span class="service_icon type_news"></span>
+                  <span class="service_name">뉴스</span>
+                </a>
+              </li>
+              <li class="shortcut_item">
+                <a href="#" class="link_service" target="_blank">
+                  <span class="service_icon type_stock"></span>
+                  <span class="service_name">증권</span>
+                </a>
+              </li>
+              <li class="shortcut_item">
+                <a href="#" class="link_service" target="_blank">
+                  <span class="service_icon type_real"></span>
+                  <span class="service_name">부동산</span>
+                </a>
+              </li>
+              <li class="shortcut_item">
+                <a href="#" class="link_service" target="_blank">
+                  <span class="service_icon type_map"></span>
+                  <span class="service_name">지도</span>
+                </a>
+              </li>
+              <li class="shortcut_item">
+                <a href="#" class="link_service" target="_blank">
+                  <span class="service_icon type_webtoon"></span>
+                  <span class="service_name">웹툰</span>
+                </a>
+              </li>
+              <li class="shortcut_item">
+                <a href="#" class="link_service" target="_blank">
+                  <span class="service_icon type_streaming"
+                    ><img
+                      src="./img/upload_1705057885416AaxUM.png"
+                      alt="치지직"
+                      width="40"
+                      height="40"
+                  /></span>
+                  <span class="service_name">치지직</span>
+                </a>
+              </li>
+              <li class="shortcut_item">
+                <a href="#" class="link_service" target="_blank" role="button">
+                  <span class="service_icon type_more"></span>
+                  <span class="blind">바로가기 펼침</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div id="topAsideArea" class="menu_area">
+            <button
+              id="topAsideButton"
+              class="btn_menu"
+              type="button"
+              aria-haspopup="menu"
+              aria-expanded="false"
+            >
+              <span class="blind">확장 영역</span>
+            </button>
+            <div class="tooltip_box">
+              <span>바로가기</span>
+            </div>
+          </div>
+          <div id="topPayArea" class="pay_area">
+            <div class="tooltip_box">
+              <span>네이버페이</span>
+            </div>
+            <a href="" class="link_pay" target="_blank">
+              <span class="blind">페이 바로가기</span>
+            </a>
+          </div>
+          <div id="topTalkArea" class="talk_area">
+            <div class="tooltip_box">
+              <span>네이버톡</span>
+            </div>
+            <button
+              class="btn_talk"
+              type="button"
+              aria-haspopup="menu"
+              aria-expanded="false"
+            >
+              <span class="blind">톡</span>
+              <span class="alarm_count">1</span>
+            </button>
+          </div>
+          <div id="topNotifyArea" class="notify_area">
+            <div class="tooltip_box">
+              <span>알림</span>
+            </div>
+            <button
+              class="btn_notify"
+              type="button"
+              aria-haspopup="menu"
+              aria-expanded="false"
+            >
+              <span class="blind">알림</span>
+              <span class="alarm_count">1</span>
+            </button>
+          </div>
+          <div id="topShoppingArea" class="shopping_area">
+            <div class="tooltip_box">
+              <span>장바구니</span>
+            </div>
+            <button
+              class="btn_shopping"
+              type="button"
+              aria-haspopup="menu"
+              aria-expanded="false"
+            >
+              <span class="blind">장바구니</span>
+              <span class="blind">알림</span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main id="container">
+        <div id="ad_premium_area" class="ad_premium_area"></div>
+        <div class="root">
+          <div class="column_left">
+            <div class="banner_area">
+              <div id="ad_timeboard">
+                <div id="left-ad-1" data-hide-last-sibilng="false"></div>
+              </div>
+            </div>
+            <div
+              id="newsstand"
+              class="content_area"
+              role="region"
+              aria-label="뉴스스탠드"
+            >
+              <div class="content_header">
+                <div class="content_header_tab">
+                  <ul class="tab_list" role="tablist">
+                    <li class="tab_item" role="presentation">
+                      <span class="type_news">
+                        <a
+                          href="#"
+                          class="tab_text"
+                          role="tab"
+                          aria-selected="true"
+                          >뉴스스탠드
+                          <div class="tooltip_box">
+                            <span>예전 PC와 동일한 방식으로 보기</span>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="tab_text"
+                          role="tab"
+                          aria-selected="false"
+                          >언론사편집
+                          <div class="tooltip_box">
+                            <span>모바일과 동일한 방식으로 보기</span>
+                          </div>
+                        </a>
+                      </span>
+                    </li>
+                    <li class="tab_item" role="presentation">
+                      <a
+                        href="#"
+                        class="tab_text"
+                        role="tab"
+                        aria-selected="false"
+                        >엔터</a
+                      >
+                    </li>
+                    <li class="tab_item" role="presentation">
+                      <a
+                        href="#"
+                        class="tab_text"
+                        role="tab"
+                        aria-selected="false"
+                        >스포츠</a
+                      >
+                    </li>
+                    <li class="tab_item" role="presentation">
+                      <a
+                        href="#"
+                        class="tab_text"
+                        role="tab"
+                        aria-selected="false"
+                        >경제</a
+                      >
+                    </li>
+                    <li class="tab_item" role="presentation">
+                      <a
+                        href="#"
+                        class="tab_text"
+                        role="tab"
+                        aria-selected="false"
+                        >쇼핑투데이</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content_header_sub">
+                <a
+                  href="#"
+                  class="btn_more"
+                  role="button"
+                  aria-haspopup="listbox"
+                  aria-pressed="false"
+                  >전체언론사
+                  <i class="ico_triangle"></i>
+                </a>
+                <div class="sub_news">
+                  <a href="#" class="news_media" target="_blank">연합뉴스</a>
+                  <div class="news_box"></div>
+                </div>
+                <div class="sub_hoom">
+                  <a href="#" class="link_hoom" target="_blank">뉴스스탠드</a>
+                  <a href="#" class="link_hoom" target="_blank">뉴스홈</a>
+                </div>
+                <div class="sub_more" role="listbox" aria-hidden="false">
+                  <div class="more_box">
+                    <a
+                      href="#"
+                      class="link_more"
+                      aria-selected="false"
+                      role="option"
+                      target="_blank"
+                    >
+                      <strong>구독언론사</strong> 보기</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="media_area">
+                <div class="media_subscription">
+                  <div class="subscription_frame"></div>
+                  <div class="subscription_group">
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/117_daily.png"
+                          height="20"
+                          alt="마이데일리"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/314_sports.png"
+                          height="20"
+                          alt="스포츠동아"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/328_able.png"
+                          height="20"
+                          alt="에이블뉴스"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/814_usa.png"
+                          height="20"
+                          alt="미주한국일보"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/117_daily.png"
+                          height="20"
+                          alt="법률방송뉴스"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd10248812.png"
+                          height="20"
+                          alt="n뉴스포스트"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd115428801.png"
+                          height="20"
+                          alt="한경MONEY"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd153942530.png"
+                          height="20"
+                          alt="대한경제"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd16545193.png"
+                          height="20"
+                          alt="경향신문"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd16586474.png"
+                          height="20"
+                          alt="노컷뉴스"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd17236863.png"
+                          height="20"
+                          alt="뉴스타파"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd173217384.png"
+                          height="20"
+                          alt="디지털데일리"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd17349214.png"
+                          height="20"
+                          alt="뉴시스"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd173553657.png"
+                          height="20"
+                          alt="매일경제"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd174041516.png"
+                          height="20"
+                          alt="문화일보"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd95528325.png"
+                          height="20"
+                          alt="뉴데일리"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd94830278.png"
+                          height="20"
+                          alt="스포츠서울"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd92558162.png"
+                          height="20"
+                          alt="일간스포츠"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd183149251.png"
+                          height="20"
+                          alt="헤럴드경제"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd18025837.png"
+                          height="20"
+                          alt="아이뉴스24"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd182845526.png"
+                          height="20"
+                          alt="한국경제"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd174916541.png"
+                          height="20"
+                          alt="시사IN"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/nsd182326399.png"
+                          height="20"
+                          alt="파이낸셜뉴스"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="subscriptio_box">
+                      <a href="#" class="news_thumb" aria-disabled="false">
+                        <img
+                          src="./img/press/013.png"
+                          height="20"
+                          alt="연합인포맥스"
+                          class="news_logo"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="subscription_box"></div>
+                </div>
+              </div>
+              <div class="content_paging">
+                <div class="content_view">
+                  <button
+                    class="btn_list_list"
+                    role="radio"
+                    aria-checked="false"
+                  >
+                    <span class="blind">리스트형</span>
+                  </button>
+                  <button
+                    class="btn_list_thumb"
+                    role="radio"
+                    aria-checked="true"
+                  >
+                    <span class="blind">썸네일형</span>
+                  </button>
+                </div>
+                <button class="btn_prev" type="button">
+                  <span class="blind">이전 페이지</span>
+                </button>
+                <div class="content_page">
+                  <span class="text">
+                    <span class="point">언론사</span> 더보기
+                  </span>
+                  <span class="current">
+                    <span class="blind">페이지</span>
+                  </span>
+                  <span class="total">
+                    <span class="blind">전체</span>/21
+                  </span>
+                </div>
+                <button class="btn_next" type="button">
+                  <span class="blind">다음 페이지</span>
+                </button>
+              </div>
+            </div>
+            <div
+              id="shopping"
+              class="content_area"
+              role="region"
+              aria-label="쇼핑"
+            >
+              <iframe
+                title="shoppingbox"
+                src="https://shopsquare.naver.com/"
+                frameborder="0"
+                width="831px"
+                height="560px"
+              ></iframe>
+            </div>
+            <!-- feed -->
+            <div
+              id="feed"
+              class="content_area"
+              role="region"
+              aria-label="추천 관심사"
+            >
+              <div class="content_header">
+                <div class="content_header_tab">
+                  <ul class="tab_list" role="tablist">
+                    <li class="tab_item" role="presentation">
+                      <a
+                        href="#"
+                        class="tab_text"
+                        role="tab"
+                        aria-selected="true"
+                      >
+                        추천
+                        <em>・</em>
+                        구독
+                      </a>
+                    </li>
+                    <li class="tab_item" role="presentation">
+                      <a
+                        href="#"
+                        class="tab_text"
+                        role="tab"
+                        aria-selected="false"
+                      >
+                        자동차
+                      </a>
+                    </li>
+                    <li class="tab_item" role="presentation">
+                      <a
+                        href="#"
+                        class="tab_text"
+                        role="tab"
+                        aria-selected="false"
+                      >
+                        웹툰
+                      </a>
+                    </li>
+                    <li class="tab_item" role="presentation">
+                      <a
+                        href="#"
+                        class="tab_text"
+                        role="tab"
+                        aria-selected="false"
+                      >
+                        패션뷰티
+                      </a>
+                    </li>
+                    <li class="tab_item" role="presentation">
+                      <a
+                        href="#"
+                        class="tab_text"
+                        role="tab"
+                        aria-selected="false"
+                      >
+                        푸드
+                      </a>
+                    </li>
+                    <li class="tab_item" role="presentation">
+                      <a
+                        href="#"
+                        class="tab_text"
+                        role="tab"
+                        aria-selected="false"
+                      >
+                        리빙
+                      </a>
+                    </li>
+                    <li class="tab_item" role="presentation">
+                      <a
+                        href="#"
+                        class="tab_text"
+                        role="tab"
+                        aria-selected="false"
+                      >
+                        책방
+                      </a>
+                    </li>
+                    <li class="tab_item" role="presentation">
+                      <a
+                        href="#"
+                        class="tab_text"
+                        role="tab"
+                        aria-selected="false"
+                      >
+                        지식+
+                      </a>
+                    </li>
+                    <li class="tab_item" role="presentation">
+                      <a
+                        href="#"
+                        class="tab_text"
+                        role="tab"
+                        aria-selected="false"
+                      >
+                        건강
+                      </a>
+                    </li>
+                    <li class="tab_item" role="presentation">
+                      <a
+                        href="#"
+                        class="tab_text"
+                        role="tab"
+                        aria-selected="false"
+                      >
+                        게임
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header_sub">
+                <div class="sub_box">
+                  <div class="sub_tab">
+                    <ul class="tab_list" role="tablist">
+                      <li class="tab_item" role="presentation">
+                        <a href="#" class="tab" role="tab" aria-selected="true"
+                          >인기</a
+                        >
+                      </li>
+                      <li class="tab_item" role="presentation">
+                        <a href="#" class="tab" role="tab" aria-selected="false"
+                          >동물</a
+                        >
+                      </li>
+                      <li class="tab_item" role="presentation">
+                        <a href="#" class="tab" role="tab" aria-selected="false"
+                          >여행</a
+                        >
+                      </li>
+                      <li class="tab_item" role="presentation">
+                        <a href="#" class="tab" role="tab" aria-selected="false"
+                          >연애결혼</a
+                        >
+                      </li>
+                      <li class="tab_item" role="presentation">
+                        <a href="#" class="tab" role="tab" aria-selected="false"
+                          >영화</a
+                        >
+                      </li>
+                      <li class="tab_item" role="presentation">
+                        <a href="#" class="tab" role="tab" aria-selected="false"
+                          >육아</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="feed_area" role="tabpanel">
+                <div class="feed_box feed-four-coloumn">
+                  <ul class="common_list">
+                    <li class="common_item">
+                      <a href="#" target="_blank" class="link_item">
+                        <div class="thumb">
+                          <span class="badge">기부</span>
+                          <span class="content_img">
+                            <img
+                              src="./img/feed/pick/1.jpeg"
+                              width="100%"
+                              height="120"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </span>
+                        </div>
+                        <div class="info">
+                          <strong class="title"
+                            >최악의 산불 진화, 그 뒤엔 숨겨진 영웅들이
+                            있습니다</strong
+                          >
+                          <div class="source_box">
+                            <span class="source">
+                              <span class="thumb">
+                                <img
+                                  src="./img/feed/pick/profile/1.png"
+                                  width="20"
+                                  height="20"
+                                  class="profile_img"
+                                  alt=""
+                                />
+                              </span>
+                              <span class="name">전국재해구호협회</span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="common_item">
+                      <a href="#" target="_blank" class="link_item">
+                        <div class="thumb">
+                          <span class="badge">펀딩</span>
+                          <span class="content_img">
+                            <img
+                              src="./img/feed/pick/5.png"
+                              width="100%"
+                              height="120"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </span>
+                        </div>
+                        <div class="info">
+                          <strong class="title"
+                            >은은한 달콤함이 매력적인 수제 식혜 2종</strong
+                          >
+                          <div class="source_box">
+                            <span class="source">
+                              <span class="thumb">
+                                <img
+                                  src="./img/feed/pick/profile/5.jpeg"
+                                  width="20"
+                                  height="20"
+                                  class="profile_img"
+                                  alt=""
+                                />
+                              </span>
+                              <span class="name">우리두리머물다</span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="common_item">
+                      <a href="#" target="_blank" class="link_item">
+                        <div class="thumb">
+                          <span class="badge">기부</span>
+                          <span class="content_img">
+                            <img
+                              src="./img/feed/pick/12.png"
+                              width="100%"
+                              height="120"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </span>
+                        </div>
+                        <div class="info">
+                          <strong class="title"
+                            >"너한테서 이상한 냄새나" 반지하가 속상한
+                            유빈이</strong
+                          >
+                          <div class="source_box">
+                            <span class="source">
+                              <span class="thumb">
+                                <img
+                                  src="./img/feed/pick/profile/12.jpeg"
+                                  width="20"
+                                  height="20"
+                                  class="profile_img"
+                                  alt=""
+                                />
+                              </span>
+                              <span class="name">열매나눔재단</span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="common_item">
+                      <a href="#" target="_blank" class="link_item">
+                        <div class="thumb">
+                          <span class="badge blind">기부</span>
+                          <span class="content_img">
+                            <img
+                              src="./img/feed/pick/3.png"
+                              width="100%"
+                              height="120"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </span>
+                        </div>
+                        <div class="info">
+                          <strong class="title"
+                            >시댁 스트레스 밥 한끼로 시어머니랑 싸우고, 남의편
+                            이혼 하자하자네요</strong
+                          >
+                          <div class="source_box">
+                            <span class="source">
+                              <span class="thumb">
+                                <img
+                                  src="./img/feed/pick/profile/3.jpeg"
+                                  width="20"
+                                  height="20"
+                                  class="profile_img"
+                                  alt=""
+                                />
+                              </span>
+                              <span class="name">퐁퐁</span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="common_item">
+                      <a href="#" target="_blank" class="link_item">
+                        <div class="thumb">
+                          <span class="badge blind"></span>
+                          <span class="content_img">
+                            <img
+                              src="./img/feed/pick/10.jpeg"
+                              width="100%"
+                              height="120"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </span>
+                        </div>
+                        <div class="info">
+                          <strong class="title"
+                            >2025 스타벅스 파우치 백 세트 4월 22일 출시
+                            (코어그린 & 화이트) 사이렌 미니 콜드컵 재입고, 야구
+                            & 골프 스포츠 클럽 MD 재출시</strong
+                          >
+                          <div class="source_box">
+                            <span class="source">
+                              <span class="thumb">
+                                <img
+                                  src="./img/feed/pick/profile/10.jpeg"
+                                  width="20"
+                                  height="20"
+                                  class="profile_img"
+                                  alt=""
+                                />
+                              </span>
+                              <span class="name">Ashley</span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="common_item">
+                      <a href="#" target="_blank" class="link_item">
+                        <div class="thumb">
+                          <span class="badge">패션</span>
+                          <span class="content_img">
+                            <img
+                              src="./img/feed/pick/2.png"
+                              width="100%"
+                              height="120"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </span>
+                        </div>
+                        <div class="info">
+                          <strong class="title"
+                            >외모 몸매 비율 실물 보면 넋 나간다는 여배우
+                            정체</strong
+                          >
+                          <div class="source_box">
+                            <span class="source">
+                              <span class="thumb">
+                                <img
+                                  src="./img/feed/pick/profile/2.png"
+                                  width="20"
+                                  height="20"
+                                  class="profile_img"
+                                  alt=""
+                                />
+                              </span>
+                              <span class="name">예뚱이</span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="common_item">
+                      <a href="#" target="_blank" class="link_item">
+                        <div class="thumb">
+                          <span class="badge blind"></span>
+                          <span class="content_img">
+                            <img
+                              src="./img/feed/pick/6.jpeg"
+                              width="100%"
+                              height="120"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </span>
+                        </div>
+                        <div class="info">
+                          <strong class="title"
+                            >이번주 코스트코 4월 셋째주 할인상품 넷째주
+                            세일품목</strong
+                          >
+                          <div class="source_box">
+                            <span class="source">
+                              <span class="thumb">
+                                <img
+                                  src="./img/feed/pick/profile/6.jpeg"
+                                  width="20"
+                                  height="20"
+                                  class="profile_img"
+                                  alt=""
+                                />
+                              </span>
+                              <span class="name">팅커벨라</span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="common_item">
+                      <a href="#" target="_blank" class="link_item">
+                        <div class="thumb">
+                          <span class="badge">펀딩</span>
+                          <span class="content_img">
+                            <img
+                              src="./img/feed/pick/13.png"
+                              width="100%"
+                              height="120"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </span>
+                        </div>
+                        <div class="info">
+                          <strong class="title"
+                            >찹쌀로 더 바삭하게! 고소짭짤 대전 콩부각</strong
+                          >
+                          <div class="source_box">
+                            <span class="source">
+                              <span class="thumb">
+                                <img
+                                  src="./img/feed/pick/profile/13.png"
+                                  width="20"
+                                  height="20"
+                                  class="profile_img"
+                                  alt=""
+                                />
+                              </span>
+                              <span class="name">콩드슈</span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="common_item">
+                      <a href="#" target="_blank" class="link_item">
+                        <div class="thumb">
+                          <span class="badge">푸드</span>
+                          <span class="content_img">
+                            <img
+                              src="./img/feed/pick/15.png"
+                              width="100%"
+                              height="120"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </span>
+                        </div>
+                        <div class="info">
+                          <strong class="title"
+                            >10kg 감량 레시피 밥 대신 먹는 맛보장 샐러드
+                            3가지</strong
+                          >
+                          <div class="source_box">
+                            <span class="source">
+                              <span class="thumb">
+                                <img
+                                  src="./img/feed/pick/profile/15.jpeg"
+                                  width="20"
+                                  height="20"
+                                  class="profile_img"
+                                  alt=""
+                                />
+                              </span>
+                              <span class="name">셀럽요리</span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="common_item">
+                      <a href="#" target="_blank" class="link_item">
+                        <div class="thumb">
+                          <span class="badge">펀딩</span>
+                          <span class="content_img">
+                            <img
+                              src="./img/feed/pick/14.jpeg"
+                              width="100%"
+                              height="120"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </span>
+                        </div>
+                        <div class="info">
+                          <strong class="title"
+                            >욕실 속 매일 이루는 작은 실천</strong
+                          >
+                          <div class="source_box">
+                            <span class="source">
+                              <span class="thumb">
+                                <img
+                                  src="./img/feed/pick/profile/14.jpeg"
+                                  width="20"
+                                  height="20"
+                                  class="profile_img"
+                                  alt=""
+                                />
+                              </span>
+                              <span class="name">지구샵</span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="common_item">
+                      <a href="#" target="_blank" class="link_item">
+                        <div class="thumb">
+                          <span class="badge blind"></span>
+                          <span class="content_img">
+                            <img
+                              src="./img/feed/pick/16.jpeg"
+                              width="100%"
+                              height="120"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </span>
+                        </div>
+                        <div class="info">
+                          <strong class="title"
+                            >다이소 추천템 이건 진짜 잘 샀다 실용적인 꿀템
+                            5가지</strong
+                          >
+                          <div class="source_box">
+                            <span class="source">
+                              <span class="thumb">
+                                <img
+                                  src="./img/feed/pick/profile/16.jpeg"
+                                  width="20"
+                                  height="20"
+                                  class="profile_img"
+                                  alt=""
+                                />
+                              </span>
+                              <span class="name">메일민스홈</span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="common_item">
+                      <a href="#" target="_blank" class="link_item">
+                        <div class="thumb">
+                          <span class="badge"></span>
+                          <span class="content_img">
+                            <img
+                              src="./img/feed/pick/17.png"
+                              width="100%"
+                              height="120"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </span>
+                        </div>
+                        <div class="info">
+                          <strong class="title"
+                            >현실을 모르는 남편이 만드는 가난한 노후</strong
+                          >
+                          <div class="source_box">
+                            <span class="source">
+                              <span class="thumb">
+                                <img
+                                  src="./img/feed/pick/profile/17.jpeg"
+                                  width="20"
+                                  height="20"
+                                  class="profile_img"
+                                  alt=""
+                                />
+                              </span>
+                              <span class="name">히야</span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="feed_box">
+                  <div class="feed_title_wrap">
+                    <strong class="feed_title">매일 찾는 짧은 즐거움</strong>
+                  </div>
+                  <div class="list_wrap">
+                    <ul class="commom_list">
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_1.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >뭔가 깨달은 듯한.. '노시환 7호 홈런포'</strong
+                          >
+                          <div class="sub_box">
+                            <span class="sub">크보톡 KBO Talk</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_2.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >[미션 임파서블: 데드 레코닝] 절벽 점프
+                          </strong>
+                          <div class="sub_box">
+                            <span class="sub">롯데엔터테인먼트</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_3.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >박찬호에게... 이순철 해설의 쓴소리</strong
+                          >
+                          <div class="sub_box">
+                            <span class="sub">크보톡 KBO Talk</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_4.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >국밥 원샷 때린 구도원과 어이없는 오이영 🍚
+                            #언젠가는슬기로울전공의생활 #언슬전 #오이영 #고윤정
+                            #명은원 #김혜인 #표남경 #신시아 #김사비 #한예지
+                            #엄재일 #강유석 #tvn #티빙 #넷플릭스 #드라마
+                            #드라마추천 #티빙드라마 #넷플릭스드
+                            #언젠가는슬기로울전공의생활 #언슬전 #오이영 #고윤정
+                            #명은원 #김혜인 #표남경 #신시아 #김사비 #한예지
+                            #엄재일 #강유석 #tvn #티빙 #넷플릭스 #드라마
+                            #드라마추천 #티빙드라마 #넷플릭스드라마
+                            #넷플릭스추천</strong
+                          >
+                          <div class="sub_box">
+                            <span class="sub">김베니</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_5.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >[JOY #Shorts] 깜짝 놀란 와이프</strong
+                          >
+                          <div class="sub_box">
+                            <span class="sub"> TV CHOSUN JOY</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_6.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >발명가가 개발한 주방 꿀템 TOP3</strong
+                          >
+                          <div class="sub_box">
+                            <span class="sub">살림남 Thte Life</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_7.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >#가족여행 #데이트코스 #가평 #아침고요동물원
+                            #아침고요가족동물원 #클립챌린저 서울 인근 가족나들이
+                            가족여행으로 좋은 곳! 아침고요수목원 들렸다 가면 더
+                            좋아요</strong
+                          >
+                          <div class="sub_box">
+                            <span class="sub">유언님</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_8.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >따분한 종교는 가라 이제는 힙한 불교가 대세!! #불교
+                            #극락 #불교박람회</strong
+                          >
+                          <div class="sub_box">
+                            <span class="sub">김깨비 두광스님</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_9.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >한발 빨랐다! 하주석 번트로 흔들며 출루!</strong
+                          >
+                          <div class="sub_box">
+                            <span class="sub">스포라이트 SPOLIGHT</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_10.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >'잔디와 흙 사이'에 야구공이 튕기면...?</strong
+                          >
+                          <div class="sub_box">
+                            <span class="sub">크보톡 KBO Talk</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_11.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >샌프란시스코 자이언츠 이정후가 1대0 리드를 만드는
+                            1타점 적시타를 때려내며 NL 타격 6부문에서 6위내에
+                            포진하는 코리안 파워를 과시하고 있다(장타율
+                            .647(3위), 2루타 1위(10개), 안타 23개(공동6위), 득점
+                            19개(공동 2위), 타율 .338(5위), OPS 1.042(4위)
+                            #메이저리그 #mlb #baseball #해외야구 #클립챌린저
+                          </strong>
+                          <div class="sub_box">
+                            <span class="sub">감개무량</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_14.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >이효리 백지영 서열 정리 레전드</strong
+                          >
+                          <div class="sub_box">
+                            <span class="sub">자수성가부자들</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_15.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >3분만에 만드는 초간단 정호영 계란볶음밥</strong
+                          >
+                          <div class="sub_box">
+                            <span class="sub">중꺾레</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_16.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >폭싹 찍으면서 엄청 친해진듯 한 두 사람
+                            #폭싹속았수다 #박해준 #박보검 #아이유
+                            #넷플릭스</strong
+                          >
+                          <div class="sub_box">
+                            <span class="sub">엘시</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_17.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >우리집 한 달 식비는 외식 포함 40만 원으로 정했어요
+                            외식이나 배달음식은 포기해야하고 너무 절약한다
+                            싶게해야 좀 오바해도 괜찮더라고요 특히 토마토소스는
+                            한번 열면 금방 상하니까 소분해서 얼려둬요 얼리고
+                            나면 통채로 떨어지는데 살짝 녹은 상태에서 엄지로
+                            톡톡 떼낸 후 다시 냉동 보관 📍레시피 우삼겹,
+                            다진마늘, 브로콜리, 맛술 넣고 볶다가 토마토와 얼린
+                            토마토소스를 넣고 볶아요 이대로 먹어도 좋고 잡곡밥
+                            위에 얹어 치즈, 쯔유 한스푼! 식비 아껴도, 맛은 포기
+                            못 해요 #냉파요리 #토마토소스활용 #소분용기
+                            #3인가족식비</strong
+                          >
+                          <div class="sub_box">
+                            <span class="sub">유하맘</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_18.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >백허그를 조심해야 하는 이유</strong
+                          >
+                          <div class="sub_box">
+                            <span class="sub">자수성가부자들</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_19.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >100km 던지는 '야구천재 소녀'</strong
+                          >
+                          <div class="sub_box">
+                            <span class="sub">크보톡 KBO Talk</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="commom_item">
+                        <a href="#" target="_blank" class="link_item">
+                          <div class="thumb">
+                            <span class="content_img">
+                              <img
+                                src="./img/feed/happiness/happiness_20.jpeg"
+                                alt=""
+                                width="100%"
+                                height="156"
+                                loading="lazy"
+                              />
+                            </span>
+                          </div>
+                          <strong class="title"
+                            >김지원, 선함이 느껴지는 배우</strong
+                          >
+                          <div class="sub_box">
+                            <span class="sub">비몽 BIMONG</span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <button type="button" class="btn_prev">
+                    <span class="blind">이전 페이지</span>
+                  </button>
+                  <button type="button" class="btn_next">
+                    <span class="blind">다음 페이지</span>
+                  </button>
+                </div>
+              </div>
+              <div class="more_area">
+                <button type="button" class="btn_more">
+                  펼쳐보기
+                  <i class="ico_plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="column_right">
+            <div class="right_content_area" id="right-content-area">
+              <div class="right_top">
+                <div
+                  id="account"
+                  class="content_area"
+                  aria-label="로그인 정보"
+                  role="region"
+                >
+                  <div class="my_login">
+                    <p class="login_text">
+                      네이버를 더 안전하고 편리하게 이용하세요
+                    </p>
+                    <a href="#" class="link_login">
+                      <i class="naver_logo">
+                        <span class="blind">NAVER</span>
+                      </i>
+                      로그인
+                    </a>
+                    <div class="login_more">
+                      <a href="#" class="link_more">아이디 찾기</a>
+                      <a href="#" class="link_more">비밀번호 찾기</a>
+                      <a href="#" class="link_more">회원가입</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="banner_area">
+                <div id="right-ad-1" data-hide-last-sibilng="false"></div>
+              </div>
+              <a href="#" class="banner_area" target="_blank"
+                ><img
+                  src="./img/right/upload_1744939054229h3eJ8.png"
+                  alt="크리에이터 되기 좋은 #키워드. 클립 챌린저 미션으로 확인"
+                  width="420"
+                  height="80"
+              /></a>
+              <div class="banner_area">
+                <iframe
+                  src="https://recoshopping.naver.com/"
+                  frameborder="0"
+                  width="100%"
+                  height="170"
+                ></iframe>
+              </div>
+              <div class="content_area" aria-label="날씨" role="region">
+                <div class="daily_board_area">
+                  <div class="header_group">
+                    <a
+                      href="https://weather.naver.com/"
+                      class="header_title"
+                      rel="noreferrer"
+                      target="_blank"
+                      >날씨</a
+                    >
+                    <a
+                      href="https://weather.naver.com/compare/09470103"
+                      class="link_info"
+                      >예보 비교</a
+                    >
+                    <span class="location">서울시 신월동</span>
+                  </div>
+                  <div class="info_group">
+                    <div class="info_box">
+                      <a
+                        href="https://weather.naver.com/today/09470103?cpName=KMA"
+                        class="link_info_detail"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <div class="info_weather">
+                          <div class="weather_icon"></div>
+                          <div class="weather_temperature">
+                            23.7 °
+                            <div class="weather_status">구름많음</div>
+                          </div>
+                        </div>
+                        <div class="info_temperature">
+                          <span class="temperature_low">
+                            <span class="blind">최저기온</span>14°</span
+                          >
+                          <span class="temperature_high">
+                            <span class="blind">최고기온</span>26°</span
+                          >
+                        </div>
+                      </a>
+                      <a
+                        href="https://weather.naver.com/air/09470103?cpName=KMA"
+                        class="link_weather_dust"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <span class="dust_text">
+                          미세
+                          <span class="dust_status__type_good">좋음</span>
+                        </span>
+                        <span class="dust_text">
+                          초미세
+                          <span class="dust_status__type_good">좋음</span>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="info_box">
+                      <a
+                        href="https://weather.naver.com/today/09470103?cpName=KMA"
+                        class="link_info_weather"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <div class="weather_graph">
+                          <canvas
+                            width="180"
+                            height="37"
+                            style="
+                              min-width: 100%;
+                              min-height: 100%;
+                              max-width: 100%;
+                              max-height: 100%;
+                            "
+                          ></canvas>
+                        </div>
+                        <ul class="weather_list">
+                          <li class="weather_item">
+                            <div class="time current">20시</div>
+                            <div class="icon">
+                              <span class="blind">흐림</span>
+                            </div>
+                            <div class="celsius">20°</div>
+                          </li>
+                          <li class="weather_item">
+                            <div class="time">22</div>
+                            <div class="icon">
+                              <span class="blind">구름많음</span>
+                            </div>
+                            <div class="celsius">18°</div>
+                          </li>
+                          <li class="weather_item">
+                            <div class="time">0</div>
+                            <div class="icon">
+                              <span class="blind">흐림</span>
+                            </div>
+                            <div class="celsius">16°</div>
+                          </li>
+                          <li class="weather_item">
+                            <div class="time">2</div>
+                            <div class="icon">
+                              <span class="blind">흐림</span>
+                            </div>
+                            <div class="celsius">16°</div>
+                          </li>
+                          <li class="weather_item">
+                            <div class="time">4</div>
+                            <div class="icon">
+                              <span class="blind">흐림</span>
+                            </div>
+                            <div class="celsius">16°</div>
+                          </li>
+                        </ul>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content_area" role="region" aria-label="증시">
+                <div class="daily_board_area">
+                  <div class="header_group">
+                    <a
+                      href="#"
+                      class="header_title"
+                      target="_blank"
+                      rel="noreferrer"
+                      >증시</a
+                    >
+                    <button
+                      class="btn_info"
+                      type="button"
+                      aria-expanded="false"
+                      aria-pressed="false"
+                    >
+                      <span class="blind">정보 더보기</span>
+                    </button>
+                    <p class="layer_info" aria-hidden="false">
+                      로그인 시 관심 종목의 주가를 확인할 수 있습니다.<br />로그아웃
+                      시 인기 검색 종목이 제공됩니다.
+                      <button type="button" class="btn_close">
+                        <span class="blind">닫기</span>
+                      </button>
+                    </p>
+                    <div class="header_aside">
+                      <button type="button" class="btn_refresh">
+                        <span class="blind">새로고침</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="info_group">
+                    <div class="info_box type_stock">
+                      <div class="info_rolling">
+                        <div class="rolling_x">
+                          <a
+                            href="#"
+                            target="_blank"
+                            class="link_stock_info"
+                            rel="noreferrer"
+                          >
+                            <div class="stock_info">
+                              <div class="stock_name">코스피</div>
+                              <div class="stock_price">2,554.49</div>
+                              <div class="stock_price"></div>
+                              <div class="stock_gap type_up">
+                                <i class="ico_status"
+                                  ><span class="blind">상승</span></i
+                                >
+                                8.19
+                                <span class="stock_rate type_up">0.32%</span>
+                              </div>
+                              <div class="stock_graph">
+                                <img
+                                  src="./img/KOSPI_naverpc_l.png"
+                                  width="180"
+                                  height="72"
+                                  alt
+                                />
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info_box type_stock">
+                      <ul class="stock_list">
+                        <li class="stock_item">
+                          <a
+                            href="#"
+                            class="link_stock"
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            <span class="stock_name">한화오션</span>
+                            <span class="stock_price">
+                              <i class="ico_status type_up"
+                                ><span class="blind">상승</span></i
+                              >
+                              <span class="stock_rate type_up">11.12%</span>
+                              89,000
+                            </span>
+                          </a>
+                        </li>
+                        <li class="stock_item">
+                          <a
+                            href="#"
+                            class="link_stock"
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            <span class="stock_name">삼성전자</span>
+                            <span class="stock_price">
+                              <i class="ico_status type_up"
+                                ><span class="blind">상승</span></i
+                              >
+                              <span class="stock_rate">0.00%</span>
+                              55,700
+                            </span>
+                          </a>
+                        </li>
+                        <li class="stock_item">
+                          <a
+                            href="#"
+                            class="link_stock"
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            <span class="stock_name">SK하이닉스</span>
+                            <span class="stock_price">
+                              <i class="ico_status type_up"
+                                ><span class="blind">상승</span></i
+                              >
+                              <span class="stock_rate type_up">3.42%</span>
+                              184,400
+                            </span>
+                          </a>
+                        </li>
+                        <li class="stock_item">
+                          <a
+                            href="#"
+                            class="link_stock"
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            인기종목 더보기
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="banner_area">
+                <div id="right-ad-2" data-hide-last-sibilng="false"></div>
+              </div>
+              <div class="tool_area" role="region" aria-label="위젯">
+                <div class="tool_title">위젯 보드</div>
+                <div class="tool_content">
+                  <div class="tool_wrap">
+                    <div class="tool_group">
+                      <div class="tool_box calendar_box">
+                        <div class="title_box">
+                          <span class="title">캘린더</span>
+                        </div>
+                        <div class="info_box">
+                          <div class="link_info_date"></div>
+                        </div>
+                        <a href="#">
+                          <span class="link_login">로그인하기</span>
+                        </a>
+                        <a href="#" class="link_table">
+                          <table class="calender_table">
+                            <caption class="blind">
+                              캘린더
+                            </caption>
+                            <thead>
+                              <tr>
+                                <th class="sunday">일</th>
+                                <th>월</th>
+                                <th>화</th>
+                                <th>수</th>
+                                <th>목</th>
+                                <th>금</th>
+                                <th>토</th>
+                              </tr>
+                            </thead>
+                            <tbody class="calendar_body"></tbody>
+                          </table>
+                        </a>
+                      </div>
+                      <div class="tool_box">
+                        <div class="vibe_top">
+                          <i class="ico_vibe">
+                            <span class="blind">VIBE</span>
+                          </i>
+                          <div class="vibe_title">편안한감성피아노</div>
+                          <button type="button" class="vibe_btn_refresh">
+                            다른 추천 보기
+                          </button>
+                        </div>
+                        <ul class="vibe_list">
+                          <li class="vibe_item">
+                            <a
+                              href="#"
+                              class="link_music"
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <span class="content_img">
+                                <img
+                                  src="./img/music/music_1.jpeg"
+                                  width="108"
+                                  height="126"
+                                  alt
+                                  loading="eager"
+                                />
+                              </span>
+                              <strong class="title">터닝 포인트</strong>
+                              <i class="ico_play">
+                                <span class="blind">재생</span>
+                              </i>
+                            </a>
+                          </li>
+                          <li class="vibe_item">
+                            <a
+                              href="#"
+                              class="link_music"
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <span class="content_img">
+                                <img
+                                  src="./img/music/music_2.jpeg"
+                                  width="108"
+                                  height="126"
+                                  alt
+                                  loading="eager"
+                                />
+                              </span>
+                              <strong class="title">If You Are Happy</strong>
+                              <i class="ico_play">
+                                <span class="blind">재생</span>
+                              </i>
+                            </a>
+                          </li>
+                          <li class="vibe_item">
+                            <a
+                              href="#"
+                              class="link_music"
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <span class="content_img">
+                                <img
+                                  src="./img/music/music_3.jpeg"
+                                  width="108"
+                                  height="126"
+                                  alt
+                                  loading="eager"
+                                />
+                              </span>
+                              <strong class="title">다시한번 일어서다</strong>
+                              <i class="ico_play">
+                                <span class="blind">재생</span>
+                              </i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <div class="tool_group"></div>
+                  </div>
+                  <div class="btn_next"></div>
+                </div>
+                <a href="#" class="link_download">
+                  <strong>모바일 네이버 메인</strong>&nbsp;열기
+                </a>
+              </div>
+              <div class="content_area">
+                <div class="BottomBanner banner_box">
+                  <div class="banner_rolling">
+                    <div class="rolling_x">
+                      <a href="#" class="link_banner" target="_blank">
+                        <span class="banner_thumb">
+                          <img
+                            src="./img/banner/upload_1744029636721E5GZQ.png"
+                            width="42"
+                            height="42"
+                            alt
+                          />
+                        </span>
+                        <div class="banner_desc">
+                          <div class="desc_text1">오늘 {여기} 클립</div>
+                          <div class="desc_text2">
+                            장소 클립 찍고 포인트 적립
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="rolling_x">
+                      <a href="#" class="link_banner" target="_blank">
+                        <span class="banner_thumb">
+                          <img
+                            src="./img/banner/upload_1745564360314QlwGo.png"
+                            width="42"
+                            height="42"
+                            alt
+                          />
+                        </span>
+                        <div class="banner_desc">
+                          <div class="desc_text1">
+                            가정의 달 선물 살 땐 특선물
+                          </div>
+                          <div class="desc_text2">
+                            전 고객 최대 1만원 할인 혜택 증정
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="banner_indicator">
+                    <span class="dot is_active"></span>
+                    <span class="dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layer_setting">
+            <a href="#" role="button" class="btn_setting type_top" aria-expanded="false">
+              <span class="blind">최상단으로 이동</span>
+            </a>
+            <a href="#" role="button" class="btn_setting type_system" aria-expanded="false">
+              <span class="blind">홈 설정</span>
+            </a>
+          </div>
+          <a href="#" class="link_mobile">모바일 버전으로 보기</a>
+        </div>
+      </main>
+      <footer id="footer" role="contentinfo">
+        <div class="footer_inner">
+          <div class="nbanner_area">
+            <div class="da_public_left">
+              <div>
+                <iframe
+                  src="./footer/da_public_left.html"
+                  frameborder="0"
+                  width="410"
+                  height="100"
+                  scrolling="0"
+                  tabindex="0"
+                  titile="AD"
+                ></iframe>
+              </div>
+            </div>
+            <div class="da_public_right">
+              <div>
+                <iframe
+                  src="./footer/da_public_right.html"
+                  frameborder="0"
+                  width="410"
+                  height="100"
+                  scrolling="0"
+                  tabindex="0"
+                  titile="AD"
+                ></iframe>
+              </div>
+            </div>
+            <div class="veta_time2">
+              <div>
+                <iframe
+                  src="./footer/veta_time2.html"
+                  frameborder="0"
+                  width="410"
+                  height="100"
+                  scrolling="0"
+                  tabindex="0"
+                  titile="AD"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="notice_area">
+            <div class="notice_box">
+              <h3 class="title">
+                <a href="#" target="_blank">공지사항</a>
+              </h3>
+            </div>
+            <a href="#" target="_blank" class="link_all">서비스 전체보기 </a>
+          </div>
+          <div class="aside_area">
+            <div class="partner_box_wrap">
+              <div class="partner_box">
+                <h3 class="title">Partners</h3>
+                <a href="#" class="link_partner" target="_blank">프로젝트 꽃</a>
+                <a href="#" class="link_partner" target="_blank"
+                  >네이버 비즈니스</a
+                >
+                <a href="#" class="link_partner" target="_blank"
+                  >네이버 비즈니스 스쿨</a
+                >
+                <a href="#" class="link_partner" target="_blank">네이버 광고</a>
+                <a href="#" class="link_partner" target="_blank">스토어 개설</a>
+                <a href="#" class="link_partner" target="_blank"
+                  >지역업체 등록</a
+                >
+                <a href="#" class="link_partner" target="_blank"
+                  >엑스퍼트 등룍</a
+                >
+              </div>
+              <div class="partner_box">
+                <h3 class="title">Developers</h3>
+                <a href="#" class="link_partner" target="_blank"
+                  >네이버 개발자 센터</a
+                >
+                <a href="#" class="link_partner" target="_blank">오픈 API</a>
+                <a href="#" class="link_partner" target="_blank">오픈소스</a>
+                <a href="#" class="link_partner" target="_blank">네이버 D2</a>
+                <a href="#" class="link_partner" target="_blank">네이버 D2SF</a>
+                <a href="#" class="link_partner" target="_blank">네이버 랩스</a>
+              </div>
+            </div>
+            <div class="service_box_wrap">
+              <div class="service_box">
+                <a href="#" class="service_logo">
+                  <img
+                    src="./img/footer/웨일.png"
+                    alt="웨일 브라우저"
+                    width="48"
+                    height="48"
+                  />
+                </a>
+                <div class="service_info">
+                  <strong class="title">웨일 브라우저</strong>
+                  <a href="#" target="_blank" class="dsc">이용안내</a>
+                </div>
+              </div>
+              <div class="service_box">
+                <a href="#" class="service_logo">
+                  <img
+                    src="./img/footer/기업.png"
+                    alt="기업 사이트"
+                    width="48"
+                    height="48"
+                  />
+                </a>
+                <div class="service_info">
+                  <strong class="title">기업 사이트</strong>
+                  <a href="#" target="_blank" class="dsc">이용안내</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="corp_area">
+            <h3 class="blind">네이버 정책 및 약관</h3>
+            <ul class="list_corp">
+              <li class="corp_item">
+                <a href="#" target="_blank">회사소개</a>
+              </li>
+              <li class="corp_item">
+                <a href="#" target="_blank">인재채용</a>
+              </li>
+              <li class="corp_item">
+                <a href="#" target="_blank">제휴제안</a>
+              </li>
+              <li class="corp_item">
+                <a href="#" target="_blank">이용약관</a>
+              </li>
+              <li class="corp_item">
+                <a href="#" target="_blank">개인정보처리방침</a>
+              </li>
+              <li class="corp_item">
+                <a href="#" target="_blank">청소년보호정책</a>
+              </li>
+              <li class="corp_item">
+                <a href="#" target="_blank">네이버 정책</a>
+              </li>
+              <li class="corp_item">
+                <a href="#" target="_blank">고객센터</a>
+              </li>
+            </ul>
+            <address class="addr">
+              <a href="#" target="_blank">&copy; NAVER Corp.</a>
+            </address>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>

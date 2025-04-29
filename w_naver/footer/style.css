@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+img {
+  vertical-align: top;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.main_public {
+  color: #202020;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+  position: relative;
+  width: 410px;
+  height: 100px;
+}
+#ac_banner_a:hover .main_public_image img{
+ transform: scale(1.03); 
+}
+#ac_banner_a:hover .main_public_content .main_public_title{
+  text-decoration: underline;
+}
+.main_public_wrpa {
+  display: block;
+  overflow: hidden;
+  background-color: #f5f6f7;
+}
+.main_public_image {
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 160px;
+  height: 100px;
+  border-radius: 6px;
+  isolation: isolate;
+}
+.main_public_image img {
+  -webkit-transition: -webkit-transform 0.2s
+    cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: -webkit-transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1),
+    -webkit-transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  image-rendering: -webkit-optimize-contrast;
+}
+.icon_nad {
+  display: block;
+  width: 25px;
+  height: 16px;
+  background-image: url(../img/ad.svg);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  color: transparent;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+.main_public_image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: inherit;
+}
+.main_public_content {
+  overflow: hidden;
+  height: 100px;
+  padding: 5px 3px 0 18px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main_public_subtitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 20px;
+  max-width: 141px;
+  padding: 0 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: -0.25px;
+  color: #fff;
+  background-color: #a0adb2;
+  vertical-align: top;
+}
+.main_public_title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: -0.25px;
+  color: #222122;
+}
+.main_public_desc,
+.main_public_desc2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: -0.25px;
+  color: #545454;
+}
+.main_public_desc {
+  margin-top: 6px;
+}

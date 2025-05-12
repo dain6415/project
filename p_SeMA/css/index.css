@@ -121,6 +121,10 @@ body .wrap .sect1 .art1 .swiper .swiper-slide {
   justify-content: center;
   align-items: center;
 }
+html .wrap .sect1 .art1 .swiper .swiper-slide:hover img,
+body .wrap .sect1 .art1 .swiper .swiper-slide:hover img {
+  transform: scale(1.05);
+}
 html .wrap .sect1 .art1 .swiper .swiper-slide a,
 body .wrap .sect1 .art1 .swiper .swiper-slide a {
   width: 100%;
@@ -148,6 +152,7 @@ body .wrap .sect1 .art1 .swiper .swiper-slide a .img_box img {
   display: block;
   width: 100%;
   object-fit: cover;
+  transition: 0.3s;
 }
 html .wrap .sect1 .art1 .swiper .swiper-slide a .txt .title,
 body .wrap .sect1 .art1 .swiper .swiper-slide a .txt .title {

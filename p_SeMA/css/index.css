@@ -11,17 +11,15 @@ body a {
   color: inherit;
   cursor: pointer;
 }
-html .wrap,
-body .wrap {
+
+.wrap {
   background: #111;
 }
-html .wrap .bg_img,
-body .wrap .bg_img {
+.wrap .bg_img {
   height: 100vh;
   position: relative;
 }
-html .wrap .bg_img::after,
-body .wrap .bg_img::after {
+.wrap .bg_img::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -30,8 +28,7 @@ body .wrap .bg_img::after {
   z-index: 0;
   pointer-events: none;
 }
-html .wrap .bg_img .introduce,
-body .wrap .bg_img .introduce {
+.wrap .bg_img .introduce {
   margin: auto;
   height: 86%;
   display: flex;
@@ -40,24 +37,20 @@ body .wrap .bg_img .introduce {
   position: relative;
   z-index: 1;
 }
-html .wrap .bg_img .introduce h2,
-body .wrap .bg_img .introduce h2 {
+.wrap .bg_img .introduce h2 {
   line-height: 1.4;
 }
-html .wrap .bg_img .introduce .txt > p,
-body .wrap .bg_img .introduce .txt > p {
+.wrap .bg_img .introduce .txt > p {
   color: #ddd;
   line-height: 1.6;
   font-weight: 400;
 }
-html .wrap .bg_img .introduce .txt .bottom,
-body .wrap .bg_img .introduce .txt .bottom {
+.wrap .bg_img .introduce .txt .bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-html .wrap .bg_img .introduce .txt .bottom .visit,
-body .wrap .bg_img .introduce .txt .bottom .visit {
+.wrap .bg_img .introduce .txt .bottom .visit {
   color: #fff;
   font-weight: 600;
   display: inline-block;
@@ -65,145 +58,141 @@ body .wrap .bg_img .introduce .txt .bottom .visit {
   border: 1px solid #fff;
   border-radius: 50px;
 }
-html .wrap .bg_img .introduce .txt .bottom .visit:hover,
-body .wrap .bg_img .introduce .txt .bottom .visit:hover {
+.wrap .bg_img .introduce .txt .bottom .visit:hover {
   background: #fff;
   color: #333;
 }
-html .wrap .bg_img .introduce .txt .bottom .status,
-body .wrap .bg_img .introduce .txt .bottom .status {
+.wrap .bg_img .introduce .txt .bottom .status {
   display: inline-block;
   color: #fff;
   text-align: center;
   font-weight: 600;
 }
-html .wrap .bg_img .introduce .txt .bottom .status i,
-body .wrap .bg_img .introduce .txt .bottom .status i {
+.wrap .bg_img .introduce .txt .bottom .status i {
   padding-right: 6px;
   color: #fff;
 }
-html .wrap .bg_img .introduce .txt .bottom .status span,
-body .wrap .bg_img .introduce .txt .bottom .status span {
+.wrap .bg_img .introduce .txt .bottom .status span {
   font-weight: 600;
   color: #fff;
 }
-html .wrap .sect1,
-body .wrap .sect1 {
+
+.sect1 {
   width: 95%;
   background: #fff;
   position: relative;
   z-index: 99;
   border-radius: 20px;
 }
-html .wrap .sect1 .art1 .more,
-body .wrap .sect1 .art1 .more {
+.sect1 .art1 .more {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-html .wrap .sect1 .art1 .more .btn,
-body .wrap .sect1 .art1 .more .btn {
+.sect1 .art1 .more .btn {
   display: flex;
   align-items: center;
 }
-html .wrap .sect1 .art1 .more .btn p,
-body .wrap .sect1 .art1 .more .btn p {
+.sect1 .art1 .more .btn p {
   color: #aaa;
 }
-html .wrap .sect1 .art1 .swiper,
-body .wrap .sect1 .art1 .swiper {
+.sect1 .art1 .swiper {
   width: 100%;
   height: 100%;
 }
-html .wrap .sect1 .art1 .swiper .swiper-slide,
-body .wrap .sect1 .art1 .swiper .swiper-slide {
+.sect1 .art1 .swiper .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-html .wrap .sect1 .art1 .swiper .swiper-slide:hover img,
-body .wrap .sect1 .art1 .swiper .swiper-slide:hover img {
+.sect1 .art1 .swiper .swiper-slide:hover .img_box::before {
+  opacity: 1;
+}
+.sect1 .art1 .swiper .swiper-slide:hover .img_box::after {
+  opacity: 1;
+}
+.sect1 .art1 .swiper .swiper-slide:hover .img_box img {
   transform: scale(1.05);
 }
-html .wrap .sect1 .art1 .swiper .swiper-slide a,
-body .wrap .sect1 .art1 .swiper .swiper-slide a {
+.sect1 .art1 .swiper .swiper-slide a {
   width: 100%;
 }
-html .wrap .sect1 .art1 .swiper .swiper-slide a .img_box,
-body .wrap .sect1 .art1 .swiper .swiper-slide a .img_box {
+.sect1 .art1 .swiper .swiper-slide a .img_box {
   overflow: hidden;
   border-radius: 20px;
   position: relative;
 }
-html .wrap .sect1 .art1 .swiper .swiper-slide a .img_box::after,
-body .wrap .sect1 .art1 .swiper .swiper-slide a .img_box::after {
-  display: none;
+.sect1 .art1 .swiper .swiper-slide a .img_box::before {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 1;
   width: 100%;
-  height: 50%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
-  pointer-events: none;
+  height: 80%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  opacity: 0;
+  transition: 0.3s;
 }
-html .wrap .sect1 .art1 .swiper .swiper-slide a .img_box img,
-body .wrap .sect1 .art1 .swiper .swiper-slide a .img_box img {
+.sect1 .art1 .swiper .swiper-slide a .img_box::after {
+  content: "프로그램 정보 보기";
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  z-index: 1;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition-duration: 0.1s;
+}
+.sect1 .art1 .swiper .swiper-slide a .img_box img {
   display: block;
   width: 100%;
   object-fit: cover;
   transition: 0.3s;
 }
-html .wrap .sect1 .art1 .swiper .swiper-slide a .txt .title,
-body .wrap .sect1 .art1 .swiper .swiper-slide a .txt .title {
+.sect1 .art1 .swiper .swiper-slide a .txt .title {
   font-weight: 500;
 }
-html .wrap .sect1 .art1 .swiper .pagination_area,
-body .wrap .sect1 .art1 .swiper .pagination_area {
+.sect1 .art1 .swiper .pagination_area {
   position: relative;
   padding: 40px;
   display: flex;
 }
-html .wrap .sect1 .art1 .swiper .pagination_area .swiper-pagination,
-body .wrap .sect1 .art1 .swiper .pagination_area .swiper-pagination {
+.sect1 .art1 .swiper .pagination_area .swiper-pagination {
   position: absolute;
   top: 48%;
   left: 0;
   border-radius: 20px;
   overflow: hidden;
 }
-html .wrap .sect1 .art1 .swiper .pagination_area .swiper-pagination span,
-body .wrap .sect1 .art1 .swiper .pagination_area .swiper-pagination span {
+.sect1 .art1 .swiper .pagination_area .swiper-pagination span {
   border-radius: 20px;
   overflow: hidden;
   background: #111;
 }
-html .wrap .sect1 .art1 .swiper .pagination_area .btn_box,
-body .wrap .sect1 .art1 .swiper .pagination_area .btn_box {
+.sect1 .art1 .swiper .pagination_area .btn_box {
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
 }
-html .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div,
-body .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div {
+.sect1 .art1 .swiper .pagination_area .btn_box > div {
   position: absolute;
 }
-html .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div::after,
-body .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div::after {
+.sect1 .art1 .swiper .pagination_area .btn_box > div::after {
   display: none;
 }
-html .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span,
-body .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span {
+.sect1 .art1 .swiper .pagination_area .btn_box > div span {
   width: 100%;
   height: 2px;
   border-radius: 10px;
   background: #111;
   position: relative;
 }
-html .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.next::before, html .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.next::after,
-body .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.next::before,
-body .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.next::after {
+.sect1 .art1 .swiper .pagination_area .btn_box > div span.next::before, .sect1 .art1 .swiper .pagination_area .btn_box > div span.next::after {
   content: "";
   position: absolute;
   right: 1px;
@@ -213,19 +202,15 @@ body .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.next::after
   background: #111;
   transform-origin: right;
 }
-html .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.next::before,
-body .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.next::before {
+.sect1 .art1 .swiper .pagination_area .btn_box > div span.next::before {
   top: 0;
   transform: rotate(45deg);
 }
-html .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.next::after,
-body .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.next::after {
+.sect1 .art1 .swiper .pagination_area .btn_box > div span.next::after {
   bottom: 0;
   transform: rotate(-45deg);
 }
-html .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::before, html .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::after,
-body .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::before,
-body .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::after {
+.sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::before, .sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::after {
   content: "";
   position: absolute;
   left: 1px;
@@ -235,28 +220,22 @@ body .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::after
   background: #111;
   transform-origin: left;
 }
-html .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::before,
-body .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::before {
+.sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::before {
   top: 0;
   transform: rotate(45deg);
 }
-html .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::after,
-body .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::after {
+.sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::after {
   bottom: 0;
   transform: rotate(-45deg);
 }
-html .wrap .sect1 .art2 .collections .left a,
-html .wrap .sect1 .art2 .collections .right a,
-body .wrap .sect1 .art2 .collections .left a,
-body .wrap .sect1 .art2 .collections .right a {
+.sect1 .art2 .collections .left a,
+.sect1 .art2 .collections .right a {
   border-radius: 20px;
   overflow: hidden;
   position: relative;
 }
-html .wrap .sect1 .art2 .collections .left a p,
-html .wrap .sect1 .art2 .collections .right a p,
-body .wrap .sect1 .art2 .collections .left a p,
-body .wrap .sect1 .art2 .collections .right a p {
+.sect1 .art2 .collections .left a p,
+.sect1 .art2 .collections .right a p {
   position: absolute;
   left: 30px;
   bottom: 25px;
@@ -265,78 +244,64 @@ body .wrap .sect1 .art2 .collections .right a p {
   font-weight: 600;
   z-index: 1;
 }
-html .wrap .sect1 .art2 .collections .left,
-body .wrap .sect1 .art2 .collections .left {
+.sect1 .art2 .collections .left {
   border-radius: 20px;
   overflow: hidden;
   height: 360px;
 }
-html .wrap .sect1 .art2 .collections .left a .img_box,
-body .wrap .sect1 .art2 .collections .left a .img_box {
+.sect1 .art2 .collections .left a .img_box {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-html .wrap .sect1 .art2 .collections .left a .img_box img,
-body .wrap .sect1 .art2 .collections .left a .img_box img {
+.sect1 .art2 .collections .left a .img_box img {
   width: 100%;
   transform: scale(1);
   transition: 0.3s ease;
   min-height: 600px;
 }
-html .wrap .sect1 .art2 .collections .left a:hover .img_box::after,
-body .wrap .sect1 .art2 .collections .left a:hover .img_box::after {
+.sect1 .art2 .collections .left a:hover .img_box::after {
   opacity: 1;
 }
-html .wrap .sect1 .art2 .collections .left a:hover img,
-body .wrap .sect1 .art2 .collections .left a:hover img {
+.sect1 .art2 .collections .left a:hover img {
   transform: scale(1.05);
 }
-html .wrap .sect1 .art2 .collections .grid,
-body .wrap .sect1 .art2 .collections .grid {
+.sect1 .art2 .collections .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4px;
   margin-top: 4px;
 }
-html .wrap .sect1 .art2 .collections .grid a .img_box,
-body .wrap .sect1 .art2 .collections .grid a .img_box {
+.sect1 .art2 .collections .grid a .img_box {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
 }
-html .wrap .sect1 .art2 .collections .grid a .img_box img,
-body .wrap .sect1 .art2 .collections .grid a .img_box img {
+.sect1 .art2 .collections .grid a .img_box img {
   transform: scale(1);
   transition: 0.3s ease;
 }
-html .wrap .sect1 .art2 .collections .grid a:nth-child(3) .img_box,
-body .wrap .sect1 .art2 .collections .grid a:nth-child(3) .img_box {
+.sect1 .art2 .collections .grid a:nth-child(3) .img_box {
   align-items: start;
 }
-html .wrap .sect1 .art2 .collections .grid a:hover::after,
-body .wrap .sect1 .art2 .collections .grid a:hover::after {
+.sect1 .art2 .collections .grid a:hover::after {
   opacity: 0.8;
 }
-html .wrap .sect1 .art2 .collections .grid a:hover img,
-body .wrap .sect1 .art2 .collections .grid a:hover img {
+.sect1 .art2 .collections .grid a:hover img {
   transform: scale(1.1);
 }
-html .wrap .sect1 .art2 ul,
-body .wrap .sect1 .art2 ul {
+.sect1 .art2 ul {
   display: flex;
   gap: 8px;
 }
-html .wrap .sect1 .art2 ul li,
-body .wrap .sect1 .art2 ul li {
+.sect1 .art2 ul li {
   width: 25%;
 }
-html .wrap .sect1 .art2 ul li a .link,
-body .wrap .sect1 .art2 ul li a .link {
+.sect1 .art2 ul li a .link {
   font-size: 2rem;
   font-weight: 600;
   padding-bottom: 20px;
@@ -344,8 +309,7 @@ body .wrap .sect1 .art2 ul li a .link {
   position: relative;
   white-space: nowrap;
 }
-html .wrap .sect1 .art2 ul li a .link::after,
-body .wrap .sect1 .art2 ul li a .link::after {
+.sect1 .art2 ul li a .link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -355,31 +319,26 @@ body .wrap .sect1 .art2 ul li a .link::after {
   background: #eee;
   transition: 0.3s;
 }
-html .wrap .sect1 .art2 ul li a .txt,
-body .wrap .sect1 .art2 ul li a .txt {
+.sect1 .art2 ul li a .txt {
   display: none;
 }
-html .wrap .sect2,
-body .wrap .sect2 {
+
+.sect2 {
   width: 95%;
   margin: auto;
 }
-html .wrap .sect2 .top,
-body .wrap .sect2 .top {
+.sect2 .top {
   border-radius: 20px;
   background: #222;
   text-align: center;
 }
-html .wrap .sect2 .top h3,
-body .wrap .sect2 .top h3 {
+.sect2 .top h3 {
   color: #fff;
 }
-html .wrap .sect2 .top p,
-body .wrap .sect2 .top p {
+.sect2 .top p {
   color: #ddd;
 }
-html .wrap .sect2 .top a,
-body .wrap .sect2 .top a {
+.sect2 .top a {
   background: #444;
   color: #eee;
   display: inline-block;
@@ -387,70 +346,53 @@ body .wrap .sect2 .top a {
   border-radius: 50px;
   transition: 0.2s;
 }
-html .wrap .sect2 .top a:hover,
-body .wrap .sect2 .top a:hover {
+.sect2 .top a:hover {
   background: #ddd;
   color: #333;
   transition: 0.5s;
 }
-html .wrap .sect2 .bottom .item_txt,
-body .wrap .sect2 .bottom .item_txt {
+.sect2 .bottom .item_txt {
   text-align: center;
 }
-html .wrap .sect2 .bottom .item_txt .title p,
-html .wrap .sect2 .bottom .item_txt .sub_txt p,
-body .wrap .sect2 .bottom .item_txt .title p,
-body .wrap .sect2 .bottom .item_txt .sub_txt p {
+.sect2 .bottom .item_txt .title p,
+.sect2 .bottom .item_txt .sub_txt p {
   color: #fff;
 }
-html .wrap .sect2 .bottom .item_txt .title,
-body .wrap .sect2 .bottom .item_txt .title {
+.sect2 .bottom .item_txt .title {
   font-weight: 600;
 }
-html .wrap footer .f_top .f_logo li,
-body .wrap footer .f_top .f_logo li {
+
+footer .f_top .f_logo li {
   color: #666;
 }
-html .wrap footer .f_top .f_logo li a,
-body .wrap footer .f_top .f_logo li a {
+footer .f_top .f_logo li a {
   color: #ddd;
 }
-html .wrap footer .f_top .site_map .f_menu li,
-body .wrap footer .f_top .site_map .f_menu li {
+footer .f_top .site_map .f_menu li {
   line-height: 1;
 }
-html .wrap footer .f_top .site_map .f_menu li a,
-body .wrap footer .f_top .site_map .f_menu li a {
+footer .f_top .site_map .f_menu li a {
   color: #ddd;
   font-weight: 600;
 }
-html .wrap footer .f_top .site_map .exhibition > a,
-html .wrap footer .f_top .site_map .collection > a,
-html .wrap footer .f_top .site_map .visit > a,
-body .wrap footer .f_top .site_map .exhibition > a,
-body .wrap footer .f_top .site_map .collection > a,
-body .wrap footer .f_top .site_map .visit > a {
+footer .f_top .site_map .exhibition > a,
+footer .f_top .site_map .collection > a,
+footer .f_top .site_map .visit > a {
   display: inline-block;
   color: #ddd;
   font-weight: 600;
 }
-html .wrap footer .f_top .site_map .exhibition ul li a,
-html .wrap footer .f_top .site_map .collection ul li a,
-html .wrap footer .f_top .site_map .visit ul li a,
-body .wrap footer .f_top .site_map .exhibition ul li a,
-body .wrap footer .f_top .site_map .collection ul li a,
-body .wrap footer .f_top .site_map .visit ul li a {
+footer .f_top .site_map .exhibition ul li a,
+footer .f_top .site_map .collection ul li a,
+footer .f_top .site_map .visit ul li a {
   color: #999;
   display: inline-block;
   font-weight: 400;
   position: relative;
 }
-html .wrap footer .f_top .site_map .exhibition ul li a::before,
-html .wrap footer .f_top .site_map .collection ul li a::before,
-html .wrap footer .f_top .site_map .visit ul li a::before,
-body .wrap footer .f_top .site_map .exhibition ul li a::before,
-body .wrap footer .f_top .site_map .collection ul li a::before,
-body .wrap footer .f_top .site_map .visit ul li a::before {
+footer .f_top .site_map .exhibition ul li a::before,
+footer .f_top .site_map .collection ul li a::before,
+footer .f_top .site_map .visit ul li a::before {
   content: "";
   width: 100%;
   height: 2px;
@@ -463,45 +405,35 @@ body .wrap footer .f_top .site_map .visit ul li a::before {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
-html .wrap footer .f_top .site_map .exhibition ul li a:hover::before,
-html .wrap footer .f_top .site_map .collection ul li a:hover::before,
-html .wrap footer .f_top .site_map .visit ul li a:hover::before,
-body .wrap footer .f_top .site_map .exhibition ul li a:hover::before,
-body .wrap footer .f_top .site_map .collection ul li a:hover::before,
-body .wrap footer .f_top .site_map .visit ul li a:hover::before {
+footer .f_top .site_map .exhibition ul li a:hover::before,
+footer .f_top .site_map .collection ul li a:hover::before,
+footer .f_top .site_map .visit ul li a:hover::before {
   opacity: 1;
   transition: opacity 0.3s ease;
 }
-html .wrap footer .line,
-body .wrap footer .line {
+footer .line {
   border-top: 1px solid #666;
 }
-html .wrap footer .f_bottom,
-body .wrap footer .f_bottom {
+footer .f_bottom {
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-html .wrap footer .f_bottom p,
-body .wrap footer .f_bottom p {
+footer .f_bottom p {
   color: #999;
 }
-html .wrap footer .f_bottom .f_information,
-body .wrap footer .f_bottom .f_information {
+footer .f_bottom .f_information {
   display: flex;
 }
-html .wrap footer .f_bottom .f_information a,
-body .wrap footer .f_bottom .f_information a {
+footer .f_bottom .f_information a {
   color: #ddd;
   font-weight: 500;
 }
-html .wrap footer .f_bottom .sns ul,
-body .wrap footer .f_bottom .sns ul {
+footer .f_bottom .sns ul {
   display: flex;
 }
-html .wrap footer .f_bottom .sns ul li img,
-body .wrap footer .f_bottom .sns ul li img {
+footer .f_bottom .sns ul li img {
   width: 100%;
   filter: invert(1);
 }

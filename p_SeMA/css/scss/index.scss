@@ -808,9 +808,9 @@ footer {
         }
         .txt {
           p {
-            font-size: clamp(1.4rem, 1vw, 1.6rem);
             word-break: keep-all;
             padding-bottom: 3vh;
+            font-size: clamp(12px, 14px, 18px);
             br {
               display: none;
             }
@@ -823,9 +823,11 @@ footer {
               font-size: 1.6rem;
             }
             .status {
+              i{
+                display: none;
+              }
               margin-top: 5vh;
               padding: 2vh;
-              font-size: clamp(16px, 20ox, 24px);
               border-radius: 40px;
             }
           }

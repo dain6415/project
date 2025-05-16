@@ -1,13 +1,4 @@
-:root{
-  --gray: #f0f0f0; /* bg용 */
-  --gray2: #c7c7c7; /* 설명2 */
-  --gray3: #8d8d8d; /* 설명1 */
-  --text: #333;
-  --shadow-b: rgba(0,0,0,.1);
-}
-
 body {
-  /* background: #000; */
   font-family: 'pretendard';
   font-weight: 300;
 }
@@ -29,13 +20,12 @@ header {
     
 img{vertical-align: top;}
 h3{font-size: 30px; font-weight: 700;}
-p{font-size: 16px; line-height: 1.5em; letter-spacing: -.04em; word-wrap: break-word; color: #333;}
+p{font-size: 10px; line-height: 1.5em; letter-spacing: -.04em; word-wrap: break-word; color: #333;}
 a{text-decoration: none; color: #333;}
 li{list-style: none;}
 
 .flex {
     display: flex;
-    /* flex-wrap: wrap; */
   }
   .just-c {
     justify-content: center;

@@ -732,9 +732,9 @@ footer .f_bottom .sns ul li img {
     line-height: 1.4;
   }
   .wrap .bg_img .introduce .txt p {
-    font-size: clamp(1.4rem, 1vw, 1.6rem);
     word-break: keep-all;
     padding-bottom: 3vh;
+    font-size: 14px;
   }
   .wrap .bg_img .introduce .txt p br {
     display: none;
@@ -750,8 +750,10 @@ footer .f_bottom .sns ul li img {
   .wrap .bg_img .introduce .txt .bottom .status {
     margin-top: 5vh;
     padding: 2vh;
-    font-size: clamp(16px, 20ox, 24px);
     border-radius: 40px;
+  }
+  .wrap .bg_img .introduce .txt .bottom .status i {
+    display: none;
   }
   .wrap .animate .title h2 {
     transform: translateX(0);

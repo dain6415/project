@@ -80,3 +80,39 @@ var swiper = new Swiper(".mySwiper", {
   //       oopedSlides: 3, // 루프 시 복사되는 슬라이드 개수 지정
   // centeredSlides: true,
 });
+
+
+// dark모드---------------------------------------------
+const $checkbox = document.querySelector('.check');
+
+const isUserDataTheme = localStorage.getItem('data-theme');
+const isOsDataTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+const getUserTheme = () => isUserDataTheme ? isUserDataTheme : isOsDataTheme;
+
+window.onload = function() {
+  if (getUserTheme() === 'dark') {
+    localStorage.setItem('data-theme', 'dark');
+    document.body.setAttribute('data-theme', 'dark');
+    $checkbox.checked = true;
+  } else {
+    localStorage.setItem('data-theme', 'light');
+    document.body.setAttribute('data-theme', 'light');
+  }
+}
+
+$checkbox.addEventListener('click', e=> {
+  const headerLoge = document.querySelector("h1 a img");
+  const footerLoge = document.querySelector(".f_logo .img_box img");
+  if (e.target.checked) {
+    localStorage.setItem('data-theme', 'dark');
+    document.body.setAttribute('data-theme', 'dark');
+    headerLoge.setAttribute("src","./imgs/logo-b.png");
+    footerLoge.setAttribute("src","./imgs/logo-b.png");
+  } else {
+    localStorage.setItem('data-theme', 'light');
+    document.body.setAttribute('data-theme', 'light');
+    headerLoge.setAttribute("src","./imgs/logo-w.png");
+    footerLoge.setAttribute("src","./imgs/logo-w.png");
+  }
+});

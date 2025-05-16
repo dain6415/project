@@ -125,13 +125,13 @@ header nav ul li a, header nav ul li i {
   z-index: 99;
   border-radius: 20px;
 }
+.sect1 h3 {
+  color: var(--color-gray200);
+}
 .sect1 .art1 .more {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-}
-.sect1 .art1 .more h3 {
-  color: var(--color-gray200);
 }
 .sect1 .art1 .more .btn {
   display: flex;

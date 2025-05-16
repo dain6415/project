@@ -8,7 +8,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
-$light: (
+$dark: (
   gray100: #fff,
   gray200: #eee,
   gray300: #ddd,
@@ -19,19 +19,20 @@ $light: (
   gray700-gradetion: #11111100,
   sect2-bg: #222,
   download-btn: #333,
+
 );
 
-$dark: (
-  gray100: map-get($light, gray700),
-  gray200: map-get($light, gray600),
-  gray300: map-get($light, gray500),
-  gray400: map-get($light, gray400),
-  gray500: map-get($light, gray300),
-  gray600: map-get($light, gray200),
-  gray700: map-get($light, gray100),
-  gray700-gradetion: map-get($light, gray700-gradetion),
-  sect2-bg: map-get($light, gray200),
-  download-btn: map-get($light, gray300),
+$light: (
+  gray100: map-get($dark, gray700),
+  gray200: map-get($dark, gray600),
+  gray300: map-get($dark, gray500),
+  gray400: map-get($dark, gray400),
+  gray500: map-get($dark, gray300),
+  gray600: map-get($dark, gray200),
+  gray700: map-get($dark, gray100),
+  gray700-gradetion: map-get($dark, gray700-gradetion),
+  sect2-bg: map-get($dark, gray200),
+  download-btn: map-get($dark, gray300),
 );
 
 @mixin set-theme($theme) {
@@ -40,21 +41,20 @@ $dark: (
   }
 }
 
-// 3. 테마 적용
 body[data-theme="light"] {
   @include set-theme($light);
 }
-
 body[data-theme="dark"] {
   @include set-theme($dark);
 }
+
 // ---------------------------------------
 html,
 body {
+  position: relative;
+  color: var(--color-gray600);
   background-color: var(--color-gray700);
   font-size: 10px;
-  color: var(--color-gray600);
-  position: relative;
   a {
     color: inherit;
     cursor: pointer;
@@ -64,13 +64,13 @@ header {
   position: fixed;
   z-index: 999;
   width: 100%;
-  background-color: var(--color-gray700);
+  background-color: #fff;
   transition: 0.5s;
   nav {
     ul {
       li{
         a, i {
-          color: var(--color-gray100);
+          color: #333;
         }
       }
     }
@@ -474,7 +474,7 @@ footer {
   .f_top {
     .f_logo {
       li {
-        color: var(--color-gray500);
+        color: var(--color-gray400);
         a {
           color: var(--color-gray200);
         }
@@ -559,14 +559,24 @@ footer {
     }
   }
 }
-.check {
-  position: fixed;
-  left: 20%;
-  bottom: 50%;
-  z-index: 10000;
-  width: 100px;
-  height: 100px;
-  border: 1px solid #000;
+.mode-label {
+  display: inline-block;
+  z-index: 1000;
+  white-space: nowrap;
+  width: 160px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: var(--color-gray200);
+  background: var(--color-gray500);
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + .mode-label::after {
+display: none;
 }
 
 // --------------------------------------------------------------------
@@ -617,7 +627,7 @@ footer {
             display: block;
             width: 100%;
             height: 2px;
-            background-color: var(--color-gray100);
+            background-color: #333;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -630,7 +640,7 @@ footer {
               left: 0;
               width: 100%;
               height: 2px;
-              background-color: var(--color-gray100);
+              background-color: #333;
               transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
               pointer-events: none;
             }
@@ -645,6 +655,10 @@ footer {
           &.on {
             span {
               background-color: transparent;
+              &::before ,
+              &::after{
+                background-color: var(--color-gray100);
+              }
               &::before {
                 transform: rotate(45deg);
                 top: 0;
@@ -1176,7 +1190,7 @@ footer {
       display: flex;
       flex-direction: column-reverse;
       p {
-        color: var(--gray2);
+        color: var(--color-gray400);
         width: 100%;
         text-align: center;
         padding: 24px 0 60px;
@@ -1310,8 +1324,8 @@ footer {
           gap: 10px;
           li {
             a {
-              color: var(--color-gray400);
-              background-color: var(--color-gray600);
+              color: #999;
+              background-color: #ddd;
               font-size: 1.6rem;
               font-weight: 600;
               display: inline-block;
@@ -1700,7 +1714,6 @@ footer {
             li {
               font-weight: 500;
               font-size: 16px;
-              color: var(--gray3);
               margin-bottom: 10px;
               a {
                 font-weight: 800;

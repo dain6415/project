@@ -31,9 +31,19 @@ mobBtn.addEventListener("click", function () {
   mobileNav.classList.toggle("on");
 
   if (mobileNav.classList.contains("on")) {
-    header.style.top = "0"; // 모바일 메뉴가 열려 있으면 헤더 고정
+    header.style.top = "0";
+  }
+
+  const isDark = document.body.getAttribute('data-theme') === 'dark';
+  const headerLogo = document.querySelector("h1 a img");
+
+  if (mobileNav.classList.contains("on") && isDark) {
+    headerLogo.setAttribute("src", "./imgs/logo-w.png"); 
+  } else {
+    headerLogo.setAttribute("src", "./imgs/logo-b.png");
   }
 });
+
 
 // ----------------------------------------------------
 const today = new Date().getDay();
@@ -83,36 +93,21 @@ var swiper = new Swiper(".mySwiper", {
 
 
 // dark모드---------------------------------------------
-const $checkbox = document.querySelector('.check');
+const $checkbox = document.querySelector('#modeToggle');
+const $label = document.querySelector('.mode-label');
 
-const isUserDataTheme = localStorage.getItem('data-theme');
-const isOsDataTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+$checkbox.addEventListener('click', e => {
+  const isDark = !e.target.checked;
+  document.body.setAttribute('data-theme', isDark ? 'dark' : 'light');
 
-const getUserTheme = () => isUserDataTheme ? isUserDataTheme : isOsDataTheme;
+  const footerLogo = document.querySelector(".f_logo .img_box img");
+  const footerSns = document.querySelectorAll(".sns a img");
 
-window.onload = function() {
-  if (getUserTheme() === 'dark') {
-    localStorage.setItem('data-theme', 'dark');
-    document.body.setAttribute('data-theme', 'dark');
-    $checkbox.checked = true;
-  } else {
-    localStorage.setItem('data-theme', 'light');
-    document.body.setAttribute('data-theme', 'light');
-  }
-}
+  footerLogo.setAttribute("src", isDark ? "./imgs/logo-w.png" : "./imgs/logo-b.png");
+  footerSns.forEach(img => {
+    img.style.filter = isDark ? "invert(1)" : "invert(0)";
+  });
 
-$checkbox.addEventListener('click', e=> {
-  const headerLoge = document.querySelector("h1 a img");
-  const footerLoge = document.querySelector(".f_logo .img_box img");
-  if (e.target.checked) {
-    localStorage.setItem('data-theme', 'dark');
-    document.body.setAttribute('data-theme', 'dark');
-    headerLoge.setAttribute("src","./imgs/logo-b.png");
-    footerLoge.setAttribute("src","./imgs/logo-b.png");
-  } else {
-    localStorage.setItem('data-theme', 'light');
-    document.body.setAttribute('data-theme', 'light');
-    headerLoge.setAttribute("src","./imgs/logo-w.png");
-    footerLoge.setAttribute("src","./imgs/logo-w.png");
-  }
+  $label.textContent = isDark ? '라이트 모드' : '다크 모드'
 });
+

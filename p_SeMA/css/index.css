@@ -488,18 +488,19 @@ footer .f_bottom .sns ul li img {
 }
 
 .mode-label {
+  display: none;
   display: inline-block;
   z-index: 1000;
-  white-space: nowrap;
-  width: 160px;
+  width: 80px;
   margin-top: 20px;
-  padding: 10px 20px;
-  color: var(--color-gray200);
+  padding: 12px;
+  border-radius: 20px;
   background: var(--color-gray500);
-  border-radius: 40px;
+  color: var(--color-gray200);
   font-size: 20px;
   font-weight: 600;
   text-align: center;
+  white-space: nowrap;
   cursor: pointer;
 }
 .mode-label svg {
@@ -1249,6 +1250,8 @@ input[type=checkbox]:checked + .mode-label::after {
   .wrap .bg_img {
     background-position: top 50% center;
     background-size: cover;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .wrap .bg_img::after {
     height: 80%;
@@ -1271,7 +1274,7 @@ input[type=checkbox]:checked + .mode-label::after {
   }
   .wrap .bg_img .introduce .txt .bottom .status {
     padding: 20px 30px;
-    font-size: 2.4rem;
+    font-size: 2rem;
     border-radius: 50px;
   }
   .wrap .sect1 {
@@ -1871,6 +1874,7 @@ input[type=checkbox]:checked + .mode-label::after {
   }
   .wrap .bg_img {
     background-size: 100%;
+    padding: 0;
   }
   .wrap .bg_img .introduce {
     max-width: 1700px;

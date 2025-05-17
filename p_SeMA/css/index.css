@@ -502,6 +502,23 @@ footer .f_bottom .sns ul li img {
   text-align: center;
   cursor: pointer;
 }
+.mode-label svg {
+  display: none;
+}
+.mode-label svg.on {
+  display: block;
+}
+
+.blind {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  white-space: nowrap;
+  border: 0;
+}
 
 input[type=checkbox]:checked + .mode-label::after {
   display: none;

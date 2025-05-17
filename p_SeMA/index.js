@@ -1,5 +1,5 @@
- // lenis------------------------------------
- const lenis = new Lenis({
+// lenis------------------------------------
+const lenis = new Lenis({
   smooth: true,
 });
 function raf(time) {
@@ -34,16 +34,15 @@ mobBtn.addEventListener("click", function () {
     header.style.top = "0";
   }
 
-  const isDark = document.body.getAttribute('data-theme') === 'dark';
+  const isDark = document.body.getAttribute("data-theme") === "dark";
   const headerLogo = document.querySelector("h1 a img");
 
   if (mobileNav.classList.contains("on") && isDark) {
-    headerLogo.setAttribute("src", "./imgs/logo-w.png"); 
+    headerLogo.setAttribute("src", "./imgs/logo-w.png");
   } else {
     headerLogo.setAttribute("src", "./imgs/logo-b.png");
   }
 });
-
 
 // ----------------------------------------------------
 const today = new Date().getDay();
@@ -91,23 +90,34 @@ var swiper = new Swiper(".mySwiper", {
   // centeredSlides: true,
 });
 
-
 // dark모드---------------------------------------------
-const $checkbox = document.querySelector('#modeToggle');
-const $label = document.querySelector('.mode-label');
+const checkbox = document.querySelector("#modeToggle");
+const label = document.querySelector(".mode-label");
+const blind = label.querySelector(".blind");
+const darkModeIcon = document.querySelectorAll(".mode-label .dark_mode");
+const lightModeIcon = document.querySelectorAll(".mode-label .light_mode");
 
-$checkbox.addEventListener('click', e => {
+checkbox.addEventListener("click", (e) => {
   const isDark = !e.target.checked;
-  document.body.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  document.body.setAttribute("data-theme", isDark ? "dark" : "light");
 
   const footerLogo = document.querySelector(".f_logo .img_box img");
   const footerSns = document.querySelectorAll(".sns a img");
 
-  footerLogo.setAttribute("src", isDark ? "./imgs/logo-w.png" : "./imgs/logo-b.png");
-  footerSns.forEach(img => {
+  footerLogo.setAttribute(
+    "src",
+    isDark ? "./imgs/logo-w.png" : "./imgs/logo-b.png"
+  );
+  footerSns.forEach((img) => {
     img.style.filter = isDark ? "invert(1)" : "invert(0)";
   });
 
-  $label.textContent = isDark ? '라이트 모드' : '다크 모드'
-});
+  darkModeIcon.forEach((icon) => {
+    icon.classList.toggle("on", !isDark);
+  });
+  lightModeIcon.forEach((icon) => {
+    icon.classList.toggle("on", isDark);
+  });
 
+  blind.textContent = isDark ? "라이트 모드로 전환" : "라이트 모드로 전환";
+});

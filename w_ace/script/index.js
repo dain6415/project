@@ -187,7 +187,7 @@ colTab.forEach((tab, index) => {
 });
 
 // news swiper ----------------------------------------
-var swiper = new Swiper(".sect3 .news .swiper", {
+var swipers = new Swiper(".sect3 .news .swiper", {
   slidesPerView: 1,
   spaceBetween: 0,
   scrollbar: {
@@ -305,8 +305,8 @@ let swiper = new Swiper("#id", {
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
-    loop: true,
   },
+  loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",

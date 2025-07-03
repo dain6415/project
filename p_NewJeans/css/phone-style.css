@@ -104,6 +104,7 @@
   .art1 .item4 h2 {
     font-size: 40px;
     font-weight: 700;
+    letter-spacing: -.5px;
     color: var(--main-color);
   }
 
@@ -134,7 +135,7 @@
     line-height: 20px;
   }
   .art1 .item5 p.song {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--text-color-b);
     text-overflow: ellipsis;
@@ -243,6 +244,7 @@
     padding-top: 10px;
     text-align: justify;
     z-index: 10;
+    display: none;
   }
   .art1 .item7 p {
     font-size: 10px;
@@ -252,13 +254,13 @@
 
   /* .art1 .item8 = barcod */
   .art1 .item8 {
-    display: none;
     grid-column: 7 / span 2;
     grid-row: 7 / span 1;
+    margin-top: 10px;
+    margin-right: 20px;
   }
   .art1 .item8 img {
     width: 100%;
-    height: 100%;
     position: relative;
     z-index: 10;
   }
@@ -268,9 +270,9 @@
     position: relative;
     grid-column: 1 / span 6;
     grid-row: 7 / span 1;
-    margin: 0 20px;
+    margin-left: 20px;
     z-index: 10;
-    display: none;
+    margin: 10px;
   }
   .art1 .item9 .item-text{
     gap: 10px;
@@ -279,6 +281,7 @@
     font-size: 12px;
     font-weight: 100;
     color: var(--sub-color);
+    white-space: nowrap;
   }
 
   .art1 .item10 {

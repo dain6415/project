@@ -93,17 +93,17 @@
   }
 
   .art1 .item4 > .item-text {
-    line-height: 45px;
+    /* line-height: 45px; */
     text-align: center;
     margin: 20px;
   }
   .art1 .item4 h5 {
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 300;
     color: var(--sub-color);
   }
   .art1 .item4 h2 {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
     letter-spacing: -1px;
     color: var(--main-color);
@@ -304,7 +304,7 @@
   }
 
   .art2 .title-menu {
-    padding: 0 10% 30px;
+    padding: 0 14% 30px;
     margin: auto;
   }
   .art2 .title-menu ul {

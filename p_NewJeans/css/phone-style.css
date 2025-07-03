@@ -92,14 +92,18 @@
     position: relative;
   }
 
-  .art1 .item4 > .item-text {
-    /* line-height: 45px; */
-    text-align: center;
-    margin: 20px;
+  .art1 .item4 .item-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    line-height: 1.2;
   }
   .art1 .item4 h5 {
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--sub-color);
   }
   .art1 .item4 h2 {

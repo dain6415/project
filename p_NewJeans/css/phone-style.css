@@ -97,12 +97,12 @@
     margin: 20px;
   }
   .art1 .item4 h5 {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 300;
     color: var(--sub-color);
   }
   .art1 .item4 h2 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 700;
     color: var(--main-color);
   }
@@ -112,9 +112,9 @@
     position: relative;
     grid-column: 1 / span 8;
     grid-row: 1 / span 1;
-    height: 80px;
+    height: 70px;
     padding: 10px;
-    margin: 0 25px;
+    margin: 0 20px;
     background: #dadada;
     border-radius: 10px;
   }
@@ -137,6 +137,7 @@
     font-size: 16px;
     font-weight: 700;
     color: var(--text-color-b);
+    text-overflow: ellipsis;
   }
   .art1 .item5 p.singer {
     font-size: 12px;
@@ -238,7 +239,7 @@
     position: relative;
     grid-column: 1 / span 8;
     grid-row: 7 / span 1;
-    margin: 0 25px;
+    margin: 0 20px;
     padding-top: 10px;
     text-align: justify;
     z-index: 10;
@@ -267,7 +268,7 @@
     position: relative;
     grid-column: 1 / span 6;
     grid-row: 7 / span 1;
-    margin: 0 25px;
+    margin: 0 20px;
     z-index: 10;
     display: none;
   }

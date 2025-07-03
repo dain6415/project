@@ -269,18 +269,19 @@
   /* .art1 .item9 = 저작권 */
   .art1 .item9 {
     position: relative;
-    grid-column: 1 / span 6;
+    grid-column: 1 / span 5;
     grid-row: 7 / span 1;
     margin-left: 20px;
     z-index: 10;
     margin: 10px;
   }
   .art1 .item9 .item-text{
-    gap: 10px;
+    flex-direction: column;
   }
   .art1 .item9 .item-text p {
     font-size: 12px;
     font-weight: 100;
+    line-height: 1.2;
     color: var(--sub-color);
   }
 
@@ -303,7 +304,7 @@
   }
 
   .art2 .title-menu {
-    padding: 0 20% 30px;
+    padding: 0 10% 30px;
     margin: auto;
   }
   .art2 .title-menu ul {

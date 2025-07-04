@@ -91,10 +91,10 @@ var swiper = new Swiper(".mySwiper", {
 });
 // dark모드---------------------------------------------
 const checkbox = document.querySelector("#modeToggle");
-const label = document.querySelector(".mode-label");
+const label = document.querySelector(".mode_change");
 const blind = label.querySelector(".blind");
-const darkModeIcon = document.querySelectorAll(".mode-label .dark_mode");
-const lightModeIcon = document.querySelectorAll(".mode-label .light_mode");
+const darkModeIcon = document.querySelectorAll(".mode_change .dark_mode");
+const lightModeIcon = document.querySelectorAll(".mode_change .light_mode");
 
 checkbox.addEventListener("click", (e) => {
   const isDark = !e.target.checked;
@@ -119,4 +119,17 @@ checkbox.addEventListener("click", (e) => {
   });
 
   blind.textContent = isDark ? "라이트 모드로 전환" : "라이트 모드로 전환";
+});
+
+window.addEventListener('scroll', () => {
+  const modeChange = document.querySelector('.mode_change');
+  const scrollY = window.scrollY || window.pageYOffset;
+  const windowHeight = window.innerHeight;
+  const docHeight = document.documentElement.scrollHeight;
+
+  if (scrollY + windowHeight >= docHeight - 100) {
+    modeChange.style.bottom = '192px';
+  } else {
+    modeChange.style.bottom = '20px';
+  }
 });

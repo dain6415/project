@@ -133,6 +133,9 @@ header {
               padding-right: 6px;
               color: var(--color-gray700);
             }
+            .today{
+              color: var(--color-gray700);
+            }
             #museum_status {
               font-weight: 600;
               color: var(--color-gray700);
@@ -558,8 +561,7 @@ footer {
     }
   }
 }
-.mode-label {
-  display: none;
+.mode_change {
   display: inline-block;
   z-index: 1000;
   width: 80px;
@@ -590,7 +592,7 @@ footer {
   white-space: nowrap;
   border: 0;
 }
-input[type="checkbox"]:checked + .mode-label::after {
+input[type="checkbox"]:checked + .mode_change::after {
   display: none;
 }
 
@@ -1241,6 +1243,12 @@ input[type="checkbox"]:checked + .mode-label::after {
         }
       }
     }
+  }
+  .mode_change{
+    position: fixed;
+    right: 20px;
+    transition: .5s;
+    border-radius: 50%;
   }
 }
 // --------------------------------------------------------------------

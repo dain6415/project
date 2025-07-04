@@ -113,6 +113,9 @@ header nav ul li i {
   padding-right: 6px;
   color: var(--color-gray700);
 }
+.wrap .bg_img .introduce .txt .bottom .status .today {
+  color: var(--color-gray700);
+}
 .wrap .bg_img .introduce .txt .bottom .status #museum_status {
   font-weight: 600;
   color: var(--color-gray700);
@@ -487,8 +490,7 @@ footer .f_bottom .sns ul li img {
   filter: invert(1);
 }
 
-.mode-label {
-  display: none;
+.mode_change {
   display: inline-block;
   z-index: 1000;
   width: 80px;
@@ -503,10 +505,10 @@ footer .f_bottom .sns ul li img {
   white-space: nowrap;
   cursor: pointer;
 }
-.mode-label svg {
+.mode_change svg {
   display: none;
 }
-.mode-label svg.on {
+.mode_change svg.on {
   display: block;
 }
 
@@ -521,7 +523,7 @@ footer .f_bottom .sns ul li img {
   border: 0;
 }
 
-input[type=checkbox]:checked + .mode-label::after {
+input[type=checkbox]:checked + .mode_change::after {
   display: none;
 }
 
@@ -1118,6 +1120,12 @@ input[type=checkbox]:checked + .mode-label::after {
   }
   footer .f_bottom .left p {
     padding: 10px 0 40px;
+  }
+  .mode_change {
+    position: fixed;
+    right: 20px;
+    transition: 0.5s;
+    border-radius: 50%;
   }
 }
 @media only screen and (min-width: 601px) {

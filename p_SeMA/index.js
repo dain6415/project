@@ -47,18 +47,18 @@ mobBtn.addEventListener("click", function () {
 // ----------------------------------------------------
 const today = new Date().getDay();
 const schedule = {
-  // 요일별 영업시간
   1: "휴무 (매주 월요일)",
-  // 2: "10:00 - 20:00까지",
-  2: "10:00 - 21:00\n(서울문화의 밤 1시간 연장 운영)",
-  3: "10:00 - 20:00까지",
-  4: "10:00 - 20:00까지",
-  5: "10:00 - 20:00\n(금요일 서울문화의 밤 1시간장 운영)",
-  6: "10:00 - 19:00\n(주말/공휴일 운영)",
-  0: "10:00 - 19:00\n(주말/공휴일 운영)",
+  2: "오늘의 영업 : 10:00 - 21:00 \n(서울문화의 밤 1시간 연장 운영)",
+  3: "오늘의 영업 : 10:00 - 20:00까지",
+  4: "오늘의 영업 : 10:00 - 20:00까지",
+  5: "오늘의 영업 : 10:00 - 20:00 \n(금요일 서울문화의 밤 1시간장 운영)",
+  6: "오늘의 영업 : 10:00 - 19:00 \n(주말/공휴일 운영)",
+  0: "오늘의 영업 : 10:00 - 19:00 \n(주말/공휴일 운영)",
 };
 
-document.getElementById("museum_status").textContent = schedule[today];
+const msg = schedule[today].replace(/\n/g, "<br>");
+document.getElementById("museum_status").innerHTML = msg;
+console.log(schedule[today])
 
 // swiper----------------------------------------
 var swiper = new Swiper(".mySwiper", {
@@ -89,7 +89,6 @@ var swiper = new Swiper(".mySwiper", {
   //       oopedSlides: 3, // 루프 시 복사되는 슬라이드 개수 지정
   // centeredSlides: true,
 });
-
 // dark모드---------------------------------------------
 const checkbox = document.querySelector("#modeToggle");
 const label = document.querySelector(".mode-label");

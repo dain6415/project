@@ -67,8 +67,9 @@ header {
   transition: 0.5s;
   nav {
     ul {
-      li{
-        a, i {
+      li {
+        a,
+        i {
           color: #333;
         }
       }
@@ -124,7 +125,6 @@ header {
             }
           }
           .status {
-            display: inline-block;
             color: var(--color-gray700);
             text-align: center;
             font-weight: 600;
@@ -133,9 +133,10 @@ header {
               padding-right: 6px;
               color: var(--color-gray700);
             }
-            span {
+            #museum_status {
               font-weight: 600;
               color: var(--color-gray700);
+              display: block;
             }
           }
         }
@@ -573,14 +574,14 @@ footer {
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
-  svg{
+  svg {
     display: none;
-    &.on{
+    &.on {
       display: block;
     }
   }
 }
-.blind{
+.blind {
   position: absolute;
   overflow: hidden;
   width: 1px;
@@ -591,7 +592,7 @@ footer {
   border: 0;
 }
 input[type="checkbox"]:checked + .mode-label::after {
-display: none;
+  display: none;
 }
 
 // --------------------------------------------------------------------
@@ -670,8 +671,8 @@ display: none;
           &.on {
             span {
               background-color: transparent;
-              &::before ,
-              &::after{
+              &::before,
+              &::after {
                 background-color: var(--color-gray100);
               }
               &::before {
@@ -776,7 +777,7 @@ display: none;
               font-weight: 400;
               text-align: center;
               @include flex();
-              span{
+              span {
                 color: var(--color-gray100);
               }
             }
@@ -802,15 +803,15 @@ display: none;
       }
     }
     .scrolled {
-      background-color: var(--color-gray100); /* 스크롤 후 변경된 배경색 */
+      background-color: var(--color-gray100);
       border-bottom: 1px solid #e4e4e4;
       nav ul li a {
-        color: var(--color-gray700); /* 스크롤 후 변경된 nav 링크 색상 */
+        color: var(--color-gray700);
       }
       .right-menu ul li a {
-        color: var(--color-gray700); /* 스크롤 후 변경된 nav 링크 색상 */
+        color: var(--color-gray700);
         i {
-          color: var(--color-gray700); /* 스크롤 후 변경된 nav 링크 색상 */
+          color: var(--color-gray700);
         }
       }
     }
@@ -852,7 +853,7 @@ display: none;
               font-size: 1.6rem;
             }
             .status {
-              i{
+              i {
                 display: none;
               }
               margin-top: 5vh;

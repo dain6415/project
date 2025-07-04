@@ -839,7 +839,7 @@ input[type="checkbox"]:checked + .mode-label::after {
           p {
             word-break: keep-all;
             padding-bottom: 3vh;
-            font-size: clamp(12px, 14px, 18px);
+            font-size: clamp(14px, 16px, 18px);
             br {
               display: none;
             }
@@ -1056,7 +1056,7 @@ input[type="checkbox"]:checked + .mode-label::after {
             }
           }
           p {
-            font-size: 4vw;
+            font-size: clmp(14px, 16px, 18px);
             padding-bottom: 40px;
             word-break: keep-all;
             br {
@@ -1111,7 +1111,7 @@ input[type="checkbox"]:checked + .mode-label::after {
               p,
               i {
                 color: var(--color-gray100);
-                font-size: 4vw;
+                font-size: 25px;
                 width: 100%;
               }
               i {

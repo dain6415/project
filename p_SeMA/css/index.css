@@ -765,7 +765,7 @@ input[type=checkbox]:checked + .mode-label::after {
   .wrap .bg_img .introduce .txt p {
     word-break: keep-all;
     padding-bottom: 3vh;
-    font-size: 14px;
+    font-size: 16px;
   }
   .wrap .bg_img .introduce .txt p br {
     display: none;
@@ -949,7 +949,7 @@ input[type=checkbox]:checked + .mode-label::after {
     display: block;
   }
   .wrap .sect2 .top .app p {
-    font-size: 4vw;
+    font-size: clmp(14px, 16px, 18px);
     padding-bottom: 40px;
     word-break: keep-all;
   }
@@ -1000,7 +1000,7 @@ input[type=checkbox]:checked + .mode-label::after {
   .wrap .sect2 .bottom a.item .item_txt .title p,
   .wrap .sect2 .bottom a.item .item_txt .title i {
     color: var(--color-gray100);
-    font-size: 4vw;
+    font-size: 25px;
     width: 100%;
   }
   .wrap .sect2 .bottom a.item .item_txt .title i {

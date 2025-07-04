@@ -1002,7 +1002,7 @@ input[type=checkbox]:checked + .mode-label::after {
   .wrap .sect2 .bottom a.item .item_txt .title p,
   .wrap .sect2 .bottom a.item .item_txt .title i {
     color: var(--color-gray100);
-    font-size: 25px;
+    font-size: 20px;
     width: 100%;
   }
   .wrap .sect2 .bottom a.item .item_txt .title i {

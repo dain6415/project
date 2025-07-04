@@ -858,6 +858,8 @@ input[type="checkbox"]:checked + .mode-label::after {
               margin-top: 5vh;
               padding: 2vh;
               border-radius: 40px;
+              font-weight: 600;
+              font-size: 20px;
             }
           }
         }

@@ -116,7 +116,6 @@ header nav ul li i {
 .wrap .bg_img .introduce .txt .bottom .status #museum_status {
   font-weight: 600;
   color: var(--color-gray700);
-  display: block;
 }
 
 .sect1 {

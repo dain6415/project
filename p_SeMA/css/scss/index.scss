@@ -1247,6 +1247,9 @@ input[type="checkbox"]:checked + .mode_change::after {
   .mode_change{
     position: fixed;
     right: 20px;
+    width: 60px;
+    height: 60px;
+    padding: 12px;
     transition: .5s;
     border-radius: 50%;
   }

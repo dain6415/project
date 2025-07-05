@@ -91,10 +91,11 @@ var swiper = new Swiper(".mySwiper", {
 });
 // dark모드---------------------------------------------
 const checkbox = document.querySelector("#modeToggle");
-const label = document.querySelector(".mode_change");
-const blind = label.querySelector(".blind");
+const modeChange = document.querySelector(".mode_change");
+const blind = modeChange.querySelector(".blind");
 const darkModeIcon = document.querySelectorAll(".mode_change .dark_mode");
 const lightModeIcon = document.querySelectorAll(".mode_change .light_mode");
+const main = document.querySelector('main')
 
 checkbox.addEventListener("click", (e) => {
   const isDark = !e.target.checked;
@@ -122,14 +123,13 @@ checkbox.addEventListener("click", (e) => {
 });
 
 window.addEventListener('scroll', () => {
-  const modeChange = document.querySelector('.mode_change');
-  const scrollY = window.scrollY || window.pageYOffset;
-  const windowHeight = window.innerHeight;
-  const docHeight = document.documentElement.scrollHeight;
+  const mainBottom = main.getBoundingClientRect().bottom;
 
-  if (scrollY + windowHeight >= docHeight - 100) {
-    modeChange.style.bottom = '192px';
+  const viewportHeight = window.innerHeight;
+
+  if (mainBottom <= viewportHeight) {
+    modeChange.classList.add('on')
   } else {
-    modeChange.style.bottom = '20px';
+    modeChange.classList.remove('on')
   }
 });

@@ -868,14 +868,15 @@ input[type="checkbox"]:checked + .mode_change::after {
           p {
             word-break: keep-all;
             padding-bottom: 3vh;
+            line-height: 1.5;
             font-size: clamp(12px, 14px, 14px);
             br {
               display: none;
             }
           }
           .visit {
-            padding: 20px 25px;
-            font-size: 1.6rem;
+            padding: 10px 15px;
+            font-size: 1.4rem;
           }
         }
         .bottom {

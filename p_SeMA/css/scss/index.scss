@@ -9,14 +9,13 @@
   transform: translate(-50%, -50%);
 }
 $dark: (
-  gray100: #fff,
+  gray100: #f4f4f4,
   gray200: #eee,
   gray300: #ddd,
   gray400: #999,
   gray500: #666,
   gray600: #333,
   gray700: #111,
-  gray700-gradetion: #11111100,
   sect2-bg: #222,
   download-btn: #333,
 );
@@ -29,7 +28,6 @@ $light: (
   gray500: map-get($dark, gray300),
   gray600: map-get($dark, gray200),
   gray700: map-get($dark, gray100),
-  gray700-gradetion: map-get($dark, gray700-gradetion),
   sect2-bg: map-get($dark, gray200),
   download-btn: map-get($dark, gray300),
 );
@@ -58,6 +56,10 @@ body {
     color: inherit;
     cursor: pointer;
   }
+  p,
+  i {
+    letter-spacing: -1.4px;
+  }
 }
 main {
   position: relative;
@@ -66,14 +68,14 @@ header {
   position: fixed;
   z-index: 999;
   width: 100%;
-  background-color: #fff;
+  // background-color: #f4f4f4;
   transition: 0.5s;
   nav {
     ul {
       li {
         a,
         i {
-          color: #333;
+          color: #666;
         }
       }
     }
@@ -84,7 +86,7 @@ header {
   .bg_img {
     position: relative;
     height: 100vh;
-    background-image: url(../imgs/bg.jpg);
+    background-image: url(../imgs/new_bg2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     &::after {
@@ -97,52 +99,78 @@ header {
       pointer-events: none;
     }
     .introduce {
-      margin: auto;
-      height: 86%;
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
       position: relative;
+      width: 100%;
+      height: 100vh;
+      margin: auto;
       z-index: 1;
-      h2 {
-        line-height: 1.4;
-      }
       .txt {
-        > p {
-          color: var(--color-gray200);
-          line-height: 1.6;
-          font-weight: 400;
+        position: absolute;
+        h2 {
+          line-height: 1.2;
+          letter-spacing: -1.4px;
+          color: #f4f4f4;
         }
-        .bottom {
-          @include flex(space-between);
-          .visit {
-            color: var(--color-gray100);
+        p {
+          color: #ddd;
+          line-height: 1.8;
+          font-weight: 200;
+        }
+        .visit {
+          display: inline-block;
+          position: relative;
+          color: #ddd;
+          font-size: 1.6rem;
+          font-weight: 200;
+          transition: 0.3s;
+          &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -4px;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 1px;
+            background: #999;
+            transition: 0.3s;
+          }
+          &:hover {
+            color: #f4f4f4;
             font-weight: 600;
-            display: inline-block;
-            padding: 20px 25px;
-            border: 1px solid var(--color-gray100);
-            border-radius: 50px;
-            &:hover {
-              background-color: var(--color-gray100);
-              color: var(--color-gray600);
+            &::after {
+              background: #f4f4f4;
             }
           }
-          .status {
-            color: var(--color-gray700);
-            text-align: center;
+        }
+      }
+      .bottom {
+        position: absolute;
+        &::before {
+          content: "";
+          position: absolute;
+          @include po-center();
+          width: 120%;
+          height: 220%;
+          background: #fff;
+          border-radius: 50px;
+          z-index: -1;
+        }
+        .status {
+          display: inline-block;
+          color: #111;
+          text-align: center;
+          font-weight: 600;
+          i {
+            padding-right: 6px;
+          }
+          #museum_status {
             font-weight: 600;
-            background: var(--color-gray100);
-            i {
-              padding-right: 6px;
-              color: var(--color-gray700);
-            }
-            .today {
-              color: var(--color-gray700);
-            }
-            #museum_status {
-              font-weight: 600;
-              color: var(--color-gray700);
-            }
+            letter-spacing: 0;
+          }
+          i,
+          .today,
+          #museum_status {
+            color: #111;
           }
         }
       }
@@ -150,11 +178,10 @@ header {
   }
 }
 .sect1 {
-  width: 95%;
-  background-color: var(--color-gray700);
   position: relative;
+  margin: auto;
+  background-color: var(--color-gray700);
   z-index: 99;
-  border-radius: 20px;
   h3 {
     color: var(--color-gray200);
   }
@@ -195,7 +222,6 @@ header {
           width: 100%;
           .img_box {
             overflow: hidden;
-            border-radius: 20px;
             position: relative;
             &::before {
               content: "";
@@ -219,7 +245,7 @@ header {
               bottom: 40px;
               left: 50%;
               z-index: 1;
-              color: #fff;
+              color: #f4f4f4;
               font-size: 20px;
               font-weight: 600;
               transform: translateX(-50%);
@@ -252,7 +278,6 @@ header {
           position: absolute;
           top: 48%;
           left: 0;
-          border-radius: 20px;
           overflow: hidden;
           background-color: var(--color-gray500);
           span {
@@ -330,14 +355,12 @@ header {
       .left,
       .right {
         a {
-          border-radius: 20px;
-          overflow: hidden;
           position: relative;
           .collection_name {
             position: absolute;
             left: 30px;
             bottom: 25px;
-            color: #fff;
+            color: #f4f4f4;
             font-size: 2.4rem;
             font-weight: 600;
             z-index: 1;
@@ -345,7 +368,6 @@ header {
         }
       }
       .left {
-        border-radius: 20px;
         overflow: hidden;
         height: 360px;
         a {
@@ -615,11 +637,15 @@ input[type="checkbox"]:checked + .mode_change::after {
       margin: auto;
       @include flex(space-between);
       h1 {
+        position: relative;
         width: 30%;
         height: 100%;
-        @include flex();
+        // @include flex();
         img {
           width: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
         }
       }
       nav {
@@ -822,25 +848,23 @@ input[type="checkbox"]:checked + .mode_change::after {
   }
   .wrap {
     .bg_img {
+      padding: 0 10px;
       background-position: top center;
       &::after {
         height: 80%;
-        background: linear-gradient(
-          to top,
-          var(--color-gray700) 20%,
-          var(--color-gray700-gradetion) 80%
-        );
+        background: linear-gradient(to bottom, #11111100 30%, #111111bb 50%);
       }
       .introduce {
-        width: 95%;
-        padding: 14vh 10px 0;
-        gap: 14rem;
         text-align: center;
         h2 {
-          font-size: 7vw;
-          line-height: 1.4;
+          font-size: clamp(28px, 32px, 48px);
+          margin-bottom: 20px;
         }
         .txt {
+          top: 36%;
+          left: 50%;
+          width: 100%;
+          transform: translateX(-50%);
           p {
             word-break: keep-all;
             padding-bottom: 3vh;
@@ -849,23 +873,33 @@ input[type="checkbox"]:checked + .mode_change::after {
               display: none;
             }
           }
-          .bottom {
-            flex-direction: column;
-            background-color: transparent;
-            .visit {
-              padding: 20px 25px;
-              font-size: 1.6rem;
+          .visit {
+            padding: 20px 25px;
+            font-size: 1.6rem;
+          }
+        }
+        .bottom {
+          left: 50%;
+          bottom: 40px;
+          transform: translateX(-50%);
+          &::before{
+            width: 100%;
+            height: 100%;
+          }
+          .status {
+            width: 100%;
+            white-space: nowrap;
+            i {
+              display: none;
             }
-            .status {
-              i {
-                display: none;
-              }
-              margin-top: 5vh;
-              padding: 20px 30px;
-              border-radius: 40px;
-              font-weight: 600;
-              font-size: 20px;
+            .today,
+            #museum_status {
+              display: inline-block;
             }
+            padding: 20px 30px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 20px;
           }
         }
       }
@@ -901,7 +935,6 @@ input[type="checkbox"]:checked + .mode_change::after {
     }
     .sect1 {
       padding: 80px 10px 60px;
-      margin: -40px auto 0;
       .art1 {
         margin-bottom: 60px;
         .more {
@@ -1246,7 +1279,7 @@ input[type="checkbox"]:checked + .mode_change::after {
       }
     }
   }
-  
+
   .mode_change {
     position: fixed;
     bottom: 30px;
@@ -1256,7 +1289,7 @@ input[type="checkbox"]:checked + .mode_change::after {
     padding: 12px;
     border-radius: 50%;
     transition: 0.5s;
-    &.on{
+    &.on {
       position: absolute;
     }
   }
@@ -1265,9 +1298,8 @@ input[type="checkbox"]:checked + .mode_change::after {
 @media only screen and (min-width: 601px) {
   header {
     height: 120px;
-    padding: 40px 20px;
+    padding: 20px 40px;
     .inner {
-      width: 95%;
       height: 100%;
       margin: auto;
       @include flex(space-between);
@@ -1300,8 +1332,8 @@ input[type="checkbox"]:checked + .mode_change::after {
               display: block;
               width: 100%;
               padding: 10px;
-              font-size: 1.6rem;
-              font-weight: 600;
+              font-size: 1.2rem;
+              font-weight: 400;
               position: relative;
               &::before {
                 content: "";
@@ -1356,19 +1388,19 @@ input[type="checkbox"]:checked + .mode_change::after {
         width: 15%;
         ul {
           @include flex(flex-end);
-          gap: 10px;
           li {
             a {
               color: #999;
-              background-color: #ddd;
               font-size: 1.6rem;
               font-weight: 600;
               display: inline-block;
-              padding: 5px 15px;
-              border-radius: 20px;
+              padding: 0px 15px;
               i {
-                color: var(--color-gray200);
+                color: #999;
               }
+            }
+            &:nth-child(1) {
+              border-right: 1px solid #999;
             }
           }
         }
@@ -1401,40 +1433,36 @@ input[type="checkbox"]:checked + .mode_change::after {
       padding-left: 20px;
       padding-right: 20px;
       &::after {
-        height: 80%;
-        background: linear-gradient(
-          to top,
-          var(--color-gray700) 20%,
-          var(--color-gray700-gradetion) 80%
-        );
+        height: 60%;
+        background: linear-gradient(to bottom, #11111100 30%, #111111bb 50%);
       }
       .introduce {
-        width: 95%;
-        padding: 200px 0 25px;
-        gap: 300px;
-        h2 {
-          font-size: 5rem;
-        }
         .txt {
-          > p {
-            font-size: 2rem;
+          left: 0px;
+          bottom: 80px;
+          width: 100%;
+          h2 {
+            margin-bottom: 12px;
+            font-size: 3.2rem;
+            br {
+              display: none;
+            }
+          }
+          p {
             margin-bottom: 40px;
+            font-size: 1.4rem;
           }
-          .bottom {
-            .visit {
-              font-size: 2rem;
-            }
-            .status {
-              padding: 20px 30px;
-              font-size: 2rem;
-              border-radius: 50px;
-            }
-          }
+        }
+        .bottom {
+          right: 20px;
+          bottom: 62px;
+        }
+        .status {
+          font-size: 1.6rem;
         }
       }
     }
     .sect1 {
-      margin: -80px auto 0;
       padding: 120px 20px;
       .art1 {
         .more {
@@ -1514,7 +1542,6 @@ input[type="checkbox"]:checked + .mode_change::after {
           .left,
           .right {
             a {
-              border-radius: 20px;
               overflow: hidden;
               position: relative;
               &::after {
@@ -1538,8 +1565,6 @@ input[type="checkbox"]:checked + .mode_change::after {
             }
           }
           .left {
-            border-radius: 20px;
-            overflow: hidden;
             height: 360px;
             a {
               .img_box {
@@ -1713,7 +1738,6 @@ input[type="checkbox"]:checked + .mode_change::after {
               i {
                 color: var(--color-gray100);
                 font-size: 2rem;
-                letter-spacing: 1;
                 width: 100%;
               }
               i {
@@ -1850,12 +1874,27 @@ input[type="checkbox"]:checked + .mode_change::after {
   .wrap {
     .bg_img {
       .introduce {
+        padding: 0px;
         .txt {
-          > p {
+          width: 100%;
+          left: 20px;
+          bottom: 80px;
+          h2 {
+            font-size: 4.8rem;
+          }
+          p {
+            font-size: 1.6rem;
             br.welBr {
               display: none;
             }
           }
+        }
+        .bottom {
+          right: 40px;
+          bottom: 80px;
+        }
+        .status {
+          font-size: 1.6rem;
         }
       }
     }
@@ -1877,8 +1916,6 @@ input[type="checkbox"]:checked + .mode_change::after {
           .left,
           .right {
             a {
-              border-radius: 20px;
-              overflow: hidden;
               position: relative;
               .collection_name {
                 font-size: 2.4rem;
@@ -1999,7 +2036,6 @@ input[type="checkbox"]:checked + .mode_change::after {
               i {
                 color: var(--color-gray100);
                 font-size: 2.4rem;
-                letter-spacing: 1;
               }
               i {
                 display: none;
@@ -2074,14 +2110,13 @@ input[type="checkbox"]:checked + .mode_change::after {
 @media only screen and (min-width: 1200px) {
   header {
     .inner {
-      max-width: 1600px;
       nav {
         > ul {
-          gap: 40px;
+          gap: 20px;
           li.main-menu {
             > a {
               padding: 10px;
-              font-size: 2rem;
+              font-size: 1.6rem;
             }
             ul.sub-menu {
               width: 100%;
@@ -2091,8 +2126,6 @@ input[type="checkbox"]:checked + .mode_change::after {
               display: none;
               li {
                 > a {
-                  display: block;
-                  color: var(--color-gray100);
                   padding: 6px;
                   font-size: 16px;
                   border: 1px solid #828080;
@@ -2114,16 +2147,6 @@ input[type="checkbox"]:checked + .mode_change::after {
           }
         }
       }
-      .right-menu {
-        ul {
-          gap: 10px;
-          li {
-            a {
-              padding: 10px 20px;
-            }
-          }
-        }
-      }
     }
     .scrolled {
       background-color: var(--color-gray100);
@@ -2140,33 +2163,10 @@ input[type="checkbox"]:checked + .mode_change::after {
       font-size: 4rem;
     }
     .bg_img {
-      background-size: 100%;
-      padding: 0;
       .introduce {
-        max-width: 1700px;
-        padding: 200px 50px 0;
-        gap: 300px;
-        h2 {
-          font-size: 5rem;
-          line-height: 1.4;
-        }
         .txt {
           p {
-            color: var(--color-gray200);
-            font-size: 2rem;
-            font-weight: 400;
             line-height: 1.6;
-          }
-          .bottom {
-            .visit {
-              color: var(--color-gray100);
-              font-size: 20px;
-              font-weight: 600;
-              display: inline-block;
-              padding: 20px 25px;
-              border: 1px solid var(--color-gray100);
-              border-radius: 50px;
-            }
           }
         }
       }

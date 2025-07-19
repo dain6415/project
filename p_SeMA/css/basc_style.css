@@ -1,6 +1,7 @@
+@import url(/font/font.css);
+
 body {
   font-family: 'pretendard';
-  font-weight: 300;
 }
 * {
   margin: 0;
@@ -20,7 +21,7 @@ header {
     
 img{vertical-align: top;}
 h3{font-size: 30px; font-weight: 700;}
-p{font-size: 10px; line-height: 1.5em; letter-spacing: -.04em; word-wrap: break-word; color: #333;}
+p{font-size: 10px; line-height: 1.5em;word-wrap: break-word; color: #333;}
 a{text-decoration: none; color: #333;}
 li{list-style: none;}
 

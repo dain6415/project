@@ -18,7 +18,7 @@
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   </head>
 
-  <body data-theme="dark" class="wrap mCustomScrollbar" data-mcs-theme="minimal">
+  <body data-theme="light" class="wrap mCustomScrollbar" data-mcs-theme="minimal">
     <header>
       <div class="inner flex">
         <h1>
@@ -273,96 +273,59 @@
         <article class="art2">
           <h3>소장품과 미술연구</h3>
           <div class="collections">
-            <div class="left">
-              <a href="#">
-                <div class="img_box">
-                  <img
-                    src="./imgs/collection/collection.jpg"
-                    alt="함연주, Blooming 이미지"
-                  />
-                </div>
-                <p class="collection_name">SeMA 컬렉션 200</p>
-              </a>
-            </div>
-            <div class="right grid">
-              <a href="#">
-                <div class="img_box">
-                  <img
-                    src="./imgs/collection/collection_1.jpg"
-                    alt="사랑-선을 행하는 자은 없도다 이미지"
-                  />
-                </div>
-                <p class="collection_name">가나아트 컬렉션</p>
-              </a>
-              <a href="#">
-                <div class="img_box">
-                  <img
-                    src="./imgs/collection/collection_2.jpg"
-                    alt="안 케페스 이미지"
-                  />
-                </div>
-                <p class="collection_name">천경자 컬렉션</p>
-              </a>
-              <a href="#">
-                <div class="img_box">
-                  <img
-                    src="./imgs/collection/collection_3.jpg"
-                    alt="연인-11 이미지"
-                  />
-                </div>
-                <p class="collection_name">최민 컬렉션</p>
-              </a>
-              <a href="#">
-                <div class="img_box">
-                  <img
-                    src="./imgs/collection/collection_4.jpg"
-                    alt="그대는 불타오르는 불꽃에 영혼을 던져보았는가 이미지"
-                  />
-                </div>
-                <p class="collection_name">김인순 컬렉션</p>
-              </a>
-            </div>
+            <figure class="coll_img_box">
+              <img
+                src="./imgs/collection/blue2.jpg"
+                alt="송수련, 내적시선? 조용히 바라보다 이미지"
+              />
+              <figcaption class="text">
+                <p class="coll_title">
+                  내적시선? 조용히 바라보다
+                </p>
+                <p class="author">송수련</p>
+                <p class="year">2015, 한국화</p>
+              </figcaption>
+            </figure>
           </div>
-          <ul>
+          <ul aria-label="소장품 관련 서비스 메뉴">
             <li>
-              <a href="#">
-                <p class="link">SeMA 소장품</p>
+              <a class="link" href="#" aria-label="SeMA 소장품 페이지로 이동">
+                <p class="link_title">SeMA 소장품</p>
                 <p class="txt">
                   서울시립미술관이 소장한 작품<br />
                   6,432점을 살펴보세요.
                 </p>
+                <span></span>
               </a>
             </li>
             <li>
-              <a href="#">
-                <p class="link">미술 아카이브</p>
+              <a class="link" href="#" aria-label="미술 아카이브 페이지로 이동">
+                <p class="link_title">미술 아카이브</p>
                 <p class="txt">
                   현대미술의 중요한 기록을<br />
                   수집·보존·연구하고 전시합니다.
                 </p>
+                <span></span>
               </a>
             </li>
             <li>
-              <a href="#">
-                <p class="link">모두의 연구실 ‘코랄’</p>
+              <a class="link" href="#" aria-label="모두의 연구실 ‘코랄’ 페이지로 이동">
+                <p class="link_title">모두의 연구실 ‘&nbsp;코랄&nbsp;’</p>
                 <p class="txt">
                   현대미술에 관한 연구를 작성하고 수집하며,<br class="coral" />
                   작품 창작 과정을 접하는 온라인 플랫폼을 만들어갑니다.
-                  <!-- 웹을 기반으로 지식 생산자와 사용자가 만나며<br
-                    class="coral"
-                  />
-                  다양한 형태의 미술 지식을 탐구하여<br class="coral" />
-                  미술 지식의 확장 가능성을 실험하는 공간입니다. -->
                 </p>
+                <span></span>
               </a>
             </li>
             <li>
-              <a href="#">
-                <p class="link">SeMA 도서와 자료</p>
+              <a class="link" href="#" aria-label="SeMA 도서와 자료 페이지로 이동">
+                <p class="link_title">SeMA 도서와 자료</p>
                 <p class="txt">
                   미술관이 소장하고 있는<br />
                   미술 관련 도서의 정보를 제공합니다.
                 </p>
+                <span></span>
               </a>
             </li>
           </ul>
@@ -471,7 +434,7 @@
           <div class="f_top">
             <div class="f_logo">
               <div class="img_box">
-                <img src="./imgs/logo-w.png" alt="" />
+                <img src="./imgs/logo-b.png" alt="" />
               </div>
               <ul>
                 <li>서울 중구 덕수궁길 61</li>
@@ -533,7 +496,7 @@
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="#ddd"
-          class="light_mode on"
+          class="light_mode"
         >
           <path
             d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z"
@@ -543,7 +506,7 @@
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="#333"
-          class="dark_mode"
+          class="dark_mode on"
         >
           <path
             fill-rule="evenodd"

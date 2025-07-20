@@ -34,10 +34,10 @@ mobBtn.addEventListener("click", function () {
     header.style.top = "0";
   }
 
-  const isDark = document.body.getAttribute("data-theme") === "dark";
+  const isLight= document.body.getAttribute("data-theme") === "light";
   const headerLogo = document.querySelector("h1 a img");
 
-  if (mobileNav.classList.contains("on") && isDark) {
+  if (mobileNav.classList.contains("on") && isLight) {
     headerLogo.setAttribute("src", "./imgs/logo-w.png");
   } else {
     headerLogo.setAttribute("src", "./imgs/logo-b.png");
@@ -89,7 +89,7 @@ var swiper = new Swiper(".mySwiper", {
   //       oopedSlides: 3, // 루프 시 복사되는 슬라이드 개수 지정
   // centeredSlides: true,
 });
-// dark모드---------------------------------------------
+// isLight모드---------------------------------------------
 const checkbox = document.querySelector("#modeToggle");
 const modeChange = document.querySelector(".mode_change");
 const blind = modeChange.querySelector(".blind");
@@ -98,28 +98,28 @@ const lightModeIcon = document.querySelectorAll(".mode_change .light_mode");
 const main = document.querySelector('main')
 
 checkbox.addEventListener("click", (e) => {
-  const isDark = !e.target.checked;
-  document.body.setAttribute("data-theme", isDark ? "dark" : "light");
+  const isLight = !e.target.checked;
+  document.body.setAttribute("data-theme", isLight ? "light" : "dark");
 
   const footerLogo = document.querySelector(".f_logo .img_box img");
   const footerSns = document.querySelectorAll(".sns a img");
 
   footerLogo.setAttribute(
     "src",
-    isDark ? "./imgs/logo-w.png" : "./imgs/logo-b.png"
+    isLight ? "./imgs/logo-b.png" : "./imgs/logo-w.png"
   );
   footerSns.forEach((img) => {
-    img.style.filter = isDark ? "invert(1)" : "invert(0)";
+    img.style.filter = isLight ? "invert(0)" : "invert(1)";
   });
 
   darkModeIcon.forEach((icon) => {
-    icon.classList.toggle("on", !isDark);
+    icon.classList.toggle("on", isLight);
   });
   lightModeIcon.forEach((icon) => {
-    icon.classList.toggle("on", isDark);
+    icon.classList.toggle("on", !isLight);
   });
 
-  blind.textContent = isDark ? "라이트 모드로 전환" : "라이트 모드로 전환";
+  blind.textContent = isLight ? "다크 모드로 전환" : "라이트 모드로 전환";
 });
 
 window.addEventListener('scroll', () => {

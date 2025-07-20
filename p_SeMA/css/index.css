@@ -4,23 +4,23 @@ body[data-theme=light] {
   --color-gray200: #333;
   --color-gray300: #666;
   --color-gray400: #999;
-  --color-gray500: #ddd;
+  --color-gray500: #ccc;
   --color-gray600: #eee;
-  --color-gray700: #f4f4f4;
-  --color-sect2-bg: #eee;
+  --color-gray700: #fff;
+  --color-sect2-bg: #f7f7f7;
   --color-download-btn: #ddd;
 }
 
 body[data-theme=dark] {
-  --color-gray100: #f4f4f4;
+  --color-gray100: #fff;
   --color-gray200: #eee;
-  --color-gray300: #ddd;
+  --color-gray300: #ccc;
   --color-gray400: #999;
   --color-gray500: #666;
   --color-gray600: #333;
   --color-gray700: #111;
-  --color-sect2-bg: #222;
-  --color-download-btn: #333;
+  --color-sect2-bg: #f7f7f7;
+  --color-download-btn: #666;
 }
 
 html,
@@ -312,96 +312,37 @@ header nav ul li i {
   bottom: 0;
   transform: rotate(-45deg);
 }
-.sect1 .art2 .collections .left a,
-.sect1 .art2 .collections .right a {
-  position: relative;
-}
-.sect1 .art2 .collections .left a .collection_name,
-.sect1 .art2 .collections .right a .collection_name {
-  position: absolute;
-  left: 30px;
-  bottom: 25px;
-  color: #f4f4f4;
-  font-size: 2.4rem;
-  font-weight: 600;
-  z-index: 1;
-}
-.sect1 .art2 .collections .left {
-  overflow: hidden;
-  height: 360px;
-}
-.sect1 .art2 .collections .left a .img_box {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.sect1 .art2 .collections .left a .img_box img {
+.sect1 .art2 .collections .coll_img_box {
   width: 100%;
-  transform: scale(1);
-  transition: 0.3s ease;
-  min-height: 600px;
 }
-.sect1 .art2 .collections .left a:hover .img_box::after {
-  opacity: 1;
-}
-.sect1 .art2 .collections .left a:hover img {
-  transform: scale(1.05);
-}
-.sect1 .art2 .collections .grid {
-  display: grid;
-  gap: 4px;
-  margin-top: 4px;
-}
-.sect1 .art2 .collections .grid a .img_box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.sect1 .art2 .collections .coll_img_box img {
   width: 100%;
-  height: 100%;
+  object-fit: cover;
 }
-.sect1 .art2 .collections .grid a .img_box img {
-  transform: scale(1);
-  transition: 0.3s ease;
+.sect1 .art2 .collections .coll_title {
+  font-weight: 400;
 }
-.sect1 .art2 .collections .grid a:nth-child(3) .img_box {
-  align-items: start;
-}
-.sect1 .art2 .collections .grid a:hover::after {
-  opacity: 0.8;
-}
-.sect1 .art2 .collections .grid a:hover img {
-  transform: scale(1.1);
+.sect1 .art2 .collections .author,
+.sect1 .art2 .collections .year {
+  color: var(--color-gray400);
+  font-weight: 300;
 }
 .sect1 .art2 ul {
-  display: flex;
-  gap: 8px;
+  margin-left: auto;
 }
-.sect1 .art2 ul li {
-  width: 25%;
+.sect1 .art2 ul li:not(:last-child) {
+  border-bottom: 1px solid var(--color-gray600);
 }
-.sect1 .art2 ul li a .link {
+.sect1 .art2 ul .link {
   display: block;
-  position: relative;
-  font-size: 2rem;
-  font-weight: 600;
-  padding-bottom: 20px;
-  white-space: nowrap;
 }
-.sect1 .art2 ul li a .link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-gray500);
-  transition: 0.3s;
+.sect1 .art2 ul .link_title {
+  color: var(--color-gray100);
+  font-weight: 500;
 }
-.sect1 .art2 ul li a .link,
-.sect1 .art2 ul li a .txt {
-  color: var(--color-gray200);
+.sect1 .art2 ul .txt {
+  color: var(--color-gray400);
+  font-weight: 300;
 }
 
 .sect2 {
@@ -517,7 +458,6 @@ footer .line {
 }
 .footer_util .sns ul li img {
   height: 100%;
-  filter: invert(1);
 }
 
 .mode_change {
@@ -909,79 +849,29 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .sect1 .art2 .collections {
     padding-bottom: 40px;
   }
-  .wrap .sect1 .art2 .collections .left .collection_name,
-  .wrap .sect1 .art2 .collections .right .collection_name {
-    left: 15px;
-    bottom: 10px;
-    font-size: 5vw;
-    z-index: 1;
+  .wrap .sect1 .art2 .collections img {
+    padding-bottom: 6px;
   }
-  .wrap .sect1 .art2 .collections .left {
-    height: 200px;
-  }
-  .wrap .sect1 .art2 .collections .left a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to top, rgba(17, 17, 17, 0.6196078431) 0%, rgba(17, 17, 17, 0) 90%);
-    opacity: 0.9;
-  }
-  .wrap .sect1 .art2 .collections .left a .img_box {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .wrap .sect1 .art2 .collections .left a .img_box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .wrap .sect1 .art2 .collections .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .wrap .sect1 .art2 .collections .grid a {
-    height: 150px;
-  }
-  .wrap .sect1 .art2 .collections .grid a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to top, rgba(17, 17, 17, 0.6196078431) 0%, rgba(17, 17, 17, 0) 90%);
-    opacity: 0.9;
-  }
-  .wrap .sect1 .art2 .collections .grid a .img_box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .wrap .sect1 .art2 .collections .author,
+  .wrap .sect1 .art2 .collections .coll_title,
+  .wrap .sect1 .art2 .collections .year {
+    font-size: 16px;
   }
   .wrap .sect1 .art2 ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4px;
+    border-top: 1px solid var(--color-gray600);
   }
   .wrap .sect1 .art2 ul li {
     width: 100%;
+    padding: 10px 0;
   }
-  .wrap .sect1 .art2 ul li a {
-    display: block;
-  }
-  .wrap .sect1 .art2 ul li a .link {
+  .wrap .sect1 .art2 ul .link {
     width: 100%;
-    font-size: 5vw;
-    padding-bottom: 10px;
   }
-  .wrap .sect1 .art2 ul li a .link::after {
-    width: 100%;
-    display: none;
+  .wrap .sect1 .art2 ul .link_title {
+    font-size: 18px;
+    font-weight: 400;
   }
-  .wrap .sect1 .art2 ul li a .txt {
+  .wrap .sect1 .art2 ul .txt {
     display: none;
   }
   .wrap .sect2 {
@@ -1409,117 +1299,41 @@ input[type=checkbox]:checked + .mode_change::after {
     margin-top: 160px;
   }
   .wrap .sect1 .art2 .collections {
-    gap: 4px;
     width: 100%;
-    padding-bottom: 100px;
+    padding-bottom: 10px;
   }
-  .wrap .sect1 .art2 .collections .left a,
-  .wrap .sect1 .art2 .collections .right a {
-    overflow: hidden;
+  .wrap .sect1 .art2 .collections .coll_img_box {
     position: relative;
+    width: 100%;
   }
-  .wrap .sect1 .art2 .collections .left a::after,
-  .wrap .sect1 .art2 .collections .right a::after {
-    content: "";
+  .wrap .sect1 .art2 .collections .text {
     position: absolute;
-    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 90%;
-    background: linear-gradient(to top, rgba(17, 17, 17, 0.6196078431) 0%, rgba(17, 17, 17, 0) 40%);
-    opacity: 0.6;
-    transition: 0.3s ease;
+    bottom: -117px;
   }
-  .wrap .sect1 .art2 .collections .left a .collection_name,
-  .wrap .sect1 .art2 .collections .right a .collection_name {
-    font-size: 2.4rem;
-  }
-  .wrap .sect1 .art2 .collections .left {
-    height: 360px;
-  }
-  .wrap .sect1 .art2 .collections .left a .img_box {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  .wrap .sect1 .art2 .collections .left a .img_box::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 90%;
-    background: linear-gradient(to top, rgba(17, 17, 17, 0.6196078431) 0%, rgba(17, 17, 17, 0) 40%);
-    opacity: 0.6;
-    transition: 0.3s ease;
-  }
-  .wrap .sect1 .art2 .collections .left a .img_box img {
-    transform: scale(1);
-    transition: 0.3s ease;
-    min-height: 600px;
-  }
-  .wrap .sect1 .art2 .collections .left a:hover .img_box::after {
-    opacity: 1;
-  }
-  .wrap .sect1 .art2 .collections .left a:hover img {
-    transform: scale(1.05);
-  }
-  .wrap .sect1 .art2 .collections .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4px;
-    margin-top: 4px;
-  }
-  .wrap .sect1 .art2 .collections .grid a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 90%;
-    background: linear-gradient(to top, rgba(17, 17, 17, 0.6196078431) 0%, rgba(17, 17, 17, 0) 40%);
-    opacity: 0.5;
-    transition: 0.3s ease;
-  }
-  .wrap .sect1 .art2 .collections .grid a .img_box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-  .wrap .sect1 .art2 .collections .grid a .img_box img {
-    transform: scale(1);
-    transition: 0.3s ease;
-  }
-  .wrap .sect1 .art2 .collections .grid a:nth-child(3) .img_box {
-    align-items: start;
-  }
-  .wrap .sect1 .art2 .collections .grid a:hover::after {
-    opacity: 0.8;
-  }
-  .wrap .sect1 .art2 .collections .grid a:hover img {
-    transform: scale(1.1);
+  .wrap .sect1 .art2 .collections .author,
+  .wrap .sect1 .art2 .collections .coll_title,
+  .wrap .sect1 .art2 .collections .year {
+    font-size: 20px;
   }
   .wrap .sect1 .art2 ul {
-    display: flex;
-    gap: 8px;
+    width: 50%;
   }
-  .wrap .sect1 .art2 ul li {
-    width: 25%;
+  .wrap .sect1 .art2 ul .link {
+    padding: 16px 0;
   }
-  .wrap .sect1 .art2 ul li a .link {
-    display: block;
-    font-size: 2rem;
-    padding-bottom: 20px;
+  .wrap .sect1 .art2 ul .link_title {
+    font-size: 24px;
+    padding-bottom: 4px;
   }
-  .wrap .sect1 .art2 ul li a .link::after {
+  .wrap .sect1 .art2 ul .link_title::after {
     transition: 0.3s;
   }
-  .wrap .sect1 .art2 ul li a .txt {
-    display: none;
+  .wrap .sect1 .art2 ul .txt {
+    font-size: 20px;
+  }
+  .wrap .sect1 .art2 ul .txt br {
+    display: block;
   }
   .wrap .sect2 {
     width: 95%;
@@ -1727,56 +1541,54 @@ input[type=checkbox]:checked + .mode_change::after {
     margin-top: 160px;
   }
   .wrap .sect1 .art2 .collections {
-    display: flex;
-    flex-direction: column;
+    padding-bottom: 20px;
   }
-  .wrap .sect1 .art2 .collections .left a,
-  .wrap .sect1 .art2 .collections .right a {
+  .wrap .sect1 .art2 .collections .text {
+    bottom: -130px;
+  }
+  .wrap .sect1 .art2 ul {
+    width: 66.6666%;
+  }
+  .wrap .sect1 .art2 ul .link {
     position: relative;
+    padding: 20px 0;
   }
-  .wrap .sect1 .art2 .collections .left a .collection_name,
-  .wrap .sect1 .art2 .collections .right a .collection_name {
-    font-size: 2.4rem;
+  .wrap .sect1 .art2 ul .link:hover span {
+    opacity: 1;
+    right: 0px;
   }
-  .wrap .sect1 .art2 .collections .left {
-    width: 100%;
-    height: 400px;
+  .wrap .sect1 .art2 ul .txt {
+    width: calc(100% - 50px);
   }
-  .wrap .sect1 .art2 .collections .left a {
-    height: 100%;
-  }
-  .wrap .sect1 .art2 .collections .left a .img_box img {
-    width: 100%;
-  }
-  .wrap .sect1 .art2 .collections .grid {
-    width: 100%;
-    height: 220px;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .wrap .sect1 .art2 .collections .grid a .img_box img {
-    width: 100%;
-    min-height: 100%;
-  }
-  .wrap .sect1 .art2 .collections .grid a:nth-child(3) .img_box {
-    align-items: start;
-  }
-  .wrap .sect1 .art2 ul li a .link {
-    font-size: 2.4rem;
-    margin-bottom: 20px;
-  }
-  .wrap .sect1 .art2 ul li a .link::after {
-    width: 10%;
-  }
-  .wrap .sect1 .art2 ul li a .txt {
+  .wrap .sect1 .art2 ul span {
     display: block;
-    font-size: 1.6rem;
-    word-break: keep-all;
+    width: 30px;
+    height: 1px;
+    background: var(--color-gray300);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: 0.5s;
   }
-  .wrap .sect1 .art2 ul li a .txt br {
-    display: block;
+  .wrap .sect1 .art2 ul span::before, .wrap .sect1 .art2 ul span::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 1px;
+    background: var(--color-gray300);
   }
-  .wrap .sect1 .art2 ul li a .txt br.coral {
-    display: none;
+  .wrap .sect1 .art2 ul span::before {
+    transform-origin: right;
+    transform: rotate(45deg);
+    top: 0;
+  }
+  .wrap .sect1 .art2 ul span::after {
+    bottom: 0;
+    transform-origin: right;
+    transform: rotate(-45deg);
   }
   .wrap .sect2 .top {
     padding: 80px 0;
@@ -1934,9 +1746,7 @@ input[type=checkbox]:checked + .mode_change::after {
     line-height: 1.6;
   }
   .wrap .sect1 {
-    max-width: 1700px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 0 40px;
   }
   .wrap .sect1 .art1 .more a.btn .right p {
     font-size: 12px;
@@ -1952,39 +1762,16 @@ input[type=checkbox]:checked + .mode_change::after {
     margin-top: 160px;
   }
   .wrap .sect1 .art2 .collections {
-    flex-direction: row;
     width: 100%;
   }
-  .wrap .sect1 .art2 .collections .left,
-  .wrap .sect1 .art2 .collections .right {
+  .wrap .sect1 .art2 ul {
     width: 50%;
-    height: 700px;
   }
-  .wrap .sect1 .art2 .collections .left a .collection_name,
-  .wrap .sect1 .art2 .collections .right a .collection_name {
-    left: 30px;
-    bottom: 25px;
-    font-size: 2.4rem;
-  }
-  .wrap .sect1 .art2 .collections .left .img_box img {
-    height: 100%;
-  }
-  .wrap .sect1 .art2 .collections .grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    margin: 0;
-  }
-  .wrap .sect1 .art2 .collections .grid a .img_box img {
-    height: 100%;
-  }
-  .wrap .sect1 .art2 ul li {
-    width: 25%;
-  }
-  .wrap .sect1 .art2 ul li a .txt {
+  .wrap .sect1 .art2 ul .txt {
     font-size: 2rem;
   }
-  .wrap .sect1 .art2 ul li a .txt br.coral {
-    display: block;
+  .wrap .sect1 .art2 ul .txt br {
+    display: none;
   }
   .wrap .sect2 .top .app h3 {
     padding-bottom: 20px;

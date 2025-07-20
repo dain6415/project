@@ -164,6 +164,7 @@ header nav ul li i {
 }
 .sect1 h3 {
   color: var(--color-gray200);
+  font-weight: 600;
 }
 .sect1 .art1 .more {
   display: flex;
@@ -238,7 +239,8 @@ header nav ul li i {
   font-weight: 500;
 }
 .sect1 .art1 .swiper .swiper-slide a .txt .sub_txt p {
-  color: var(--color-gray200);
+  color: var(--color-gray400);
+  font-weight: 200;
 }
 .sect1 .art1 .swiper .pagination_area {
   position: relative;
@@ -868,7 +870,7 @@ input[type=checkbox]:checked + .mode_change::after {
     width: 100%;
   }
   .wrap .sect1 .art2 ul .link_title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
   }
   .wrap .sect1 .art2 ul .txt {

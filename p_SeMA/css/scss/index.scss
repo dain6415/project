@@ -183,6 +183,7 @@ header {
   z-index: 99;
   h3 {
     color: var(--color-gray200);
+    font-weight: 600;
   }
   .art1 {
     .more {
@@ -264,7 +265,8 @@ header {
               font-weight: 500;
             }
             .sub_txt p {
-              color: var(--color-gray200);
+              color: var(--color-gray400);
+              font-weight: 200;
             }
           }
         }
@@ -942,7 +944,7 @@ input[type="checkbox"]:checked + .mode_change::after {
             width: 100%;
           }
           .link_title{
-            font-size: clamp(14px, 18px, 20px);
+            font-size: clamp(14px, 20px, 40px);
             font-weight: 400;
           }
           .txt {

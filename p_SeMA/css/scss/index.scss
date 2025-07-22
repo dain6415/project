@@ -431,13 +431,12 @@ header {
     }
   }
   .bottom {
-    .item_txt {
-      text-align: center;
+    .item {
+      background: var(--color-sect2-bg);
+      border-radius: 12px;
       .title,
       .sub_txt {
-        p {
-          color: var(--color-gray100);
-        }
+        color: var(--color-gray100);
       }
       .title {
         font-weight: 600;
@@ -999,42 +998,34 @@ input[type="checkbox"]:checked + .mode_change::after {
           padding-bottom: 20px;
         }
         p {
-          font-size: clamp(14px, 16px, 18px);
+          color: #666;
+          font-size: clamp(12px, 14px, 16px);
           padding-bottom: 40px;
           word-break: keep-all;
           br {
             display: none;
           }
         }
-        a {
-          font-size: 1.6rem;
+        .download_btn {
           padding: 15px 40px;
+          background: var(--color-gray100);
+          color: var(--color-gray700);
+          font-size: 1.6rem;
         }
       }
       .bottom {
         display: flex;
-        align-items: center;
         flex-direction: column;
         gap: 10px;
-        a.item {
+        .item {
           display: block;
-          padding-right: 10px;
-          padding-left: 10px;
-          text-align: center;
-          &:nth-child(5) {
-            border-right: none;
+          padding: 20px;
+          .title {
+            font-size: clamp(16px, 24px, 28px);
+            width: 100%;
           }
-          .item_txt {
-            border: 1px solid #000;
-            padding: 10px;
-            .title {
-              color: var(--color-gray100);
-              font-size: clamp(16px, 20px, 24px);
-              width: 100%;
-            }
-            .sub_txt {
-              display: none;
-            }
+          .sub_txt {
+            font-size: clamp(16px, 20px, 24px);
           }
         }
       }
@@ -1517,24 +1508,19 @@ input[type="checkbox"]:checked + .mode_change::after {
       .bottom {
         display: flex;
         gap: 5px;
-        a.item {
+        .item {
           display: inline-block;
           width: 20%;
           padding: 10px 20px;
           text-align: center;
-          background: var(--color-sect2-bg);
-          border-radius: 12px;
         }
-        .item_txt {
-          .title {
-            color: var(--color-gray100);
-            font-size: 2rem;
-            width: 100%;
-          }
-          .sub_txt {
-            font-size: 16px;
-            color: var(--color-gray400);
-          }
+        .title {
+          font-size: 2rem;
+          width: 100%;
+        }
+        .sub_txt {
+          font-size: 16px;
+          color: var(--color-gray300);
         }
       }
     }
@@ -1796,13 +1782,13 @@ input[type="checkbox"]:checked + .mode_change::after {
       }
       .bottom {
         a.item {
-          padding: 10px 20px;
+          padding: 30px 10px;
         }
-        .item_txt {
-          .title {
-            padding-bottom: 10px;
-            color: var(--color-gray100);
-          }
+        .title {
+          color: var(--color-gray100);
+        }
+        .sub_txt {
+          font-size: 14px;
         }
       }
     }
@@ -2016,12 +2002,12 @@ input[type="checkbox"]:checked + .mode_change::after {
         }
       }
       .bottom {
-        .item_txt {
-          .title {
-            padding-bottom: 10px;
-            font-size: 2.4rem;
-            letter-spacing: 1;
-          }
+        .title {
+          font-size: 2.4rem;
+          padding-bottom: 4px;
+        }
+        .sub_txt {
+          font-size: 16px;
         }
       }
     }

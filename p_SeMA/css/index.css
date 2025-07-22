@@ -388,14 +388,15 @@ header nav ul li i {
   color: var(--color-gray600);
   transition: 0.35s;
 }
-.sect2 .bottom .item_txt {
-  text-align: center;
+.sect2 .bottom .item {
+  background: var(--color-sect2-bg);
+  border-radius: 12px;
 }
-.sect2 .bottom .item_txt .title p,
-.sect2 .bottom .item_txt .sub_txt p {
+.sect2 .bottom .item .title,
+.sect2 .bottom .item .sub_txt {
   color: var(--color-gray100);
 }
-.sect2 .bottom .item_txt .title {
+.sect2 .bottom .item .title {
   font-weight: 600;
 }
 
@@ -922,43 +923,35 @@ input[type=checkbox]:checked + .mode_change::after {
     padding-bottom: 20px;
   }
   .wrap .sect2 .app p {
-    font-size: 16px;
+    color: #666;
+    font-size: 14px;
     padding-bottom: 40px;
     word-break: keep-all;
   }
   .wrap .sect2 .app p br {
     display: none;
   }
-  .wrap .sect2 .app a {
-    font-size: 1.6rem;
+  .wrap .sect2 .app .download_btn {
     padding: 15px 40px;
+    background: var(--color-gray100);
+    color: var(--color-gray700);
+    font-size: 1.6rem;
   }
   .wrap .sect2 .bottom {
     display: flex;
-    align-items: center;
     flex-direction: column;
     gap: 10px;
   }
-  .wrap .sect2 .bottom a.item {
+  .wrap .sect2 .bottom .item {
     display: block;
-    padding-right: 10px;
-    padding-left: 10px;
-    text-align: center;
+    padding: 20px;
   }
-  .wrap .sect2 .bottom a.item:nth-child(5) {
-    border-right: none;
-  }
-  .wrap .sect2 .bottom a.item .item_txt {
-    border: 1px solid #000;
-    padding: 10px;
-  }
-  .wrap .sect2 .bottom a.item .item_txt .title {
-    color: var(--color-gray100);
-    font-size: 20px;
+  .wrap .sect2 .bottom .item .title {
+    font-size: 24px;
     width: 100%;
   }
-  .wrap .sect2 .bottom a.item .item_txt .sub_txt {
-    display: none;
+  .wrap .sect2 .bottom .item .sub_txt {
+    font-size: 20px;
   }
   footer {
     width: 95%;
@@ -1411,22 +1404,19 @@ input[type=checkbox]:checked + .mode_change::after {
     display: flex;
     gap: 5px;
   }
-  .wrap .sect2 .bottom a.item {
+  .wrap .sect2 .bottom .item {
     display: inline-block;
     width: 20%;
     padding: 10px 20px;
     text-align: center;
-    background: var(--color-sect2-bg);
-    border-radius: 12px;
   }
-  .wrap .sect2 .bottom .item_txt .title {
-    color: var(--color-gray100);
+  .wrap .sect2 .bottom .title {
     font-size: 2rem;
     width: 100%;
   }
-  .wrap .sect2 .bottom .item_txt .sub_txt {
+  .wrap .sect2 .bottom .sub_txt {
     font-size: 16px;
-    color: var(--color-gray400);
+    color: var(--color-gray300);
   }
   .wrap footer .f_top {
     margin-bottom: 60px;
@@ -1646,11 +1636,13 @@ input[type=checkbox]:checked + .mode_change::after {
     border-top: 1px solid var(--color-gray500);
   }
   .wrap .sect2 .bottom a.item {
-    padding: 10px 20px;
+    padding: 30px 10px;
   }
-  .wrap .sect2 .bottom .item_txt .title {
-    padding-bottom: 10px;
+  .wrap .sect2 .bottom .title {
     color: var(--color-gray100);
+  }
+  .wrap .sect2 .bottom .sub_txt {
+    font-size: 14px;
   }
   .wrap footer {
     margin: auto 40px;
@@ -1814,10 +1806,12 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .sect2 .app a {
     font-size: 2rem;
   }
-  .wrap .sect2 .bottom .item_txt .title {
-    padding-bottom: 10px;
+  .wrap .sect2 .bottom .title {
     font-size: 2.4rem;
-    letter-spacing: 1;
+    padding-bottom: 4px;
+  }
+  .wrap .sect2 .bottom .sub_txt {
+    font-size: 16px;
   }
   footer {
     margin-top: 100px;

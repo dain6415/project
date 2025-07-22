@@ -478,9 +478,9 @@ footer .line {
 
 .mode_change {
   display: inline-block;
-  width: 80px;
+  width: 60px;
   margin-top: 20px;
-  padding: 12px;
+  padding: 10px;
   border-radius: 20px;
   background: var(--color-gray500);
   color: var(--color-gray200);
@@ -948,6 +948,7 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   .wrap .sect2 .bottom .item .title {
     width: 100%;
+    padding-bottom: 2px;
     font-size: 20px;
   }
   .wrap .sect2 .bottom .item .sub_txt {
@@ -976,7 +977,7 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   footer .f_top .f_logo ul li {
     font-weight: 500;
-    font-size: 4vw;
+    font-size: 20px;
     margin-bottom: 6px;
   }
   footer .f_top .f_logo ul li a {
@@ -984,7 +985,7 @@ input[type=checkbox]:checked + .mode_change::after {
     margin-left: 5px;
   }
   footer .f_top .site_map a {
-    font-size: 6vw;
+    font-size: 24px;
   }
   footer .f_top .site_map ul {
     padding-top: 10px;
@@ -997,7 +998,7 @@ input[type=checkbox]:checked + .mode_change::after {
     margin-bottom: 10px;
   }
   footer .f_top .site_map ul li a {
-    font-size: 5vw;
+    font-size: 20px;
   }
   footer .f_top .site_map .visit ul {
     margin-bottom: 0;
@@ -1428,7 +1429,7 @@ input[type=checkbox]:checked + .mode_change::after {
     margin-bottom: 60px;
   }
   .wrap footer .f_top .f_logo .img_box {
-    width: 80%;
+    width: 280px;
   }
   .wrap footer .f_top .f_logo .img_box img {
     width: 100%;
@@ -1464,7 +1465,7 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap footer .f_top .site_map .collection ul li a,
   .wrap footer .f_top .site_map .visit ul li a {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
   .wrap .footer_util {
     padding-top: 20px;

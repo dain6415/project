@@ -242,92 +242,39 @@ header nav ul li i {
   color: var(--color-gray400);
   font-weight: 200;
 }
-.sect1 .art1 .swiper .pagination_area {
-  position: relative;
-  padding: 40px;
-  display: flex;
-}
-.sect1 .art1 .swiper .pagination_area .swiper-pagination {
-  position: absolute;
-  top: 48%;
-  left: 0;
-  overflow: hidden;
-  background-color: var(--color-gray500);
-}
-.sect1 .art1 .swiper .pagination_area .swiper-pagination span {
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: var(--color-gray100);
-}
-.sect1 .art1 .swiper .pagination_area .btn_box {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-.sect1 .art1 .swiper .pagination_area .btn_box > div {
-  position: absolute;
-}
-.sect1 .art1 .swiper .pagination_area .btn_box > div::after {
-  display: none;
-}
-.sect1 .art1 .swiper .pagination_area .btn_box > div span {
-  width: 100%;
-  height: 2px;
-  border-radius: 10px;
-  background-color: var(--color-gray100);
-  position: relative;
-}
-.sect1 .art1 .swiper .pagination_area .btn_box > div span.next::before, .sect1 .art1 .swiper .pagination_area .btn_box > div span.next::after {
-  content: "";
-  position: absolute;
-  right: 1px;
-  width: 50%;
-  height: 2px;
-  border-radius: 10px;
-  background-color: var(--color-gray100);
-  transform-origin: right;
-}
-.sect1 .art1 .swiper .pagination_area .btn_box > div span.next::before {
-  top: 0;
-  transform: rotate(45deg);
-}
-.sect1 .art1 .swiper .pagination_area .btn_box > div span.next::after {
-  bottom: 0;
-  transform: rotate(-45deg);
-}
-.sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::before, .sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::after {
-  content: "";
-  position: absolute;
-  left: 1px;
-  width: 50%;
-  height: 2px;
-  border-radius: 10px;
-  background-color: var(--color-gray100);
-  transform-origin: left;
-}
-.sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::before {
-  top: 0;
-  transform: rotate(45deg);
-}
-.sect1 .art1 .swiper .pagination_area .btn_box > div span.prev::after {
-  bottom: 0;
-  transform: rotate(-45deg);
-}
-.sect1 .art2 .collections .coll_img_box {
+.sect1 .art2 .collections .coll {
   width: 100%;
 }
-.sect1 .art2 .collections .coll_img_box img {
+.sect1 .art2 .collections .swiper-wrapper {
+  width: 100%;
+}
+.sect1 .art2 .collections .swiper-slide {
+  width: 100%;
+}
+.sect1 .art2 .collections .swiper-slide img {
   width: 100%;
   object-fit: cover;
 }
-.sect1 .art2 .collections .coll_title {
+.sect1 .art2 .collections .title {
   font-weight: 400;
 }
-.sect1 .art2 .collections .author,
+.sect1 .art2 .collections .artist,
 .sect1 .art2 .collections .year {
   color: var(--color-gray400);
   font-weight: 300;
+}
+.sect1 .art2 .collections .text_container {
+  position: relative;
+}
+.sect1 .art2 .collections .text_container .text {
+  position: absolute;
+  opacity: 0;
+}
+.sect1 .art2 .collections .text_container .text.on {
+  opacity: 1;
+}
+.sect1 .art2 .collections .text_container .title {
+  color: var(--color-gray200);
 }
 .sect1 .art2 ul {
   margin-left: auto;
@@ -346,34 +293,97 @@ header nav ul li i {
   color: var(--color-gray400);
   font-weight: 300;
 }
-
-.sect2 {
-  width: 95%;
-  margin: auto;
+.sect1 .pagination_area {
+  position: relative;
+  padding: 40px;
+  display: flex;
 }
-.sect2 .top {
+.sect1 .pagination_area .swiper-pagination {
+  position: absolute;
+  top: 48%;
+  left: 0;
+  overflow: hidden;
+  background-color: var(--color-gray500);
+}
+.sect1 .pagination_area .swiper-pagination span {
   border-radius: 20px;
-  background-color: var(--color-sect2-bg);
-  text-align: center;
+  overflow: hidden;
+  background-color: var(--color-gray100);
 }
-.sect2 .top h3 {
+.sect1 .pagination_area .btn_box {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.sect1 .pagination_area .btn_box > div {
+  position: absolute;
+}
+.sect1 .pagination_area .btn_box > div::after {
+  display: none;
+}
+.sect1 .pagination_area .btn_box > div span {
+  width: 100%;
+  height: 2px;
+  border-radius: 10px;
+  background-color: var(--color-gray100);
+  position: relative;
+}
+.sect1 .pagination_area .btn_box > div span.next::before, .sect1 .pagination_area .btn_box > div span.next::after {
+  content: "";
+  position: absolute;
+  right: 1px;
+  width: 50%;
+  height: 2px;
+  border-radius: 10px;
+  background-color: var(--color-gray100);
+  transform-origin: right;
+}
+.sect1 .pagination_area .btn_box > div span.next::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.sect1 .pagination_area .btn_box > div span.next::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+.sect1 .pagination_area .btn_box > div span.prev::before, .sect1 .pagination_area .btn_box > div span.prev::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  width: 50%;
+  height: 2px;
+  border-radius: 10px;
+  background-color: var(--color-gray100);
+  transform-origin: left;
+}
+.sect1 .pagination_area .btn_box > div span.prev::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.sect1 .pagination_area .btn_box > div span.prev::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.sect2 .app h3 {
   color: var(--color-gray100);
 }
-.sect2 .top p {
+.sect2 .app p {
   color: var(--color-gray200);
 }
-.sect2 .top a {
-  background-color: var(--color-download-btn);
-  color: var(--color-gray200);
+.sect2 .download_btn {
   display: inline-block;
-  font-weight: 600;
+  border: 1px solid #000;
   border-radius: 50px;
+  color: var(--color-gray200);
+  font-weight: 600;
   transition: 0.2s;
 }
-.sect2 .top a:hover {
+.sect2 .download_btn:hover {
   background-color: var(--color-gray200);
   color: var(--color-gray600);
-  transition: 0.5s;
+  transition: 0.35s;
 }
 .sect2 .bottom .item_txt {
   text-align: center;
@@ -838,33 +848,56 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .sect1 .art1 .swiper .pagination_area .swiper-pagination {
     width: 60%;
   }
-  .wrap .sect1 .art1 .swiper .pagination_area .btn_box {
-    width: 100px;
-    height: 50px;
+  .wrap .sect1 .btn_box {
+    width: 90px;
+    height: 40px;
   }
-  .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div {
-    top: 54%;
+  .wrap .sect1 .btn_box > div {
+    top: 50%;
   }
-  .wrap .sect1 .art1 .swiper .pagination_area .btn_box > div i {
-    font-size: 6vw;
+  .wrap .sect1 .btn_box > div span {
+    width: 80%;
   }
   .wrap .sect1 .art2 .collections {
     padding-bottom: 40px;
   }
-  .wrap .sect1 .art2 .collections img {
-    padding-bottom: 6px;
-  }
   .wrap .sect1 .art2 .collections .author,
-  .wrap .sect1 .art2 .collections .coll_title,
+  .wrap .sect1 .art2 .collections .title,
   .wrap .sect1 .art2 .collections .year {
     font-size: 16px;
+  }
+  .wrap .sect1 .art2 .coll {
+    padding-bottom: 60px;
+  }
+  .wrap .sect1 .art2 .pagination_area {
+    padding: 0;
+    z-index: 1;
+  }
+  .wrap .sect1 .art2 .text_container {
+    width: 60%;
+    height: 63px;
+    margin-top: -40px;
+  }
+  .wrap .sect1 .art2 .text {
+    bottom: 0;
+    left: 0;
+  }
+  .wrap .sect1 .art2 .artist,
+  .wrap .sect1 .art2 .title,
+  .wrap .sect1 .art2 .year {
+    font-size: 20px;
+    font-size: 14px;
+  }
+  .wrap .sect1 .art2 .btn_box {
+    top: 16px;
+    transform: translateY(0);
   }
   .wrap .sect1 .art2 ul {
     border-top: 1px solid var(--color-gray600);
   }
   .wrap .sect1 .art2 ul li {
     width: 100%;
-    padding: 10px 0;
+    padding: 14px 0;
   }
   .wrap .sect1 .art2 ul .link {
     width: 100%;
@@ -1199,7 +1232,7 @@ input[type=checkbox]:checked + .mode_change::after {
     color: var(--color-gray700);
   }
   .wrap h3 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     margin-bottom: 40px;
   }
   .wrap .bg_img {
@@ -1235,8 +1268,13 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .bg_img .introduce .status {
     font-size: 1.6rem;
   }
+  .wrap .sect1,
+  .wrap .sect2,
+  .wrap footer {
+    margin: auto 20px;
+  }
   .wrap .sect1 {
-    padding: 120px 20px;
+    padding: 120px 0;
   }
   .wrap .sect1 .art1 .more {
     display: flex;
@@ -1298,23 +1336,38 @@ input[type=checkbox]:checked + .mode_change::after {
     display: block;
   }
   .wrap .sect1 .art2 {
-    margin-top: 160px;
+    margin-top: 120px;
   }
   .wrap .sect1 .art2 .collections {
     width: 100%;
     padding-bottom: 10px;
   }
-  .wrap .sect1 .art2 .collections .coll_img_box {
+  .wrap .sect1 .art2 .collections .swiper-slide {
     position: relative;
     width: 100%;
   }
-  .wrap .sect1 .art2 .collections .text {
+  .wrap .sect1 .art2 .collections .pagination_area .swiper-pagination {
+    width: 49%;
+  }
+  .wrap .sect1 .art2 .collections .pagination_area .btn_box {
+    width: 150px;
+    height: 50px;
     position: absolute;
+    bottom: 24px;
+    right: 0;
+    z-index: 100;
+  }
+  .wrap .sect1 .art2 .collections .pagination_area .btn_box > div {
+    width: 50px;
+    height: 50px;
+    top: 45%;
+  }
+  .wrap .sect1 .art2 .collections .text {
     left: 0;
     bottom: -117px;
   }
-  .wrap .sect1 .art2 .collections .author,
-  .wrap .sect1 .art2 .collections .coll_title,
+  .wrap .sect1 .art2 .collections .artist,
+  .wrap .sect1 .art2 .collections .title,
   .wrap .sect1 .art2 .collections .year {
     font-size: 20px;
   }
@@ -1338,84 +1391,70 @@ input[type=checkbox]:checked + .mode_change::after {
     display: block;
   }
   .wrap .sect2 {
-    width: 95%;
-    margin: auto;
-    padding-top: 20px;
     padding-bottom: 60px;
+    border-top: 1px solid var(--color-gray500);
   }
-  .wrap .sect2 .top {
+  .wrap .sect2 .app {
     margin-bottom: 120px;
-    padding: 60px 0;
   }
-  .wrap .sect2 .top .app h3 {
-    padding-bottom: 20px;
-    font-size: 3rem;
-  }
-  .wrap .sect2 .top .app h3 br {
+  .wrap .sect2 .app .q {
     display: none;
   }
-  .wrap .sect2 .top .app p {
-    font-size: 1.6rem;
-    padding-bottom: 40px;
-  }
-  .wrap .sect2 .top .app a {
-    font-size: 2rem;
-    padding: 20px 60px;
-  }
-  .wrap .sect2 .top .q {
-    display: none;
-  }
-  .wrap .sect2 .top .q p {
+  .wrap .sect2 .app .q p {
     color: var(--color-gray100);
     font-weight: 600;
     font-size: 4rem;
     padding-bottom: 20px;
   }
-  .wrap .sect2 .top .q ul.q_list li {
+  .wrap .sect2 .app .q ul.q_list li {
     border-bottom: 1px solid var(--color-gray500);
   }
-  .wrap .sect2 .top .q ul.q_list li a {
+  .wrap .sect2 .app .q ul.q_list li a {
     display: inline-block;
     padding: 20px 0;
     color: var(--color-gray100);
     font-size: 2rem;
     line-height: 1.4;
   }
-  .wrap .sect2 .top .q ul.q_list li:nth-child(1) {
+  .wrap .sect2 .app .q ul.q_list li:nth-child(1) {
     border-top: 1px solid var(--color-gray500);
   }
+  .wrap .sect2 .app h3 {
+    padding-bottom: 20px;
+  }
+  .wrap .sect2 .app h3 br {
+    display: none;
+  }
+  .wrap .sect2 .app p {
+    font-size: 1.6rem;
+    padding-bottom: 40px;
+  }
+  .wrap .sect2 .download_btn {
+    font-size: 2rem;
+    padding: 16px 30px;
+  }
   .wrap .sect2 .bottom {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    gap: 5px;
   }
   .wrap .sect2 .bottom a.item {
-    border-right: 1px solid var(--color-gray400);
     display: inline-block;
-    padding-right: 10px;
-    padding-left: 10px;
+    width: 20%;
+    padding: 10px 20px;
     text-align: center;
+    background: var(--color-sect2-bg);
+    border-radius: 12px;
   }
-  .wrap .sect2 .bottom a.item:nth-child(5) {
-    border-right: none;
-  }
-  .wrap .sect2 .bottom a.item .item_txt .title p,
-  .wrap .sect2 .bottom a.item .item_txt .title i {
+  .wrap .sect2 .bottom .item_txt .title {
     color: var(--color-gray100);
     font-size: 2rem;
     width: 100%;
   }
-  .wrap .sect2 .bottom a.item .item_txt .title i {
-    display: none;
-  }
-  .wrap .sect2 .bottom a.item .item_txt .sub_txt {
-    display: none;
-  }
-  .wrap footer {
-    margin-top: 100px;
+  .wrap .sect2 .bottom .item_txt .sub_txt {
+    font-size: 16px;
+    color: var(--color-gray400);
   }
   .wrap footer .f_top {
-    width: 95%;
-    margin: auto;
     margin-bottom: 60px;
     padding-top: 100px;
   }
@@ -1536,6 +1575,11 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .bg_img .introduce .status {
     font-size: 1.6rem;
   }
+  .wrap .sect1,
+  .wrap .sect2 {
+    margin: auto 40px;
+    padding: 80px 0 120px;
+  }
   .wrap .sect1 .art1 .swiper .pagination_area .swiper-pagination {
     width: 33.3333%;
   }
@@ -1592,61 +1636,50 @@ input[type=checkbox]:checked + .mode_change::after {
     transform-origin: right;
     transform: rotate(-45deg);
   }
-  .wrap .sect2 .top {
-    padding: 80px 0;
-  }
-  .wrap .sect2 .top .app h3 {
+  .wrap .sect2 .app h3 {
     padding-bottom: 20px;
     font-size: 4rem;
   }
-  .wrap .sect2 .top .app h3 br {
+  .wrap .sect2 .app h3 br {
     display: none;
   }
-  .wrap .sect2 .top .app p {
+  .wrap .sect2 .app p {
     font-size: 2rem;
   }
-  .wrap .sect2 .top .app p br.appBr {
+  .wrap .sect2 .app p br.appBr {
     display: none;
   }
-  .wrap .sect2 .top .q {
+  .wrap .sect2 .q {
     display: none;
   }
-  .wrap .sect2 .top .q p {
+  .wrap .sect2 .q p {
     color: var(--color-gray100);
     font-weight: 600;
     font-size: 4rem;
     padding-bottom: 20px;
   }
-  .wrap .sect2 .top .q ul.q_list li {
+  .wrap .sect2 .q ul.q_list li {
     border-bottom: 1px solid var(--color-gray500);
   }
-  .wrap .sect2 .top .q ul.q_list li a {
+  .wrap .sect2 .q ul.q_list li a {
     display: inline-block;
     padding: 20px 0;
     color: var(--color-gray100);
     font-size: 2rem;
     line-height: 1.4;
   }
-  .wrap .sect2 .top .q ul.q_list li:nth-child(1) {
+  .wrap .sect2 .q ul.q_list li:nth-child(1) {
     border-top: 1px solid var(--color-gray500);
   }
   .wrap .sect2 .bottom a.item {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 10px 20px;
   }
-  .wrap .sect2 .bottom a.item:nth-child(5) {
-    border-right: none;
-  }
-  .wrap .sect2 .bottom a.item .item_txt .title {
+  .wrap .sect2 .bottom .item_txt .title {
     padding-bottom: 10px;
-  }
-  .wrap .sect2 .bottom a.item .item_txt .title p,
-  .wrap .sect2 .bottom a.item .item_txt .title i {
     color: var(--color-gray100);
-    font-size: 2.4rem;
   }
-  .wrap .sect2 .bottom a.item .item_txt .title i {
-    display: none;
+  .wrap footer {
+    margin: auto 40px;
   }
   .wrap footer .f-top {
     justify-content: space-between;
@@ -1741,14 +1774,12 @@ input[type=checkbox]:checked + .mode_change::after {
   header .scrolled nav > ul li.main-menu a {
     color: black;
   }
-  .wrap h3 {
-    font-size: 4rem;
-  }
   .wrap .bg_img .introduce .txt p {
     line-height: 1.6;
   }
-  .wrap .sect1 {
-    padding: 0 40px;
+  .wrap .sect1,
+  .wrap .sect2 footer {
+    padding: 120px 0px 160px;
   }
   .wrap .sect1 .art1 .more a.btn .right p {
     font-size: 12px;
@@ -1775,18 +1806,6 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .sect1 .art2 ul .txt br {
     display: none;
   }
-  .wrap .sect2 .top .app h3 {
-    padding-bottom: 20px;
-  }
-  .wrap .sect2 .top .app h3 br {
-    display: none;
-  }
-  .wrap .sect2 .top .app p {
-    font-size: 2rem;
-  }
-  .wrap .sect2 .top .app a {
-    font-size: 2rem;
-  }
   .wrap .sect2 .top .q {
     display: none;
   }
@@ -1809,31 +1828,22 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .sect2 .top .q ul.q_list li:nth-child(1) {
     border-top: 1px solid var(--color-gray500);
   }
-  .wrap .sect2 .bottom a.item {
-    padding-right: 20px;
-    padding-left: 20px;
+  .wrap .sect2 .app h3 {
+    padding-bottom: 20px;
   }
-  .wrap .sect2 .bottom a.item:nth-child(5) {
-    border-right: none;
-  }
-  .wrap .sect2 .bottom a.item .item_txt .title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px;
-  }
-  .wrap .sect2 .bottom a.item .item_txt .title p,
-  .wrap .sect2 .bottom a.item .item_txt .title i {
-    font-size: 2.4rem;
-    letter-spacing: 1;
-  }
-  .wrap .sect2 .bottom a.item .item_txt .title i {
+  .wrap .sect2 .app h3 br {
     display: none;
   }
-  .wrap .sect2 .bottom a.item .item_txt .sub_txt {
-    display: block;
-    color: var(--color-gray200);
-    font-size: 16px;
+  .wrap .sect2 .app p {
+    font-size: 2rem;
+  }
+  .wrap .sect2 .app a {
+    font-size: 2rem;
+  }
+  .wrap .sect2 .bottom .item_txt .title {
+    padding-bottom: 10px;
+    font-size: 2.4rem;
+    letter-spacing: 1;
   }
   footer {
     margin-top: 100px;

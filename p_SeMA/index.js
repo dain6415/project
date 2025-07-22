@@ -34,7 +34,7 @@ mobBtn.addEventListener("click", function () {
     header.style.top = "0";
   }
 
-  const isLight= document.body.getAttribute("data-theme") === "light";
+  const isLight = document.body.getAttribute("data-theme") === "light";
   const headerLogo = document.querySelector("h1 a img");
 
   if (mobileNav.classList.contains("on") && isLight) {
@@ -58,7 +58,7 @@ const schedule = {
 
 const msg = schedule[today].replace(/\n/g, "<br>");
 document.getElementById("museum_status").innerHTML = msg;
-console.log(schedule[today])
+console.log(schedule[today]);
 
 // swiper----------------------------------------
 var swiper = new Swiper(".mySwiper", {
@@ -67,7 +67,6 @@ var swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
     type: "progressbar",
-    // clickable: true,
     draggable: true,
   },
   navigation: {
@@ -86,16 +85,42 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
   loop: true,
-  //       oopedSlides: 3, // 루프 시 복사되는 슬라이드 개수 지정
-  // centeredSlides: true,
 });
+
+var collSwiper = new Swiper(".coll", {
+  on: {
+    slideChange: function () {
+      const activeIndex = this.realIndex;
+      document.querySelectorAll(".text_container .text").forEach((el, idx) => {
+        el.classList.toggle("on", idx === activeIndex);
+      });
+    },
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+const collSwiperWrapper = document.querySelector(".coll .swiper-wrapper");
+
+collSwiperWrapper.addEventListener("mouseenter", () => {
+  collSwiperWrapper.style.cursor = "grab";
+});
+collSwiperWrapper.addEventListener("mousedown", () => {
+  collSwiperWrapper.style.cursor = "grabbing";
+});
+window.addEventListener("mouseup", () => {
+  collSwiperWrapper.style.cursor = "grab";
+});
+
 // isLight모드---------------------------------------------
 const checkbox = document.querySelector("#modeToggle");
 const modeChange = document.querySelector(".mode_change");
 const blind = modeChange.querySelector(".blind");
 const darkModeIcon = document.querySelectorAll(".mode_change .dark_mode");
 const lightModeIcon = document.querySelectorAll(".mode_change .light_mode");
-const main = document.querySelector('main')
+const main = document.querySelector("main");
 
 checkbox.addEventListener("click", (e) => {
   const isLight = !e.target.checked;
@@ -122,15 +147,14 @@ checkbox.addEventListener("click", (e) => {
   blind.textContent = isLight ? "다크 모드로 전환" : "라이트 모드로 전환";
 });
 
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   const mainBottom = main.getBoundingClientRect().bottom;
 
   const viewportHeight = window.innerHeight;
 
   if (mainBottom <= viewportHeight) {
-    modeChange.classList.add('on')
+    modeChange.classList.add("on");
   } else {
-    modeChange.classList.remove('on')
+    modeChange.classList.remove("on");
   }
 });
-

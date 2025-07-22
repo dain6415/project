@@ -366,6 +366,9 @@ header nav ul li i {
   transform: rotate(-45deg);
 }
 
+.sect2 {
+  border-top: 1px solid var(--color-gray500);
+}
 .sect2 .app h3 {
   color: var(--color-gray100);
 }
@@ -811,7 +814,7 @@ input[type=checkbox]:checked + .mode_change::after {
     transition-delay: 0.25s;
   }
   .wrap h3 {
-    font-size: 6vw;
+    font-size: 28px;
     padding-bottom: 20px;
   }
   .wrap .sect1 {
@@ -910,53 +913,25 @@ input[type=checkbox]:checked + .mode_change::after {
     display: none;
   }
   .wrap .sect2 {
-    padding: 10px 10px 60px;
+    padding: 80px 10px 60px;
   }
   .wrap .sect2 .top {
     margin-bottom: 60px;
-    padding: 40px 10px;
   }
-  .wrap .sect2 .top .app h3 {
+  .wrap .sect2 .app h3 {
     padding-bottom: 20px;
-    font-size: 6vw;
-    line-height: 1.4;
   }
-  .wrap .sect2 .top .app h3 br {
-    display: block;
-  }
-  .wrap .sect2 .top .app p {
-    font-size: clmp(14px, 16px, 18px);
+  .wrap .sect2 .app p {
+    font-size: 16px;
     padding-bottom: 40px;
     word-break: keep-all;
   }
-  .wrap .sect2 .top .app p br {
+  .wrap .sect2 .app p br {
     display: none;
   }
-  .wrap .sect2 .top .app a {
+  .wrap .sect2 .app a {
     font-size: 1.6rem;
     padding: 15px 40px;
-  }
-  .wrap .sect2 .top .q {
-    display: none;
-  }
-  .wrap .sect2 .top .q p {
-    color: var(--color-gray100);
-    font-weight: 600;
-    font-size: 4rem;
-    padding-bottom: 20px;
-  }
-  .wrap .sect2 .top .q ul.q_list li {
-    border-bottom: 1px solid var(--color-gray500);
-  }
-  .wrap .sect2 .top .q ul.q_list li a {
-    display: inline-block;
-    padding: 20px 0;
-    color: var(--color-gray100);
-    font-size: 2rem;
-    line-height: 1.4;
-  }
-  .wrap .sect2 .top .q ul.q_list li:nth-child(1) {
-    border-top: 1px solid var(--color-gray500);
   }
   .wrap .sect2 .bottom {
     display: flex;
@@ -973,14 +948,10 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .sect2 .bottom a.item:nth-child(5) {
     border-right: none;
   }
-  .wrap .sect2 .bottom a.item .item_txt .title p,
-  .wrap .sect2 .bottom a.item .item_txt .title i {
+  .wrap .sect2 .bottom a.item .item_txt .title {
     color: var(--color-gray100);
     font-size: 20px;
     width: 100%;
-  }
-  .wrap .sect2 .bottom a.item .item_txt .title i {
-    display: none;
   }
   .wrap .sect2 .bottom a.item .item_txt .sub_txt {
     display: none;
@@ -1391,8 +1362,7 @@ input[type=checkbox]:checked + .mode_change::after {
     display: block;
   }
   .wrap .sect2 {
-    padding-bottom: 60px;
-    border-top: 1px solid var(--color-gray500);
+    padding: 80px 0 120px;
   }
   .wrap .sect2 .app {
     margin-bottom: 120px;

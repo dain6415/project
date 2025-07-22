@@ -392,12 +392,12 @@ header nav ul li i {
   background: var(--color-sect2-bg);
   border-radius: 12px;
 }
-.sect2 .bottom .item .title,
-.sect2 .bottom .item .sub_txt {
-  color: var(--color-gray100);
-}
 .sect2 .bottom .item .title {
+  color: var(--color-gray100);
   font-weight: 600;
+}
+.sect2 .bottom .item .sub_txt {
+  color: var(--color-gray300);
 }
 
 footer .f_top .f_logo li {
@@ -940,18 +940,18 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .sect2 .bottom {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 4px;
   }
   .wrap .sect2 .bottom .item {
     display: block;
     padding: 20px;
   }
   .wrap .sect2 .bottom .item .title {
-    font-size: 24px;
     width: 100%;
+    font-size: 20px;
   }
   .wrap .sect2 .bottom .item .sub_txt {
-    font-size: 20px;
+    font-size: 16px;
   }
   footer {
     width: 95%;
@@ -1416,7 +1416,6 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   .wrap .sect2 .bottom .sub_txt {
     font-size: 16px;
-    color: var(--color-gray300);
   }
   .wrap footer .f_top {
     margin-bottom: 60px;
@@ -1637,9 +1636,6 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   .wrap .sect2 .bottom a.item {
     padding: 30px 10px;
-  }
-  .wrap .sect2 .bottom .title {
-    color: var(--color-gray100);
   }
   .wrap .sect2 .bottom .sub_txt {
     font-size: 14px;

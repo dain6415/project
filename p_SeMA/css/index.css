@@ -937,7 +937,7 @@ input[type=checkbox]:checked + .mode_change::after {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 5vw;
+    gap: 10px;
   }
   .wrap .sect2 .bottom a.item {
     display: block;
@@ -947,6 +947,10 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   .wrap .sect2 .bottom a.item:nth-child(5) {
     border-right: none;
+  }
+  .wrap .sect2 .bottom a.item .item_txt {
+    border: 1px solid #000;
+    padding: 10px;
   }
   .wrap .sect2 .bottom a.item .item_txt .title {
     color: var(--color-gray100);

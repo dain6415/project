@@ -13,19 +13,13 @@ let lastScrollY = 0;
 const header = document.querySelector("header");
 const mobBtn = document.querySelector(".mobile_box");
 const mobileNav = document.querySelector(".mobile_nav");
+const headerLogo = document.querySelector("h1 a img");
 
-window.addEventListener("scroll", function () {
-  if (!mobileNav.classList.contains("on")) {
-    // 모바일 메뉴가 열려있지 않을 때만 실행
-    if (window.scrollY > lastScrollY) {
-      header.style.top = "-100%";
-    } else {
-      header.style.top = "0";
-    }
-  }
-  lastScrollY = window.scrollY;
+window.addEventListener("load", () => {
+  requestAnimationFrame(logoChange);
 });
-
+window.addEventListener("scroll", logoChange);
+window.addEventListener("resize", logoChange);
 mobBtn.addEventListener("click", function () {
   mobBtn.classList.toggle("on");
   mobileNav.classList.toggle("on");
@@ -33,17 +27,41 @@ mobBtn.addEventListener("click", function () {
   if (mobileNav.classList.contains("on")) {
     header.style.top = "0";
   }
-
-  const isLight = document.body.getAttribute("data-theme") === "light";
-  const headerLogo = document.querySelector("h1 a img");
-
-  if (mobileNav.classList.contains("on") && isLight) {
-    headerLogo.setAttribute("src", "./imgs/logo-w.png");
-  } else {
-    headerLogo.setAttribute("src", "./imgs/logo-b.png");
-  }
+  logoChange();
 });
 
+function logoChange() {
+  const isLight = document.body.getAttribute("data-theme") === "light";
+  const scrollY = window.scrollY;
+  const pcVer = window.innerWidth > 600;
+  const isMobileMenuOpen = mobileNav.classList.contains("on");
+
+  // 모바일 메뉴 열려있으면 무조건 svg
+  if (isMobileMenuOpen) {
+    if (isLight) {
+      headerLogo.setAttribute("src", "./imgs/logo-b.png");
+    } else {
+      headerLogo.setAttribute("src", "./imgs/logo-w.png");
+    }
+    return;
+  }
+
+  // 데스크탑 + 라이트모드
+  if (scrollY > 300) {
+    const rootColor = getComputedStyle(document.documentElement);
+    const headerBg = rootColor.getPropertyValue("--color-gray700").trim();
+
+    header.style.background = headerBg;
+    if (isLight) {
+      headerLogo.setAttribute("src", "./imgs/logo-b.png");
+    } else {
+      headerLogo.setAttribute("src", "./imgs/logo-w.png");
+    }
+  } else {
+    headerLogo.setAttribute("src", "./imgs/logo.svg");
+    header.style.background = "none";
+  }
+}
 // ----------------------------------------------------
 const today = new Date().getDay();
 const schedule = {
@@ -62,6 +80,7 @@ console.log(schedule[today]);
 
 // swiper----------------------------------------
 var swiper = new Swiper(".mySwiper", {
+  loop: true,
   slidesPerView: 1,
   spaceBetween: 4,
   pagination: {
@@ -70,8 +89,8 @@ var swiper = new Swiper(".mySwiper", {
     draggable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".mySwiper .swiper-button-next",
+    prevEl: ".mySwiper .swiper-button-prev",
   },
   breakpoints: {
     600: {
@@ -84,7 +103,6 @@ var swiper = new Swiper(".mySwiper", {
       slidesPerView: 4,
     },
   },
-  loop: true,
 });
 
 var collSwiper = new Swiper(".coll", {
@@ -97,8 +115,8 @@ var collSwiper = new Swiper(".coll", {
     },
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".collections .swiper-button-next",
+    prevEl: ".collections .swiper-button-prev",
   },
 });
 

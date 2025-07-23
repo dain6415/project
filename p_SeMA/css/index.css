@@ -50,11 +50,13 @@ header {
   position: fixed;
   z-index: 999;
   width: 100%;
+  background-color: var(--color-gray700);
   transition: 0.5s;
+  border: 1px solid #0f0;
 }
 header nav ul li a,
 header nav ul li i {
-  color: #666;
+  color: #333;
 }
 
 .wrap {
@@ -239,7 +241,7 @@ header nav ul li i {
   font-weight: 500;
 }
 .sect1 .art1 .swiper .swiper-slide a .txt .sub_txt p {
-  color: var(--color-gray400);
+  color: var(--color-gray300);
   font-weight: 200;
 }
 .sect1 .art2 .collections .coll {
@@ -295,7 +297,6 @@ header nav ul li i {
 }
 .sect1 .pagination_area {
   position: relative;
-  padding: 40px;
   display: flex;
 }
 .sect1 .pagination_area .swiper-pagination {
@@ -309,6 +310,28 @@ header nav ul li i {
   border-radius: 20px;
   overflow: hidden;
   background-color: var(--color-gray100);
+}
+.sect1 .pagination_area .swiper-button-next,
+.sect1 .pagination_area .swiper-button-prev {
+  border: 1px solid var(--color-gray200);
+  border-radius: 50%;
+  padding: 14px;
+}
+.sect1 .pagination_area .swiper-button-next:hover,
+.sect1 .pagination_area .swiper-button-prev:hover {
+  background: var(--color-gray200);
+}
+.sect1 .pagination_area .swiper-button-next:hover span,
+.sect1 .pagination_area .swiper-button-next:hover span.prev::after,
+.sect1 .pagination_area .swiper-button-next:hover span.prev::before,
+.sect1 .pagination_area .swiper-button-next:hover span.next::after,
+.sect1 .pagination_area .swiper-button-next:hover span.next::before,
+.sect1 .pagination_area .swiper-button-prev:hover span,
+.sect1 .pagination_area .swiper-button-prev:hover span.prev::after,
+.sect1 .pagination_area .swiper-button-prev:hover span.prev::before,
+.sect1 .pagination_area .swiper-button-prev:hover span.next::after,
+.sect1 .pagination_area .swiper-button-prev:hover span.next::before {
+  background-color: var(--color-gray700);
 }
 .sect1 .pagination_area .btn_box {
   position: absolute;
@@ -365,6 +388,12 @@ header nav ul li i {
   bottom: 0;
   transform: rotate(-45deg);
 }
+.sect1 .pagination_area .btn_box .swiper-button-next {
+  right: 0;
+}
+.sect1 .pagination_area .btn_box .swiper-button-prev {
+  left: 0;
+}
 
 .sect2 {
   border-top: 1px solid var(--color-gray500);
@@ -377,7 +406,7 @@ header nav ul li i {
 }
 .sect2 .download_btn {
   display: inline-block;
-  border: 1px solid #000;
+  border: 1px solid var(--color-gray200);
   border-radius: 50px;
   color: var(--color-gray200);
   font-weight: 600;
@@ -434,14 +463,14 @@ footer .f_top .site_map .visit ul li a::before {
   content: "";
   width: 100%;
   height: 2px;
-  background-color: var(--color-gray400);
+  background-color: var(--color-gray500);
   position: absolute;
   bottom: -6px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 footer .f_top .site_map .exhibition ul li a:hover::before,
 footer .f_top .site_map .collection ul li a:hover::before,
@@ -531,7 +560,7 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   header .inner h1 {
     position: relative;
-    width: 30%;
+    width: 55%;
     height: 100%;
   }
   header .inner h1 img {
@@ -849,6 +878,9 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .sect1 .art1 .swiper .swiper-wrapper .swiper-slide .txt .sub_txt p {
     font-size: 1.6rem;
   }
+  .wrap .sect1 .art1 .swiper .pagination_area {
+    padding-bottom: 44px;
+  }
   .wrap .sect1 .art1 .swiper .pagination_area .swiper-pagination {
     width: 60%;
   }
@@ -857,12 +889,15 @@ input[type=checkbox]:checked + .mode_change::after {
     height: 40px;
   }
   .wrap .sect1 .btn_box > div {
-    top: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
   }
   .wrap .sect1 .btn_box > div span {
     width: 80%;
   }
   .wrap .sect1 .art2 .collections {
+    position: relative;
     padding-bottom: 40px;
   }
   .wrap .sect1 .art2 .collections .author,
@@ -871,16 +906,20 @@ input[type=checkbox]:checked + .mode_change::after {
     font-size: 16px;
   }
   .wrap .sect1 .art2 .coll {
-    padding-bottom: 60px;
+    padding-bottom: 12px;
   }
   .wrap .sect1 .art2 .pagination_area {
+    position: absolute;
+    bottom: 64px;
+    right: 0;
+    width: 90px;
+    height: 40px;
     padding: 0;
     z-index: 1;
   }
   .wrap .sect1 .art2 .text_container {
     width: 60%;
     height: 63px;
-    margin-top: -40px;
   }
   .wrap .sect1 .art2 .text {
     bottom: 0;
@@ -891,10 +930,6 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .sect1 .art2 .year {
     font-size: 20px;
     font-size: 14px;
-  }
-  .wrap .sect1 .art2 .btn_box {
-    top: 16px;
-    transform: translateY(0);
   }
   .wrap .sect1 .art2 ul {
     border-top: 1px solid var(--color-gray600);
@@ -955,7 +990,8 @@ input[type=checkbox]:checked + .mode_change::after {
     font-size: 16px;
   }
   footer {
-    width: 95%;
+    padding-left: 10px;
+    padding-right: 10px;
     margin: auto;
     margin-top: 40px;
   }
@@ -1026,8 +1062,7 @@ input[type=checkbox]:checked + .mode_change::after {
   .footer_util {
     display: flex;
     flex-direction: column-reverse;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
   }
   .footer_util p {
     width: 100%;
@@ -1078,8 +1113,8 @@ input[type=checkbox]:checked + .mode_change::after {
 }
 @media only screen and (min-width: 601px) {
   header {
-    height: 120px;
-    padding: 20px 40px;
+    height: 80px;
+    padding: 0 20px;
   }
   header .inner {
     height: 100%;
@@ -1090,8 +1125,7 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   header .inner h1 {
     width: 15%;
-    height: 40px;
-    position: relative;
+    height: 100%;
   }
   header .inner h1 a {
     width: 100%;
@@ -1128,14 +1162,14 @@ input[type=checkbox]:checked + .mode_change::after {
     content: "";
     width: 100%;
     height: 2px;
-    background-color: var(--color-gray400);
+    background-color: #ccc;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.3s ease;
   }
   header .inner nav > ul li.main-menu ul.sub-menu {
     width: 100%;
@@ -1266,21 +1300,23 @@ input[type=checkbox]:checked + .mode_change::after {
     padding: 0 5px;
   }
   .wrap .sect1 .art1 .swiper .swiper-wrapper .swiper-slide .txt .title {
-    font-size: 2.4rem;
-    line-height: 1.3;
     margin-top: 10px;
+    font-size: 2.4rem;
   }
   .wrap .sect1 .art1 .swiper .swiper-wrapper .swiper-slide .txt .sub_txt {
     margin-top: 10px;
   }
   .wrap .sect1 .art1 .swiper .swiper-wrapper .swiper-slide .txt .sub_txt p {
-    font-size: 2rem;
+    font-size: 2.4rem;
+  }
+  .wrap .sect1 .art1 .swiper .pagination_area {
+    padding: 40px;
   }
   .wrap .sect1 .art1 .swiper .pagination_area .swiper-pagination {
     width: 49%;
   }
   .wrap .sect1 .art1 .swiper .pagination_area .btn_box {
-    width: 150px;
+    width: 110px;
     height: 50px;
     position: absolute;
     bottom: 24px;
@@ -1296,7 +1332,6 @@ input[type=checkbox]:checked + .mode_change::after {
     display: none;
   }
   .wrap .sect1 .art1 .swiper .item .art_img {
-    border: 1px solid #000;
     border-radius: 20px;
     overflow: hidden;
     width: 100%;
@@ -1310,17 +1345,23 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .sect1 .art2 .collections {
     width: 100%;
     padding-bottom: 10px;
+    position: relative;
   }
   .wrap .sect1 .art2 .collections .swiper-slide {
     position: relative;
     width: 100%;
   }
-  .wrap .sect1 .art2 .collections .pagination_area .swiper-pagination {
-    width: 49%;
+  .wrap .sect1 .art2 .collections .pagination_area {
+    position: absolute;
+    bottom: -180px;
+    left: 0px;
+    width: 110px;
+    height: 50px;
+    z-index: 10;
   }
   .wrap .sect1 .art2 .collections .pagination_area .btn_box {
-    width: 150px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     bottom: 24px;
     right: 0;
@@ -1333,7 +1374,7 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   .wrap .sect1 .art2 .collections .text {
     left: 0;
-    bottom: -117px;
+    bottom: -112px;
   }
   .wrap .sect1 .art2 .collections .artist,
   .wrap .sect1 .art2 .collections .title,
@@ -1348,7 +1389,7 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   .wrap .sect1 .art2 ul .link_title {
     font-size: 24px;
-    padding-bottom: 4px;
+    padding-bottom: 6px;
   }
   .wrap .sect1 .art2 ul .link_title::after {
     transition: 0.3s;
@@ -1515,6 +1556,9 @@ input[type=checkbox]:checked + .mode_change::after {
   }
 }
 @media only screen and (min-width: 900px) {
+  header {
+    padding: 20px 40px;
+  }
   .wrap .bg_img .introduce {
     padding: 0px;
   }
@@ -1552,9 +1596,6 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   .wrap .sect1 .art2 .collections {
     padding-bottom: 20px;
-  }
-  .wrap .sect1 .art2 .collections .text {
-    bottom: -130px;
   }
   .wrap .sect1 .art2 ul {
     width: 66.6666%;
@@ -1641,6 +1682,9 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .sect2 .bottom .sub_txt {
     font-size: 14px;
   }
+  .wrap .sect2 .bottom .sub_txt br {
+    display: none;
+  }
   .wrap footer {
     margin: auto 40px;
   }
@@ -1699,6 +1743,10 @@ input[type=checkbox]:checked + .mode_change::after {
   }
 }
 @media only screen and (min-width: 1200px) {
+  header {
+    height: 110px;
+    padding: 20px 40px;
+  }
   header .inner nav > ul {
     gap: 20px;
   }
@@ -1809,6 +1857,9 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   .wrap .sect2 .bottom .sub_txt {
     font-size: 16px;
+  }
+  .wrap .sect2 .bottom .sub_txt br {
+    display: block;
   }
   footer {
     margin-top: 100px;

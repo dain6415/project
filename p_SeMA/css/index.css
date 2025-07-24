@@ -556,7 +556,6 @@ input[type=checkbox]:checked + .mode_change::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #000;
   }
   header h1 {
     position: relative;

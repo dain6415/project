@@ -13,7 +13,10 @@ let lastScrollY = 0;
 const header = document.querySelector("header");
 const mobBtn = document.querySelector(".mobile_box");
 const mobileNav = document.querySelector(".mobile_nav");
-const headerLogo = document.querySelector("h1 a img");
+
+const h1Logo = document.querySelector("h1");
+const headerLogo = document.querySelector(".first_logo");
+const headerLogoChange = document.querySelector(".logo_change");
 
 window.addEventListener("load", () => {
   requestAnimationFrame(logoChange);
@@ -33,32 +36,37 @@ mobBtn.addEventListener("click", function () {
 function logoChange() {
   const isLight = document.body.getAttribute("data-theme") === "light";
   const scrollY = window.scrollY;
-  const pcVer = window.innerWidth > 600;
   const isMobileMenuOpen = mobileNav.classList.contains("on");
 
-  // 모바일 메뉴 열려있으면 무조건 svg
+  const changeSrc = isLight ? "./imgs/logo-b.png" : "./imgs/logo-w.png";
+
+  // 모바일 메뉴 열려 있을 때
   if (isMobileMenuOpen) {
-    if (isLight) {
-      headerLogo.setAttribute("src", "./imgs/logo-b.png");
-    } else {
-      headerLogo.setAttribute("src", "./imgs/logo-w.png");
+    headerLogo.style.opacity = 0;
+    headerLogoChange.style.opacity = 1;
+    if (headerLogoChange.getAttribute("src") !== changeSrc) {
+      headerLogoChange.setAttribute("src", changeSrc);
     }
     return;
+  } else {
+    headerLogo.style.opacity = 1;
+    headerLogoChange.style.opacity = 0;
   }
 
-  // 데스크탑 + 라이트모드
-  if (scrollY > 300) {
+  if (scrollY > 100) {
     const rootColor = getComputedStyle(document.documentElement);
     const headerBg = rootColor.getPropertyValue("--color-gray700").trim();
 
     header.style.background = headerBg;
-    if (isLight) {
-      headerLogo.setAttribute("src", "./imgs/logo-b.png");
-    } else {
-      headerLogo.setAttribute("src", "./imgs/logo-w.png");
+    headerLogo.style.opacity = 0;
+    headerLogoChange.style.opacity = 1;
+
+    if (headerLogoChange.getAttribute("src") !== changeSrc) {
+      headerLogoChange.setAttribute("src", changeSrc);
     }
   } else {
-    headerLogo.setAttribute("src", "./imgs/logo.svg");
+    headerLogo.style.opacity = 1;
+    headerLogoChange.style.opacity = 0;
     header.style.background = "none";
   }
 }

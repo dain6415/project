@@ -556,27 +556,27 @@ input[type=checkbox]:checked + .mode_change::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid #000;
   }
-  header .inner h1 {
+  header h1 {
     position: relative;
-    width: 55%;
+    width: 52%;
     height: 100%;
   }
-  header .inner h1 img {
-    width: 100%;
+  header h1 img {
     position: absolute;
     left: 0;
     top: 0;
   }
-  header .inner nav {
+  header nav {
     width: 50%;
     display: none;
   }
-  header .inner nav ul li {
+  header nav ul li {
     flex: 1;
     text-align: center;
   }
-  header .inner .mobile_menu {
+  header .mobile_menu {
     height: 40px;
     width: 40px;
     padding: 10px 6px;
@@ -584,7 +584,7 @@ input[type=checkbox]:checked + .mode_change::after {
     justify-content: center;
     align-items: center;
   }
-  header .inner .mobile_menu .mobile_box {
+  header .mobile_menu .mobile_box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -593,7 +593,7 @@ input[type=checkbox]:checked + .mode_change::after {
     display: block;
     position: relative;
   }
-  header .inner .mobile_menu .mobile_box span {
+  header .mobile_menu .mobile_box span {
     display: block;
     width: 100%;
     height: 2px;
@@ -604,7 +604,7 @@ input[type=checkbox]:checked + .mode_change::after {
     transform: translate(-50%, -50%);
     transition: 0.3s;
   }
-  header .inner .mobile_menu .mobile_box span::before, header .inner .mobile_menu .mobile_box span::after {
+  header .mobile_menu .mobile_box span::before, header .mobile_menu .mobile_box span::after {
     content: "";
     position: absolute;
     left: 0;
@@ -614,28 +614,28 @@ input[type=checkbox]:checked + .mode_change::after {
     transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
     pointer-events: none;
   }
-  header .inner .mobile_menu .mobile_box span::before {
+  header .mobile_menu .mobile_box span::before {
     top: -10px;
   }
-  header .inner .mobile_menu .mobile_box span::after {
+  header .mobile_menu .mobile_box span::after {
     bottom: -10px;
     transform: rotate(0);
   }
-  header .inner .mobile_menu .mobile_box.on span {
+  header .mobile_menu .mobile_box.on span {
     background-color: transparent;
   }
-  header .inner .mobile_menu .mobile_box.on span::before, header .inner .mobile_menu .mobile_box.on span::after {
+  header .mobile_menu .mobile_box.on span::before, header .mobile_menu .mobile_box.on span::after {
     background-color: var(--color-gray100);
   }
-  header .inner .mobile_menu .mobile_box.on span::before {
+  header .mobile_menu .mobile_box.on span::before {
     transform: rotate(45deg);
     top: 0;
   }
-  header .inner .mobile_menu .mobile_box.on span::after {
+  header .mobile_menu .mobile_box.on span::after {
     transform: rotate(-45deg);
     bottom: 0;
   }
-  header .inner .mobile_menu ul.mobile_nav {
+  header .mobile_menu ul.mobile_nav {
     display: none;
     overflow: scroll;
     position: fixed;
@@ -648,27 +648,27 @@ input[type=checkbox]:checked + .mode_change::after {
     background-color: var(--color-gray700);
     overflow-y: auto;
   }
-  header .inner .mobile_menu ul.mobile_nav.on {
+  header .mobile_menu ul.mobile_nav.on {
     display: block;
   }
-  header .inner .mobile_menu ul.mobile_nav li.main-menu > a {
+  header .mobile_menu ul.mobile_nav li.main-menu > a {
     display: inline-block;
     font-size: 6vw;
     font-weight: 600;
     color: var(--color-gray100);
     padding: 20px 0 10px;
   }
-  header .inner .mobile_menu ul.mobile_nav li.main-menu ul.sub-menu a {
+  header .mobile_menu ul.mobile_nav li.main-menu ul.sub-menu a {
     display: inline-block;
     font-size: 6vw;
     font-weight: 400;
     color: var(--color-gray400);
     padding: 10px 0;
   }
-  header .inner .mobile_menu ul.mobile_nav li.main-menu ul.sub-menu a:hover {
+  header .mobile_menu ul.mobile_nav li.main-menu ul.sub-menu a:hover {
     color: var(--color-gray200);
   }
-  header .inner .mobile_menu ul.mobile_nav .search {
+  header .mobile_menu ul.mobile_nav .search {
     display: block;
     width: 100%;
     height: 60px;
@@ -681,7 +681,7 @@ input[type=checkbox]:checked + .mode_change::after {
     overflow: hidden;
     margin-top: 20px;
   }
-  header .inner .mobile_menu ul.mobile_nav .search input {
+  header .mobile_menu ul.mobile_nav .search input {
     display: block;
     width: 85%;
     height: 60px;
@@ -694,10 +694,10 @@ input[type=checkbox]:checked + .mode_change::after {
     border: none;
     outline: none;
   }
-  header .inner .mobile_menu ul.mobile_nav .search input::placeholder {
+  header .mobile_menu ul.mobile_nav .search input::placeholder {
     color: var(--color-gray400);
   }
-  header .inner .mobile_menu ul.mobile_nav .search .search_icon {
+  header .mobile_menu ul.mobile_nav .search .search_icon {
     padding: 10px;
     width: 15%;
     height: 100%;
@@ -705,21 +705,21 @@ input[type=checkbox]:checked + .mode_change::after {
     background-color: var(--color-gray200);
     position: relative;
   }
-  header .inner .mobile_menu ul.mobile_nav .search .search_icon i {
+  header .mobile_menu ul.mobile_nav .search .search_icon i {
     position: absolute;
     color: var(--color-gray700);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  header .inner .mobile_menu ul.mobile_nav .login {
+  header .mobile_menu ul.mobile_nav .login {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
     margin-top: 10px;
   }
-  header .inner .mobile_menu ul.mobile_nav .login a {
+  header .mobile_menu ul.mobile_nav .login a {
     width: 100%;
     height: 60px;
     border: 1px solid var(--color-gray200);
@@ -731,23 +731,29 @@ input[type=checkbox]:checked + .mode_change::after {
     justify-content: center;
     align-items: center;
   }
-  header .inner .mobile_menu ul.mobile_nav .login a span {
+  header .mobile_menu ul.mobile_nav .login a span {
     color: var(--color-gray100);
   }
-  header .inner .right-menu {
+  header .right-menu {
     display: none;
     width: 20%;
   }
-  header .inner .right-menu ul {
+  header .right-menu ul {
     gap: 20px;
     justify-content: flex-end;
   }
-  header .inner .right-menu ul li a {
+  header .right-menu ul li a {
     white-space: nowrap;
     color: var(--color-gray100);
   }
-  header .inner .right-menu ul li a i {
+  header .right-menu ul li a i {
     color: var(--color-gray100);
+  }
+  header .first_logo {
+    width: 80%;
+  }
+  header .logo_change {
+    width: 100%;
   }
   header .scrolled {
     background-color: var(--color-gray100);

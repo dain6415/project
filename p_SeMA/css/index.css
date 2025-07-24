@@ -8,6 +8,7 @@ body[data-theme=light] {
   --color-gray600: #eee;
   --color-gray700: #fff;
   --color-sect2-bg: #f7f7f7;
+  --color-sect2-bg-dark: #1a1a1a;
   --color-download-btn: #ddd;
 }
 
@@ -19,7 +20,7 @@ body[data-theme=dark] {
   --color-gray500: #666;
   --color-gray600: #333;
   --color-gray700: #111;
-  --color-sect2-bg: #f7f7f7;
+  --color-sect2-bg: #1a1a1a;
   --color-download-btn: #666;
 }
 
@@ -1118,7 +1119,7 @@ input[type=checkbox]:checked + .mode_change::after {
 @media only screen and (min-width: 601px) {
   header {
     height: 80px;
-    padding: 0 20px;
+    padding: 20px;
   }
   header .inner {
     height: 100%;
@@ -1128,16 +1129,19 @@ input[type=checkbox]:checked + .mode_change::after {
     align-items: center;
   }
   header .inner h1 {
-    width: 15%;
     height: 100%;
   }
-  header .inner h1 a {
-    width: 100%;
+  header .inner .first_logo {
+    width: 65%;
   }
-  header .inner h1 a img {
-    width: 100%;
+  header .inner .logo_change {
+    height: 100%;
   }
   header .inner nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 70%;
   }
   header .inner nav > ul {
@@ -1205,7 +1209,7 @@ input[type=checkbox]:checked + .mode_change::after {
     display: none;
   }
   header .inner .right-menu {
-    width: 15%;
+    width: 20%;
   }
   header .inner .right-menu ul {
     display: flex;
@@ -1213,17 +1217,21 @@ input[type=checkbox]:checked + .mode_change::after {
     align-items: center;
   }
   header .inner .right-menu ul li a {
-    color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-gray300);
     font-size: 1.6rem;
     font-weight: 600;
-    display: inline-block;
-    padding: 0px 15px;
+    width: 40px;
+    height: 40px;
+    padding: 0 10px;
+  }
+  header .inner .right-menu ul li a svg {
+    fill: var(--color-gray300);
   }
   header .inner .right-menu ul li a i {
-    color: #999;
-  }
-  header .inner .right-menu ul li:nth-child(1) {
-    border-right: 1px solid #999;
+    color: var(--color-gray300);
   }
   header .scrolled {
     background-color: var(--color-gray100);
@@ -1781,6 +1789,9 @@ input[type=checkbox]:checked + .mode_change::after {
     height: 200px;
     background-color: var(--color-gray100);
     z-index: -1;
+  }
+  header .inner .first_logo {
+    width: 94%;
   }
   header .scrolled {
     background-color: var(--color-gray100);

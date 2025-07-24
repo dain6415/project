@@ -17,6 +17,7 @@ $light: (
   gray600: #eee,
   gray700: #fff,
   sect2-bg: #f7f7f7,
+  sect2-bg-dark:#1a1a1a,
   download-btn: #ddd,
 );
 $dark: (
@@ -27,7 +28,7 @@ $dark: (
   gray500: map-get($light, gray300),
   gray600: map-get($light, gray200),
   gray700: map-get($light, gray100),
-  sect2-bg: map-get($light, sect2-bg),
+  sect2-bg: map-get($light, sect2-bg-dark),
   download-btn: map-get($light, gray300),
 );
 
@@ -1194,22 +1195,23 @@ input[type="checkbox"]:checked + .mode_change::after {
 @media only screen and (min-width: 601px) {
   header {
     height: 80px;
-    padding: 0 20px;
+    padding: 20px;
     .inner {
       height: 100%;
       margin: auto;
       @include flex(space-between);
       h1 {
-        width: 15%;
         height: 100%;
-        a {
-          width: 100%;
-          img {
-            width: 100%;
-          }
-        }
+      }
+      .first_logo{
+        width: 65%;
+      }
+      .logo_change{
+        height: 100%;
       }
       nav {
+        position: absolute;
+        @include po-center();
         width: 70%;
         > ul {
           @include flex();
@@ -1280,22 +1282,24 @@ input[type="checkbox"]:checked + .mode_change::after {
         display: none;
       }
       .right-menu {
-        width: 15%;
+        width: 20%;
         ul {
           @include flex(flex-end);
           li {
             a {
-              color: #999;
+              @include flex();
+              color: var(--color-gray300);
               font-size: 1.6rem;
               font-weight: 600;
-              display: inline-block;
-              padding: 0px 15px;
-              i {
-                color: #999;
+              width: 40px;
+              height: 40px;
+              padding: 0 10px;
+              svg{
+                fill: var(--color-gray300);
               }
-            }
-            &:nth-child(1) {
-              border-right: 1px solid #999;
+              i {
+                color: var(--color-gray300);
+              }
             }
           }
         }
@@ -1925,6 +1929,9 @@ input[type="checkbox"]:checked + .mode_change::after {
             }
           }
         }
+      }
+      .first_logo{
+        width: 94%;
       }
     }
     .scrolled {

@@ -14,10 +14,6 @@ const header = document.querySelector("header");
 const mobBtn = document.querySelector(".mobile_box");
 const mobileNav = document.querySelector(".mobile_nav");
 
-const h1Logo = document.querySelector("h1");
-const headerLogo = document.querySelector(".first_logo");
-const headerLogoChange = document.querySelector(".logo_change");
-
 window.addEventListener("load", () => {
   requestAnimationFrame(logoChange);
 });
@@ -33,6 +29,10 @@ mobBtn.addEventListener("click", function () {
   logoChange();
 });
 
+const h1Logo = document.querySelector("h1");
+const headerLogo = document.querySelector(".first_logo");
+const headerLogoChange = document.querySelector(".logo_change");
+
 function logoChange() {
   const isLight = document.body.getAttribute("data-theme") === "light";
   const scrollY = window.scrollY;
@@ -42,15 +42,15 @@ function logoChange() {
 
   // 모바일 메뉴 열려 있을 때
   if (isMobileMenuOpen) {
-    headerLogo.style.opacity = 0;
-    headerLogoChange.style.opacity = 1;
+    headerLogo.style.display = 'none';
+    headerLogoChange.style.display = 'block';
     if (headerLogoChange.getAttribute("src") !== changeSrc) {
       headerLogoChange.setAttribute("src", changeSrc);
     }
     return;
   } else {
-    headerLogo.style.opacity = 1;
-    headerLogoChange.style.opacity = 0;
+    headerLogo.style.display = 'block';
+    headerLogoChange.style.display = 'none';
   }
 
   if (scrollY > 100) {
@@ -58,15 +58,15 @@ function logoChange() {
     const headerBg = rootColor.getPropertyValue("--color-gray700").trim();
 
     header.style.background = headerBg;
-    headerLogo.style.opacity = 0;
-    headerLogoChange.style.opacity = 1;
+    headerLogo.style.display = 'none';
+    headerLogoChange.style.display = 'block';
 
     if (headerLogoChange.getAttribute("src") !== changeSrc) {
       headerLogoChange.setAttribute("src", changeSrc);
     }
   } else {
-    headerLogo.style.opacity = 1;
-    headerLogoChange.style.opacity = 0;
+    headerLogo.style.display = 'block';
+    headerLogoChange.style.display = 'none';
     header.style.background = "none";
   }
 }

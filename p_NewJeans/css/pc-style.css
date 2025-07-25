@@ -1,188 +1,133 @@
 @media screen and (min-width: 1400px) {
   /* art1--------------------------------------------------------------------------------------------- */
   .art1 {
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(34, 1fr);
-    grid-template-rows: repeat(26, 1fr);
+    display: flex;
+  }
+  .art1 .grup {
+    width: 50%;
+  }
+  .grid_container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 1fr);
     gap: 20px;
-    padding: 0 60px;
-    color: var(--text-color-w);
-    background: var(--text-color-b);
-  }
-
-  .art1 .item1 {
-    grid-column: 1 / span 15;
-    grid-row: 1 / span 3;
-    position: relative;
-  }
-  .art1 .item2 {
-    grid-column: 16 / span 1;
-    grid-row: 1 / span 26;
-    position: relative;
-  }
-
-  /* .art1 .item3 = scroll 사진들 */
-  .art1 .item3 {
-    grid-column: 17 / span 18;
-    grid-row: 1 / span 26;
-    position: relative;
     width: 100%;
     height: 100vh;
-    object-fit: cover;
-    overflow: scroll;
+    padding: 100px 60px;
+    background: var(--text-color-b);
+    color: var(--text-color-w);
   }
 
-  .art1 .item3 ul {
-    flex-direction: column;
-    gap: 10px;
+  .art1 .title {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
   }
-  .art1 .item3 ul li a img {
-    height: 100%;
-    width: 100%;
-  }
-  .art1 .item3::-webkit-scrollbar {
-    display: none;
-  }
-
-  .popup-contents{
-    max-width: 100%;
-    max-height: 90%;
-    width: auto;
-    height: auto;
-  }
-
-  /* .art1 .item4 = titel */
-  .art1 .item4 {
-    grid-column: 1 / span 11;
-    grid-row: 4 / span 4;
-    position: relative;
-    transform: translateY(-10px);
-  }
-
-  .art1 .item4 > .item-text {
+  .art1 .title > .item-text {
     line-height: 60px;
   }
-  .art1 .item4 h5 {
-    font-size: 40px;
-    font-weight: 300;
-    color: var(--sub-color);
+  .art1 .title h2 {
+    font-size: 54px;
   }
-  .art1 .item4 h2 {
-    font-size: 60px;
-    font-weight: 700;
-    color: var(--main-color);
-  }
-
-
 
   /* .art1 .item5 = playlist */
-  .art1 .item5 {
-    grid-column: 11 / span 5;
-    grid-row: 4 / span 2;
-    padding: 10px;
+  .songs {
+    grid-column: 4 / span 2;
+    grid-row: 1 / span 1;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
   }
-
-  .art1 .item5 .play-song {
-    position: absolute;
-    right: 0;
-    top: 0;
+  .songs figure {
+    display: none;
+  }
+  .songs .play-song {
     width: 100%;
-    padding-top: 2px;
   }
-  .art1 .item5 .now {
-    padding-right: 20px;
+  .songs .now {
+    padding-left: 0;
     line-height: 15px;
   }
-  .art1 .item5 p.song {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--text-color-w);
+  .songs .song {
+    padding-bottom: 6px;
+    color: #ddd;
+    font-size: 16px;
   }
-  .art1 .item5 p.singer {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--sub-color);
+  .songs .singer {
+    color: #999;
   }
-
-  /* btn */
-
-  .art1 .item5 .playbtn ul {
-    gap: 6px;
-  }
-  .art1 .item5 .playbtn ul li img{
-    width: 100%;
-  }
-
-
-
 
   /* .art1 .item6 = cd */
-  .art1 .item6 {
-    grid-column: 1 / span 15;
-    grid-row: 8 / span 14;
+  .cd_outer {
+    grid-column: 1 / span 5;
+    grid-row: 4 / span 5;
     background: var(--main-color);
     position: relative;
   }
-
-  .art1 .item6 .cd-container {
+  .cd_outer .cd-container {
     width: 81%;
-    top: 53%;
-    transform: translate(-50%, -47%);
-
-    /* 클리핑 마스크 */
-    /* clip-path: inset(-10px 0 91px 0); */
+    top: -22%;
   }
-
-  .art1 .item6 .sticker {
+  .cd_outer .sticker {
     width: 150px;
     height: 150px;
     transform: rotateZ(30deg);
   }
 
-  /* .art1 .item7 = album text*/
-  .art1 .item7 {
-    grid-column: 1 / span 12;
-    grid-row: 22 / span 2;
-    text-align: justify;
-    position: relative;
-    z-index: 10;
+  .fade_bg {
+    grid-column: 1 / span 5;
+    grid-row: 9 / span 2;
   }
-  .art1 .item7 p {
-    font-size: 10px;
-    font-weight: 500;
+
+  /* .item7 = album text*/
+  .album_text {
+    grid-column: 1 / span 4;
+    grid-row: 9 / span 1;
+  }
+  .album_text p {
+    font-size: 12px;
     line-height: 16px;
-    color: var(--text-color-w);
   }
 
-  /* .art1 .item8 = barcod */
-  .art1 .item8 {
-    grid-column: 13 / span 3;
-    grid-row: 22 / span 2;
+  /* .item8 = barcod */
+  .barcod {
+    grid-column: 5 / span 1;
+    grid-row: 9 / span 1;
   }
-  .art1 .item8 img {
+
+  /* .item9 = 저작권 */
+  .art1 .copyright {
+    grid-column: 1 / span 5;
+    grid-row: 10 / span 1;
+  }
+
+  /* .art1 .item3 = scroll 사진들 */
+  .art1 .imgs {
+    position: relative;
+    grid-column: 17 / span 18;
+    grid-row: 1 / span 26;
+    height: 100vh;
+    padding: 0 60px;
+    object-fit: cover;
+    overflow: scroll;
+  }
+
+  .art1 .imgs ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .art1 .imgs ul li a img {
+    height: 100%;
     width: 100%;
-    position: relative;
-    z-index: 10;
+  }
+  .art1 .imgs::-webkit-scrollbar {
+    display: none;
   }
 
-  /* .art1 .item9 = 저작권 */
-  .art1 .item9 {
-    grid-column: 1 / span 15;
-    grid-row: 24 / span 1;
-    position: relative;
-    z-index: 10;
+  .popup-contents {
+    max-width: 100%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
   }
-
-  .art1 .item10 {
-    grid-column: 1 / span 15;
-    grid-row: 22 / span 4;
-    background: var(--text-color-b);
-    transform: translateY(-20px);
-    position: relative;
-  }
-
   /* art2--------------------------------------------------------------------------------------------- */
   /* .art2 .item{border: 1px solid #f0d5d5;} */
   .art2 {
@@ -200,7 +145,7 @@
   .art2 .title-menu {
     width: 100%;
     /* max-width: 1670px;  */
-    padding: 0 0 40px ;
+    padding: 0 0 40px;
     margin: 0 auto;
     /* border: 1px solid #ff2929; */
   }
@@ -231,12 +176,12 @@
 
   .art2 .inner {
     /* width: 100%; 너비를 90%로 설정 */
-    max-width: 1670px; 
+    max-width: 1670px;
     /* 최대 너비를 1200px로 제한 */
     margin: 0 auto;
     padding: 0;
   }
-  
+
   .art2 .supernatural,
   .art2 .right_now {
     width: 100%;
@@ -271,16 +216,15 @@
   .art2 ul.title-wrap li h2 {
     font-size: 30px;
     line-height: 40px;
-    
+
     /* 그냥 아래만 해도 되는데 이미 h2에 공통 속성을 줘서 그거 밀어내려고 일부러 이렇게 함 */
-    padding: 0 0 20px 0; 
+    padding: 0 0 20px 0;
   }
   .art2 ul.title-wrap li p {
     font-size: 16px;
     line-height: 2em;
     color: var(--text-color-gray2);
   }
-
 
   .art2 ul.title-wrap li.on {
     display: block;

@@ -1,29 +1,21 @@
 @media screen and (max-width: 640px) {
   /* art1--------------------------------------------------------------------------------------------- */
-  .art1 {
+  .grid_container {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(9, 80px);
+    grid-template-rows: repeat(7, 1fr);
     column-gap: 10px;
-    row-gap: 30px;
+    row-gap: 20px;
     overflow: hidden;
 
     width: 100%;
+    max-height: 100vh;
     padding-top: 20px;
     color: var(--text-color-w);
     background: rgb(0, 0, 0);
   }
 
-  .art1 .item1 {
-    grid-column: 1 / span 8;
-    grid-row: 1 / span 1;
-    position: relative;
-  }
-  .art1 .item2{
-    display: none;
-  }
-  /* .art1 .item3 = scroll 사진들 */
-  .art1 .item3 {
+  .art1 .imgs {
     grid-column: 1 / span 8;
     grid-row: 7 / span 2;
     z-index: 99;
@@ -34,13 +26,13 @@
     overflow: scroll;
   }
 
-  .art1 .item3 ul {
+  .art1 .imgs ul {
     gap: 10px;
   }
-  .art1 .item3 ul li a img {
+  .art1 .imgs ul li a img {
     height: 190px;
   }
-  .art1 .item3::-webkit-scrollbar {
+  .art1 .imgs::-webkit-scrollbar {
     display: none;
   }
 
@@ -84,14 +76,13 @@
     background: rgba(255, 255, 255, 0.1);
   }
 
-  /* .art1 .item4 = titel */
-  .art1 .item4 {
+  .art1 .title {
     grid-column: 1 / span 8;
     grid-row: 2 / span 1;
     position: relative;
   }
 
-  .art1 .item4 .item-text {
+  .art1 .title .item-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,20 +91,19 @@
     height: 100%;
     line-height: 1.2;
   }
-  .art1 .item4 h5 {
+  .art1 .title h5 {
     font-size: 20px;
     font-weight: 400;
     color: var(--sub-color);
   }
-  .art1 .item4 h2 {
+  .art1 .title h2 {
     font-size: 32px;
     font-weight: 700;
     letter-spacing: -1px;
     color: var(--main-color);
   }
 
-  /* .art1 .item5 = playlist */
-  .art1 .item5 {
+  .songs {
     position: relative;
     grid-column: 1 / span 8;
     grid-row: 1 / span 1;
@@ -126,44 +116,44 @@
   .play-song {
     height: 100%;
   }
-  .art1 .item5 figure {
+  .songs figure {
     height: 100%;
   }
-  .art1 .item5 figure img {
+  .songs figure img {
     height: 100%;
   }
   
-  .art1 .item5 .now {
+  .songs .now {
     width: 100%;
     margin-left: 10px;
     line-height: 20px;
   }
-  .art1 .item5 p.song {
+  .songs .song {
     font-size: 14px;
     font-weight: 700;
     color: var(--text-color-b);
     text-overflow: ellipsis;
   }
-  .art1 .item5 p.singer {
+  .songs .singer {
     font-size: 12px;
     font-weight: 500;
     color: var(--sub-color);
   }
 
   /* btn */
-  .art1 .item5 .playbtn {
+  .songs .playbtn {
     position: relative;
     width: 29%;
   }
-  .art1 .item5 .playbtn ul {
+  .songs .playbtn ul {
     gap: 8px;
     justify-content: flex-end;
   }
 
-  .art1 .item5 .playbtn img{
+  .songs .playbtn img{
     width:50px;
   }
-  .art1 .item5 .stop-btn {
+  .songs .stop-btn {
     position: absolute;
     left: 0;
     top: 0;
@@ -171,15 +161,14 @@
   }
 
 
-  /* .art1 .item6 = cd */
-  .art1 .item6 {
+  .cd_outer {
     grid-column: 1 / span 8;
     grid-row: 4 / span 3;
     background: var(--main-color);
     position: relative;
   }
 
-  .art1 .item6 .cd-container {
+  .cd_outer .cd-container {
     width: 150%;
     position: absolute;
     left: 50%;
@@ -187,7 +176,7 @@
     transform: translateX(-50%);
   }
 
-  .art1 .item6 .cd-container::after {
+  .cd_outer .cd-container::before {
     content: "";
     position: absolute;
     top: 2px;
@@ -197,12 +186,10 @@
     background-image: url(../img/album-cover/shadow.png);
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: -1;
     opacity: 0.5;
   }
 
-  /* 스티커 */
-  .art1 .item6 .sticker {
+  .cd_outer .sticker {
     width: 120px;
     height: 120px;
     position: absolute;
@@ -215,7 +202,7 @@
     box-shadow: 1px 1px 1px #00000060;
   }
 
-  .art1 .item6 .sticker-inner {
+  .cd_outer .sticker-inner {
     width: 100%;
     height: 100%;
     background-image: url(../img/album-cover/sticker-b.png);
@@ -224,7 +211,7 @@
     background-size: cover;
   }
 
-  .art1 .item6 .cd-container .cd {
+  .cd_outer .cd-container .cd {
     position: relative;
     width: 100%;
     height: 100%;
@@ -239,8 +226,7 @@
     }
   }
 
-  /* .art1 .item7 = album text*/
-  .art1 .item7 {
+  .album_text {
     position: relative;
     grid-column: 1 / span 8;
     grid-row: 7 / span 1;
@@ -250,49 +236,46 @@
     z-index: 10;
     display: none;
   }
-  .art1 .item7 p {
+  .album_text p {
     font-size: 10px;
     font-weight: 100;
     line-height: 1.5;
   }
 
-  /* .art1 .item8 = barcod */
-  .art1 .item8 {
+  .barcod {
     grid-column: 6 / span 3;
-    grid-row: 6 / span 1;
-    margin-top: 10px;
+    grid-row: 7 / span 1;
     margin-right: 20px;
   }
-  .art1 .item8 img {
+  .barcod img {
     width: 100%;
     position: relative;
     z-index: 10;
   }
 
-  /* .art1 .item9 = 저작권 */
-  .art1 .item9 {
+  .copyright {
     position: relative;
     grid-column: 1 / span 5;
-    grid-row: 6 / span 1;
+    grid-row: 7 / span 1;
     margin-left: 20px;
     z-index: 10;
-    margin: 10px;
   }
-  .art1 .item9 .item-text{
+  .copyright .item-text{
     flex-direction: column;
   }
-  .art1 .item9 .item-text p {
+  .copyright .item-text p {
     font-size: 12px;
     font-weight: 100;
     line-height: 1.2;
     color: var(--sub-color);
   }
 
-  .art1 .item10 {
+  .fade_bg {
     grid-column: 1 / span 8;
-    grid-row: 6 / span 4;
+    grid-row: 7 / span 1;
     background: var(--text-color-b);
     position: relative;
+    margin-top: -20px;
   }
 
   /* art2--------------------------------------------------------------------------------------------- */

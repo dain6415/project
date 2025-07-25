@@ -18,41 +18,51 @@ $(document).ready(function () {
   const songList = $("audio"); 
   let nowPlaying = 0;
   let playing = false;
-  
-  // 재생/멈춤 버튼
-  $(".playbtn li:first-child").click(function () {
+
+  songList.each(function () {
+    this.loop = false; 
+  });
+  songList.get(nowPlaying).loop = true;
+
+  $(".playbtn li.play").click(function () {
     const currentSong = songList.get(nowPlaying);
     const playIcon = $(this).find("img");
-    
+
     if (playing) {
-      currentSong.pause(); // 멈추기
+      currentSong.pause();
       playIcon.attr("src", "./img/music-icon/art1-icon-play.png");
     } else {
-      currentSong.play(); // 재생하기
+      currentSong.play().catch(err => {
+        console.error("재생 에러:", err);
+      });
       playIcon.attr("src", "./img/music-icon/art1-icon-stop.png");
     }
 
-    playing = !playing; // 상태 바꾸기
+    playing = !playing;
   });
-  
-  // 다음 곡 버튼
-  $(".playbtn li:last-child").click(function () {
-    const currentSong = songList.get(nowPlaying);
-    currentSong.pause(); // 현재 곡 멈추고
-    currentSong.currentTime = 0; // 처음으로
-    
-    nowPlaying = (nowPlaying + 1) % songList.length; // 다음 곡으로!
-    const nextSong = songList.get(nowPlaying);
-    nextSong.play(); // 다음 곡 재생
 
-    $(".playbtn li:first-child img").attr("src", "./img/music-icon/art1-icon-stop.png");
+  $(".playbtn li.next").click(function () {
+    const currentSong = songList.get(nowPlaying);
+    currentSong.pause();
+    currentSong.currentTime = 0;
+    currentSong.loop = false;
+
+    nowPlaying = (nowPlaying + 1) % songList.length;
+    const nextSong = songList.get(nowPlaying);
+
+    nextSong.loop = true;
+
+    nextSong.play().catch(err => {
+      console.error("재생 에러:", err);
+    });
+
+    $(".playbtn li.play img").attr("src", "./img/music-icon/art1-icon-stop.png");
     $(".now .song").text(nowPlaying === 0 ? "Supernatural" : "Right Now");
 
     playing = true;
-    console.log("현재 재생할 곡:", currentSong);
   });
-  console.log("총 오디오 개수:", songList.length);
 });
+
 
 
 // art2 -----------------------------------------------------------------------------------

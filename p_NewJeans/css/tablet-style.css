@@ -1,167 +1,92 @@
 @media screen and (min-width: 641px) {
   /* art1--------------------------------------------------------------------------------------------- */
   .art1 {
-    width: 100%;
-    height: 1360px;
-    display: grid;
-    grid-template-columns: repeat(14, 1fr);
-    grid-template-rows: repeat(29, 1fr);
-    gap: 20px;
     color: var(--text-color-w);
     background: rgb(0, 0, 0);
     overflow: scroll;
   }
+  .grid_container {
+    padding: 100px 80px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 20px;
+    max-height: 100vh;
+  }
 
-  .art1 .item1 {
-    grid-column: 1 / span 14;
-    grid-row: 1 / span 3;
+  .art1 .title {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
     position: relative;
   }
 
-  /* .art1 .item3 = scroll 사진들 */
-  .art1 .item3 {
-    /* display: none; */
-    grid-column: 1 / span 14;
-    grid-row: 21 / span 8;
-    z-index: 99;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: scroll;
-    /* border: 5px solid #ff7070; */
-  }
-  .art1 .item3 ul {
-    cursor: move;
-    gap: 10px;
-  }
-  .art1 .item3 ul li a img {
-    height: 355px;
-  }
-  .art1 .item3::-webkit-scrollbar {
-    display: none;
-  }
-
-    /* popup */
-    .popup{
-      display: none;
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 999;
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-    .popup-contents{ /* 이미지 */
-      margin: auto;
-      display: block;
-      max-width: 90%;
-      max-height: 90%;
-      width: auto;
-      height: auto;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      /* border: 1px solid #b6fc61; */
-    }
-    .close{
-      font-size: 50px;
-      font-weight: 300;
-      border-radius: 99px;
-      border: 1px solid #ffffff;
-      width: 60px;
-      height: 60px;
-      text-align: center;
-  
-      position: absolute;
-      right: 3%;
-      top: 3%;
-      cursor: pointer;
-    }
-    .close:hover {
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-
-  /* .art1 .item4 = titel */
-  .art1 .item4 {
-    grid-column: 2 / span 9;
-    grid-row: 4 / span 3;
-    position: relative;
-  }
-
-  .art1 .item4 > .item-text {
+  .art1 .title > .item-text {
     line-height: 60px;
     text-align: left;
     margin: 0;
   }
-  .art1 .item4 h5 {
-    font-size: 40px;
+  .art1 .title h5 {
+    font-size: 32px;
     font-weight: 300;
     color: var(--sub-color);
   }
-  .art1 .item4 h2 {
+  .art1 .title h2 {
     font-size: 60px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--main-color);
   }
 
-
-
-  /* .art1 .item5 = 
-  playlist */
-  .art1 .item5 {
-    grid-column: 11 / span 3;
-    grid-row: 4 / span 1;
+  .songs {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     position: relative;
+    grid-column: 4 / span 2;
+    grid-row: 1 / span 1;
+    padding: 12px;
     border-radius: 10px;
-    padding: 10px 0;
-    background: none;
-    justify-content: end;
+    background: #dadada
   }
-  /* .play-song{border: 1px solid #ff1414;} */
-  .art1 .item5 figure {
-    width: 30%;
-    display: none;
+  .songs figure {
+    width: 20%;
+    object-fit: cover;
   }
-  .art1 .item5 figure img {
+  .songs figure img {
     width: 100%;
   }
 
-  .art1 .item5 .now {
+  .songs .now {
     width: 70%;
-    padding-left: 20px;
+    padding-left: 10px;
     line-height: 15px;
   }
-  .art1 .item5 p.song {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--text-color-w);
+  .songs .song {
+    padding-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color-b);
   }
-  .art1 .item5 p.singer {
-    font-size: 10px;
+  .songs .singer {
+    font-size: 14px;
     font-weight: 300;
-    color: var(--sub-color);
+    color: #666;
   }
 
-  /* btn */
-  .art1 .item5 .playbtn {
+  .songs .playbtn {
     position: relative;
     height: 100%;
   }
-  .art1 .item5 .playbtn ul {
+  .songs .playbtn ul {
     gap: 5px;
   }
-  .art1 .item5 .playbtn {
+  .songs .playbtn {
     /* padding-left: 20px; */
     width: 30%;
   }
-  .art1 .item5 .playbtn ul li img{
-    width:100%;
+  .songs .playbtn ul li img {
+    width: 100%;
   }
-  .art1 .item5 .stop-btn {
+  .songs .stop-btn {
     padding-left: 20px;
     position: absolute;
     left: 0;
@@ -169,23 +94,21 @@
     display: none;
   }
 
-  /* .art1 .item6 = 
-  cd */
-  .art1 .item6 {
-    grid-column: 2 / span 12;
-    grid-row: 8 / span 8;
-    background: var(--main-color);
+  .cd_outer {
     position: relative;
+    grid-column: 1 / span 5;
+    grid-row: 3 / span 4;
+    background: var(--main-color);
   }
-
-  .art1 .item6 .cd-container {
-    width: 640px;
+  .cd_outer .cd-container {
     position: absolute;
     left: 50%;
-    top: 57%;
-    transform: translate(-50%, -43%);
+    top: -15%;
+    transform: translateX(-50%);
+    max-width: 600px;
+    width: 70%;
   }
-  .art1 .item6 .cd-container::after {
+  .cd_outer .cd-container::before {
     content: "";
     position: absolute;
     top: 2px;
@@ -195,11 +118,9 @@
     background-image: url(../img/album-cover/shadow.png);
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: -1;
     opacity: 0.5;
   }
-
-  .art1 .item6 .sticker {
+  .cd_outer .sticker {
     width: 130px;
     height: 130px;
     position: absolute;
@@ -210,8 +131,7 @@
     padding: 6px;
     border-radius: 99px;
   }
-
-  .art1 .item6 .sticker-inner {
+  .cd_outer .sticker-inner {
     width: 100%;
     height: 100%;
     background-image: url(../img/album-cover/sticker-w.png);
@@ -219,18 +139,12 @@
     background-position: center;
     background-size: cover;
   }
-
-  .art1 .item6 .cd-container .cd {
+  .cd_outer .cd-container .cd {
     position: relative;
     width: 100%;
     height: 100%;
     animation: spin 8s linear infinite;
-    /* 회전 애니메이션 */
   }
-
-
-  /* animation: spin 5s linear infinite; 기본적으로 회전 애니메이션을 설정 */
-  /* 움직임 */
   @keyframes spin {
     from {
       transform: rotate(0deg);
@@ -240,55 +154,115 @@
     }
   }
 
-  /* .art1 .item7 = album text*/
-  .art1 .item7 {
-    grid-column: 2 / span 10;
-    grid-row: 16 / span 2;
+  .album_text {
+    grid-column: 1 / span 4;
+    grid-row: 7 / span 2;
     text-align: justify;
     position: relative;
     z-index: 10;
   }
-  .art1 .item7 p {
+  .album_text p {
     font-size: 12px;
     font-weight: 300;
     line-height: 20px;
     color: var(--text-color-w);
   }
 
-  /* .art1 .item8 = barcod */
-  .art1 .item8 {
-    grid-column: 12 / span 2;
-    grid-row: 16 / span 2;
+  .barcod {
+    grid-column: 5 / span 1;
+    grid-row: 7 / span 1;
   }
-  .art1 .item8 img {
+  .barcod img {
     width: 100%;
     height: 100%;
     position: relative;
     z-index: 10;
   }
 
-  /* .art1 .item9 = 저작권 */
-  .art1 .item9 {
-    grid-column: 2 / span 12;
-    grid-row: 18 / span 1;
+  .copyright {
+    grid-column: 1 / span 4;
+    grid-row: 8 / span 1;
     position: relative;
     z-index: 10;
   }
-  .art1 .item9 .item-text {
+  .copyright .item-text {
     gap: 20px;
   }
-  .art1 .item9 .item-text p {
+  .copyright .item-text p {
     font-size: 12px;
     font-weight: 500;
     color: var(--sub-color);
   }
 
-  .art1 .item10 {
-    grid-column: 1 / span 14;
-    grid-row: 16 / span 10;
-    background: var(--text-color-b);
+  .fade_bg {
     position: relative;
+    grid-column: 1 / span 5;
+    grid-row: 7 / span 3;
+    background: var(--text-color-b);
     transform: translateY(-20px);
+  }
+
+  .art1 .imgs {
+    grid-column: 1 / span 14;
+    grid-row: 21 / span 8;
+    z-index: 99;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: scroll;
+  }
+  .art1 .imgs ul {
+    cursor: move;
+    gap: 10px;
+  }
+  .art1 .imgs ul li a img {
+    height: 355px;
+  }
+  .art1 .imgs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .popup-contents {
+    /* 이미지 */
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid #b6fc61; */
+  }
+  .close {
+    font-size: 50px;
+    font-weight: 300;
+    border-radius: 99px;
+    border: 1px solid #ffffff;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    cursor: pointer;
+  }
+  .close:hover {
+    background: rgba(255, 255, 255, 0.1);
   }
 
   /* art2--------------------------------------------------------------------------------------------- */
@@ -312,7 +286,7 @@
   .art2 .title-menu ul li a {
     color: var(--sub-color);
     font-size: 16px;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     padding: 10px 30px;
     /* border: 1px solid #b8a6a6; */
   }
@@ -368,7 +342,7 @@
 
   .art2 ul.title-wrap li {
     display: none;
-    letter-spacing: -.5px;
+    letter-spacing: -0.5px;
   }
   .art2 ul.title-wrap li.on {
     display: block;
@@ -412,13 +386,13 @@
     text-overflow: ellipsis;
     width: 100%;
   }
-  .art2 ul.next li:hover figure figcaption{
+  .art2 ul.next li:hover figure figcaption {
     color: var(--text-color-b);
   }
   .art2 ul.next li figure a img {
     width: 100%;
   }
-/* .tab{position: absolute; left: 0;top: 0; width: 100%;height: 100%;} */
+  /* .tab{position: absolute; left: 0;top: 0; width: 100%;height: 100%;} */
 
   /* art3--------------------------------------------------------------------------------------------- */
   .art3 {

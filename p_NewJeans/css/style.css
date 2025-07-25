@@ -2,27 +2,23 @@
 @font-face {
 	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 700;
 	src: local('Gmarket Sans Bold'), local('GmarketSans-Bold'),
-	url('http://script.gmarket.com/fonts/GmarketSansBold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-	url('http://script.gmarket.com/fonts/GmarketSansBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	url('https://script.gmarket.com/fonts/GmarketSansBold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('https://script.gmarket.com/fonts/GmarketSansBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 @font-face {
 	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 500;
 	src: local('Gmarket Sans Medium'), local('GmarketSans-Medium'),
-	url('http://script.gmarket.com/fonts/GmarketSansMedium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-	url('http://script.gmarket.com/fonts/GmarketSansMedium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	url('https://script.gmarket.com/fonts/GmarketSansMedium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('https://script.gmarket.com/fonts/GmarketSansMedium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 @font-face {
 	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 300;
 	src: local('Gmarket Sans Light'), local('GmarketSans-Light'),
-	url('http://script.gmarket.com/fonts/GmarketSansLight.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-	url('http://script.gmarket.com/fonts/GmarketSansLight.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	url('https://script.gmarket.com/fonts/GmarketSansLight.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('https://script.gmarket.com/fonts/GmarketSansLight.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
-
-*{margin: 0;padding: 0;box-sizing: border-box;}
-
 :root{
-  --main-color:#3594E1;
+	--main-color:#3594E1;
   --main-color2:#13afe5;
   --sub-color:#8D8D8D;
   --text-color-w:#fff;
@@ -31,6 +27,7 @@
   --text-color-gray2:#b8b8b8;
   --goods-bg:#f4f4f4;
 }
+*{margin: 0;padding: 0;box-sizing: border-box;}
 
 /* 공통css */
 body{color: #333; font-family: 'GmarketSansMedium'; width: 100%; height: 100%;font-family: 'Gmarket Sans'; font-style: normal; font-weight: 500; background: #000; }
@@ -60,11 +57,6 @@ body section.on{transform: rotateY(-5deg);}
 ::-webkit-scrollbar{display: none;}
 
 section{overflow: hidden;}
-/* .item{
-  border: 1px solid hsl(323, 100%, 60%);
-} */
-/* .container{border: 5px solid #13afe5;} */
-
 /* menu-icon */
 .menu-icon{display: inline-block; cursor: pointer; position: fixed; left: 10px; top: 10px; background: #000; z-index: 999; padding: 10px;}
 .bar1, .bar2, .bar3{width: 35px; height: 5px; background: #701260; margin: 6px 0; transition: 0.4s;}

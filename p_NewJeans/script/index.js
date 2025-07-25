@@ -1,6 +1,6 @@
 // art1 --------------------------------------------------------------------------
 // item3 이미지 클릭시 이벤트 제어
-$(".art1 .item3 li a img").click(function (e) {
+$(".imgs li a img").click(function (e) {
   e.preventDefault();
 
   var imgSrc = $(this).attr("src");

@@ -26,62 +26,12 @@
     overflow: scroll;
   }
 
-  .art1 .imgs ul {
-    gap: 10px;
-  }
-  .art1 .imgs ul li a img {
-    height: 190px;
-  }
-  .art1 .imgs::-webkit-scrollbar {
-    display: none;
-  }
-
-  .popup {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  .popup-contents {
-    /* 이미지 */
-    margin: auto;
-    display: block;
-    max-width: 90%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .close {
-    font-size: 50px;
-    font-weight: 300;
-    border-radius: 99px;
-    border: 1px solid #ffffff;
-    width: 50px;
-    text-align: center;
-
-    position: absolute;
-    right: 3%;
-    top: 3%;
-    cursor: pointer;
-  }
-  .close:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
 
   .art1 .title {
     grid-column: 1 / span 8;
     grid-row: 2 / span 1;
     position: relative;
   }
-
   .art1 .title .item-text {
     display: flex;
     flex-direction: column;
@@ -139,8 +89,6 @@
     font-weight: 500;
     color: var(--sub-color);
   }
-
-  /* btn */
   .songs .playbtn {
     position: relative;
     width: 29%;
@@ -149,7 +97,6 @@
     gap: 8px;
     justify-content: flex-end;
   }
-
   .songs .playbtn img{
     width:50px;
   }
@@ -167,7 +114,6 @@
     background: var(--main-color);
     position: relative;
   }
-
   .cd_outer .cd-container {
     width: 150%;
     position: absolute;
@@ -175,7 +121,6 @@
     top: -36%;
     transform: translateX(-50%);
   }
-
   .cd_outer .cd-container::before {
     content: "";
     position: absolute;
@@ -188,7 +133,6 @@
     background-repeat: no-repeat;
     opacity: 0.5;
   }
-
   .cd_outer .sticker {
     width: 120px;
     height: 120px;
@@ -201,7 +145,6 @@
     border-radius: 99px;
     box-shadow: 1px 1px 1px #00000060;
   }
-
   .cd_outer .sticker-inner {
     width: 100%;
     height: 100%;
@@ -210,7 +153,6 @@
     background-position: center;
     background-size: cover;
   }
-
   .cd_outer .cd-container .cd {
     position: relative;
     width: 100%;
@@ -276,6 +218,21 @@
     background: var(--text-color-b);
     position: relative;
     margin-top: -20px;
+  }
+
+  .art1 .imgs ul {
+    gap: 10px;
+  }
+  .art1 .imgs ul li a img {
+    height: 190px;
+  }
+  .art1 .imgs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .close{
+    width: 60px;
+    height: 60px;
   }
 
   /* art2--------------------------------------------------------------------------------------------- */

@@ -74,13 +74,11 @@ nav {
       height: 20px;
       margin-right: 10px;
     }
-
     .title {
       width: 100%;
       white-space: nowrap;
       text-overflow: ellipsis;
     }
-
     .hour,
     .language {
       text-align: right;
@@ -108,7 +106,6 @@ nav {
   }
   #filters {
     display: flex;
-    flex-direction: column;
     button {
       display: flex;
       justify-content: flex-start;
@@ -296,7 +293,7 @@ nav {
   }
 }
 
-// phone -------
+// phone ------------------------------------------
 @media screen and (max-width: 700px) {
   section {
     &#contents_container {
@@ -306,7 +303,7 @@ nav {
   nav {
     justify-content: center;
     button {
-      padding: 20px;
+      padding: 20px 15px;
       font-size: clamp(14px, 16px, 18px);
       text-align: center;
       &:nth-child(1){
@@ -316,12 +313,17 @@ nav {
   }
   .tab_content {
     padding: 40px 0;
+  }
+  #mv{
     .text {
       padding: 20px 14px;
       width: 100%;
       .left {
         display: flex;
         width: 100%;
+      }
+      .title{
+        white-space: wrap;
       }
       .right {
         display: none;
@@ -330,15 +332,14 @@ nav {
   }
   #gallery {
     .gallery_inner {
-      display: flex;
+      flex-direction: column;
       gap: 20px;
     }
     #filters {
       display: flex;
-      flex-direction: column;
-      width: 200px;
-      // border: 1px solid #f00;
+      flex-wrap: wrap;
       button {
+        width: 44%;
         padding: 10px;
         font-size: 16px;
         text-align: left;
@@ -350,11 +351,11 @@ nav {
       }
     }
     #img_container {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       justify-content: center;
       gap: 4px;
       overflow: scroll;
-      width: calc(100% - 200px);
+      width: 100%;
       height: 77vh;
       border: 1px solid #0f0;
     }
@@ -380,7 +381,7 @@ nav {
     padding: 14px;
   }
 }
-// pc -------
+// pc -------------------------------------------------
 @media screen and (min-width: 701px) {
   body {
     padding: 20px;
@@ -434,10 +435,8 @@ nav {
       gap: 20px;
     }
     #filters {
-      display: flex;
       flex-direction: column;
       width: 200px;
-      // border: 1px solid #f00;
       button {
         padding: 10px;
         font-size: 16px;
@@ -480,8 +479,7 @@ nav {
     padding: 14px;
   }
 }
-
-// -------
+// -------------------------------------------------
 @media screen and (min-width: 901px) {
   nav {
     button {
@@ -513,7 +511,7 @@ nav {
     }
   }
 }
-// ---------
+// ---------------------------------------------------
 @media screen and (min-width: 1200px) {
   section {
     max-width: 1600px;

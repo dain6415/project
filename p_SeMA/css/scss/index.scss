@@ -34,9 +34,10 @@ $dark: (
 
 @mixin set-theme($theme) {
   @each $colorName, $val in $theme {
-    --color-#{$colorName}: #{$val};
+    #{"--color-#{$colorName}"}: #{$val};
   }
 }
+
 
 body[data-theme="light"] {
   @include set-theme($light);

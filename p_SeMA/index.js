@@ -58,16 +58,18 @@ function logoChange() {
     const headerBg = rootColor.getPropertyValue("--color-gray700").trim();
 
     header.style.background = headerBg;
+    header.style.boxShadow = '0 5px 6px rgba(0, 0, 0, 0.1)';
     headerLogo.style.display = 'none';
     headerLogoChange.style.display = 'block';
-
+    
     if (headerLogoChange.getAttribute("src") !== changeSrc) {
       headerLogoChange.setAttribute("src", changeSrc);
     }
   } else {
+    header.style.background = "none";
+    header.style.boxShadow = 'none';
     headerLogo.style.display = 'block';
     headerLogoChange.style.display = 'none';
-    header.style.background = "none";
   }
 }
 // ----------------------------------------------------

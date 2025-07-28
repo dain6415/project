@@ -230,9 +230,61 @@
     display: none;
   }
 
-  .close{
+  .popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .popup-contents {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+  .close {
+    position: absolute;
+    right: 3%;
+    top: 3%;
+  
     width: 60px;
     height: 60px;
+    border: 1px solid #fff;
+    border-radius: 99px;
+    font-size: 50px;
+    font-weight: 300;
+  
+    text-align: center;
+    cursor: pointer;
+  }
+  .close::before,
+  .close::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    background: #fff;
+  }
+  .close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  .close:hover {
+    background: rgba(255, 255, 255, 0.1);
   }
 
   /* art2--------------------------------------------------------------------------------------------- */

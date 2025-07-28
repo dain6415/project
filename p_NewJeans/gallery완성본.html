@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>이미지 뷰어 & 필터 완성본</title>
+<style>
+  body { font-family: sans-serif; margin: 0; padding: 20px; background: #fafafa; }
+  #filters {
+    margin-bottom: 15px;
+  }
+  #filters button {
+    margin-right: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+    /* background: #555; */
+    color: #333;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 20px;
+  }
+  #filters button:hover {
+    background: #333;
+    color: #ddd;
+  }
+  #filters button.on{
+    background: #333;
+    color: #ddd;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .gallery img {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.15);
+    transition: transform 0.2s;
+  }
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+  .modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  .modal.hidden {
+    display: none;
+  }
+  #modal-img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  }
+  .controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+  }
+  .controls button, .controls a {
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    background: #444;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    user-select: none;
+    transition: background 0.2s;
+  }
+  .controls button:hover, .controls a:hover {
+    background: #222;
+  }
+  #close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+
+<div id="filters">
+  <button data-filter="all" class="on">전체보기</button>
+  <button data-filter="bubblegum">BubbleGum</button>
+  <button data-filter="howsweet">HowSweet</button>
+</div>
+
+<div class="gallery"></div>
+
+<div class="modal hidden">
+  <button id="close" aria-label="닫기">✕</button>
+  <img id="modal-img" src="" alt="확대된 이미지" />
+  <div class="controls">
+    <button id="prev" aria-label="이전 이미지">← 이전</button>
+    <button id="next" aria-label="다음 이미지">다음 →</button>
+    <a id="download" href="" download aria-label="이미지 다운로드">다운로드</a>
+  </div>
+</div>
+
+<script>
+  const bubblegum = Array.from({ length: 40 }, (_, i) => {
+    const num = String(i + 1).padStart(2, "0");
+    return { src: `./img/photo/how_sweet_img/NJ_BubbleGum_${num}.jpg`, member: "bubblegum" };
+  });
+
+  const howsweet = Array.from({ length: 40 }, (_, i) => {
+    const num = String(i + 1).padStart(2, "0");
+    return { src: `./img/photo/how_sweet_img/NJ_HowSweet_${num}.jpg`, member: "howsweet" };
+  });
+
+  const images = bubblegum.concat(howsweet);
+
+  const gallery = document.querySelector(".gallery");
+  const modal = document.querySelector(".modal");
+  const modalImg = document.getElementById("modal-img");
+  const downloadLink = document.getElementById("download");
+  const closeBtn = document.getElementById("close");
+  const prevBtn = document.getElementById("prev");
+  const nextBtn = document.getElementById("next");
+  const filters = document.getElementById("filters");
+
+  let filteredImages = images; // 현재 필터된 이미지 리스트
+  let currentIndex = 0;
+
+  // 갤러리 렌더링 함수
+  function renderGallery(list) {
+    gallery.innerHTML = "";
+    list.forEach((imgObj, i) => {
+      const imgBox = document.createElement('div');
+      imgBox.classList.add('img_box');
+      const img = document.createElement("img");
+      img.src = imgObj.src;
+      img.dataset.index = i;
+      img.alt = imgObj.member;
+      img.addEventListener("click", () => showModal(i));
+
+      gallery.appendChild(imgBox);
+      imgBox.appendChild(img);
+    });
+  }
+
+  // 모달 업데이트 함수
+  function updateViewer(index) {
+    currentIndex = index;
+    modalImg.src = filteredImages[index].src;
+    downloadLink.href = filteredImages[index].src;
+    downloadLink.setAttribute('download', filteredImages[index].src.split('/').pop());
+  }
+
+  // 모달 열기
+  function showModal(index) {
+    modal.classList.remove("hidden");
+    updateViewer(index);
+  }
+
+  // 모달 닫기
+  function hideModal() {
+    modal.classList.add("hidden");
+    modalImg.src = "";
+  }
+
+  // 이전 이미지 보기
+  function showPrevImage() {
+    if (currentIndex > 0) {
+      updateViewer(currentIndex - 1);
+    }
+  }
+
+  // 다음 이미지 보기
+  function showNextImage() {
+    if (currentIndex < filteredImages.length - 1) {
+      updateViewer(currentIndex + 1);
+    }
+  }
+
+  // 필터 버튼 클릭 이벤트
+  filters.addEventListener("click", e => {
+    if (e.target.tagName !== "BUTTON") return;
+
+    const buttons = filters.querySelectorAll("button");
+    buttons.forEach(btn => btn.classList.remove("on"));
+
+    e.target.classList.add("on");
+
+    const filter = e.target.dataset.filter;
+    filteredImages = filter === "all" ? images : images.filter(img => img.member === filter);
+    currentIndex = 0;
+    renderGallery(filteredImages);
+    hideModal();
+  });
+
+  // 버튼 이벤트 연결
+  closeBtn.addEventListener("click", hideModal);
+  prevBtn.addEventListener("click", showPrevImage);
+  nextBtn.addEventListener("click", showNextImage);
+
+  // 키보드 이벤트 (모달 오픈 시에만 작동)
+  document.addEventListener("keydown", e => {
+    if (modal.classList.contains("hidden")) return;
+    if (e.key === "ArrowLeft") showPrevImage();
+    else if (e.key === "ArrowRight") showNextImage();
+    else if (e.key === "Escape") hideModal();
+  });
+
+  // 초기 렌더링
+  renderGallery(images);
+</script>
+
+</body>
+</html>

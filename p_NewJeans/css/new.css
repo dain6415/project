@@ -1,0 +1,555 @@
+@import "../bass.css";
+section {
+  width: 100%;
+  margin: auto;
+}
+section#contents_container {
+  border: 2px solid var(--main-color);
+}
+section #content {
+  border-top: 2px solid var(--main-color);
+  margin-top: -2px;
+  position: relative;
+}
+section #content .tab_content {
+  display: none;
+}
+section #content .tab_content.on {
+  display: block;
+}
+
+nav {
+  display: flex;
+  font-size: 0;
+}
+nav button {
+  display: inline-block;
+  background: none;
+  color: var(--main-color);
+  font-size: 24px;
+  border-right: 2px solid var(--main-color);
+}
+nav .on {
+  border-bottom: 2px solid #000;
+  font-weight: 600;
+  text-decoration: underline;
+  z-index: 1;
+}
+
+#intro {
+  display: none;
+}
+
+#mv ul {
+  border-top: 1px solid var(--main-color);
+}
+#mv li {
+  cursor: pointer;
+  border-bottom: 1px solid var(--main-color);
+}
+#mv li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+#mv li.on {
+  background: var(--main-color);
+  color: #111;
+  font-weight: bold;
+}
+#mv li.on .video_container {
+  padding: 10px;
+}
+#mv li.on .video {
+  display: block;
+}
+#mv .text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#mv .text .left {
+  display: flex;
+  width: 80%;
+}
+#mv .text .right {
+  display: flex;
+  width: 15%;
+}
+#mv .text .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+#mv .text .title {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#mv .text .hour,
+#mv .text .language {
+  text-align: right;
+}
+#mv .video {
+  display: none;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+#mv .video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#gallery .gallery_inner {
+  display: flex;
+}
+#gallery #filters {
+  display: flex;
+  flex-direction: column;
+}
+#gallery #filters button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+#gallery #filters button.on {
+  font-weight: bold;
+}
+#gallery #filters button.on .check {
+  background: var(--main-color);
+}
+#gallery #filters button .check {
+  display: inline-block;
+  border: 1px solid var(--main-color);
+}
+#gallery #filters button:hover {
+  background: #222;
+}
+#gallery #img_container {
+  display: grid;
+  justify-content: center;
+  overflow: scroll;
+  border: 1px solid #0f0;
+}
+#gallery .img_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #1e96ff;
+  cursor: pointer;
+}
+#gallery .img_box:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+}
+#gallery .img_box img {
+  vertical-align: top;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.modal.hidden {
+  display: none;
+}
+
+.modal_imgBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal_imgBox #modal_img {
+  max-width: 72%;
+  max-height: 90%;
+}
+
+#close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 1px solid var(--main-color);
+  padding: 10px;
+  background: none;
+  cursor: pointer;
+}
+#close span {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: var(--main-color);
+  transform: rotate(45deg);
+}
+#close span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--main-color);
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.controls {
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.controls #prev,
+.controls #next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid var(--main-color);
+}
+.controls #prev span,
+.controls #next span {
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  background: var(--main-color);
+  position: relative;
+}
+.controls #prev span::before, .controls #prev span::after,
+.controls #next span::before,
+.controls #next span::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  border-radius: 5px;
+  background: var(--main-color);
+}
+.controls #prev span::before,
+.controls #prev span::after {
+  left: -2px;
+  transform-origin: left center;
+}
+.controls #prev span::before {
+  transform: rotate(45deg);
+  bottom: 1px;
+}
+.controls #prev span::after {
+  transform: rotate(-45deg);
+  top: 1px;
+}
+.controls #next span::before,
+.controls #next span::after {
+  right: -2px;
+  transform-origin: right;
+}
+.controls #next span::before {
+  transform: rotate(-45deg);
+  bottom: 1px;
+}
+.controls #next span::after {
+  transform: rotate(45deg);
+  top: 1px;
+}
+.controls #download {
+  text-decoration: none;
+  color: #000;
+  background: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.controls #download:hover {
+  font-weight: bold;
+  background: #0466bc;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    padding: 10px;
+  }
+  section {
+    max-width: 590px;
+  }
+  nav button {
+    padding: 30px;
+    font-size: 20px;
+  }
+  .tab_content {
+    padding: 60px 30px;
+  }
+  .tab_content .text {
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .tab_content .text .left {
+    display: flex;
+    width: 80%;
+  }
+  .tab_content .text .right {
+    display: flex;
+    width: 15%;
+    justify-content: flex-end;
+  }
+  .tab_content .text .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  .tab_content .text .hour,
+  .tab_content .text .language {
+    width: 50%;
+    text-align: right;
+  }
+  .tab_content .text .hour {
+    display: none;
+  }
+  #gallery .gallery_inner {
+    display: flex;
+    gap: 20px;
+  }
+  #gallery #filters {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+  }
+  #gallery #filters button {
+    padding: 10px;
+    font-size: 16px;
+    text-align: left;
+  }
+  #gallery #filters button .check {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  #gallery #img_container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 4px;
+    overflow: scroll;
+    width: calc(100% - 200px);
+    height: 77vh;
+    border: 1px solid #0f0;
+  }
+  #gallery .img_box {
+    height: 210px;
+  }
+  .controls {
+    gap: 6px;
+  }
+  .controls #prev,
+  .controls #next {
+    width: 40px;
+    height: 40px;
+    padding: 14px;
+  }
+  .controls #download {
+    padding: 14px;
+  }
+  #close {
+    width: 30px;
+    height: 30px;
+    padding: 14px;
+  }
+}
+@media screen and (min-width: 701px) {
+  body {
+    padding: 20px;
+  }
+  section {
+    max-width: 1000px;
+  }
+  nav button {
+    padding: 30px;
+    font-size: 20px;
+  }
+  .tab_content {
+    padding: 60px 30px;
+  }
+  .tab_content .text {
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .tab_content .text .left {
+    display: flex;
+    width: 80%;
+  }
+  .tab_content .text .right {
+    display: flex;
+    width: 15%;
+    justify-content: flex-end;
+  }
+  .tab_content .text .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  .tab_content .text .hour,
+  .tab_content .text .language {
+    width: 50%;
+    text-align: right;
+  }
+  .tab_content .text .hour {
+    display: none;
+  }
+  #gallery .gallery_inner {
+    display: flex;
+    gap: 20px;
+  }
+  #gallery #filters {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+  }
+  #gallery #filters button {
+    padding: 10px;
+    font-size: 16px;
+    text-align: left;
+  }
+  #gallery #filters button .check {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  #gallery #img_container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 4px;
+    overflow: scroll;
+    width: calc(100% - 200px);
+    height: 77vh;
+    border: 1px solid #0f0;
+  }
+  #gallery .img_box {
+    height: 210px;
+  }
+  .controls {
+    gap: 6px;
+  }
+  .controls #prev,
+  .controls #next {
+    width: 40px;
+    height: 40px;
+    padding: 14px;
+  }
+  .controls #download {
+    padding: 14px;
+  }
+  #close {
+    width: 30px;
+    height: 30px;
+    padding: 14px;
+  }
+}
+@media screen and (min-width: 901px) {
+  nav button {
+    padding: 30px 40px;
+    font-size: 24px;
+  }
+  .tab_content .text .hour {
+    display: block;
+  }
+  #gallery #filters {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+  }
+  #gallery #filters button {
+    padding: 10px;
+    font-size: 20px;
+  }
+  #gallery #img_container {
+    grid-template-columns: repeat(3, 1fr);
+    width: calc(100% - 220px);
+  }
+  #gallery .img_box {
+    height: 220px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section {
+    max-width: 1600px;
+  }
+  nav button {
+    padding: 30px 40px;
+    font-size: 24px;
+  }
+  .tab_content {
+    padding: 60px 40px;
+  }
+  .tab_content .text {
+    padding: 30px;
+  }
+  #gallery .gallery_inner {
+    gap: 20px;
+  }
+  #gallery #filters {
+    width: 240px;
+  }
+  #gallery #filters button {
+    padding: 10px 20px;
+  }
+  #gallery #img_container {
+    grid-template-columns: repeat(4, 1fr);
+    width: calc(100% - 240px);
+  }
+  #gallery .img_box {
+    height: 240px;
+  }
+  .controls {
+    gap: 6px;
+  }
+  .controls #prev,
+  .controls #next {
+    width: 40px;
+    height: 40px;
+    padding: 14px;
+  }
+  .controls #download {
+    padding: 14px;
+  }
+  #close {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1420px) {
+  #gallery .img_box {
+    height: 300px;
+  }
+}/*# sourceMappingURL=new.css.map */

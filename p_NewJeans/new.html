@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
+"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/2e471157d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/bass.css" />
+    <link rel="stylesheet" href="./css/new.css" />
+
+  </head>
+  <body>
+    <section id="intro"></section>
+    <section id="contents_container">
+      <nav>
+        <button data-tab="mv" >MV Track List</button>
+        <button data-tab="gallery" class="on">Gallery & Download</button>
+        <button data-tab="goods">Goods</button>
+      </nav>
+      <div id="content">
+        <div id="mv" data-tab="mv" class="tab_content">
+          <ul>
+            <li>
+              <div class="text">
+                <div class="left">
+                  <span class="icon">+</span>
+                  <span class="title">'Bubble Gum' Official MV</span>
+                </div>
+                <div class="right">
+                  <span class="hour">3:41</span>
+                  <span class="language">KOR</span>
+                </div>
+              </div>
+              <div class="video_container">
+                <div class="video">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/ft70sAYrFyY?si=32xqsQ41LH8PySp5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="text">
+                <div class="left">
+                  <span class="icon">+</span>
+                  <span class="title">'How Sweet' Official MV</span>
+                </div>
+                <div class="right">
+                  <span class="hour">4:02</span>
+                  <span class="language">KOR</span>
+                </div>
+              </div>
+              <div class="video_container">
+                <div class="video">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/Q3K0TOvTOno?si=ToYEGYk03FHUrHL3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="text">
+                <div class="left">
+                  <span class="icon">+</span>
+                  <span class="title">'Supernatural' Official MV (Part.1)</span>
+                </div>
+                <div class="right">
+                  <span class="hour">3:11</span>
+                  <span class="language">JPN</span>
+                </div>
+              </div>
+              <div class="video_container">
+                <div class="video">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/ZncbtRo7RXs?si=vF0z_elhnRU_mJfd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="text">
+                <div class="left">
+                  <span class="icon">+</span>
+                  <span class="title">'Supernatural' Official MV (Part.2)</span>
+                </div>
+                <div class="right">
+                  <span class="hour">3:11</span>
+                  <span class="language">KOR</span>
+                </div>
+              </div>
+              <div class="video_container">
+                <div class="video">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/A4S8zl50AdM?si=U8Dt-V0w6LW6vFH1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="text">
+                <div class="left">
+                  <span class="icon">+</span>
+                  <span class="title">'Right Now' Official MV</span>
+                </div>
+                <div class="right">
+                  <span class="hour">2:55</span>
+                  <span class="language">JPN</span>
+                </div>
+              </div>
+              <div class="video_container">
+                <div class="video">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/m6pTbEz4w3o?si=QNOTQGlpBqxxPBiB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- gallery -->
+        <div id="gallery" data-tab="gallery" class="tab_content on">
+          <div class="gallery_inner">
+            <div id="filters">
+              <button data-filter="all" class="on"><span class="check"></span>All</button>
+              <button data-filter="howsweet"><span class="check"></span>How Sweet</button>
+              <button data-filter="bubblegum"><span class="check"></span>BubbleGum</button>
+              <button data-filter="supernatural"><span class="check"></span>Supernatural</button>
+              <!-- <button data-filter="rightnow"><span class="check"></span>Right Now</button> -->
+            </div>
+            <div id="img_container"></div>
+          </div>
+        </div>
+        <!-- goods -->
+        <div id="goods" data-tab="goods" class="tab_content"></div>
+      </div>
+      <div class="modal hidden">
+        <button id="close" aria-label="닫기"><span></span></button>
+        <div class="modal_imgBox">
+          <img id="modal_img" src="" alt="확대한 이미지" />
+        </div>
+        <div class="controls">
+          <button id="prev"><span></span></button>
+          <button id="next"><span></span></button>
+          <a id="download" href="" download aria-label="이미지 다운로드"
+            ><span></span>Download</a
+          >
+        </div>
+      </div>
+
+    </section>
+
+    <script type="module" src="./script/new.js"></script>
+  </body>
+</html>

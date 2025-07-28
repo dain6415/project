@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>간단 이미지 뷰어 & 필터</title>
+<style>
+  body { font-family: sans-serif; margin: 0; padding: 20px; }
+  #filters button { margin-right: 10px; padding: 5px 10px; cursor: pointer; }
+  .gallery { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .gallery img { width: 150px; cursor: pointer; border-radius: 4px; }
+  #modal {
+    display: none; /* 숨김 */
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex; justify-content: center; align-items: center;
+  }
+  #modal img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+  }
+  #modal.close-btn {
+    position: absolute;
+    top: 20px; right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div id="filters">
+  <button data-filter="all">전체보기</button>
+  <button data-filter="bubblegum">BubbleGum</button>
+  <button data-filter="howsweet">HowSweet</button>
+</div>
+
+<div class="gallery"></div>
+
+<div id="modal">
+  <span id="close" style="position:absolute; top:20px; right:20px; color:white; font-size:30px; cursor:pointer;">✕</span>
+  <img src="" alt="큰 이미지" />
+</div>
+
+<script>
+  // 이미지 목록과 멤버 구분
+  const images = [];
+  for(let i=1; i<=5; i++) {
+    const n = String(i).padStart(2, '0');
+    images.push({src:`./img/photo/how_sweet_img/NJ_BubbleGum_${n}.jpg`, member:'bubblegum'});
+    images.push({src:`./img/photo/how_sweet_img/NJ_HowSweet_${n}.jpg`, member:'howsweet'});
+  }
+
+  const gallery = document.querySelector('.gallery');
+  const modal = document.getElementById('modal');
+  const modalImg = modal.querySelector('img');
+  const closeBtn = document.getElementById('close');
+  const filters = document.getElementById('filters');
+
+  let filteredImages = images; // 현재 필터된 이미지 배열
+
+  // 갤러리 렌더링 함수
+  function renderGallery(list) {
+    gallery.innerHTML = '';
+    list.forEach((imgObj, idx) => {
+      const img = document.createElement('img');
+      img.src = imgObj.src;
+      img.alt = imgObj.member;
+      img.addEventListener('click', () => {
+        modalImg.src = imgObj.src;
+        modal.style.display = 'flex';
+      });
+      gallery.appendChild(img);
+    });
+  }
+
+  // 필터 버튼 클릭 이벤트
+  filters.addEventListener('click', e => {
+    if(e.target.tagName !== 'BUTTON') return;
+    const filter = e.target.dataset.filter;
+    if(filter === 'all') filteredImages = images;
+    else filteredImages = images.filter(img => img.member === filter);
+    renderGallery(filteredImages);
+  });
+
+  // 모달 닫기
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    modalImg.src = '';
+  });
+
+  // 초기 렌더링
+  renderGallery(images);
+</script>
+
+</body>
+</html>

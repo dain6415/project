@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JetBrains Mono 테스트</title>
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
+"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      @font-face {
+        font-family: "JetBrains Mono";
+        src: url("/font/font_file/JetBrainsMono-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      body {
+        font-family: "JetBrains Mono", monospace;
+        background: #111;
+        color: #1e96ff;
+        padding: 40px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <section id="intro"></section>
+    <section id="contents_container">
+      <nav>
+        <ul>
+          <button data-tab="mv">MV Track List</button>
+          <button data-tab="gallery">Gallery & Download</button>
+          <button data-tab="goods">Goods</button>
+        </ul>
+      </nav>
+      <div id="filters">
+        <button data-filter="all">all</button>
+        <button data-filter="howsweet">How Sweet</button>
+        <button data-filter="bubblegum">BubbleGum</button>
+        <button data-filter="supernatural">Supernatural</button>
+        <button data-filter="rightnow">Right Now</button>
+      </div>
+
+      <div id="gallery"></div>
+
+      <div class="modal hidden">
+        <button id="close" aria-label="닫기">close</button>
+        <div class="modal_imgBox">
+          <img id="modal_img" src="" alt="확대한 이미지" />
+        </div>
+        <div class="controls">
+          <button id="prev">이전</button>
+          <button id="next">다음</button>
+          <a id="download" href="" download aria-label="이미지 다운로드"
+            >다운로드</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <script src="./script/new.js"></script>
+  </body>
+</html>

@@ -393,7 +393,8 @@ nav .on {
     width: 30px;
   }
   .top_bar #clock {
-    width: 50px;
+    width: 40px;
+    border: 1px solid #f00;
   }
   section#contents_container {
     border: 0px;

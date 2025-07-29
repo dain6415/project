@@ -56,10 +56,10 @@ body {
   color: var(--main-color);
   /* color: #c9e6ff; */
   /* text-shadow: 0 0 5px #1e96ff, 0 0 10px #1e96ff, 0 0 10px #1e96ff, 0 0 10px #1e96ff; */
+  line-height: 1.2;
+  letter-spacing: -1.2px;
   p {
     font-size: 10px;
-    line-height: 1.2;
-    letter-spacing: -.6px;
   }
 }
 .neon{

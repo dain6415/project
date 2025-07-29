@@ -18,12 +18,27 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
     <link rel="stylesheet" href="./css/new.css" />
   </head>
   <body>
+    <div class="top_bar">
+      <div class="left">
+        <div class="telco">
+          <img src="./img/t.svg" alt="">
+        </div>
+        <!-- <div class="music">
+          <img src="./img/배터리.svg" alt="">
+        </div> -->
+      </div>
+      <div class="right">
+        <div class="batt"><img src="./img/배터리.svg" alt=""></div>
+        <div id="clock"></div>
+      </div>
+    </div>
     <section id="intro"></section>
     <section id="contents_container">
       <nav>
-        <button data-tab="mv">MV Track List</button>
-        <button data-tab="gallery" class="on">Gallery</button>
+        <button data-tab="mv" class="on">MV Track List</button>
+        <button data-tab="gallery" class="">Gallery</button>
         <button data-tab="goods">Goods</button>
+        <div class="down"></div>
       </nav>
       <div id="content">
         <div id="mv" data-tab="mv" class="tab_content on">
@@ -201,17 +216,17 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
     <div class="footer">
       <div class="left">
         <!-- <p class="artist">NewJeans</p> -->
-        <!-- <p class="copyright">&copy;2024 ADOR. All Rights Reserved.</p> -->
+        <p class="cmp">ADOR</p>
         <p class="copyright">
           This is a non-commercial redesign created for portfolio
           purposes. All images and content &copy; ADOR. Website design by Dain Hong.
         </p>
       </div>
       <div class="sns">
-        <a href="" class="icon_box" target="_blank"><img src="" alt="" /></a>
-        <a href="" class="icon_box" target="_blank"><img src="" alt="" /></a>
-        <a href="" class="icon_box" target="_blank"><img src="" alt="" /></a>
-        <a href="" class="icon_box" target="_blank"><img src="" alt="" /></a>
+        <a href="" class="icon_box" target="_blank"><img src="./img/icon/sns_f.svg" alt="" /></a>
+        <a href="" class="icon_box" target="_blank"><img src="./img/icon/sns_x.svg" alt="" /></a>
+        <a href="" class="icon_box" target="_blank"><img src="./img/icon/sns_in.svg" alt="" /></a>
+        <a href="" class="icon_box" target="_blank"><img src="./img/icon/sns_you.svg" alt="" /></a>
       </div>
     </div>
 

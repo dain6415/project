@@ -21,4 +21,21 @@ window.addEventListener("load", function () {
       btn.classList.add("on");
     });
   });
+
+  
+  function getTime(){
+    const clock = document.getElementById('clock');
+
+    const time = new Date();
+    let hour = time.getHours();
+    const minutes = time.getMinutes().toString().padStart(2, "0");
+
+    hour = hour % 12;
+    hour = hour === 0 ? 12 : hour; 
+    
+    clock.innerHTML = hour + ":" + minutes;
+  }
+
+  getTime();
+  setInterval(getTime, 1000);
 });

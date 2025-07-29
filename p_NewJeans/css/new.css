@@ -179,6 +179,11 @@ nav .on {
   display: grid;
   justify-content: center;
   overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+#goods #goods_img_container ::-webkit-scrollbar {
+  display: none;
 }
 #goods .img_box {
   display: flex;
@@ -186,7 +191,6 @@ nav .on {
   align-items: center;
   justify-content: center;
   position: relative;
-  cursor: pointer;
   background: #eee;
 }
 #goods .img_box img {
@@ -194,6 +198,26 @@ nav .on {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+#goods .allItems_link_btn {
+  display: block;
+  position: relative;
+  color: var(--main-color);
+  text-align: center;
+  font-weight: 500;
+}
+#goods .allItems_link_btn span {
+  margin-right: 10px;
+}
+#goods .allItems_link_btn:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
 }
 
 .modal {
@@ -481,12 +505,17 @@ nav .on {
     gap: 4px;
     height: 77vh;
   }
+  #goods .allItems_link_btn {
+    padding: 12px 14px;
+    font-size: 18px;
+    border-top: 2px solid var(--main-color);
+  }
   .footer {
     flex-direction: column;
-    margin-top: 10px;
     padding: 10px 14px;
     border-left: 0;
     border-right: 0;
+    border-bottom: 0;
   }
   .footer .left {
     flex-direction: column;
@@ -499,8 +528,8 @@ nav .on {
     margin-bottom: 4px;
   }
   .footer .sns .icon_box {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     padding: 8px;
   }
 }
@@ -623,9 +652,14 @@ nav .on {
     padding: 14px;
   }
   #goods #goods_img_container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 4px;
-    height: 750px;
+  }
+  #goods .allItems_link_btn {
+    padding: 20px 30px;
+    font-size: 20px;
+    border-top: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
   }
   .footer {
     margin-top: 20px;
@@ -691,7 +725,7 @@ nav .on {
     max-width: 1600px;
   }
   nav button {
-    padding: 30px 40px;
+    padding: 30px 80px;
     font-size: 24px;
   }
   .tab_content {
@@ -716,13 +750,9 @@ nav .on {
   #gallery .img_box {
     height: 240px;
   }
-  #goods #goods_img_container {
-    grid-template-columns: repeat(5, 1fr);
-  }
 }
 @media screen and (min-width: 1520px) {
   #gallery #gallery_img_container {
-    grid-template-columns: repeat(5, 1fr);
     width: calc(100% - 240px);
   }
   #gallery .img_box {

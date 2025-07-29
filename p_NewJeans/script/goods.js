@@ -1,5 +1,5 @@
 export function goods (){
-  const goods = Array.from({ length: 30 }, (_, i) => {
+  const goods = Array.from({ length: 8 }, (_, i) => {
     const num = String(i + 1).padStart(2, "0");
     return {
       src: `./img/goods/NJ_goods_${num}.png`,

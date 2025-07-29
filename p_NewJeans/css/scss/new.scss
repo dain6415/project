@@ -7,7 +7,7 @@
   .left,
   .right {
     display: flex;
-    gap: 10px;
+    gap: 2px;
     div{
       display: flex;
       justify-content: center;
@@ -518,7 +518,7 @@ nav {
     }
     .allItems_link_btn{
       padding: 12px 14px;
-      font-size: 18px;
+      font-size: 14px;
       border-top: 2px solid var(--main-color);
     }
   }

@@ -8,7 +8,7 @@
 .top_bar .left,
 .top_bar .right {
   display: flex;
-  gap: 10px;
+  gap: 2px;
 }
 .top_bar .left div,
 .top_bar .right div {
@@ -507,7 +507,7 @@ nav .on {
   }
   #goods .allItems_link_btn {
     padding: 12px 14px;
-    font-size: 18px;
+    font-size: 14px;
     border-top: 2px solid var(--main-color);
   }
   .footer {

@@ -176,7 +176,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
           </ul>
         </div>
         <!-- gallery -->
-        <div id="gallery" data-tab="gallery" class="tab_content">
+        <div id="gallery" data-tab="gallery" class="tab_content on">
           <div class="gallery_inner">
             <div id="filters">
               <button data-filter="all" class="on">
@@ -197,14 +197,17 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
           </div>
         </div>
         <!-- goods -->
-        <div id="goods" data-tab="goods" class="tab_content on">
+        <div id="goods" data-tab="goods" class="tab_content">
+          <div id="goods_img_container"></div>
           <div class="goods_inner">
-            <div id="goods_img_container"></div>
           </div>
         </div>
       </div>
       <div class="modal hidden">
-        <button id="close" aria-label="닫기"><span></span></button>
+        <div class="modal_top_bar">
+          <p>NJ_PHODO_IMAGE.jpg</p>
+          <button id="close" aria-label="닫기"><span></span></button>
+        </div>
         <div class="modal_imgBox">
           <img id="modal_img" src="" alt="확대한 이미지" />
         </div>

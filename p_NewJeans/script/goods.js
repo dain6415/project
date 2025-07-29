@@ -20,6 +20,7 @@ export function goods (){
 
       const img = document.createElement("img");
       img.src = imgObj.src;
+      img.loading = "lazy";
       img.dataset.index = i;
       img.alt = imgObj.member;
 

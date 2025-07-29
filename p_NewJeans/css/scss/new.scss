@@ -20,7 +20,7 @@ body {
   }
 }
 .top_bar {
-  display: none;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
@@ -512,7 +512,9 @@ nav {
     }
   }
   #intro {
+    height: calc(100vh - 40px);
     .img_box {
+      top: 40%;
       width: 140%;
     }
   }

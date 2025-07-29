@@ -21,7 +21,7 @@ body #content .tab_content.on {
 }
 
 .top_bar {
-  display: none;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
@@ -500,7 +500,11 @@ nav .on {
   nav .on::before {
     width: 10px;
   }
+  #intro {
+    height: calc(100vh - 40px);
+  }
   #intro .img_box {
+    top: 40%;
     width: 140%;
   }
   #playlist {

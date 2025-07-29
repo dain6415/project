@@ -24,20 +24,66 @@ window.addEventListener("load", function () {
     });
   });
 
-  
-  function getTime(){
-    const clock = document.getElementById('clock');
+  function getTime() {
+    const clock = document.getElementById("clock");
 
     const time = new Date();
     let hour = time.getHours();
     const minutes = time.getMinutes().toString().padStart(2, "0");
 
     hour = hour % 12;
-    hour = hour === 0 ? 12 : hour; 
-    
+    hour = hour === 0 ? 12 : hour;
+
     clock.innerHTML = hour + ":" + minutes;
   }
-
   getTime();
   setInterval(getTime, 1000);
+
+  const playList = document.querySelectorAll("audio");
+  let nowPlaying = 0;
+  let playing = false;
+
+  const playBtn = document.querySelector(".play");
+  const stopBtn = document.querySelector(".stop");
+  const pauseBtn = document.querySelector(".pause");
+  const nextBtn = document.querySelector(".next");
+
+  const getCurrentAudio = () => playList[nowPlaying];
+
+playBtn.addEventListener('click', () => {
+  const audio = getCurrentAudio();
+  if (!playing) {
+    audio.play().
+    playing = true;
+  }
+});
+
+pauseBtn.addEventListener('click', () => {
+  const audio = getCurrentAudio();
+  if (playing) {
+    audio.pause();
+    playing = false;
+  }
+});
+
+stopBtn.addEventListener('click', () => {
+  const audio = getCurrentAudio();
+  audio.pause();
+  audio.currentTime = 0;
+  playing = false;
+});
+
+nextBtn.addEventListener('click', () => {
+  const current = getCurrentAudio();
+  current.pause();
+  current.currentTime = 0;
+
+  nowPlaying = (nowPlaying + 1) % playList.length;
+  const next = getCurrentAudio();
+  next.play().
+  playing = true;
+
+  const title = nowPlaying === 0 ? "Supernatural" : "Right Now";
+  document.querySelector(".song").textContent = title;
+});
 });

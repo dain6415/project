@@ -77,3 +77,7 @@ button{
   /* color: var(--main-color); */
   cursor: pointer;
 }
+img{
+  vertical-align: top;
+  width: 100%;
+}

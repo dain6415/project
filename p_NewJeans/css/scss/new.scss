@@ -20,10 +20,13 @@ body {
   }
 }
 .top_bar {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   background: #000;
   border-bottom: 2px solid var(--main-color);
@@ -68,6 +71,7 @@ nav {
     }
   }
 }
+
 #mv {
   ul {
     border-top: 1px solid var(--main-color);
@@ -127,6 +131,7 @@ nav {
     }
   }
 }
+
 #gallery {
   .gallery_inner {
     display: flex;
@@ -187,54 +192,6 @@ nav {
     }
   }
 }
-#goods {
-  min-height: 0;
-  #goods_img_container {
-    display: grid;
-    justify-content: center;
-    overflow: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    ::-webkit-scrollbar {
-      display: none;
-    }
-  }
-  .img_box {
-    display: flex;
-    aspect-ratio: 1 / 1;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background: #eee;
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-  }
-  .allItems_link_btn {
-    display: block;
-    position: relative;
-    color: var(--main-color);
-    text-align: center;
-    font-weight: 500;
-    span {
-      margin-right: 10px;
-    }
-    &:hover::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.2);
-      pointer-events: none;
-    }
-  }
-}
-
 .modal {
   display: flex;
   flex-direction: column;
@@ -302,7 +259,6 @@ nav {
     }
   }
 }
-
 .modal_imgBox {
   display: flex;
   justify-content: center;
@@ -380,6 +336,55 @@ nav {
     }
   }
 }
+
+#goods {
+  min-height: 0;
+  #goods_img_container {
+    display: grid;
+    justify-content: center;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .img_box {
+    display: flex;
+    aspect-ratio: 1 / 1;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #eee;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .allItems_link_btn {
+    display: block;
+    position: relative;
+    color: var(--main-color);
+    text-align: center;
+    font-weight: 500;
+    span {
+      margin-right: 10px;
+    }
+    &:hover::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      pointer-events: none;
+    }
+  }
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -403,6 +408,58 @@ nav {
   }
 }
 
+#playlist {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  .play_container {
+    display: flex;
+    align-items: center;
+    .play_view{
+      display: flex;
+      align-items: center;
+    }
+    .cd_icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      width: 38px;
+      height: 38px;
+      margin-right: 10px;
+      img {
+        animation: spin 10s linear infinite;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+    .play_song {
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 20px;
+    }
+    .btns {
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      li {
+        border: 1px solid var(--main-color);
+        box-sizing: content-box;
+        // pointer-events: none;
+      }
+    }
+  }
+}
+
 // phone ------------------------------------------
 @media screen and (max-width: 700px) {
   .top_bar {
@@ -416,6 +473,9 @@ nav {
       font-size: 16px;
     }
   }
+  main {
+    margin-top: 40px;
+  }
   section {
     &#contents_container {
       border: 0px;
@@ -424,6 +484,7 @@ nav {
   nav {
     flex-direction: column;
     font-size: 0;
+    border-top: 2px solid var(--main-color);
     button {
       position: relative;
       padding: 12px 14px;
@@ -451,11 +512,35 @@ nav {
     }
   }
   #intro {
-    // height: calc(100vh - 40px);
-    .img_box{
+    .img_box {
       width: 140%;
     }
   }
+  #playlist {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    .play_container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      .play_view{
+        width: 100%;
+      }
+      .cd_icon {
+        width: 38px;
+        height: 38px;
+      }
+      .play_song {
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
   .tab_content {
     padding: 0;
   }
@@ -572,6 +657,13 @@ nav {
 }
 // pc -------------------------------------------------
 @media screen and (min-width: 701px) {
+  body,
+  .top_bar {
+    max-width: 1000px;
+  }
+  main {
+    margin-top: 60px;
+  }
   .top_bar {
     padding: 14px 30px;
     height: 64px;
@@ -583,12 +675,32 @@ nav {
       font-size: 20px;
     }
   }
-  body {
-    max-width: 1000px;
+  #intro {
+    height: calc(100vh - 60px);
   }
-  // #intro {
-  //   height: calc(100vh - 64px);
-  // }
+  #playlist {
+    width: 100%;
+    .play_container {
+      justify-content: center;
+      .cd_icon {
+        width: 38px;
+        height: 38px;
+        margin-right: 10px;
+      }
+      .play_song {
+        width: 160px;
+        p {
+          font-size: 16px;
+        }
+      }
+      .btns {
+        margin-left: 24px;
+        li {
+          width: 60px;
+        }
+      }
+    }
+  }
   nav {
     justify-content: center;
     font-size: 0;
@@ -750,6 +862,7 @@ nav {
     padding: 14px 3px;
   }
   nav {
+    justify-content: flex-start;
     button {
       padding: 30px 40px;
       font-size: 24px;
@@ -786,7 +899,8 @@ nav {
 }
 // ---------------------------------------------------
 @media screen and (min-width: 1200px) {
-  body {
+  body,
+  .top_bar {
     max-width: 1600px;
   }
   nav {
@@ -799,6 +913,11 @@ nav {
     padding: 60px 40px;
     .text {
       padding: 30px;
+    }
+  }
+  #playlist {
+    .play_container {
+      justify-content: flex-end;
     }
   }
   #gallery {

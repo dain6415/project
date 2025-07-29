@@ -16,11 +16,11 @@ $(".close").click(function () {
 //item5 노래재생
 $(document).ready(function () {
   const songList = $("audio"); 
-  let nowPlaying = 0;
-  let playing = false;
+  let nowPlaying = 0; // 현재 재생 중인 인덱스 번호
+  let playing = false; // 재생 여부 상태
 
   songList.each(function () {
-    this.loop = false; 
+    this.loop = false; // 처음 곡만 루프
   });
   songList.get(nowPlaying).loop = true;
 

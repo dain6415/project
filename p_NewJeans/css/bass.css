@@ -54,16 +54,23 @@ body {
   font-family: "JetBrains Mono", monospace;
   font-weight: 300;
   color: var(--main-color);
+  /* color: #c9e6ff; */
+  /* text-shadow: 0 0 5px #1e96ff, 0 0 10px #1e96ff, 0 0 10px #1e96ff, 0 0 10px #1e96ff; */
   p {
     font-size: 10px;
     line-height: 1.2;
-    letter-spacing: -2px;
+    letter-spacing: -.6px;
   }
+}
+.neon{
+  display: none;
+  color: #c9e6ff;
+  text-shadow: 0 0 5px #82c4ff, 0 0 10px #82c4ff, 0 0 20px #1e96ff, 0 0 30px #1e96ff, 0 0 40px #1e96ff, 0 0 55px #1e96ff, 0 0 75px #1e96ff;
 }
 button{
   all: unset;
   font-family: "JetBrains Mono";
   font-weight: 200;
-  color: var(--main-color);
+  /* color: var(--main-color); */
   cursor: pointer;
 }

@@ -3,7 +3,8 @@ section {
   width: 100%;
   margin: auto;
   &#contents_container {
-    border: 2px solid var(--main-color);
+    border-top: 2px solid var(--main-color);
+    border-bottom: none;
   }
   #content {
     border-top: 2px solid var(--main-color);
@@ -23,7 +24,7 @@ nav {
   button {
     display: inline-block;
     background: none;
-    color: var(--main-color);
+    // color: var(--main-color);
     font-size: 24px;
     border-right: 2px solid var(--main-color);
   }
@@ -280,7 +281,7 @@ nav {
   }
   #download {
     text-decoration: none;
-    color: #000;
+    // color: #000;
     background: var(--main-color);
     display: flex;
     justify-content: center;
@@ -289,6 +290,24 @@ nav {
       font-weight: bold;
       background: #0466bc;
     }
+  }
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: auto;
+  border-top: 2px solid var(--main-color);
+  background: var(--main-color);
+  // color: #000;
+  width: 100%;
+  p{font-size: 14px;}
+  .left{
+    width: 69%;
+  }
+  .artist,
+  .cmp{
+    font-weight: bold;
   }
 }
 
@@ -315,7 +334,7 @@ nav {
   }
   #mv{
     .text {
-      padding: 20px 14px;
+      padding: 10px 14px;
       width: 100%;
       .left {
         display: flex;
@@ -323,6 +342,7 @@ nav {
       }
       .title{
         white-space: wrap;
+        font-size: 16px;
       }
       .right {
         display: none;
@@ -358,7 +378,7 @@ nav {
       height: 77vh;
     }
     .img_box {
-      height: 160px;
+      height: 150px;
     }
   }
   .controls {
@@ -384,7 +404,8 @@ nav {
   body {
     padding: 20px;
   }
-  section {
+  section,
+  .footer {
     max-width: 1000px;
   }
   nav {
@@ -475,6 +496,13 @@ nav {
     height: 30px;
     padding: 14px;
   }
+  .footer{
+    margin-top: 20px;
+    padding: 10px;
+    p{
+      font-size: 14px;
+    }
+  }
 }
 // -------------------------------------------------
 @media screen and (min-width: 901px) {
@@ -510,7 +538,8 @@ nav {
 }
 // ---------------------------------------------------
 @media screen and (min-width: 1200px) {
-  section {
+  section,
+  .footer {
     max-width: 1600px;
   }
   nav {
@@ -561,7 +590,7 @@ nav {
   }
 }
 // ---------
-@media screen and (min-width: 1420px) {
+@media screen and (min-width: 1520px) {
   #gallery {
     #img_container {
       grid-template-columns: repeat(5, 1fr);

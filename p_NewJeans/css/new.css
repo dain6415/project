@@ -10,6 +10,16 @@
   display: flex;
   gap: 10px;
 }
+.top_bar .left div,
+.top_bar .right div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top_bar .left div img,
+.top_bar .right div img {
+  width: 100%;
+}
 
 body {
   width: 100%;
@@ -354,6 +364,13 @@ nav .on {
   .top_bar {
     padding: 8px 10px;
   }
+  .top_bar .telco,
+  .top_bar .batt {
+    width: 30px;
+  }
+  .top_bar #clock {
+    width: 50px;
+  }
   section#contents_container {
     border: 0px;
   }
@@ -362,14 +379,29 @@ nav .on {
     font-size: 0;
   }
   nav button {
+    position: relative;
     padding: 20px 14px;
     font-size: 16px;
     text-align: left;
+  }
+  nav button::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0px;
+    height: 2px;
+    background: #000;
   }
   nav .on {
     padding-left: 30px;
     background: var(--main-color);
     color: #000;
+    text-decoration: none;
+  }
+  nav .on::before {
+    width: 10px;
   }
   .tab_content {
     padding: 0;
@@ -423,7 +455,7 @@ nav .on {
     height: 150px;
   }
   #modal_img {
-    max-width: 100%;
+    max-width: 95%;
     max-height: 90%;
   }
   .controls {
@@ -474,7 +506,14 @@ nav .on {
 }
 @media screen and (min-width: 701px) {
   .top_bar {
-    padding: 8px 30px;
+    padding: 14px 30px;
+  }
+  .top_bar .telco,
+  .top_bar .batt {
+    width: 40px;
+  }
+  .top_bar #clock {
+    width: 50px;
   }
   body {
     max-width: 1000px;

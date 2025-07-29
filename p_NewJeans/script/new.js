@@ -2,7 +2,7 @@ import { mv } from "./mv.js";
 import { gallery } from "./gallery.js";
 import { goods } from "./goods.js";
 
-window.addEventListener("load", function () {
+window.addEventListener("DOMContentLoaded", function () {
   mv();
   gallery();
   goods();
@@ -80,7 +80,7 @@ nextBtn.addEventListener('click', () => {
 
   nowPlaying = (nowPlaying + 1) % playList.length;
   const next = getCurrentAudio();
-  next.play().
+  next.play();
   playing = true;
 
   const title = nowPlaying === 0 ? "Supernatural" : "Right Now";

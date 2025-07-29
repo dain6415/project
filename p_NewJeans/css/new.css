@@ -1,9 +1,34 @@
 @import "../bass.css";
+body {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+body #contents_container {
+  border-top: 2px solid var(--main-color);
+  border-bottom: none;
+}
+body #content {
+  border-top: 2px solid var(--main-color);
+  margin-top: -2px;
+  position: relative;
+}
+body #content .tab_content {
+  display: none;
+}
+body #content .tab_content.on {
+  display: block;
+}
+
 .top_bar {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background: #000;
   border-bottom: 2px solid var(--main-color);
+  z-index: 1;
 }
 .top_bar .left,
 .top_bar .right {
@@ -21,26 +46,6 @@
   width: 100%;
 }
 
-body {
-  width: 100%;
-  margin: auto;
-}
-body#contents_container {
-  border-top: 2px solid var(--main-color);
-  border-bottom: none;
-}
-body #content {
-  border-top: 2px solid var(--main-color);
-  margin-top: -2px;
-  position: relative;
-}
-body #content .tab_content {
-  display: none;
-}
-body #content .tab_content.on {
-  display: block;
-}
-
 nav {
   display: flex;
 }
@@ -54,7 +59,18 @@ nav .on {
 }
 
 #intro {
-  display: none;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+#intro .img_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#intro .img_box img {
+  width: 100%;
 }
 
 #mv ul {
@@ -386,6 +402,7 @@ nav .on {
 
 @media screen and (max-width: 700px) {
   .top_bar {
+    height: 40px;
     padding: 8px 10px;
   }
   .top_bar .telco,
@@ -426,6 +443,9 @@ nav .on {
   }
   nav .on::before {
     width: 10px;
+  }
+  #intro .img_box {
+    width: 140%;
   }
   .tab_content {
     padding: 0;
@@ -536,6 +556,7 @@ nav .on {
 @media screen and (min-width: 701px) {
   .top_bar {
     padding: 14px 30px;
+    height: 64px;
   }
   .top_bar .telco,
   .top_bar .batt {

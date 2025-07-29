@@ -41,7 +41,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
         <div class="down"></div>
       </nav>
       <div id="content">
-        <div id="mv" data-tab="mv" class="tab_content on">
+        <div id="mv" data-tab="mv" class="tab_content">
           <ul>
             <li>
               <div class="text">
@@ -193,11 +193,15 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
               </button>
               <!-- <button data-filter="rightnow"><span class="check"></span>Right Now</button> -->
             </div>
-            <div id="img_container"></div>
+            <div id="gallery_img_container"></div>
           </div>
         </div>
         <!-- goods -->
-        <div id="goods" data-tab="goods" class="tab_content"></div>
+        <div id="goods" data-tab="goods" class="tab_content on">
+          <div class="goods_inner">
+            <div id="goods_img_container"></div>
+          </div>
+        </div>
       </div>
       <div class="modal hidden">
         <button id="close" aria-label="닫기"><span></span></button>

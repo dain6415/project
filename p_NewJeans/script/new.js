@@ -1,9 +1,11 @@
 import { mv } from "./mv.js";
 import { gallery } from "./gallery.js";
+import { goods } from "./goods.js";
 
 window.addEventListener("load", function () {
   mv();
   gallery();
+  goods();
 
   const buttons = document.querySelectorAll("nav button");
 

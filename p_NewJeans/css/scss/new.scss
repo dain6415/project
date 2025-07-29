@@ -131,7 +131,7 @@ nav {
       }
     }
   }
-  #img_container {
+  #gallery_img_container {
     display: grid;
     justify-content: center;
     overflow: scroll;
@@ -164,6 +164,28 @@ nav {
   // .img_box:hover img {
   //   transform: scale(1.1);
   // }
+}
+#goods{
+  #goods_img_container {
+    display: grid;
+    justify-content: center;
+    overflow: scroll;
+  }
+  .img_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: #eee;
+    img {
+      vertical-align: top;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
 }
 
 .modal {
@@ -385,7 +407,7 @@ nav {
         }
       }
     }
-    #img_container {
+    #gallery_img_container {
       grid-template-columns: repeat(3, 1fr);
       justify-content: center;
       gap: 4px;
@@ -413,6 +435,16 @@ nav {
     width: 30px;
     height: 30px;
     padding: 14px;
+  }
+  #goods{
+    #goods_img_container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4px;
+      height: 77vh;
+      .img_box{
+        height: 240px;
+      }
+    }
   }
   .footer {
     flex-direction: column;
@@ -532,7 +564,7 @@ nav {
         }
       }
     }
-    #img_container {
+    #gallery_img_container {
       grid-template-columns: repeat(2, 1fr);
       justify-content: center;
       gap: 4px;
@@ -560,6 +592,16 @@ nav {
     width: 30px;
     height: 30px;
     padding: 14px;
+  }
+  #goods{
+    #goods_img_container {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      height: 77vh;
+      .img_box{
+        height: 240px;
+      }
+    }
   }
   .footer {
     margin-top: 20px;
@@ -614,12 +656,17 @@ nav {
         font-size: 20px;
       }
     }
-    #img_container {
+    #gallery_img_container {
       grid-template-columns: repeat(3, 1fr);
       width: calc(100% - 220px);
     }
     .img_box {
       height: 220px;
+    }
+  }
+  #goods{
+    #goods_img_container {
+      grid-template-columns: repeat(4, 1fr)
     }
   }
 }
@@ -650,7 +697,7 @@ nav {
         padding: 10px 20px;
       }
     }
-    #img_container {
+    #gallery_img_container {
       grid-template-columns: repeat(4, 1fr);
       width: calc(100% - 240px);
     }
@@ -674,11 +721,19 @@ nav {
     width: 40px;
     height: 40px;
   }
+  #goods{
+    #goods_img_container {
+      grid-template-columns: repeat(5, 1fr);
+      .img_box{
+        height: 280px;
+      }
+    }
+  }
 }
 // ---------
 @media screen and (min-width: 1520px) {
   #gallery {
-    #img_container {
+    #gallery_img_container {
       grid-template-columns: repeat(5, 1fr);
       width: calc(100% - 240px);
     }

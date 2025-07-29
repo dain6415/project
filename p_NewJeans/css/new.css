@@ -130,7 +130,7 @@ nav .on {
 #gallery #filters button:hover {
   background: #222;
 }
-#gallery #img_container {
+#gallery #gallery_img_container {
   display: grid;
   justify-content: center;
   overflow: scroll;
@@ -155,6 +155,27 @@ nav .on {
   pointer-events: none;
 }
 #gallery .img_box img {
+  vertical-align: top;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+#goods #goods_img_container {
+  display: grid;
+  justify-content: center;
+  overflow: scroll;
+}
+#goods .img_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: #eee;
+}
+#goods .img_box img {
   vertical-align: top;
   max-width: 100%;
   max-height: 100%;
@@ -371,7 +392,7 @@ nav .on {
     height: 20px;
     margin-right: 10px;
   }
-  #gallery #img_container {
+  #gallery #gallery_img_container {
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: 4px;
@@ -398,6 +419,14 @@ nav .on {
     width: 30px;
     height: 30px;
     padding: 14px;
+  }
+  #goods #goods_img_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    height: 77vh;
+  }
+  #goods #goods_img_container .img_box {
+    height: 240px;
   }
   .footer {
     flex-direction: column;
@@ -500,7 +529,7 @@ nav .on {
     height: 20px;
     margin-right: 10px;
   }
-  #gallery #img_container {
+  #gallery #gallery_img_container {
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     gap: 4px;
@@ -527,6 +556,14 @@ nav .on {
     width: 30px;
     height: 30px;
     padding: 14px;
+  }
+  #goods #goods_img_container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    height: 77vh;
+  }
+  #goods #goods_img_container .img_box {
+    height: 240px;
   }
   .footer {
     margin-top: 20px;
@@ -573,12 +610,15 @@ nav .on {
     padding: 10px;
     font-size: 20px;
   }
-  #gallery #img_container {
+  #gallery #gallery_img_container {
     grid-template-columns: repeat(3, 1fr);
     width: calc(100% - 220px);
   }
   #gallery .img_box {
     height: 220px;
+  }
+  #goods #goods_img_container {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -604,7 +644,7 @@ nav .on {
   #gallery #filters button {
     padding: 10px 20px;
   }
-  #gallery #img_container {
+  #gallery #gallery_img_container {
     grid-template-columns: repeat(4, 1fr);
     width: calc(100% - 240px);
   }
@@ -627,9 +667,15 @@ nav .on {
     width: 40px;
     height: 40px;
   }
+  #goods #goods_img_container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  #goods #goods_img_container .img_box {
+    height: 280px;
+  }
 }
 @media screen and (min-width: 1520px) {
-  #gallery #img_container {
+  #gallery #gallery_img_container {
     grid-template-columns: repeat(5, 1fr);
     width: calc(100% - 240px);
   }

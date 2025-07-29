@@ -21,9 +21,9 @@ export function gallery() {
     };
   });
 
-  const imgs = [...howsweet, ...bubblegum, ...supernatural];
+  const galleryImgs = [...howsweet, ...bubblegum, ...supernatural];
 
-  const galleryImgContainer = document.getElementById("img_container");
+  const galleryImgContainer = document.getElementById("gallery_img_container");
   const modal = document.querySelector(".modal");
   const modalImgBox = document.querySelector(".modal_imgBox");
   const modalImg = document.getElementById("modal_img");
@@ -32,7 +32,7 @@ export function gallery() {
   const prevBtn = document.getElementById("prev");
   const nextBtn = document.getElementById("next");
 
-  let filteredImages = imgs;
+  let filteredImages = galleryImgs;
   let currentIndex = 0;
 
   function renderGallery(list) {
@@ -98,7 +98,7 @@ export function gallery() {
     else if (e.key === "Escape") hideModal();
   });
 
-  renderGallery(imgs);
+  renderGallery(galleryImgs);
 
   const filterButtons = document.querySelectorAll("#filters button");
 
@@ -110,9 +110,9 @@ export function gallery() {
       btn.classList.add("on");
   
       if (selected === "all") {
-        filteredImages = imgs;
+        filteredImages = galleryImgs;
       } else {
-        filteredImages = imgs.filter((img) => img.member === selected);
+        filteredImages = galleryImgs.filter((img) => img.member === selected);
       }
   
       renderGallery(filteredImages);

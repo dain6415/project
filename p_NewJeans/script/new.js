@@ -42,7 +42,6 @@ window.addEventListener("DOMContentLoaded", function () {
   const playList = document.querySelectorAll("audio");
   let nowPlaying = 0;
   let playing = false;
-  let currentBtn = null;
   
   const playBtn = document.querySelector(".play");
   const pauseBtn = document.querySelector(".pause");
@@ -58,20 +57,20 @@ window.addEventListener("DOMContentLoaded", function () {
     if (!img) return;
   
     let src = img.getAttribute("src");
-  
 
-    if (isActive && !src.includes("_bg")) {
-      img.setAttribute("src", src.replace(".svg", "_bg.svg"));
-    }
-
-    if (!isActive && src.includes("_bg")) {
-      img.setAttribute("src", src.replace("_bg", ""));
+    if (isActive) {
+      if (!src.includes("_bg")) {
+        img.setAttribute("src", src.replace(".svg", "_bg.svg"));
+      }
+    } else {
+      if (src.includes("_bg")) {
+        img.setAttribute("src", src.replace("_bg", ""));
+      }
     }
   }
   
   function updateActiveButton(targetBtn) {
     btnList.forEach((btn) => setButtonImage(btn, btn === targetBtn));
-    currentBtn = targetBtn;
   }
   
   playBtn.addEventListener("click", () => {

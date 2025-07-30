@@ -31,12 +31,12 @@ body #content .tab_content.on {
   width: 100%;
   background: #000;
   border-bottom: 2px solid var(--main-color);
-  z-index: 1;
+  z-index: 10;
 }
 .top_bar .left,
 .top_bar .right {
   display: flex;
-  gap: 2px;
+  gap: 4px;
 }
 .top_bar .left div,
 .top_bar .right div {
@@ -44,9 +44,13 @@ body #content .tab_content.on {
   justify-content: center;
   align-items: center;
 }
-.top_bar .left div img,
-.top_bar .right div img {
-  width: 100%;
+.top_bar .left .telco img,
+.top_bar .left .batt img,
+.top_bar .left .music img,
+.top_bar .right .telco img,
+.top_bar .right .batt img,
+.top_bar .right .music img {
+  height: 100%;
 }
 
 nav {
@@ -459,7 +463,7 @@ nav .on {
   }
   .top_bar .telco,
   .top_bar .batt {
-    width: 30px;
+    height: 30px;
   }
   .top_bar #clock {
     font-size: 16px;
@@ -512,6 +516,7 @@ nav .on {
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
+    width: 240px;
   }
   #playlist .play_container {
     display: flex;
@@ -520,7 +525,9 @@ nav .on {
     align-items: center;
   }
   #playlist .play_container .play_view {
+    justify-content: flex-start;
     width: 100%;
+    height: 36px;
   }
   #playlist .play_container .cd_icon {
     width: 38px;
@@ -648,8 +655,9 @@ nav .on {
     height: 64px;
   }
   .top_bar .telco,
-  .top_bar .batt {
-    width: 40px;
+  .top_bar .batt,
+  .top_bar .music {
+    height: 40px;
   }
   .top_bar #clock {
     font-size: 20px;
@@ -669,7 +677,7 @@ nav .on {
     margin-right: 10px;
   }
   #playlist .play_container .play_song {
-    width: 160px;
+    width: 200px;
   }
   #playlist .play_container .play_song p {
     font-size: 16px;

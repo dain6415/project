@@ -535,8 +535,11 @@ nav {
       }
     }
     .logo_box {
-      top: 48%;
-
+      top: 10%;
+      width: 90%;
+      .logo_pc {
+        display: none;
+      }
     }
   }
   #playlist {
@@ -709,6 +712,9 @@ nav {
     }
     .logo_box{
       top: 44%;
+      .logo_mobile{
+        display: none;
+      }
     }
   }
   #playlist {

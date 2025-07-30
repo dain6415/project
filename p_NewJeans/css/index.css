@@ -525,7 +525,11 @@ nav .on {
     width: 150%;
   }
   #intro .logo_box {
-    top: 48%;
+    top: 10%;
+    width: 90%;
+  }
+  #intro .logo_box .logo_pc {
+    display: none;
   }
   #playlist {
     position: absolute;
@@ -686,6 +690,9 @@ nav .on {
   }
   #intro .logo_box {
     top: 44%;
+  }
+  #intro .logo_box .logo_mobile {
+    display: none;
   }
   #playlist {
     width: 100%;

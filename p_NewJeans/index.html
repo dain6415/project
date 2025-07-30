@@ -1,393 +1,351 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./favicon.ico" />
     <title>NewJeans</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/phone-style.css" />
-    <link rel="stylesheet" href="./css/tablet-style.css" />
-    <link rel="stylesheet" href="./css/pc-style.css" />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
+"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2e471157d2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/bass.css" />
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
-
   <body>
-    <!-- <div class="menu-icon">
-    <div class="bar bar1"></div>
-    <div class="bar bar2"></div>
-    <div class="bar bar3"></div>
-  </div>
-  <div class="wrap">
-    <header class="on">
-      <h1>a</h1>
-      <p class="intro">ccccccc</p>
-      <ul class="menu">
-        <li class="on"><a href="#">aaaa</a></li>
-        <li><a href="#">aaaa</a></li>
-        <li><a href="#">aaaa</a></li>
-      </ul>
-    </header> -->
-
-    <section>
-      <article class="art1 home">
-        <div class="grid_container grup">
-          <div class="item item4 title">
-            <div class="item-text">
-              <h5>NewJeans</h5>
-              <h2>Supernatural</h2>
-            </div>
-          </div>
-          <!-- 노래 오디오 -->
-          <div class="item songs">
-            <div class="play-song flex just-sb align-c">
-              <figure><img src="./img/album-cover/cover.jpg" alt="" /></figure>
-  
-              <!-- 재생할 음악 -->
-              <audio src="./music/supernatural.mp3" preload="auto" loop></audio>
-              <audio src="./music/right-now.mp3" preload="auto" loop></audio>
-  
-              <!-- 현재 재생하고 있는 음악 목록 -->
-              <div class="now">
-                <p class="song">Supernatural</p>
-                <p class="singer">NewJeans</p>
+    <div class="top_bar">
+      <div class="left">
+        <div class="telco">
+          <img src="./img/icon/t2.svg" alt="통신" />
+        </div>
+        <div class="music">
+          <img src="./img/icon/music.svg" alt="음악">
+        </div>
+      </div>
+      <div class="right">
+        <div id="clock"></div>
+        <div class="batt"><img src="./img/icon/batt2.svg" alt="배터리" /></div>
+      </div>
+    </div>
+    <main>
+      <section id="intro">
+        <div class="img_box">
+          <img class="pc" src="./img/intro_pc.jpg" alt="슈퍼내추럴 이미지" />
+          <img class="mobile" src="./img/intro_mo.jpg" alt="슈퍼내추럴 이미지" />
+        </div>
+        <div class="logo_box">
+          <img src="./img/logo3.svg" alt="" />
+        </div>
+        <div id="playlist">
+          <div class="play_container">
+            <div class="play_view">
+              <div class="cd_icon">
+                <img src="./img/icon/cd2.svg" alt="씨디" />
               </div>
-  
-              <!-- 재생 버튼 -->
-              <div class="playbtn">
-                <ul class="flex">
-                  <li class="play">
-                    <img src="./img/music-icon/art1-icon-play.png" alt="" />
-                  </li>
-                  <li class="next">
-                    <img src="./img/music-icon/art1-icon-next.png" alt="" />
-                  </li>
-                </ul>
+              <div class="play_song">
+                <p>NewJeans - <span class="song">Supernatural</span></p>
               </div>
             </div>
-          </div>
-          <!-- cd -->
-          <div class="item cd_outer">
-            <div class="cd-container">
-              <img class="cd clip" src="./img/album-cover/cd5.png" alt="" />
-            </div>
-            <div class="sticker">
-              <div class="sticker-inner"></div>
-            </div>
-          </div>
-          <div class="item fade_bg"></div>
-          <!-- text -->
-          <div class="item album_text">
-            <p>
-              INCLUDES SUPERNATURAL, WHICH REINTERPRETS THE ICONIC AD-LIBS AND
-              BRIDGES OF WORLD-FAMOUS ARTIST PHARRELL WILLIAMS' 2009 WORK 'BACK OF
-              MY MIND' WITH A SMOOTH NEW JACK SWING, AND 'RIGHT NOW', WHICH BLENDS
-              WELL WITH DRUM AND BASS GENRE BEATS.
-            </p>
-          </div>
-          <!-- barcode -->
-          <div class="item barcod">
-            <img src="img/art1-barcode.jpg" alt="" />
-          </div>
-          <div class="item copyright">
-            <div class="item-text flex align-b">
-              <p>NewJeans</p>
-              <p>&copy;2024 ADOR. All Rights Reserved.</p>
-              <p>adr0387</p>
-            </div>
-          </div>
-        </div>
+            <!-- play songs -->
+            <audio src="./music/supernatural.mp3" preload="auto" loop></audio>
+            <audio src="./music/right-now.mp3" preload="auto" loop></audio>
 
-        <!-- img's -->
-        <div class="item imgs grup">
-          <ul class="flex">
-            <li>
-              <a href="#"
-                ><img
-                  src="./img/conceptphoto/style_663d95e76d5a0-933x1400.webp"
-                  alt=""
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="./img/conceptphoto/art1-3-1.jpg" alt=""
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="./img/conceptphoto/art1-3-2.jpg" alt=""
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="./img/conceptphoto/art1-3-3.jpg" alt=""
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="./img/conceptphoto/art1-3-4.jpg" alt=""
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="./img/conceptphoto/art1-3-5.jpg" alt=""
-              /></a>
-            </li>
-          </ul>
-
-          <!-- img 클릭시 팝업창 -->
-          <div class="popup">
-            <span class="close"></span>
-            <img class="popup-contents" src="" />
-          </div>
-        </div>
-      </article>
-
-      <article class="art2 videos">
-        <div class="title-menu">
-          <ul class="flex">
-            <li class="on"><a href="#">Supernatural</a></li>
-            <li><a href="#">Right Now</a></li>
-            <!-- <li><a href="#">Behind</a></li> -->
-          </ul>
-        </div>
-        <div class="inner">
-          <div class="supernatural tab">
-            <div class="videobox">
-              <div class="video">
-                <iframe
-                  name="scene"
-                  width="940"
-                  height="529"
-                  src="https://www.youtube.com/embed/ZncbtRo7RXs?si=ot-gXEB_JFvJI3xe"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div>
-            <div class="mv-title">
-              <ul class="title-wrap">
-                <li class="on">
-                  <h2>‘Supernatural’ official MV (Part.1)</h2>
-                  <p>
-                    Producer: MIN HEE JIN<br />
-                    Music Video Director: Shin Dongle
-                  </p>
-                  <p>제작자: HYBE LABELS</p>
+            <div class="btns">
+              <ul>
+                <li>
+                  <button class="play" aria-label="재생">
+                    <img src="./img/icon/play.svg" alt="재생" />
+                  </button>
                 </li>
                 <li>
-                  <h2>‘Supernatural’ official MV (Part.2)</h2>
-                  <p>
-                    Producer: MIN HEE JIN<br />
-                    Music Video Director: Shin Dongle
-                  </p>
-                  <p>제작자: HYBE LABELS</p>
+                  <button class="stop" aria-label="멈춤">
+                    <img src="./img/icon/stop.svg" alt="멈춤" />
+                  </button>
                 </li>
                 <li>
-                  <h2>NewJeans (뉴진스) 'Supernatural' Dance Practice</h2>
+                  <button class="pause" aria-label="일시정지">
+                    <img src="./img/icon/pause.svg" alt="일시정지" />
+                  </button>
                 </li>
                 <li>
-                  <h2>
-                    NewJeans (뉴진스) 'Supernatural' Dance Practice (Fix ver.)
-                  </h2>
+                  <button class="next" aria-label="다음">
+                    <img src="./img/icon/next.svg" alt="다음" />
+                  </button>
                 </li>
               </ul>
-              <ul class="next">
-                <li class="none">
-                  <figure>
-                    <a
-                      href="https://www.youtube.com/embed/ZncbtRo7RXs?si=vsFg3aw5DoLGteFX"
-                      target="scene"
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contents_container">
+        <nav role="tablist">
+          <button role="tab" aria-selected="ture" data-tab="mv" class="on">
+            MV Track List
+          </button>
+          <button role="tab" aria-selected="false" data-tab="gallery" class="">
+            Gallery
+          </button>
+          <button role="tab" aria-selected="false" data-tab="goods">
+            Goods
+          </button>
+          <div class="down"></div>
+        </nav>
+        <div id="content">
+          <div
+            id="mv"
+            role="tabpanel"
+            aria-labelledby="tab_mv"
+            data-tab="mv"
+            class="tab_content on"
+          >
+            <ul>
+              <li>
+                <div class="text">
+                  <div class="left">
+                    <span class="icon">+</span>
+                    <span class="title">'Bubble Gum' Official MV</span>
+                  </div>
+                  <div class="right">
+                    <span class="hour">3:41</span>
+                    <span class="language">KOR</span>
+                  </div>
+                </div>
+                <div class="video_container">
+                  <div class="video">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/ft70sAYrFyY?si=32xqsQ41LH8PySp5"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="text">
+                  <div class="left">
+                    <span class="icon">+</span>
+                    <span class="title">'How Sweet' Official MV</span>
+                  </div>
+                  <div class="right">
+                    <span class="hour">4:02</span>
+                    <span class="language">KOR</span>
+                  </div>
+                </div>
+                <div class="video_container">
+                  <div class="video">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/Q3K0TOvTOno?si=ToYEGYk03FHUrHL3"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="text">
+                  <div class="left">
+                    <span class="icon">+</span>
+                    <span class="title"
+                      >'Supernatural' Official MV (Part.1)</span
                     >
-                      <img
-                        src="./img/영상/supernatural/art-super-mv1.webp"
-                        alt=""
-                      />
-                    </a>
-                    <figcaption>‘Supernatural’ official MV (Part.1)</figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <a
-                      href="https://www.youtube.com/embed/A4S8zl50AdM?si=mB0r_uxQki6qDdpu"
-                      target="scene"
-                      ><img
-                        src="./img/youtub_bg/supernatural/art-super-mv2.webp"
-                        alt=""
-                    /></a>
-                    <figcaption>‘Supernatural’ official MV (Part.2)</figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <a
-                      href="https://www.youtube.com/embed/FKHqiV-9xLA?si=6pSwoSJdzoX205hS"
-                      target="scene"
+                  </div>
+                  <div class="right">
+                    <span class="hour">3:11</span>
+                    <span class="language">JPN</span>
+                  </div>
+                </div>
+                <div class="video_container">
+                  <div class="video">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/ZncbtRo7RXs?si=vF0z_elhnRU_mJfd"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="text">
+                  <div class="left">
+                    <span class="icon">+</span>
+                    <span class="title"
+                      >'Supernatural' Official MV (Part.2)</span
                     >
-                      <img
-                        src="./img/youtub_bg/supernatural/art2-super-choreo.webp"
-                        alt=""
-                      />
-                    </a>
-                    <figcaption>
-                      NewJeans (뉴진스) 'Supernatural' Dance Practice
-                    </figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <a
-                      href="https://www.youtube.com/embed/1gUnvlQtcDY?si=guLGrc6Eb77FM8wN"
-                      target="scene"
-                      ><img
-                        src="./img/youtub_bg/supernatural/art2-super-choreo2.webp"
-                        alt=""
-                    /></a>
-                    <figcaption>
-                      NewJeans (뉴진스) 'Supernatural' Dance Practice (Fix ver.)
-                    </figcaption>
-                  </figure>
-                </li>
-              </ul>
-            </div>
+                  </div>
+                  <div class="right">
+                    <span class="hour">3:11</span>
+                    <span class="language">KOR</span>
+                  </div>
+                </div>
+                <div class="video_container">
+                  <div class="video">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/A4S8zl50AdM?si=U8Dt-V0w6LW6vFH1"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="text">
+                  <div class="left">
+                    <span class="icon">+</span>
+                    <span class="title">'Right Now' Official MV</span>
+                  </div>
+                  <div class="right">
+                    <span class="hour">2:55</span>
+                    <span class="language">JPN</span>
+                  </div>
+                </div>
+                <div class="video_container">
+                  <div class="video">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/m6pTbEz4w3o?si=QNOTQGlpBqxxPBiB"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
-          <div class="right_now tab" style="display: none">
-            <div class="videobox">
-              <div class="video">
-                <iframe
-                  name="scene2"
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/m6pTbEz4w3o?si=hj4lfzN7IJcWbzLk"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                ></iframe>
+          <!-- gallery -->
+          <div
+            id="gallery"
+            role="tabpanel"
+            aria-labelledby="tab_gallery"
+            data-tab="gallery"
+            class="tab_content"
+          >
+            <div class="gallery_inner">
+              <div id="filters">
+                <button data-filter="all" class="on">
+                  <span class="check"></span>All
+                </button>
+                <button data-filter="howsweet">
+                  <span class="check"></span>How Sweet
+                </button>
+                <button data-filter="bubblegum">
+                  <span class="check"></span>BubbleGum
+                </button>
+                <button data-filter="supernatural">
+                  <span class="check"></span>Supernatural
+                </button>
+                <!-- <button data-filter="rightnow"><span class="check"></span>Right Now</button> -->
               </div>
-            </div>
-            <div class="mv-title">
-              <ul class="title-wrap">
-                <li class="on">
-                  <h2>‘Right Now’ official MV</h2>
-                  <p>
-                    Producer: MIN HEE JIN<br />
-                    Music Video Director: Youngeum Lee
-                  </p>
-                  <p>제작자: HYBE LABELS</p>
-                </li>
-                <li>
-                  <h2>NewJeans (뉴진스) 'Right Now' Dance Practice</h2>
-                </li>
-                <li>
-                  <h2>
-                    NewJeans (뉴진스) 'Right Now' Dance Practice (Fix ver.)
-                  </h2>
-                </li>
-              </ul>
-              <ul class="next">
-                <li class="none">
-                  <figure>
-                    <a
-                      href="https://www.youtube.com/embed/m6pTbEz4w3o?si=k4UmqyzBEdIAfEME"
-                      target="scene2"
-                      ><img
-                        src="./img/youtub_bg/right_now/art2-right-mv.webp"
-                        alt=""
-                    /></a>
-                    <figcaption>‘Right Now’ official MV</figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <a
-                      href="https://www.youtube.com/embed/4xer6EPtYdw?si=kLTOjTvtsOBu_TZ7"
-                      target="scene2"
-                      ><img
-                        src="./img/youtub_bg/right_now/art2-right-choreo.webp"
-                        alt=""
-                    /></a>
-                    <figcaption>
-                      NewJeans (뉴진스) 'Right Now' Dance Practice
-                    </figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <a
-                      href="https://www.youtube.com/embed/y4Tr8LE5yV4?si=BhrH_62Rp2T5D_CQ"
-                      target="scene2"
-                      ><img
-                        src="./img/youtub_bg/right_now/art2-right-choreo2.webp"
-                        alt=""
-                    /></a>
-                    <figcaption>
-                      NewJeans (뉴진스) 'Right Now' Dance Practice (Fix ver.)
-                    </figcaption>
-                  </figure>
-                </li>
-              </ul>
+              <div id="gallery_img_container"></div>
             </div>
           </div>
-        </div>
-      </article>
-
-      <article class="art3 goods">
-        <!-- 호버하면 보이는... -->
-        <a href="" class="item item1">
-          <div class="item-text">
-            <h5 class="text-c">LINEUP</h5>
-            <h2 class="text-c">MURAKAMI & Hiroshi Fujiwara</h2>
-            <p>
-              뉴진스와 특별히 함께한 무라카미 다카시와 히로시 후지와라<br />
-              그리고 더블 싱글'Supernatural' 에디션까지<br />
-              모두 라인프렌즈 스퀘어에서 만나 보세요.
-            </p>
-          </div>
-        </a>
-        <a
-          href="https://linefriendssquare.com/products/preorder-nj-x-coller-rabbit-stringbag-snow-white-2408"
-          target="_blank"
-          class="item item2"
-        ></a>
-        <a
-          href="https://linefriendssquare.com/products/%EC%98%88%EC%95%BD%ED%8C%90%EB%A7%A4-newjeans-x-hiroshi-fujiwara-%EA%BC%B4%EB%A0%88-%EB%B0%98%EB%8B%A4%EB%82%98?_pos=1&_sid=d684a3b57&_ss=r"
-          class="item item3"
-        ></a>
-        <a href="" class="item item4"></a>
-        <a
-          href="https://linefriendssquare.com/products/%EC%98%88%EC%95%BD%ED%8C%90%EB%A7%A4-newjeans-x-hiroshi-fujiwara-%EA%BC%B4%EB%A0%88-%ED%8B%B0%EC%85%94%EC%B8%A0-ver-4-white?_pos=20&_sid=d70e44dd7&_ss=r"
-          class="item item5"
-          target="_blank"
-        ></a>
-        <a href="" class="item item6"></a>
-        <a href="" class="item item7"></a>
-        <a
-          href="https://linefriendssquare.com/products/preorder2nd-newjeans-x-hiroshi-fujiwara-coller-backpack"
-          class="item item8"
-          target="_blank"
-        ></a>
-        <a href="" class="item item9"></a>
-
-        <div class="box">
-          <div class="box-logo1">
-            <img src="./img/logo/art1-logo-13333.png" alt="" />
-          </div>
-          <div class="box-logo2">
-            <img src="./img/logo/art1-logo-12.png" alt="" />
-          </div>
-          <div class="box-logo3">
-            <img src="./img/logo/art1-logo-111.png" alt="" />
+          <!-- goods -->
+          <div
+            id="goods"
+            role="tabpanel"
+            aria-labelledby="tab_goods"
+            data-tab="goods"
+            class="tab_content"
+          >
+            <div id="goods_img_container"></div>
+            <a
+              href="https://kream.co.kr/search?tab=products&keyword=%EB%89%B4%EC%A7%84%EC%8A%A4+%EA%B5%BF%EC%A6%88&srsltid=AfmBOorWujcj-VKKTYS6Q8R97laqPQpdgRFZIHHBItvtyGjfPT31M4JB"
+              target="_blank"
+              aria-label="굿즈 사이트로 이동"
+              class="allItems_link_btn"
+              ><span>+</span>전체 굿즈 보기</a
+            >
           </div>
         </div>
-      </article>
-    </section>
+        <div class="modal hidden">
+          <div class="modal_top_bar">
+            <p>NJ_PHODO_IMAGE.jpg</p>
+            <button id="close" aria-label="닫기"><span></span></button>
+          </div>
+          <div class="modal_imgBox">
+            <img id="modal_img" src="" alt="확대한" />
+          </div>
+          <div class="controls">
+            <button id="prev"><span></span></button>
+            <button id="next"><span></span></button>
+            <a id="download" href="" download aria-label="이미지 다운로드"
+              ><span></span>Download</a
+            >
+          </div>
+        </div>
+      </section>
+      <div class="footer">
+        <div class="left">
+          <!-- <p class="artist">NewJeans</p> -->
+          <p class="cmp">ADOR</p>
+          <p class="copyright">
+            This is a non-commercial redesign created for portfolio purposes.
+            All images and content &copy; ADOR. Website design by Dain Hong.
+          </p>
+        </div>
+        <div class="sns">
+          <a
+            href="https://www.youtube.com/c/NewJeans_official"
+            class="icon_box"
+            target="_blank"
+            aria-label="유튜브 사이트로 이동"
+            ><img src="./img/icon/sns_you.svg" alt="유튜브"
+          /></a>
+          <a
+            href="https://x.com/NewJeans_ADOR"
+            class="icon_box"
+            target="_blank"
+            aria-label="X(구 트위터) 사이트로 이동"
+            ><img src="./img/icon/sns_x.svg" alt="X(구 트위터)"
+          /></a>
+          <a
+            href="https://www.instagram.com/newjeans_official/"
+            class="icon_box"
+            target="_blank"
+            aria-label="인스타그램 사이트로 이동"
+            ><img src="./img/icon/sns_in.svg" alt="인스타그램"
+          /></a>
+          <a
+            href="https://www.facebook.com/official.newjeans"
+            class="icon_box"
+            target="_blank"
+            aria-label="페이스북 사이트로 이동"
+            ><img src="./img/icon/sns_f.svg" alt="페이스북"
+          /></a>
+        </div>
+      </div>
+    </main>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="./script/index.js"></script>
+    <!-- script -->
+    <script type="module" src="./script/index.js"></script>
   </body>
 </html>

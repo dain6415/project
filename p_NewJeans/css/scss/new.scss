@@ -29,7 +29,7 @@ body {
   transform: translateX(-50%);
   width: 100%;
   background: #000;
-  border-bottom: 2px solid var(--main-color);
+  // border-bottom: 2px solid var(--main-color);
   z-index: 10;
   .left,
   .right {
@@ -62,21 +62,77 @@ nav {
   }
 }
 #intro {
-  // display: none;
   overflow: hidden;
   position: relative;
   height: 100vh;
   .img_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+  .logo_box {
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    img {
-      width: 100%;
+    transform: translateX(-50%);
+    width: 80%;
+  }
+}
+#playlist {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  .play_container {
+    display: flex;
+    align-items: center;
+    .play_view {
+      display: flex;
+      align-items: center;
+      color: #000;
+      font-weight: bold;
+    }
+    .cd_icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      width: 38px;
+      height: 38px;
+      margin-right: 10px;
+      img {
+        animation: spin 10s linear infinite;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+    .play_song {
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 20px;
+    }
+    .btns {
+      background: #000;
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      li {
+        border: 1px solid #000;
+        box-sizing: content-box;
+        // pointer-events: none;
+      }
     }
   }
 }
-
 #mv {
   ul {
     border-top: 1px solid var(--main-color);
@@ -413,57 +469,6 @@ nav {
   }
 }
 
-#playlist {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  .play_container {
-    display: flex;
-    align-items: center;
-    .play_view {
-      display: flex;
-      align-items: center;
-    }
-    .cd_icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      width: 38px;
-      height: 38px;
-      margin-right: 10px;
-      img {
-        animation: spin 10s linear infinite;
-      }
-      @keyframes spin {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-    }
-    .play_song {
-      overflow: hidden;
-      white-space: nowrap;
-      font-size: 20px;
-    }
-    .btns {
-      ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      li {
-        border: 1px solid var(--main-color);
-        box-sizing: content-box;
-        // pointer-events: none;
-      }
-    }
-  }
-}
 
 // phone ------------------------------------------
 @media screen and (max-width: 700px) {
@@ -519,8 +524,16 @@ nav {
   #intro {
     height: calc(100vh - 40px);
     .img_box {
-      top: 40%;
-      width: 140%;
+      .pc {
+        display: none;
+      }
+      .mobile {
+        width: 150%;
+      }
+    }
+    .logo_box {
+      top: 48%;
+
     }
   }
   #playlist {
@@ -688,6 +701,12 @@ nav {
   }
   #intro {
     height: calc(100vh - 60px);
+    .pc{
+      display: none;
+    }
+    .logo_box{
+      top: 44%;
+    }
   }
   #playlist {
     width: 100%;
@@ -879,6 +898,19 @@ nav {
       font-size: 24px;
     }
   }
+  #intro{
+    .pc{
+      display: block;
+      height: 100%;
+      object-fit: cover;
+    }
+    .mobile{
+      display: none;
+    }
+    .logo_box {
+      top: 40px;
+    }
+  }
   .tab_content .text {
     .hour {
       display: block;
@@ -920,6 +952,11 @@ nav {
       font-size: 24px;
     }
   }
+  #intro{
+    .logo_box{
+      top: 40px;
+    }
+  }
   .tab_content {
     padding: 60px 40px;
     .text {
@@ -929,6 +966,7 @@ nav {
   #playlist {
     .play_container {
       justify-content: flex-end;
+      width: calc(100% - 40px);
     }
   }
   #gallery {
@@ -946,7 +984,7 @@ nav {
       width: calc(100% - 240px);
     }
     .img_box {
-      height: 240px;
+      height: 300px;
     }
   }
 }
@@ -955,9 +993,6 @@ nav {
   #gallery {
     #gallery_img_container {
       width: calc(100% - 240px);
-    }
-    .img_box {
-      height: 280px;
     }
   }
 }

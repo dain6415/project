@@ -30,7 +30,6 @@ body #content .tab_content.on {
   transform: translateX(-50%);
   width: 100%;
   background: #000;
-  border-bottom: 2px solid var(--main-color);
   z-index: 10;
 }
 .top_bar .left,
@@ -71,13 +70,71 @@ nav .on {
   height: 100vh;
 }
 #intro .img_box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
 }
-#intro .img_box img {
-  width: 100%;
+#intro .logo_box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+
+#playlist {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#playlist .play_container {
+  display: flex;
+  align-items: center;
+}
+#playlist .play_container .play_view {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-weight: bold;
+}
+#playlist .play_container .cd_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 38px;
+  height: 38px;
+  margin-right: 10px;
+}
+#playlist .play_container .cd_icon img {
+  animation: spin 10s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#playlist .play_container .play_song {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 20px;
+}
+#playlist .play_container .btns {
+  background: #000;
+}
+#playlist .play_container .btns ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#playlist .play_container .btns li {
+  border: 1px solid #000;
+  box-sizing: content-box;
 }
 
 #mv ul {
@@ -407,55 +464,6 @@ nav .on {
   display: flex;
 }
 
-#playlist {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-#playlist .play_container {
-  display: flex;
-  align-items: center;
-}
-#playlist .play_container .play_view {
-  display: flex;
-  align-items: center;
-}
-#playlist .play_container .cd_icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 38px;
-  height: 38px;
-  margin-right: 10px;
-}
-#playlist .play_container .cd_icon img {
-  animation: spin 10s linear infinite;
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-#playlist .play_container .play_song {
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: 20px;
-}
-#playlist .play_container .btns ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#playlist .play_container .btns li {
-  border: 1px solid var(--main-color);
-  box-sizing: content-box;
-}
-
 @media screen and (max-width: 700px) {
   .top_bar {
     height: 40px;
@@ -507,9 +515,14 @@ nav .on {
   #intro {
     height: calc(100vh - 40px);
   }
-  #intro .img_box {
-    top: 40%;
-    width: 140%;
+  #intro .img_box .pc {
+    display: none;
+  }
+  #intro .img_box .mobile {
+    width: 150%;
+  }
+  #intro .logo_box {
+    top: 48%;
   }
   #playlist {
     position: absolute;
@@ -664,6 +677,12 @@ nav .on {
   }
   #intro {
     height: calc(100vh - 60px);
+  }
+  #intro .pc {
+    display: none;
+  }
+  #intro .logo_box {
+    top: 44%;
   }
   #playlist {
     width: 100%;
@@ -841,6 +860,17 @@ nav .on {
     padding: 30px 40px;
     font-size: 24px;
   }
+  #intro .pc {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+  }
+  #intro .mobile {
+    display: none;
+  }
+  #intro .logo_box {
+    top: 40px;
+  }
   .tab_content .text .hour {
     display: block;
   }
@@ -873,6 +903,9 @@ nav .on {
     padding: 30px 80px;
     font-size: 24px;
   }
+  #intro .logo_box {
+    top: 40px;
+  }
   .tab_content {
     padding: 60px 40px;
   }
@@ -881,6 +914,7 @@ nav .on {
   }
   #playlist .play_container {
     justify-content: flex-end;
+    width: calc(100% - 40px);
   }
   #gallery .gallery_inner {
     gap: 20px;
@@ -896,14 +930,11 @@ nav .on {
     width: calc(100% - 240px);
   }
   #gallery .img_box {
-    height: 240px;
+    height: 300px;
   }
 }
 @media screen and (min-width: 1520px) {
   #gallery #gallery_img_container {
     width: calc(100% - 240px);
-  }
-  #gallery .img_box {
-    height: 280px;
   }
 }/*# sourceMappingURL=new.css.map */

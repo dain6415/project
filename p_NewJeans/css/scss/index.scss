@@ -51,9 +51,12 @@ body {
   }
 }
 nav {
+  position: relative;
   display: flex;
+  z-index: 1;
   button {
     background: none;
+    background: #000;
   }
   .on {
     font-weight: 600;
@@ -956,6 +959,9 @@ nav {
     .logo_box{
       top: 40px;
     }
+  }
+  #contents_container{
+    margin-top: -92px;
   }
   .tab_content {
     padding: 60px 40px;

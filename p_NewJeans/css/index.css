@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import "../bass.css";
 body {
   width: 100%;
@@ -54,10 +53,13 @@ body #content .tab_content.on {
 }
 
 nav {
+  position: relative;
   display: flex;
+  z-index: 1;
 }
 nav button {
   background: none;
+  background: #000;
 }
 nav .on {
   font-weight: 600;
@@ -906,6 +908,9 @@ nav .on {
   }
   #intro .logo_box {
     top: 40px;
+  }
+  #contents_container {
+    margin-top: -92px;
   }
   .tab_content {
     padding: 60px 40px;

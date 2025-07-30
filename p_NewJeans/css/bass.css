@@ -81,3 +81,8 @@ img{
   vertical-align: top;
   width: 100%;
 }
+video {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}

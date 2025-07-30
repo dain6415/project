@@ -85,8 +85,6 @@ nav {
 #playlist {
   position: absolute;
   bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
   .play_container {
     display: flex;
     align-items: center;
@@ -718,45 +716,61 @@ nav {
       display: none;
     }
     .logo_box{
-      top: 44%;
-      .logo_mobile{
+      top: 3%;
+      .logo_pc{
         display: none;
       }
     }
   }
   #playlist {
-    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 317px;
+    height: 86px;
+    background: #000;
+    border: 1px solid var(--main-color);
+    z-index: 10;
     .play_container {
-      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .play_view {
+        justify-content: flex-start;
+        width: 100%;
+        height: 36px;
+        border-bottom: 1px solid var(--main-color);
+      }
       .cd_icon {
         width: 38px;
         height: 38px;
-        margin-right: 10px;
+        padding: 8px;
+        margin: 0;
       }
       .play_song {
-        width: 200px;
         p {
           font-size: 16px;
-        }
-      }
-      .btns {
-        margin-left: 24px;
-        li {
-          width: 60px;
+          font-weight: 300;
+          color: var(--main-color);
         }
       }
     }
   }
+  #contents_container{
+    margin-top: -88px;
+  }
   nav {
-    justify-content: center;
+    justify-content: flex-start;
     font-size: 0;
     button {
       display: inline-block;
-      background: none;
-      font-size: 24px;
-      border-right: 2px solid var(--main-color);
       padding: 30px;
+      background: #000;
+      border-right: 2px solid var(--main-color);
+      border-top: 2px solid var(--main-color);
+      border-bottom: 2px solid var(--main-color);
       font-size: 20px;
+      box-sizing: content-box;
       &:nth-child(1) {
         border-left: 2px solid var(--main-color);
       }
@@ -912,6 +926,7 @@ nav {
     button {
       padding: 30px 40px;
       font-size: 24px;
+      background: #000;
     }
   }
   #intro{
@@ -925,7 +940,19 @@ nav {
     }
     .logo_box {
       top: 40px;
+      .logo_pc{
+        display: block;
+      }
+      .logo_mobile{
+        display: none;
+      }
     }
+  }
+  #playlist {
+    height: 90px;
+  }
+  #contents_container {
+    margin-top: -93px;
   }
   .tab_content .text {
     .hour {
@@ -974,7 +1001,7 @@ nav {
     }
   }
   #contents_container{
-    margin-top: -92px;
+    margin-top: -94px;
   }
   .tab_content {
     padding: 60px 40px;
@@ -985,7 +1012,6 @@ nav {
   #playlist {
     .play_container {
       justify-content: flex-end;
-      width: calc(100% - 40px);
     }
   }
   #gallery {
@@ -1009,6 +1035,36 @@ nav {
 }
 // ---------
 @media screen and (min-width: 1520px) {
+  #playlist {
+    width: auto;
+    height: auto;
+    right: 40px;
+    bottom: 27px;
+    .play_container {
+      justify-content: flex-end;
+      flex-direction: row;
+      .cd_icon {
+        width: 38px;
+        height: 38px;
+      }
+      .play_view{
+        width: 280px;
+        border: none;
+        border-right: 2px solid var(--main-color);
+      }
+      .play_song {
+        width: 200px;
+        p {
+          font-size: 16px;
+        }
+      }
+      .btns {
+        li {
+          width: 60px;
+        }
+      }
+    }
+  }
   #gallery {
     #gallery_img_container {
       width: calc(100% - 240px);

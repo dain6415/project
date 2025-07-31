@@ -1,15 +1,7 @@
 @charset "UFT-8";
-@import url(../reset.css);
-@import url(../font/font.css);
-@import url(../font/xeicon.min.css);
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
-@font-face {
-  font-family: "Chosunilbo_myungjo";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url(/reset.css);
+@import url(/font/font.css);
+
 @mixin trans-c {
   position: absolute;
   left: 50%;
@@ -23,7 +15,7 @@
 }
 body {
   font-family: "Pretendard";
-  header {
+  Chosunilbo_myungjo header {
     width: 100%;
     position: fixed;
     z-index: 99;
@@ -31,7 +23,7 @@ body {
     justify-content: space-between;
     align-items: center;
     // padding: 30px;
-    transition: .3s;
+    transition: 0.3s;
     &:hover {
       background: #fff;
       nav {
@@ -47,11 +39,11 @@ body {
         li {
           a {
             color: #000;
-            transition: .3s;
+            transition: 0.3s;
           }
           &.btn {
             // background: #000;
-            span{
+            span {
               background: #000;
               ::before {
                 background: #000;
@@ -67,12 +59,12 @@ body {
     h1 img.logo-b {
       display: none;
     }
-    .gnb{
+    .gnb {
       display: flex;
       align-items: center;
       gap: 20px;
-      li{
-        >a{
+      li {
+        > a {
           color: #fff;
           font-weight: 600;
           font-size: 20px;
@@ -91,7 +83,7 @@ body {
             width: 100%;
             height: 3px;
             background: #ffffff;
-            transition: .3s;
+            transition: 0.3s;
             // background: transparent;
             ::before {
               content: "";
@@ -134,10 +126,15 @@ body {
     }
   }
   section {
-    // height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    &#sect1 {
+      p {
+        font-family: "Chosunilbo_myungjo";
+        padding-bottom: 16px;
+      }
+    }
     &#sect5 {
       text-align: center;
       a.etc-btn {
@@ -147,16 +144,15 @@ body {
         color: #fff;
         margin-top: 40px;
         transition: 0.35s;
-        // width: 50%;
         display: inline-block;
         span {
           position: relative;
           font-size: 20px;
           font-weight: 500;
-          margin-right: 20px; /* 자리가 없으니 자리를 만들어줘야 애프터가 자연스러움 */
+          margin-right: 20px;
           &::after {
             content: "\e914";
-            display: block;
+            display: none;
             font-family: "xeicon";
             font-size: 20px;
             width: 20px;
@@ -199,18 +195,15 @@ body {
       font-style: normal;
     }
   }
-
 }
 
-/*################################## mobile start */
-/*################################## mobile start */
 /*################################## mobile start */
 @media screen and (max-width: 640px) {
   header {
     padding: 20px;
     height: 70px;
     border-bottom: 1px solid #ffffff;
-    transition: .3s;
+    transition: 0.3s;
     h1 {
       a {
         width: 250px;
@@ -425,7 +418,6 @@ body {
             transform: translate(-50%, -50%);
             z-index: 99;
             color: #fff;
-            font-family: "NotoSerifKR-Medium";
             white-space: nowrap;
             p {
               font-size: 20px;
@@ -484,32 +476,32 @@ body {
             background-repeat: no-repeat;
 
             &.slide1 {
-              background-image: url(./img/v_img01_sdown.jpg);
+              background-image: url(../img/v_img01_sdown.jpg);
             }
             &.slide2 {
-              background-image: url(./img/v_img02.jpg);
+              background-image: url(../img/v_img02.jpg);
             }
             &.slide3 {
-              background-image: url(./img/v_img03.jpg);
+              background-image: url(../img/v_img03.jpg);
             }
             &.slide4 {
-              background-image: url(./img/v_img04.jpg);
+              background-image: url(../img/v_img04.jpg);
             }
             &.slide5 {
-              background-image: url(./img/v_img05.jpg);
+              background-image: url(../img/v_img05.jpg);
             }
             &.slide6 {
-              background-image: url(./img/v_img06.jpg);
+              background-image: url(../img/v_img06.jpg);
             }
             &.slide7 {
-              background-image: url(./img/v_img07.jpg);
+              background-image: url(../img/v_img07.jpg);
             }
           }
         }
       }
     }
     &#sect2 {
-      background-image: url(./img/section01.jpg);
+      background-image: url(../img/section01.jpg);
       height: 100vh;
       .inner-box {
         width: 100%;
@@ -547,7 +539,8 @@ body {
             display: block;
             &::after {
               content: "\e907";
-              display: inline-block;
+              display: none;
+              // display: inline-block;
               font-family: "xeicon";
               margin-left: 10px;
             }
@@ -590,7 +583,7 @@ body {
                 justify-content: space-between;
                 &::after {
                   content: "\e93f";
-                  display: inline-block;
+                  display: none;
                   font-family: "xeicon";
                 }
               }
@@ -646,7 +639,7 @@ body {
       }
     }
     &#sect3 {
-      background-image: url(./img/section02.jpg);
+      background-image: url(../img/section02.jpg);
       height: 100vh;
       width: 100%;
       display: flex;
@@ -705,7 +698,7 @@ body {
                     position: relative;
                     &::after {
                       content: "\e93e";
-                      display: block;
+                      display: none;
                       font-family: "xeicon";
                       margin-left: 10px;
                       position: absolute;
@@ -823,7 +816,7 @@ body {
       }
     }
     &#sect4 {
-      background-image: url(./img/section03.jpg);
+      background-image: url(../img/section03.jpg);
       height: 100vh;
       width: 100%;
 
@@ -884,7 +877,7 @@ body {
       }
     }
     &#sect5 {
-      background-image: url(./img/section04.jpg);
+      background-image: url(../img/section04.jpg);
       width: 100%;
       height: 100vh;
       > .inner-box {
@@ -984,6 +977,7 @@ body {
                                 width: 100px;
                                 &::before {
                                   content: "\e9f5";
+                                  display: none;
                                   font-family: "xeicon";
                                   font-size: 20px;
                                   font-weight: 900;
@@ -999,6 +993,7 @@ body {
                                 }
                                 &::before {
                                   content: "\e9a2";
+                                  display: none;
                                   font-family: "xeicon";
                                   font-size: 20px;
                                   font-weight: 900;
@@ -1339,8 +1334,6 @@ body {
 }
 
 /*################################## tablet start */
-/*################################## tablet start */
-/*################################## tablet start */
 @media screen and (min-width: 641px) {
   header {
     padding: 20px;
@@ -1619,32 +1612,32 @@ body {
             background-repeat: no-repeat;
 
             &.slide1 {
-              background-image: url(./img/v_img01_sdown.jpg);
+              background-image: url(../img/v_img01_sdown.jpg);
             }
             &.slide2 {
-              background-image: url(./img/v_img02.jpg);
+              background-image: url(../img/v_img02.jpg);
             }
             &.slide3 {
-              background-image: url(./img/v_img03.jpg);
+              background-image: url(../img/v_img03.jpg);
             }
             &.slide4 {
-              background-image: url(./img/v_img04.jpg);
+              background-image: url(../img/v_img04.jpg);
             }
             &.slide5 {
-              background-image: url(./img/v_img05.jpg);
+              background-image: url(../img/v_img05.jpg);
             }
             &.slide6 {
-              background-image: url(./img/v_img06.jpg);
+              background-image: url(../img/v_img06.jpg);
             }
             &.slide7 {
-              background-image: url(./img/v_img07.jpg);
+              background-image: url(../img/v_img07.jpg);
             }
           }
         }
       }
     }
     &#sect2 {
-      background-image: url(./img/section01.jpg);
+      background-image: url(../img/section01.jpg);
       height: 100vh;
       .inner-box {
         width: 100%;
@@ -1760,7 +1753,7 @@ body {
       }
     }
     &#sect3 {
-      background-image: url(./img/section02.jpg);
+      background-image: url(../img/section02.jpg);
       height: 100vh;
       width: 100%;
       display: flex;
@@ -1822,7 +1815,7 @@ body {
                     position: relative;
                     &::after {
                       content: "\e93e";
-                      display: block;
+                      display: none;
                       font-family: "xeicon";
                       margin-left: 10px;
                       position: absolute;
@@ -1939,7 +1932,7 @@ body {
       }
     }
     &#sect4 {
-      background-image: url(./img/section03.jpg);
+      background-image: url(../img/section03.jpg);
       height: 100vh;
       width: 100%;
       overflow: hidden;
@@ -2006,7 +1999,7 @@ body {
               }
               &::after {
                 content: "\e9c5";
-                display: block;
+                display: none;
                 color: #fff;
                 position: absolute;
                 bottom: 20px;
@@ -2022,7 +2015,7 @@ body {
       }
     }
     &#sect5 {
-      background-image: url(./img/section04.jpg);
+      background-image: url(../img/section04.jpg);
       width: 100%;
       height: 100vh;
       > .inner-box {
@@ -2118,6 +2111,7 @@ body {
                                 width: 100px;
                                 &::before {
                                   content: "\e9f5";
+                                  display: none;
                                   font-family: "xeicon";
                                   font-size: 20px;
                                   font-weight: 900;
@@ -2133,6 +2127,7 @@ body {
                                 }
                                 &::before {
                                   content: "\e9a2";
+                                  display: none;
                                   font-family: "xeicon";
                                   font-size: 20px;
                                   font-weight: 900;
@@ -2234,7 +2229,6 @@ body {
                     .swiper-slide {
                       transition: 0.35s;
                       a {
-                        border: 1px solid #fd1f1f;
                         height: 195px;
                         width: 100%;
                         position: relative;
@@ -2479,11 +2473,8 @@ body {
       }
     }
   }
-
 }
 
-/*################################## desktop start */
-/*################################## desktop start */
 /*################################## desktop start */
 @media screen and (min-width: 1000px) {
   header {
@@ -2518,7 +2509,7 @@ body {
         li.main-menu {
           position: relative;
           flex-shrink: 0;
-          >a {
+          > a {
             font-size: 1.25rem;
             font-weight: 600;
             color: #fff;
@@ -2534,7 +2525,7 @@ body {
             background: #c2243e;
             li {
               text-align: center;
-              >a {
+              > a {
                 white-space: nowrap;
                 display: block;
                 padding: 5px 20px;
@@ -2571,7 +2562,6 @@ body {
             transform: translate(-50%, -50%);
             z-index: 99;
             color: #fff;
-            font-family: "NotoSerifKR-Medium";
             p {
               font-size: 32px;
               font-weight: 300;
@@ -2630,32 +2620,32 @@ body {
             background-repeat: no-repeat;
 
             &.slide1 {
-              background-image: url(./img/v_img01_sdown.jpg);
+              background-image: url(../img/v_img01_sdown.jpg);
             }
             &.slide2 {
-              background-image: url(./img/v_img02.jpg);
+              background-image: url(../img/v_img02.jpg);
             }
             &.slide3 {
-              background-image: url(./img/v_img03.jpg);
+              background-image: url(../img/v_img03.jpg);
             }
             &.slide4 {
-              background-image: url(./img/v_img04.jpg);
+              background-image: url(../img/v_img04.jpg);
             }
             &.slide5 {
-              background-image: url(./img/v_img05.jpg);
+              background-image: url(../img/v_img05.jpg);
             }
             &.slide6 {
-              background-image: url(./img/v_img06.jpg);
+              background-image: url(../img/v_img06.jpg);
             }
             &.slide7 {
-              background-image: url(./img/v_img07.jpg);
+              background-image: url(../img/v_img07.jpg);
             }
           }
         }
       }
     }
     &#sect2 {
-      background-image: url(./img/section01.jpg);
+      background-image: url(../img/section01.jpg);
       height: 100vh;
       .inner-box {
         width: 100%;
@@ -2694,9 +2684,9 @@ body {
           bottom: 0;
           left: 50%;
           transform: translateX(-50%);
+          width: 40%;
           display: flex;
           li {
-            width: 40%;
             background: rgba(0, 0, 0, 0.5);
             flex: 1;
             display: flex;
@@ -2768,7 +2758,7 @@ body {
       }
     }
     &#sect3 {
-      background-image: url(./img/section02.jpg);
+      background-image: url(../img/section02.jpg);
       height: 100vh;
       width: 100%;
       align-items: center;
@@ -2818,7 +2808,7 @@ body {
                     position: relative;
                     &::after {
                       content: "\e93e";
-                      display: block;
+                      display: none;
                       font-family: "xeicon";
                       margin-left: 10px;
                       position: absolute;
@@ -2965,7 +2955,7 @@ body {
       }
     }
     &#sect5 {
-      background-image: url(./img/section04.jpg);
+      background-image: url(../img/section04.jpg);
       width: 100%;
       height: 100vh;
       > .inner-box {
@@ -3060,6 +3050,7 @@ body {
                               &.name {
                                 width: 100px;
                                 &::before {
+                                  display: none;
                                   content: "\e9f5";
                                   font-family: "xeicon";
                                   font-size: 20px;
@@ -3076,6 +3067,7 @@ body {
                                 }
                                 &::before {
                                   content: "\e9a2";
+                                  display: none;
                                   font-family: "xeicon";
                                   font-size: 20px;
                                   font-weight: 900;
@@ -3111,7 +3103,9 @@ body {
                     }
                   }
                 }
-                .r_btn{display: none;}
+                .r_btn {
+                  display: none;
+                }
               }
               &.photo {
                 display: none;
@@ -3121,7 +3115,7 @@ body {
               }
               &.photo,
               &.video {
-                .mySwiper3  {
+                .mySwiper3 {
                   width: 100%;
                   height: 400px;
                   margin-left: auto;
@@ -3255,7 +3249,9 @@ body {
                     }
                   }
                 }
-                .r_btn{display: none;}
+                .r_btn {
+                  display: none;
+                }
               }
 
               &.on {
@@ -3266,7 +3262,6 @@ body {
         }
       }
     }
-  
   }
   footer {
     font-size: 16px;

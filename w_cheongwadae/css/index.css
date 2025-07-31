@@ -1,18 +1,9 @@
-@charset "UTF-8";
-@import url(../reset.css);
-@import url(../font/font.css);
-@import url(../font/xeicon.min.css);
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
-@font-face {
-  font-family: "Chosunilbo_myungjo";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url(/reset.css);
+@import url(/font/font.css);
 body {
   font-family: "Pretendard";
 }
-body header {
+body Chosunilbo_myungjo header {
   width: 100%;
   position: fixed;
   z-index: 99;
@@ -21,46 +12,46 @@ body header {
   align-items: center;
   transition: 0.3s;
 }
-body header:hover {
+body Chosunilbo_myungjo header:hover {
   background: #fff;
 }
-body header:hover nav > ul li.main-menu a {
+body Chosunilbo_myungjo header:hover nav > ul li.main-menu a {
   color: #000;
 }
-body header:hover .gnb li a {
+body Chosunilbo_myungjo header:hover .gnb li a {
   color: #000;
   transition: 0.3s;
 }
-body header:hover .gnb li.btn span {
+body Chosunilbo_myungjo header:hover .gnb li.btn span {
   background: #000;
 }
-body header:hover .gnb li.btn span ::before {
+body Chosunilbo_myungjo header:hover .gnb li.btn span ::before {
   background: #000;
 }
-body header:hover .gnb li.btn span ::after {
+body Chosunilbo_myungjo header:hover .gnb li.btn span ::after {
   background: #000;
 }
-body header h1 img.logo-b {
+body Chosunilbo_myungjo header h1 img.logo-b {
   display: none;
 }
-body header .gnb {
+body Chosunilbo_myungjo header .gnb {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-body header .gnb li > a {
+body Chosunilbo_myungjo header .gnb li > a {
   color: #fff;
   font-weight: 600;
   font-size: 20px;
 }
-body header .gnb li.btn {
+body Chosunilbo_myungjo header .gnb li.btn {
   padding: 3px;
   cursor: pointer;
   width: 30px;
   height: 30px;
   overflow: hidden;
 }
-body header .gnb li.btn span {
+body Chosunilbo_myungjo header .gnb li.btn span {
   display: block;
   position: relative;
   top: 50%;
@@ -70,7 +61,7 @@ body header .gnb li.btn span {
   background: #ffffff;
   transition: 0.3s;
 }
-body header .gnb li.btn span ::before {
+body Chosunilbo_myungjo header .gnb li.btn span ::before {
   content: "";
   position: absolute;
   left: 0;
@@ -80,7 +71,7 @@ body header .gnb li.btn span ::before {
   height: 3px;
   transition: 0.3s;
 }
-body header .gnb li.btn span ::after {
+body Chosunilbo_myungjo header .gnb li.btn span ::after {
   content: "";
   position: absolute;
   left: 0;
@@ -90,13 +81,13 @@ body header .gnb li.btn span ::after {
   height: 3px;
   transition: 0.3s;
 }
-body header .gnb li.btn:hover span ::before {
+body Chosunilbo_myungjo header .gnb li.btn:hover span ::before {
   width: 30%;
 }
-body header .gnb li.btn:hover span ::after {
+body Chosunilbo_myungjo header .gnb li.btn:hover span ::after {
   width: 60%;
 }
-body header .gnb li.btn a {
+body Chosunilbo_myungjo header .gnb li.btn a {
   display: inline-block;
   text-indent: -9999px;
 }
@@ -104,6 +95,10 @@ body section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+body section#sect1 p {
+  font-family: "Chosunilbo_myungjo";
+  padding-bottom: 16px;
 }
 body section#sect5 {
   text-align: center;
@@ -121,11 +116,11 @@ body section#sect5 a.etc-btn span {
   position: relative;
   font-size: 20px;
   font-weight: 500;
-  margin-right: 20px; /* 자리가 없으니 자리를 만들어줘야 애프터가 자연스러움 */
+  margin-right: 20px;
 }
 body section#sect5 a.etc-btn span::after {
   content: "\e914";
-  display: block;
+  display: none;
   font-family: "xeicon";
   font-size: 20px;
   width: 20px;
@@ -162,8 +157,6 @@ body footer address {
   font-style: normal;
 }
 
-/*################################## mobile start */
-/*################################## mobile start */
 /*################################## mobile start */
 @media screen and (max-width: 640px) {
   header {
@@ -369,7 +362,6 @@ body footer address {
     transform: translate(-50%, -50%);
     z-index: 99;
     color: #fff;
-    font-family: "NotoSerifKR-Medium";
     white-space: nowrap;
   }
   section#sect1 .split-box .word > div p {
@@ -438,28 +430,28 @@ body footer address {
     background-repeat: no-repeat;
   }
   section#sect1 .split-box .bg > div.slide1 {
-    background-image: url(./img/v_img01_sdown.jpg);
+    background-image: url(../img/v_img01_sdown.jpg);
   }
   section#sect1 .split-box .bg > div.slide2 {
-    background-image: url(./img/v_img02.jpg);
+    background-image: url(../img/v_img02.jpg);
   }
   section#sect1 .split-box .bg > div.slide3 {
-    background-image: url(./img/v_img03.jpg);
+    background-image: url(../img/v_img03.jpg);
   }
   section#sect1 .split-box .bg > div.slide4 {
-    background-image: url(./img/v_img04.jpg);
+    background-image: url(../img/v_img04.jpg);
   }
   section#sect1 .split-box .bg > div.slide5 {
-    background-image: url(./img/v_img05.jpg);
+    background-image: url(../img/v_img05.jpg);
   }
   section#sect1 .split-box .bg > div.slide6 {
-    background-image: url(./img/v_img06.jpg);
+    background-image: url(../img/v_img06.jpg);
   }
   section#sect1 .split-box .bg > div.slide7 {
-    background-image: url(./img/v_img07.jpg);
+    background-image: url(../img/v_img07.jpg);
   }
   section#sect2 {
-    background-image: url(./img/section01.jpg);
+    background-image: url(../img/section01.jpg);
     height: 100vh;
   }
   section#sect2 .inner-box {
@@ -501,7 +493,7 @@ body footer address {
   }
   section#sect2 .inner-box .text-box a::after {
     content: "\e907";
-    display: inline-block;
+    display: none;
     font-family: "xeicon";
     margin-left: 10px;
   }
@@ -546,7 +538,7 @@ body footer address {
   }
   section#sect2 .inner-box ul.mn-list li .icon-box p::after {
     content: "\e93f";
-    display: inline-block;
+    display: none;
     font-family: "xeicon";
   }
   section#sect2 .inner-box ul.mn-list li:nth-child(2) .icon-box img {
@@ -589,7 +581,7 @@ body footer address {
     height: 100%;
   }
   section#sect3 {
-    background-image: url(./img/section02.jpg);
+    background-image: url(../img/section02.jpg);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -655,7 +647,7 @@ body footer address {
   }
   section#sect3 .inner-box > .text-box ul li a span p::after {
     content: "\e93e";
-    display: block;
+    display: none;
     font-family: "xeicon";
     margin-left: 10px;
     position: absolute;
@@ -759,7 +751,7 @@ body footer address {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
   section#sect4 {
-    background-image: url(./img/section03.jpg);
+    background-image: url(../img/section03.jpg);
     height: 100vh;
     width: 100%;
   }
@@ -818,7 +810,7 @@ body footer address {
     background: rgba(19, 174, 182, 0.5);
   }
   section#sect5 {
-    background-image: url(./img/section04.jpg);
+    background-image: url(../img/section04.jpg);
     width: 100%;
     height: 100vh;
   }
@@ -925,6 +917,7 @@ body footer address {
   }
   section#sect5 > .inner-box .contents-box .contents-wrap .content.review .mySwiper2 .swiper-wrapper .swiper-slide a .text-box ul li.name::before {
     content: "\e9f5";
+    display: none;
     font-family: "xeicon";
     font-size: 20px;
     font-weight: 900;
@@ -940,6 +933,7 @@ body footer address {
   }
   section#sect5 > .inner-box .contents-box .contents-wrap .content.review .mySwiper2 .swiper-wrapper .swiper-slide a .text-box ul li.date::before {
     content: "\e9a2";
+    display: none;
     font-family: "xeicon";
     font-size: 20px;
     font-weight: 900;
@@ -1232,8 +1226,6 @@ body footer address {
   }
 }
 /*################################## tablet start */
-/*################################## tablet start */
-/*################################## tablet start */
 @media screen and (min-width: 641px) {
   header {
     padding: 20px;
@@ -1495,28 +1487,28 @@ body footer address {
     background-repeat: no-repeat;
   }
   section#sect1 .split-box .bg > div.slide1 {
-    background-image: url(./img/v_img01_sdown.jpg);
+    background-image: url(../img/v_img01_sdown.jpg);
   }
   section#sect1 .split-box .bg > div.slide2 {
-    background-image: url(./img/v_img02.jpg);
+    background-image: url(../img/v_img02.jpg);
   }
   section#sect1 .split-box .bg > div.slide3 {
-    background-image: url(./img/v_img03.jpg);
+    background-image: url(../img/v_img03.jpg);
   }
   section#sect1 .split-box .bg > div.slide4 {
-    background-image: url(./img/v_img04.jpg);
+    background-image: url(../img/v_img04.jpg);
   }
   section#sect1 .split-box .bg > div.slide5 {
-    background-image: url(./img/v_img05.jpg);
+    background-image: url(../img/v_img05.jpg);
   }
   section#sect1 .split-box .bg > div.slide6 {
-    background-image: url(./img/v_img06.jpg);
+    background-image: url(../img/v_img06.jpg);
   }
   section#sect1 .split-box .bg > div.slide7 {
-    background-image: url(./img/v_img07.jpg);
+    background-image: url(../img/v_img07.jpg);
   }
   section#sect2 {
-    background-image: url(./img/section01.jpg);
+    background-image: url(../img/section01.jpg);
     height: 100vh;
   }
   section#sect2 .inner-box {
@@ -1625,7 +1617,7 @@ body footer address {
     height: 100%;
   }
   section#sect3 {
-    background-image: url(./img/section02.jpg);
+    background-image: url(../img/section02.jpg);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -1687,7 +1679,7 @@ body footer address {
   }
   section#sect3 .inner-box > .text-box ul li a span p::after {
     content: "\e93e";
-    display: block;
+    display: none;
     font-family: "xeicon";
     margin-left: 10px;
     position: absolute;
@@ -1790,7 +1782,7 @@ body footer address {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
   section#sect4 {
-    background-image: url(./img/section03.jpg);
+    background-image: url(../img/section03.jpg);
     height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -1858,7 +1850,7 @@ body footer address {
   }
   section#sect4 .inner-box ul.mn-list li:hover::after {
     content: "\e9c5";
-    display: block;
+    display: none;
     color: #fff;
     position: absolute;
     bottom: 20px;
@@ -1869,7 +1861,7 @@ body footer address {
     font-weight: 300;
   }
   section#sect5 {
-    background-image: url(./img/section04.jpg);
+    background-image: url(../img/section04.jpg);
     width: 100%;
     height: 100vh;
   }
@@ -1974,6 +1966,7 @@ body footer address {
   }
   section#sect5 > .inner-box .contents-box .contents-wrap .content.review .mySwiper2 > .swiper-wrapper .swiper-slide a .text-box ul li.name::before {
     content: "\e9f5";
+    display: none;
     font-family: "xeicon";
     font-size: 20px;
     font-weight: 900;
@@ -1989,6 +1982,7 @@ body footer address {
   }
   section#sect5 > .inner-box .contents-box .contents-wrap .content.review .mySwiper2 > .swiper-wrapper .swiper-slide a .text-box ul li.date::before {
     content: "\e9a2";
+    display: none;
     font-family: "xeicon";
     font-size: 20px;
     font-weight: 900;
@@ -2072,7 +2066,6 @@ body footer address {
     transition: 0.35s;
   }
   section#sect5 > .inner-box .contents-box .contents-wrap .content.photo .mySwiper3 .swiper-wrapper .swiper-slide a, section#sect5 > .inner-box .contents-box .contents-wrap .content.video .mySwiper3 .swiper-wrapper .swiper-slide a {
-    border: 1px solid #fd1f1f;
     height: 195px;
     width: 100%;
     position: relative;
@@ -2289,8 +2282,6 @@ body footer address {
   }
 }
 /*################################## desktop start */
-/*################################## desktop start */
-/*################################## desktop start */
 @media screen and (min-width: 1000px) {
   header {
     height: 90px;
@@ -2371,7 +2362,6 @@ body footer address {
     transform: translate(-50%, -50%);
     z-index: 99;
     color: #fff;
-    font-family: "NotoSerifKR-Medium";
   }
   section#sect1 .split-box .word > div p {
     font-size: 32px;
@@ -2434,28 +2424,28 @@ body footer address {
     background-repeat: no-repeat;
   }
   section#sect1 .split-box .bg > div.slide1 {
-    background-image: url(./img/v_img01_sdown.jpg);
+    background-image: url(../img/v_img01_sdown.jpg);
   }
   section#sect1 .split-box .bg > div.slide2 {
-    background-image: url(./img/v_img02.jpg);
+    background-image: url(../img/v_img02.jpg);
   }
   section#sect1 .split-box .bg > div.slide3 {
-    background-image: url(./img/v_img03.jpg);
+    background-image: url(../img/v_img03.jpg);
   }
   section#sect1 .split-box .bg > div.slide4 {
-    background-image: url(./img/v_img04.jpg);
+    background-image: url(../img/v_img04.jpg);
   }
   section#sect1 .split-box .bg > div.slide5 {
-    background-image: url(./img/v_img05.jpg);
+    background-image: url(../img/v_img05.jpg);
   }
   section#sect1 .split-box .bg > div.slide6 {
-    background-image: url(./img/v_img06.jpg);
+    background-image: url(../img/v_img06.jpg);
   }
   section#sect1 .split-box .bg > div.slide7 {
-    background-image: url(./img/v_img07.jpg);
+    background-image: url(../img/v_img07.jpg);
   }
   section#sect2 {
-    background-image: url(./img/section01.jpg);
+    background-image: url(../img/section01.jpg);
     height: 100vh;
   }
   section#sect2 .inner-box {
@@ -2496,10 +2486,10 @@ body footer address {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 40%;
     display: flex;
   }
   section#sect2 .inner-box ul.mn-list li {
-    width: 40%;
     background: rgba(0, 0, 0, 0.5);
     flex: 1;
     display: flex;
@@ -2561,7 +2551,7 @@ body footer address {
     height: 100%;
   }
   section#sect3 {
-    background-image: url(./img/section02.jpg);
+    background-image: url(../img/section02.jpg);
     height: 100vh;
     width: 100%;
     align-items: center;
@@ -2616,7 +2606,7 @@ body footer address {
   }
   section#sect3 .inner-box .text-box ul li a span p::after {
     content: "\e93e";
-    display: block;
+    display: none;
     font-family: "xeicon";
     margin-left: 10px;
     position: absolute;
@@ -2744,7 +2734,7 @@ body footer address {
     font-size: 26px;
   }
   section#sect5 {
-    background-image: url(./img/section04.jpg);
+    background-image: url(../img/section04.jpg);
     width: 100%;
     height: 100vh;
   }
@@ -2846,6 +2836,7 @@ body footer address {
     width: 100px;
   }
   section#sect5 > .inner-box .contents-box .contents-wrap .content.review .swiper .swiper-wrapper .swiper-slide a .text-box ul li.name::before {
+    display: none;
     content: "\e9f5";
     font-family: "xeicon";
     font-size: 20px;
@@ -2862,6 +2853,7 @@ body footer address {
   }
   section#sect5 > .inner-box .contents-box .contents-wrap .content.review .swiper .swiper-wrapper .swiper-slide a .text-box ul li.date::before {
     content: "\e9a2";
+    display: none;
     font-family: "xeicon";
     font-size: 20px;
     font-weight: 900;
@@ -3040,4 +3032,4 @@ body footer address {
     gap: 60px;
     font-size: 16px;
   }
-}/*# sourceMappingURL=index copy.css.map */
+}/*# sourceMappingURL=index.css.map */

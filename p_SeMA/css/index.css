@@ -54,9 +54,15 @@ header {
   background-color: var(--color-gray700);
   transition: 0.5s;
 }
-header nav ul li a,
-header nav ul li i {
-  color: #333;
+header nav a,
+header nav i {
+  color: var(--color-gray100);
+}
+header .first_logo {
+  max-width: 44%;
+}
+header .logo_change {
+  object-fit: contain;
 }
 
 .wrap {
@@ -560,7 +566,8 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   header h1 {
     position: relative;
-    width: 52%;
+    max-width: 48%;
+    width: 48%;
     height: 100%;
   }
   header h1 img {
@@ -1791,7 +1798,10 @@ input[type=checkbox]:checked + .mode_change::after {
     z-index: -1;
   }
   header .inner .first_logo {
-    width: 94%;
+    max-width: 44%;
+  }
+  header .inner .logo_change {
+    max-width: 260px;
   }
   header .scrolled {
     background-color: var(--color-gray100);

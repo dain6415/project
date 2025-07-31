@@ -31,17 +31,16 @@ $dark: (
   sect2-bg: map-get($light, sect2-bg-dark),
   download-btn: map-get($light, gray300),
 );
-
 @mixin set-theme($theme) {
   @each $colorName, $val in $theme {
-    #{"--color-#{$colorName}"}: #{$val};
+    #{'--color-' + $colorName}: #{$val};
   }
 }
-
 
 body[data-theme="light"] {
   @include set-theme($light);
 }
+
 body[data-theme="dark"] {
   @include set-theme($dark);
 }
@@ -72,14 +71,16 @@ header {
   background-color: var(--color-gray700);
   transition: 0.5s;
   nav {
-    ul {
-      li {
-        a,
-        i {
-          color: #333;
-        }
-      }
+    a,
+    i {
+      color: var(--color-gray100);
     }
+  }
+  .first_logo{
+    max-width: 44%;
+  }
+  .logo_change{
+    object-fit: contain;
   }
 }
 .wrap {
@@ -608,7 +609,8 @@ input[type="checkbox"]:checked + .mode_change::after {
     }
     h1 {
       position: relative;
-      width: 52%;
+      max-width: 48%;
+      width: 48%;
       height: 100%;
       img {
         position: absolute;
@@ -1932,7 +1934,10 @@ input[type="checkbox"]:checked + .mode_change::after {
         }
       }
       .first_logo{
-        width: 94%;
+        max-width: 44%;
+      }
+      .logo_change{
+        max-width: 260px;
       }
     }
     .scrolled {

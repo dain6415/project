@@ -39,6 +39,7 @@ function logoChange() {
   const isMobileMenuOpen = mobileNav.classList.contains("on");
 
   const changeSrc = isLight ? "./imgs/logo-b.png" : "./imgs/logo-w.png";
+  const nav = document.querySelectorAll('nav a');
 
   // 모바일 메뉴 열려 있을 때
   if (isMobileMenuOpen) {
@@ -56,12 +57,17 @@ function logoChange() {
   if (scrollY > 100) {
     const rootColor = getComputedStyle(document.documentElement);
     const headerBg = rootColor.getPropertyValue("--color-gray700").trim();
+    const navColor = rootColor.getPropertyValue("--color-gray200").trim();
 
     header.style.background = headerBg;
     header.style.boxShadow = '0 5px 6px rgba(0, 0, 0, 0.1)';
     headerLogo.style.display = 'none';
     headerLogoChange.style.display = 'block';
-    
+
+    nav.forEach((link) => {
+      link.style.color = navColor;
+    });
+
     if (headerLogoChange.getAttribute("src") !== changeSrc) {
       headerLogoChange.setAttribute("src", changeSrc);
     }
@@ -70,8 +76,13 @@ function logoChange() {
     header.style.boxShadow = 'none';
     headerLogo.style.display = 'block';
     headerLogoChange.style.display = 'none';
+
+    nav.forEach((link) => {
+      link.style.color = "#333";
+    });
   }
 }
+
 // ----------------------------------------------------
 const today = new Date().getDay();
 const schedule = {

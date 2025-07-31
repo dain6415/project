@@ -3,6 +3,31 @@ import { gallery } from "./gallery.js";
 import { goods } from "./goods.js";
 
 window.addEventListener("DOMContentLoaded", function () {
+  const loading = document.getElementById("loding");
+  const mainContent = document.querySelector("main");
+  const loadingBar = document.getElementById("loding_bar");
+  const loadingText = document.querySelector(".loding_text");
+
+  let percent = 0;
+
+  document.body.classList.add("no_scroll");
+
+  const loadingInterval = this.setInterval(() => {
+    percent++;
+    loadingBar.style.width = percent + "%";
+    loadingText.textContent = "..." + percent + "%";
+
+    if(percent >= 100) {
+      clearInterval(loadingInterval);
+
+      setTimeout(() => {
+        loading.style.display = "none";
+        mainContent.style.display = "block";
+        document.body.classList.remove("no_scroll");
+      }, 300);
+    }
+  }, 50);
+
   mv();
   gallery();
   goods();
@@ -13,12 +38,10 @@ window.addEventListener("DOMContentLoaded", function () {
     btn.addEventListener("click", () => {
       const tabName = btn.dataset.tab;
 
-      // 해당 탭 콘텐츠 보여주기
       document.querySelectorAll(".tab_content").forEach((div) => {
         div.classList.toggle("on", div.dataset.tab === tabName);
       });
 
-      // 버튼 상태도 업데이트
       buttons.forEach((b) => b.classList.remove("on"));
       btn.classList.add("on");
     });
@@ -42,20 +65,20 @@ window.addEventListener("DOMContentLoaded", function () {
   const playList = document.querySelectorAll("audio");
   let nowPlaying = 0;
   let playing = false;
-  
+
   const playBtn = document.querySelector(".play");
   const pauseBtn = document.querySelector(".pause");
   const stopBtn = document.querySelector(".stop");
   const nextBtn = document.querySelector(".next");
-  
+
   const btnList = [playBtn, pauseBtn, stopBtn];
-  
+
   const getCurrentAudio = () => playList[nowPlaying];
-  
+
   function setButtonImage(btn, isActive) {
     const img = btn.querySelector("img");
     if (!img) return;
-  
+
     let src = img.getAttribute("src");
 
     if (isActive) {
@@ -68,11 +91,11 @@ window.addEventListener("DOMContentLoaded", function () {
       }
     }
   }
-  
+
   function updateActiveButton(targetBtn) {
     btnList.forEach((btn) => setButtonImage(btn, btn === targetBtn));
   }
-  
+
   playBtn.addEventListener("click", () => {
     const audio = getCurrentAudio();
     if (!playing) {
@@ -90,7 +113,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
     updateActiveButton(pauseBtn);
   });
-  
+
   stopBtn.addEventListener("click", () => {
     const audio = getCurrentAudio();
     audio.pause();
@@ -98,20 +121,20 @@ window.addEventListener("DOMContentLoaded", function () {
     playing = false;
     updateActiveButton(stopBtn);
   });
-  
+
   nextBtn.addEventListener("click", () => {
     const current = getCurrentAudio();
     current.pause();
     current.currentTime = 0;
-  
+
     nowPlaying = (nowPlaying + 1) % playList.length;
     const nextAudio = getCurrentAudio();
     nextAudio.play();
     playing = true;
-  
-    document.querySelector(".song").textContent = nowPlaying === 0 ? "Supernatural" : "Right Now";
-  
+
+    document.querySelector(".song").textContent =
+      nowPlaying === 0 ? "Supernatural" : "Right Now";
+
     updateActiveButton(playBtn);
   });
-  
 });

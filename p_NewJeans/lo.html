@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #loading-screen {
+        position: fixed;
+        inset: 0;
+        background: #111;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 9999;
+      }
+
+      .loading-bar-wrapper {
+        width: 300px;
+        height: 20px;
+        border: 2px solid white;
+        position: relative;
+        margin-bottom: 10px;
+      }
+
+      .loading-bar {
+        height: 100%;
+        width: 0%;
+        background: lime;
+        transition: width 0.1s;
+      }
+
+      .loading-percent {
+        font-size: 1.2rem;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading-screen">
+      <div class="loading-bar-wrapper">
+        <div class="loading-bar"></div>
+        <p class="loading-percent">0%</p>
+      </div>
+    </div>
+
+    <!-- 실제 내용 -->
+    <div id="main-content" style="display: none">
+      <!-- 너가 만들고 싶은 웹페이지 전체 여기에 -->
+      <h1>내 멋진 웹사이트</h1>
+      <!-- ... -->
+    </div>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const loadingScreen = document.getElementById("loading-screen");
+      const mainContent = document.getElementById("main-content");
+      const loadingBar = document.querySelector(".loading-bar");
+      const loadingPercent = document.querySelector(".loading-percent");
+  
+      let percent = 0;
+  
+      const loadingInterval = setInterval(() => {
+        percent++;
+        loadingBar.style.width = percent + "%";
+        loadingPercent.textContent = percent + "%";
+  
+        if (percent >= 100) {
+          clearInterval(loadingInterval);
+  
+          // 0.3초 딜레이 후 로딩 화면 제거
+          setTimeout(() => {
+            loadingScreen.style.display = "none";
+            mainContent.style.display = "block";
+          }, 300);
+        }
+      }, 30); // 100%까지 약 3초 소요
+    });
+  </script>
+  
+</html>

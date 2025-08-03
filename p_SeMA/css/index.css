@@ -409,6 +409,8 @@ header .logo_change {
 }
 .sect2 .app p {
   color: var(--color-gray200);
+  font-weight: 200;
+  line-height: 1.4;
 }
 .sect2 .download_btn {
   display: inline-block;
@@ -982,12 +984,12 @@ input[type=checkbox]:checked + .mode_change::after {
     margin-bottom: 60px;
   }
   .wrap .sect2 .app h3 {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 0;
   }
   .wrap .sect2 .app p {
-    color: #666;
-    font-size: 14px;
-    padding-bottom: 40px;
+    font-size: 16px;
+    margin-bottom: 60px;
     word-break: keep-all;
   }
   .wrap .sect2 .app p br {
@@ -1010,7 +1012,7 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   .wrap .sect2 .bottom .item .title {
     width: 100%;
-    padding-bottom: 2px;
+    margin-bottom: 6px;
     font-size: 20px;
   }
   .wrap .sect2 .bottom .item .sub_txt {
@@ -1308,11 +1310,11 @@ input[type=checkbox]:checked + .mode_change::after {
     width: 50%;
   }
   .wrap .sect1 .art2 ul .link {
-    padding: 16px 0;
+    padding: 24px 0;
   }
   .wrap .sect1 .art2 ul .link_title {
     font-size: 24px;
-    padding-bottom: 6px;
+    margin-bottom: 6px;
   }
   .wrap .sect1 .art2 ul .link_title::after {
     transition: 0.3s;
@@ -1352,14 +1354,14 @@ input[type=checkbox]:checked + .mode_change::after {
     border-top: 1px solid var(--color-gray500);
   }
   .wrap .sect2 .app h3 {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
   .wrap .sect2 .app h3 br {
     display: none;
   }
   .wrap .sect2 .app p {
-    font-size: 1.6rem;
-    padding-bottom: 40px;
+    font-size: 24px;
+    margin-bottom: 60px;
   }
   .wrap .sect2 .download_btn {
     font-size: 2rem;
@@ -1367,20 +1369,22 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   .wrap .sect2 .bottom {
     display: flex;
+    flex-wrap: wrap;
     gap: 5px;
   }
   .wrap .sect2 .bottom .item {
-    display: inline-block;
-    width: 20%;
-    padding: 10px 20px;
+    width: calc(50% - 5px);
+    padding: 24px 20px;
     text-align: center;
   }
   .wrap .sect2 .bottom .title {
-    font-size: 2rem;
-    width: 100%;
+    margin-bottom: 6px;
+    font-size: 24px;
+    font-weight: 500;
   }
   .wrap .sect2 .bottom .sub_txt {
-    font-size: 16px;
+    font-weight: 200;
+    font-size: 20px;
   }
   .wrap footer .f_top {
     margin-bottom: 60px;
@@ -1682,14 +1686,10 @@ input[type=checkbox]:checked + .mode_change::after {
     transform: rotate(-45deg);
   }
   .wrap .sect2 .app h3 {
-    padding-bottom: 20px;
     font-size: 4rem;
   }
   .wrap .sect2 .app h3 br {
     display: none;
-  }
-  .wrap .sect2 .app p {
-    font-size: 2rem;
   }
   .wrap .sect2 .app p br.appBr {
     display: none;
@@ -1716,11 +1716,11 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .sect2 .q ul.q_list li:nth-child(1) {
     border-top: 1px solid var(--color-gray500);
   }
-  .wrap .sect2 .bottom a.item {
-    padding: 30px 10px;
+  .wrap .sect2 .bottom {
+    gap: 5px;
   }
-  .wrap .sect2 .bottom .sub_txt {
-    font-size: 14px;
+  .wrap .sect2 .bottom .item {
+    width: calc(33.3333% - 5px);
   }
   .wrap .sect2 .bottom .sub_txt br {
     display: none;
@@ -1885,24 +1885,11 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .sect2 .top .q ul.q_list li:nth-child(1) {
     border-top: 1px solid var(--color-gray500);
   }
-  .wrap .sect2 .app h3 {
-    padding-bottom: 20px;
-  }
-  .wrap .sect2 .app h3 br {
-    display: none;
-  }
-  .wrap .sect2 .app p {
-    font-size: 2rem;
-  }
   .wrap .sect2 .app a {
     font-size: 2rem;
   }
-  .wrap .sect2 .bottom .title {
-    font-size: 2.4rem;
-    padding-bottom: 4px;
-  }
-  .wrap .sect2 .bottom .sub_txt {
-    font-size: 16px;
+  .wrap .sect2 .bottom .item {
+    width: calc(20% - 5px);
   }
   .wrap .sect2 .bottom .sub_txt br {
     display: block;

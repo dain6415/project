@@ -442,6 +442,8 @@ header {
     }
     p {
       color: var(--color-gray200);
+      font-weight: 200;
+      line-height: 1.4;
     }
   }
   .download_btn {
@@ -611,7 +613,7 @@ input[type="checkbox"]:checked + .mode_change::after {
         left: 0;
         top: 0;
       }
-      .logo_change{
+      .logo_change {
         max-width: 187px;
       }
     }
@@ -1054,12 +1056,12 @@ input[type="checkbox"]:checked + .mode_change::after {
       }
       .app {
         h3 {
-          padding-bottom: 20px;
+          margin-bottom: 20px;
+          padding-bottom: 0;
         }
         p {
-          color: #666;
-          font-size: clamp(12px, 14px, 16px);
-          padding-bottom: 40px;
+          font-size: clamp(12px, 16px, 16px);
+          margin-bottom: 60px;
           word-break: keep-all;
           br {
             display: none;
@@ -1081,7 +1083,7 @@ input[type="checkbox"]:checked + .mode_change::after {
           padding: 20px;
           .title {
             width: 100%;
-            padding-bottom: 2px;
+            margin-bottom: 6px;
             font-size: clamp(16px, 20px, 24px);
           }
           .sub_txt {
@@ -1283,7 +1285,7 @@ input[type="checkbox"]:checked + .mode_change::after {
           right: 20px;
           bottom: 62px;
         }
-        .status{
+        .status {
           font-size: 20px;
         }
       }
@@ -1405,11 +1407,11 @@ input[type="checkbox"]:checked + .mode_change::after {
         ul {
           width: 50%;
           .link {
-            padding: 16px 0;
+            padding: 24px 0;
           }
           .link_title {
             font-size: 24px;
-            padding-bottom: 6px;
+            margin-bottom: 6px;
             &::after {
               transition: 0.3s;
             }
@@ -1452,14 +1454,14 @@ input[type="checkbox"]:checked + .mode_change::after {
           }
         }
         h3 {
-          padding-bottom: 20px;
+          margin-bottom: 20px;
           br {
             display: none;
           }
         }
         p {
-          font-size: 1.6rem;
-          padding-bottom: 40px;
+          font-size: 24px;
+          margin-bottom: 60px;
         }
       }
       .download_btn {
@@ -1468,19 +1470,21 @@ input[type="checkbox"]:checked + .mode_change::after {
       }
       .bottom {
         display: flex;
+        flex-wrap: wrap;
         gap: 5px;
         .item {
-          display: inline-block;
-          width: 20%;
-          padding: 10px 20px;
+          width: calc(50% - 5px);
+          padding: 24px 20px;
           text-align: center;
         }
         .title {
-          font-size: 2rem;
-          width: 100%;
+          margin-bottom: 6px;
+          font-size: 24px;
+          font-weight: 500;
         }
         .sub_txt {
-          font-size: 16px;
+          font-weight: 200;
+          font-size: 20px;
         }
       }
     }
@@ -1819,14 +1823,12 @@ input[type="checkbox"]:checked + .mode_change::after {
     .sect2 {
       .app {
         h3 {
-          padding-bottom: 20px;
           font-size: 4rem;
           br {
             display: none;
           }
         }
         p {
-          font-size: 2rem;
           br.appBr {
             display: none;
           }
@@ -1857,11 +1859,11 @@ input[type="checkbox"]:checked + .mode_change::after {
         }
       }
       .bottom {
-        a.item {
-          padding: 30px 10px;
+        gap: 5px;
+        .item {
+          width: calc(33.3333% - 5px);
         }
         .sub_txt {
-          font-size: 14px;
           br {
             display: none;
           }
@@ -2072,26 +2074,15 @@ input[type="checkbox"]:checked + .mode_change::after {
         }
       }
       .app {
-        h3 {
-          padding-bottom: 20px;
-          br {
-            display: none;
-          }
-        }
-        p {
-          font-size: 2rem;
-        }
         a {
           font-size: 2rem;
         }
       }
       .bottom {
-        .title {
-          font-size: 2.4rem;
-          padding-bottom: 4px;
+        .item {
+          width: calc(20% - 5px);
         }
         .sub_txt {
-          font-size: 16px;
           br {
             display: block;
           }

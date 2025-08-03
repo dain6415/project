@@ -34,6 +34,7 @@ const headerLogo = document.querySelector(".first_logo");
 const headerLogoChange = document.querySelector(".logo_change");
 
 function logoChange() {
+  const rootColor = getComputedStyle(document.body);
   const isLight = document.body.getAttribute("data-theme") === "light";
   const scrollY = window.scrollY;
   const isMobileMenuOpen = mobileNav.classList.contains("on");
@@ -55,12 +56,13 @@ function logoChange() {
   }
 
   if (scrollY > 100) {
-    const rootColor = getComputedStyle(document.documentElement);
     const headerBg = rootColor.getPropertyValue("--color-gray700").trim();
     const navColor = rootColor.getPropertyValue("--color-gray200").trim();
+    const headerBorderBottom = rootColor.getPropertyValue("--color-gray500").trim();
+
 
     header.style.background = headerBg;
-    header.style.borderBottom = "1px solid #cccccc";
+    header.style.borderBottom = `1px solid ${headerBorderBottom}`;
     headerLogo.style.display = 'none';
     headerLogoChange.style.display = 'block';
     

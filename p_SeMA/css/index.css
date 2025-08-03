@@ -163,9 +163,6 @@ header .logo_change {
 .wrap .bg_img .introduce .bottom .status #museum_status {
   color: #111;
 }
-.wrap .bg_img .status {
-  font-size: 20px;
-}
 
 .sect1 {
   position: relative;
@@ -548,7 +545,7 @@ input[type=checkbox]:checked + .mode_change::after {
 @media only screen and (max-width: 899px) {
   header {
     height: 60px;
-    padding: 12px 20px;
+    padding: 12px 10px;
   }
   header .inner {
     width: 100%;
@@ -648,7 +645,7 @@ input[type=checkbox]:checked + .mode_change::after {
     z-index: -1;
     width: 100vw;
     height: 100vh;
-    padding: 100px 20px 40px;
+    padding: 100px 10px 40px;
     background-color: var(--color-gray700);
   }
   header .mobile_menu ul.mobile_nav.on {
@@ -773,6 +770,9 @@ input[type=checkbox]:checked + .mode_change::after {
   }
 }
 @media only screen and (max-width: 600px) {
+  body .no-scroll {
+    overflow: hidden;
+  }
   header .mobile_nav {
     padding: 100px 20px 40px;
   }
@@ -785,9 +785,6 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   header .mobile_nav .search input {
     font-size: 20px;
-  }
-  body .no-scroll {
-    overflow: hidden;
   }
   .wrap .bg_img {
     padding: 0 10px;
@@ -839,6 +836,7 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .bg_img .introduce .bottom .status {
     width: 100%;
     white-space: nowrap;
+    font-size: 16px;
     padding: 0px 30px;
     font-weight: 500;
   }
@@ -894,14 +892,18 @@ input[type=checkbox]:checked + .mode_change::after {
     font-weight: 400;
   }
   .wrap .sect1 .art1 .swiper .swiper-wrapper .swiper-slide .txt {
+    margin-top: 10px;
     padding: 0 5px;
   }
   .wrap .sect1 .art1 .swiper .swiper-wrapper .swiper-slide .txt .title {
-    font-size: 2rem;
+    font-size: 24px;
     font-weight: 400;
   }
+  .wrap .sect1 .art1 .swiper .swiper-wrapper .swiper-slide .txt .sub_txt {
+    margin-top: 4px;
+  }
   .wrap .sect1 .art1 .swiper .swiper-wrapper .swiper-slide .txt .sub_txt p {
-    font-size: 1.6rem;
+    font-size: 20px;
   }
   .wrap .sect1 .art1 .swiper .pagination_area {
     padding-bottom: 44px;
@@ -1188,6 +1190,9 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .bg_img .introduce .bottom {
     right: 20px;
     bottom: 62px;
+  }
+  .wrap .bg_img .introduce .status {
+    font-size: 20px;
   }
   .wrap .sect1,
   .wrap .sect2,

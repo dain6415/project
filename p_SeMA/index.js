@@ -60,20 +60,20 @@ function logoChange() {
     const navColor = rootColor.getPropertyValue("--color-gray200").trim();
 
     header.style.background = headerBg;
-    header.style.boxShadow = '0 5px 6px rgba(0, 0, 0, 0.1)';
+    header.style.borderBottom = "1px solid #cccccc";
     headerLogo.style.display = 'none';
     headerLogoChange.style.display = 'block';
-
+    
     nav.forEach((link) => {
       link.style.color = navColor;
     });
-
+    
     if (headerLogoChange.getAttribute("src") !== changeSrc) {
       headerLogoChange.setAttribute("src", changeSrc);
     }
   } else {
     header.style.background = "none";
-    header.style.boxShadow = 'none';
+    header.style.borderBottom = "none";
     headerLogo.style.display = 'block';
     headerLogoChange.style.display = 'none';
 

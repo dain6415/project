@@ -283,6 +283,7 @@ header .logo_change {
 }
 .sect1 .art2 .collections .text_container .title {
   color: var(--color-gray200);
+  margin-bottom: 6px;
 }
 .sect1 .art2 ul {
   margin-left: auto;
@@ -429,6 +430,7 @@ header .logo_change {
 }
 .sect2 .bottom .item .sub_txt {
   color: var(--color-gray300);
+  font-weight: 200;
 }
 
 footer .f_top .f_logo li {
@@ -988,7 +990,7 @@ input[type=checkbox]:checked + .mode_change::after {
     padding-bottom: 0;
   }
   .wrap .sect2 .app p {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 60px;
     word-break: keep-all;
   }
@@ -1299,7 +1301,7 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   .wrap .sect1 .art2 .collections .text {
     left: 0;
-    bottom: -112px;
+    bottom: -115px;
   }
   .wrap .sect1 .art2 .collections .artist,
   .wrap .sect1 .art2 .collections .title,
@@ -1383,7 +1385,6 @@ input[type=checkbox]:checked + .mode_change::after {
     font-weight: 500;
   }
   .wrap .sect2 .bottom .sub_txt {
-    font-weight: 200;
     font-size: 20px;
   }
   .wrap footer .f_top {

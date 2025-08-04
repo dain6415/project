@@ -1081,13 +1081,15 @@ input[type="checkbox"]:checked + .mode_change::after {
         .item {
           display: block;
           padding: 20px;
+          // 폰사이즈에서 폰트 사이즈 바꿔야 함...색도 굵기도
+
           .title {
             width: 100%;
             margin-bottom: 6px;
-            font-size: clamp(16px, 20px, 24px);
+            font-size: clamp(16px, 24px, 24px);
           }
           .sub_txt {
-            font-size: clamp(14px, 16px, 20px);
+            font-size: clamp(14px, 20px, 20px);
           }
         }
       }

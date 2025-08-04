@@ -66,14 +66,12 @@ body {
   transform: translateX(-50%);
   width: 100%;
   background: #000;
-  // border-bottom: 2px solid var(--main-color);
-  z-index: 10;
+  z-index: 20;
   .left,
   .right {
     display: flex;
     gap: 4px;
     div {
-      // border: 1px solid #0f0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -889,8 +887,8 @@ nav {
     }
   }
   #modal_img {
-    max-width: 76%;
-    max-height: 75%;
+    max-width: 80%;
+    max-height: 100%;
   }
   .controls {
     gap: 6px;
@@ -1013,6 +1011,9 @@ nav {
       height: 220px;
     }
   }
+  #modal_img {
+    max-height: 80%;
+  }
   #goods {
     #goods_img_container {
       grid-template-columns: repeat(4, 1fr);
@@ -1067,6 +1068,9 @@ nav {
     .img_box {
       height: 300px;
     }
+  }
+  #modal_img {
+    max-height: 940px;
   }
 }
 // ---------

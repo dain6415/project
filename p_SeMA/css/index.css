@@ -1013,10 +1013,10 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .sect2 .bottom .item .title {
     width: 100%;
     margin-bottom: 6px;
-    font-size: 20px;
+    font-size: 24px;
   }
   .wrap .sect2 .bottom .item .sub_txt {
-    font-size: 16px;
+    font-size: 20px;
   }
   footer {
     padding-left: 10px;

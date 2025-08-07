@@ -791,7 +791,7 @@ nav .on {
     border-bottom: 2px solid #000;
   }
   .tab_content {
-    padding: 60px 30px;
+    padding: 60px 0;
   }
   .tab_content .text {
     padding: 30px;
@@ -989,9 +989,6 @@ nav .on {
   }
   #contents_container {
     margin-top: -94px;
-  }
-  .tab_content {
-    padding: 60px 40px;
   }
   .tab_content .text {
     padding: 30px;

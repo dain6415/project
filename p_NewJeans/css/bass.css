@@ -45,8 +45,8 @@
 :root {
   --main-color: #1e96ff;
 }
-*{
-  box-sizing: border-box
+* {
+  box-sizing: border-box;
 }
 html,
 body {
@@ -54,30 +54,32 @@ body {
   font-family: "JetBrains Mono", monospace;
   font-weight: 300;
   color: var(--main-color);
-  /* color: #c9e6ff; */
-  /* text-shadow: 0 0 5px #1e96ff, 0 0 10px #1e96ff, 0 0 10px #1e96ff, 0 0 10px #1e96ff; */
   line-height: 1.2;
   letter-spacing: -1.2px;
-  p {
-    font-size: 10px;
-  }
-  a{
-    text-decoration: none;
-  }
 }
-.neon{
+p {
+  font-size: 10px;
+}
+a {
+  text-decoration: none;
+}
+.neon {
   display: none;
   color: #c9e6ff;
-  text-shadow: 0 0 5px #82c4ff, 0 0 10px #82c4ff, 0 0 20px #1e96ff, 0 0 30px #1e96ff, 0 0 40px #1e96ff, 0 0 55px #1e96ff, 0 0 75px #1e96ff;
+  text-shadow: 0 0 5px #82c4ff, 0 0 10px #82c4ff, 0 0 20px #1e96ff,
+    0 0 30px #1e96ff, 0 0 40px #1e96ff, 0 0 55px #1e96ff, 0 0 75px #1e96ff;
 }
-button{
+button {
   all: unset;
   font-family: "JetBrains Mono";
   font-weight: 200;
-  /* color: var(--main-color); */
+}
+a,
+button,
+li {
   cursor: pointer;
 }
-img{
+img {
   vertical-align: top;
   width: 100%;
 }

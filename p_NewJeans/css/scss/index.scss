@@ -3,7 +3,7 @@ body {
   width: 100%;
   margin: auto;
   position: relative;
-  &.no_scroll{
+  &.no_scroll {
     overflow: hidden;
   }
   #contents_container {
@@ -40,13 +40,13 @@ body {
     height: 40px;
     padding: 6px;
     border: 2px solid var(--main-color);
-    #loding_bar{
+    #loding_bar {
       height: 100%;
       width: 0;
       background: var(--main-color);
       transform: width 0.1s;
     }
-    .loding_text{
+    .loding_text {
       font-size: 20px;
       text-align: center;
       color: var(--main-color);
@@ -61,29 +61,12 @@ body {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   background: #000;
   z-index: 20;
-  .left,
-  .right {
-    display: flex;
-    gap: 4px;
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .telco,
-    .batt,
-    .music {
-      img {
-        height: 100%;
-      }
-    }
-  }
+
 }
 nav {
   position: relative;
@@ -507,9 +490,37 @@ nav {
 
 // phone ------------------------------------------
 @media screen and (max-width: 700px) {
+  #loding {
+    .loding_wrap {
+      width: 200px;
+      height: 20px;
+      padding: 4px;
+    }
+  }
   .top_bar {
+    top: 0;
     height: 40px;
     padding: 8px 10px;
+    .left,
+    .right {
+      display: flex;
+      gap: 4px;
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .telco,
+      .batt,
+      .music {
+        img {
+          height: 100%;
+        }
+      }
+      .end{
+        display: none;
+      }
+    }
     .telco,
     .batt {
       height: 30px;
@@ -726,19 +737,33 @@ nav {
 // pc -------------------------------------------------
 @media screen and (min-width: 701px) {
   body,
-  .top_bar {
-    max-width: 1000px;
-  }
   main {
-    margin-top: 60px;
+    margin-bottom: 64px;
   }
   .top_bar {
-    padding: 14px 30px;
+    bottom: 0;
+    max-width: 100%;
     height: 64px;
+    padding: 14px 30px;
     .telco,
     .batt,
     .music {
-      height: 40px;
+      // height: 40px;
+      display: none;
+    }
+    .end{
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      padding: 4px;
+      padding-right: 10px;
+      p{
+        font-size: 16px;
+      }
+      img{
+        width: 40px;
+        height: 40px;
+      }
     }
     #clock {
       font-size: 20px;
@@ -950,7 +975,7 @@ nav {
 // -------------------------------------------------
 @media screen and (min-width: 901px) {
   .top_bar {
-    padding: 14px 3px;
+    padding: 14px 24px;
   }
   nav {
     justify-content: flex-start;

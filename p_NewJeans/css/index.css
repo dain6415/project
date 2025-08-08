@@ -61,31 +61,11 @@ body #content .tab_content.on {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   background: #000;
   z-index: 20;
-}
-.top_bar .left,
-.top_bar .right {
-  display: flex;
-  gap: 4px;
-}
-.top_bar .left div,
-.top_bar .right div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.top_bar .left .telco img,
-.top_bar .left .batt img,
-.top_bar .left .music img,
-.top_bar .right .telco img,
-.top_bar .right .batt img,
-.top_bar .right .music img {
-  height: 100%;
 }
 
 nav {
@@ -502,9 +482,38 @@ nav .on {
 }
 
 @media screen and (max-width: 700px) {
+  #loding .loding_wrap {
+    width: 200px;
+    height: 20px;
+    padding: 4px;
+  }
   .top_bar {
+    top: 0;
     height: 40px;
     padding: 8px 10px;
+  }
+  .top_bar .left,
+  .top_bar .right {
+    display: flex;
+    gap: 4px;
+  }
+  .top_bar .left div,
+  .top_bar .right div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .top_bar .left .telco img,
+  .top_bar .left .batt img,
+  .top_bar .left .music img,
+  .top_bar .right .telco img,
+  .top_bar .right .batt img,
+  .top_bar .right .music img {
+    height: 100%;
+  }
+  .top_bar .left .end,
+  .top_bar .right .end {
+    display: none;
   }
   .top_bar .telco,
   .top_bar .batt {
@@ -705,19 +714,32 @@ nav .on {
 }
 @media screen and (min-width: 701px) {
   body,
-  .top_bar {
-    max-width: 1000px;
-  }
   main {
-    margin-top: 60px;
+    margin-bottom: 64px;
   }
   .top_bar {
-    padding: 14px 30px;
+    bottom: 0;
+    max-width: 100%;
     height: 64px;
+    padding: 14px 30px;
   }
   .top_bar .telco,
   .top_bar .batt,
   .top_bar .music {
+    display: none;
+  }
+  .top_bar .end {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 4px;
+    padding-right: 10px;
+  }
+  .top_bar .end p {
+    font-size: 16px;
+  }
+  .top_bar .end img {
+    width: 40px;
     height: 40px;
   }
   .top_bar #clock {
@@ -916,7 +938,7 @@ nav .on {
 }
 @media screen and (min-width: 901px) {
   .top_bar {
-    padding: 14px 3px;
+    padding: 14px 24px;
   }
   nav {
     justify-content: flex-start;

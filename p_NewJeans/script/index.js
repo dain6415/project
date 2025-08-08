@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", function () {
         document.body.classList.remove("no_scroll");
       }, 300);
     }
-  }, 50);
+  }, 1);
 
   mv();
   gallery();

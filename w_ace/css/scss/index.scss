@@ -224,7 +224,7 @@ main {
         }
       }
     }
-    &.on{
+    &.on {
       position: absolute;
     }
   }
@@ -391,12 +391,11 @@ footer {
   header {
     width: 100%;
     height: 85px;
-    padding: 0 30px;
+    padding: 0 18px;
     @include flex-c(space-between);
     ul.h-top {
       display: none;
       padding: 20px 0;
-      // @include flex-c(end);
       li {
         padding: 8px 15px;
         a {
@@ -493,7 +492,7 @@ footer {
             height: 100%;
             position: relative;
             .swiper {
-              width: calc(100% - 60px);
+              width: calc(100% - 36px);
               height: 100%;
               .swiper-wrapper {
                 width: 100%;
@@ -895,15 +894,16 @@ footer {
         &.sect4 {
           margin: 100px auto 0;
           .inner {
-            height: 100%;
             .grid {
-              width: 460px;
+              width: calc(100% - 36px);
+              height: auto;
               margin: auto;
               display: grid;
               grid-template-columns: repeat(2, 1fr);
-              grid-template-rows: repeat(4, 210px);
-              gap: 20px;
+              grid-template-rows: repeat(4, 1fr);
+              gap: 10px;
               li {
+                height: 41.2vw;
                 overflow: hidden;
                 a {
                   img {
@@ -1125,7 +1125,8 @@ footer {
         }
       }
       .bluegreen {
-        background: #E36F96 url(../img/header/wedding-icon.png) no-repeat left 13px center;
+        background: #e36f96 url(../img/header/wedding-icon.png) no-repeat left
+          13px center;
         margin-right: 5px;
         margin-left: 10px;
         padding-left: 35px;
@@ -1150,7 +1151,7 @@ footer {
       ul.left {
         display: flex;
         margin-left: 5%;
-        transition: .3s;
+        transition: 0.3s;
         li.main-menu {
           font-weight: 900;
           font-size: 1.6em;
@@ -1180,7 +1181,7 @@ footer {
             }
           }
           ul.sub-menu {
-            display:none;
+            display: none;
             z-index: 99;
             li {
               a {
@@ -1209,7 +1210,7 @@ footer {
         }
         &.left:hover {
           li.main-menu {
-            > a{
+            > a {
               padding-left: 10px;
             }
             ul.sub-menu {
@@ -1229,7 +1230,7 @@ footer {
           }
         }
       }
-      ul.pc_only_menu_right{
+      ul.pc_only_menu_right {
         display: none;
       }
     }
@@ -1910,10 +1911,11 @@ footer {
         &.sect4 {
           margin: 150px auto 0;
           .inner {
+            margin: 0 80px;
             .grid {
               width: 1160px;
               grid-template-columns: repeat(3, 1fr);
-              grid-template-rows: repeat(3, 354px);
+              grid-template-rows: repeat(3, 1fr);
               gap: 40px;
               li {
                 &:nth-child(8) {
@@ -1942,7 +1944,6 @@ footer {
                 min-width: 100%;
                 height: 100%;
                 object-fit: cover;
-                // transform: scale(1);
               }
             }
             .txt {
@@ -2762,6 +2763,16 @@ footer {
             }
           }
         }
+        &.sect4{
+          .inner {
+            .grid {
+              width: 1440px;
+              grid-template-columns: repeat(4, 1fr);
+              grid-template-rows: repeat(2, 1fr);
+              gap: 40px;
+            }
+          }
+        }
         &.sect7 {
           margin-top: 130px;
           background: none;
@@ -2777,27 +2788,6 @@ footer {
                   font-size: 3.5rem;
                 }
               }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-// --------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------
-// sect4
-@media screen and (min-width: 1500px) {
-  main {
-    .contents {
-      section {
-        &.sect4 {
-          // height: 100vh;
-          .inner {
-            .grid {
-              width: 1440px;
-              grid-template-columns: repeat(4, 1fr);
-              grid-template-rows: repeat(2, 326px);
             }
           }
         }

@@ -339,7 +339,7 @@ footer dl dd {
   header {
     width: 100%;
     height: 85px;
-    padding: 0 30px;
+    padding: 0 18px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -443,7 +443,7 @@ footer dl dd {
     position: relative;
   }
   main .contents section.sect1 .swiper_container .swiper {
-    width: calc(100% - 60px);
+    width: calc(100% - 36px);
     height: 100%;
   }
   main .contents section.sect1 .swiper_container .swiper .swiper-wrapper {
@@ -810,18 +810,17 @@ footer dl dd {
   main .contents section.sect4 {
     margin: 100px auto 0;
   }
-  main .contents section.sect4 .inner {
-    height: 100%;
-  }
   main .contents section.sect4 .inner .grid {
-    width: 460px;
+    width: calc(100% - 36px);
+    height: auto;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 210px);
-    gap: 20px;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
   }
   main .contents section.sect4 .inner .grid li {
+    height: 41.2vw;
     overflow: hidden;
   }
   main .contents section.sect4 .inner .grid li a img {
@@ -1024,7 +1023,7 @@ footer dl dd {
     margin-right: 5px;
   }
   header ul.h-top .bluegreen {
-    background: #E36F96 url(../img/header/wedding-icon.png) no-repeat left 13px center;
+    background: #e36f96 url(../img/header/wedding-icon.png) no-repeat left 13px center;
     margin-right: 5px;
     margin-left: 10px;
     padding-left: 35px;
@@ -1733,10 +1732,13 @@ footer dl dd {
   main .contents section.sect4 {
     margin: 150px auto 0;
   }
+  main .contents section.sect4 .inner {
+    margin: 0 80px;
+  }
   main .contents section.sect4 .inner .grid {
     width: 1160px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 354px);
+    grid-template-rows: repeat(3, 1fr);
     gap: 40px;
   }
   main .contents section.sect4 .inner .grid li:nth-child(8) img {
@@ -2471,6 +2473,12 @@ footer dl dd {
     font-weight: 600;
     font-size: 1.6rem;
   }
+  main .contents section.sect4 .inner .grid {
+    width: 1440px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+  }
   main .contents section.sect7 {
     margin-top: 130px;
     background: none;
@@ -2488,12 +2496,5 @@ footer dl dd {
   }
   main .contents section.sect7 .info ul li .txt2 {
     font-size: 3.5rem;
-  }
-}
-@media screen and (min-width: 1500px) {
-  main .contents section.sect4 .inner .grid {
-    width: 1440px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 326px);
   }
 }/*# sourceMappingURL=index.css.map */

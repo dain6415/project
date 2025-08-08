@@ -13,6 +13,11 @@
   align-items: center;
   justify-content: $justify;
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: "Pretendard";
   header {
@@ -1138,7 +1143,6 @@ body {
                   }
                 }
                 .r_btn {
-                  // display: none;
                   width: 110%;
                   height: 30px;
                   position: absolute;
@@ -1146,7 +1150,6 @@ body {
                   top: 200px;
                   left: 50%;
                   transform: translateX(-50%);
-                  // border: 1px solid #000;
                   display: flex;
                   justify-content: space-between;
                   .swiper-button-prev {

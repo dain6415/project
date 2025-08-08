@@ -6,6 +6,15 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style: none;
+}
+
+a,
+button {
+  text-decoration: none;
+}
+
 body {
   font-family: "Pretendard";
 }

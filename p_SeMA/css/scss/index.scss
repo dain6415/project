@@ -109,10 +109,10 @@ header {
       z-index: 1;  
       .txt {
         h2 {
-          line-height: 1.2;
-          color: #f4f4f4;
+          margin-bottom: 0;
+          color: #f7f7f7;
           span {
-            color: #f4f4f4;
+            color: #f7f7f7;
           }
         }
         p {
@@ -132,7 +132,6 @@ header {
             padding-right: 6px;
           }
           #museum_status {
-            font-size: 28px;
             font-weight: 600;
             letter-spacing: 0;
             padding-top: 10px;
@@ -220,7 +219,7 @@ header {
               bottom: 40px;
               left: 50%;
               z-index: 1;
-              color: #f4f4f4;
+              color: #f7f7f7;
               font-size: 20px;
               font-weight: 600;
               transform: translateX(-50%);
@@ -839,22 +838,12 @@ input[type="checkbox"]:checked + .mode_change::after {
         align-items: center;
         gap: 60px;
         h2 {
-          font-size: clamp(28px, 32px, 48px);
+          font-size: 42px;
           margin-bottom: 20px;
+          line-height: .8;
           span{
             font-size: 20px;
             font-weight: 300;
-          }
-        }
-        .txt {
-          p {
-            word-break: keep-all;
-            padding-bottom: 3vh;
-            line-height: 1.5;
-            font-size: clamp(12px, 14px, 14px);
-            br {
-              display: none;
-            }
           }
         }
         .bottom {
@@ -867,6 +856,7 @@ input[type="checkbox"]:checked + .mode_change::after {
           .status {
             width: 100%;
             white-space: nowrap;
+            font-size: 20px;
             i {
               display: none;
             }
@@ -876,6 +866,7 @@ input[type="checkbox"]:checked + .mode_change::after {
               text-align: center;
             }
             #museum_status {
+              padding-top: 4px;
               font-weight: 600;
             }
           }
@@ -1257,6 +1248,9 @@ input[type="checkbox"]:checked + .mode_change::after {
               padding-left: 6px;
             }
           }
+        }
+        #museum_status {
+          font-size: 28px;
         }
       }
     }

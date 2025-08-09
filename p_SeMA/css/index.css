@@ -30,7 +30,7 @@ body {
   color: var(--color-gray600);
   background-color: var(--color-gray700);
   font-size: 10px;
-  font-family: "pretendard";
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -60,9 +60,6 @@ header {
 header nav a,
 header nav i {
   color: var(--color-gray100);
-}
-header h1 {
-  border: 1px solid #0f0;
 }
 header .first_logo {
   max-width: 44%;

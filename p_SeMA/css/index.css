@@ -116,7 +116,7 @@ header .logo_change {
   padding-right: 6px;
 }
 .wrap .bg_img .introduce .bottom .status #museum_status {
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0;
   padding-top: 10px;
 }
@@ -1154,7 +1154,7 @@ input[type=checkbox]:checked + .mode_change::after {
     padding-left: 6px;
   }
   .wrap .bg_img .introduce #museum_status {
-    font-size: 28px;
+    font-size: 32px;
   }
   .wrap .sect1,
   .wrap .sect2,
@@ -1781,16 +1781,6 @@ input[type=checkbox]:checked + .mode_change::after {
   header .scrolled nav > ul li.main-menu a {
     color: black;
   }
-  .wrap .bg_img .introduce .txt h2 {
-    font-size: 60px;
-  }
-  .wrap .bg_img .introduce .txt h2 span {
-    font-weight: 600;
-    font-size: 60px;
-  }
-  .wrap .bg_img .introduce .txt h2 br {
-    display: none;
-  }
   .wrap .sect1,
   .wrap .sect2 footer {
     padding: 120px 0px 160px;
@@ -1895,5 +1885,17 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   .footer_util .sns {
     width: 15%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .wrap .bg_img .introduce .txt h2 {
+    font-size: 60px;
+  }
+  .wrap .bg_img .introduce .txt h2 span {
+    font-weight: 600;
+    font-size: 60px;
+  }
+  .wrap .bg_img .introduce .txt h2 br {
+    display: none;
   }
 }/*# sourceMappingURL=index.css.map */

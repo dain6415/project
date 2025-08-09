@@ -577,14 +577,7 @@ nav .on {
     display: none;
   }
   #intro .img_box .mobile {
-    width: 150%;
-  }
-  #intro .logo_box {
-    top: 4%;
-    width: 100%;
-  }
-  #intro .logo_box .logo_pc {
-    display: none;
+    width: 120%;
   }
   #playlist {
     position: absolute;

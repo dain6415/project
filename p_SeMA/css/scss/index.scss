@@ -673,19 +673,21 @@ input[type="checkbox"]:checked + .mode_change::after {
         height: 100vh;
         padding: 100px 10px 40px;
         background-color: var(--color-gray700);
-        // overflow-y: auto;
         &.on {
           display: block;
         }
         li.main-menu {
-          margin-bottom: 10px;
           > a {
             display: block;
-            font-weight: 500;
+            padding: 12px 0;
             color: var(--color-gray100);
-            padding: 6px 0;
+            font-weight: 500;
+            border-top: 1px solid var(--color-gray500);
           }
           ul.sub-menu {
+            li:last-child{
+              margin-bottom: 6px;
+            }
             a {
               display: block;
               font-weight: 500;
@@ -696,6 +698,9 @@ input[type="checkbox"]:checked + .mode_change::after {
               }
             }
           }
+        }
+        li.main-menu:nth-child(4) {
+          border-bottom: 1px solid var(--color-gray500);
         }
         .search {
           display: block;

@@ -621,14 +621,15 @@ input[type=checkbox]:checked + .mode_change::after {
   header .mobile_menu ul.mobile_nav.on {
     display: block;
   }
-  header .mobile_menu ul.mobile_nav li.main-menu {
-    margin-bottom: 10px;
-  }
   header .mobile_menu ul.mobile_nav li.main-menu > a {
     display: block;
-    font-weight: 500;
+    padding: 12px 0;
     color: var(--color-gray100);
-    padding: 6px 0;
+    font-weight: 500;
+    border-top: 1px solid var(--color-gray500);
+  }
+  header .mobile_menu ul.mobile_nav li.main-menu ul.sub-menu li:last-child {
+    margin-bottom: 6px;
   }
   header .mobile_menu ul.mobile_nav li.main-menu ul.sub-menu a {
     display: block;
@@ -638,6 +639,9 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   header .mobile_menu ul.mobile_nav li.main-menu ul.sub-menu a:hover {
     color: var(--color-gray200);
+  }
+  header .mobile_menu ul.mobile_nav li.main-menu:nth-child(4) {
+    border-bottom: 1px solid var(--color-gray500);
   }
   header .mobile_menu ul.mobile_nav .search {
     display: block;

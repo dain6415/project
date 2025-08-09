@@ -106,12 +106,10 @@ header {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 1;
-      // border: 1px solid #f00;
+      z-index: 1;  
       .txt {
         h2 {
           line-height: 1.2;
-          letter-spacing: -1.4px;
           color: #f4f4f4;
           span {
             color: #f4f4f4;

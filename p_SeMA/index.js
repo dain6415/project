@@ -99,7 +99,7 @@ const schedule = {
 
 const museumStatusEl = document.getElementById("museum_status");
 museumStatusEl.innerHTML = schedule[today].replace(/\n/g, "<br>");
-museumStatusEl.style.color = "#eee";
+museumStatusEl.style.color = "#f7f7f7";
 console.log(schedule[today]);
 
 // swiper----------------------------------------

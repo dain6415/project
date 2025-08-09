@@ -59,6 +59,9 @@ header nav a,
 header nav i {
   color: var(--color-gray100);
 }
+header h1 {
+  border: 1px solid #0f0;
+}
 header .first_logo {
   max-width: 44%;
 }

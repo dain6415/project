@@ -89,16 +89,17 @@ function logoChange() {
 const today = new Date().getDay();
 const schedule = {
   1: "휴무 (매주 월요일)",
-  2: "10:00 - 21:00",
-  3: "10:00 - 20:00까지",
-  4: "10:00 - 20:00까지",
-  5: "10:00 - 20:00",
-  6: "10:00 - 19:00",
-  0: "10:00 - 19:00",
+  2: "10:00 AM - 21:00 PM",
+  3: "10:00 AM - 20:00 PM",
+  4: "10:00 AM - 20:00 PM",
+  5: "10:00 AM - 20:00 PM",
+  6: "10:00 AM - 19:00 PM",
+  0: "10:00 AM - 19:00 PM",
 };
 
-const msg = schedule[today].replace(/\n/g, "<br>");
-document.getElementById("museum_status").innerHTML = msg;
+const museumStatusEl = document.getElementById("museum_status");
+museumStatusEl.innerHTML = schedule[today].replace(/\n/g, "<br>");
+museumStatusEl.style.color = "#eee";
 console.log(schedule[today]);
 
 // swiper----------------------------------------

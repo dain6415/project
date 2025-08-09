@@ -24,6 +24,7 @@ body {
 }
 
 #loding {
+  // display: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -145,9 +146,19 @@ nav {
         align-items: center;
       }
       li {
-        border: 1px solid #000;
         box-sizing: content-box;
-        // pointer-events: none;
+        border: 1px solid #000;
+        position: relative;
+        &:hover::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.2);
+          pointer-events: none;
+        }
       }
     }
   }
@@ -540,7 +551,7 @@ nav {
   nav {
     flex-direction: column;
     font-size: 0;
-    border-top: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
     button {
       position: relative;
       padding: 12px 14px;
@@ -588,10 +599,10 @@ nav {
   }
   #playlist {
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 260px;
+    width: 90%;
     background: #000;
     border: 1px solid var(--main-color);
     .play_container {
@@ -783,10 +794,11 @@ nav {
   }
   #playlist {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 317px;
-    height: 86px;
+    bottom: 20px;
+    left: 50%;
+    width: 40%;
+    // height: 86px;
+    transform: translateX(-50%);
     background: #000;
     border: 1px solid var(--main-color);
     z-index: 10;
@@ -816,7 +828,7 @@ nav {
     }
   }
   #contents_container {
-    margin-top: -88px;
+    margin-top: -0px;
   }
   nav {
     justify-content: flex-start;
@@ -826,7 +838,6 @@ nav {
       padding: 30px;
       background: #000;
       border-right: 2px solid var(--main-color);
-      border-top: 2px solid var(--main-color);
       border-bottom: 2px solid var(--main-color);
       font-size: 20px;
       box-sizing: content-box;
@@ -1005,10 +1016,9 @@ nav {
     }
   }
   #playlist {
-    height: 90px;
-  }
-  #contents_container {
-    margin-top: -93px;
+    width: 30%;
+    max-width: 340px;
+    height:  auto;
   }
   .tab_content .text {
     .hour {
@@ -1059,9 +1069,6 @@ nav {
       top: 40px;
     }
   }
-  #contents_container {
-    margin-top: -94px;
-  }
   .tab_content {
     .text {
       padding: 30px;
@@ -1097,7 +1104,8 @@ nav {
 // ---------
 @media screen and (min-width: 1520px) {
   #playlist {
-    width: auto;
+    width: 540px;
+    max-width: none;
     height: auto;
     right: 40px;
     bottom: 27px;

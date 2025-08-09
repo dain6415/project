@@ -1,6 +1,6 @@
-import { mv } from "./mv.js";
-import { gallery } from "./gallery.js";
-import { goods } from "./goods.js";
+import { mv } from "./script/mv.js";
+import { gallery } from "./script/gallery.js";
+import { goods } from "./script/goods.js";
 
 window.addEventListener("DOMContentLoaded", function () {
   const loading = document.getElementById("loding");

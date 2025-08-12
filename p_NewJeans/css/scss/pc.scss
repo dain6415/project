@@ -9,35 +9,67 @@
   align-items: center;
 }
 #topBar {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 40px;
-  display: flex;
-  justify-content: space-between;
+  height: 32px;
+  padding: 6px 20px;
+  @include flex-c(space-between);
   .left,
   .right {
     display: flex;
-    img {
-      display: none;
+  }
+  .left {
+    @include flex-c();
+    gap: 2px;
+    li {
+      display: inline-block;
+      cursor: auto;
+      &:first-child {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        @include flex-c();
+        img {
+          width: 100%;
+        }
+      }
+      &:not(:first-child) {
+        width: 80px;
+        height: 20px;
+        font-size: 14px;
+        text-align: center;
+        border-right: 1px solid var(--blue-color);
+      }
+    }
+  }
+  .right {
+    font-size: 14px;
+    .batt {
+      width: 30px;
+      height: 20px;
+      @include flex-c();
+    }
+    .clock_box {
+      margin-left: 10px;
+      @include flex-c(flex-end);
     }
   }
 }
 @media screen and (min-width: 701px) {
+  body{
+    overflow: hidden;
+  }
   main {
     max-width: 1400px;
     margin: auto;
     overflow: hidden;
   }
   #intro {
-    height: calc(100vh - 40px);
-    margin-top: 40px;
+    height: 100vh;
     padding: 20px;
     background-image: url(../img/intro_photo.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: right center;
-    // @include bg;
     @include flex-c(space-between);
   }
   .desktop_app {
@@ -56,22 +88,23 @@
         font-weight: 400;
         color: var(--white);
       }
-      &:active::after{ //정확하게는 누를때!!!!
-        content: '';
+      &:active::after {
+        //정확하게는 누를때!!!!
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba($color: #6dbbff, $alpha: .2);
+        background: rgba($color: #6dbbff, $alpha: 0.2);
         border: 2px solid var(--soft-blue-color);
         pointer-events: none;
       }
-      &#howSweet_gallery{
+      &#howSweet_gallery {
         grid-column: 2 / span 1;
         grid-row: 2 / span 1;
       }
-      &#bubbleGum_gallery{
+      &#bubbleGum_gallery {
         grid-column: 2 / span 1;
         grid-row: 3 / span 1;
       }
@@ -88,10 +121,10 @@
         grid-row: 8 / span 1;
       }
     }
-    .link{
+    .link {
       position: relative;
-      &::after{
-        content: '';
+      &::after {
+        content: "";
         position: absolute;
         bottom: 29px;
         left: 18px;
@@ -99,7 +132,7 @@
         height: 18px;
         background: url(../img/icon/pc_app/link.svg);
         @include bg();
-        pointer-events: none
+        pointer-events: none;
       }
     }
     figure {
@@ -131,8 +164,8 @@
     gap: 10px;
     width: 375px;
     position: relative;
-    &::before{
-      content: '';
+    &::before {
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -222,7 +255,7 @@
     border: 2px solid #000;
     box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.4);
     z-index: 10;
-    .floder_bar {
+    .folder_bar {
       @include flex-c(space-between);
       width: 100%;
       height: 40px;
@@ -237,18 +270,169 @@
       border: 2px solid #000;
       position: relative;
     }
-    &.on{
+    &.on {
       display: block;
     }
 
-    .container{
+    .container {
       padding: 20px;
       width: 100%;
       height: calc(100% - 20px * 2);
-      .contents{
+      .contents {
         width: 100%;
         height: 100%;
+        // border: 1px solid #000;
+        overflow: hidden;
+      }
+    }
+    #gallery_img_container {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 45px;
+      overflow-y: scroll;
+      .img_box {
+        max-width: 127px;
+        height: 100%;
+        padding: 6px;
+        // border: 1px solid #000;
+        @include flex-c();
+        flex-direction: column;
+        gap: 6px;
+        img {
+          width: 100%;
+          height: 100%;
+          max-height: 120px;
+          object-fit: contain;
+          cursor: pointer;
+        }
+        .img_name {
+          width: 100%;
+          color: var(--bg-color);
+          font-size: 14px;
+          text-align: center;
+          white-space: normal;
+          word-break: break-word;
+          overflow-wrap: break-word;
+        }
+      }
+    }
+  }
+  .modal {
+    @include flex-c();
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 70%;
+    background: var(--white);
+    border: 2px solid var(--bg-color);
+    z-index: 999;
+    &.hidden {
+      display: none;
+    }
+    .modal_top_bar {
+      @include flex-c(space-between);
+      width: 100%;
+      height: 40px;
+      background: var(--blue-color);
+      color: #000;
+      
+      .icon_box {
+        @include flex-c();
+        height: 40px;
+        width: 40px;
         border: 1px solid #000;
+      }
+      p {
+        padding-left: 10px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      #close {
+        cursor: pointer;
+      }
+    }
+  }
+  #modal_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f00;
+    // width: 30%;
+    max-width: 480px;
+    max-height: 640px;
+  }
+  .controls {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    #prev,
+    #next {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      border: 1px solid var(--blue-color);
+      span {
+        width: 100%;
+        height: 2px;
+        border-radius: 5px;
+        background: var(--blue-color);
+        position: relative;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 50%;
+          height: 2px;
+          border-radius: 5px;
+          background: var(--blue-color);
+        }
+      }
+    }
+    #prev {
+      span::before,
+      span::after {
+        left: -2px;
+        transform-origin: left center;
+      }
+      span::before {
+        transform: rotate(45deg);
+        bottom: 1px;
+      }
+      span::after {
+        transform: rotate(-45deg);
+        top: 1px;
+      }
+    }
+    #next {
+      span::before,
+      span::after {
+        right: -2px;
+        transform-origin: right;
+      }
+      span::before {
+        transform: rotate(-45deg);
+        bottom: 1px;
+      }
+      span::after {
+        transform: rotate(45deg);
+        top: 1px;
+      }
+    }
+    #download {
+      text-decoration: none;
+      color: #000;
+      background: var(--blue-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        font-weight: bold;
+        background: #0466bc;
       }
     }
   }

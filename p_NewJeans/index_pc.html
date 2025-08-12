@@ -26,32 +26,35 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
         <p class="loading_text">0%</p>
       </div>
     </div>
-    <!-- <div id="topBar">
-      <div class="left">
-        <div class="telco">
-          <img src="./img/icon/t2.svg" alt="통신" />
-        </div>
-        <div class="music">
-          <img src="./img/icon/music.svg" alt="음악" />
-        </div>
-        <div class="end">
-          <img src="./img/icon/soft.svg" alt="종료" />
-          <p>Start</p>
-        </div>
-      </div>
+    <div id="topBar">
+      <ol class="left">
+        <li>
+          <img src="./img/icon/end.svg" alt="뉴진스" />
+        </li>
+        <li>File</li>
+        <li>Edit</li>
+        <li>Select</li>
+        <li>View</li>
+      </ol>
       <div class="right">
-        <div id="clock"></div>
-        <div class="batt"><img src="./img/icon/batt2.svg" alt="배터리" /></div>
+        <div class="batt"><img src="./img/icon/batt.svg" alt="배터리" /></div>
+        <div class="clock_box">
+          <div id="clock"></div>
+        </div>
       </div>
-    </div> -->
+    </div>
     <main>
       <section id="intro">
         <ol class="desktop_app">
-          <li id="mv">
+          <li 
+          id="mv"
+          class="folder"
+          aria-expanded="false"          
+          >
             <button
-              class="folder app"
+              class="app"
               aria-expanded="false"
-              aria-controls="folder1"
+              aria-controls="folder0"
             >
               <figure>
                 <img src="./img/icon/pc_app/mv.svg" alt="" />
@@ -59,11 +62,16 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
               </figure>
             </button>
           </li>
-          <li id="supernatural_gaallery">
+          <li
+            id="supernatural_gallery"
+            class="folder"
+            data-album="supernatural"
+            aria-expanded="false"
+          >
             <button
-              class="folder app"
+              class="app"
               aria-expanded="false"
-              aria-controls="folder3"
+              aria-controls="folder1"
             >
               <figure>
                 <img src="./img/icon/pc_app/gallery.svg" alt="" />
@@ -71,9 +79,14 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
               </figure>
             </button>
           </li>
-          <li id="howSweet_gallery">
+          <li
+            id="howSweet_gallery"
+            class="folder"
+            data-album="howsweet"
+            aria-expanded="false"
+          >
             <button
-              class="folder app"
+              class="app"
               aria-expanded="false"
               aria-controls="folder2"
             >
@@ -83,9 +96,15 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
               </figure>
             </button>
           </li>
-          <li id="bubbleGum_gallery">
+          <li
+            id="bubbleGum_gallery"
+            class="folder"
+            data-album="bubblegum"
+            aria-expanded="false"
+            aria-controls="folder3"
+          >
             <button
-              class="folder app"
+              class="app"
               aria-expanded="false"
               aria-controls="folder3"
             >
@@ -138,7 +157,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
         <div id="desktopPlayList" class="shaodw">
           <div class="play_wrap">
             <!-- 오디오 재생할 곡 -->
-             
+
             <audio src="./music/supernatural.mp3" preload="auto" loop></audio>
             <audio src="./music/right-now.mp3" preload="auto" loop></audio>
 
@@ -188,15 +207,41 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
       </section>
 
       <div id="folder" class="shadow">
-        <div class="floder_bar">
-          <p class="floder_title">dddddd</p>
+        <div class="folder_bar">
+          <p class="folder_title">dddddd</p>
           <button class="close_btn" aria-label="닫기">
             <img src="./img/icon/close.svg" alt="닫기" />
           </button>
         </div>
         <div class="container">
-          <div class="contents"></div>
+          <div id="gallery_img_container" class="contents"></div>
         </div>
+      </div>
+
+      <div class="modal hidden">
+        <div class="modal_top_bar">
+          <div class="">
+            <div class="icon_box">
+              <img src="./img/icon/batt.svg" alt="">
+            </div>
+            <p class="name"></p>
+          </div>
+          <button id="close">
+            <img src="./img/icon/close.svg" alt="" />
+          </button>
+        </div>
+        <img id="modal_img" alt="modal image" />
+        <ol class="controls">
+          <li>
+            <button id="prev">이전</button>
+          </li>
+          <li>
+            <a id="download" href="#" download>다운로드</a>
+          </li>
+          <li>
+            <button id="next">다음</button>
+          </li>
+        </ol>
       </div>
     </main>
 

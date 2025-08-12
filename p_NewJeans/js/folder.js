@@ -1,4 +1,6 @@
 export function folder() {
+  const folderView = document.getElementById("folder");
+
   const closeImage = document.querySelector(".close_btn img");
 
   closeImage.addEventListener("mouseenter", () => {

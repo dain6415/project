@@ -4,21 +4,21 @@ export function pc_gallery(albumName) {
       const num = String(i + 1).padStart(2, "0");
       return {
         src: `./img/photo/BubbleGum/NJ_BubbleGum_${num}.jpg`,
-        alt: `BubbleGum ${num}`,
+        alt: `BubbleGum_${num}.jpg`,
       };
     }),
     howsweet: Array.from({ length: 60 }, (_, i) => {
       const num = String(i + 1).padStart(2, "0");
       return {
         src: `./img/photo/HowSweet/NJ_HowSweet_${num}.jpg`,
-        alt: `HowSweet ${num}`,
+        alt: `HowSweet_${num}.jpg`,
       };
     }),
     supernatural: Array.from({ length: 99 }, (_, i) => {
       const num = String(i + 1).padStart(2, "0");
       return {
         src: `./img/photo/Supernatural/NJ_Supernatural_${num}.jpg`,
-        alt: `Supernatural ${num}`,
+        alt: `Supernatural_${num}.jpg`,
       };
     }),
   };
@@ -49,9 +49,13 @@ export function pc_gallery(albumName) {
       img.addEventListener("click", () => {
         modalOpen(i);
       });
+      const caption = document.createElement("p");
+      caption.classList.add("img_name");
+      caption.textContent = imgObj.alt;
 
-      galleryImgContainer.appendChild(imgBox);
       imgBox.appendChild(img);
+      imgBox.appendChild(caption);
+      galleryImgContainer.appendChild(imgBox);
     });
   }
 

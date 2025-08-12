@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 66.2 56.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="6.91" y1="48.56" x2="52.43" y2="7.58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff95dc"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <rect x="24.04" y="2.04" width="2" height="2"/>
+  <rect x="26.04" y="2.04" width="2" height="2"/>
+  <rect x="28.04" y="2.04" width="2" height="2"/>
+  <rect x="30.04" y="2.04" width="2" height="2"/>
+  <rect x="18.04" y="4.04" width="2" height="2"/>
+  <rect x="20.04" y="4.04" width="2" height="2"/>
+  <rect x="22.04" y="4.04" width="2" height="2"/>
+  <rect x="14.04" y="6.04" width="2" height="2"/>
+  <rect x="16.04" y="6.04" width="2" height="2"/>
+  <rect x="12.04" y="8.04" width="2" height="2"/>
+  <rect x="8.04" y="10.04" width="2" height="2"/>
+  <rect x="10.04" y="10.04" width="2" height="2"/>
+  <rect x="6.04" y="12.04" width="2" height="2"/>
+  <rect x="8.04" y="12.04" width="2" height="2"/>
+  <rect x="6.04" y="14.04" width="2" height="2"/>
+  <rect x="4.04" y="16.04" width="2" height="2"/>
+  <rect x="4.04" y="18.04" width="2" height="2"/>
+  <rect x="2.04" y="20.04" width="2" height="2"/>
+  <rect x="2.04" y="22.04" width="2" height="2"/>
+  <rect x="2.04" y="24.04" width="2" height="2"/>
+  <rect x="2.04" y="26.04" width="2" height="2"/>
+  <rect x="2.04" y="28.04" width="2" height="2"/>
+  <rect x="4.04" y="30.04" width="2" height="2"/>
+  <rect x="4.04" y="32.04" width="2" height="2"/>
+  <rect x="6.04" y="34.04" width="2" height="2"/>
+  <rect x="6.04" y="36.04" width="2" height="2"/>
+  <rect x="8.04" y="36.04" width="2" height="2"/>
+  <rect x="8.04" y="38.04" width="2" height="2"/>
+  <rect x="10.04" y="38.04" width="2" height="2"/>
+  <rect x="10.04" y="40.04" width="2" height="2"/>
+  <rect x="12.04" y="40.04" width="2" height="2"/>
+  <rect x="14.04" y="42.04" width="2" height="2"/>
+  <rect x="12.04" y="44.04" width="2" height="2"/>
+  <rect x="12.04" y="46.04" width="2" height="2"/>
+  <rect x="22.04" y="46.04" width="2" height="2"/>
+  <rect x="24.04" y="46.04" width="2" height="2"/>
+  <rect x="26.04" y="46.04" width="2" height="2"/>
+  <rect x="28.04" y="46.04" width="2" height="2"/>
+  <rect x="30.04" y="46.04" width="2" height="2"/>
+  <rect x="10.04" y="48.04" width="2" height="2"/>
+  <rect x="18.04" y="48.04" width="2" height="2"/>
+  <rect x="20.04" y="48.04" width="2" height="2"/>
+  <rect x="8.04" y="50.04" width="2" height="2"/>
+  <rect x="14.04" y="50.04" width="2" height="2"/>
+  <rect x="16.04" y="50.04" width="2" height="2"/>
+  <rect x="18.04" y="50.04" width="2" height="2"/>
+  <rect x="40.04" y="2.04" width="2" height="2" transform="translate(82.08 6.07) rotate(-180)"/>
+  <rect x="38.04" y="2.04" width="2" height="2" transform="translate(78.08 6.07) rotate(-180)"/>
+  <rect x="36.04" y="2.04" width="2" height="2" transform="translate(74.08 6.07) rotate(-180)"/>
+  <rect x="34.04" y="2.04" width="2" height="2" transform="translate(70.08 6.07) rotate(-180)"/>
+  <rect x="46.04" y="4.04" width="2" height="2" transform="translate(94.08 10.07) rotate(-180)"/>
+  <rect x="44.04" y="4.04" width="2" height="2" transform="translate(90.08 10.07) rotate(-180)"/>
+  <rect x="42.04" y="4.04" width="2" height="2" transform="translate(86.08 10.07) rotate(-180)"/>
+  <rect x="50.04" y="6.04" width="2" height="2" transform="translate(102.08 14.07) rotate(-180)"/>
+  <rect x="48.04" y="6.04" width="2" height="2" transform="translate(98.08 14.07) rotate(-180)"/>
+  <rect x="52.04" y="8.04" width="2" height="2" transform="translate(106.08 18.07) rotate(-180)"/>
+  <rect x="56.04" y="10.04" width="2" height="2" transform="translate(114.08 22.07) rotate(-180)"/>
+  <rect x="54.04" y="10.04" width="2" height="2" transform="translate(110.08 22.07) rotate(-180)"/>
+  <rect x="58.04" y="12.04" width="2" height="2" transform="translate(118.08 26.07) rotate(-180)"/>
+  <rect x="56.04" y="12.04" width="2" height="2" transform="translate(114.08 26.07) rotate(-180)"/>
+  <rect x="58.04" y="14.04" width="2" height="2" transform="translate(118.08 30.07) rotate(-180)"/>
+  <rect x="60.04" y="16.04" width="2" height="2" transform="translate(122.08 34.07) rotate(-180)"/>
+  <rect x="60.04" y="18.04" width="2" height="2" transform="translate(122.08 38.07) rotate(-180)"/>
+  <rect x="62.04" y="20.04" width="2" height="2" transform="translate(126.08 42.07) rotate(-180)"/>
+  <rect x="62.04" y="22.04" width="2" height="2" transform="translate(126.08 46.07) rotate(-180)"/>
+  <rect x="62.04" y="24.04" width="2" height="2" transform="translate(126.08 50.07) rotate(-180)"/>
+  <rect x="62.04" y="26.04" width="2" height="2" transform="translate(126.08 54.07) rotate(-180)"/>
+  <rect x="62.04" y="28.04" width="2" height="2" transform="translate(126.08 58.07) rotate(-180)"/>
+  <rect x="60.04" y="30.04" width="2" height="2" transform="translate(122.08 62.07) rotate(-180)"/>
+  <rect x="60.04" y="32.04" width="2" height="2" transform="translate(122.08 66.07) rotate(-180)"/>
+  <rect x="58.04" y="34.04" width="2" height="2" transform="translate(118.08 70.07) rotate(-180)"/>
+  <rect x="58.04" y="36.04" width="2" height="2" transform="translate(118.08 74.07) rotate(-180)"/>
+  <rect x="56.04" y="36.04" width="2" height="2" transform="translate(114.08 74.07) rotate(-180)"/>
+  <rect x="56.04" y="38.04" width="2" height="2" transform="translate(114.08 78.07) rotate(-180)"/>
+  <rect x="54.04" y="38.04" width="2" height="2" transform="translate(110.08 78.07) rotate(-180)"/>
+  <rect x="54.04" y="40.04" width="2" height="2" transform="translate(110.08 82.07) rotate(-180)"/>
+  <rect x="52.04" y="40.04" width="2" height="2" transform="translate(106.08 82.07) rotate(-180)"/>
+  <rect x="50.04" y="42.04" width="2" height="2" transform="translate(102.08 86.07) rotate(-180)"/>
+  <rect x="48.04" y="42.04" width="2" height="2" transform="translate(98.08 86.07) rotate(-180)"/>
+  <rect x="46.04" y="44.04" width="2" height="2" transform="translate(94.08 90.07) rotate(-180)"/>
+  <rect x="44.04" y="44.04" width="2" height="2" transform="translate(90.08 90.07) rotate(-180)"/>
+  <rect x="42.04" y="44.04" width="2" height="2" transform="translate(86.08 90.07) rotate(-180)"/>
+  <rect x="40.04" y="46.04" width="2" height="2" transform="translate(82.08 94.07) rotate(-180)"/>
+  <rect x="38.04" y="46.04" width="2" height="2" transform="translate(78.08 94.07) rotate(-180)"/>
+  <rect x="36.04" y="46.04" width="2" height="2" transform="translate(74.08 94.07) rotate(-180)"/>
+  <rect x="34.04" y="46.04" width="2" height="2" transform="translate(70.08 94.07) rotate(-180)"/>
+  <rect x="8.04" y="52.04" width="2" height="2"/>
+  <rect x="10.04" y="52.04" width="2" height="2"/>
+  <rect x="12.04" y="52.04" width="2" height="2"/>
+  <rect x="32.04" y="2.04" width="2" height="2" transform="translate(66.08 6.07) rotate(-180)"/>
+  <polygon class="cls-1" points="62.04 20.04 62.04 30.04 60.04 30.04 60.04 34.04 58.04 34.04 58.04 36.04 56.04 36.04 56.04 38.04 54.04 38.04 54.04 40.04 52.04 40.04 52.04 42.04 48.04 42.04 48.04 44.04 42.04 44.04 42.04 46.04 22.04 46.04 22.04 48.04 18.04 48.04 18.04 50.04 14.04 50.04 14.04 52.04 10.04 52.04 10.04 50.04 12.04 50.04 12.04 48.04 14.04 48.04 14.04 44.04 16.04 44.04 16.04 42.04 14.04 42.04 14.04 40.04 12.04 40.04 12.04 38.04 10.04 38.04 10.04 36.04 8.04 36.04 8.04 34.04 6.04 34.04 6.04 30.04 4.04 30.04 4.04 20.04 6.04 20.04 6.04 16.04 8.04 16.04 8.04 14.04 10.04 14.04 10.04 12.04 12.04 12.04 12.04 10.04 14.04 10.04 14.04 8.04 18.04 8.04 18.04 6.04 24.04 6.04 24.04 4.04 42.04 4.04 42.04 6.04 48.04 6.04 48.04 8.04 52.04 8.04 52.04 10.04 54.04 10.04 54.04 12.04 56.04 12.04 56.04 14.04 58.04 14.04 58.04 16.04 60.04 16.04 60.04 20.04 62.04 20.04"/>
+  <rect x="32.04" y="46.04" width="2" height="2" transform="translate(66.08 94.07) rotate(-180)"/>
+</svg>

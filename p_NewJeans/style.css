@@ -1,3 +1,7 @@
+@charset "UTF-8";
+@import url(./css/phone.css);
+@import url(./css/pc.css);
+
 @font-face {
   font-family: "JetBrains Mono";
   src: url("../../font/font_file/JetBrainsMono-Thin.woff2") format("woff2");
@@ -43,36 +47,34 @@
 }
 
 :root {
-  --main-color: #1e96ff;
+  --bg-color: #000;
+  --white: #fff;
+  --blue-color: #1e96ff;
+  --soft-blue-color: #6dbbff;
+  --pink-color: #ff95dc;
 }
 * {
   box-sizing: border-box;
+  font-size: 10px;
 }
+
 html,
 body {
-  background: #000;
+  background: var(--bg-color);
   font-family: "JetBrains Mono", monospace;
   font-weight: 300;
-  color: var(--main-color);
+  color: var(--blue-color);
   line-height: 1.2;
   letter-spacing: -1.2px;
 }
-p {
-  font-size: 10px;
-}
 a {
   text-decoration: none;
-}
-.neon {
-  display: none;
-  color: #c9e6ff;
-  text-shadow: 0 0 5px #82c4ff, 0 0 10px #82c4ff, 0 0 20px #1e96ff,
-    0 0 30px #1e96ff, 0 0 40px #1e96ff, 0 0 55px #1e96ff, 0 0 75px #1e96ff;
 }
 button {
   all: unset;
   font-family: "JetBrains Mono";
   font-weight: 200;
+  border: none;
 }
 a,
 button,
@@ -87,4 +89,23 @@ video {
   width: 0;
   height: 0;
   visibility: hidden;
+}
+
+.neon {
+  display: none;
+  color: #c9e6ff;
+  text-shadow: 0 0 5px #82c4ff, 0 0 10px #82c4ff, 0 0 20px #1e96ff,
+    0 0 30px #1e96ff, 0 0 40px #1e96ff, 0 0 55px #1e96ff, 0 0 75px #1e96ff;
+}
+
+.cd_icon {
+  animation: spin 10s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

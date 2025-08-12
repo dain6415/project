@@ -1,28 +1,4 @@
 export function pc_gallery(albumName) {
-  const albums = {
-    bubblegum: Array.from({ length: 60 }, (_, i) => {
-      const num = String(i + 1).padStart(2, "0");
-      return {
-        src: `./img/photo/BubbleGum/NJ_BubbleGum_${num}.jpg`,
-        alt: `BubbleGum_${num}.jpg`,
-      };
-    }),
-    howsweet: Array.from({ length: 60 }, (_, i) => {
-      const num = String(i + 1).padStart(2, "0");
-      return {
-        src: `./img/photo/HowSweet/NJ_HowSweet_${num}.jpg`,
-        alt: `HowSweet_${num}.jpg`,
-      };
-    }),
-    supernatural: Array.from({ length: 99 }, (_, i) => {
-      const num = String(i + 1).padStart(2, "0");
-      return {
-        src: `./img/photo/Supernatural/NJ_Supernatural_${num}.jpg`,
-        alt: `Supernatural_${num}.jpg`,
-      };
-    }),
-  };
-
   const galleryImgs = albums[albumName] || [];
 
   const galleryImgContainer = document.getElementById("gallery_img_container");

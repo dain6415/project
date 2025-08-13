@@ -16,6 +16,7 @@
   .left,
   .right {
     display: flex;
+    color: var(--blue-color);
   }
   .left {
     @include flex-c();
@@ -55,7 +56,7 @@
   }
 }
 @media screen and (min-width: 701px) {
-  body{
+  body {
     overflow: hidden;
   }
   main {
@@ -89,7 +90,6 @@
         color: var(--white);
       }
       &:active::after {
-        //정확하게는 누를때!!!!
         content: "";
         position: absolute;
         top: 0;
@@ -281,30 +281,18 @@
       .contents {
         width: 100%;
         height: 100%;
-        // border: 1px solid #000;
-        overflow: hidden;
       }
     }
-    #gallery_img_container {
+    .gallery {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 45px;
       overflow-y: scroll;
       .img_box {
-        max-width: 127px;
         height: 100%;
-        padding: 6px;
-        // border: 1px solid #000;
         @include flex-c();
         flex-direction: column;
-        gap: 6px;
-        img {
-          width: 100%;
-          height: 100%;
-          max-height: 120px;
-          object-fit: contain;
-          cursor: pointer;
-        }
+        // gap: 6px;
         .img_name {
           width: 100%;
           color: var(--bg-color);
@@ -313,6 +301,75 @@
           white-space: normal;
           word-break: break-word;
           overflow-wrap: break-word;
+        }
+      }
+      .img_frame {
+        width: 127px;
+        height: 219px;
+        padding: 4px;
+        background: var(--white);
+        border: 1px solid #000;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          // object-fit: cover;
+        }
+      }
+    }
+    .site_list {
+      width: 100%;
+      font-size: 16px;
+      text-align: left;
+      thead {
+        border-bottom: 1px solid #000;
+        font-family: "PFStardustS", monospace;
+      }
+      tbody {
+        width: 100%;
+        tr {
+          width: 100%;
+          cursor: pointer;
+          &:hover {
+            background: var(--blue-color);
+            td {
+              color: var(--white);
+            }
+          }
+        }
+      }
+      td,
+      th {
+        vertical-align: middle;
+        &:nth-child(1) {
+          width: 32px;
+          padding: 6px 0 6px 12px;
+          img {
+            width: 20px;
+            border: 1px solid #ddd;
+          }
+        }
+        &:nth-child(2) {
+          width: calc(100% - 60px - 120px - 32px);
+          padding: 6px 6px 6px;
+          a {
+            display: block;
+          }
+        }
+        &:nth-child(3) {
+          width: 60px;
+          padding: 6px 0px 6px;
+        }
+        &:nth-child(4) {
+          width: 120px;
+          padding: 6px 12px 6px;
+          font-family: "PFStardustS", monospace;
+          font-size: 18px;
+        }
+        &:not(:nth-child(2)) {
+          color: #333;
+          font-weight: 200;
         }
       }
     }
@@ -338,7 +395,7 @@
       height: 40px;
       background: var(--blue-color);
       color: #000;
-      
+
       .icon_box {
         @include flex-c();
         height: 40px;
@@ -442,6 +499,15 @@
   main {
     max-width: 1600px;
     margin: auto;
+  }
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+    // .img_box {
+      // img {
+        // max-width: 127px;
+        // max-height: 120px;
+      // }
+    // }
   }
   //  #intro{
 

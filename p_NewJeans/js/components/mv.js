@@ -1,14 +1,7 @@
 export function mv() {
-  const mvList = document.querySelectorAll("#mv li");
+  function rederMv(){
+    const folderListWrap = document.getElementById("list_wrap");
 
-  mvList.forEach((li) => {
-    li.addEventListener("click", () => {
-      const onChoice = li.classList.contains('on') 
-      mvList.forEach(i => i.classList.remove('on'));
-      
-      if(!onChoice){
-        li.classList.add('on'); 
-      } 
-    });
-  });
+    folderListWrap
+  }
 }

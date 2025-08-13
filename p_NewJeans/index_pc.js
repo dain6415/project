@@ -1,7 +1,8 @@
-import { app } from "./js/app.js";
-import { folder } from "./js/folder.js";
-import { pc_gallery } from "./js/pc_gallery.js";
-import { appData } from "./js/appData.js";
+import { appData } from "./js/data/appData.js";
+import { folder } from "./js/components/folder.js";
+import { app } from "./js/components/app.js";
+import { pc_gallery } from "./js/components/pc_gallery.js";
+import { pc_list } from "./js/components/pc_list.js";
 
 window.addEventListener("load", () => {
   folder();
@@ -29,24 +30,7 @@ window.addEventListener("load", () => {
 
   // thumnail형 갤러리 ------------------------------
 
-  pc_gallery('supernatural');
-
-  const appFolder = document.querySelectorAll(".folder");
-
-  const albumTitles = {
-    bubblegum: "Bubble_Gum",
-    howsweet: "How_Sweet",
-    supernatural: "Supernatural",
-  };
-
-  appFolder.forEach((folder) => {
-    folder.addEventListener("click", () => {
-      const albumName = folder.getAttribute("data-album");
-      if (albumName) {
-        document.querySelector(".folder_title").textContent = albumTitles[albumName] || albumName;
-        pc_gallery(albumName);
-        document.getElementById("folder").classList.add("on");
-      }
-    });
-  });
+  const container = document.getElementById("list_wrap");
+  pc_gallery('supernatural', appData.albums);
+  pc_list("streaming", appData.streaming);
 });

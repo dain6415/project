@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/favicon.ico" />
+    <title>NewJeans</title>
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
+"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script>
+      if (window.innerWidth <= 700) {
+        window.location.href = "mobile.html";
+      }
+    </script>
+    <style>
+      #loading {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading">
+      <div class="loading_wrap">
+        <div id="loading_bar"></div>
+        <p class="loading_text">0%</p>
+      </div>
+    </div>
+    <!-- <div id="topBar">
+      <div class="left">
+        <div class="telco">
+          <img src="./img/icon/t2.svg" alt="통신" />
+        </div>
+        <div class="music">
+          <img src="./img/icon/music.svg" alt="음악" />
+        </div>
+        <div class="end">
+          <img src="./img/icon/soft.svg" alt="종료" />
+          <p>Start</p>
+        </div>
+      </div>
+      <div class="right">
+        <div id="clock"></div>
+        <div class="batt"><img src="./img/icon/batt2.svg" alt="배터리" /></div>
+      </div>
+    </div> -->
+    <main>
+      <section id="intro">
+        <ol class="desktop_app">
+          <li id="mv">
+            <button
+              class="folder app"
+              aria-expanded="false"
+              aria-controls="folder1"
+            >
+              <figure>
+                <img src="./img/icon/pc_app/mv.svg" alt="" />
+                <figcaption>mv</figcaption>
+              </figure>
+            </button>
+          </li>
+          <li id="supernatural_gaallery">
+            <button
+              class="folder app"
+              aria-expanded="false"
+              aria-controls="folder3"
+            >
+              <figure>
+                <img src="./img/icon/pc_app/gallery.svg" alt="" />
+                <figcaption><span>Supernatural</span>_gallery</figcaption>
+              </figure>
+            </button>
+          </li>
+          <li id="howSweet_gallery">
+            <button
+              class="folder app"
+              aria-expanded="false"
+              aria-controls="folder2"
+            >
+              <figure>
+                <img src="./img/icon/pc_app/gallery.svg" alt="" />
+                <figcaption><span>HowSweet</span>_gallery</figcaption>
+              </figure>
+            </button>
+          </li>
+          <li id="bubbleGum_gallery">
+            <button
+              class="folder app"
+              aria-expanded="false"
+              aria-controls="folder3"
+            >
+              <figure>
+                <img src="./img/icon/pc_app/gallery.svg" alt="" />
+                <figcaption><span>BubbleGum</span>_gallery</figcaption>
+              </figure>
+            </button>
+          </li>
+          <li id="streaming">
+            <button
+              class="folder app"
+              aria-expanded="false"
+              aria-controls="folder4"
+            >
+              <figure>
+                <img src="./img/icon/pc_app/streaming.svg" alt="" />
+                <figcaption>streaming</figcaption>
+              </figure>
+            </button>
+          </li>
+          <li id="goods">
+            <a
+              href="https://kream.co.kr/search?tab=products&keyword=%EB%89%B4%EC%A7%84%EC%8A%A4+%EA%B5%BF%EC%A6%88&srsltid=AfmBOorWujcj-VKKTYS6Q8R97laqPQpdgRFZIHHBItvtyGjfPT31M4JB"
+              class="new_view app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <figure class="link">
+                <img src="./img/icon/pc_app/goods.svg" alt="" />
+                <figcaption>goods</figcaption>
+              </figure>
+            </a>
+          </li>
+          <li id="phoning">
+            <a
+              href="https://play.google.com/store/apps/details?id=co.weverse.phoning&hl=ko"
+              class="new_view app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <figure class="link">
+                <img src="./img/icon/pc_app/phonig.svg" alt="" />
+                <figcaption>phoning</figcaption>
+              </figure>
+            </a>
+          </li>
+        </ol>
+
+        <div id="desktopPlayList" class="shaodw">
+          <div class="play_wrap">
+            <!-- 오디오 재생할 곡 -->
+
+            <audio src="./music/supernatural.mp3" preload="auto" loop></audio>
+            <audio src="./music/right-now.mp3" preload="auto" loop></audio>
+
+            <div class="play_view">
+              <div class="cd_icon">
+                <img src="./img/icon/playlist/cd.svg" alt="씨디" />
+              </div>
+              <div class="play_song">
+                <p>NewJeans - <span class="song">Supernatural</span></p>
+              </div>
+            </div>
+
+            <div class="btns_wrap">
+              <div class="play_btns">
+                <ol>
+                  <li>
+                    <button class="play btn" aria-label="재생">
+                      <img src="./img//icon/playlist/play.svg" alt="재생" />
+                    </button>
+                  </li>
+                  <li>
+                    <button class="stop btn" aria-label="멈춤">
+                      <img src="./img//icon/playlist/stop.svg" alt="멈춤" />
+                    </button>
+                  </li>
+                  <li>
+                    <button class="pause btn" aria-label="일시정지">
+                      <img
+                        src="./img//icon/playlist/pause.svg"
+                        alt="일시정지"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button class="next btn" aria-label="다음">
+                      <img src="./img//icon/playlist/next.svg" alt="다음" />
+                    </button>
+                  </li>
+                </ol>
+              </div>
+              <div class="sound">
+                <img src="./img/icon/playlist/sound_bar.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="folder" class="shadow">
+        <div class="floder_bar">
+          <p class="floder_title">dddddd</p>
+          <button class="close_btn" aria-label="닫기">
+            <img src="./img/icon/close.svg" alt="닫기" />
+          </button>
+        </div>
+        <div class="container">
+          <div class="contents"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 음악 -->
+    <script>
+      const playList = document.querySelectorAll("audio");
+      let playing = false;
+      let nowPlaying = 0;
+
+      const playBtn = document.querySelector(".play");
+      const stopBtn = document.querySelector(".stop");
+      const pauseBtn = document.querySelector(".pause");
+      const nextBtn = document.querySelector(".next");
+
+      const btnList = [playBtn, pauseBtn, stopBtn];
+
+      const getCurrentAudio = () => playList[nowPlaying];
+
+      function setBtnImage(btn, isActive) {
+        const img = btn.querySelector("img");
+        if (!img) return;
+
+        let src = img.getAttribute("src");
+
+        if (isActive) {
+          if (!src.includes("_in")) {
+            img.setAttribute("src", src.replace(".svg", "_in.svg"));
+          }
+        } else {
+          if (src.includes("_in")) {
+            img.setAttribute("src", src.replace("_in", ""));
+          }
+        }
+      }
+
+      function updateActiveBtn(targetBtn) {
+        btnList.forEach((btn) => setBtnImage(btn, btn === targetBtn));
+      }
+
+      playBtn.addEventListener("click", () => {
+        const audio = getCurrentAudio();
+        if (!playing) {
+          audio.play();
+          playing = true;
+        }
+        updateActiveBtn(playBtn);
+      });
+
+      pauseBtn.addEventListener("click", () => {
+        const audio = getCurrentAudio();
+        if (playing) {
+          audio.pause();
+          playing = false;
+        }
+        updateActiveBtn(pauseBtn);
+      });
+
+      stopBtn.addEventListener("click", () => {
+        const audio = getCurrentAudio();
+        audio.pause();
+        audio.currentTime = 0;
+        playing = false;
+        updateActiveBtn(stopBtn);
+      });
+
+      nextBtn.addEventListener("click", () => {
+        const current = getCurrentAudio();
+        current.pause();
+        current.currentTime = 0;
+
+        nowPlaying = (nowPlaying + 1) % playList.length;
+        const nextAudio = getCurrentAudio();
+        nextAudio.play();
+        playing = true;
+
+        document.querySelector(".song").textContent =
+          nowPlaying === 0 ? "Supernatural" : "Right Now";
+
+        updateActiveBtn(playBtn);
+      });
+    </script>
+    <script src="./index_pc.js" type="module"></script>
+  </body>
+</html>

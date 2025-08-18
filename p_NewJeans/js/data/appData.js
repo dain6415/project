@@ -6,22 +6,23 @@ export const appData = {
       {
         type: "iframe",
         src: "https://www.youtube.com/embed/ZncbtRo7RXs?si=hf7Tf0mUmIbGqaDC",
-        alt: "‘Supernatural’ Official MV (Part.1)",
+        title: "‘Supernatural’ Official MV (Part.1)",
+
       },
       {
         type: "iframe",
         src: "https://www.youtube.com/embed/A4S8zl50AdM?si=rNyqdETgeOMSSb3P",
-        alt: "‘Supernatural’ Official MV (Part.2)",
+        title: "‘Supernatural’ Official MV (Part.2)",
       },
       {
         type: "iframe",
         src: "https://www.youtube.com/embed/Q3K0TOvTOno?si=Xe-qLF1aJezMyNQw",
-        alt: "'How Sweet' Official MV",
+        title: "'How Sweet' Official MV",
       },
       {
         type: "iframe",
         src: "https://www.youtube.com/embed/ft70sAYrFyY?si=tkSE2r65Q8Ts6IwM",
-        alt: "'Bubble Gum' Official MV",
+        title: "'Bubble Gum' Official MV",
       },
     ],
   },

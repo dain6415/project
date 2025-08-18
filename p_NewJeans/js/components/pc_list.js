@@ -2,7 +2,6 @@ export function pc_list(folderName, streaming, type) {
   const folderListWrap = document.getElementById("list_wrap");
   folderListWrap.className = "contents";
 
-  // folderName이 문자열이 아닐 경우 기본 문자열 할당
   const folderNameClass = typeof folderName === "string" ? folderName : "list";
 
   folderListWrap.classList.add(folderNameClass);

@@ -1,0 +1,179 @@
+@media screen and (min-width: 701px) {
+  #folder {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 1020px;
+    height: calc(86% - 40px);
+    padding: 2px;
+    background: var(--white);
+    box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+  }
+  #folder .folder_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 2px 4px;
+    background: linear-gradient(45deg, #ff95dc 5%, #ffffff 100%);
+    border-bottom: 2px solid #000;
+    color: var(--bg-color);
+  }
+  #folder .close_btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+  }
+  #folder.on {
+    display: block;
+  }
+  #folder .container {
+    padding: 20px;
+    width: 100%;
+    height: calc(100% - 40px);
+  }
+  #folder .container .contents {
+    width: 100%;
+  }
+  #folder .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    height: 100%;
+    overflow-y: scroll;
+  }
+  #folder .gallery .img_box {
+    width: 200px;
+    margin: 0 10px;
+  }
+  #folder .gallery .img_box figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #folder .gallery .img_box .img_frame {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+  }
+  #folder .gallery .img_box .img_frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  #folder .gallery .img_box .img_name {
+    margin-top: 6px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--bg-color);
+  }
+  #folder .site_list {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    text-align: left;
+  }
+  #folder .site_list thead {
+    font-family: "PFStardustS", monospace;
+    font-size: 18px;
+    border-bottom: 1px solid var(--bg-color);
+  }
+  #folder .site_list thead th:first-child {
+    width: 32px;
+    white-space: nowrap;
+    color: transparent;
+  }
+  #folder .site_list thead th:nth-child(3), #folder .site_list thead th:nth-child(4) {
+    border-left: 1px solid var(--bg-color);
+  }
+  #folder .site_list tbody {
+    width: 100%;
+  }
+  #folder .site_list tbody tr {
+    width: 100%;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+  }
+  #folder .site_list tbody tr:hover {
+    background: var(--blue-color);
+  }
+  #folder .site_list tbody tr:hover td {
+    color: var(--white);
+  }
+  #folder .site_list td,
+  #folder .site_list th {
+    vertical-align: middle;
+  }
+  #folder .site_list td a,
+  #folder .site_list th a {
+    color: #111;
+  }
+  #folder .site_list td:nth-child(1),
+  #folder .site_list th:nth-child(1) {
+    width: 32px;
+    padding: 6px 0 6px 12px;
+  }
+  #folder .site_list td:nth-child(1) img,
+  #folder .site_list th:nth-child(1) img {
+    width: 20px;
+    border: 1px solid #ddd;
+  }
+  #folder .site_list td:nth-child(2),
+  #folder .site_list th:nth-child(2) {
+    width: calc(100% - 80px - 120px - 32px);
+    padding: 6px 6px 6px;
+  }
+  #folder .site_list td:nth-child(2) a,
+  #folder .site_list th:nth-child(2) a {
+    display: block;
+  }
+  #folder .site_list td:nth-child(3),
+  #folder .site_list th:nth-child(3) {
+    width: 80px;
+    padding: 6px 12px;
+  }
+  #folder .site_list td:nth-child(4),
+  #folder .site_list th:nth-child(4) {
+    width: 120px;
+    padding: 6px 12px 6px;
+    font-family: "PFStardustS", monospace;
+    font-size: 18px;
+  }
+  #folder .site_list td:not(:nth-child(2)),
+  #folder .site_list th:not(:nth-child(2)) {
+    color: #999;
+    font-weight: 200;
+  }
+  #folder .mv * {
+    box-sizing: border-box;
+  }
+  #folder .mv {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    height: 100%;
+  }
+  #folder .mv .video_box {
+    width: 250px;
+  }
+  #folder .mv .video_box figure {
+    width: 100%;
+  }
+  #folder .mv .video_box figure iframe {
+    width: 100%;
+    height: 140px;
+    aspect-ratio: 16/9;
+  }
+}/*# sourceMappingURL=folder.css.map */

@@ -1,106 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 66.2 56.2">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 66 56">
   <defs>
     <style>
       .cls-1 {
+        fill: #ff95dc;
+      }
+
+      .cls-2 {
+        fill: #ff5c8c;
+      }
+
+      .cls-3 {
         fill: url(#linear-gradient);
       }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        fill: #ffcdee;
+      }
+
+      .cls-6 {
+        fill: #ffeaf8;
+      }
     </style>
-    <linearGradient id="linear-gradient" x1="6.91" y1="48.56" x2="52.43" y2="7.58" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient" x1="6.87" y1="48.53" x2="52.39" y2="7.55" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#ff95dc"/>
+      <stop offset=".52" stop-color="#ffcdee"/>
       <stop offset="1" stop-color="#fff"/>
     </linearGradient>
   </defs>
-  <rect x="24.04" y="2.04" width="2" height="2"/>
-  <rect x="26.04" y="2.04" width="2" height="2"/>
-  <rect x="28.04" y="2.04" width="2" height="2"/>
-  <rect x="30.04" y="2.04" width="2" height="2"/>
-  <rect x="18.04" y="4.04" width="2" height="2"/>
-  <rect x="20.04" y="4.04" width="2" height="2"/>
-  <rect x="22.04" y="4.04" width="2" height="2"/>
-  <rect x="14.04" y="6.04" width="2" height="2"/>
-  <rect x="16.04" y="6.04" width="2" height="2"/>
-  <rect x="12.04" y="8.04" width="2" height="2"/>
-  <rect x="8.04" y="10.04" width="2" height="2"/>
-  <rect x="10.04" y="10.04" width="2" height="2"/>
-  <rect x="6.04" y="12.04" width="2" height="2"/>
-  <rect x="8.04" y="12.04" width="2" height="2"/>
-  <rect x="6.04" y="14.04" width="2" height="2"/>
-  <rect x="4.04" y="16.04" width="2" height="2"/>
-  <rect x="4.04" y="18.04" width="2" height="2"/>
-  <rect x="2.04" y="20.04" width="2" height="2"/>
-  <rect x="2.04" y="22.04" width="2" height="2"/>
-  <rect x="2.04" y="24.04" width="2" height="2"/>
-  <rect x="2.04" y="26.04" width="2" height="2"/>
-  <rect x="2.04" y="28.04" width="2" height="2"/>
-  <rect x="4.04" y="30.04" width="2" height="2"/>
-  <rect x="4.04" y="32.04" width="2" height="2"/>
-  <rect x="6.04" y="34.04" width="2" height="2"/>
-  <rect x="6.04" y="36.04" width="2" height="2"/>
-  <rect x="8.04" y="36.04" width="2" height="2"/>
-  <rect x="8.04" y="38.04" width="2" height="2"/>
-  <rect x="10.04" y="38.04" width="2" height="2"/>
-  <rect x="10.04" y="40.04" width="2" height="2"/>
-  <rect x="12.04" y="40.04" width="2" height="2"/>
-  <rect x="14.04" y="42.04" width="2" height="2"/>
-  <rect x="12.04" y="44.04" width="2" height="2"/>
-  <rect x="12.04" y="46.04" width="2" height="2"/>
-  <rect x="22.04" y="46.04" width="2" height="2"/>
-  <rect x="24.04" y="46.04" width="2" height="2"/>
-  <rect x="26.04" y="46.04" width="2" height="2"/>
-  <rect x="28.04" y="46.04" width="2" height="2"/>
-  <rect x="30.04" y="46.04" width="2" height="2"/>
-  <rect x="10.04" y="48.04" width="2" height="2"/>
-  <rect x="18.04" y="48.04" width="2" height="2"/>
-  <rect x="20.04" y="48.04" width="2" height="2"/>
-  <rect x="8.04" y="50.04" width="2" height="2"/>
-  <rect x="14.04" y="50.04" width="2" height="2"/>
-  <rect x="16.04" y="50.04" width="2" height="2"/>
-  <rect x="18.04" y="50.04" width="2" height="2"/>
-  <rect x="40.04" y="2.04" width="2" height="2" transform="translate(82.08 6.07) rotate(-180)"/>
-  <rect x="38.04" y="2.04" width="2" height="2" transform="translate(78.08 6.07) rotate(-180)"/>
-  <rect x="36.04" y="2.04" width="2" height="2" transform="translate(74.08 6.07) rotate(-180)"/>
-  <rect x="34.04" y="2.04" width="2" height="2" transform="translate(70.08 6.07) rotate(-180)"/>
-  <rect x="46.04" y="4.04" width="2" height="2" transform="translate(94.08 10.07) rotate(-180)"/>
-  <rect x="44.04" y="4.04" width="2" height="2" transform="translate(90.08 10.07) rotate(-180)"/>
-  <rect x="42.04" y="4.04" width="2" height="2" transform="translate(86.08 10.07) rotate(-180)"/>
-  <rect x="50.04" y="6.04" width="2" height="2" transform="translate(102.08 14.07) rotate(-180)"/>
-  <rect x="48.04" y="6.04" width="2" height="2" transform="translate(98.08 14.07) rotate(-180)"/>
-  <rect x="52.04" y="8.04" width="2" height="2" transform="translate(106.08 18.07) rotate(-180)"/>
-  <rect x="56.04" y="10.04" width="2" height="2" transform="translate(114.08 22.07) rotate(-180)"/>
-  <rect x="54.04" y="10.04" width="2" height="2" transform="translate(110.08 22.07) rotate(-180)"/>
-  <rect x="58.04" y="12.04" width="2" height="2" transform="translate(118.08 26.07) rotate(-180)"/>
-  <rect x="56.04" y="12.04" width="2" height="2" transform="translate(114.08 26.07) rotate(-180)"/>
-  <rect x="58.04" y="14.04" width="2" height="2" transform="translate(118.08 30.07) rotate(-180)"/>
-  <rect x="60.04" y="16.04" width="2" height="2" transform="translate(122.08 34.07) rotate(-180)"/>
-  <rect x="60.04" y="18.04" width="2" height="2" transform="translate(122.08 38.07) rotate(-180)"/>
-  <rect x="62.04" y="20.04" width="2" height="2" transform="translate(126.08 42.07) rotate(-180)"/>
-  <rect x="62.04" y="22.04" width="2" height="2" transform="translate(126.08 46.07) rotate(-180)"/>
-  <rect x="62.04" y="24.04" width="2" height="2" transform="translate(126.08 50.07) rotate(-180)"/>
-  <rect x="62.04" y="26.04" width="2" height="2" transform="translate(126.08 54.07) rotate(-180)"/>
-  <rect x="62.04" y="28.04" width="2" height="2" transform="translate(126.08 58.07) rotate(-180)"/>
-  <rect x="60.04" y="30.04" width="2" height="2" transform="translate(122.08 62.07) rotate(-180)"/>
-  <rect x="60.04" y="32.04" width="2" height="2" transform="translate(122.08 66.07) rotate(-180)"/>
-  <rect x="58.04" y="34.04" width="2" height="2" transform="translate(118.08 70.07) rotate(-180)"/>
-  <rect x="58.04" y="36.04" width="2" height="2" transform="translate(118.08 74.07) rotate(-180)"/>
-  <rect x="56.04" y="36.04" width="2" height="2" transform="translate(114.08 74.07) rotate(-180)"/>
-  <rect x="56.04" y="38.04" width="2" height="2" transform="translate(114.08 78.07) rotate(-180)"/>
-  <rect x="54.04" y="38.04" width="2" height="2" transform="translate(110.08 78.07) rotate(-180)"/>
-  <rect x="54.04" y="40.04" width="2" height="2" transform="translate(110.08 82.07) rotate(-180)"/>
-  <rect x="52.04" y="40.04" width="2" height="2" transform="translate(106.08 82.07) rotate(-180)"/>
-  <rect x="50.04" y="42.04" width="2" height="2" transform="translate(102.08 86.07) rotate(-180)"/>
-  <rect x="48.04" y="42.04" width="2" height="2" transform="translate(98.08 86.07) rotate(-180)"/>
-  <rect x="46.04" y="44.04" width="2" height="2" transform="translate(94.08 90.07) rotate(-180)"/>
-  <rect x="44.04" y="44.04" width="2" height="2" transform="translate(90.08 90.07) rotate(-180)"/>
-  <rect x="42.04" y="44.04" width="2" height="2" transform="translate(86.08 90.07) rotate(-180)"/>
-  <rect x="40.04" y="46.04" width="2" height="2" transform="translate(82.08 94.07) rotate(-180)"/>
-  <rect x="38.04" y="46.04" width="2" height="2" transform="translate(78.08 94.07) rotate(-180)"/>
-  <rect x="36.04" y="46.04" width="2" height="2" transform="translate(74.08 94.07) rotate(-180)"/>
-  <rect x="34.04" y="46.04" width="2" height="2" transform="translate(70.08 94.07) rotate(-180)"/>
-  <rect x="8.04" y="52.04" width="2" height="2"/>
-  <rect x="10.04" y="52.04" width="2" height="2"/>
-  <rect x="12.04" y="52.04" width="2" height="2"/>
-  <rect x="32.04" y="2.04" width="2" height="2" transform="translate(66.08 6.07) rotate(-180)"/>
-  <polygon class="cls-1" points="62.04 20.04 62.04 30.04 60.04 30.04 60.04 34.04 58.04 34.04 58.04 36.04 56.04 36.04 56.04 38.04 54.04 38.04 54.04 40.04 52.04 40.04 52.04 42.04 48.04 42.04 48.04 44.04 42.04 44.04 42.04 46.04 22.04 46.04 22.04 48.04 18.04 48.04 18.04 50.04 14.04 50.04 14.04 52.04 10.04 52.04 10.04 50.04 12.04 50.04 12.04 48.04 14.04 48.04 14.04 44.04 16.04 44.04 16.04 42.04 14.04 42.04 14.04 40.04 12.04 40.04 12.04 38.04 10.04 38.04 10.04 36.04 8.04 36.04 8.04 34.04 6.04 34.04 6.04 30.04 4.04 30.04 4.04 20.04 6.04 20.04 6.04 16.04 8.04 16.04 8.04 14.04 10.04 14.04 10.04 12.04 12.04 12.04 12.04 10.04 14.04 10.04 14.04 8.04 18.04 8.04 18.04 6.04 24.04 6.04 24.04 4.04 42.04 4.04 42.04 6.04 48.04 6.04 48.04 8.04 52.04 8.04 52.04 10.04 54.04 10.04 54.04 12.04 56.04 12.04 56.04 14.04 58.04 14.04 58.04 16.04 60.04 16.04 60.04 20.04 62.04 20.04"/>
-  <rect x="32.04" y="46.04" width="2" height="2" transform="translate(66.08 94.07) rotate(-180)"/>
+  <g>
+    <rect class="cls-4" x="23" y="1" width="20" height="4"/>
+    <rect class="cls-4" x="17" y="3" width="8" height="4"/>
+    <rect class="cls-4" x="13" y="5" width="6" height="4"/>
+    <rect class="cls-4" x="11" y="7" width="4" height="4"/>
+    <polygon class="cls-4" points="5 17 5 11 7 11 7 9 13 9 13 13 11 13 11 15 9 15 9 17 5 17"/>
+    <rect class="cls-4" x="3" y="15" width="4" height="6"/>
+    <rect class="cls-4" x="1" y="19" width="4" height="12"/>
+    <rect class="cls-4" x="3" y="29" width="4" height="6"/>
+    <polygon class="cls-4" points="9 43 9 41 7 41 7 39 5 39 5 33 9 33 9 35 11 35 11 37 13 37 13 39 15 39 15 43 9 43"/>
+    <rect class="cls-4" x="13" y="41" width="4" height="4"/>
+    <rect class="cls-4" x="11" y="43" width="4" height="6"/>
+    <rect class="cls-4" x="9" y="47" width="4" height="4"/>
+    <polygon class="cls-4" points="13 53 13 49 17 49 17 47 23 47 23 51 21 51 21 53 13 53"/>
+    <rect class="cls-4" x="41" y="3" width="8" height="4"/>
+    <rect class="cls-4" x="47" y="5" width="6" height="4"/>
+    <rect class="cls-4" x="51" y="7" width="4" height="4"/>
+    <polygon class="cls-4" points="57 17 57 15 55 15 55 13 53 13 53 9 59 9 59 11 61 11 61 17 57 17"/>
+    <rect class="cls-4" x="59" y="15" width="4" height="6"/>
+    <rect class="cls-4" x="61" y="19" width="4" height="12"/>
+    <rect class="cls-4" x="59" y="29" width="4" height="6"/>
+    <polygon class="cls-4" points="51 43 51 39 53 39 53 37 55 37 55 35 57 35 57 33 61 33 61 39 59 39 59 41 57 41 57 43 51 43"/>
+    <rect class="cls-4" x="47" y="41" width="6" height="4"/>
+    <rect class="cls-4" x="41" y="43" width="8" height="4"/>
+    <rect class="cls-4" x="21" y="45" width="22" height="4"/>
+    <polygon class="cls-4" points="7 55 7 49 11 49 11 51 15 51 15 55 7 55"/>
+    <g>
+      <polygon points="28 4 30 4 32 4 34 4 36 4 38 4 40 4 42 4 42 2 40 2 38 2 36 2 34 2 32 2 30 2 28 2 26 2 24 2 24 4 26 4 28 4"/>
+      <polygon points="22 6 24 6 24 4 22 4 20 4 18 4 18 6 20 6 22 6"/>
+      <polygon points="18 8 18 6 16 6 14 6 14 8 16 8 18 8"/>
+      <rect x="12" y="8" width="2" height="2"/>
+      <polygon points="8 14 10 14 10 12 12 12 12 10 10 10 8 10 8 12 6 12 6 14 6 16 8 16 8 14"/>
+      <polygon points="6 18 6 16 4 16 4 18 4 20 6 20 6 18"/>
+      <polygon points="4 26 4 24 4 22 4 20 2 20 2 22 2 24 2 26 2 28 2 30 4 30 4 28 4 26"/>
+      <polygon points="6 30 4 30 4 32 4 34 6 34 6 32 6 30"/>
+      <polygon points="12 40 12 38 10 38 10 36 8 36 8 34 6 34 6 36 6 38 8 38 8 40 10 40 10 42 12 42 14 42 14 40 12 40"/>
+      <rect x="14" y="42" width="2" height="2"/>
+      <polygon points="14 46 14 44 12 44 12 46 12 48 14 48 14 46"/>
+      <rect x="10" y="48" width="2" height="2"/>
+      <polygon points="18 48 18 50 16 50 14 50 14 52 16 52 18 52 20 52 20 50 22 50 22 48 20 48 18 48"/>
+      <polygon points="44 6 46 6 48 6 48 4 46 4 44 4 42 4 42 6 44 6"/>
+      <polygon points="50 8 52 8 52 6 50 6 48 6 48 8 50 8"/>
+      <rect x="52" y="8" width="2" height="2"/>
+      <polygon points="56 12 56 14 58 14 58 16 60 16 60 14 60 12 58 12 58 10 56 10 54 10 54 12 56 12"/>
+      <polygon points="60 20 62 20 62 18 62 16 60 16 60 18 60 20"/>
+      <polygon points="62 20 62 22 62 24 62 26 62 28 62 30 64 30 64 28 64 26 64 24 64 22 64 20 62 20"/>
+      <polygon points="60 32 60 34 62 34 62 32 62 30 60 30 60 32"/>
+      <polygon points="58 36 56 36 56 38 54 38 54 40 52 40 52 42 54 42 56 42 56 40 58 40 58 38 60 38 60 36 60 34 58 34 58 36"/>
+      <polygon points="48 42 48 44 50 44 52 44 52 42 50 42 48 42"/>
+      <polygon points="44 44 42 44 42 46 44 46 46 46 48 46 48 44 46 44 44 44"/>
+      <polygon points="38 46 36 46 34 46 32 46 30 46 28 46 26 46 24 46 22 46 22 48 24 48 26 48 28 48 30 48 32 48 34 48 36 48 38 48 40 48 42 48 42 46 40 46 38 46"/>
+      <polygon points="10 52 10 50 8 50 8 52 8 54 10 54 12 54 14 54 14 52 12 52 10 52"/>
+    </g>
+  </g>
+  <polygon class="cls-3" points="59 17 57 17 57 15 55 15 55 13 53 13 53 11 51 11 51 9 47 9 47 7 41 7 41 5 25 5 25 7 19 7 19 9 15 9 15 11 13 11 13 13 11 13 11 15 9 15 9 17 7 17 7 21 5 21 5 29 7 29 7 33 9 33 9 35 11 35 11 37 13 37 13 39 15 39 15 41 17 41 17 45 15 45 15 49 17 49 17 47 21 47 21 45 41 45 41 43 47 43 47 41 51 41 51 39 53 39 53 37 55 37 55 35 57 35 57 33 59 33 59 29 61 29 61 21 59 21 59 17"/>
+  <g>
+    <rect class="cls-6" x="25" y="4" width="16" height="1"/>
+    <polygon class="cls-6" points="25 7 25 5 24 5 24 6 19 6 19 7 25 7"/>
+    <rect class="cls-4" x="24" y="4" width="1" height="1"/>
+    <rect class="cls-4" x="25" y="4" width="1" height="1"/>
+    <rect class="cls-4" x="26" y="4" width="1" height="1"/>
+    <rect class="cls-4" x="27" y="4" width="1" height="1"/>
+    <polygon class="cls-6" points="19 9 19 7 18 7 18 8 15 8 15 9 19 9"/>
+    <rect class="cls-4" x="18" y="6" width="1" height="1"/>
+    <rect class="cls-4" x="19" y="6" width="1" height="1"/>
+    <rect class="cls-4" x="13" y="9" width="1" height="1"/>
+    <polygon class="cls-6" points="15 11 15 9 14 9 14 10 13 10 13 11 15 11"/>
+    <rect class="cls-4" x="14" y="8" width="1" height="1"/>
+    <polygon class="cls-6" points="9 17 9 15 11 15 11 13 13 13 13 11 12 11 12 12 10 12 10 14 8 14 8 16 7 16 7 17 9 17"/>
+    <rect class="cls-4" x="12" y="10" width="1" height="1"/>
+    <rect class="cls-4" x="10" y="12" width="1" height="1"/>
+    <rect class="cls-4" x="8" y="14" width="1" height="1"/>
+    <polygon class="cls-6" points="7 21 7 17 6 17 6 20 5 20 5 21 7 21"/>
+    <rect class="cls-4" x="6" y="16" width="1" height="1"/>
+    <rect class="cls-6" x="4" y="21" width="1" height="8"/>
+    <rect class="cls-4" x="4" y="20" width="1" height="1"/>
+    <polygon class="cls-6" points="7 29 5 29 5 30 6 30 6 33 7 33 7 29"/>
+    <rect class="cls-6" x="4" y="29" width="1" height="1"/>
+    <polygon class="cls-6" points="15 39 13 39 13 37 11 37 11 35 9 35 9 33 7 33 7 34 8 34 8 36 10 36 10 38 12 38 12 40 14 40 14 41 15 41 15 39"/>
+    <rect class="cls-6" x="6" y="33" width="1" height="1"/>
+    <polygon class="cls-6" points="17 41 15 41 15 42 16 42 16 44 15 44 15 45 17 45 17 41"/>
+    <rect class="cls-6" x="14" y="41" width="1" height="1"/>
+    <polygon class="cls-6" points="15 49 15 45 14 45 14 48 13 48 13 49 15 49"/>
+    <rect class="cls-5" x="14" y="44" width="1" height="1"/>
+    <polygon class="cls-6" points="13 51 13 49 12 49 12 50 11 50 11 51 13 51"/>
+    <rect class="cls-5" x="12" y="48" width="1" height="1"/>
+    <polygon class="cls-2" points="17 47 17 49 15 49 13 49 13 51 14 51 14 50 18 50 18 48 21 48 21 47 17 47"/>
+    <polygon class="cls-6" points="41 7 47 7 47 6 42 6 42 5 41 5 41 7"/>
+    <rect class="cls-6" x="41" y="4" width="1" height="1"/>
+    <polygon class="cls-5" points="47 9 51 9 51 8 48 8 48 7 47 7 47 9"/>
+    <rect class="cls-5" x="47" y="6" width="1" height="1"/>
+    <polygon class="cls-5" points="51 11 53 11 53 10 52 10 52 9 51 9 51 11"/>
+    <rect class="cls-1" x="51" y="8" width="1" height="1"/>
+    <rect class="cls-1" x="47" y="6" width="1" height="1"/>
+    <rect class="cls-5" x="41" y="4" width="1" height="1"/>
+    <polygon class="cls-5" points="53 13 55 13 55 15 57 15 57 17 59 17 59 16 58 16 58 14 56 14 56 12 54 12 54 11 53 11 53 13"/>
+    <rect class="cls-1" x="53" y="10" width="1" height="1"/>
+    <rect class="cls-1" x="55" y="12" width="1" height="1"/>
+    <rect class="cls-1" x="57" y="14" width="1" height="1"/>
+    <polygon class="cls-5" points="59 21 61 21 61 20 60 20 60 17 59 17 59 21"/>
+    <rect class="cls-1" x="59" y="16" width="1" height="1"/>
+    <rect class="cls-1" x="61" y="21" width="1" height="8"/>
+    <rect class="cls-5" x="61" y="20" width="1" height="1"/>
+    <polygon class="cls-1" points="59 29 59 33 60 33 60 30 61 30 61 29 59 29"/>
+    <rect class="cls-1" x="61" y="29" width="1" height="1"/>
+    <polygon class="cls-1" points="57 33 57 35 55 35 55 37 53 37 53 39 51 39 51 41 52 41 52 40 54 40 54 38 56 38 56 36 58 36 58 34 59 34 59 33 57 33"/>
+    <rect class="cls-2" x="59" y="33" width="1" height="1"/>
+    <rect class="cls-2" x="61" y="29" width="1" height="1"/>
+    <rect class="cls-2" x="57" y="35" width="1" height="1"/>
+    <rect class="cls-2" x="55" y="37" width="1" height="1"/>
+    <rect class="cls-2" x="53" y="39" width="1" height="1"/>
+    <polygon class="cls-1" points="47 41 47 43 48 43 48 42 51 42 51 41 47 41"/>
+    <rect class="cls-2" x="51" y="41" width="1" height="1"/>
+    <polygon class="cls-2" points="41 43 41 45 42 45 42 44 47 44 47 43 41 43"/>
+    <rect class="cls-2" x="47" y="43" width="1" height="1"/>
+    <polygon class="cls-2" points="21 45 21 47 22 47 22 46 41 46 41 45 21 45"/>
+    <rect class="cls-2" x="21" y="47" width="1" height="1"/>
+    <rect class="cls-2" x="41" y="45" width="1" height="1"/>
+    <polygon class="cls-2" points="11 51 10 51 10 52 13 52 13 51 11 51"/>
+    <rect class="cls-5" x="10" y="50" width="1" height="1"/>
+    <rect class="cls-5" x="10" y="51" width="1" height="1"/>
+    <rect class="cls-2" x="13" y="51" width="1" height="1"/>
+  </g>
+  <rect class="cls-1" x="21" y="45" width="1" height="1"/>
 </svg>

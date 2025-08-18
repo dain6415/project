@@ -1,7 +1,3 @@
-@charset "UTF-8";
-@import url(./css/phone.css);
-@import url(./css/pc.css);
-
 @font-face {
   font-family: "JetBrains Mono";
   src: url("../../font/font_file/JetBrainsMono-Thin.woff2") format("woff2");
@@ -97,12 +93,6 @@ video {
   visibility: hidden;
 }
 
-.neon {
-  display: none;
-  color: #c9e6ff;
-  text-shadow: 0 0 5px #82c4ff, 0 0 10px #82c4ff, 0 0 20px #1e96ff,
-    0 0 30px #1e96ff, 0 0 40px #1e96ff, 0 0 55px #1e96ff, 0 0 75px #1e96ff;
-}
 
 .cd_icon {
   animation: spin 10s linear infinite;

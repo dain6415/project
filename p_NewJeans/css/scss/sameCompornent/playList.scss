@@ -1,0 +1,93 @@
+@mixin flex-c($justify: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+@media screen and (min-width: 701px) {
+  #desktopPlayList {
+    display: grid;
+    grid-template-columns: repeat(1, 375px);
+    grid-template-rows: repeat(8, 102px);
+    gap: 10px;
+    width: 375px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.4);
+    }
+    .play_wrap {
+      grid-row: 8;
+      width: 100%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 102px;
+        background-image: url(../img/icon/playlist/playlist_bar.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 375px 102px;
+        box-sizing: border-box;
+        pointer-events: none;
+      }
+    }
+    .play_view,
+    .btns_wrap {
+      position: relative;
+      z-index: 1;
+    }
+    .play_view {
+      @include flex-c(space-between);
+      width: 100%;
+      height: 40px;
+      padding: 6px;
+      background-color: var(--bg-color);
+      .cd_icon {
+        width: calc(40px - 12px);
+        height: calc(40px - 12px);
+        border: 1px solid #000;
+      }
+      .play_song {
+        width: calc(100% - 34px);
+        p {
+          color: var(--pink-color);
+          white-space: nowrap;
+          font-size: 16px;
+        }
+      }
+    }
+    .btns_wrap {
+      @include flex-c(space-between);
+    }
+    .play_btns {
+      margin-top: 6px;
+      ol {
+        display: flex;
+        li:not(:first-child) {
+          margin-left: -2px;
+        }
+      }
+      .btn {
+        width: 60px;
+      }
+    }
+    .sound {
+      width: 100px;
+      height: 36px;
+      margin-top: 6px;
+      @include flex-c();
+    }
+  }
+}

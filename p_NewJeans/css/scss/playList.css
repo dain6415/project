@@ -1,0 +1,94 @@
+@media screen and (min-width: 701px) {
+  #desktopPlayList {
+    display: grid;
+    grid-template-columns: repeat(1, 375px);
+    grid-template-rows: repeat(8, 102px);
+    gap: 10px;
+    width: 375px;
+    position: relative;
+  }
+  #desktopPlayList::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.4);
+  }
+  #desktopPlayList .play_wrap {
+    grid-row: 8;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  #desktopPlayList .play_wrap::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 102px;
+    background-image: url(../img/icon/playlist/playlist_bar.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 375px 102px;
+    box-sizing: border-box;
+    pointer-events: none;
+  }
+  #desktopPlayList .play_view,
+  #desktopPlayList .btns_wrap {
+    position: relative;
+    z-index: 1;
+  }
+  #desktopPlayList .play_view {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 6px;
+    background-color: var(--bg-color);
+  }
+  #desktopPlayList .play_view .cd_icon {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #000;
+  }
+  #desktopPlayList .play_view .play_song {
+    width: calc(100% - 34px);
+  }
+  #desktopPlayList .play_view .play_song p {
+    color: var(--pink-color);
+    white-space: nowrap;
+    font-size: 16px;
+  }
+  #desktopPlayList .btns_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #desktopPlayList .play_btns {
+    margin-top: 6px;
+  }
+  #desktopPlayList .play_btns ol {
+    display: flex;
+  }
+  #desktopPlayList .play_btns ol li:not(:first-child) {
+    margin-left: -2px;
+  }
+  #desktopPlayList .play_btns .btn {
+    width: 60px;
+  }
+  #desktopPlayList .sound {
+    width: 100px;
+    height: 36px;
+    margin-top: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}/*# sourceMappingURL=playList.css.map */

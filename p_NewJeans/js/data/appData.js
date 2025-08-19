@@ -16,6 +16,11 @@ export const appData = {
       },
       {
         type: "iframe",
+        src: "https://www.youtube.com/embed/m6pTbEz4w3o?si=UClgeGF1HyVLlbpq",
+        title: "'Right Now' Official MV",
+      },
+      {
+        type: "iframe",
         src: "https://www.youtube.com/embed/Q3K0TOvTOno?si=Xe-qLF1aJezMyNQw",
         title: "'How Sweet' Official MV",
       },

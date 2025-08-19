@@ -1,8 +1,11 @@
+<div class="current_app">
+  <img src="./img/icon/mobile_app/gallery_line.svg" alt="">
+</div>
 <div class="app_title">갤러리 목록(3)</div>
 <div class="app_content">
-  <ul>
+  <ul class="gallery_list">
     <li>
-      <button aria-label="Supernatural 갤러리 열기">
+      <button aria-label="Supernatural 갤러리 열기" data-gallery="supernatural">
         <div class="img_box">
           <img src="./img/icon/mobile_app/supernatural.svg" alt="Supernatural 갤러리">
         </div>
@@ -10,7 +13,7 @@
       </button>
     </li>
     <li>
-      <button aria-label="How Sweet 갤러리 열기">
+      <button aria-label="How Sweet 갤러리 열기" data-gallery="howsweet">
         <div class="img_box">
           <img src="./img/icon/mobile_app/howsweet2.svg" alt="How Sweet 갤러리">
         </div>
@@ -18,7 +21,7 @@
       </button>
     </li>
     <li>
-      <button aria-label="Bubble Gum 갤러리 열기">
+      <button aria-label="Bubble Gum 갤러리 열기" data-gallery="bubblegum">
         <div class="img_box">
           <img src="./img/icon/mobile_app/bubbleGum.svg" alt="Bubble Gum 갤러리">
         </div>
@@ -26,4 +29,14 @@
       </button>
     </li>
   </ul>
+</div>
+
+<div id="gallery_container">
+  <div class="gallery_bar">
+    <p id="galleryTitle"></p>
+    <button class="back" aria-label="폴더 닫기">
+      <img src="./img/icon/close.svg" alt="" />
+    </button>
+  </div>
+  <ul id="photo_list"></ul>
 </div>

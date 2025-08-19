@@ -1,6 +1,5 @@
 import { appData } from "./js/data/appData.js";
-// import { appFolder } from "./js/components/appFolder.js";
-// import { pc_gallery } from "./js/components/pc_gallery.js";
+import { mobile_gallery } from "./js/components/mobile_gallery.js";
 
 window.addEventListener("load", () => {
   // time ------------------------------
@@ -20,8 +19,8 @@ window.addEventListener("load", () => {
   setInterval(getTime, 1000);
 
   const appBtns = document.querySelectorAll(".folder .app");
-
   const contents = document.querySelector(".contents");
+
   appBtns.forEach((btn) => {
     const parentId = btn.closest("li").id;
 
@@ -38,22 +37,46 @@ window.addEventListener("load", () => {
             });
           break;
 
-        case "gallery":
-          contents.classList.add("gallery");
-          fetch("./page/gallery.html")
-            .then((res) => res.text())
-            .then((html) => {
-              document.getElementById("list_wrap").innerHTML = html;
-              pc_mv("gallery", appData.gallery); // 갤러리 데이터 출력
-            });
-          break;
-
-        default:
-          console.log("외부링크 앱 (goods, phoning)은 fetch 없음");
+          case "gallery":
+            contents.classList.add("gallery");
+            fetch("./page/gallery.html")
+              .then((res) => res.text())
+              .then((html) => {
+                document.getElementById("list_wrap").innerHTML = html;
+          
+                const galleryContainer = document.getElementById("gallery_container");
+                const appContent = document.querySelector(".app_content");
+                const backBtn = document.querySelector(".back");
+          
+                if (galleryContainer) galleryContainer.hidden = true;
+          
+                // 갤러리 버튼들 클릭 이벤트
+                document.querySelectorAll("[data-gallery]").forEach((btn) => {
+                  btn.addEventListener("click", () => {
+                    const name = btn.dataset.gallery;
+                    mobile_gallery(name);
+                  });
+                });
+          
+                if (backBtn) {
+                  backBtn.addEventListener("click", () => {
+                    galleryContainer.hidden = true;
+                    appContent.hidden = false;
+                  });
+                }
+              });
+            break;
+          
       }
     });
   });
 
+
+
+
+
+
+  
   const homeBtn = document.querySelector(".home");
   homeBtn.addEventListener("click", () => {
     contents.classList.remove("on");

@@ -5,10 +5,6 @@ import { pc_list } from "./js/components/pc_list.js";
 
 window.addEventListener("load", () => {
   appFolder();
-
-  window.addEventListener("resize",()=>{
-    console.log(window.innerWidth)
-  })
   
 
   // time ------------------------------
@@ -27,7 +23,6 @@ window.addEventListener("load", () => {
   getTime();
   setInterval(getTime, 1000);
 
-  // const container = document.getElementById("list_wrap");
   pc_gallery('supernatural', appData.albums);
   pc_list("streaming", appData.streaming);
 });

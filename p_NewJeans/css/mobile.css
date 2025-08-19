@@ -81,48 +81,34 @@ body {
 #topBar .right {
   color: var(--blue-color);
 }
+#topBar .left div,
+#topBar .right div {
+  height: 18px;
+}
+#topBar .left div img,
+#topBar .right div img {
+  height: 100%;
+}
 #topBar .left {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2px;
 }
-#topBar .left li {
+#topBar .left div {
   display: inline-block;
   cursor: auto;
-}
-#topBar .left li:first-child {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#topBar .left li:first-child img {
-  width: 100%;
-}
-#topBar .left li:not(:first-child) {
-  width: 80px;
-  height: 20px;
-  text-align: center;
-  border-right: 1px solid var(--blue-color);
 }
 #topBar .right {
   display: flex;
 }
 #topBar .right div:not(:first-child) {
-  margin-left: 12px;
+  margin-left: 16px;
 }
 #topBar .right .batt {
-  height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000;
-}
-#topBar .right .batt img {
-  height: 100%;
 }
 #topBar .right .clock_box {
   font-weight: 600;
@@ -137,15 +123,6 @@ body {
   position: relative;
   padding: 60px 20px 10px;
   color: var(--white);
-}
-
-#bottomBar {
-  width: 100%;
-  height: 40px;
-  background: var(--bg-color);
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
 #mobilePlayList {
@@ -233,6 +210,43 @@ body {
   overflow: hidden;
 }
 
+#list_wrap {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 40px - 40px);
+  padding: 12px;
+  background: var(--white);
+  display: none;
+}
+#list_wrap.mv .video_box {
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+#list_wrap.mv .video_box:not(:first-child) {
+  padding-top: 10px;
+}
+#list_wrap.mv figure {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#list_wrap.mv figure iframe {
+  height: 80px;
+  aspect-ratio: 16/9;
+}
+#list_wrap.mv figure figcaption {
+  padding-left: 10px;
+}
+#list_wrap.streaming {
+  border: 1px solid var(--bg-color);
+}
+#list_wrap.on {
+  display: block;
+}
+
 .close_btn:focus-visible,
 .app:focus-visible,
 .btn:focus-visible,
@@ -243,6 +257,15 @@ body {
 #folder,
 .modal {
   display: none;
+}
+
+#bottomBar {
+  width: 100%;
+  height: 40px;
+  background: var(--bg-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 @media screen and (max-width: 700px) {

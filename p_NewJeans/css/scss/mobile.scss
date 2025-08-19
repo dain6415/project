@@ -29,42 +29,28 @@ body{
   .left,
   .right {
     color: var(--blue-color);
+    div{
+      height: 18px;
+      img{
+        height: 100%;
+      }
+    }
   }
   .left {
     @include flex-c();
     gap: 2px;
-    li {
+    div {
       display: inline-block;
       cursor: auto;
-      &:first-child {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        @include flex-c();
-        img {
-          width: 100%;
-        }
-      }
-      &:not(:first-child) {
-        width: 80px;
-        height: 20px;
-        text-align: center;
-        border-right: 1px solid var(--blue-color);
-      }
     }
   }
   .right {
     display: flex;
     div:not(:first-child){
-      margin-left: 12px;
+      margin-left: 16px;
     }
     .batt {
-      height: 20px;
       @include flex-c();
-      border: 1px solid #000;
-      img{
-        height: 100%;
-      }
     }
     .clock_box {
       font-weight: 600;
@@ -78,15 +64,6 @@ body{
   position: relative;
   padding: 60px 20px 10px;
   color: var(--white);
-}
-
-#bottomBar{
-  width: 100%;
-  height: 40px;
-  background: var(--bg-color);
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
 
@@ -166,7 +143,43 @@ body{
   }
 }
 
-
+#list_wrap{
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 40px - 40px);
+  padding: 12px;
+  background: var(--white);
+  display: none;
+  
+  &.mv{
+    .video_box{
+      width: 100%;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      &:not(:first-child){
+        padding-top: 10px;
+      }
+    }
+    figure{
+      @include flex-c(flex-start);
+      iframe{
+        height: 80px;
+        aspect-ratio: 16 / 9;
+      }
+      figcaption{
+        padding-left: 10px;
+      }
+    }
+  }
+  &.streaming{
+    border: 1px solid var(--bg-color);
+  }
+  &.on{
+    display: block; 
+  }
+}
 
 
 .close_btn,
@@ -184,6 +197,15 @@ body{
 .modal
 {
   display: none;
+}
+
+#bottomBar{
+  width: 100%;
+  height: 40px;
+  background: var(--bg-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 @media screen and (max-width: 700px) {

@@ -33,12 +33,15 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
       </div>
     </div>
     <div id="topBar">
-      <ol class="left">
-        <li>
-          <img src="./img/icon/end.svg" alt="뉴진스" />
-        </li>
-      </ol>
+      <div class="left">
+        <div>
+          <img src="./img/icon/m.svg" alt="뉴진스" />
+        </div>
+      </div>
       <div class="right">
+        <div class="lock">
+          <img src="./img/icon/lock.svg" alt="뉴진스" />
+        </div>
         <div class="batt"><img src="./img/icon/music.svg" alt="음악" /></div>
         <div class="batt"><img src="./img/icon/Mbatt.svg" alt="배터리" /></div>
         <div class="clock_box">
@@ -88,12 +91,10 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
           <li id="mv" class="folder" aria-expanded="false">
             <button
               class="app video"
-              aria-expanded="false"
-              aria-controls="folder1"
               aria-label="mv 앱 열기"
             >
               <figure>
-                <img src="./img/icon/mobile_app//mv.svg" alt="ddd" />
+                <img src="./img/icon/mobile_app//mv.svg" alt="뮤직비디오" />
                 <figcaption>뮤직비디오</figcaption>
               </figure>
             </button>
@@ -101,12 +102,10 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
           <li id="streaming" class="folder">
             <button
               class="app list"
-              aria-expanded="false"
-              aria-controls="folder4"
               aria-label="streaming 앱 열기"
             >
               <figure>
-                <img src="./img/icon/mobile_app/streaming.svg" alt="ff" />
+                <img src="./img/icon/mobile_app/streaming.svg" alt="스트리밍" />
                 <figcaption>스트리밍</figcaption>
               </figure>
             </button>
@@ -119,7 +118,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
               rel="noopener noreferrer"
             >
               <figure class="link">
-                <img src="./img/icon//mobile_app/goods.svg" alt="gg" />
+                <img src="./img/icon//mobile_app/goods.svg" alt="굿즈" />
                 <figcaption>굿즈</figcaption>
               </figure>
             </a>
@@ -127,12 +126,10 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
           <li id="gallery" class="folder">
             <button
               class="app gallery"
-              aria-expanded="false"
-              aria-controls="folder2"
               aria-label="supernatural_gallery 폴더 열기"
             >
               <figure>
-                <img src="./img/icon/mobile_app/gallery.svg" alt="fff" />
+                <img src="./img/icon/mobile_app/gallery.svg" alt="사진첩" />
                 <figcaption>사진첩</figcaption>
               </figure>
             </button>
@@ -145,13 +142,17 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
               rel="noopener noreferrer"
             >
               <figure class="link">
-                <img src="./img/icon//mobile_app/phoning.svg" alt="ppp" />
+                <img src="./img/icon//mobile_app/phoning.svg" alt="포닝" />
                 <figcaption>포닝</figcaption>
               </figure>
             </a>
           </li>
         </ol>
       </section>
+
+      <div class="container">
+        <div id="list_wrap" class="contents" role="list"></div>
+      </div>
 
       <div
         id="folder"
@@ -164,9 +165,6 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
           <button class="close_btn" aria-label="폴더 닫기">
             <img src="./img/icon/close.svg" alt="" />
           </button>
-        </div>
-        <div class="container">
-          <div id="list_wrap" class="contents" role="list"></div>
         </div>
       </div>
 
@@ -213,7 +211,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
     </div>
 
     <!-- 음악 -->
-    <script>
+    <!-- <script>
       const playList = document.querySelectorAll("audio");
       let playing = false;
       let nowPlaying = 0;
@@ -289,12 +287,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
 
         updateActiveBtn(playBtn);
       });
-    </script>
-    <script>
-      window.addEventListener("resize", () => {
-        console.log(window.innerWidth);
-      });
-    </script>
+    </script> -->
     <script src="./mobile.js" type="module"></script>
   </body>
 </html>

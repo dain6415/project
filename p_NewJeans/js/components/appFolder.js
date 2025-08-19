@@ -40,8 +40,6 @@ export function appFolder() {
       } else if (btn.classList.contains("list")) {
         pc_list(folderName, appData.streaming, "list");
       };
-
-      
     });
   });
 

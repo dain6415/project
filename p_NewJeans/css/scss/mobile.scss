@@ -120,7 +120,6 @@ body{
   .app{
     width: 100%;
     display: inline-block;
-    border: 1px solid #ff0;
     figure{
       @include flex-c();
       flex-direction: column;
@@ -188,7 +187,7 @@ body{
   &.gallery{
     border: 1px solid var(--bg-color);
     .app_content{
-      padding: 10px;
+      padding: 20px 10px;
     }
     ul {
       @include flex-c(space-between);
@@ -197,7 +196,7 @@ body{
       li{
         width: calc(50% - 10px);
         .img_box{
-          padding: 10px;
+          padding: 26px;
           position: relative;
           &::before{
             content: '';

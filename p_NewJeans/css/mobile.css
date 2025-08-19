@@ -186,7 +186,6 @@ body {
 .mobile_app .app {
   width: 100%;
   display: inline-block;
-  border: 1px solid #ff0;
 }
 .mobile_app .app figure {
   display: flex;
@@ -258,7 +257,7 @@ body {
   border: 1px solid var(--bg-color);
 }
 #list_wrap.gallery .app_content {
-  padding: 10px;
+  padding: 20px 10px;
 }
 #list_wrap.gallery ul {
   display: flex;
@@ -271,7 +270,7 @@ body {
   width: calc(50% - 10px);
 }
 #list_wrap.gallery ul li .img_box {
-  padding: 10px;
+  padding: 26px;
   position: relative;
 }
 #list_wrap.gallery ul li .img_box::before {

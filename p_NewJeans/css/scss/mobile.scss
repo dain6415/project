@@ -120,7 +120,7 @@ body{
   .app{
     width: 100%;
     display: inline-block;
-    
+    border: 1px solid #0f0;
     figure{
       @include flex-c();
       flex-direction: column;

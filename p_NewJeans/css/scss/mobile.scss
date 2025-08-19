@@ -117,27 +117,27 @@ body{
   grid-template-columns: repeat(2, 1fr);
   gap: 40px 24px;
   padding: 10px;
-}
-.app{
-  width: 100%;
-  display: inline-block;
-  
-  figure{
-    @include flex-c();
-    flex-direction: column;
-    img{
-      width: 80%;
-    }
-    figcaption{
-      text-align: center;
-      padding-top: 12px;
-      font-family: "PFStardustS", monospace;
-      font-size: 18px;
-      span{
-        display: inline-block;
-        width: 20px;
-        text-overflow: ellipsis;
-        overflow: hidden;
+  .app{
+    width: 100%;
+    display: inline-block;
+    
+    figure{
+      @include flex-c();
+      flex-direction: column;
+      img{
+        width: 80%;
+      }
+      figcaption{
+        text-align: center;
+        padding-top: 12px;
+        font-family: "PFStardustS", monospace;
+        font-size: 18px;
+        span{
+          display: inline-block;
+          width: 20px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
       }
     }
   }

@@ -183,27 +183,26 @@ body {
   gap: 40px 24px;
   padding: 10px;
 }
-
-.app {
+.mobile_app .app {
   width: 100%;
   display: inline-block;
 }
-.app figure {
+.mobile_app .app figure {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.app figure img {
+.mobile_app .app figure img {
   width: 80%;
 }
-.app figure figcaption {
+.mobile_app .app figure figcaption {
   text-align: center;
   padding-top: 12px;
   font-family: "PFStardustS", monospace;
   font-size: 18px;
 }
-.app figure figcaption span {
+.mobile_app .app figure figcaption span {
   display: inline-block;
   width: 20px;
   text-overflow: ellipsis;

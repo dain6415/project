@@ -3,10 +3,18 @@ import { appData } from "./js/data/appData.js";
 // import { pc_gallery } from "./js/components/pc_gallery.js";
 
 window.addEventListener("load", () => {
-    const appBtns = document.querySelectorAll(".folder .app");
+  const appBtns = document.querySelectorAll(".folder .app");
 
   appBtns.forEach((btn) => {
     const parentId = btn.closest("li").id;
+    btn.addEventListener("click", handleClick);
+    btn.addEventListener("touchend", handleClick);
+
+    function handleClick(e) {
+      e.preventDefault();
+      console.log("클릭/터치 확인");
+      // mv 내용 표시
+    }
 
     btn.addEventListener("click", () => {
       const contents = document.querySelector(".contents");

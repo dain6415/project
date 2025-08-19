@@ -3,7 +3,6 @@ import { appData } from "./js/data/appData.js";
 // import { pc_gallery } from "./js/components/pc_gallery.js";
 
 window.addEventListener("load", () => {
-
   // time ------------------------------
   function getTime() {
     const clock = document.getElementById("clock");
@@ -20,9 +19,8 @@ window.addEventListener("load", () => {
   getTime();
   setInterval(getTime, 1000);
 
-
   const appBtns = document.querySelectorAll(".folder .app");
-  
+
   const contents = document.querySelector(".contents");
   appBtns.forEach((btn) => {
     const parentId = btn.closest("li").id;
@@ -40,16 +38,8 @@ window.addEventListener("load", () => {
             });
           break;
 
-        case "streaming":
-          contents.classList.add("streaming");
-          fetch("./page/streaming.html")
-            .then((res) => res.text())
-            .then((html) => {
-              document.getElementById("list_wrap").innerHTML = html;
-            });
-          break;
-
         case "gallery":
+          contents.classList.add("gallery");
           fetch("./page/gallery.html")
             .then((res) => res.text())
             .then((html) => {
@@ -64,9 +54,8 @@ window.addEventListener("load", () => {
     });
   });
 
-
-  const homeBtn = document.querySelector('.home');
-  homeBtn.addEventListener('click', () => {
+  const homeBtn = document.querySelector(".home");
+  homeBtn.addEventListener("click", () => {
     contents.classList.remove("on");
-  })
+  });
 });

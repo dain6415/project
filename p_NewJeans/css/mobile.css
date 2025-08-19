@@ -202,6 +202,7 @@ body {
   padding-top: 12px;
   font-family: "PFStardustS", monospace;
   font-size: 18px;
+  color: var(--white);
 }
 .mobile_app .app figure figcaption span {
   display: inline-block;
@@ -247,13 +248,49 @@ body {
   align-items: center;
 }
 #list_wrap.mv figure img {
-  width: 20%;
+  width: 30%;
 }
 #list_wrap.mv figure figcaption {
   padding-left: 10px;
+  color: var(--bg-color);
 }
-#list_wrap.streaming {
+#list_wrap.gallery {
   border: 1px solid var(--bg-color);
+}
+#list_wrap.gallery .app_content {
+  padding: 10px;
+}
+#list_wrap.gallery ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px 20px;
+}
+#list_wrap.gallery ul li {
+  width: calc(50% - 10px);
+}
+#list_wrap.gallery ul li .img_box {
+  padding: 10px;
+  position: relative;
+}
+#list_wrap.gallery ul li .img_box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/icon/mobile_app/gallery_Bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: -1;
+}
+#list_wrap.gallery ul li p {
+  padding-top: 10px;
+  font-size: 18px;
+  text-align: center;
 }
 #list_wrap.on {
   display: block;

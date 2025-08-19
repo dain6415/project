@@ -186,7 +186,7 @@ body {
 .mobile_app .app {
   width: 100%;
   display: inline-block;
-  border: 1px solid #0f0;
+  border: 1px solid #ff0;
 }
 .mobile_app .app figure {
   display: flex;

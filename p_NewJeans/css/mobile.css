@@ -115,6 +115,7 @@ body main {
   align-items: center;
 }
 #topBar .right .clock_box {
+  font-size: 16px;
   font-weight: 600;
   display: flex;
   justify-content: flex-end;
@@ -415,26 +416,39 @@ button:focus-visible {
   width: 100%;
   height: 50px;
   padding: 6px 8px;
-  background: var(--bg-color);
+  border-top: 2px solid #000;
+  background: linear-gradient(45deg, #ff95dc 5%, #ffffff 100%);
   z-index: 10;
 }
-#bottomBar button, #bottomBar a {
-  color: #fff;
-  display: inline-block;
+#bottomBar button,
+#bottomBar a {
+  width: calc(33% - 4px);
   height: 38px;
-  font-size: 20px;
-}
-#bottomBar button img, #bottomBar a img {
-  height: 100%;
-  width: auto;
+  color: #000;
+  letter-spacing: 0.2px;
+  font-weight: 600;
+  text-align: center;
 }
 #bottomBar #download,
 #bottomBar #close {
   display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 #bottomBar #download.on,
 #bottomBar #close.on {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bottomBar #download {
+  left: 0px;
+  border-right: 2px solid #000;
+}
+#bottomBar #close {
+  right: 0px;
+  border-left: 2px solid #000;
 }
 
 @media screen and (max-width: 700px) {

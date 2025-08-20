@@ -11,14 +11,20 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
 "
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="/reset.css" />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./css/mobile.css" />
-    <script>
+    <link rel="stylesheet" href="./css/mobile.css" media="" />
+    <!-- <script>
       if (window.innerWidth > 700) {
         window.location.href = "pc.html";
       }
-    </script>
+    </script> -->
     <style>
       #loading {
         display: none;
@@ -26,20 +32,23 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
     </style>
   </head>
   <body>
-    
     <main>
       <div id="topBar">
         <div class="left">
           <div>
-            <img src="./img/icon/m.svg" alt="통신" />
+            <img src="./img/icon/topBar/m.svg" alt="통신" />
           </div>
         </div>
         <div class="right">
           <div class="lock">
-            <img src="./img/icon/lock.svg" alt="뉴진스" />
+            <img src="./img/icon/topBar/lock.svg" alt="뉴진스" />
           </div>
-          <div class="batt"><img src="./img/icon/music.svg" alt="음악" /></div>
-          <div class="batt"><img src="./img/icon/Mbatt.svg" alt="배터리" /></div>
+          <div class="batt">
+            <img src="./img/icon/topBar/music.svg" alt="음악" />
+          </div>
+          <div class="batt">
+            <img src="./img/icon/topBar/Mbatt.svg" alt="배터리" />
+          </div>
           <div class="clock_box">
             <div id="clock"></div>
           </div>
@@ -134,30 +143,28 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
         <div id="list_wrap" class="contents" role="list"></div>
       </div>
 
+      <!-- modal -->
       <div
-        class="modal hidden"
+        class="swiper modal hidden"
         aria-labelledby="modalTitle"
         aria-modal="false"
         role="dialog"
       >
-        <div class="modal_top_bar">
-          <a id="download" href="#" download aria-label="이미지 다운로드"
-          >다운로드</a
-        >
-          <button id="close" aria-label="닫기">
-            <img src="./img/icon/close_in.svg" alt="모달 닫기" />
-          </button>
-        </div>
-        <div class="modal_img_box">
-          <img src="" id="modal_img" alt="" />
+        <div class="swiper-wrapper">
         </div>
       </div>
 
       <div id="bottomBar">
-        <button class="home">home</button>
+        <a id="download" href="#" download aria-label="이미지 다운로드"
+          >
+          <img src="./img/icon/download.svg" alt=""/>
+      </a>
+        <button id="homeBtn" aria-label="메인 홈"><img src="./img/icon/home.svg" alt="메인 홈" /></button>
+        <button id="close" aria-label="닫기">
+          <img src="./img/icon/close2.svg" alt="모달 닫기" />
+        </button>
       </div>
     </main>
-
 
     <!-- 음악 -->
     <!-- <script>

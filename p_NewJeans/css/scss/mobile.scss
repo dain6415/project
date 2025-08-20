@@ -23,7 +23,7 @@ body {
 #topBar {
   width: 100%;
   height: 40px;
-  padding: 6px 20px;
+  padding: 6px 10px;
   background: var(--bg-color);
   @include flex-c(space-between);
   position: absolute;
@@ -149,7 +149,7 @@ body {
 }
 
 #list_wrap {
-  position: fixed;
+  position: absolute;
   top: 40px;
   left: 0;
   width: 100%;
@@ -199,7 +199,6 @@ body {
     }
   }
   &.gallery {
-    border: 1px solid var(--bg-color);
     .app_content {
       padding: 10px;
     }
@@ -214,7 +213,6 @@ body {
           width: 100%;
           height: 100%;
           padding: 8px 20px 18px;
-          // border: 1px solid #f00;
           &::before {
             content: "";
             position: absolute;
@@ -224,7 +222,10 @@ body {
             height: 100%;
             background-image: url(../img/icon/mobile_app/galllery_Bg.svg);
             @include bg(contain);
-            z-index: -1;
+          }
+          img{
+            position: relative;
+            z-index: 1;
           }
         }
         p {
@@ -235,15 +236,17 @@ body {
       }
     }
     #gallery_container {
-      position: fixed;
-      top: 40px;
+      position: absolute;
+      top: 0;
       left: 0;
+      height: 100%;
+      z-index: 1;
       background: var(--white);
       .gallery_bar {
         @include flex-c(space-between);
         width: 100%;
         height: 60px;
-        padding: 6px 20px;
+        padding: 6px 8px;
         background: linear-gradient(45deg, #ff95dc 5%, #ffffff 100%);
         border-bottom: 2px solid #000;
         color: var(--bg-color);
@@ -261,7 +264,7 @@ body {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 4px;
-      height: calc(100% - 140px);
+      height: calc(100% - 40px);
       overflow: scroll;
       padding: 10px;
       li {
@@ -296,38 +299,12 @@ body {
   width: 100%;
   height: calc(100% - 40px);
   background-color: var(--bg-color);
-  z-index: 1;
+  z-index: 10;
   &.hidden {
     display: none;
   }
-  .modal_top_bar {
-    @include flex-c(space-between);
-    width: 100%;
-    height: 60px;
-    padding: 6px 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    .left {
-      @include flex-c();
-    }
-    .icon_box,
-    #close {
-      @include flex-c();
-      height: 30px;
-      width: 30px;
-    }
-    p {
-      padding-left: 10px;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    #close {
-      cursor: pointer;
-    }
-  }
 }
-.modal_img_box {
+.swiper-slide {
   @include flex-c();
   flex-grow: 1;
   max-width: 100%;
@@ -338,69 +315,46 @@ body {
     object-fit: cover;
   }
 }
-.controls {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% - 20px);
-  #prev,
-  #next {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    width: 60px;
-    height: 60px;
-    &:focus-visible {
-      outline: 2px solid var(--pink-color);
-    }
-    &:hover {
-      background-color: var(--bg-color);
-    }
-  }
-}
-#download {
-  display: inline-block;
-  padding: 6px 14px;
-  background-color: var(--white);
-  border-radius: 20px;
-  color: var(--bg-color);
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 400;
-  &:hover {
-    color: #666;
-    background-color: #eee;
-  }
-}
 
-.home {
-  color: #fff;
-  display: block;
-  width: 100%;
-  font-size: 20px;
-}
+
+
 .close_btn,
 .app,
 .btn,
-.gallery .img_box {
+.img_box,
+button {
   &:focus-visible {
     outline: 2px solid var(--blue-color);
   }
 }
 
 #bottomBar {
-  width: 100%;
-  height: 40px;
-  background: var(--bg-color);
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 100;
+  @include flex-c();
+  width: 100%;
+  height: 50px;
+  padding: 6px 8px;
+  background: var(--bg-color);
+  z-index: 10;
+  button, a {
+    color: #fff;
+    display: inline-block;
+    height: 38px;
+    font-size: 20px;
+    img{
+      height: 100%;
+      width: auto;
+    }
+  }
+  #download, 
+  #close {
+    display: none;
+    &.on {
+      display: inline-block;
+    }
+  }
 }
 
 @media screen and (max-width: 700px) {

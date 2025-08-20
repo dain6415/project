@@ -74,7 +74,7 @@ window.addEventListener("load", () => {
 
 
   
-  const homeBtn = document.querySelector(".home");
+  const homeBtn = document.getElementById("homeBtn");
   homeBtn.addEventListener("click", () => {
     contents.classList.remove("on");
   });

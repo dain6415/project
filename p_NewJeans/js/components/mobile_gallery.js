@@ -16,8 +16,6 @@ export function mobile_gallery(folderName) {
   const modalImg = document.getElementById("modal_img");
   const download = document.getElementById("download");
   const closeBtn = document.getElementById("close");
-  const prevBtn = document.getElementById("prev");
-  const nextBtn = document.getElementById("next");
 
   let currentIndex = 0;
   let firstFocus, lastFocus;
@@ -63,7 +61,6 @@ export function mobile_gallery(folderName) {
   function updateView(index) {
     currentIndex = index;
     const imgData = galleryImgs[index];
-    modalTitle.textContent = imgData.alt;
     modalImg.src = imgData.src;
     modalImg.alt = imgData.alt || "";
     download.href = imgData.src;
@@ -93,8 +90,6 @@ export function mobile_gallery(folderName) {
   }
 
   closeBtn.addEventListener("click", hideModal);
-  prevBtn.addEventListener("click", showPrevImage);
-  nextBtn.addEventListener("click", showNextImage);
 
   document.addEventListener("keydown", (e) => {
     if (modal.classList.contains("hidden")) return;
@@ -113,6 +108,22 @@ export function mobile_gallery(folderName) {
       showNextImage();
     } else if (e.key === "Escape") {
       hideModal();
+    }
+  });
+
+  // 스와이프형식 -----------
+  let startX = 0;
+
+  modal.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  modal.addEventListener("touchend", (e) => {
+    const endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) {
+      showNextImage();
+    } else if (endX - startX > 50) {
+      showPrevImage();
     }
   });
 

@@ -13,7 +13,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
     />
     <link rel="stylesheet" href="/reset.css" />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 700px)" />
+    <link rel="stylesheet" href="./css/mobile.css" />
     <script>
       if (window.innerWidth > 700) {
         window.location.href = "pc.html";
@@ -26,25 +26,25 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
     </style>
   </head>
   <body>
-    <div id="topBar">
-      <div class="left">
-        <div>
-          <img src="./img/icon/m.svg" alt="통신" />
-        </div>
-      </div>
-      <div class="right">
-        <div class="lock">
-          <img src="./img/icon/lock.svg" alt="뉴진스" />
-        </div>
-        <div class="batt"><img src="./img/icon/music.svg" alt="음악" /></div>
-        <div class="batt"><img src="./img/icon/Mbatt.svg" alt="배터리" /></div>
-        <div class="clock_box">
-          <div id="clock"></div>
-        </div>
-      </div>
-    </div>
-
+    
     <main>
+      <div id="topBar">
+        <div class="left">
+          <div>
+            <img src="./img/icon/m.svg" alt="통신" />
+          </div>
+        </div>
+        <div class="right">
+          <div class="lock">
+            <img src="./img/icon/lock.svg" alt="뉴진스" />
+          </div>
+          <div class="batt"><img src="./img/icon/music.svg" alt="음악" /></div>
+          <div class="batt"><img src="./img/icon/Mbatt.svg" alt="배터리" /></div>
+          <div class="clock_box">
+            <div id="clock"></div>
+          </div>
+        </div>
+      </div>
       <section id="intro">
         <div id="mobilePlayList" class="shaodw">
           <div class="play_wrap">
@@ -83,10 +83,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
 
         <ol class="mobile_app">
           <li id="mv" class="folder" aria-expanded="false">
-            <button
-              class="app video"
-              aria-label="mv 앱 열기"
-            >
+            <button class="app video" aria-label="mv 앱 열기">
               <figure>
                 <img src="./img/icon/mobile_app//mv.svg" alt="뮤직비디오" />
                 <figcaption>뮤직비디오</figcaption>
@@ -137,7 +134,6 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
         <div id="list_wrap" class="contents" role="list"></div>
       </div>
 
-
       <div
         class="modal hidden"
         aria-labelledby="modalTitle"
@@ -145,40 +141,23 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
         role="dialog"
       >
         <div class="modal_top_bar">
-          <div class="left">
-            <div class="icon_box">
-              <img src="./img/icon/img.svg" alt="이미지" />
-            </div>
-            <p id="modalTitle"></p>
-          </div>
+          <a id="download" href="#" download aria-label="이미지 다운로드"
+          >다운로드</a
+        >
           <button id="close" aria-label="닫기">
-            <img src="./img/icon/close.svg" alt="모달 닫기" />
+            <img src="./img/icon/close_in.svg" alt="모달 닫기" />
           </button>
         </div>
         <div class="modal_img_box">
           <img src="" id="modal_img" alt="" />
         </div>
-        <ol class="controls">
-          <li>
-            <button id="prev" aria-label="이전 이미지">
-              <img src="./img/icon/prev.svg" alt="" />
-            </button>
-          </li>
-          <li>
-            <button id="next" aria-label="다음 이미지">
-              <img src="./img/icon/next.svg" alt="" />
-            </button>
-          </li>
-        </ol>
-        <a id="download" href="#" download aria-label="이미지 다운로드"
-          >다운로드</a
-        >
+      </div>
+
+      <div id="bottomBar">
+        <button class="home">home</button>
       </div>
     </main>
 
-    <div id="bottomBar">
-      <button class="home">home</button>
-    </div>
 
     <!-- 음악 -->
     <!-- <script>

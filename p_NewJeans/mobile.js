@@ -1,5 +1,6 @@
 import { appData } from "./js/data/appData.js";
 import { mobile_gallery } from "./js/components/mobile_gallery.js";
+import { backBtn } from "./js/components/backBtn.js";
 
 window.addEventListener("load", () => {
   // time ------------------------------
@@ -70,10 +71,6 @@ window.addEventListener("load", () => {
       }
     });
   });
-
-
-
-
 
 
   

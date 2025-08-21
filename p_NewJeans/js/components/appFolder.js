@@ -1,4 +1,4 @@
-import { pc_gallery } from "./pc_gallery.js";
+import { gallery } from "./gallery.js";
 import { pc_mv } from "./pc_mv.js";
 import { pc_list } from "./pc_list.js";
 import { appData } from "../data/appData.js";
@@ -34,7 +34,7 @@ export function appFolder() {
       folderTitle.textContent = folderTitles[folderName] || folderName;
 
       if (btn.classList.contains("gallery")) {
-        pc_gallery(folderName, appData.albums, "gallery");
+        gallery(folderName, appData.albums, "gallery");
       } else if (btn.classList.contains("video")) {
         pc_mv(folderName, appData.mv, "video");
       } else if (btn.classList.contains("list")) {

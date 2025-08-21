@@ -1,0 +1,30 @@
+.modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 40px);
+  background-color: var(--bg-color);
+  z-index: 10;
+}
+.modal.hidden {
+  display: none;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  max-width: 100%;
+  max-height: 94%;
+  padding: 2px;
+}
+.swiper-slide #modal_img {
+  width: 100%;
+  object-fit: cover;
+}/*# sourceMappingURL=modal.css.map */

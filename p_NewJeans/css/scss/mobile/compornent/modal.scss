@@ -1,0 +1,32 @@
+@mixin flex-c($justify: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
+.modal {
+  @include flex-c(space-between);
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  left: 0;
+
+  width: 100%;
+  height: calc(100% - 40px);
+  background-color: var(--bg-color);
+  z-index: 10;
+  &.hidden {
+    display: none;
+  }
+}
+.swiper-slide {
+  @include flex-c();
+  flex-grow: 1;
+  max-width: 100%;
+  max-height: 94%;
+  padding: 2px;
+  #modal_img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,4 +1,4 @@
-export function pc_gallery(folderName, albums, type) {
+export function gallery(folderName, albums, type) {
   const galleryImgs = albums[folderName] || [];
 
   const folderListWrap = document.getElementById("list_wrap");

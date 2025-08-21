@@ -1,8 +1,8 @@
-@import './sameCompornent/topBar';
-@import '../scss/pc/compronent/pcApp';
-@import './sameCompornent/playList';
-@import '../scss/pc/compronent/folder';
-@import '../scss/pc/compronent/modal';
+@use './sameCompornent/topBar';
+@use '../scss/pc/compronent/pcApp';
+@use './sameCompornent/playList';
+@use '../scss/pc/compronent/folder';
+@use '../scss/pc/compronent/modal';
 // -----------------------
 .close_btn,
 .app,
@@ -12,24 +12,23 @@
     outline: 2px solid var(--blue-color);
   }
 }
-@media screen and (min-width: 701px) {
-  body {
-    overflow: hidden;
-  }
-  main {
-    max-width: 1600px;
-    min-height: 100vh;
-    margin: auto;
-    overflow: hidden;
-  }
-  #intro {
-    height: 100vh;
-    padding: 20px;
-    background-image: url(../img/intro_photo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right center;
-    display: flex;
-    justify-content: space-between;
-  }
+body {
+  overflow: hidden;
+}
+main {
+  max-width: 1600px;
+  min-width: 700px;
+  min-height: 100vh;
+  margin: auto;
+  overflow: hidden;
+}
+#intro {
+  height: 100vh;
+  padding: 20px;
+  background-image: url(../img/intro_photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  display: flex;
+  justify-content: space-between;
 }

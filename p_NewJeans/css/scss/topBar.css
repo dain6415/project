@@ -1,61 +1,60 @@
-@media screen and (min-width: 701px) {
-  #pcTopBar {
-    width: 100%;
-    height: 32px;
-    max-width: 1600px;
-    margin: auto;
-    padding: 6px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  #pcTopBar .left,
-  #pcTopBar .right {
-    display: flex;
-    color: var(--blue-color);
-  }
-  #pcTopBar .left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2px;
-  }
-  #pcTopBar .left li {
-    display: inline-block;
-    cursor: auto;
-  }
-  #pcTopBar .left li:first-child {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #pcTopBar .left li:first-child img {
-    width: 100%;
-  }
-  #pcTopBar .left li:not(:first-child) {
-    width: 80px;
-    height: 20px;
-    font-size: 14px;
-    text-align: center;
-    border-right: 1px solid var(--blue-color);
-  }
-  #pcTopBar .right {
-    font-size: 14px;
-  }
-  #pcTopBar .right .batt {
-    width: 30px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #pcTopBar .right .clock_box {
-    margin-left: 10px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
+#pcTopBar {
+  width: 100%;
+  height: 32px;
+  max-width: 1600px;
+  margin: auto;
+  padding: 6px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pcTopBar .left,
+#pcTopBar .right {
+  display: flex;
+  color: var(--blue-color);
+}
+#pcTopBar .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+#pcTopBar .left li {
+  display: inline-block;
+  cursor: auto;
+}
+#pcTopBar .left li:first-child {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#pcTopBar .left li:first-child img {
+  width: 100%;
+}
+#pcTopBar .left li:not(:first-child) {
+  width: 80px;
+  height: 20px;
+  font-size: 14px;
+  text-align: center;
+  border-right: 1px solid var(--blue-color);
+}
+#pcTopBar .right {
+  font-size: 14px;
+}
+#pcTopBar .right .batt {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#pcTopBar .right .clock_box {
+  margin-left: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--blue-color);
 }/*# sourceMappingURL=topBar.css.map */

@@ -1,11 +1,12 @@
 import { appData } from "./js/data/appData.js";
 import { appFolder } from "./js/components/appFolder.js";
-import { pc_gallery } from "./js/components/pc_gallery.js";
+import { playList } from "./js/components/playList.js";
+import { gallery } from "./js/components/gallery.js";
 import { pc_list } from "./js/components/pc_list.js";
 
 window.addEventListener("load", () => {
   appFolder();
-  
+  playList();
 
   // time ------------------------------
   function getTime() {
@@ -23,6 +24,6 @@ window.addEventListener("load", () => {
   getTime();
   setInterval(getTime, 1000);
 
-  pc_gallery('supernatural', appData.albums);
+  gallery('supernatural', appData.albums);
   pc_list("streaming", appData.streaming);
 });

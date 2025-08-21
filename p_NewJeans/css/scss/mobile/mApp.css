@@ -1,1 +1,33 @@
-/*# sourceMappingURL=mApp.css.map */
+.mobile_app {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 24px;
+  padding: 10px;
+}
+.mobile_app .app {
+  width: 100%;
+  display: inline-block;
+}
+.mobile_app .app figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.mobile_app .app figure img {
+  width: 80%;
+}
+.mobile_app .app figure figcaption {
+  text-align: center;
+  padding-top: 12px;
+  font-family: "PFStardustS", monospace;
+  font-size: 20px;
+  color: var(--white);
+}
+.mobile_app .app figure figcaption span {
+  display: inline-block;
+  width: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}/*# sourceMappingURL=mApp.css.map */

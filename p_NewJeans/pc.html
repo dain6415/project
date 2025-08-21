@@ -13,27 +13,21 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
     />
     <link rel="stylesheet" href="/reset.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./css/pc.css"/>
+    <link rel="stylesheet" href="./css/pc.css" />
     <script>
       if (window.innerWidth <= 700) {
         window.location.href = "mobile.html";
       }
     </script>
-      
-    <style>
-      #loading {
-        display: none;
-      }
-    </style>
   </head>
   <body>
     <div id="loading">
       <div class="loading_wrap">
         <div id="loading_bar"></div>
-        <p class="loading_text">0%</p>
       </div>
+      <p class="loading_text">0%</p>
     </div>
-    
+
     <main>
       <div id="pcTopBar">
         <ol class="left">
@@ -46,12 +40,15 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
           <li>View</li>
         </ol>
         <div class="right">
-          <div class="batt"><img src="./img/icon/topBar/batt.svg" alt="배터리" /></div>
+          <div class="batt">
+            <img src="./img/icon/topBar/batt.svg" alt="배터리" />
+          </div>
           <div class="clock_box">
             <div id="clock"></div>
           </div>
         </div>
       </div>
+
       <section id="intro">
         <ol class="desktop_app">
           <li id="mv" class="folder" aria-expanded="false">

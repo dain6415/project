@@ -8,6 +8,24 @@ window.addEventListener("load", () => {
   appFolder();
   playList();
 
+
+  const loadingBar = document.getElementById("loading_bar");
+  const loadingText = document.querySelector(".loading_text");
+  const loading = document.getElementById("loading");
+
+  let progress = 0;
+  const interval = setInterval(() => {
+    progress++;
+    loadingBar.style.width = progress + "%";
+    loadingText.textContent = progress + "%";
+
+    if (progress >= 100) {
+      clearInterval(interval);
+
+      loading.classList.add("hidden");
+    }
+  }, 50); 
+
   // time ------------------------------
   function getTime() {
     const clock = document.getElementById("clock");

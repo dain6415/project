@@ -70,22 +70,31 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
                 <p>NewJeans - <span class="song">Supernatural</span>(inst)</p>
               </div>
             </div>
-
-            <div class="btns_wrap">
-              <div class="play_btns">
-                <ol>
-                  <li>
-                    <button class="play btn" aria-label="재생" type="button">
-                      <img src="./img//icon/playlist/Mplay.svg" alt="재생" />
-                    </button>
-                  </li>
-                  <li>
-                    <button class="next btn" aria-label="다음" type="button">
-                      <img src="./img//icon/playlist/Mnext.svg" alt="다음" />
-                    </button>
-                  </li>
-                </ol>
-              </div>
+          </div>
+          <div class="btns_wrap">
+            <div class="play_btns">
+              <ol>
+                <li>
+                  <button class="play btn" aria-label="재생" type="button">
+                    <img src="./img//icon/playlist/play.svg" alt="재생" />
+                  </button>
+                </li>
+                <li>
+                  <button class="pause btn" aria-label="일시정지" type="button">
+                    <img src="./img//icon/playlist/pause.svg" alt="일시정지" />
+                  </button>
+                </li>
+                <li>
+                  <button class="stop btn" aria-label="멈춤" type="button">
+                    <img src="./img//icon/playlist/stop.svg" alt="멈춤" />
+                  </button>
+                </li>
+                <li>
+                  <button class="next btn" aria-label="다음" type="button">
+                    <img src="./img//icon/playlist/next.svg" alt="다음" />
+                  </button>
+                </li>
+              </ol>
             </div>
           </div>
         </div>
@@ -163,83 +172,8 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
     </main>
 
     <!-- 음악 -->
-    <!-- <script>
-      const playList = document.querySelectorAll("audio");
-      let playing = false;
-      let nowPlaying = 0;
-
-      const playBtn = document.querySelector(".play");
-      const stopBtn = document.querySelector(".stop");
-      const pauseBtn = document.querySelector(".pause");
-      const nextBtn = document.querySelector(".next");
-
-      const btnList = [playBtn, pauseBtn, stopBtn];
-
-      const getCurrentAudio = () => playList[nowPlaying];
-
-      function setBtnImage(btn, isActive) {
-        const img = btn.querySelector("img");
-        if (!img) return;
-
-        let src = img.getAttribute("src");
-
-        if (isActive) {
-          if (!src.includes("_in")) {
-            img.setAttribute("src", src.replace(".svg", "_in.svg"));
-          }
-        } else {
-          if (src.includes("_in")) {
-            img.setAttribute("src", src.replace("_in", ""));
-          }
-        }
-      }
-
-      function updateActiveBtn(targetBtn) {
-        btnList.forEach((btn) => setBtnImage(btn, btn === targetBtn));
-      }
-
-      playBtn.addEventListener("click", () => {
-        const audio = getCurrentAudio();
-        if (!playing) {
-          audio.play();
-          playing = true;
-        }
-        updateActiveBtn(playBtn);
-      });
-
-      pauseBtn.addEventListener("click", () => {
-        const audio = getCurrentAudio();
-        if (playing) {
-          audio.pause();
-          playing = false;
-        }
-        updateActiveBtn(pauseBtn);
-      });
-
-      stopBtn.addEventListener("click", () => {
-        const audio = getCurrentAudio();
-        audio.pause();
-        audio.currentTime = 0;
-        playing = false;
-        updateActiveBtn(stopBtn);
-      });
-
-      nextBtn.addEventListener("click", () => {
-        const current = getCurrentAudio();
-        current.pause();
-        current.currentTime = 0;
-
-        nowPlaying = (nowPlaying + 1) % playList.length;
-        const nextAudio = getCurrentAudio();
-        nextAudio.play();
-        playing = true;
-
-        document.querySelector(".song").textContent =
-          nowPlaying === 0 ? "Supernatural" : "Right Now";
-
-        updateActiveBtn(playBtn);
-      });
-    </script> -->
+     <script>
+</script>
     <script src="./mobile.js" type="module"></script>
   </body>
 </html>

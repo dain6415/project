@@ -61,7 +61,7 @@
 }
 body {
   position: relative;
-  font-size: 15px;
+  font-size: 16px;
 }
 body main {
   position: relative;
@@ -115,7 +115,6 @@ body main {
   align-items: center;
 }
 #topBar .right .clock_box {
-  font-size: 16px;
   font-weight: 600;
   display: flex;
   justify-content: flex-end;
@@ -135,11 +134,13 @@ body main {
 }
 
 #mobilePlayList {
-  border: 1px solid #000;
-  height: 60px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 6px;
   margin-bottom: 30px;
+  padding: 8px;
+  background: linear-gradient(45deg, #ff95dc 5%, #ffffff 100%);
+  border: 2px solid var(--bg-color);
 }
 #mobilePlayList .play_wrap {
   display: flex;
@@ -147,9 +148,6 @@ body main {
   align-items: center;
   gap: 18px;
   width: 100%;
-  padding: 8px;
-  background: linear-gradient(45deg, #ff95dc 5%, #ffffff 100%);
-  border: 2px solid var(--bg-color);
 }
 #mobilePlayList .play_view {
   display: flex;
@@ -159,16 +157,21 @@ body main {
   background: var(--bg-color);
   width: 100%;
   height: 40px;
-  padding: 6px;
+  padding: 8px;
 }
 #mobilePlayList .play_view .cd_icon {
+  display: block;
   width: 24px;
+}
+#mobilePlayList .play_view .play_song {
+  width: calc(100% - 24px);
 }
 #mobilePlayList .play_view .play_song p {
   white-space: nowrap;
   overflow: hidden;
+  width: 100%;
   padding: 3px 2px;
-  width: 110px;
+  border: 1px solid #f00;
   text-overflow: ellipsis;
 }
 #mobilePlayList .btns_wrap {
@@ -209,7 +212,7 @@ body main {
   text-align: center;
   padding-top: 12px;
   font-family: "PFStardustS", monospace;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--white);
 }
 .mobile_app .app figure figcaption span {
@@ -310,7 +313,6 @@ body main {
 }
 #list_wrap.gallery .gallery_list li p {
   padding-top: 8px;
-  font-size: 18px;
   text-align: center;
 }
 #list_wrap.gallery #gallery_container {

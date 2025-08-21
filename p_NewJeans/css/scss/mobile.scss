@@ -13,7 +13,7 @@
 }
 body {
   position: relative;
-  font-size: 15px;
+  font-size: 16px;
   main {
     position: relative;
     height: 100vh;
@@ -57,7 +57,6 @@ body {
       @include flex-c();
     }
     .clock_box {
-      font-size: 16px;
       font-weight: 600;
       @include flex-c(flex-end);
     }
@@ -73,18 +72,17 @@ body {
   color: var(--white);
 }
 #mobilePlayList {
-  border: 1px solid #000;
-  height: 60px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 6px;
   margin-bottom: 30px;
+  padding: 8px;
+  background: linear-gradient(45deg, #ff95dc 5%, #ffffff 100%);
+  border: 2px solid var(--bg-color);
   .play_wrap {
     @include flex-c(space-between);
     gap: 18px;
     width: 100%;
-    padding: 8px;
-    background: linear-gradient(45deg, #ff95dc 5%, #ffffff 100%);
-    border: 2px solid var(--bg-color);
   }
   .play_view {
     @include flex-c(flex-start);
@@ -92,17 +90,22 @@ body {
     background: var(--bg-color);
     width: 100%;
     height: 40px;
-    padding: 6px;
+    padding: 8px;
     .cd_icon {
+      display: block;
       width: 24px;
     }
-    .play_song p {
-      // -> 이부분 min width로 할것
-      white-space: nowrap;
-      overflow: hidden;
-      padding: 3px 2px;
-      width: 110px; // 우선 이렇게
-      text-overflow: ellipsis;
+    .play_song {
+      width: calc(100% - 24px);
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+        // width: calc(100% - 30px);
+        padding: 3px 2px;
+        border: 1px solid #f00;
+        text-overflow: ellipsis;
+      }
     }
   }
   .btns_wrap {
@@ -136,7 +139,7 @@ body {
         text-align: center;
         padding-top: 12px;
         font-family: "PFStardustS", monospace;
-        font-size: 18px;
+        font-size: 20px;
         color: var(--white);
         span {
           display: inline-block;
@@ -231,7 +234,6 @@ body {
         }
         p {
           padding-top: 8px;
-          font-size: 18px;
           text-align: center;
         }
       }
@@ -343,7 +345,7 @@ button {
     width: calc(33% - 4px);
     height: 38px;
     color: #000;
-    letter-spacing: .2px;
+    letter-spacing: 0.2px;
     font-weight: 600;
     text-align: center;
   }

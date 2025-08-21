@@ -50,6 +50,11 @@
       width: 40px;
     }
   }
+  .sound {
+    width: 100px;
+    height: 24px;
+    @include flex-c();
+  }
 }
 #desktopPlayList {
   display: grid;

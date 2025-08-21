@@ -1,3 +1,61 @@
+#topBar {
+  width: 100%;
+  height: 40px;
+  padding: 6px 10px;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+#topBar .left,
+#topBar .right {
+  color: var(--blue-color);
+}
+#topBar .left div,
+#topBar .right div {
+  height: 18px;
+}
+#topBar .left div img,
+#topBar .right div img {
+  height: 100%;
+}
+#topBar .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+#topBar .left div {
+  display: inline-block;
+  cursor: auto;
+}
+#topBar .right {
+  display: flex;
+}
+#topBar .right div:not(:first-child) {
+  margin-left: 10px;
+}
+#topBar .right .batt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#topBar .right .clock_box {
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#topBar .right #clock {
+  text-align: center;
+  width: 50px;
+  background: var(--white);
+}
+
 #mobilePlayList {
   display: flex;
   flex-direction: column;
@@ -51,6 +109,13 @@
 }
 #mobilePlayList .play_btns .btn {
   width: 40px;
+}
+#mobilePlayList .sound {
+  width: 100px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #desktopPlayList {
@@ -135,64 +200,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-#topBar {
-  width: 100%;
-  height: 40px;
-  padding: 6px 10px;
-  background: var(--bg-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-#topBar .left,
-#topBar .right {
-  color: var(--blue-color);
-}
-#topBar .left div,
-#topBar .right div {
-  height: 18px;
-}
-#topBar .left div img,
-#topBar .right div img {
-  height: 100%;
-}
-#topBar .left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2px;
-}
-#topBar .left div {
-  display: inline-block;
-  cursor: auto;
-}
-#topBar .right {
-  display: flex;
-}
-#topBar .right div:not(:first-child) {
-  margin-left: 10px;
-}
-#topBar .right .batt {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#topBar .right .clock_box {
-  font-weight: 600;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-#topBar .right #clock {
-  text-align: center;
-  width: 50px;
-  background: var(--white);
 }
 
 .mobile_app {
@@ -412,7 +419,7 @@ body main {
   height: 100%;
   position: relative;
   padding: 60px 20px 10px;
-  background-image: url(../img/photo/Supernatural/NJ_Supernatural_17.jpg);
+  background-image: url(../img/intro_photo_mobile2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

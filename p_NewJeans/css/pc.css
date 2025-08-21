@@ -207,6 +207,13 @@
 #mobilePlayList .play_btns .btn {
   width: 40px;
 }
+#mobilePlayList .sound {
+  width: 100px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #desktopPlayList {
   display: grid;
@@ -594,6 +601,7 @@
 
 body {
   overflow: hidden;
+  cursor: url(../img/mouse.png) 2 2, auto;
 }
 
 main {

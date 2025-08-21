@@ -101,9 +101,7 @@ body {
         white-space: nowrap;
         overflow: hidden;
         width: 100%;
-        // width: calc(100% - 30px);
         padding: 3px 2px;
-        border: 1px solid #f00;
         text-overflow: ellipsis;
       }
     }
@@ -166,7 +164,7 @@ body {
     height: 18%;
     background: linear-gradient(45deg, #ff95dc 5%, #ffffff 100%);
     img {
-      width: 26%;
+      width: 44%;
     }
   }
   .app_title {
@@ -175,7 +173,7 @@ body {
     height: 10%;
     text-align: center;
     font-size: 18px;
-    font-weight: 900;
+    font-weight: bold;
     border-bottom: 2px solid #000;
     position: relative;
   }
@@ -204,7 +202,7 @@ body {
   }
   &.gallery {
     .app_content {
-      padding: 10px;
+      padding: 20px 10px 10px;
     }
     .gallery_list {
       @include flex-c(space-between);

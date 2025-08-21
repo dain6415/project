@@ -171,7 +171,6 @@ body main {
   overflow: hidden;
   width: 100%;
   padding: 3px 2px;
-  border: 1px solid #f00;
   text-overflow: ellipsis;
 }
 #mobilePlayList .btns_wrap {
@@ -240,7 +239,7 @@ body main {
   background: linear-gradient(45deg, #ff95dc 5%, #ffffff 100%);
 }
 #list_wrap .current_app img {
-  width: 26%;
+  width: 44%;
 }
 #list_wrap .app_title {
   display: flex;
@@ -250,7 +249,7 @@ body main {
   height: 10%;
   text-align: center;
   font-size: 18px;
-  font-weight: 900;
+  font-weight: bold;
   border-bottom: 2px solid #000;
   position: relative;
 }
@@ -277,7 +276,7 @@ body main {
   color: var(--bg-color);
 }
 #list_wrap.gallery .app_content {
-  padding: 10px;
+  padding: 20px 10px 10px;
 }
 #list_wrap.gallery .gallery_list {
   display: flex;

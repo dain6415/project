@@ -19,6 +19,5 @@ export function backBtn() {
     }
   }
 
-  // 외부에서 사용할 수 있게 반환
   return { showContent, goBack };
 }

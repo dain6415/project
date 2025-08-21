@@ -43,7 +43,6 @@ export function mobile_gallery(folderName) {
     swiperWrapper.innerHTML = "";
 
     list.forEach((imgObj, i) => {
-      // 갤러리 목록
       const li = document.createElement("li");
       const btn = document.createElement("button");
       btn.classList.add("img_box");

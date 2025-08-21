@@ -55,7 +55,6 @@ window.addEventListener("load", () => {
           
                 if (galleryContainer) galleryContainer.hidden = true;
           
-                // 갤러리 버튼들 클릭 이벤트
                 document.querySelectorAll("[data-gallery]").forEach((btn) => {
                   btn.addEventListener("click", () => {
                     const name = btn.dataset.gallery;

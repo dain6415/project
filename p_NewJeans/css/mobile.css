@@ -283,7 +283,7 @@ body main {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px 0;
+  gap: 28px 0;
 }
 #list_wrap.gallery .gallery_list li {
   width: calc(50% - 6px);
@@ -313,6 +313,7 @@ body main {
 #list_wrap.gallery .gallery_list li p {
   padding-top: 8px;
   text-align: center;
+  font-weight: 400;
 }
 #list_wrap.gallery #gallery_container {
   position: absolute;

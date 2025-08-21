@@ -207,7 +207,7 @@ body {
     .gallery_list {
       @include flex-c(space-between);
       flex-wrap: wrap;
-      gap: 40px 0;
+      gap: 28px 0;
       li {
         width: calc(50% - 6px);
         .img_box {
@@ -233,6 +233,7 @@ body {
         p {
           padding-top: 8px;
           text-align: center;
+          font-weight: 400;
         }
       }
     }

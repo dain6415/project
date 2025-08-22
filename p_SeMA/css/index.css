@@ -422,10 +422,11 @@ footer .f_top .site_map .visit > a {
 footer .f_top .site_map .exhibition ul li a,
 footer .f_top .site_map .collection ul li a,
 footer .f_top .site_map .visit ul li a {
-  color: var(--color-gray400);
   display: inline-block;
-  font-weight: 400;
   position: relative;
+  color: var(--color-gray400);
+  font-weight: 400;
+  transition: color 0.3s ease;
 }
 footer .f_top .site_map .exhibition ul li a::before,
 footer .f_top .site_map .collection ul li a::before,
@@ -433,7 +434,7 @@ footer .f_top .site_map .visit ul li a::before {
   content: "";
   width: 100%;
   height: 2px;
-  background-color: var(--color-gray500);
+  background-color: var(--color-gray200);
   position: absolute;
   bottom: -6px;
   left: 50%;
@@ -442,11 +443,15 @@ footer .f_top .site_map .visit ul li a::before {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+footer .f_top .site_map .exhibition ul li a:hover,
+footer .f_top .site_map .collection ul li a:hover,
+footer .f_top .site_map .visit ul li a:hover {
+  color: var(--color-gray200);
+}
 footer .f_top .site_map .exhibition ul li a:hover::before,
 footer .f_top .site_map .collection ul li a:hover::before,
 footer .f_top .site_map .visit ul li a:hover::before {
   opacity: 1;
-  transition: opacity 0.3s ease;
 }
 footer .line {
   border-top: 1px solid var(--color-gray500);

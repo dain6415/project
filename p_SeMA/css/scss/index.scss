@@ -1599,7 +1599,6 @@ input[type="checkbox"]:checked + .mode_change::after {
             }
           }
         }
-        // 음 메인메뉴 안에 넣으면 안되는지 이해가 잘....
       }
       .mobile_menu {
         display: none;
@@ -1700,29 +1699,34 @@ input[type="checkbox"]:checked + .mode_change::after {
               opacity: 1;
               right: 0px;
             }
+            .txt {
+              color: var(--color-gray200);
+
+            }
           }
         }
         .txt {
           width: calc(100% - 50px);
+          transition: color 0.3s;
         }
         span {
           display: block;
           width: 30px;
-          height: 1px;
+          height: 2px;
           background: var(--color-gray300);
           position: absolute;
           top: 50%;
           right: 10px;
           transform: translateY(-50%);
           opacity: 0;
-          transition: 0.5s;
+          transition: 0.3s;
           &::before,
           &::after {
             content: "";
             position: absolute;
             right: 0;
             width: 50%;
-            height: 1px;
+            height: 2px;
             background: var(--color-gray300);
           }
           &::before {

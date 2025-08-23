@@ -1584,27 +1584,31 @@ input[type=checkbox]:checked + .mode_change::after {
     opacity: 1;
     right: 0px;
   }
+  .sect1 .art2 ul .link:hover .txt {
+    color: var(--color-gray200);
+  }
   .sect1 .art2 ul .txt {
     width: calc(100% - 50px);
+    transition: color 0.3s;
   }
   .sect1 .art2 ul span {
     display: block;
     width: 30px;
-    height: 1px;
+    height: 2px;
     background: var(--color-gray300);
     position: absolute;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.3s;
   }
   .sect1 .art2 ul span::before, .sect1 .art2 ul span::after {
     content: "";
     position: absolute;
     right: 0;
     width: 50%;
-    height: 1px;
+    height: 2px;
     background: var(--color-gray300);
   }
   .sect1 .art2 ul span::before {

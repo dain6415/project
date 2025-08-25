@@ -72,13 +72,13 @@ header .logo_change {
   background-color: var(--color-gray700);
 }
 
-.intro .bg_img {
+.intro .intro_full_img {
   position: relative;
   background-image: url(../imgs/new_bg2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.intro .bg_img::after {
+.intro .intro_full_img::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -100,20 +100,20 @@ header .logo_change {
   color: var(--color-gray200);
   font-weight: 600;
 }
-.intro .introduce .bottom .status {
+.intro .introduce .schedule .status {
   display: inline-block;
   font-size: 20px;
 }
-.intro .introduce .bottom .status .today {
+.intro .introduce .schedule .status .today {
   color: var(--color-gray400);
   font-weight: 600;
 }
-.intro .introduce .bottom .status #museum_status {
+.intro .introduce .schedule .status #museum_status {
   color: var(--color-gray200);
   font-weight: 600;
   letter-spacing: 0;
 }
-.intro .introduce .bottom .status span {
+.intro .introduce .schedule .status span {
   display: block;
 }
 
@@ -373,15 +373,15 @@ header .logo_change {
   color: var(--color-gray600);
   font-weight: 600;
 }
-.sect2 .bottom .item {
+.sect2 .schedule .item {
   background: var(--color-sect2-bg);
   border-radius: 12px;
 }
-.sect2 .bottom .item .title {
+.sect2 .schedule .item .title {
   color: var(--color-gray100);
   font-weight: 600;
 }
-.sect2 .bottom .item .sub_txt {
+.sect2 .schedule .item .sub_txt {
   color: var(--color-gray300);
   font-weight: 200;
 }
@@ -612,27 +612,23 @@ input[type=checkbox]:checked + .mode_change::after {
   header .mobile_menu ul.mobile_nav.on {
     display: block;
   }
-  header .mobile_menu ul.mobile_nav li.main-menu > a {
+  header .mobile_menu ul.mobile_nav li.main_menu > a {
     display: block;
     padding: 12px 0;
     color: var(--color-gray100);
     font-weight: 500;
-    border-top: 1px solid var(--color-gray500);
   }
-  header .mobile_menu ul.mobile_nav li.main-menu ul.sub-menu li:last-child {
+  header .mobile_menu ul.mobile_nav li.main_menu ul.sub_menu li:last-child {
     margin-bottom: 6px;
   }
-  header .mobile_menu ul.mobile_nav li.main-menu ul.sub-menu a {
+  header .mobile_menu ul.mobile_nav li.main_menu ul.sub_menu a {
     display: block;
     font-weight: 500;
     color: var(--color-gray400);
     padding: 6px 0;
   }
-  header .mobile_menu ul.mobile_nav li.main-menu ul.sub-menu a:hover {
+  header .mobile_menu ul.mobile_nav li.main_menu ul.sub_menu a:hover {
     color: var(--color-gray200);
-  }
-  header .mobile_menu ul.mobile_nav li.main-menu:nth-child(4) {
-    border-bottom: 1px solid var(--color-gray500);
   }
   header .mobile_menu ul.mobile_nav .search {
     display: block;
@@ -689,7 +685,7 @@ input[type=checkbox]:checked + .mode_change::after {
     height: 60px;
     border: 1px solid var(--color-gray200);
     border-radius: 10px;
-    font-size: 4vw;
+    font-size: 24px;
     font-weight: 400;
     text-align: center;
     display: flex;
@@ -698,6 +694,12 @@ input[type=checkbox]:checked + .mode_change::after {
   }
   header .mobile_menu ul.mobile_nav .login a span {
     color: var(--color-gray100);
+  }
+  header .mobile_menu ul.mobile_nav .login a:active {
+    background: var(--color-gray100);
+  }
+  header .mobile_menu ul.mobile_nav .login a:active span {
+    color: var(--color-gray700);
   }
   header .right-menu {
     display: none;
@@ -741,11 +743,11 @@ input[type=checkbox]:checked + .mode_change::after {
   header .mobile_nav {
     padding: 100px 20px 40px;
   }
-  header .mobile_nav li.main-menu > a {
+  header .mobile_nav li.main_menu > a {
     font-size: 24px;
     padding: 10px 0;
   }
-  header .mobile_nav li.main-menu ul.sub-menu a {
+  header .mobile_nav li.main_menu ul.sub_menu a {
     font-size: 24px;
   }
   header .mobile_nav .search input {
@@ -754,12 +756,12 @@ input[type=checkbox]:checked + .mode_change::after {
   .intro {
     height: 80vh;
   }
-  .intro .bg_img {
+  .intro .intro_full_img {
     height: 55vh;
     padding: 0 10px;
     background-position: top center;
   }
-  .intro .bg_img::after {
+  .intro .intro_full_img::after {
     height: 80%;
     background: linear-gradient(to bottom, rgba(17, 17, 17, 0) 30%, rgba(17, 17, 17, 0.7333333333) 50%);
   }
@@ -777,7 +779,7 @@ input[type=checkbox]:checked + .mode_change::after {
     padding-top: 12px;
     font-size: 24px;
   }
-  .intro .bottom {
+  .intro .schedule {
     width: calc(100% - 20px);
     margin-top: 30px;
     padding: 0 10px;
@@ -785,23 +787,23 @@ input[type=checkbox]:checked + .mode_change::after {
     justify-content: center;
     align-items: center;
   }
-  .intro .bottom::before {
+  .intro .schedule::before {
     width: 100%;
     height: 60px;
   }
-  .intro .bottom .status {
+  .intro .schedule .status {
     width: 100%;
     white-space: nowrap;
     font-size: 20px;
   }
-  .intro .bottom .status .today,
-  .intro .bottom .status #museum_status {
+  .intro .schedule .status .today,
+  .intro .schedule .status #museum_status {
     display: block;
   }
-  .intro .bottom .status .today {
+  .intro .schedule .status .today {
     font-size: 20px;
   }
-  .intro .bottom .status #museum_status {
+  .intro .schedule .status #museum_status {
     padding-top: 2px;
   }
   h3 {
@@ -937,21 +939,21 @@ input[type=checkbox]:checked + .mode_change::after {
     color: var(--color-gray700);
     font-size: 1.6rem;
   }
-  .sect2 .bottom {
+  .sect2 .schedule {
     display: flex;
     flex-direction: column;
     gap: 4px;
   }
-  .sect2 .bottom .item {
+  .sect2 .schedule .item {
     display: block;
     padding: 20px;
   }
-  .sect2 .bottom .item .title {
+  .sect2 .schedule .item .title {
     width: 100%;
     margin-bottom: 6px;
     font-size: 24px;
   }
-  .sect2 .bottom .item .sub_txt {
+  .sect2 .schedule .item .sub_txt {
     font-size: 20px;
   }
   footer {
@@ -1080,10 +1082,10 @@ input[type=checkbox]:checked + .mode_change::after {
   header .mobile_nav {
     padding: 100px 20px 40px;
   }
-  header .mobile_nav li.main-menu > a {
+  header .mobile_nav li.main_menu > a {
     font-size: 24px;
   }
-  header .mobile_nav li.main-menu ul.sub-menu a {
+  header .mobile_nav li.main_menu ul.sub_menu a {
     font-size: 24px;
   }
   header .mobile_nav .search input {
@@ -1102,14 +1104,14 @@ input[type=checkbox]:checked + .mode_change::after {
   .intro {
     height: 100vh;
   }
-  .intro .bg_img {
+  .intro .intro_full_img {
     height: 80vh;
     background-position: top 50% center;
     background-size: cover;
     padding-left: 20px;
     padding-right: 20px;
   }
-  .intro .bg_img::after {
+  .intro .intro_full_img::after {
     height: 60%;
     background: linear-gradient(to bottom, rgba(17, 17, 17, 0) 30%, rgba(17, 17, 17, 0.5333333333) 50%);
   }
@@ -1133,10 +1135,10 @@ input[type=checkbox]:checked + .mode_change::after {
   .intro .introduce .welcome #museum_status {
     font-size: 32px;
   }
-  .intro .introduce .bottom {
+  .intro .introduce .schedule {
     padding-top: 20px;
   }
-  .intro .introduce .bottom #museum_status {
+  .intro .introduce .schedule #museum_status {
     padding-top: 2px;
   }
   .sect1,
@@ -1310,22 +1312,22 @@ input[type=checkbox]:checked + .mode_change::after {
     font-size: 2rem;
     padding: 16px 30px;
   }
-  .sect2 .bottom {
+  .sect2 .schedule {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
   }
-  .sect2 .bottom .item {
+  .sect2 .schedule .item {
     width: calc(50% - 5px);
     padding: 24px 20px;
     text-align: center;
   }
-  .sect2 .bottom .title {
+  .sect2 .schedule .title {
     margin-bottom: 6px;
     font-size: 24px;
     font-weight: 500;
   }
-  .sect2 .bottom .sub_txt {
+  .sect2 .schedule .sub_txt {
     font-size: 20px;
   }
   footer .f_top {
@@ -1409,6 +1411,7 @@ input[type=checkbox]:checked + .mode_change::after {
   header {
     height: 80px;
     padding: 20px 40px;
+    border: 1px solid #000;
   }
   header .inner {
     height: 100%;
@@ -1439,14 +1442,14 @@ input[type=checkbox]:checked + .mode_change::after {
     align-items: center;
     gap: 10px;
   }
-  header .inner nav > ul li.main-menu {
+  header .inner .main_menu {
     text-align: center;
     position: relative;
   }
-  header .inner nav > ul li.main-menu:hover > a::before {
+  header .inner .main_menu:hover > a::before {
     opacity: 1;
   }
-  header .inner nav > ul li.main-menu > a {
+  header .inner .main_menu > a {
     display: block;
     width: 100%;
     padding: 10px;
@@ -1454,7 +1457,7 @@ input[type=checkbox]:checked + .mode_change::after {
     font-weight: 400;
     position: relative;
   }
-  header .inner nav > ul li.main-menu > a::before {
+  header .inner .main_menu > a::before {
     content: "";
     width: 100%;
     height: 1px;
@@ -1466,24 +1469,24 @@ input[type=checkbox]:checked + .mode_change::after {
     z-index: 1;
     opacity: 0;
   }
-  header .inner nav > ul li.main-menu ul.sub-menu {
+  header .inner .sub_menu {
     width: 100%;
     position: absolute;
     left: 0;
     top: 65px;
     display: none;
   }
-  header .inner nav > ul li.main-menu ul.sub-menu li > a {
+  header .inner .sub_menu li a {
     display: block;
     color: var(--color-gray100);
     padding: 6px;
     font-size: 16px;
     border: 1px solid #828080;
   }
-  header .inner nav > ul li.main-menu ul.sub-menu li > a:hover {
+  header .inner .sub_menu li a:hover {
     color: #000;
   }
-  header .inner nav > ul li.main-menu ul.sub-menu li > a:hover::before {
+  header .inner .sub_menu li a:hover::before {
     position: absolute;
     left: 0;
     top: 0;
@@ -1524,10 +1527,10 @@ input[type=checkbox]:checked + .mode_change::after {
     background-color: var(--color-gray100);
     border-bottom: 1px solid #e4e4e4;
   }
-  header .scrolled nav > ul li.main-menu a {
+  header .scrolled nav > ul li.main_menu a {
     color: black;
   }
-  .intro .bg_img {
+  .intro .intro_full_img {
     height: 86vh;
   }
   .intro .introduce {
@@ -1549,14 +1552,14 @@ input[type=checkbox]:checked + .mode_change::after {
     font-size: 28px;
     padding-left: 6px;
   }
-  .intro .introduce .bottom {
+  .intro .introduce .schedule {
     padding: 0;
   }
-  .intro .introduce .bottom .today,
-  .intro .introduce .bottom #museum_status {
+  .intro .introduce .schedule .today,
+  .intro .introduce .schedule #museum_status {
     font-size: 24px;
   }
-  .intro .introduce .bottom #museum_status {
+  .intro .introduce .schedule #museum_status {
     padding-top: 8px;
   }
   .sect1,
@@ -1652,13 +1655,13 @@ input[type=checkbox]:checked + .mode_change::after {
   .sect2 .q ul.q_list li:nth-child(1) {
     border-top: 1px solid var(--color-gray500);
   }
-  .sect2 .bottom {
+  .sect2 .schedule {
     gap: 5px;
   }
-  .sect2 .bottom .item {
+  .sect2 .schedule .item {
     width: calc(33.3333% - 5px);
   }
-  .sect2 .bottom .sub_txt br {
+  .sect2 .schedule .sub_txt br {
     display: none;
   }
   footer {
@@ -1726,26 +1729,25 @@ input[type=checkbox]:checked + .mode_change::after {
   header .inner nav > ul {
     gap: 20px;
   }
-  header .inner nav > ul li.main-menu > a {
+  header .inner .main_menu > a {
     padding: 10px;
     font-size: 1.6rem;
   }
-  header .inner nav > ul li.main-menu ul.sub-menu {
+  header .inner .sub_menu {
     width: 100%;
     position: absolute;
     left: 0;
     top: 65px;
-    display: none;
   }
-  header .inner nav > ul li.main-menu ul.sub-menu li > a {
+  header .inner .sub_menu li > a {
     padding: 6px;
     font-size: 16px;
     border: 1px solid #828080;
   }
-  header .inner nav > ul li.main-menu ul.sub-menu li > a:hover {
+  header .inner .sub_menu li > a:hover {
     color: #000;
   }
-  header .inner nav > ul li.main-menu ul.sub-menu li > a:hover::before {
+  header .inner .sub_menu li > a:hover::before {
     position: absolute;
     left: 0;
     top: 0;
@@ -1764,7 +1766,7 @@ input[type=checkbox]:checked + .mode_change::after {
     background-color: var(--color-gray100);
     border-bottom: 1px solid #e4e4e4;
   }
-  header .scrolled nav > ul li.main-menu a {
+  header .scrolled nav > ul li.main_menu a {
     color: black;
   }
   .wrap .sect1,
@@ -1821,10 +1823,10 @@ input[type=checkbox]:checked + .mode_change::after {
   .wrap .sect2 .app a {
     font-size: 2rem;
   }
-  .wrap .sect2 .bottom .item {
+  .wrap .sect2 .schedule .item {
     width: calc(20% - 5px);
   }
-  .wrap .sect2 .bottom .sub_txt br {
+  .wrap .sect2 .schedule .sub_txt br {
     display: block;
   }
   footer {
@@ -1874,13 +1876,13 @@ input[type=checkbox]:checked + .mode_change::after {
   }
 }
 @media only screen and (min-width: 1400px) {
-  .wrap .bg_img .introduce .welcome h2 {
+  .wrap .intro_full_img .introduce .welcome h2 {
     font-size: 60px;
   }
-  .wrap .bg_img .introduce .welcome h2 span {
+  .wrap .intro_full_img .introduce .welcome h2 span {
     font-size: 60px;
   }
-  .wrap .bg_img .introduce .welcome h2 br {
+  .wrap .intro_full_img .introduce .welcome h2 br {
     display: none;
   }
 }/*# sourceMappingURL=index.css.map */

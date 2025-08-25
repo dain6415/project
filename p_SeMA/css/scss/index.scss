@@ -95,7 +95,7 @@ header {
   background-color: var(--color-gray700);
 }
 .intro {
-  .bg_img {
+  .intro_full_img {
     position: relative;
     background-image: url(../imgs/new_bg2.jpg);
     background-size: cover;
@@ -110,7 +110,7 @@ header {
       pointer-events: none;
     }
   }
-  .introduce{
+  .introduce {
     .welcome {
       z-index: 1;
       h2 {
@@ -124,11 +124,11 @@ header {
         }
       }
     }
-    .bottom {
+    .schedule {
       .status {
         display: inline-block;
         font-size: 20px;
-        .today{
+        .today {
           color: var(--color-gray400);
           font-weight: 600;
         }
@@ -417,7 +417,7 @@ header {
     color: var(--color-gray600);
     font-weight: 600;
   }
-  .bottom {
+  .schedule {
     .item {
       background: var(--color-sect2-bg);
       border-radius: 12px;
@@ -664,15 +664,14 @@ input[type="checkbox"]:checked + .mode_change::after {
         &.on {
           display: block;
         }
-        li.main-menu {
+        li.main_menu {
           > a {
             display: block;
             padding: 12px 0;
             color: var(--color-gray100);
             font-weight: 500;
-            border-top: 1px solid var(--color-gray500);
           }
-          ul.sub-menu {
+          ul.sub_menu {
             li:last-child {
               margin-bottom: 6px;
             }
@@ -686,9 +685,6 @@ input[type="checkbox"]:checked + .mode_change::after {
               }
             }
           }
-        }
-        li.main-menu:nth-child(4) {
-          border-bottom: 1px solid var(--color-gray500);
         }
         .search {
           display: block;
@@ -740,12 +736,18 @@ input[type="checkbox"]:checked + .mode_change::after {
             height: 60px;
             border: 1px solid var(--color-gray200);
             border-radius: 10px;
-            font-size: 4vw;
+            font-size: 24px;
             font-weight: 400;
             text-align: center;
             @include flex();
             span {
               color: var(--color-gray100);
+            }
+            &:active{
+              background: var(--color-gray100);
+              span{
+                color: var(--color-gray700);
+              }
             }
           }
         }
@@ -799,12 +801,12 @@ input[type="checkbox"]:checked + .mode_change::after {
   header {
     .mobile_nav {
       padding: 100px 20px 40px;
-      li.main-menu {
+      li.main_menu {
         > a {
           font-size: 24px;
           padding: 10px 0;
         }
-        ul.sub-menu {
+        ul.sub_menu {
           a {
             font-size: 24px;
           }
@@ -819,7 +821,7 @@ input[type="checkbox"]:checked + .mode_change::after {
   }
   .intro {
     height: 80vh;
-    .bg_img {
+    .intro_full_img {
       height: 55vh;
       padding: 0 10px;
       background-position: top center;
@@ -842,7 +844,7 @@ input[type="checkbox"]:checked + .mode_change::after {
         }
       }
     }
-    .bottom {
+    .schedule {
       width: calc(100% - 20px);
       margin-top: 30px;
       padding: 0 10px;
@@ -1010,7 +1012,7 @@ input[type="checkbox"]:checked + .mode_change::after {
         font-size: 1.6rem;
       }
     }
-    .bottom {
+    .schedule {
       display: flex;
       flex-direction: column;
       gap: 4px;
@@ -1163,11 +1165,11 @@ input[type="checkbox"]:checked + .mode_change::after {
   header {
     .mobile_nav {
       padding: 100px 20px 40px;
-      li.main-menu {
+      li.main_menu {
         > a {
           font-size: 24px;
         }
-        ul.sub-menu {
+        ul.sub_menu {
           a {
             font-size: 24px;
           }
@@ -1192,7 +1194,7 @@ input[type="checkbox"]:checked + .mode_change::after {
   }
   .intro {
     height: 100vh;
-    .bg_img {
+    .intro_full_img {
       height: 80vh;
       background-position: top 50% center;
       background-size: cover;
@@ -1203,7 +1205,7 @@ input[type="checkbox"]:checked + .mode_change::after {
         background: linear-gradient(to bottom, #11111100 30%, #11111188 50%);
       }
     }
-    .introduce{
+    .introduce {
       margin: auto 20px;
       .welcome {
         width: calc(100% - 40px);
@@ -1222,7 +1224,7 @@ input[type="checkbox"]:checked + .mode_change::after {
           font-size: 32px;
         }
       }
-      .bottom{
+      .schedule {
         padding-top: 20px;
         #museum_status {
           padding-top: 2px;
@@ -1408,7 +1410,7 @@ input[type="checkbox"]:checked + .mode_change::after {
       font-size: 2rem;
       padding: 16px 30px;
     }
-    .bottom {
+    .schedule {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
@@ -1521,6 +1523,7 @@ input[type="checkbox"]:checked + .mode_change::after {
   header {
     height: 80px;
     padding: 20px 40px;
+    border: 1px solid #000;
     .inner {
       height: 100%;
       margin: auto;
@@ -1541,60 +1544,60 @@ input[type="checkbox"]:checked + .mode_change::after {
         > ul {
           @include flex();
           gap: 10px;
-          li.main-menu {
-            text-align: center;
-            position: relative;
-            &:hover > a {
+        }
+      }
+      .main_menu {
+        text-align: center;
+        position: relative;
+        &:hover > a {
+          &::before {
+            opacity: 1;
+          }
+        }
+        > a {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          font-size: 1.6rem;
+          font-weight: 400;
+          position: relative;
+          &::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: #333;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            opacity: 0;
+          }
+        }
+      }
+      .sub_menu {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 65px;
+        display: none;
+        li {
+          a {
+            display: block;
+            color: var(--color-gray100);
+            padding: 6px;
+            font-size: 16px;
+            border: 1px solid #828080;
+            &:hover {
+              color: #000;
               &::before {
-                opacity: 1;
-              }
-            }
-            > a {
-              display: block;
-              width: 100%;
-              padding: 10px;
-              font-size: 1.6rem;
-              font-weight: 400;
-              position: relative;
-              &::before {
-                content: "";
-                width: 100%;
-                height: 1px;
-                background-color: #333;
                 position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 1;
-                opacity: 0;
-              }
-            }
-            ul.sub-menu {
-              width: 100%;
-              position: absolute;
-              left: 0;
-              top: 65px;
-              display: none;
-              li {
-                > a {
-                  display: block;
-                  color: var(--color-gray100);
-                  padding: 6px;
-                  font-size: 16px;
-                  border: 1px solid #828080;
-                  &:hover {
-                    color: #000;
-                    &::before {
-                      position: absolute;
-                      left: 0;
-                      top: 0;
-                      width: 100%;
-                      height: 200px;
-                      background-color: var(--color-gray100);
-                      z-index: -1;
-                    }
-                  }
-                }
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 200px;
+                background-color: var(--color-gray100);
+                z-index: -1;
               }
             }
           }
@@ -1631,14 +1634,14 @@ input[type="checkbox"]:checked + .mode_change::after {
       background-color: var(--color-gray100);
       border-bottom: 1px solid #e4e4e4;
       nav {
-        > ul li.main-menu a {
+        > ul li.main_menu a {
           color: black;
         }
       }
     }
   }
-  .intro{
-    .bg_img{
+  .intro {
+    .intro_full_img {
       height: 86vh;
     }
     .introduce {
@@ -1657,15 +1660,15 @@ input[type="checkbox"]:checked + .mode_change::after {
           }
         }
       }
-      .bottom{
+      .schedule {
         padding: 0;
         .today,
-        #museum_status{ 
+        #museum_status {
           font-size: 24px;
         }
-        #museum_status{
+        #museum_status {
           padding-top: 8px;
-        } 
+        }
       }
     }
   }
@@ -1701,7 +1704,6 @@ input[type="checkbox"]:checked + .mode_change::after {
             }
             .txt {
               color: var(--color-gray200);
-
             }
           }
         }
@@ -1781,7 +1783,7 @@ input[type="checkbox"]:checked + .mode_change::after {
         }
       }
     }
-    .bottom {
+    .schedule {
       gap: 5px;
       .item {
         width: calc(33.3333% - 5px);
@@ -1863,35 +1865,34 @@ input[type="checkbox"]:checked + .mode_change::after {
       nav {
         > ul {
           gap: 20px;
-          li.main-menu {
-            > a {
-              padding: 10px;
-              font-size: 1.6rem;
-            }
-            ul.sub-menu {
-              width: 100%;
-              position: absolute;
-              left: 0;
-              top: 65px;
-              display: none;
-              li {
-                > a {
-                  padding: 6px;
-                  font-size: 16px;
-                  border: 1px solid #828080;
-                  &:hover {
-                    color: #000;
-                    &::before {
-                      position: absolute;
-                      left: 0;
-                      top: 0;
-                      width: 100%;
-                      height: 200px;
-                      background-color: var(--color-gray100);
-                      z-index: -1;
-                    }
-                  }
-                }
+        }
+      }
+      .main_menu {
+        > a {
+          padding: 10px;
+          font-size: 1.6rem;
+        }
+      }
+      .sub_menu {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 65px;
+        li {
+          > a {
+            padding: 6px;
+            font-size: 16px;
+            border: 1px solid #828080;
+            &:hover {
+              color: #000;
+              &::before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 200px;
+                background-color: var(--color-gray100);
+                z-index: -1;
               }
             }
           }
@@ -1908,7 +1909,7 @@ input[type="checkbox"]:checked + .mode_change::after {
       background-color: var(--color-gray100);
       border-bottom: 1px solid #e4e4e4;
       nav {
-        > ul li.main-menu a {
+        > ul li.main_menu a {
           color: black;
         }
       }
@@ -1991,7 +1992,7 @@ input[type="checkbox"]:checked + .mode_change::after {
           font-size: 2rem;
         }
       }
-      .bottom {
+      .schedule {
         .item {
           width: calc(20% - 5px);
         }
@@ -2062,7 +2063,7 @@ input[type="checkbox"]:checked + .mode_change::after {
 // --------------------------------------------------------------------
 @media only screen and (min-width: 1400px) {
   .wrap {
-    .bg_img {
+    .intro_full_img {
       .introduce {
         .welcome {
           h2 {

@@ -212,13 +212,15 @@ header {
               position: absolute;
               bottom: 40px;
               left: 50%;
-              z-index: 1;
+              transform: translateX(-50%);
+              width: 100%;
               color: #f7f7f7;
               font-size: 20px;
               font-weight: 600;
-              transform: translateX(-50%);
+              text-align: center;
               opacity: 0;
               transition-duration: 0.1s;
+              z-index: 1;
             }
             img {
               display: block;
@@ -241,50 +243,116 @@ header {
         }
       }
     }
-  }
-  .art2 {
-    .collections {
-      .coll {
-        width: 100%;
-      }
-      .swiper-wrapper {
-        width: 100%;
-      }
-      .swiper-slide {
-        width: 100%;
-        img {
-          width: 100%;
-          object-fit: cover;
+    .pagination_area {
+      position: relative;
+      display: flex;
+      .swiper-pagination {
+        position: absolute;
+        top: 48%;
+        left: 0;
+        overflow: hidden;
+        background-color: var(--color-gray500);
+        span {
+          border-radius: 20px;
+          overflow: hidden;
+          background-color: var(--color-gray100);
         }
       }
-      .title {
-        font-weight: 400;
-      }
-      .artist,
-      .year {
-        color: var(--color-gray400);
-        font-weight: 300;
-      }
-      .text_container {
-        position: relative;
-        .text {
-          position: absolute;
-          opacity: 0;
-          &.on {
-            opacity: 1;
+      .swiper-button-next,
+      .swiper-button-prev {
+        border: 1px solid var(--color-gray200);
+        border-radius: 50%;
+        padding: 14px;
+        &:hover {
+          background: var(--color-gray200);
+          span,
+          span.prev::after,
+          span.prev::before,
+          span.next::after,
+          span.next::before {
+            background-color: var(--color-gray700);
           }
         }
-        .title {
-          color: var(--color-gray200);
-          margin-bottom: 6px;
+      }
+      .btn_box {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        > div {
+          position: absolute;
+          &::after {
+            display: none;
+          }
+          span {
+            width: 100%;
+            height: 2px;
+            border-radius: 10px;
+            background-color: var(--color-gray100);
+            position: relative;
+            &.next {
+              &::before,
+              &::after {
+                content: "";
+                position: absolute;
+                right: 1px;
+                width: 50%;
+                height: 2px;
+                border-radius: 10px;
+                background-color: var(--color-gray100);
+                transform-origin: right;
+              }
+              &::before {
+                top: 0;
+                transform: rotate(45deg);
+              }
+              &::after {
+                bottom: 0;
+                transform: rotate(-45deg);
+              }
+            }
+            &.prev {
+              &::before,
+              &::after {
+                content: "";
+                position: absolute;
+                left: 1px;
+                width: 50%;
+                height: 2px;
+                border-radius: 10px;
+                background-color: var(--color-gray100);
+                transform-origin: left;
+              }
+              &::before {
+                top: 0;
+                transform: rotate(45deg);
+              }
+              &::after {
+                bottom: 0;
+                transform: rotate(-45deg);
+              }
+            }
+          }
+        }
+        .swiper-button-next {
+          right: 0;
+        }
+        .swiper-button-prev {
+          left: 0;
         }
       }
     }
-    ul {
-      margin-left: auto;
-      li:not(:last-child) {
-        border-bottom: 1px solid var(--color-gray600);
+  }
+  .art2 {
+    .img_box {
+      width: 100%;
+      img{
+        width: 100%;
       }
+    }
+    ul {
+      width: 100%;
+      display: grid;
       .link {
         display: block;
       }
@@ -295,105 +363,6 @@ header {
       .txt {
         color: var(--color-gray400);
         font-weight: 300;
-      }
-    }
-  }
-  .pagination_area {
-    position: relative;
-    display: flex;
-    .swiper-pagination {
-      position: absolute;
-      top: 48%;
-      left: 0;
-      overflow: hidden;
-      background-color: var(--color-gray500);
-      span {
-        border-radius: 20px;
-        overflow: hidden;
-        background-color: var(--color-gray100);
-      }
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-      border: 1px solid var(--color-gray200);
-      border-radius: 50%;
-      padding: 14px;
-      &:hover {
-        background: var(--color-gray200);
-        span,
-        span.prev::after,
-        span.prev::before,
-        span.next::after,
-        span.next::before {
-          background-color: var(--color-gray700);
-        }
-      }
-    }
-    .btn_box {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      > div {
-        position: absolute;
-        &::after {
-          display: none;
-        }
-        span {
-          width: 100%;
-          height: 2px;
-          border-radius: 10px;
-          background-color: var(--color-gray100);
-          position: relative;
-          &.next {
-            &::before,
-            &::after {
-              content: "";
-              position: absolute;
-              right: 1px;
-              width: 50%;
-              height: 2px;
-              border-radius: 10px;
-              background-color: var(--color-gray100);
-              transform-origin: right;
-            }
-            &::before {
-              top: 0;
-              transform: rotate(45deg);
-            }
-            &::after {
-              bottom: 0;
-              transform: rotate(-45deg);
-            }
-          }
-          &.prev {
-            &::before,
-            &::after {
-              content: "";
-              position: absolute;
-              left: 1px;
-              width: 50%;
-              height: 2px;
-              border-radius: 10px;
-              background-color: var(--color-gray100);
-              transform-origin: left;
-            }
-            &::before {
-              top: 0;
-              transform: rotate(45deg);
-            }
-            &::after {
-              bottom: 0;
-              transform: rotate(-45deg);
-            }
-          }
-        }
-      }
-      .swiper-button-next {
-        right: 0;
-      }
-      .swiper-button-prev {
-        left: 0;
       }
     }
   }
@@ -417,7 +386,7 @@ header {
     color: var(--color-gray600);
     font-weight: 600;
   }
-  .schedule {
+  .bottom {
     .item {
       background: var(--color-sect2-bg);
       border-radius: 12px;
@@ -933,46 +902,11 @@ input[type="checkbox"]:checked + .mode_change::after {
       }
     }
     .art2 {
-      .collections {
-        position: relative;
-        padding-bottom: 40px;
-        .author,
-        .title,
-        .year {
-          font-size: 16px;
-        }
-      }
-      .coll {
-        padding-bottom: 12px;
-      }
-      .pagination_area {
-        position: absolute;
-        bottom: 64px;
-        right: 0;
-        width: 90px;
-        height: 40px;
-        padding: 0;
-        z-index: 1;
-      }
-      .text_container {
-        width: 60%;
-        height: 63px;
-      }
-      .text {
-        bottom: 0;
-        left: 0;
-      }
-      .artist,
-      .title,
-      .year {
-        font-size: 20px;
-        font-size: clamp(12px, 14px, 16px);
-      }
       ul {
-        border-top: 1px solid var(--color-gray600);
+        margin-top: 30px;
         li {
           width: 100%;
-          padding: 14px 0;
+          padding: 12px 0;
         }
         .link {
           width: 100%;
@@ -1012,7 +946,7 @@ input[type="checkbox"]:checked + .mode_change::after {
         font-size: 1.6rem;
       }
     }
-    .schedule {
+    .bottom {
       display: flex;
       flex-direction: column;
       gap: 4px;
@@ -1308,52 +1242,14 @@ input[type="checkbox"]:checked + .mode_change::after {
     .art2 {
       margin-top: 120px;
       .collections {
-        width: 100%;
-        padding-bottom: 10px;
-        position: relative;
-        .swiper-slide {
-          position: relative;
-          width: 100%;
-        }
-        .pagination_area {
-          position: absolute;
-          bottom: -180px;
-          left: 0px;
-          width: 110px;
-          height: 50px;
-          z-index: 10;
-          .btn_box {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            bottom: 24px;
-            right: 0;
-            z-index: 100;
-            > div {
-              width: 50px;
-              height: 50px;
-              top: 45%;
-            }
-          }
-        }
-        .text {
-          left: 0;
-          bottom: -115px;
-        }
-        .artist,
-        .title,
-        .year {
-          font-size: 20px;
-        }
+        padding-bottom: 30px;
       }
       ul {
-        width: 50%;
-        .link {
-          padding: 24px 0;
-        }
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
         .link_title {
           font-size: 24px;
-          margin-bottom: 6px;
+          margin-bottom: 10px;
           &::after {
             transition: 0.3s;
           }
@@ -1410,7 +1306,7 @@ input[type="checkbox"]:checked + .mode_change::after {
       font-size: 2rem;
       padding: 16px 30px;
     }
-    .schedule {
+    .bottom {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
@@ -1523,7 +1419,6 @@ input[type="checkbox"]:checked + .mode_change::after {
   header {
     height: 80px;
     padding: 20px 40px;
-    border: 1px solid #000;
     .inner {
       height: 100%;
       margin: auto;
@@ -1689,19 +1584,12 @@ input[type="checkbox"]:checked + .mode_change::after {
     }
     .art2 {
       margin-top: 160px;
-      .collections {
-        padding-bottom: 20px;
-      }
       ul {
-        width: 66.6666%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 26px 12px;
         .link {
           position: relative;
-          padding: 20px 0;
           &:hover {
-            span {
-              opacity: 1;
-              right: 0px;
-            }
             .txt {
               color: var(--color-gray200);
             }
@@ -1710,37 +1598,7 @@ input[type="checkbox"]:checked + .mode_change::after {
         .txt {
           width: calc(100% - 50px);
           transition: color 0.3s;
-        }
-        span {
-          display: block;
-          width: 30px;
-          height: 2px;
-          background: var(--color-gray300);
-          position: absolute;
-          top: 50%;
-          right: 10px;
-          transform: translateY(-50%);
-          opacity: 0;
-          transition: 0.3s;
-          &::before,
-          &::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            width: 50%;
-            height: 2px;
-            background: var(--color-gray300);
-          }
-          &::before {
-            transform-origin: right;
-            transform: rotate(45deg);
-            top: 0;
-          }
-          &::after {
-            bottom: 0;
-            transform-origin: right;
-            transform: rotate(-45deg);
-          }
+          word-break: keep-all;
         }
       }
     }
@@ -1783,7 +1641,7 @@ input[type="checkbox"]:checked + .mode_change::after {
         }
       }
     }
-    .schedule {
+    .bottom {
       gap: 5px;
       .item {
         width: calc(33.3333% - 5px);
@@ -1946,11 +1804,9 @@ input[type="checkbox"]:checked + .mode_change::after {
       }
       .art2 {
         margin-top: 160px;
-        .collections {
-          width: 100%;
-        }
         ul {
-          width: 50%;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 20px;
           .txt {
             font-size: 2rem;
             br {
@@ -1992,7 +1848,7 @@ input[type="checkbox"]:checked + .mode_change::after {
           font-size: 2rem;
         }
       }
-      .schedule {
+      .bottom {
         .item {
           width: calc(20% - 5px);
         }

@@ -129,33 +129,6 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-var collSwiper = new Swiper(".coll", {
-  on: {
-    slideChange: function () {
-      const activeIndex = this.realIndex;
-      document.querySelectorAll(".text_container .text").forEach((el, idx) => {
-        el.classList.toggle("on", idx === activeIndex);
-      });
-    },
-  },
-  navigation: {
-    nextEl: ".collections .swiper-button-next",
-    prevEl: ".collections .swiper-button-prev",
-  },
-});
-
-const collSwiperWrapper = document.querySelector(".coll .swiper-wrapper");
-
-collSwiperWrapper.addEventListener("mouseenter", () => {
-  collSwiperWrapper.style.cursor = "grab";
-});
-collSwiperWrapper.addEventListener("mousedown", () => {
-  collSwiperWrapper.style.cursor = "grabbing";
-});
-window.addEventListener("mouseup", () => {
-  collSwiperWrapper.style.cursor = "grab";
-});
-
 // isLight모드---------------------------------------------
 const checkbox = document.querySelector("#modeToggle");
 const modeChange = document.querySelector(".mode_change");

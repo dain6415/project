@@ -208,7 +208,7 @@ body {
   width: 100%;
   margin-top: 168px;
   color: #000000;
-  padding: 20px;
+  padding: 20px 20px 20px 34px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -237,8 +237,8 @@ body {
   font-style: normal;
 }
 .frame article .summary .box .price {
-  font-weight: 900;
-  font-size: 20px;
+  font-family: "Antic Didone", serif;
+  font-size: 32px;
   width: 10%;
 }
 .frame article .summary .box .color {
@@ -331,14 +331,15 @@ body {
   transform: translateY(0); /* 제자리로 올라옴 */
 }
 .frame article .summary a.h-btn {
-  font-size: 24px;
+  display: none;
   position: absolute;
-  padding: 20px;
   right: 9%;
   top: 15%;
-  color: #cccccc;
+  padding: 20px;
   background: rgba(255, 255, 255, 0.431372549);
+  color: #cccccc;
   border-radius: 99px;
+  font-size: 24px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
@@ -444,7 +445,7 @@ body {
 }
 .frame article.art1 .product .item5 {
   background-image: url(../img/cooee/HC-04-01-WH-Heavy-Tealight-Carrara-4.jpg);
-  background-size: 80%;
+  background-size: 170%;
 }
 .frame article.art1 .product .item6 {
   background-image: url(../img/cooee/TH-05-01-SM-Gry-Vase-30cm-Smoke-scaled.jpg);

@@ -224,7 +224,7 @@ body {
         width: 100%;
         margin-top: 168px;
         color: #000000;
-        padding: 20px;
+        padding: 20px 20px 20px 34px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -254,8 +254,8 @@ body {
         }
 
         .price {
-          font-weight: 900;
-          font-size: 20px;
+          font-family: "Antic Didone", serif;
+          font-size: 32px;
           width: 10%;
         }
 
@@ -338,7 +338,6 @@ body {
           }
         }
       }
-
       .txt {
         position: absolute;
         left: 50%;
@@ -365,15 +364,15 @@ body {
       }
 
       a.h-btn {
-        font-size: 24px;
+        display: none;
         position: absolute;
-        padding: 20px;
         right: 9%;
         top: 15%;
-        color: #cccccc;
+        padding: 20px;
         background: #ffffff6e;
-        // border: 1px solid #c9c9c9;
+        color: #cccccc;
         border-radius: 99px;
+        font-size: 24px;
         box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.1);
         z-index: 999;
 
@@ -495,7 +494,7 @@ body {
 
         .item5 {
           background-image: url(../img/cooee/HC-04-01-WH-Heavy-Tealight-Carrara-4.jpg);
-          background-size: 80%;
+          background-size: 170%;
         }
 
         .item6 {

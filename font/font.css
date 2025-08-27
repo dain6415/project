@@ -94,14 +94,13 @@
   src: url(./font_file/NotoSansCJKkr-Regular.woff);
 }
 
-@font-face {
-  font-family: AnticDidone-Regular;
-  src: url(./font_file/AnticDidone-Regular.ttf);
+/* 이건 복사붙여넣기 해야 함 + link도 */
+/* <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+KR:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> */
+.AnticDidone{
+  font-family: "Antic Didone", serif;
+  font-weight: 400;
+  font-style: normal;
 }
-/* @font-face{
-  font-family: ;
-  src : url();
-} */
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
@@ -109,76 +108,66 @@
 
 /* pretendard 프리텐다드 */
 @font-face {
-  font-family: "Pretendard";
-  font-weight: 900;
-  font-display: swap;
-  src: url(./woff2/Pretendard-Black.woff2) format("woff2"),
-    url(./woff/Pretendard-Black.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 800;
-  font-display: swap;
-  src: local("Pretendard ExtraBold"),
-    url(./woff2/Pretendard-ExtraBold.woff2) format("woff2"),
-    url(./woff/Pretendard-ExtraBold.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 700;
-  font-display: swap;
-  src: url(./woff2/Pretendard-Bold.woff2) format("woff2"),
-    url(./woff/Pretendard-Bold.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 600;
-  font-display: swap;
-  src: url(./woff2/Pretendard-SemiBold.woff2) format("woff2"),
-    url(./woff/Pretendard-SemiBold.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 500;
-  font-display: swap;
-  src: url(./woff2/Pretendard-Medium.woff2) format("woff2"),
-    url(./woff/Pretendard-Medium.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 400;
-  font-display: swap;
-  src: url(./woff2/Pretendard-Regular.woff2) format("woff2"),
-    url(./woff/Pretendard-Regular.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 300;
-  font-display: swap;
-  src: url(./woff2/Pretendard-Light.woff2) format("woff2"),
-    url(./woff/Pretendard-Light.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 200;
-  font-display: swap;
-  src: url(./woff2/Pretendard-ExtraLight.woff2) format("woff2"),
-    url(./woff/Pretendard-ExtraLight.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Pretendard";
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
   font-weight: 100;
   font-display: swap;
-  src: url(./woff2/Pretendard-Thin.woff2) format("woff2"),
-    url(./woff/Pretendard-Thin.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff');
+  font-weight: 900;
+  font-display: swap;
 }
 
 /* SUIT */

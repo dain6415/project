@@ -1,4 +1,3 @@
-@import url(../reset.css);
 @font-face {
   font-family: "NanumBarunGothic";
   font-style: normal;
@@ -285,7 +284,7 @@ header {
         width: 100%;
         height: 100%;
         display: block;
-        background: #000 url(./img/pf-gnb-close.png) no-repeat center;
+        background: #000 url(../img/pf-gnb-close.png) no-repeat center;
       }
   }
   }
@@ -349,7 +348,7 @@ header {
                     width: 10px;
                     height: 10px;
                     margin-left: 5px;
-                    background: url(./img/ico-arrow1-white.png) no-repeat;
+                    background: url(../img/ico-arrow1-white.png) no-repeat;
                     background-position: center;
                   }
                 }
@@ -398,7 +397,7 @@ header {
                 width: 10px;
                 height: 10px;
                 margin-left: 5px;
-                background: url(./img/ico-arrow1-white.png) no-repeat;
+                background: url(../img/ico-arrow1-white.png) no-repeat;
                 background-position: center;
               }
             }
@@ -435,7 +434,7 @@ header {
                     width: 10px;
                     height: 10px;
                     margin-left: 5px;
-                    background: url(./img/ico-arrow1-white.png) no-repeat;
+                    background: url(../img/ico-arrow1-white.png) no-repeat;
                     background-position: center;
                   }
                 }
@@ -480,7 +479,7 @@ header {
                   width: 100%;
                   height: 100%;
                   @include ab-c();
-                  background: url(./img/gnbslide-next.png) no-repeat;
+                  background: url(../img/gnbslide-next.png) no-repeat;
                   z-index: 1;
                 }
               }
@@ -496,7 +495,7 @@ header {
                   width: 100%;
                   height: 100%;
                   @include ab-c();
-                  background: url(./img/gnbslide-prev.png) no-repeat;
+                  background: url(../img/gnbslide-prev.png) no-repeat;
                   z-index: 1;
                 }
               }
@@ -624,7 +623,7 @@ a.btn {
     background-repeat: no-repeat;
     background-size: cover;
     &.item1 {
-      background-image: url(./img/sect4/item1.jfif);
+      background-image: url(../img/sect4/item1.jfif);
       position: relative;
       width: 100%;
       height: 100%;
@@ -686,13 +685,13 @@ a.btn {
       }
     }
     &.item2 {
-      background-image: url(./img/sect4/item2.jfif);
+      background-image: url(../img/sect4/item2.jfif);
     }
     &.item3 {
-      background-image: url(./img/sect4/item3.jfif);
+      background-image: url(../img/sect4/item3.jfif);
     }
     &.item4 {
-      background-image: url(./img/sect4/item4.jfif);
+      background-image: url(../img/sect4/item4.jfif);
     }
   }
 }

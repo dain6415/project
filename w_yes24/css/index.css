@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(../reset.css);
 @font-face {
   font-family: "NanumBarunGothic";
   font-style: normal;
@@ -251,7 +250,7 @@ header .inner .right-m .serch a {
   width: 100%;
   height: 100%;
   display: block;
-  background: #000 url(./img/pf-gnb-close.png) no-repeat center;
+  background: #000 url(../img/pf-gnb-close.png) no-repeat center;
 }
 .snb .scrollbar { /* scroll  전용 div 박스 */
   height: calc(100vh - 100px);
@@ -315,7 +314,7 @@ header .inner .right-m .serch a {
   width: 10px;
   height: 10px;
   margin-left: 5px;
-  background: url(./img/ico-arrow1-white.png) no-repeat;
+  background: url(../img/ico-arrow1-white.png) no-repeat;
   background-position: center;
 }
 .snb .scrollbar .menus .snb-menu2 {
@@ -361,7 +360,7 @@ header .inner .right-m .serch a {
   width: 10px;
   height: 10px;
   margin-left: 5px;
-  background: url(./img/ico-arrow1-white.png) no-repeat;
+  background: url(../img/ico-arrow1-white.png) no-repeat;
   background-position: center;
 }
 .snb .scrollbar .menus .snb-menu4 {
@@ -393,7 +392,7 @@ header .inner .right-m .serch a {
   width: 10px;
   height: 10px;
   margin-left: 5px;
-  background: url(./img/ico-arrow1-white.png) no-repeat;
+  background: url(../img/ico-arrow1-white.png) no-repeat;
   background-position: center;
 }
 .snb .scrollbar .menus .snb-menu4 .s-m4-botton .swiper-container {
@@ -435,7 +434,7 @@ header .inner .right-m .serch a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: url(./img/gnbslide-next.png) no-repeat;
+  background: url(../img/gnbslide-next.png) no-repeat;
   z-index: 1;
 }
 .snb .scrollbar .menus .snb-menu4 .s-m4-botton .swiper-container .swiper .prev {
@@ -454,7 +453,7 @@ header .inner .right-m .serch a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: url(./img/gnbslide-prev.png) no-repeat;
+  background: url(../img/gnbslide-prev.png) no-repeat;
   z-index: 1;
 }
 .snb .scrollbar .menus .snb-menu4 .s-m4-botton .swiper-container .swiper-pagination {
@@ -566,7 +565,7 @@ a.btn i {
   background-size: cover;
 }
 .grid2 .item.item1 {
-  background-image: url(./img/sect4/item1.jfif);
+  background-image: url(../img/sect4/item1.jfif);
   position: relative;
   width: 100%;
   height: 100%;
@@ -629,13 +628,13 @@ a.btn i {
   color: #fff;
 }
 .grid2 .item.item2 {
-  background-image: url(./img/sect4/item2.jfif);
+  background-image: url(../img/sect4/item2.jfif);
 }
 .grid2 .item.item3 {
-  background-image: url(./img/sect4/item3.jfif);
+  background-image: url(../img/sect4/item3.jfif);
 }
 .grid2 .item.item4 {
-  background-image: url(./img/sect4/item4.jfif);
+  background-image: url(../img/sect4/item4.jfif);
 }
 
 section .inner,

@@ -86,10 +86,6 @@ var swiper2 = new Swiper(".mySwiper2", {
 // ++스크롤
 $(".scrollbar").mCustomScrollbar();
 
-// $('.close').click(function(){
-//   $('.snb').fadeOut()
-// })
-
 // 메뉴 클릭 시 서브 메뉴 나타나기
 $('.menu').click(function () {
   $('.snb').css({ left: '0' }, 600); // 왼쪽으로 슬라이드되어 나타남
@@ -123,11 +119,8 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 const liElems = document.querySelectorAll(".slide-menu ul li");
-// console.log(liElems)
-//모든 li를 대상으로~  각각 li요소
+
 liElems.forEach(function (liElem, idx) {
-  // console.log(liElems, idx);
-  //각각 li
   liElem.addEventListener("click", function (e) {
     e.preventDefault();
     // 모든 li
@@ -161,10 +154,7 @@ aElems.forEach(function (anchor) {
       a.classList.remove("on");
     });
     this.classList.add("on");
-    // let href = this.getAttribute("href");
-    // alert(href)
 
-    //모든 article 태그를 찾아서, 각각에 대해 작업할 준비
     document.querySelectorAll(".content").forEach(function (tab) {
       tab.classList.remove("on");
     });
@@ -172,7 +162,6 @@ aElems.forEach(function (anchor) {
     //href 값에 해당하는 특정 article 태그를 찾아서, 그곳에 on 클래스를 추가
     const href = this.getAttribute("href");
     document.querySelector(href).classList.add("on");
-    //뭐가 있을 것 같은데....
   });
 });
 // -------------------------------------------------------------------------------------------

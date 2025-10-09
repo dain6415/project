@@ -59,12 +59,12 @@
 #desktopPlayList {
   display: grid;
   grid-template-columns: repeat(1, 375px);
-  grid-template-rows: repeat(8, 102px);
-  gap: 10px;
+  grid-template-rows: repeat(6, 102px);
+  gap: 23px 12px;
   width: 375px;
   position: relative;
   .play_wrap {
-    grid-row: 8;
+    grid-row: 6;
     width: 100%;
     padding: 10px;
     display: flex;

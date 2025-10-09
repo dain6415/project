@@ -8,16 +8,17 @@
   @include flex-c(space-between);
   flex-direction: column;
   position: absolute;
-  top: 32px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 
-  width: 100%;
-  height: calc(100vh - 32px);
-  max-width: 1600px;
+  width: 960px;
+  height: 620px;
+  max-width: 1000px;
   min-height: 600px;
-  background-color: var(--bg-color);
+  background-color: var(--white);
   border: 2px solid var(--bg-color);
+  box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.4);
   z-index: 999;
   &.hidden {
     display: none;
@@ -28,12 +29,13 @@
     height: 40px;
     padding: 0 12px;
     background-color: var(--blue-color);
+    border-bottom: 2px solid #000;
     color: #000;
     .left{
       @include flex-c();
     }
     .icon_box,
-    #close {
+    #modalClose {
       @include flex-c();
       height: 30px;
       width: 30px;
@@ -43,7 +45,7 @@
       font-size: 16px;
       font-weight: bold;
     }
-    #close {
+    #modalClose {
       cursor: pointer;
     }
   }
@@ -62,20 +64,25 @@
 }
 .controls {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% - 20px);
+  bottom: -70px;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  background-color: var(--white);
+  border: 2px solid var(--bg-color);
+  padding: 2px 4px;
   #prev,
   #next {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     &:focus-visible{
       outline: 2px solid var(--pink-color);
     }
@@ -86,11 +93,6 @@
 }
 #download {
   display: inline-block;
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
   padding: 10px 20px;
   background-color: var(--blue-color);
   border: 2px solid var(--blue-color);

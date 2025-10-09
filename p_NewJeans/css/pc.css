@@ -3,7 +3,7 @@
   height: 32px;
   max-width: 1600px;
   margin: auto;
-  padding: 6px 20px;
+  padding: 6px 36px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,8 +64,8 @@
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 120px);
-  grid-template-rows: repeat(8, 102px);
-  gap: 10px;
+  grid-template-rows: repeat(6, 102px);
+  gap: 23px 12px;
 }
 .desktop_app li {
   display: flex;
@@ -109,7 +109,7 @@
 }
 .desktop_app li#phoning {
   grid-column: 1/span 1;
-  grid-row: 8/span 1;
+  grid-row: 6/span 1;
 }
 .desktop_app .link {
   position: relative;
@@ -147,10 +147,7 @@
 }
 .desktop_app figure figcaption span {
   display: inline-block;
-  width: 40px;
   text-wrap: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 #mobilePlayList {
@@ -218,13 +215,13 @@
 #desktopPlayList {
   display: grid;
   grid-template-columns: repeat(1, 375px);
-  grid-template-rows: repeat(8, 102px);
-  gap: 10px;
+  grid-template-rows: repeat(6, 102px);
+  gap: 23px 12px;
   width: 375px;
   position: relative;
 }
 #desktopPlayList .play_wrap {
-  grid-row: 8;
+  grid-row: 6;
   width: 100%;
   padding: 10px;
   display: flex;
@@ -308,8 +305,8 @@
   width: 80%;
   max-width: 1020px;
   height: calc(86% - 40px);
-  padding: 2px;
-  background: var(--white);
+  background-color: var(--white);
+  border: 2px solid #000;
   box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
@@ -483,15 +480,16 @@
   align-items: center;
   flex-direction: column;
   position: absolute;
-  top: 32px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: calc(100vh - 32px);
-  max-width: 1600px;
+  transform: translate(-50%, -50%);
+  width: 960px;
+  height: 620px;
+  max-width: 1000px;
   min-height: 600px;
-  background-color: var(--bg-color);
+  background-color: var(--white);
   border: 2px solid var(--bg-color);
+  box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.4);
   z-index: 999;
 }
 .modal.hidden {
@@ -505,6 +503,7 @@
   height: 40px;
   padding: 0 12px;
   background-color: var(--blue-color);
+  border-bottom: 2px solid #000;
   color: #000;
 }
 .modal .modal_top_bar .left {
@@ -513,7 +512,7 @@
   align-items: center;
 }
 .modal .modal_top_bar .icon_box,
-.modal .modal_top_bar #close {
+.modal .modal_top_bar #modalClose {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -525,7 +524,7 @@
   font-size: 16px;
   font-weight: bold;
 }
-.modal .modal_top_bar #close {
+.modal .modal_top_bar #modalClose {
   cursor: pointer;
 }
 
@@ -546,12 +545,16 @@
 
 .controls {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% - 20px);
+  bottom: -70px;
+  transform: translateX(-50%);
+  z-index: 10;
+  background-color: var(--white);
+  border: 2px solid var(--bg-color);
+  padding: 2px 4px;
 }
 .controls #prev,
 .controls #next {
@@ -559,8 +562,8 @@
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
 }
 .controls #prev:focus-visible,
 .controls #next:focus-visible {
@@ -573,11 +576,6 @@
 
 #download {
   display: inline-block;
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
   padding: 10px 20px;
   background-color: var(--blue-color);
   border: 2px solid var(--blue-color);
@@ -600,15 +598,40 @@
 }
 
 body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
   cursor: url(../img/mouse.png) 2 2, auto;
 }
 
-main {
-  max-width: 1600px;
-  min-width: 700px;
+.frame {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100vh;
+  max-width: 1700px;
+  min-width: 800px;
   min-height: 100vh;
-  margin: auto;
+  background-image: url(../img/frame.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1380px;
+  min-width: 700px;
+  min-height: 800px;
   overflow: hidden;
 }
 
@@ -618,7 +641,7 @@ main {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -652,8 +675,8 @@ main {
 }
 
 #intro {
-  height: 100vh;
-  padding: 20px;
+  height: 780px;
+  padding: 20px 32px;
   background-image: url(../img/intro_photo.jpg);
   background-repeat: no-repeat;
   background-size: cover;

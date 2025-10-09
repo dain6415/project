@@ -13,18 +13,18 @@ window.addEventListener("load", () => {
   const loadingText = document.querySelector(".loading_text");
   const loading = document.getElementById("loading");
 
-  let progress = 0;
-  const interval = setInterval(() => {
-    progress++;
-    loadingBar.style.width = progress + "%";
-    loadingText.textContent = progress + "%";
+  // let progress = 0;
+  // const interval = setInterval(() => {
+  //   progress++;
+  //   loadingBar.style.width = progress + "%";
+  //   loadingText.textContent = progress + "%";
 
-    if (progress >= 100) {
-      clearInterval(interval);
+  //   if (progress >= 100) {
+  //     clearInterval(interval);
 
-      loading.classList.add("hidden");
-    }
-  }, 50); 
+  //     loading.classList.add("hidden");
+  //   }
+  // }, 50); 
 
   // time ------------------------------
   function getTime() {

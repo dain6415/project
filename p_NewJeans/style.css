@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+
 @font-face {
   font-family: "JetBrains Mono";
   src: url("../font/font_file/JetBrainsMono-Thin.woff2") format("woff2");
@@ -42,10 +44,16 @@
   font-style: italic;
 }
 @font-face {
-  font-family: 'PFStardustS';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2506-1@1.0/PFStardustS.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Galmuri11';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2506-1@1.0/Galmuri11-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+  font-family: 'Galmuri14';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2506-1@1.0/Galmuri14.woff2') format('woff2');
+  font-weight: normal;
+  font-display: swap;
 }
 
 :root {
@@ -63,19 +71,17 @@
 html,
 body {
   background: var(--bg-color);
-  font-family: "JetBrains Mono", monospace;
-  font-weight: 300;
+  font-family: "Galmuri14", monospace;
   color: var(--bg-color);
   line-height: 1.2;
-  letter-spacing: -1px;
+  /* letter-spacing: -0.5px; */
 }
 a {
   text-decoration: none;
 }
 button {
   all: unset;
-  font-family: "JetBrains Mono";
-  font-weight: 200;
+  font-family: "Galmuri14";
   border: none;
 }
 a,

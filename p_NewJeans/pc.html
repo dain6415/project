@@ -40,7 +40,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
       </div>
       <p class="loading_text">0%</p>
     </div>
-
+    <div class="frame"></div>
     <main>
       <div id="pcTopBar">
         <ol class="left">
@@ -109,7 +109,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
                   src="./img/icon/pc_app/gallery.svg"
                   alt="Supernatural 아이콘"
                 />
-                <figcaption><span>Supernatural</span>_gallery</figcaption>
+                <figcaption><span>Supernatural</span></figcaption>
               </figure>
             </button>
           </li>
@@ -125,7 +125,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
                   src="./img/icon/pc_app/gallery.svg"
                   alt="HowSweet 아이콘"
                 />
-                <figcaption><span>HowSweet</span>_gallery</figcaption>
+                <figcaption><span>HowSweet</span></figcaption>
               </figure>
             </button>
           </li>
@@ -141,7 +141,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
                   src="./img/icon/pc_app/gallery.svg"
                   alt="BubbleGum 이미지"
                 />
-                <figcaption><span>BubbleGum</span>_gallery</figcaption>
+                <figcaption><span>BubbleGum</span></figcaption>
               </figure>
             </button>
           </li>
@@ -258,7 +258,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
             </div>
             <p id="modalTitle"></p>
           </div>
-          <button id="close" aria-label="닫기">
+          <button id="modalClose" aria-label="닫기">
             <img src="./img/icon/close.svg" alt="모달 닫기" />
           </button>
         </div>
@@ -272,14 +272,16 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
             </button>
           </li>
           <li>
+            <a id="download" href="#" download aria-label="이미지 다운로드"
+              >다운로드</a
+            >
+          </li>
+          <li>
             <button id="next" aria-label="다음 이미지">
               <img src="./img/icon/next.svg" alt="" />
             </button>
           </li>
         </ol>
-        <a id="download" href="#" download aria-label="이미지 다운로드"
-          >다운로드</a
-        >
       </div>
     </main>
 

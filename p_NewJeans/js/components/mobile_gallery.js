@@ -9,7 +9,7 @@ export function mobile_gallery(folderName) {
   const modal = document.querySelector(".modal");
   const swiperWrapper = modal.querySelector(".swiper-wrapper");
   const download = document.getElementById("download");
-  const closeBtn = document.getElementById("close");
+  const closeBtn = document.getElementById("modalClose");
 
   let firstFocus, lastFocus;
 

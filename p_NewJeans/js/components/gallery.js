@@ -10,7 +10,7 @@ export function gallery(folderName, albums, type) {
   const modalTitle = document.getElementById("modalTitle");
   const modalImg = document.getElementById("modal_img");
   const download = document.getElementById("download");
-  const closeBtn = document.getElementById("close");
+  const closeBtn = document.getElementById("modalClose");
   const prevBtn = document.getElementById("prev");
   const nextBtn = document.getElementById("next");
 
@@ -124,6 +124,15 @@ export function gallery(folderName, albums, type) {
     } else if (e.key === "Escape") {
       hideModal();
     }
+  });
+
+  const closeImage = document.querySelector("#modalClose img");
+
+  closeImage.addEventListener("mouseenter", () => {
+    closeImage.setAttribute("src", "./img/icon/close_in.svg");
+  });
+  closeImage.addEventListener("mouseleave", () => {
+    closeImage.setAttribute("src", "./img/icon/close.svg");
   });
 
   renderGallery(galleryImgs);

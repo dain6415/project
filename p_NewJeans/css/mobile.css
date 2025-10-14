@@ -121,13 +121,13 @@
 #desktopPlayList {
   display: grid;
   grid-template-columns: repeat(1, 375px);
-  grid-template-rows: repeat(8, 102px);
-  gap: 10px;
+  grid-template-rows: repeat(6, 102px);
+  gap: 23px 12px;
   width: 375px;
   position: relative;
 }
 #desktopPlayList .play_wrap {
-  grid-row: 8;
+  grid-row: 6;
   width: 100%;
   padding: 10px;
   display: flex;
@@ -174,7 +174,7 @@
 #desktopPlayList .play_view .play_song p {
   color: var(--pink-color);
   white-space: nowrap;
-  font-size: 16px;
+  font-size: 18px;
 }
 #desktopPlayList .btns_wrap {
   display: flex;

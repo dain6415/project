@@ -14,7 +14,7 @@
 }
 .desktop_app li .app {
   padding: 10px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   color: var(--white);
 }
@@ -29,6 +29,9 @@
   border: 2px solid var(--soft-blue-color);
   pointer-events: none;
   box-sizing: border-box;
+}
+.desktop_app li:active span {
+  font-family: "Galmuri11", monospace;
 }
 .desktop_app li#howSweet_gallery {
   grid-column: 2/span 1;

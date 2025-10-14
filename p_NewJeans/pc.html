@@ -32,6 +32,12 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
     <link rel="stylesheet" href="../reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./css/pc.css" />
+    <script>
+      if (window.innerWidth < 700) {
+        window.location.href = "mobile.html";
+      }
+    </script>
+    
   </head>
   <body>
     <div id="loading">
@@ -73,7 +79,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
             >
               <figure>
                 <img src="./img/icon/pc_app/mv.svg" alt="MV 아이콘" />
-                <figcaption>MV</figcaption>
+                <figcaption>MusicVideo</figcaption>
               </figure>
             </button>
           </li>
@@ -242,6 +248,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
         </div>
         <div class="container">
           <div id="list_wrap" class="contents" role="list"></div>
+          <div class="gallery_scrollLine"></div>
         </div>
       </div>
 

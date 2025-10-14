@@ -16,7 +16,7 @@ export function gallery(folderName, albums, type) {
 
   let currentIndex = 0;
   let firstFocus, lastFocus;
-  
+
   function setFocusTrapElements() {
     const tabFocus = modal.querySelectorAll(`
       a[href], area[href], input:not([disabled]), select:not([disabled]),
@@ -32,7 +32,7 @@ export function gallery(folderName, albums, type) {
     list.forEach((imgObj, i) => {
       const imgBox = document.createElement("button");
       imgBox.classList.add("img_box");
-      imgBox.setAttribute("role","listitem");
+      imgBox.setAttribute("role", "listitem");
 
       const figure = document.createElement("figure");
       const imgFrame = document.createElement("div");
@@ -79,7 +79,7 @@ export function gallery(folderName, albums, type) {
 
   function modalOpen(index) {
     modal.classList.remove("hidden");
-    modal.setAttribute("aria-modal","true");
+    modal.setAttribute("aria-modal", "true");
     updateView(index);
     setFocusTrapElements();
     if (firstFocus) firstFocus.focus();
@@ -134,6 +134,19 @@ export function gallery(folderName, albums, type) {
   closeImage.addEventListener("mouseleave", () => {
     closeImage.setAttribute("src", "./img/icon/close.svg");
   });
+
+  const container = document.querySelector(".container");
+  const contents = container.querySelector(".contents");
+  const scrollLine = container.querySelector(".gallery_scrollLine");
+  
+  const observer = new MutationObserver(() => {
+    if (contents.classList.contains("gallery")) {
+      scrollLine.classList.add("on");
+    } else {
+      scrollLine.classList.remove("on");
+    }
+  });
+  observer.observe(contents, { attributes: true, attributeFilter: ["class"] });
 
   renderGallery(galleryImgs);
 }

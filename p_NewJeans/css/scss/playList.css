@@ -116,7 +116,7 @@
 #desktopPlayList .play_view .play_song p {
   color: var(--pink-color);
   white-space: nowrap;
-  font-size: 16px;
+  font-size: 18px;
 }
 #desktopPlayList .btns_wrap {
   display: flex;

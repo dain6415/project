@@ -21,7 +21,6 @@
 .mobile_app .app figure figcaption {
   text-align: center;
   padding-top: 12px;
-  font-family: "PFStardustS", monospace;
   font-size: 20px;
   color: var(--white);
 }

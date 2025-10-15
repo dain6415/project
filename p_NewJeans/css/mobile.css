@@ -53,7 +53,6 @@
 #topBar .right #clock {
   text-align: center;
   width: 50px;
-  background: var(--white);
 }
 
 #mobilePlayList {
@@ -225,7 +224,6 @@
 .mobile_app .app figure figcaption {
   text-align: center;
   padding-top: 12px;
-  font-family: "PFStardustS", monospace;
   font-size: 20px;
   color: var(--white);
 }
@@ -450,14 +448,14 @@ body main {
   text-align: center;
 }
 #bottomBar #download,
-#bottomBar #close {
+#bottomBar #modalClose {
   display: none;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 #bottomBar #download.on,
-#bottomBar #close.on {
+#bottomBar #modalClose.on {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -466,12 +464,11 @@ body main {
   left: 0px;
   border-right: 2px solid #000;
 }
-#bottomBar #close {
+#bottomBar #modalClose {
   right: 0px;
   border-left: 2px solid #000;
 }
 
-.close_btn:focus-visible,
 .app:focus-visible,
 .btn:focus-visible,
 .img_box:focus-visible,

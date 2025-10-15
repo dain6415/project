@@ -30,9 +30,6 @@
   pointer-events: none;
   box-sizing: border-box;
 }
-.desktop_app li:active span {
-  font-family: "Galmuri11", monospace;
-}
 .desktop_app li#howSweet_gallery {
   grid-column: 2/span 1;
   grid-row: 2/span 1;

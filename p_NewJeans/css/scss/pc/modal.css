@@ -7,7 +7,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 960px;
+  width: 860px;
   height: 620px;
   max-width: 1000px;
   min-height: 600px;
@@ -71,15 +71,15 @@
 
 .controls {
   display: flex;
-  justify-self: center;
-  width: 960px;
+  justify-content: center;
+  width: 860px;
   height: 32px;
   border-top: 2px solid var(--bg-color);
 }
 .controls li {
   border-right: 2px solid #000;
 }
-.controls li:nth-child(2) {
+.controls li:nth-child(1) {
   border-left: 2px solid #000;
 }
 .controls li:nth-child(2) {

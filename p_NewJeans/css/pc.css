@@ -91,9 +91,6 @@
   pointer-events: none;
   box-sizing: border-box;
 }
-.desktop_app li:active span {
-  font-family: "Galmuri11", monospace;
-}
 .desktop_app li#howSweet_gallery {
   grid-column: 2/span 1;
   grid-row: 2/span 1;
@@ -354,17 +351,16 @@
   display: block;
 }
 #folder .container .contents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
   width: 100%;
   padding: 20px;
   overflow-y: scroll;
   background: var(--white);
-  font-size: 12px;
+  font-size: 14px;
 }
 #folder .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 24px;
   height: 100%;
   overflow-y: scroll;
 }
@@ -385,28 +381,20 @@
   justify-content: center;
   align-items: center;
   padding: 6px;
+  background-color: rgba(var(--blue-color), 0);
 }
 #folder .gallery .img_box .img_frame img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
-#folder .gallery .img_box .img_frame::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: var(--blue-color);
-  opacity: 0;
-  z-index: -1;
-}
 #folder .gallery .img_box .img_name {
   padding: 4px 6px;
   color: var(--bg-color);
   text-align: center;
 }
-#folder .gallery .img_box:focus .img_frame::before {
-  opacity: 0.5;
+#folder .gallery .img_box:focus .img_frame {
+  background: #e4e4e4;
 }
 #folder .gallery .img_box:focus .img_name {
   color: #fff;
@@ -430,12 +418,11 @@
 #folder .site_list {
   width: 100%;
   height: 100%;
-  font-size: 12px;
   text-align: left;
 }
 #folder .site_list thead {
   font-size: 14px;
-  border-bottom: 1px solid var(--bg-color);
+  border-bottom: 1px solid #ddd;
 }
 #folder .site_list thead th:first-child {
   width: 32px;
@@ -443,7 +430,7 @@
   color: transparent;
 }
 #folder .site_list thead th:nth-child(3), #folder .site_list thead th:nth-child(4) {
-  border-left: 1px solid var(--bg-color);
+  border-left: 1px solid #ddd;
 }
 #folder .site_list tbody {
   width: 100%;
@@ -451,21 +438,20 @@
 #folder .site_list tbody tr {
   width: 100%;
   cursor: pointer;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
 }
 #folder .site_list tbody tr:hover {
   background: var(--blue-color);
 }
 #folder .site_list tbody tr:hover td {
-  color: var(--white);
+  color: #eee;
+}
+#folder .site_list tbody tr:hover td:nth-child(2) {
+  color: #fff;
 }
 #folder .site_list td,
 #folder .site_list th {
   vertical-align: middle;
-}
-#folder .site_list td a,
-#folder .site_list th a {
-  color: #111;
 }
 #folder .site_list td:nth-child(1),
 #folder .site_list th:nth-child(1) {
@@ -480,7 +466,7 @@
 #folder .site_list td:nth-child(2),
 #folder .site_list th:nth-child(2) {
   width: calc(100% - 80px - 120px - 32px);
-  padding: 6px 6px 6px;
+  padding: 10px 6px;
 }
 #folder .site_list td:nth-child(2) a,
 #folder .site_list th:nth-child(2) a {
@@ -489,41 +475,32 @@
 #folder .site_list td:nth-child(3),
 #folder .site_list th:nth-child(3) {
   width: 80px;
-  padding: 6px 12px;
+  padding: 10px 12px 6px;
 }
 #folder .site_list td:nth-child(4),
 #folder .site_list th:nth-child(4) {
   width: 120px;
-  padding: 6px 12px 6px;
-  font-family: "PFStardustS", monospace;
-  font-size: 18px;
+  padding: 10px 12px 6px;
+  font-size: 14px;
 }
 #folder .site_list td:not(:nth-child(2)),
 #folder .site_list th:not(:nth-child(2)) {
-  color: #999;
+  color: #888;
   font-weight: 200;
 }
 #folder .mv * {
   box-sizing: border-box;
 }
 #folder .mv {
-  display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px;
   width: 100%;
-  height: 100%;
-}
-#folder .mv .video_box {
-  width: 200px;
 }
 #folder .mv .video_box figure {
   width: 100%;
 }
 #folder .mv .video_box figure iframe {
   width: 100%;
-  height: 140px;
+  height: 138px;
   aspect-ratio: 16/9;
 }
 
@@ -536,7 +513,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 960px;
+  width: 860px;
   height: 620px;
   max-width: 1000px;
   min-height: 600px;
@@ -600,15 +577,15 @@
 
 .controls {
   display: flex;
-  justify-self: center;
-  width: 960px;
+  justify-content: center;
+  width: 860px;
   height: 32px;
   border-top: 2px solid var(--bg-color);
 }
 .controls li {
   border-right: 2px solid #000;
 }
-.controls li:nth-child(2) {
+.controls li:nth-child(1) {
   border-left: 2px solid #000;
 }
 .controls li:nth-child(2) {
@@ -668,7 +645,7 @@ body {
   max-width: 1700px;
   min-width: 800px;
   min-height: 100vh;
-  background-image: url(../img/frame.png);
+  background-image: url(../img/frame2.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

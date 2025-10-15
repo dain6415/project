@@ -29,6 +29,9 @@ export function gallery(folderName, albums, type) {
 
   function renderGallery(list) {
     folderListWrap.innerHTML = "";
+    
+    folderListWrap.scrollTop = 0;
+
     list.forEach((imgObj, i) => {
       const imgBox = document.createElement("button");
       imgBox.classList.add("img_box");
@@ -138,7 +141,7 @@ export function gallery(folderName, albums, type) {
   const container = document.querySelector(".container");
   const contents = container.querySelector(".contents");
   const scrollLine = container.querySelector(".gallery_scrollLine");
-  
+
   const observer = new MutationObserver(() => {
     if (contents.classList.contains("gallery")) {
       scrollLine.classList.add("on");

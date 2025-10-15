@@ -1,18 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NewJeans</title>
-  <script>
-    if(window.innerWidth < 700){
-      window.location.href = "mobile.html";
-    } else {
-      window.location.href = "pc.html";
-    }
-  </script>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewJeans</title>
+    <style>
+      :root {
+        --blue-color: #00aaff;
+      }
+      #loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: #000;
+        z-index: 10;
+        transition: opacity 0.5s ease;
+      }
+      #loading.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .loading_wrap {
+        width: 300px;
+        text-align: center;
+        padding: 4px;
+        border: 1px solid var(--blue-color);
+      }
+      #loading_bar {
+        width: 0%;
+        height: 20px;
+        background: var(--blue-color);
+        transition: width 0.1s linear;
+      }
+      .loading_text {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--blue-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading">
+      <div class="loading_wrap">
+        <div id="loading_bar"></div>
+      </div>
+      <p class="loading_text">0%</p>
+    </div>
+
+    <script>
+      const loadingBar = document.getElementById("loading_bar");
+      const loadingText = document.querySelector(".loading_text");
+      const loading = document.getElementById("loading");
+
+      let progress = 0;
+      const interval = setInterval(() => {
+        progress++;
+        loadingBar.style.width = progress + "%";
+        loadingText.textContent = progress + "%";
+
+        if (progress >= 100) {
+          clearInterval(interval);
+
+          loading.classList.add("hidden");
+
+          setTimeout(() => {
+            if (window.innerWidth < 700) {
+              window.location.href = "mobile.html";
+            } else {
+              window.location.href = "pc.html";
+            }
+          }, 0);
+        }
+      }, 30);
+    </script>
+  </body>
 </html>

@@ -42,7 +42,7 @@
       @include flex-c();
     }
     .clock_box {
-      font-weight: 600;
+      font-family: 'Galmuri11', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       @include flex-c(flex-end);
     }
     #clock{

@@ -119,22 +119,41 @@ video {
   pointer-events: none;
 }
 .loading_wrap {
-  width: 300px;
   text-align: center;
   padding: 4px;
   border: 1px solid var(--blue-color);
 }
 #loading_bar {
   width: 0%;
-  height: 20px;
   background: var(--blue-color);
   transition: width 0.1s linear;
 }
 .loading_text {
   margin-top: 10px;
-  font-size: 18px;
   font-weight: bold;
   color: var(--blue-color);
+}
+@media screen and (max-width: 700px) {
+  .loading_wrap {
+    width: 180px;
+  }
+  #loading_bar{
+    height: 14px;
+  }
+  .loading_text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 701px) {
+  .loading_wrap {
+    width: 300px;
+  }
+  #loading_bar{
+    height: 20px;
+  }
+  .loading_text {
+    font-size: 18px;
+  }
 }
 
 

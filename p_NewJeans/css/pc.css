@@ -183,13 +183,17 @@
 #mobilePlayList .play_view .play_song {
   width: calc(100% - 24px);
 }
-#mobilePlayList .play_view .play_song p {
+#mobilePlayList .play_view .play_song .play_wrap {
+  position: relative;
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
   padding: 3px 2px;
-  text-overflow: ellipsis;
   color: var(--pink-color);
+}
+#mobilePlayList .play_view .play_song p {
+  display: inline-block;
+  padding-left: 100%;
 }
 #mobilePlayList .btns_wrap {
   display: flex;

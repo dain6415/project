@@ -29,13 +29,27 @@
     }
     .play_song {
       width: calc(100% - 24px);
-      p {
+      .play_wrap {
+        position: relative;
         white-space: nowrap;
         overflow: hidden;
         width: 100%;
         padding: 3px 2px;
-        text-overflow: ellipsis;
         color: var(--pink-color);
+      }
+      .song_text,
+      .song_text_clone {
+        flex-shrink: 0;
+        // padding-right: 40px;
+        // animation: scrollText 15s linear infinite;
+      }
+      @keyframes scrollText {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(-190%);
+        }
       }
     }
   }
@@ -49,11 +63,6 @@
     .btn {
       width: 40px;
     }
-  }
-  .sound {
-    width: 100px;
-    height: 24px;
-    @include flex-c();
   }
 }
 #desktopPlayList {

@@ -5,6 +5,23 @@ import { backBtn } from "./js/components/backBtn.js";
 
 window.addEventListener("load", () => {
   playList();
+
+  const loading = document.getElementById("loading");
+  const bar = document.getElementById("loading_bar");
+  const text = document.querySelector(".loading_text");
+
+  let progress = 0;
+  const interval = setInterval(() => {
+    progress++;
+    bar.style.width = progress + "%";
+    text.textContent = progress + "%";
+
+    if (progress >= 100) {
+      clearInterval(interval);
+      loading.classList.add("hidden");
+    }
+  }, 25);
+  
   // time ------------------------------
   function getTime() {
     const clock = document.getElementById("clock");
